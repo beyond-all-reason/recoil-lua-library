@@ -1,5 +1,20 @@
 {
   "$schema" : "https://raw.githubusercontent.com/LuaLS/LLS-Addons/main/schemas/addon_config.schema.json",
   "name": "Recoil",
-  "words": ["Spring"]
+  "words": ["Spring"],
+  "settings": {
+    "Lua": {
+      "runtime.version": "Lua 5.1",
+      "runtime.special": {
+        "VFS.Include": "require",
+        "include": "require",
+        "shard_include": "require"
+      },
+      "runtime.path": [
+        "?",
+        "?.lua"
+      ],
+      "completion.requireSeparator": "/"
+    }
+  }
 }
