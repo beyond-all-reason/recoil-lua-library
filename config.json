@@ -1,3 +1,5 @@
 {
-  "name": "Recoil"
+  "$schema" : "https://raw.githubusercontent.com/LuaLS/LLS-Addons/main/schemas/addon_config.schema.json",
+  "name": "Recoil",
+  "words": ["Spring"]
 }
