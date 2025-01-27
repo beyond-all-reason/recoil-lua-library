@@ -1436,7 +1436,7 @@ function Spring.TestMoveOrder(unitDefID, pos, dir, testTerrain, testObjects, cen
 ---@param x number
 ---@param y number
 ---@param z number
----@param facing 0|"s"|1|"e"|2|"n"|3|"w"
+---@param facing Facing
 ---@return BuildOrderBlockedStatus blocking
 ---@return integer? featureID A reclaimable feature in the way.
 function Spring.TestBuildOrder(unitDefID, x, y, z, facing) end
