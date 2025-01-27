@@ -161,37 +161,37 @@ local losAccess = {}
 
 ---@param paramName string
 ---@param paramValue ?number|string numeric paramValues in quotes will be converted to number.
----@tparam
+---@param losAccess losAccess?
 ---@return nil
-function Spring.SetGameRulesParam(paramName, paramValue) end
+function Spring.SetGameRulesParam(paramName, paramValue, losAccess) end
 
 ---@param teamID integer
 ---@param paramName string
 ---@param paramValue ?number|string numeric paramValues in quotes will be converted to number.
----@tparam
+---@param losAccess losAccess?
 ---@return nil
-function Spring.SetTeamRulesParam(teamID, paramName, paramValue) end
+function Spring.SetTeamRulesParam(teamID, paramName, paramValue, losAccess) end
 
 ---@param playerID integer
 ---@param paramName string
 ---@param paramValue ?number|string numeric paramValues in quotes will be converted to number.
----@tparam
+---@param losAccess losAccess?
 ---@return nil
-function Spring.SetPlayerRulesParam(playerID, paramName, paramValue) end
+function Spring.SetPlayerRulesParam(playerID, paramName, paramValue, losAccess) end
 
 ---@param unitID integer
 ---@param paramName string
 ---@param paramValue ?number|string numeric paramValues in quotes will be converted to number.
----@tparam
+---@param losAccess losAccess?
 ---@return nil
-function Spring.SetUnitRulesParam(unitID, paramName, paramValue) end
+function Spring.SetUnitRulesParam(unitID, paramName, paramValue, losAccess) end
 
 ---@param featureID integer
 ---@param paramName string
 ---@param paramValue ?number|string numeric paramValues in quotes will be converted to number.
----@tparam
+---@param losAccess losAccess?
 ---@return nil
-function Spring.SetFeatureRulesParam(featureID, paramName, paramValue) end
+function Spring.SetFeatureRulesParam(featureID, paramName, paramValue, losAccess) end
 
 ---Lua to COB
 ---
@@ -825,9 +825,9 @@ function Spring.SetFactoryBuggerOff(unitID, buggerOff, offset, radius, relHeadin
 ---@param spherical boolean? (Default: true)
 ---@param forced boolean? (Default: true)
 ---@param excludeUnitID integer?
----@tparam
+---@param excludeUnitDefIDs number[]?
 ---@return nil
-function Spring.BuggerOff(x, y, z, radius, teamID, spherical, forced, excludeUnitID) end
+function Spring.BuggerOff(x, y, z, radius, teamID, spherical, forced, excludeUnitID, excludeUnitDefIDs) end
 
 ---@param unitID integer
 ---@param damage number
@@ -967,10 +967,10 @@ function Spring.SetFeatureResources(featureID, metal, energy, reclaimTime, recla
 ---
 ---@param featureID integer
 ---@param unitDef string|number id or name
----@tparam
+---@param facing (string|number)?
 ---@param progress number?
 ---@return nil
-function Spring.SetFeatureResurrect(featureID, unitDef, progress) end
+function Spring.SetFeatureResurrect(featureID, unitDef, facing, progress) end
 
 ---
 ---Use this callout to control feature movement. The arg* arguments are parsed as follows and all optional:

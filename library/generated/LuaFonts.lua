@@ -20,14 +20,14 @@
 ---Note the callin won't be executed at the time of calling this method,
 ---but later, on the Update cycle (before other Update and Draw callins).
 ---
----@string filePath VFS path to the file, for example "fonts/myfont.ttf". Uses VFS.RAW_FIRST access mode.
----@treturn bool success
-function gl.AddFallbackFont() end
+---@param filePath string VFS path to the file, for example "fonts/myfont.ttf". Uses VFS.RAW_FIRST access mode.
+---@return bool success
+function gl.AddFallbackFont(filePath) end
 
 ---Clears all fallback fonts.
 ---
 ---See the note at 'AddFallbackFont' about the 'FontsChanged' callin,
 ---it also applies when calling this method.
 ---
----@treturn nil
+---@return nil
 function gl.ClearFallbackFonts() end

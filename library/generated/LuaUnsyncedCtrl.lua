@@ -666,9 +666,9 @@ function Spring.ReplaceMouseCursor(oldFileName, newFileName, hotSpotTopLeft) end
 ---Register your custom cmd so it gets visible in the unit's cmd queue
 ---
 ---@param cmdID number
----@tparam
+---@param (string|number)? cmdReference iconname | cmdID_cloneIcon
 ---@return boolean? assigned
-function Spring.SetCustomCommandDrawData(cmdID) end
+function Spring.SetCustomCommandDrawData(cmdID, (string|number)?) end
 
 ---Mouse
 ---
@@ -799,12 +799,14 @@ function Spring.GiveOrderArrayToUnitMap(unitMap, cmdArray) end
 
 ---@param unitArray number[] array of unit ids
 ---@param cmdArray Command[]
----@tparam When true, assign commands according to index between units and cmds arrays.
+---@param pairwise boolean? (Default: `false`) When `false`, assign all commands to each unit.
 ---
----If len(unitArray) < len(cmdArray) only the first len(unitArray) commands
+---When `true`, assign commands according to index between units and cmds arrays.
+---
+---If `len(unitArray) < len(cmdArray)` only the first `len(unitArray)` commands
 ---will be assigned, and vice-versa.
 ---@return nil|boolean
-function Spring.GiveOrderArrayToUnitArray(unitArray, cmdArray) end
+function Spring.GiveOrderArrayToUnitArray(unitArray, cmdArray, pairwise) end
 
 ---@param spacing number
 ---@return nil
@@ -978,16 +980,16 @@ function Spring.SendSkirmishAIMessage(aiTeam, message) end
 ---@return nil
 function Spring.SetLogSectionFilterLevel(sectionName, logLevel) end
 
----@int
----@int
----@int
----@int
+---@param itersPerBatch integer?
+---@param numStepsPerIter integer?
+---@param minStepsPerIter integer?
+---@param maxStepsPerIter integer?
 ---@param minLoopRunTime number?
 ---@param maxLoopRunTime number?
 ---@param baseRunTimeMult number?
 ---@param baseMemLoadMult number?
 ---@return nil
-function Spring.GarbageCollectCtrl(minLoopRunTime, maxLoopRunTime, baseRunTimeMult, baseMemLoadMult) end
+function Spring.GarbageCollectCtrl(itersPerBatch, numStepsPerIter, minStepsPerIter, maxStepsPerIter, minLoopRunTime, maxLoopRunTime, baseRunTimeMult, baseMemLoadMult) end
 
 ---@param drawSky boolean
 ---@return nil

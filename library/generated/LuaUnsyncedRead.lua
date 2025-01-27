@@ -247,12 +247,12 @@ function Spring.GetUnitDrawFlag(unitID) end
 ---@return boolean? nil when unitID cannot be parsed
 function Spring.GetUnitNoMinimap(unitID) end
 
----@number unitID
----@treturn nil|bool nil when unitID cannot be parsed
-function Spring.GetUnitNoGroup() end
+---@param unitID integer
+---@return nil|bool noGroup `nil` when `unitID` cannot be parsed.
+function Spring.GetUnitNoGroup(unitID) end
 
 ---@param unitID integer
----@return boolean? nil when unitID cannot be parsed
+---@return boolean? noSelect `nil` when `unitID` cannot be parsed.
 function Spring.GetUnitNoSelect(unitID) end
 
 ---@param unitID integer
@@ -907,19 +907,19 @@ local Configuration = {}
 function Spring.GetConfigParams() end
 
 ---@param name string
----@tparam
+---@param default number? (Default: `0`)
 ---@return number? configInt
-function Spring.GetConfigInt(name) end
+function Spring.GetConfigInt(name, default) end
 
 ---@param name string
----@tparam
+---@param default number? (Default: `0`)
 ---@return number? configFloat
-function Spring.GetConfigFloat(name) end
+function Spring.GetConfigFloat(name, default) end
 
 ---@param name string
----@tparam
+---@param default string? (Default: `""`)
 ---@return number? configString
-function Spring.GetConfigString(name) end
+function Spring.GetConfigString(name, default) end
 
 ---@return table<string,number> sections where keys are names and loglevel are values. E.g. `{ "KeyBindings" = LOG.INFO, "Font" = LOG.INFO, "Sound" = LOG.WARNING, ... }`
 function Spring.GetLogSections() end

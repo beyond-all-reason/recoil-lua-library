@@ -679,10 +679,10 @@ function Spring.GetUnitIsBeingBuilt(unitID) end
 ---@return number energyUse
 function Spring.GetUnitResources(unitID) end
 
----@number unitID
----@treturn number Unit's metal storage
----@treturn number Unit's energy storage
-function Spring.GetUnitStorage() end
+---@param unitID integer
+---@return number Unit's metal storage
+---@return number Unit's energy storage
+function Spring.GetUnitStorage(unitID) end
 
 ---@param unitID integer
 ---@return number? buildTime
@@ -1037,10 +1037,10 @@ function Spring.GetUnitBlocking(unitID) end
 ---@param unitID integer
 function Spring.GetUnitMoveTypeData(unitID) end
 
----@number unitID Unit id.
----@number cmdIndex Command index to get. If negative will count from the end of the queue,
+---@param unitID integer Unit id.
+---@param cmdIndex integer Command index to get. If negative will count from the end of the queue,
 ---for example -1 will be the last command.
-function Spring.GetUnitCurrentCommand() end
+function Spring.GetUnitCurrentCommand(unitID, cmdIndex) end
 
 ---Get the commands for a unit.
 ---
@@ -1069,7 +1069,7 @@ function Spring.GetFactoryCommands(unitID, count) end
 
 ---Get the number of commands in a units queue.
 ---
----@number unitID
+---@param unitID integer
 
 ---@param unitID integer
 function Spring.GetFactoryBuggerOff(unitID) end
@@ -1705,36 +1705,36 @@ function Spring.GetUnitScriptNames(unitID) end
 ---Checks if there is surface (ground, optionally water) towards a vector
 ---and returns the distance to the closest hit and its position, if any.
 ---
----@number posX
----@number posY
----@number posZ
----@number dirX
----@number dirY
----@number dirZ
----@bool
----@treturn number rayLength
----@treturn number posX
----@treturn number posY
----@treturn number posZ
-function Spring.TraceRayGroundInDirection() end
+---@param posX number
+---@param posY number
+---@param posZ number
+---@param dirX number
+---@param dirY number
+---@param dirZ number
+---@param testWater boolean? (Default: `true`)
+---@return number rayLength
+---@return number posX
+---@return number posY
+---@return number posZ
+function Spring.TraceRayGroundInDirection(posX, posY, posZ, dirX, dirY, dirZ, testWater) end
 
 ---Checks for a ground collision between two positions
 ---
 ---Checks if there is surface (ground, optionally water) between two positions
 ---and returns the distance to the closest hit and its position, if any.
 ---
----@number startX
----@number startY
----@number startZ
----@number endX
----@number endY
----@number endZ
----@bool
----@treturn number rayLength
----@treturn number posX
----@treturn number posY
----@treturn number posZ
-function Spring.TraceRayGroundBetweenPositions() end
+---@param startX number
+---@param startY number
+---@param startZ number
+---@param endX number
+---@param endY number
+---@param endZ number
+---@param testWater boolean? (Default: `true`)
+---@return number rayLength
+---@return number posX
+---@return number posY
+---@return number posZ
+function Spring.TraceRayGroundBetweenPositions(startX, startY, startZ, endX, endY, endZ, testWater) end
 
 ---Misc
 ---
