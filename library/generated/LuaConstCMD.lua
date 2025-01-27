@@ -106,9 +106,6 @@ CMD = {
 	---@type 25
 	GUARD = nil,
 
-	---@type 30
-	AISELECT = nil,
-
 	---@type 32
 	OPT_SHIFT = nil,
 

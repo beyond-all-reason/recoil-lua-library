@@ -17,22 +17,16 @@
 local FeatureSupport = {}
 
 ---Engine specific information.
+---
+---@param version string "Major.Minor.PatchSet" for releases, "Major.Minor.PatchSet-CommitNum-gHash branch" otherwise
+---@param versionFull string "Major.Minor.PatchSet" for releases, "Major.Minor.PatchSet-CommitNum-gHash branch" otherwise. Will also include (buildFlags), if there're any.
+---@param versionMajor string Major part of the named release version
+---@param versionMinor string Minor part of the named release version
+---@param versionPatchSet string Build numbert of the named release version
+---@param commitsNumber string Number of commits after the latest named release, non-zero indicates a "dev" build
+---@param buildFlags string Gets additional engine buildflags, e.g. "Debug" or "Sync-Debug"
+---@param FeatureSupport string Table containing various engine features as keys; use for cross-version compat
+---@wordSize number Indicates the build type always 64 these days
 Engine = {
-	---@type string Returns the same as `spring  *sync-version`, e.g. "92"
-	version = nil,
 
-	---@type string
-	versionFull = nil,
-
-	---@type string
-	versionPatchSet = nil,
-
-	---@type string (unsynced only) Gets additional engine buildflags, e.g. "OMP" or "MT-Sim DEBUG"
-	buildFlags = nil,
-
-	---@type FeatureSupport table containing various engine features as keys; use for cross-version compat
-	FeatureSupport = nil,
-
-	---@type number indicates the build type and is either 32 or 64 (or 0 in synced code)
-	wordSize = nil
 }

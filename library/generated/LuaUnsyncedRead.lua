@@ -247,6 +247,10 @@ function Spring.GetUnitDrawFlag(unitID) end
 ---@return boolean? nil when unitID cannot be parsed
 function Spring.GetUnitNoMinimap(unitID) end
 
+---@number unitID
+---@treturn nil|bool nil when unitID cannot be parsed
+function Spring.GetUnitNoGroup() end
+
 ---@param unitID integer
 ---@return boolean? nil when unitID cannot be parsed
 function Spring.GetUnitNoSelect(unitID) end

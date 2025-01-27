@@ -33,17 +33,17 @@ function Spring.Echo(arg, ...) end
 
 ---@alias LogLevel
 ---| integer
----| "debug"   # LOG.DEBUG
----| "info"    # LOG.INFO
----| "notice"  # LOG.NOTICE (engine default)
----| "warning" # LOG.WARNING
----| "error"   # LOG.ERROR
----| "fatal"   # LOG.FATAL
+---| "debug"      # LOG.DEBUG
+---| "info"       # LOG.INFO
+---| "notice"     # LOG.NOTICE (engine default)
+---| "warning"    # LOG.WARNING
+---| "deprecated" # LOG.DEPRECATED
+---| "error"      # LOG.ERROR
+---| "fatal"      # LOG.FATAL
 
 ---@param section string
 ---@param logLevel LogLevel? (Default: "notice")
 ---@param ... string messages
----@return nil
 function Spring.Log(section, logLevel, ...) end
 
 ---@param commands string[]
@@ -476,6 +476,10 @@ function Spring.SetUnitAlwaysUpdateMatrix(unitID, alwaysUpdateMatrix) end
 function Spring.SetUnitNoMinimap(unitID, unitNoMinimap) end
 
 ---@param unitID number
+---@param unitNoGroup boolean Whether unit can be added to selection groups
+function Spring.SetUnitNoGroup(unitID, unitNoGroup) end
+
+---@param unitID number
 ---@param unitNoSelect boolean whether unit can be selected or not
 ---@return nil
 function Spring.SetUnitNoSelect(unitID, unitNoSelect) end
@@ -554,10 +558,19 @@ function Spring.AddUnitIcon(iconName, texFile, size, dist, radAdjust) end
 ---@return boolean? freed
 function Spring.FreeUnitIcon(iconName) end
 
+---
+---Use Spring.SetUnitIconDraw instead.
+---
+---@deprecated
 ---@param unitID number
 ---@param drawIcon boolean
 ---@return nil
 function Spring.UnitIconSetDraw(unitID, drawIcon) end
+
+---@param unitID number
+---@param drawIcon boolean
+---@return nil
+function Spring.SetUnitIconDraw(unitID, drawIcon) end
 
 ---@param unitDefID number
 ---@param iconName string
@@ -582,11 +595,6 @@ function Spring.ExtractModArchiveFile(modfile) end
 ---@param path string
 ---@return boolean? dirCreated
 function Spring.CreateDir(path) end
-
----@param narr number hint for count of array elements
----@param nrec number hint for count of record elements
----@return table
-function Spring.AllocateTable(narr, nrec) end
 
 ---GUI
 ---
@@ -995,7 +1003,7 @@ function Spring.SetDrawGround(drawGround) end
 
 ---@param drawGroundDeferred boolean
 ---@param drawGroundForward boolean? allows disabling of the forward pass
----treturn nil
+---@return nil
 function Spring.SetDrawGroundDeferred(drawGroundDeferred, drawGroundForward) end
 
 ---@param drawUnitsDeferred boolean

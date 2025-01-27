@@ -522,6 +522,12 @@ function Update(dt) end
 ---@param viewSizeY number
 function ViewResize(viewSizeX, viewSizeY) end
 
+---Called whenever fonts are updated. Signals the game display lists
+---and other caches should be discarded.
+---
+---Gets called before other Update and Draw callins.
+function FontsChanged() end
+
 function SunChanged() end
 
 ---Used to set the default command when a unit is selected. First parameter is the type of the object pointed at (either "unit or "feature") and the second is its unitID or featureID respectively.
@@ -736,6 +742,12 @@ function IsAbove(x, y) end
 ---@param y number
 ---@return string tooltip
 function GetTooltip(x, y) end
+
+---Called when a command is issued.
+---
+---@tparam nil|number cmdID
+---@tparam nil|number cmdType
+function ActiveCommandChanged() end
 
 ---Called when a command is issued.
 ---

@@ -268,6 +268,19 @@ function Spring.SetUnitResourcing(unitID, res, amount) end
 ---@return nil
 function Spring.SetUnitResourcing(unitID, res) end
 
+---Unit Storage
+---
+---@section unitstorage
+
+---@param unitID number
+---@param res string
+---@param amount number
+function Spring.SetUnitStorage(unitID, res, amount) end
+
+---@param unitID number
+---@param res ResourceUsage keys are: "[m|e]" metal | energy. Values are amounts
+function Spring.SetUnitStorage(unitID, res) end
+
 ---@param unitID integer
 ---@param tooltip string
 ---@return nil
@@ -480,9 +493,9 @@ function Spring.SetUnitHarvestStorage(unitID, metal) end
 
 ---@param unitID integer
 ---@param paramName string one of `buildRange`|`buildDistance`|`buildRange3D`
----@number
+---@param value number|boolean boolean when `paramName` is `buildRange3D`, otherwise number.
 ---@return nil
-function Spring.SetUnitBuildParams(unitID, paramName) end
+function Spring.SetUnitBuildParams(unitID, paramName, value) end
 
 ---@param builderID integer
 ---@param buildSpeed number
@@ -675,6 +688,13 @@ function Spring.SetUnitPieceVisible(unitID, pieceIndex, visible) end
 ---@return number? New radius, or `nil` if unit is invalid.
 function Spring.SetUnitSensorRadius(unitID, type, radius) end
 
+---Sets a unit's radar wobble
+---
+---Controls how much a unit's radar dot will wobble. Note that setting
+---this above the allyTeam's default wobble may result in the edgemost
+---dot positions failing to register in ray traces, i.e. things like
+---native "is under cursor" checks and some Lua interfaces.
+---
 ---@param unitID integer
 ---@param posErrorVectorX number
 ---@param posErrorVectorY number
@@ -1185,6 +1205,11 @@ function Spring.SetProjectileCollision(projectileID) end
 function Spring.SetProjectileTarget(projectileID, arg1, arg2, posZ) end
 
 ---@param projectileID integer
+---@param ttl number Remaining time to live in frames
+---@return nil
+function Spring.SetProjectileTimeToLive(projectileID, ttl) end
+
+---@param projectileID integer
 ---@return nil
 function Spring.SetProjectileIsIntercepted(projectileID) end
 
@@ -1231,22 +1256,22 @@ function Spring.UnitFinishCommand(unitID) end
 
 ---@param unitID integer
 ---@param cmdID integer
----@param params number[]
----@param options CommandOptions
+---@param params number[]?
+---@param options CommandOptions?
 ---@return boolean unitOrdered
 function Spring.GiveOrderToUnit(unitID, cmdID, params, options) end
 
 ---@param unitMap table<number,table> table with unitIDs as keys
 ---@param cmdID integer
----@param params number[]
----@param options CommandOptions
+---@param params number[]?
+---@param options CommandOptions?
 ---@return number unitsOrdered
 function Spring.GiveOrderToUnitMap(unitMap, cmdID, params, options) end
 
 ---@param unitIDs number[]
 ---@param cmdID integer
----@param params number[]
----@param options CommandOptions
+---@param params number[]?
+---@param options CommandOptions?
 ---@return number unitsOrdered
 function Spring.GiveOrderToUnitArray(unitIDs, cmdID, params, options) end
 
