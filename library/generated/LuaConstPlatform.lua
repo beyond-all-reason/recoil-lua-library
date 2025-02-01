@@ -70,6 +70,9 @@ Platform = {
 	---@type number
 	sdlVersionLinkedPatch = nil,
 
+	---@type number Total physical system RAM in MBs.
+	totalRAM = nil,
+
 	---@type boolean
 	glSupportNonPowerOfTwoTex = nil,
 
