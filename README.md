@@ -23,7 +23,7 @@ Then create `.luarc.json` at root with the following options:
   ],
   "workspace.library": [
     "recoil-lua-library"
-	],
+  ],
   "runtime.special": {
     "VFS.Include": "require",
     "include": "require",
