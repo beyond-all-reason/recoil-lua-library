@@ -745,9 +745,9 @@ function GetTooltip(x, y) end
 
 ---Called when a command is issued.
 ---
----@param nil|number cmdID
----@param nil|number cmdType
-function ActiveCommandChanged(nil|number, nil|number) end
+---@param cmdId integer?
+---@param cmdType integer?
+function ActiveCommandChanged(cmdId, cmdType) end
 
 ---Called when a command is issued.
 ---

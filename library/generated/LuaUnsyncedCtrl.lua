@@ -66,17 +66,17 @@ function Spring.SendMessage(message) end
 ---@return nil
 function Spring.SendMessageToSpectators(message) end
 
----@param playerID number
+---@param playerID integer
 ---@param message string
 ---@return nil
 function Spring.SendMessageToPlayer(playerID, message) end
 
----@param teamID number
+---@param teamID integer
 ---@param message string
 ---@return nil
 function Spring.SendMessageToTeam(teamID, message) end
 
----@param allyID number
+---@param allyID integer
 ---@param message string
 ---@return nil
 function Spring.SendMessageToAllyTeam(allyID, message) end
@@ -144,7 +144,7 @@ function Spring.SetSoundStreamVolume(volume) end
 
 function Spring.SetSoundEffectParams() end
 
----@param cmdID number
+---@param cmdID integer
 ---@param posX number
 ---@param posY number
 ---@param posZ number
@@ -158,16 +158,16 @@ function Spring.AddWorldIcon(cmdID, posX, posY, posZ) end
 ---@return nil
 function Spring.AddWorldText(text, posX, posY, posZ) end
 
----@param unitDefID number
+---@param unitDefID integer
 ---@param posX number
 ---@param posY number
 ---@param posZ number
----@param teamID number
+---@param teamID integer
 ---@param facing number
 ---@return nil
 function Spring.AddWorldUnit(unitDefID, posX, posY, posZ, teamID, facing) end
 
----@param unitID number
+---@param unitID integer
 ---@return nil
 function Spring.DrawUnitCommands(unitID) end
 
@@ -243,13 +243,13 @@ function Spring.SetCameraState(camState, transitionTime, transitionTimeFactor, t
 
 ---Runs Dolly Camera
 ---
----@param runtime number in milliseconds
+---@param runtime number Runtime in milliseconds.
 ---@return nil
 function Spring.RunDollyCamera(runtime) end
 
 ---Pause Dolly Camera
 ---
----@param fraction number fraction of the total runtime to pause at, 0 to 1 inclusive. A null value pauses at current percent
+---@param fraction number Fraction of the total runtime to pause at, 0 to 1 inclusive. A null value pauses at current percent
 ---@return nil
 function Spring.PauseDollyCamera(fraction) end
 
@@ -269,27 +269,27 @@ function Spring.SetDollyCameraPosition(x, y, z) end
 ---Sets Dolly Camera movement Curve
 ---
 ---@param degree number
----@param cpoints table NURBS control point positions {{x,y,z,weight}, ...}
+---@param cpoints table NURBS control point positions `{{x,y,z,weight}, ...}`
 ---@param knots table
 ---@return nil
 function Spring.SetDollyCameraCurve(degree, cpoints, knots) end
 
 ---Sets Dolly Camera movement mode
 ---
----@param mode number 1 static position, 2 nurbs curve
+---@param mode 1|2 `1` static position, `2` nurbs curve
 ---@return nil
 function Spring.SetDollyCameraMode(mode) end
 
 ---Sets Dolly Camera movement curve to world relative or look target relative
 ---
----@param relativeMode number 1 world, 2 look target
+---@param relativeMode number `1` world, `2` look target
 ---@return nil
 function Spring.SetDollyCameraRelativeMode(relativeMode) end
 
 ---Sets Dolly Camera Look Curve
 ---
 ---@param degree number
----@param cpoints table NURBS control point positions {{x,y,z,weight}, ...}
+---@param cpoints table NURBS control point positions `{{x,y,z,weight}, ...}`
 ---@param knots table
 ---@return nil
 function Spring.SetDollyCameraLookCurve(degree, cpoints, knots) end
@@ -304,7 +304,7 @@ function Spring.SetDollyCameraLookPosition(x, y, z) end
 
 ---Sets target unit for Dolly Camera to look towards
 ---
----@param unitID number the unit to look at
+---@param unitID integer The unit to look at.
 ---@return nil
 function Spring.SetDollyCameraLookUnit(unitID) end
 
@@ -314,12 +314,12 @@ function Spring.SetDollyCameraLookUnit(unitID) end
 
 ---Selects a single unit
 ---
----@param unitID number or nil
----@param append boolean? (Default: false) append to current selection
+---@param unitID integer?
+---@param append boolean? (Default: false) Append to current selection.
 ---@return nil
 function Spring.SelectUnit(unitID, append) end
 
----@param unitID number
+---@param unitID integer
 ---@return nil
 function Spring.DeselectUnit(unitID) end
 
@@ -406,7 +406,7 @@ function Spring.AddLightTrackingTarget() end
 ---Set a map-illuminating light to start/stop tracking the position of a moving object (unit or projectile)
 ---
 ---@param lightHandle number
----@param unitOrProjectileID number
+---@param unitOrProjectileID integer
 ---@param enableTracking boolean
 ---@param unitOrProjectile boolean
 ---@return boolean success
@@ -415,7 +415,7 @@ function Spring.SetMapLightTrackingState(lightHandle, unitOrProjectileID, enable
 ---Set a model-illuminating light to start/stop tracking the position of a moving object (unit or projectile)
 ---
 ---@param lightHandle number
----@param unitOrProjectileID number
+---@param unitOrProjectileID integer
 ---@param enableTracking boolean
 ---@param unitOrProjectile boolean
 ---@return boolean success
@@ -430,8 +430,8 @@ function Spring.SetModelLightTrackingState(lightHandle, unitOrProjectileID, enab
 ---Passing in a value of 0 will cause the respective shader to revert back to its engine default.
 ---Custom map shaders that declare a uniform ivec2 named "texSquare" can sample from the default diffuse texture(s), which are always bound to TU 0.
 ---
----@param standardShaderID number
----@param deferredShaderID number
+---@param standardShaderID integer
+---@param deferredShaderID integer
 ---@return nil
 function Spring.SetMapShader(standardShaderID, deferredShaderID) end
 
@@ -455,42 +455,42 @@ function Spring.SetSkyBoxTexture(texName) end
 ---
 ---@section unitcustomrendering
 
----@param unitID number
+---@param unitID integer
 ---@param noDraw boolean
 ---@return nil
 function Spring.SetUnitNoDraw(unitID, noDraw) end
 
----@param unitID number
+---@param unitID integer
 ---@param drawMask number
 ---@return nil
 function Spring.SetUnitEngineDrawMask(unitID, drawMask) end
 
----@param unitID number
+---@param unitID integer
 ---@param alwaysUpdateMatrix boolean
 ---@return nil
 function Spring.SetUnitAlwaysUpdateMatrix(unitID, alwaysUpdateMatrix) end
 
----@param unitID number
+---@param unitID integer
 ---@param unitNoMinimap boolean
 ---@return nil
 function Spring.SetUnitNoMinimap(unitID, unitNoMinimap) end
 
----@param unitID number
+---@param unitID integer
 ---@param unitNoGroup boolean Whether unit can be added to selection groups
 function Spring.SetUnitNoGroup(unitID, unitNoGroup) end
 
----@param unitID number
+---@param unitID integer
 ---@param unitNoSelect boolean whether unit can be selected or not
 ---@return nil
 function Spring.SetUnitNoSelect(unitID, unitNoSelect) end
 
----@param unitID number
+---@param unitID integer
 ---@param unitLeaveTracks boolean whether unit leaves tracks on movement
 ---@return nil
 function Spring.SetUnitLeaveTracks(unitID, unitLeaveTracks) end
 
----@param unitID number
----@param featureID number
+---@param unitID integer
+---@param featureID integer
 ---@param scaleX number
 ---@param scaleY number
 ---@param scaleZ number
@@ -507,29 +507,29 @@ function Spring.SetUnitSelectionVolumeData(unitID, featureID, scaleX, scaleY, sc
 ---
 ---@section features
 
----@param featureID number
+---@param featureID integer
 ---@param noDraw boolean
 ---@return nil
 function Spring.SetFeatureNoDraw(featureID, noDraw) end
 
----@param featureID number
+---@param featureID integer
 ---@param engineDrawMask number
 ---@return nil
 function Spring.SetFeatureEngineDrawMask(featureID, engineDrawMask) end
 
----@param featureID number
+---@param featureID integer
 ---@param alwaysUpdateMat number
 ---@return nil
 function Spring.SetFeatureAlwaysUpdateMatrix(featureID, alwaysUpdateMat) end
 
 ---Control whether a feature will fade or not when zoomed out.
 ---
----@param featureID number
+---@param featureID integer
 ---@param allow boolean
 ---@return nil
 function Spring.SetFeatureFade(featureID, allow) end
 
----@param featureID number
+---@param featureID integer
 ---@param scaleX number
 ---@param scaleY number
 ---@param scaleZ number
@@ -562,22 +562,22 @@ function Spring.FreeUnitIcon(iconName) end
 ---Use Spring.SetUnitIconDraw instead.
 ---
 ---@deprecated
----@param unitID number
+---@param unitID integer
 ---@param drawIcon boolean
 ---@return nil
 function Spring.UnitIconSetDraw(unitID, drawIcon) end
 
----@param unitID number
+---@param unitID integer
 ---@param drawIcon boolean
 ---@return nil
 function Spring.SetUnitIconDraw(unitID, drawIcon) end
 
----@param unitDefID number
+---@param unitDefID integer
 ---@param iconName string
 ---@return nil
 function Spring.SetUnitDefIcon(unitDefID, iconName) end
 
----@param unitDefID number
+---@param unitDefID integer
 ---@param image string luaTexture|texFile
 ---@return nil
 function Spring.SetUnitDefImage(unitDefID, image) end
@@ -637,7 +637,7 @@ function Spring.SetDrawSelectionInfo(enable) end
 ---@return nil
 function Spring.SetBoxSelectionByEngine(state) end
 
----@param teamID number
+---@param teamID integer
 ---@param r number
 ---@param g number
 ---@param b number
@@ -665,7 +665,7 @@ function Spring.ReplaceMouseCursor(oldFileName, newFileName, hotSpotTopLeft) end
 
 ---Register your custom cmd so it gets visible in the unit's cmd queue
 ---
----@param cmdID number
+---@param cmdID integer
 ---@param (string|number)? cmdReference iconname | cmdID_cloneIcon
 ---@return boolean? assigned
 function Spring.SetCustomCommandDrawData(cmdID, (string|number)?) end
@@ -688,11 +688,11 @@ function Spring.SetMouseCursor(cursorName, cursorScale) end
 ---
 ---@section loscolors
 
----@param always table {r,g,b}
----@param LOS table = {r,g,b}
----@param radar table = {r,g,b}
----@param jam table = {r,g,b}
----@param radar2 table = {r,g,b}
+---@param always rgb
+---@param LOS rgb
+---@param radar rgb
+---@param jam rgb
+---@param radar2 rgb
 ---@return nil
 function Spring.SetLosViewColors(always, LOS, radar, jam, radar2) end
 
@@ -738,7 +738,7 @@ function Spring.Quit() end
 ---
 ---@section unitgroup
 
----@param unitID number
+---@param unitID integer
 ---@param groupID number the group number to be assigned, or -1 for deassignment
 ---@return nil
 function Spring.SetUnitGroup(unitID, groupID) end
@@ -760,34 +760,34 @@ function Spring.SetUnitGroup(unitID, groupID) end
 ---@field meta boolean Meta (windows/mac/mod4) key pressed
 local cmdOpts = {}
 
----@param cmdID number
+---@param cmdID integer
 ---@param params table
 ---@param options cmdOpts
 ---@return nil|true
 function Spring.GiveOrder(cmdID, params, options) end
 
----@param unitID number
----@param cmdID number
+---@param unitID integer
+---@param cmdID integer
 ---@param params table
 ---@param options cmdOpts
 ---@return nil|true
 function Spring.GiveOrderToUnit(unitID, cmdID, params, options) end
 
 ---@param unitMap table { [unitID] = arg1, ... }
----@param cmdID number
+---@param cmdID integer
 ---@param params table
 ---@param options cmdOpts
 ---@return nil|true
 function Spring.GiveOrderToUnitMap(unitMap, cmdID, params, options) end
 
 ---@param unitArray number[] array of unit ids
----@param cmdID number
+---@param cmdID integer
 ---@param params table
 ---@param options cmdOpts
 ---@return nil|true
 function Spring.GiveOrderToUnitArray(unitArray, cmdID, params, options) end
 
----@param unitID number
+---@param unitID integer
 ---@param cmdArray Command[]
 ---@return boolean ordersGiven
 function Spring.GiveOrderArrayToUnit(unitID, cmdArray) end
@@ -846,12 +846,12 @@ function Spring.SendLuaMenuMsg(msg) end
 ---@return nil
 function Spring.SetShareLevel(resource, shareLevel) end
 
----@param teamID number
+---@param teamID integer
 ---@param units string
 ---@return nil
 function Spring.ShareResources(teamID, units) end
 
----@param teamID number
+---@param teamID integer
 ---@param resource string metal | energy
 ---@param amount number
 ---@return nil
@@ -1086,11 +1086,11 @@ function Spring.SetWaterParams(waterParams) end
 ---Allow the engine to load the unit's model (and texture) in a background thread.
 ---Wreckages and buildOptions of a unit are automatically preloaded.
 ---
----@param unitDefID number
+---@param unitDefID integer
 ---@return nil
 function Spring.PreloadUnitDefModel(unitDefID) end
 
----@param featureDefID number
+---@param featureDefID integer
 ---@return nil
 function Spring.PreloadFeatureDefModel(featureDefID) end
 
@@ -1109,11 +1109,11 @@ function Spring.LoadModelTextures(modelName) end
 ---@return nil|number decalID
 function Spring.CreateGroundDecal() end
 
----@param decalID number
+---@param decalID integer
 ---@return boolean delSuccess
 function Spring.DestroyGroundDecal(decalID) end
 
----@param decalID number
+---@param decalID integer
 ---@param midPosX number? (Default: currMidPosX)
 ---@param midPosZ number? (Default: currMidPosZ)
 ---@param sizeX number? (Default: currSizeX)
@@ -1139,24 +1139,24 @@ local xz = {}
 ---@return boolean decalSet
 function Spring.SetGroundDecalQuadPosAndHeight(decalID, posTL, posTR, posBR, posBL, projCubeHeight) end
 
----@param decalID number
+---@param decalID integer
 ---@param rot number? (Default: random) in radians
 ---@return boolean decalSet
 function Spring.SetGroundDecalRotation(decalID, rot) end
 
----@param decalID number
+---@param decalID integer
 ---@param textureName string The texture has to be on the atlas which seems to mean it's defined as an explosion, unit tracks, or building plate decal on some unit already (no arbitrary textures)
 ---@param isMainTex boolean? (Default: true) If false, it sets the normals/glow map
 ---@return nil|boolean decalSet
 function Spring.SetGroundDecalTexture(decalID, textureName, isMainTex) end
 
----@param decalID number
+---@param decalID integer
 ---@param texWrapDistance number? (Default: currTexWrapDistance) if non-zero sets the mode to repeat the texture along the left-right direction of the decal every texWrapFactor elmos
 ---@param texTraveledDistance number? (Default: currTexTraveledDistance) shifts the texture repetition defined by texWrapFactor so the texture of a next line in the continuous multiline can start where the previous finished. For that it should collect all elmo lengths of the previously set multiline segments.
 ---@return nil|boolean decalSet
 function Spring.SetGroundDecalTextureParams(decalID, texWrapDistance, texTraveledDistance) end
 
----@param decalID number
+---@param decalID integer
 ---@param alpha number? (Default: currAlpha) Between 0 and 1
 ---@param alphaFalloff number? (Default: currAlphaFalloff) Between 0 and 1, per second
 ---@return boolean decalSet
@@ -1166,7 +1166,7 @@ function Spring.SetGroundDecalAlpha(decalID, alpha, alphaFalloff) end
 ---Sets projection cube normal to orient in 3D space.
 ---In case the normal (0,0,0) then normal is picked from the terrain
 ---
----@param decalID number
+---@param decalID integer
 ---@param normalX number? (Default: 0)
 ---@param normalY number? (Default: 0)
 ---@param normalZ number? (Default: 0)
@@ -1177,7 +1177,7 @@ function Spring.SetGroundDecalNormal(decalID, normalX, normalY, normalZ) end
 ---Sets the tint of the ground decal. Color = 2 * textureColor * tintColor
 ---Respectively a color of (0.5, 0.5, 0.5, 0.5) is effectively no tint
 ---
----@param decalID number
+---@param decalID integer
 ---@param tintColR number? (Default: curTintColR)
 ---@param tintColG number? (Default: curTintColG)
 ---@param tintColB number? (Default: curTintColB)
@@ -1188,7 +1188,7 @@ function Spring.SetGroundDecalTint(decalID, tintColR, tintColG, tintColB, tintCo
 ---
 ---Sets varios secondary parameters of a decal
 ---
----@param decalID number
+---@param decalID integer
 ---@param dotElimExp number? (Default: curValue) pow(max(dot(decalProjVector, SurfaceNormal), 0.0), dotElimExp), used to reduce decal artifacts on surfaces non-collinear with the projection vector
 ---@param refHeight number? (Default: curValue)
 ---@param minHeight number? (Default: curValue)
@@ -1200,7 +1200,7 @@ function Spring.SetGroundDecalMisc(decalID, dotElimExp, refHeight, minHeight, ma
 ---
 ---Use separate min and max for "gradient" style decals such as tank tracks
 ---
----@param decalID number
+---@param decalID integer
 ---@param creationFrameMin number? (Default: currCreationFrameMin)
 ---@param creationFrameMax number? (Default: currCreationFrameMax)
 ---@return boolean decalSet

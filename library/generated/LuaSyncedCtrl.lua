@@ -150,11 +150,6 @@ function Spring.ShareTeamResource(teamID_src, teamID_recv, type, amount) end
 ---All GameRulesParam are public, TeamRulesParams can just be `private`,`allied` and/or `public`
 ---You can read RulesParams from any Lua enviroments! With those losAccess policies you can limit their access.
 ---
----NOTE: Need to explicitly declare `public` scope here to prevent LLS from
----detecting field names as access modifiers.
----
----See https://github.com/LuaLS/lua-language-server/issues/1814
----
 ---@class losAccess
 ---@field public private boolean? only readable by the ally (default)
 ---@field public allied boolean? readable by ally + ingame allied
@@ -1334,8 +1329,8 @@ function Spring.AddHeightMap(x, z, height) end
 ---@param x number
 ---@param z number
 ---@param height number
----@param terraform number? (Default: 1) a scaling factor.
----@return integer? absHeightDiff =0 nothing will be changed (the terraform starts) and if =1 the terraform will be finished.
+---@param terraform number? (Default: 1) Scaling factor.
+---@return integer? absHeightDiff If `0`, nothing will be changed (the terraform starts), if `1` the terraform will be finished.
 function Spring.SetHeightMap(x, z, height, terraform) end
 
 ---

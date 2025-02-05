@@ -27,27 +27,21 @@
 
 ---Returns the bitwise OR of all arguments. Only use up to 24 bit integers.
 ---
----@param a1 integer
----@param a2 integer
 ---@param ... integer
 ---@return integer result
-function math.bit_or(a1, a2, ...) end
+function math.bit_or(...) end
 
 ---Returns the bitwise AND of all arguments. Only use up to 24 bit integers.
 ---
----@param a1 integer
----@param a2 integer
 ---@param ... integer
 ---@return integer result
-function math.bit_and(a1, a2, ...) end
+function math.bit_and(...) end
 
 ---Returns the bitwise XOR of all arguments. Only use up to 24 bit integers.
 ---
----@param a1 integer
----@param a2 integer
 ---@param ... integer
 ---@return integer result
-function math.bit_xor(a1, a2, ...) end
+function math.bit_xor(...) end
 
 ---Returns the bitwise NOT of the 24 bit integer argument.
 ---
@@ -57,8 +51,6 @@ function math.bit_inv(value) end
 
 ---Set each of the bits of a 24 bit integer. Returns result = result OR (1 << a1) OR (1 << a2) OR ...;)
 ---
----@param a1 integer
----@param a2 integer
 ---@param ... integer
 ---@return integer result
-function math.bit_bits(a1, a2, ...) end
+function math.bit_bits(...) end
