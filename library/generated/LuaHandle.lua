@@ -626,7 +626,7 @@ function DrawScreenPost(viewSizeX, viewSizeY) end
 
 ---@param sx number relative to the minimap's position and scale.
 ---@param sy number relative to the minimap's position and scale.
-function DrawInMinimap(sx, sy) end
+function DrawInMiniMap(sx, sy) end
 
 ---@param sx number relative to the minimap's position and scale.
 ---@param sy number relative to the minimap's position and scale.

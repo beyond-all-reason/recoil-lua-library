@@ -70,7 +70,7 @@ function gl.RawBindFBO(fbo, target, rawFboId) end
 ---@return number previouslyBoundRawFboId
 function gl.RawBindFBO(fbo, target) end
 
----needs `GLEW_EXT_framebuffer_blit`
+---needs `GLAD_GL_EXT_framebuffer_blit`
 ---
 ---@param x0Src number
 ---@param y0Src number
@@ -84,7 +84,7 @@ function gl.RawBindFBO(fbo, target) end
 ---@param filter number? (Default: GL_NEAREST)
 function gl.BlitFBO(x0Src, y0Src, x1Src, y1Src, x0Dst, y0Dst, x1Dst, y1Dst, mask, filter) end
 
----needs `GLEW_EXT_framebuffer_blit`
+---needs `GLAD_GL_EXT_framebuffer_blit`
 ---
 ---@param fboSrc Fbo
 ---@param x0Src number
