@@ -132,17 +132,17 @@ function Spring.GetFeatureRulesParam(featureID, ruleRef) end
 ---if (Spring.GetModOptions.exampleOption) then...end
 
 ---@param mapOption string
----@return string value of mapOption
+---@return string value Value of `modOption`.
 function Spring.GetMapOption(mapOption) end
 
----@return [string] = string[] options map with options names as keys and values as values
+---@return table<string, string> mapOptions Table with options names as keys and values as values.
 function Spring.GetMapOptions() end
 
 ---@param modOption string
----@return string value of modOption in option map
+---@return string value Value of `modOption`.
 function Spring.GetModOption(modOption) end
 
----@return [string] = string[] options map with options names as keys and values as values
+---@return table<string, string> modOptions Table with options names as keys and values as values.
 function Spring.GetModOptions() end
 
 ---Vectors
