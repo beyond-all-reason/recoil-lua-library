@@ -642,7 +642,7 @@ soundDeviceSpec = {
 
 }
 
----@treturn {[soundDeviceSpec],...} devices Sound devices
+---@return {[soundDeviceSpec],...} devices Sound devices
 function Spring.GetSoundDevices() end
 
 ---@return number playTime
