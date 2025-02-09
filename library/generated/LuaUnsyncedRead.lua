@@ -633,16 +633,13 @@ function Spring.GetDrawSeconds() end
 ---
 ---@section sound
 
----Sound device spec
+---@class SoundDeviceSpec
 ---
----Contains data about a sound device
----
----@string name
-soundDeviceSpec = {
+---Contains data about a sound device.
+---@field name string
+local SoundDeviceSpec = {}
 
-}
-
----@return {[soundDeviceSpec],...} devices Sound devices
+---@return SoundDeviceSpec[] devices Sound devices.
 function Spring.GetSoundDevices() end
 
 ---@return number playTime
