@@ -569,7 +569,7 @@ function Spring.ValidUnitID(unitID) end
 local UnitState = {}
 
 ---@param unitID integer
----@return UnitState[]
+---@return UnitState
 function Spring.GetUnitStates(unitID) end
 
 ---@param unitID integer
