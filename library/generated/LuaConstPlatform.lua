@@ -38,7 +38,7 @@ Platform = {
 	glslVersion = nil,
 
 	---@type string
-	glewVersion = nil,
+	gladVersion = nil,
 
 	---@type string full name of the OS
 	osName = nil,
