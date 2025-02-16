@@ -59,3 +59,24 @@ function gl.Color(rgbs) end
 
 ---@param rgb [number,number,number] Red, green, blue
 function gl.Color(rgb) end
+
+---
+---labels an object for use with debugging tools
+---
+---@param objectTypeIdentifier GLenum Specifies the type of object being labeled.
+---@param objectID GLuint Specifies the name or ID of the object to label.
+---@param label string A string containing the label to be assigned to the object.
+---@return nil
+function gl.ObjectLabel(objectTypeIdentifier, objectID, label) end
+
+---
+---pushes a debug marker for nVidia nSight 2024.04, does not seem to work when FBO's are raw bound
+---
+---@param id GLuint A numeric identifier for the group.
+---@param message string A human-readable string describing the debug group.
+---@param sourceIsThirdParty boolean Set the source tag, true for GL_DEBUG_SOURCE_THIRD_PARTY, false for GL_DEBUG_SOURCE_APPLICATION. default false
+---@return nil
+function gl.PushDebugGroup(id, message, sourceIsThirdParty) end
+
+---@return nil
+function gl.PopDebugGroup() end

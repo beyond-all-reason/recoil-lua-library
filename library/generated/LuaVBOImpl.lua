@@ -265,3 +265,8 @@ function VBO:UnbindBufferRange(index, elementOffset, elementCount, target) end
 ---
 ---@return nil
 function VBO:DumpDefinition() end
+
+---Gets the OpenGL Buffer ID
+---
+---@return number bufferID
+function VBO:GetID() end

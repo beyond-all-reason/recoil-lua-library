@@ -617,6 +617,10 @@ GL = {
 ---
 ---@section fboattachments
 
+---OpenGL Object Types
+---
+---@section objecttypes
+
 ---Not included, but useful texture Formats
 ---
 ---@section textureformats
