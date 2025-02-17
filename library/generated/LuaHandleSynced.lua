@@ -192,7 +192,7 @@ function AllowFeatureCreation(featureDefID, teamID, x, y, z) end
 ---Called just before a feature changes its build percentage.
 ---
 ---Note that this is also called for resurrecting features, and for refilling features with resources before resurrection.
----On reclaim the part values are negative, and on refill and ressurect they are positive.
+---On reclaim the part values are negative, and on refill and resurrect they are positive.
 ---Part is the percentage the feature be built or reclaimed per frame.
 ---Eg. for a 30 workertime builder, that's a build power of 1 per frame.
 ---For a 50 buildtime feature reclaimed by this builder, part will be 100/-50(/1) = -2%, or -0.02 numerically.

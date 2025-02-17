@@ -819,7 +819,7 @@ function Spring.SetBuildFacing(facing) end
 ---UI
 ---
 ---@section ui
----Very important! (allows synced inter-lua-enviroment communications)
+---Very important! (allows synced inter-lua-environment communications)
 
 ---@param message string
 ---@param mode string "s"/"specs" | "a"/"allies"

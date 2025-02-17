@@ -31,7 +31,7 @@ Engine = {
 	---@type string Minor part of the named release version
 	versionMinor = nil,
 
-	---@type string Build numbert of the named release version
+	---@type string Build number of the named release version
 	versionPatchSet = nil,
 
 	---@type string Number of commits after the latest named release, non-zero indicates a "dev" build

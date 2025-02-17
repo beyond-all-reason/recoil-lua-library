@@ -145,10 +145,10 @@ function Spring.ShareTeamResource(teamID_src, teamID_recv, type, amount) end
 ---LOS it can read params with `inradar=true` even if the param has
 ---`inlos=false`) All GameRulesParam are public, TeamRulesParams can just be
 ---`private`,`allied` and/or `public` You can read RulesParams from any Lua
----enviroments! With those losAccess policies you can limit their access.
+---environments! With those losAccess policies you can limit their access.
 ---
 ---All GameRulesParam are public, TeamRulesParams can just be `private`,`allied` and/or `public`
----You can read RulesParams from any Lua enviroments! With those losAccess policies you can limit their access.
+---You can read RulesParams from any Lua environments! With those losAccess policies you can limit their access.
 ---
 ---@class losAccess
 ---@field public private boolean? only readable by the ally (default)
@@ -439,7 +439,7 @@ function Spring.SetUnitLosState(unitID, allyTeam, los) end
 ---1:=normal cloak
 ---2:=for free cloak (cost no E)
 ---3:=for free + no decloaking (except the unit is stunned)
----4:=ultimative cloak (no ecost, no decloaking, no stunned decloak)
+---4:=ultimate cloak (no ecost, no decloaking, no stunned decloak)
 ---
 ---The decloak distance is only changed:
 ---- if the 3th argument is a number or a boolean.
@@ -956,7 +956,7 @@ function Spring.SetFeatureReclaim(featureID, reclaimLeft) end
 function Spring.SetFeatureResources(featureID, metal, energy, reclaimTime, reclaimLeft, featureDefMetal, featureDefEnergy) end
 
 ---@param featureID integer
----@param unitDef string|integer Can be a number id or a string name, this allows cancelling ressurection by passing `-1`.
+---@param unitDef string|integer Can be a number id or a string name, this allows cancelling resurrection by passing `-1`.
 ---@param facing Facing? (Default: `"south"`)
 ---@param progress number? Set the level of progress.
 ---@return nil

@@ -39,7 +39,7 @@ local UniformParam = {}
 ---@class ShaderParams
 ---@field vertex string?
 ---
----The "Vetex" or vertex-shader is your GLSL-Code as string, its written in a
+---The "Vertex" or vertex-shader is your GLSL-Code as string, its written in a
 ---C-Dialect.  This shader is busy deforming the geometry of a unit but it can
 ---not create new polygons. Use it for waves, wobbling surfaces etc.
 ---@field tcs string?
@@ -64,7 +64,7 @@ local UniformParam = {}
 ---@field fragment string?
 ---
 ---The "Fragment" or Fragment-shader (sometimes called pixel-Shader) is post
----processing the allready rendered picture (for example drawing stars on the
+---processing the already rendered picture (for example drawing stars on the
 ---sky).
 ---
 ---Remember textures are not always 2 dimensional pictures. They can contain
@@ -91,7 +91,7 @@ function gl.CreateShader(shaderParams) end
 ---@param shaderID integer
 function gl.DeleteShader(shaderID) end
 
----Binds a shader program identified by shaderID. Pass 0 to disable the shader. Returns wether the shader was successfully bound.
+---Binds a shader program identified by shaderID. Pass 0 to disable the shader. Returns whether the shader was successfully bound.
 ---
 ---@param shaderID integer
 ---@return boolean linked

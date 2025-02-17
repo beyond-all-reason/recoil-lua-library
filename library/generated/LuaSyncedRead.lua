@@ -121,7 +121,7 @@ function Spring.GetFeatureRulesParam(featureID, ruleRef) end
 ---
 ---@section modmapoptions
 ---
----*Warning*: boolean values are not transfered from C to Lua correctly.
+---*Warning*: boolean values are not transferred from C to Lua correctly.
 ---For this reason the respective option has to be converted to a number
 ---and checked accordingly via an IF statement as shown below:
 ---

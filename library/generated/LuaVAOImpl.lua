@@ -17,19 +17,19 @@ VAO = {}
 ---@return nil
 function VAO:Delete() end
 
----Attachs a VBO to be used as a vertex buffer
+---Attaches a VBO to be used as a vertex buffer
 ---
 ---@param vbo VBO
 ---@return nil
 function VAO:AttachVertexBuffer(vbo) end
 
----Attachs a VBO to be used as an instance buffer
+---Attaches a VBO to be used as an instance buffer
 ---
 ---@param vbo VBO
 ---@return nil
 function VAO:AttachInstanceBuffer(vbo) end
 
----Attachs a VBO to be used as an index buffer
+---Attaches a VBO to be used as an index buffer
 ---
 ---@param vbo VBO
 ---@return nil
