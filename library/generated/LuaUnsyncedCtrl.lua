@@ -991,6 +991,10 @@ function Spring.SetLogSectionFilterLevel(sectionName, logLevel) end
 ---@return nil
 function Spring.GarbageCollectCtrl(itersPerBatch, numStepsPerIter, minStepsPerIter, maxStepsPerIter, minLoopRunTime, maxLoopRunTime, baseRunTimeMult, baseMemLoadMult) end
 
+---@bool autoShow
+---@treturn nil
+function Spring.SetAutoShowMetal() end
+
 ---@param drawSky boolean
 ---@return nil
 function Spring.SetDrawSky(drawSky) end
