@@ -100,7 +100,7 @@ function gl.BlitFBO(x0Src, y0Src, x1Src, y1Src, x0Dst, y0Dst, x1Dst, y1Dst, mask
 ---@param filter number? (Default: GL_NEAREST)
 function gl.BlitFBO(fboSrc, x0Src, y0Src, x1Src, y1Src, fboDst, x0Dst, y0Dst, x1Dst, y1Dst, mask, filter) end
 
----needs `Platform.glslVersionNum >= 300`
+---needs `Platform.glVersionNum >= 30`
 ---Clears the "attachment" of the currently bound FBO type "target" with "clearValues"
 ---
 ---@param target number? (Default: GL.FRAMEBUFFER)
