@@ -62,7 +62,12 @@ function Spring.SendCommands(command, ...) end
 ---@return nil
 function Spring.SendMessage(message) end
 
----@param message string `<PLAYER#>` (with # being a playerid) inside the string will be replaced with the players name - i.e. : Spring.SendMessage ("`<PLAYER1>` did something") might display as "ProRusher did something"
+---@param message string ``"`<PLAYER#>`"`` where `#` is a player ID.
+---
+---This will be replaced with the player's name. e.g.
+---```lua
+---Spring.SendMessage("`<PLAYER1>` did something") -- "ProRusher did something"
+---```
 ---@return nil
 function Spring.SendMessageToSpectators(message) end
 
