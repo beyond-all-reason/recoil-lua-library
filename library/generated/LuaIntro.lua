@@ -8,10 +8,10 @@
 
 ---Draws custom load screens.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/0e02c56c8dc282deed3d4706bb6d392ba437e0d6/rts/Lua/LuaIntro.cpp#L328-L332" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0765843e1a0b55c419cd5b79b02fae7e1c3ea5c6/rts/Lua/LuaIntro.cpp#L328-L332" target="_blank">source</a>]
 function DrawLoadScreen() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/0e02c56c8dc282deed3d4706bb6d392ba437e0d6/rts/Lua/LuaIntro.cpp#L355-L359" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0765843e1a0b55c419cd5b79b02fae7e1c3ea5c6/rts/Lua/LuaIntro.cpp#L355-L359" target="_blank">source</a>]
 ---
 ---@param message string
 ---@param replaceLastLine boolean
