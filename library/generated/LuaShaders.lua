@@ -11,13 +11,13 @@
 ---These functions are ONLY available if the graphics adapter supports GLSL.
 ---Please test in your scripts if one of them exists before you use them. In headless mode, the gl. callouts are nil.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L32-L39" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L32-L39" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaShaders.cpp
 
 ---Returns the shader compilation error log. This is empty if the shader linking failed, in that case, check your in/out blocks and ensure they match.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L198-L202" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L198-L202" target="_blank">source</a>]
 ---
 ---@return string infoLog
 function gl.GetShaderLog() end
@@ -36,12 +36,12 @@ function gl.GetShaderLog() end
 ---uniform vec4 teamColor;
 ---```
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L552-L568" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L552-L568" target="_blank">source</a>]
 ---
 ---@class UniformParam<T> : { [string]: T|T[] }
 local UniformParam = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L570-L619" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L570-L619" target="_blank">source</a>]
 ---
 ---@class ShaderParams
 ---
@@ -95,7 +95,7 @@ local ShaderParams = {}
 
 ---Create a shader.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L621-L627" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L621-L627" target="_blank">source</a>]
 ---
 ---@param shaderParams ShaderParams
 ---@return integer shaderID
@@ -103,14 +103,14 @@ function gl.CreateShader(shaderParams) end
 
 ---Deletes a shader identified by shaderID
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L789-L793" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L789-L793" target="_blank">source</a>]
 ---
 ---@param shaderID integer
 function gl.DeleteShader(shaderID) end
 
 ---Binds a shader program identified by shaderID. Pass 0 to disable the shader. Returns whether the shader was successfully bound.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L806-L811" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L806-L811" target="_blank">source</a>]
 ---
 ---@param shaderID integer
 ---@return boolean linked
@@ -121,14 +121,14 @@ function gl.UseShader(shaderID) end
 ---
 ---Can be used in NON-drawing events (to update uniforms etc.)!
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L839-L849" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L839-L849" target="_blank">source</a>]
 ---
 ---@param shaderID integer
 ---@param func function
 ---@param ... any Arguments
 function gl.ActiveShader(shaderID, func, ...) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L922-L929" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L922-L929" target="_blank">source</a>]
 ---
 ---@class ActiveUniform
 ---@field name string
@@ -141,7 +141,7 @@ local ActiveUniform = {}
 ---Query the active (actually used) uniforms of a shader and identify their
 ---names, types (float, int, uint) and sizes (float, vec4, ...).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L931-L938" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L931-L938" target="_blank">source</a>]
 ---
 ---@param shaderID integer
 ---@return ActiveUniform[] activeUniforms
@@ -150,7 +150,7 @@ function gl.GetActiveUniforms(shaderID) end
 ---Returns the locationID of a shaders uniform. Needed for changing uniform
 ---values with function `gl.Uniform`.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L966-L974" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L966-L974" target="_blank">source</a>]
 ---
 ---@param shaderID integer
 ---@param name string
@@ -160,7 +160,7 @@ function gl.GetUniformLocation(shaderID, name) end
 ---Sets the uniform float value at the locationID for the currently active
 ---shader. Shader must be activated before setting uniforms.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L1045-L1055" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L1045-L1055" target="_blank">source</a>]
 ---
 ---@param locationID GL|string uniformName
 ---@param f1 number
@@ -172,7 +172,7 @@ function gl.Uniform(locationID, f1, f2, f3, f4) end
 ---Sets the uniform int value at the locationID for the currently active shader.
 ---Shader must be activated before setting uniforms.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L1086-L1096" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L1086-L1096" target="_blank">source</a>]
 ---
 ---@param locationID integer|string uniformName
 ---@param int1 integer
@@ -181,7 +181,7 @@ function gl.Uniform(locationID, f1, f2, f3, f4) end
 ---@param int4 integer?
 function gl.UniformInt(locationID, int1, int2, int3, int4) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L1149-L1154" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L1149-L1154" target="_blank">source</a>]
 ---
 ---@alias UniformArrayType
 ---| 1 # int
@@ -193,7 +193,7 @@ function gl.UniformInt(locationID, int1, int2, int3, int4) end
 ---
 ---Shader must be activated before setting uniforms.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L1156-L1166" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L1156-L1166" target="_blank">source</a>]
 ---
 ---@param locationID integer|string uniformName
 ---@param type UniformArrayType
@@ -207,7 +207,7 @@ function gl.UniformArray(locationID, type, uniforms) end
 ---Can set one one common matrix like shadow, or by passing 16 additional
 ---numbers for the matrix.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L1205-L1216" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L1205-L1216" target="_blank">source</a>]
 ---
 ---@param locationID integer|string uniformName
 ---@param matrix "shadows"|"camera"|"caminv"|"camprj" Name of common matrix.
@@ -220,7 +220,7 @@ function gl.UniformMatrix(locationID, matrix) end
 ---Can set one one common matrix like shadow, or by passing 16 additional
 ---numbers for the matrix.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L1218-L1229" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L1218-L1229" target="_blank">source</a>]
 ---
 ---@param locationID number|string uniformName
 ---@param matrix number[] A 2x2, 3x3 or 4x4 matrix.
@@ -228,7 +228,7 @@ function gl.UniformMatrix(locationID, matrix) end
 
 ---Return the GLSL compliant definition of UniformMatricesBuffer(idx=0) or UniformParamsBuffer(idx=1) structure.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L1306-L1314" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L1306-L1314" target="_blank">source</a>]
 ---
 ---@param index number
 ---@return string glslDefinition
@@ -236,7 +236,7 @@ function gl.GetEngineUniformBufferDef(index) end
 
 ---Return the GLSL compliant definition of ModelUniformData structure (per Unit/Feature buffer available on GPU)
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L1328-L1336" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L1328-L1336" target="_blank">source</a>]
 ---
 ---@param index number
 ---@return string glslDefinition
@@ -244,7 +244,7 @@ function gl.GetEngineModelUniformDataDef(index) end
 
 ---Sets the Geometry shader parameters for shaderID. Needed by geometry shader programs (check the opengl GL_ARB_geometry_shader4 extension for glProgramParameteri)
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L1346-L1353" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L1346-L1353" target="_blank">source</a>]
 ---
 ---@param shaderID integer
 ---@param param number
@@ -257,7 +257,7 @@ function gl.SetGeometryShaderParameter(shaderID, param, number) end
 ---Needed by tesselation shader programs. (Check the opengl
 ---`GL_ARB_tessellation_shader` extension for `glProgramParameteri`).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f70826c92e9d66780b8bcdfdd7182791d56cfb2a/rts/Lua/LuaShaders.cpp#L1374-L1384" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaShaders.cpp#L1374-L1384" target="_blank">source</a>]
 ---
 ---@param param integer
 ---@param value integer
