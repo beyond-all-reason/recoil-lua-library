@@ -23,36 +23,36 @@
 ---
 ---Attention: some callins will only work on the unsynced portion of the gadget. Due to the type-unsafe nature of lua parsing, those callins not firing up might be hard to trace. This document will be continuously updated to properly alert about those situations.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L73-L92" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L73-L92" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaHandle.cpp
 
 ---Common
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L486-L489" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L486-L489" target="_blank">source</a>]
 ---
 ---@section common
 
 ---Called when the addon is (re)loaded.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L491-L494" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L491-L494" target="_blank">source</a>]
 function Initialize() end
 
 ---Called when the game is (re)loaded.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L496-L499" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L496-L499" target="_blank">source</a>]
 function LoadCode() end
 
 ---Called when the addon or the game is shutdown.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L522-L526" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L522-L526" target="_blank">source</a>]
 ---
 ---@return nil
 function Shutdown() end
 
 ---Called when a player issues a UI command e.g. types /foo or /luarules foo.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L544-L549" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L544-L549" target="_blank">source</a>]
 ---
 ---@param msg string
 ---@param playerID number
@@ -60,14 +60,14 @@ function GotChatMsg(msg, playerID) end
 
 ---Called after `GamePreload` and before `GameStart`. See Lua_SaveLoad.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L576-L580" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L576-L580" target="_blank">source</a>]
 ---
 ---@param zipReader table
 function Load(zipReader) end
 
 ---Game
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L635-L637" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L635-L637" target="_blank">source</a>]
 ---
 ---@section game
 
@@ -75,26 +75,26 @@ function Load(zipReader) end
 ---
 ---Is not called when a saved game is loaded.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L639-L644" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L639-L644" target="_blank">source</a>]
 function GamePreload() end
 
 ---Called upon the start of the game.
 ---
 ---Is not called when a saved game is loaded.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L662-L667" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L662-L667" target="_blank">source</a>]
 function GameStart() end
 
 ---Called when the game ends
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L685-L689" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L685-L689" target="_blank">source</a>]
 ---
 ---@param winningAllyTeams number[] list of winning allyTeams, if empty the game result was undecided (like when dropping from an host).
 function GameOver(winningAllyTeams) end
 
 ---Called when the game is paused.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L712-L717" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L712-L717" target="_blank">source</a>]
 ---
 ---@param playerID number
 ---@param paused boolean
@@ -102,60 +102,60 @@ function GamePaused(playerID, paused) end
 
 ---Called for every game simulation frame (30 per second).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L762-L766" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L762-L766" target="_blank">source</a>]
 ---
 ---@param frame number Starts at frame 1
 function GameFrame(frame) end
 
 ---Called at the end of every game simulation frame
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L796-L800" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L796-L800" target="_blank">source</a>]
 ---
 ---@param frame number Starts at frame 1
 function GameFramePost(frame) end
 
 ---Called once to deliver the gameID
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L820-L824" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L820-L824" target="_blank">source</a>]
 ---
 ---@param gameID string encoded in hex.
 function GameID(gameID) end
 
 ---Teams
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L847-L849" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L847-L849" target="_blank">source</a>]
 ---
 ---@section teams
 
 ---Called when a team dies (see `Spring.KillTeam`).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L851-L855" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L851-L855" target="_blank">source</a>]
 ---
 ---@param teamID number
 function TeamDied(teamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L875-L878" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L875-L878" target="_blank">source</a>]
 ---
 ---@param teamID number
 function TeamChanged(teamID) end
 
 ---Called whenever a player's status changes e.g. becoming a spectator.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L898-L902" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L898-L902" target="_blank">source</a>]
 ---
 ---@param playerID number
 function PlayerChanged(playerID) end
 
 ---Called whenever a new player joins the game.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L922-L926" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L922-L926" target="_blank">source</a>]
 ---
 ---@param playerID number
 function PlayerAdded(playerID) end
 
 ---Called whenever a player is removed from the game.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L946-L951" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L946-L951" target="_blank">source</a>]
 ---
 ---@param playerID number
 ---@param reason string
@@ -163,13 +163,13 @@ function PlayerRemoved(playerID, reason) end
 
 ---Units
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L972-L975" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L972-L975" target="_blank">source</a>]
 ---
 ---@section units
 
 ---Called at the moment the unit is created.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L996-L1003" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L996-L1003" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -179,7 +179,7 @@ function UnitCreated(unitID, unitDefID, unitTeam, builderID) end
 
 ---Called at the moment the unit is completed.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1027-L1033" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1027-L1033" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -188,7 +188,7 @@ function UnitFinished(unitID, unitDefID, unitTeam) end
 
 ---Called when a factory finishes construction of a unit.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1041-L1050" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1041-L1050" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -200,7 +200,7 @@ function UnitFromFactory(unitID, unitDefID, unitTeam, factID, factDefID, userOrd
 
 ---Called when a living unit becomes a nanoframe again.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1075-L1081" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1075-L1081" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -209,7 +209,7 @@ function UnitReverseBuilt(unitID, unitDefID, unitTeam) end
 
 ---Called when a unit being built starts decaying.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1090-L1099" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1090-L1099" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -221,7 +221,7 @@ function UnitConstructionDecayed(unitID, unitDefID, unitTeam, timeSinceLastBuild
 
 ---Called when a unit is destroyed.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1123-L1133" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1123-L1133" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -234,7 +234,7 @@ function UnitDestroyed(unitID, unitDefID, unitTeam, attackerID, attackerDefID, a
 
 ---Called when a unit is transferred between teams. This is called before `UnitGiven` and in that moment unit is still assigned to the oldTeam.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1161-L1168" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1161-L1168" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -244,7 +244,7 @@ function UnitTaken(unitID, unitDefID, oldTeam, newTeam) end
 
 ---Called when a unit is transferred between teams. This is called after `UnitTaken` and in that moment unit is assigned to the newTeam.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1190-L1197" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1190-L1197" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -254,7 +254,7 @@ function UnitGiven(unitID, unitDefID, newTeam, oldTeam) end
 
 ---Called when a unit is idle (empty command queue).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1219-L1225" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1219-L1225" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -263,7 +263,7 @@ function UnitIdle(unitID, unitDefID, unitTeam) end
 
 ---Called after when a unit accepts a command, after `AllowCommand` returns true.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1233-L1243" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1233-L1243" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -276,7 +276,7 @@ function UnitCommand(unitID, unitDefID, unitTeam, cmdID, cmdParams, options, cmd
 
 ---Called when a unit completes a command.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1267-L1277" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1267-L1277" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -289,7 +289,7 @@ function UnitCmdDone(unitID, unitDefID, unitTeam, cmdID, cmdParams, options, cmd
 
 ---Called when a unit is damaged (after UnitPreDamaged).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1297-L1310" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1297-L1310" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -305,7 +305,7 @@ function UnitDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, weaponDefID
 
 ---Called when a unit changes its stun status.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1345-L1352" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1345-L1352" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -317,7 +317,7 @@ function UnitStunned(unitID, unitDefID, unitTeam, stunned) end
 ---
 ---Should be called more reliably with small values of experience grade.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1376-L1388" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1376-L1388" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -328,7 +328,7 @@ function UnitExperience(unitID, unitDefID, unitTeam, experience, oldExperience) 
 
 ---Called when a unit's harvestStorage is full (according to its unitDef's entry).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1412-L1418" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1412-L1418" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -339,7 +339,7 @@ function UnitHarvestStorageFull(unitID, unitDefID, unitTeam) end
 ---
 ---See `seismicSignature`.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1428-L1441" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1428-L1441" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -354,7 +354,7 @@ function UnitSeismicPing(x, y, z, strength, allyTeam, unitID, unitDefID) end
 ---
 ---Also called when a unit enters LOS without any radar coverage.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1495-L1505" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1495-L1505" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitTeam integer
@@ -366,7 +366,7 @@ function UnitEnteredRadar(unitID, unitTeam, allyTeam, unitDefID) end
 ---
 ---Its called after the unit is in LOS, so you can query that unit.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1514-L1524" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1514-L1524" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitTeam integer
@@ -380,7 +380,7 @@ function UnitEnteredLos(unitID, unitTeam, allyTeam, unitDefID) end
 ---For widgets, this is called just after a unit leaves radar coverage, so
 ---widgets cannot get the position of units that left their radar.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1532-L1544" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1532-L1544" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitTeam integer
@@ -392,7 +392,7 @@ function UnitLeftRadar(unitID, unitTeam, allyTeam, unitDefID) end
 ---
 ---For widgets, this one is called just before the unit leaves los, so you can still get the position of a unit that left los.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1553-L1563" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1553-L1563" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitTeam integer
@@ -402,13 +402,13 @@ function UnitLeftLos(unitID, unitTeam, allyTeam, unitDefID) end
 
 ---Transport
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1571-L1574" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1571-L1574" target="_blank">source</a>]
 ---
 ---@section transport
 
 ---Called when a unit is loaded by a transport.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1577-L1585" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1577-L1585" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -419,7 +419,7 @@ function UnitLoaded(unitID, unitDefID, unitTeam, transportID, transportTeam) end
 
 ---Called when a unit is unloaded by a transport.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1609-L1617" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1609-L1617" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -430,46 +430,46 @@ function UnitUnloaded(unitID, unitDefID, unitTeam, transportID, transportTeam) e
 
 ---Unit Interactions
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1641-L1644" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1641-L1644" target="_blank">source</a>]
 ---
 ---@section unit_interactions
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1647-L1653" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1647-L1653" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
 ---@param unitTeam integer
 function UnitEnteredUnderwater(unitID, unitDefID, unitTeam) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1661-L1667" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1661-L1667" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
 ---@param unitTeam integer
 function UnitEnteredWater(unitID, unitDefID, unitTeam) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1675-L1682" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1675-L1682" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
 ---@param unitTeam integer
 function UnitLeftAir(unitID, unitDefID, unitTeam) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1690-L1697" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1690-L1697" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
 ---@param unitTeam integer
 function UnitLeftUnderwater(unitID, unitDefID, unitTeam) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1704-L1711" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1704-L1711" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
 ---@param unitTeam integer
 function UnitLeftWater(unitID, unitDefID, unitTeam) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1719-L1726" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1719-L1726" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -478,7 +478,7 @@ function UnitEnteredAir(unitID, unitDefID, unitTeam) end
 
 ---Called when a unit cloaks.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1734-L1741" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1734-L1741" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -487,7 +487,7 @@ function UnitCloaked(unitID, unitDefID, unitTeam) end
 
 ---Called when a unit decloaks.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1749-L1756" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1749-L1756" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -498,7 +498,7 @@ function UnitDecloaked(unitID, unitDefID, unitTeam) end
 ---
 ---Both units must be registered with `Script.SetWatchUnit`.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1764-L1771" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1764-L1771" target="_blank">source</a>]
 ---
 ---@param colliderID number
 ---@param collideeID number
@@ -508,20 +508,20 @@ function UnitUnitCollision(colliderID, collideeID) end
 ---
 ---The unit must be registered with `Script.SetWatchUnit` and the feature registered with `Script.SetWatchFeature`.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1815-L1823" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1815-L1823" target="_blank">source</a>]
 ---
 ---@param colliderID number
 ---@param collideeID number
 function UnitFeatureCollision(colliderID, collideeID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1868-L1875" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1868-L1875" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
 ---@param unitTeam integer
 function UnitMoveFailed(unitID, unitDefID, unitTeam) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1890-L1897" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1890-L1897" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -530,7 +530,7 @@ function UnitArrivedAtGoal(unitID, unitDefID, unitTeam) end
 
 ---Called just before a unit is invalid, after it finishes its death animation.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1907-L1914" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1907-L1914" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -539,13 +539,13 @@ function RenderUnitDestroyed(unitID, unitDefID, unitTeam) end
 
 ---Features
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1939-L1942" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1939-L1942" target="_blank">source</a>]
 ---
 ---@section features
 
 ---Called when a feature is created.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1945-L1951" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1945-L1951" target="_blank">source</a>]
 ---
 ---@param featureID number
 ---@param allyTeamID number
@@ -553,7 +553,7 @@ function FeatureCreated(featureID, allyTeamID) end
 
 ---Called when a feature is destroyed.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1972-L1978" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1972-L1978" target="_blank">source</a>]
 ---
 ---@param featureID number
 ---@param allyTeamID number
@@ -561,7 +561,7 @@ function FeatureDestroyed(featureID, allyTeamID) end
 
 ---Called when a feature is damaged.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L1999-L2012" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L1999-L2012" target="_blank">source</a>]
 ---
 ---@param featureID number
 ---@param featureDefID number
@@ -576,7 +576,7 @@ function FeatureDamaged(featureID, featureDefID, featureTeam, damage, weaponDefI
 
 ---Projectiles
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2046-L2051" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2046-L2051" target="_blank">source</a>]
 ---
 ---@section projectiles
 ---
@@ -586,7 +586,7 @@ function FeatureDamaged(featureID, featureDefID, featureTeam, damage, weaponDefI
 ---
 ---Note that weaponDefID is missing if the projectile is spawned as part of a burst, but `Spring.GetProjectileDefID` and `Spring.GetProjectileName` still work in callin scope using proID.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2053-L2063" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2053-L2063" target="_blank">source</a>]
 ---
 ---@param proID number
 ---@param proOwnerID number
@@ -595,7 +595,7 @@ function ProjectileCreated(proID, proOwnerID, weaponDefID) end
 
 ---Called when the projectile is destroyed.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2103-L2109" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2103-L2109" target="_blank">source</a>]
 ---
 ---@param proID number
 ---@param ownerID number
@@ -604,7 +604,7 @@ function ProjectileDestroyed(proID, ownerID, proWeaponDefID) end
 
 ---Called when an explosion occurs.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2156-L2167" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2156-L2167" target="_blank">source</a>]
 ---
 ---@param weaponDefID number
 ---@param px number
@@ -617,7 +617,7 @@ function Explosion(weaponDefID, px, py, pz, attackerID, projectileID) end
 
 ---Called when a units stockpile of weapons increases or decreases.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2211-L2221" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2211-L2221" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -629,7 +629,7 @@ function StockpileChanged(unitID, unitDefID, unitTeam, weaponNum, oldCount, newC
 
 ---Receives messages from unsynced sent via `Spring.SendLuaRulesMsg` or `Spring.SendLuaUIMsg`.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2246-L2251" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2246-L2251" target="_blank">source</a>]
 ---
 ---@param msg string
 ---@param playerID number
@@ -637,14 +637,14 @@ function RecvLuaMsg(msg, playerID) end
 
 ---Called when a chat command '/save' or '/savegame' is received.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2327-L2331" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2327-L2331" target="_blank">source</a>]
 ---
 ---@param zip table a userdatum representing the savegame zip file. See Lua_SaveLoad.
 function Save(zip) end
 
 ---Called when the unsynced copy of the height-map is altered.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2353-L2360" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2353-L2360" target="_blank">source</a>]
 ---
 ---@return number x1
 ---@return number z1
@@ -654,14 +654,14 @@ function UnsyncedHeightMapUpdate() end
 
 ---Called for every draw frame (including when the game is paused) and at least once per sim frame except when catching up.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2380-L2384" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2380-L2384" target="_blank">source</a>]
 ---
 ---@param dt number the time since the last update.
 function Update(dt) end
 
 ---Called whenever the window is resized.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2399-L2404" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2399-L2404" target="_blank">source</a>]
 ---
 ---@param viewSizeX number
 ---@param viewSizeY number
@@ -672,15 +672,15 @@ function ViewResize(viewSizeX, viewSizeY) end
 ---
 ---Gets called before other Update and Draw callins.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2438-L2444" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2438-L2444" target="_blank">source</a>]
 function FontsChanged() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2459-L2461" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2459-L2461" target="_blank">source</a>]
 function SunChanged() end
 
 ---Used to set the default command when a unit is selected. First parameter is the type of the object pointed at (either "unit or "feature") and the second is its unitID or featureID respectively.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2475-L2480" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2475-L2480" target="_blank">source</a>]
 ---
 ---@param type string "unit" | "feature"
 ---@param id integer unitID | featureID
@@ -688,7 +688,7 @@ function DefaultCommand(type, id) end
 
 ---Draw* Functions
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2558-L2565" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2558-L2565" target="_blank">source</a>]
 ---
 ---@section draw
 ---
@@ -701,88 +701,88 @@ function DefaultCommand(type, id) end
 ---Doesn't render to screen!
 ---Also available to LuaMenu.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2567-L2573" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2567-L2573" target="_blank">source</a>]
 function DrawGenesis() end
 
 ---Spring draws command queues, 'map stuff', and map marks.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2576-L2579" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2576-L2579" target="_blank">source</a>]
 function DrawWorld() end
 
 ---Spring draws units, features, some water types, cloaked units, and the sun.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2582-L2585" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2582-L2585" target="_blank">source</a>]
 function DrawWorldPreUnit() end
 
 ---Called before decals are drawn
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2588-L2591" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2588-L2591" target="_blank">source</a>]
 function DrawPreDecals() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2594-L2596" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2594-L2596" target="_blank">source</a>]
 function DrawWaterPost() end
 
 ---Invoked after semi-transparent shadows pass is about to conclude
 ---
 ---This callin has depth and color buffer of shadowmap bound via FBO as well as the FFP state to do "semi-transparent" shadows pass (traditionally only used to draw shadows of shadow casting semi-transparent particles). Can be used to draw nice colored shadows.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2599-L2603" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2599-L2603" target="_blank">source</a>]
 function DrawShadowPassTransparent() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2606-L2608" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2606-L2608" target="_blank">source</a>]
 function DrawWorldShadow() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2611-L2613" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2611-L2613" target="_blank">source</a>]
 function DrawWorldReflection() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2616-L2618" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2616-L2618" target="_blank">source</a>]
 function DrawWorldRefraction() end
 
 ---Runs at the start of the forward pass when a custom map shader has been assigned via `Spring.SetMapShader` (convenient for setting uniforms).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2621-L2624" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2621-L2624" target="_blank">source</a>]
 function DrawGroundPreForward() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2627-L2629" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2627-L2629" target="_blank">source</a>]
 function DrawGroundPostForward() end
 
 ---Runs at the start of the deferred pass when a custom map shader has been assigned via `Spring.SetMapShader` (convenient for setting uniforms).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2632-L2635" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2632-L2635" target="_blank">source</a>]
 function DrawGroundPreDeferred() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2638-L2640" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2638-L2640" target="_blank">source</a>]
 function DrawGroundDeferred() end
 
 ---This runs at the end of its respective deferred pass.
 ---
 ---Allows proper frame compositing (with ground flashes/decals/foliage/etc, which are drawn between it and `DrawWorldPreUnit`) via `gl.CopyToTexture`.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2643-L2648" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2643-L2648" target="_blank">source</a>]
 function DrawGroundPostDeferred() end
 
 ---Runs at the end of the unit deferred pass.
 ---
 ---Informs Lua code it should make use of the $model_gbuffer_* textures before another pass overwrites them (and to allow proper blending with e.g. cloaked objects which are drawn between these events and DrawWorld via gl.CopyToTexture). N.B. The *PostDeferred events are only sent (and only have a real purpose) if forward drawing is disabled.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2651-L2656" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2651-L2656" target="_blank">source</a>]
 function DrawUnitsPostDeferred() end
 
 ---Runs at the end of the feature deferred pass to inform Lua code it should make use of the $model_gbuffer_* textures before another pass overwrites them (and to allow proper blending with e.g. cloaked objects which are drawn between these events and DrawWorld via gl.CopyToTexture). N.B. The *PostDeferred events are only sent (and only have a real purpose) if forward drawing is disabled.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2659-L2662" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2659-L2662" target="_blank">source</a>]
 function DrawFeaturesPostDeferred() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2665-L2667" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2665-L2667" target="_blank">source</a>]
 function DrawShadowUnitsLua() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2670-L2672" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2670-L2672" target="_blank">source</a>]
 function DrawShadowFeaturesLua() end
 
 ---DrawWorldPreParticles is called multiples times per draw frame.
 ---Each call has a different permutation of values for drawAboveWater, drawBelowWater, drawReflection, and drawRefraction.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2675-L2684" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2675-L2684" target="_blank">source</a>]
 ---
 ---@param drawAboveWater boolean
 ---@param drawBelowWater boolean
@@ -792,13 +792,13 @@ function DrawWorldPreParticles(drawAboveWater, drawBelowWater, drawReflection, d
 
 ---Also available to LuaMenu.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2723-L2728" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2723-L2728" target="_blank">source</a>]
 ---
 ---@param viewSizeX number
 ---@param viewSizeY number
 function DrawScreen(viewSizeX, viewSizeY) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2740-L2744" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2740-L2744" target="_blank">source</a>]
 ---
 ---@param viewSizeX number
 ---@param viewSizeY number
@@ -806,19 +806,19 @@ function DrawScreenEffects(viewSizeX, viewSizeY) end
 
 ---Similar to DrawScreenEffects, this can be used to alter the contents of a frame after it has been completely rendered (i.e. World, MiniMap, Menu, UI).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2756-L2761" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2756-L2761" target="_blank">source</a>]
 ---
 ---@param viewSizeX number
 ---@param viewSizeY number
 function DrawScreenPost(viewSizeX, viewSizeY) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2773-L2778" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2773-L2778" target="_blank">source</a>]
 ---
 ---@param sx number relative to the minimap's position and scale.
 ---@param sy number relative to the minimap's position and scale.
 function DrawInMiniMap(sx, sy) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2801-L2806" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2801-L2806" target="_blank">source</a>]
 ---
 ---@param sx number relative to the minimap's position and scale.
 ---@param sy number relative to the minimap's position and scale.
@@ -828,7 +828,7 @@ function DrawInMinimapBackground(sx, sy) end
 ---
 ---Can give an ETA about catching up with simulation for mid-game join players.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2876-L2882" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2876-L2882" target="_blank">source</a>]
 ---
 ---@param serverFrameNum integer
 function GameProgress(serverFrameNum) end
@@ -837,18 +837,18 @@ function GameProgress(serverFrameNum) end
 ---
 ---Can be caused due to a change in language or keyboard
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2920-L2925" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2920-L2925" target="_blank">source</a>]
 function KeyMapChanged() end
 
 ---Input
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2944-L2947" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2944-L2947" target="_blank">source</a>]
 ---
 ---@section input
 
 ---Key Modifier Params
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2950-L2958" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2950-L2958" target="_blank">source</a>]
 ---
 ---@class KeyModifiers
 ---
@@ -862,7 +862,7 @@ local KeyModifiers = {}
 ---
 ---Return true if you don't want other callins or the engine to also receive this keypress. A list of key codes can be seen at the SDL wiki.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L2961-L2975" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L2961-L2975" target="_blank">source</a>]
 ---
 ---@param keyCode number
 ---@param mods KeyModifiers
@@ -876,7 +876,7 @@ function KeyPress(keyCode, mods, isRepeat, label, utf32char, scanCode, actionLis
 
 ---Called when the key is released.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3029-L3041" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3029-L3041" target="_blank">source</a>]
 ---
 ---@param keyCode number
 ---@param mods KeyModifiers
@@ -890,12 +890,12 @@ function KeyRelease(keyCode, mods, label, utf32char, scanCode, actionList) end
 
 ---Called whenever a key press results in text input.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3090-L3095" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3090-L3095" target="_blank">source</a>]
 ---
 ---@param utf8char string
 function TextInput(utf8char) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3118-L3125" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3118-L3125" target="_blank">source</a>]
 ---
 ---@param utf8 string
 ---@param start number
@@ -906,7 +906,7 @@ function TextEditing(utf8, start, length) end
 ---
 ---The button parameter supports up to 7 buttons. Must return true for `MouseRelease` and other functions to be called.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3148-L3157" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3148-L3157" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -918,7 +918,7 @@ function MousePress(x, y, button) end
 ---
 ---Please note that in order to have Spring call `Spring.MouseRelease`, you need to have a `Spring.MousePress` call-in in the same addon that returns true.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3181-L3191" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3181-L3191" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -928,7 +928,7 @@ function MouseRelease(x, y, button) end
 
 ---Called when the mouse is moved.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3210-L3219" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3210-L3219" target="_blank">source</a>]
 ---
 ---@param x number final x position
 ---@param y number final y position
@@ -939,7 +939,7 @@ function MouseMove(x, y, dx, dy, button) end
 
 ---Called when the mouse wheel is moved.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3245-L3251" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3245-L3251" target="_blank">source</a>]
 ---
 ---@param up boolean the direction
 ---@param value number the amount travelled
@@ -949,7 +949,7 @@ function MouseWheel(up, value) end
 ---
 ---Must return true for `Mouse*` events and `Spring.GetToolTip` to be called.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3272-L3281" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3272-L3281" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -958,7 +958,7 @@ function IsAbove(x, y) end
 
 ---Called when `Spring.IsAbove` returns true.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3303-L3309" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3303-L3309" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -967,7 +967,7 @@ function GetTooltip(x, y) end
 
 ---Called when a command is issued.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3331-L3336" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3331-L3336" target="_blank">source</a>]
 ---
 ---@param cmdId integer?
 ---@param cmdType integer?
@@ -975,7 +975,7 @@ function ActiveCommandChanged(cmdId, cmdType) end
 
 ---Called when a command is issued.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3357-L3364" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3357-L3364" target="_blank">source</a>]
 ---
 ---@param cmdID integer
 ---@param cmdParams table
@@ -985,7 +985,7 @@ function CommandNotify(cmdID, cmdParams, options) end
 
 ---Called when text is entered into the console (e.g. `Spring.Echo`).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3393-L3398" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3393-L3398" target="_blank">source</a>]
 ---
 ---@param msg string
 ---@param priority integer
@@ -993,12 +993,12 @@ function AddConsoleLine(msg, priority) end
 
 ---Called when a unit is added to or removed from a control group.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3416-L3420" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3416-L3420" target="_blank">source</a>]
 ---
 ---@param groupID number
 function GroupChanged(groupID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3438-L3445" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3438-L3445" target="_blank">source</a>]
 ---
 ---@param ttType string "unit" | "feature" | "ground" | "selection"
 ---@param data1 number unitID | featureID | posX
@@ -1007,7 +1007,7 @@ function GroupChanged(groupID) end
 ---@return string newTooltip
 function WorldTooltip(ttType, data1, data2, data3) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3490-L3501" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3490-L3501" target="_blank">source</a>]
 ---
 ---@param playerID number
 ---@param type string "point" | "line" | "erase"
@@ -1019,7 +1019,7 @@ function WorldTooltip(ttType, data1, data2, data3) end
 ---@param pos2Z number? when type is line
 function MapDrawCmd(playerID, type, posX, posY, posZ, data4, pos2Y, pos2Z) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3561-L3569" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3561-L3569" target="_blank">source</a>]
 ---
 ---@param state string
 ---@param ready boolean
@@ -1028,7 +1028,7 @@ function MapDrawCmd(playerID, type, posX, posY, posZ, data4, pos2Y, pos2Z) end
 ---@return boolean newReady
 function GameSetup(state, ready, playerStates) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3612-L3616" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3612-L3616" target="_blank">source</a>]
 ---
 ---@param aiTeam integer
 ---@param dataStr string
@@ -1036,13 +1036,13 @@ function RecvSkirmishAIMessage(aiTeam, dataStr) end
 
 ---Downloads
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3653-L3655" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3653-L3655" target="_blank">source</a>]
 ---
 ---@section downloads
 
 ---Called when a Pr-downloader download is queued
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3657-L3663" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3657-L3663" target="_blank">source</a>]
 ---
 ---@param id number
 ---@param name string
@@ -1051,21 +1051,21 @@ function DownloadQueued(id, name, type) end
 
 ---Called when a Pr-downloader download is started via VFS.DownloadArchive.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3685-L3689" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3685-L3689" target="_blank">source</a>]
 ---
 ---@param id number
 function DownloadStarted(id) end
 
 ---Called when a Pr-downloader download finishes successfully.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3708-L3712" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3708-L3712" target="_blank">source</a>]
 ---
 ---@param id number
 function DownloadFinished(id) end
 
 ---Called when a Pr-downloader download fails to complete.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3731-L3736" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3731-L3736" target="_blank">source</a>]
 ---
 ---@param id number
 ---@param errorID number
@@ -1073,7 +1073,7 @@ function DownloadFailed(id, errorID) end
 
 ---Called incrementally during a Pr-downloader download.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaHandle.cpp#L3756-L3762" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaHandle.cpp#L3756-L3762" target="_blank">source</a>]
 ---
 ---@param id number
 ---@param downloaded number

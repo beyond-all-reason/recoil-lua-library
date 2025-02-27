@@ -8,11 +8,11 @@
 
 ---Command constants
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaConstCMD.cpp#L12-L15" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstCMD.cpp#L12-L15" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaConstCMD.cpp
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaConstCMD.cpp#L17-L80" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstCMD.cpp#L17-L80" target="_blank">source</a>]
 ---
 ---@enum CMD
 CMD = {

@@ -6,5 +6,5 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaUI.cpp#L280-L282" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaUI.cpp#L280-L282" target="_blank">source</a>]
 function ConfigureLayout() end

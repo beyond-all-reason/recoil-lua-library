@@ -6,7 +6,7 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaUtils.cpp#L1159-L1173" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaUtils.cpp#L1159-L1173" target="_blank">source</a>]
 ---
 ---@alias Facing
 ---| 0 # South
@@ -25,4 +25,4 @@
 ---this function always leaves one item on the stack
 ---and returns its index if valid and zero otherwise
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaUtils.cpp#L1401-L1402" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaUtils.cpp#L1401-L1402" target="_blank">source</a>]

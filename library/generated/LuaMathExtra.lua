@@ -8,7 +8,7 @@
 
 ---math extensions
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaMathExtra.cpp#L13-L16" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaMathExtra.cpp#L13-L16" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaMathExtra.cpp
 
@@ -16,7 +16,7 @@
 ---equivalent to `sqrt(x*x + y*y)`, but has better numerical stability and
 ---internally handles intermediate overflows/underflows, but is also slower.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaMathExtra.cpp#L37-L46" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaMathExtra.cpp#L37-L46" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -27,7 +27,7 @@ function math.hypot(x, y) end
 ---an n-component vector). Rather quick method that does not handle intermediate
 ---overflows/underflows nor is made for numerical stability.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaMathExtra.cpp#L54-L63" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaMathExtra.cpp#L54-L63" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param ... number
@@ -36,7 +36,7 @@ function math.diag(x, ...) end
 
 ---Returns x clamped to min and max boundaries.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaMathExtra.cpp#L77-L84" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaMathExtra.cpp#L77-L84" target="_blank">source</a>]
 ---
 ---@param value number
 ---@param min number
@@ -46,7 +46,7 @@ function math.clamp(value, min, max) end
 
 ---Returns 0 if x == 0, 1 if x > 0, -1 if x < 0
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaMathExtra.cpp#L95-L100" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaMathExtra.cpp#L95-L100" target="_blank">source</a>]
 ---
 ---@param x number
 ---@return number sign
@@ -54,7 +54,7 @@ function math.sgn(x) end
 
 ---Returns linear interpolation between x and y with ratio a (x+(y-x)*a).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaMathExtra.cpp#L116-L123" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaMathExtra.cpp#L116-L123" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -66,7 +66,7 @@ function math.mix(x, y, a) end
 ---integer. Note that Spring's Lua interpreter uses 32-bit floats for all
 ---numbers so max. precision is ~7 decimal digits.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaMathExtra.cpp#L135-L144" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaMathExtra.cpp#L135-L144" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param decimals number
@@ -75,7 +75,7 @@ function math.round(x, decimals) end
 
 ---Returns erf(x), the Gauss error function, between -1 and 1.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaMathExtra.cpp#L168-L173" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaMathExtra.cpp#L168-L173" target="_blank">source</a>]
 ---
 ---@param x number
 ---@return number erf
@@ -86,7 +86,7 @@ function math.erf(x) end
 ---Clamps and rescales v to a value between [0; 1] based on the edges and then applies the smoothstep function.
 ---For example math.smoothstep(10, 25, 15) is 0.259, because 15 is 0.333 of the way from 10 to 25, and smoothstep(0.333) is 0.259
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaMathExtra.cpp#L181-L190" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaMathExtra.cpp#L181-L190" target="_blank">source</a>]
 ---
 ---@param edge0 number
 ---@param edge1 number
@@ -96,7 +96,7 @@ function math.smoothstep(edge0, edge1, v) end
 
 ---Returns the normalize vector of an given vector.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaMathExtra.cpp#L198-L204" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaMathExtra.cpp#L198-L204" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param ... number
