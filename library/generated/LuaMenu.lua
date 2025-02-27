@@ -8,23 +8,23 @@
 
 ---Lua Menu API
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaMenu.cpp#L34-L37" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaMenu.cpp#L34-L37" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaMenu.cpp
 
 ---Called whenever LuaMenu is on with no game loaded.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaMenu.cpp#L372-L375" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaMenu.cpp#L372-L375" target="_blank">source</a>]
 function ActivateMenu() end
 
 ---Called whenever LuaMenu is on with a game loaded.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaMenu.cpp#L393-L396" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaMenu.cpp#L393-L396" target="_blank">source</a>]
 function ActivateGame() end
 
 ---Enables Draw{Genesis,Screen,ScreenPost} callins if true is returned, otherwise they are called once every 30 seconds. Only active when a game isn't running.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaMenu.cpp#L413-L417" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaMenu.cpp#L413-L417" target="_blank">source</a>]
 ---
 ---@return boolean allowDraw
 function AllowDraw() end

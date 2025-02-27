@@ -8,7 +8,7 @@
 
 ---Table extensions
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaTableExtra.cpp#L6-L8" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaTableExtra.cpp#L6-L8" target="_blank">source</a>]
 
 ---Returns a table with preallocated memory
 ---
@@ -17,7 +17,7 @@
 ---a lot of elements and you know the number beforehand,
 ---such as one for each UnitDef, by avoiding reallocation.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/fff0e0d196ed403026c86445f5eea67eab129beb/rts/Lua/LuaTableExtra.cpp#L10-L21" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/cbf9dd54ba401bc24aaef56192f02058fe174df7/rts/Lua/LuaTableExtra.cpp#L10-L21" target="_blank">source</a>]
 ---
 ---@param nArray number hint for count of array elements
 ---@param nHashed number hint for count of hashtable elements
