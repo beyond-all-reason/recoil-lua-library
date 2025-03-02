@@ -6,13 +6,19 @@
 ---
 ---@meta
 
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaIntro.cpp#L49-L52" target="_blank">source</a>]
+---
+---@class Intro : Callins
+---@see Callins
+local Intro = {}
+
 ---Draws custom load screens.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaIntro.cpp#L328-L332" target="_blank">source</a>]
-function DrawLoadScreen() end
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaIntro.cpp#L332-L336" target="_blank">source</a>]
+function Intro:DrawLoadScreen() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaIntro.cpp#L355-L359" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaIntro.cpp#L359-L363" target="_blank">source</a>]
 ---
 ---@param message string
 ---@param replaceLastLine boolean
-function LoadProgress(message, replaceLastLine) end
+function Intro:LoadProgress(message, replaceLastLine) end

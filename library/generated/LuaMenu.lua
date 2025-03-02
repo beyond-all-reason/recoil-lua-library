@@ -6,25 +6,27 @@
 ---
 ---@meta
 
----Lua Menu API
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaMenu.cpp#L34-L37" target="_blank">source</a>]
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaMenu.cpp#L34-L37" target="_blank">source</a>]
----
----@see rts/Lua/LuaMenu.cpp
+---@class Menu : Callins
+---@see Callins
+local Menu = {}
 
 ---Called whenever LuaMenu is on with no game loaded.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaMenu.cpp#L372-L375" target="_blank">source</a>]
-function ActivateMenu() end
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaMenu.cpp#L372-L375" target="_blank">source</a>]
+function Menu:ActivateMenu() end
 
 ---Called whenever LuaMenu is on with a game loaded.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaMenu.cpp#L393-L396" target="_blank">source</a>]
-function ActivateGame() end
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaMenu.cpp#L393-L396" target="_blank">source</a>]
+function Menu:ActivateGame() end
 
----Enables Draw{Genesis,Screen,ScreenPost} callins if true is returned, otherwise they are called once every 30 seconds. Only active when a game isn't running.
+---Enables Draw{Genesis,Screen,ScreenPost} callins if true is returned,
+---otherwise they are called once every 30 seconds. Only active when a game
+---isn't running.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaMenu.cpp#L413-L417" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaMenu.cpp#L413-L420" target="_blank">source</a>]
 ---
 ---@return boolean allowDraw
-function AllowDraw() end
+function Menu:AllowDraw() end

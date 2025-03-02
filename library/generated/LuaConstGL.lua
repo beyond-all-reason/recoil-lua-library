@@ -8,17 +8,17 @@
 
 ---OpenGL Constants
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L12-L15" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L12-L15" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaConstGL.cpp
 
 ---Drawing Primitives
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L21-L24" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L21-L24" target="_blank">source</a>]
 ---
 ---@section primitives
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L26-L40" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L26-L40" target="_blank">source</a>]
 ---
 ---@enum GL
 GL = {
@@ -532,364 +532,364 @@ GL = {
 
 ---BlendingFactorDest
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L58-L61" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L58-L61" target="_blank">source</a>]
 ---
 ---@section blendingfactordest
 
 ---BlendingFactorSrc
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L83-L86" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L83-L86" target="_blank">source</a>]
 ---
 ---@section blendingfactorsrc
 
 ---AlphaFunction and DepthFunction
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L117-L120" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L117-L120" target="_blank">source</a>]
 ---
 ---@section alphadepth
 
 ---LogicOp
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L142-L145" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L142-L145" target="_blank">source</a>]
 ---
 ---@section logicop
 
 ---Culling
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L183-L186" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L183-L186" target="_blank">source</a>]
 ---
 ---@section culling
 
 ---PolygonMode
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L198-L201" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L198-L201" target="_blank">source</a>]
 ---
 ---@section polygonmode
 
 ---Clear Bits
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L213-L216" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L213-L216" target="_blank">source</a>]
 ---
 ---@section clearbits
 
 ---ShadeModel
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L230-L233" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L230-L233" target="_blank">source</a>]
 ---
 ---@section shademodel
 
 ---MatrixMode
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L243-L246" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L243-L246" target="_blank">source</a>]
 ---
 ---@section matrixmode
 
 ---Texture Filtering
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L258-L261" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L258-L261" target="_blank">source</a>]
 ---
 ---@section texturefiltering
 
 ---Texture Clamping
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L279-L282" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L279-L282" target="_blank">source</a>]
 ---
 ---@section textureclamping
 
 ---Texture Environment
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L298-L301" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L298-L301" target="_blank">source</a>]
 ---
 ---@section textureenvironment
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L320-L320" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L320-L320" target="_blank">source</a>]
 ---
 ---@field GL_TEXTURE_FILTER_CONTROL
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L322-L322" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L322-L322" target="_blank">source</a>]
 ---
 ---@field GL_TEXTURE_LOD_BIAS
 
 ---Texture Generation
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L325-L328" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L325-L328" target="_blank">source</a>]
 ---
 ---@section texturegeneration
 
 ---glPushAttrib() bits
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L358-L361" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L358-L361" target="_blank">source</a>]
 ---
 ---@section glpushattribbits
 
 ---glHint() targets
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L410-L413" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L410-L413" target="_blank">source</a>]
 ---
 ---@section glhinttargets
 
 ---glHint() modes
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L426-L429" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L426-L429" target="_blank">source</a>]
 ---
 ---@section glhintmodes
 
 ---Light Specification
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L441-L444" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L441-L444" target="_blank">source</a>]
 ---
 ---@section lightspecification
 
 ---Shader Types
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L470-L473" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L470-L473" target="_blank">source</a>]
 ---
 ---@section shadertypes
 
 ---Geometry Shader Parameters
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L489-L492" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L489-L492" target="_blank">source</a>]
 ---
 ---@section geometryshaderparameters
 
 ---Tesselation control shader parameters
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L504-L507" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L504-L507" target="_blank">source</a>]
 ---
 ---@section tesselationcontrolshaderparameters
 
 ---OpenGL Data Types
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L519-L522" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L519-L522" target="_blank">source</a>]
 ---
 ---@section OpenGL_Data_Types
 
 ---OpenGL Buffer Types
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L550-L553" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L550-L553" target="_blank">source</a>]
 ---
 ---@section OpenGL_Buffer_Types
 
 ---FBO Attachments
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L662-L665" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L662-L665" target="_blank">source</a>]
 ---
 ---@section fboattachments
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L666-L666" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L666-L666" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT0_EXT 0x8CE0
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L668-L668" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L668-L668" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT1_EXT 0x8CE1
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L670-L670" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L670-L670" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT2_EXT 0x8CE2
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L672-L672" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L672-L672" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT3_EXT 0x8CE3
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L674-L674" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L674-L674" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT4_EXT 0x8CE4
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L676-L676" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L676-L676" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT5_EXT 0x8CE5
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L678-L678" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L678-L678" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT6_EXT 0x8CE6
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L680-L680" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L680-L680" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT7_EXT 0x8CE7
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L682-L682" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L682-L682" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT8_EXT 0x8CE8
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L684-L684" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L684-L684" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT9_EXT 0x8CE9
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L686-L686" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L686-L686" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT10_EXT 0x8CEA
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L688-L688" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L688-L688" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT11_EXT 0x8CEB
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L690-L690" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L690-L690" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT12_EXT 0x8CEC
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L692-L692" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L692-L692" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT13_EXT 0x8CED
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L694-L694" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L694-L694" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT14_EXT 0x8CEE
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L696-L696" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L696-L696" target="_blank">source</a>]
 ---
 ---@field GL_COLOR_ATTACHMENT15_EXT 0x8CEF
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L698-L698" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L698-L698" target="_blank">source</a>]
 ---
 ---@field GL_DEPTH_ATTACHMENT_EXT 0x8D00
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L700-L700" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L700-L700" target="_blank">source</a>]
 ---
 ---@field GL_STENCIL_ATTACHMENT_EXT 0x8D20
 
 ---OpenGL Object Types
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L705-L708" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L705-L708" target="_blank">source</a>]
 ---
 ---@section objecttypes
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L709-L709" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L709-L709" target="_blank">source</a>]
 ---
 ---@field GL_BUFFER 0x82E0
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L711-L711" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L711-L711" target="_blank">source</a>]
 ---
 ---@field GL_SHADER 0x82E1
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L713-L713" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L713-L713" target="_blank">source</a>]
 ---
 ---@field GL_PROGRAM 0x82E2
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L715-L715" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L715-L715" target="_blank">source</a>]
 ---
 ---@field GL_VERTEX_ARRAY 0x8074
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L717-L717" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L717-L717" target="_blank">source</a>]
 ---
 ---@field GL_QUERY 0x82E3
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L719-L719" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L719-L719" target="_blank">source</a>]
 ---
 ---@field GL_PROGRAM_PIPELINE 0x82E4
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L721-L721" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L721-L721" target="_blank">source</a>]
 ---
 ---@field GL_TRANSFORM_FEEDBACK 0x8E22
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L723-L723" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L723-L723" target="_blank">source</a>]
 ---
 ---@field GL_RENDERBUFFER 0x8D41
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L725-L725" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L725-L725" target="_blank">source</a>]
 ---
 ---@field GL_FRAMEBUFFER 0x8D40
 
 ---Not included, but useful texture Formats
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L734-L737" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L734-L737" target="_blank">source</a>]
 ---
 ---@section textureformats
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L738-L738" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L738-L738" target="_blank">source</a>]
 ---
 ---@field GL_RGBA16F_ARB 0x881A
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L739-L739" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L739-L739" target="_blank">source</a>]
 ---
 ---@field GL_RGBA32F_ARB 0x8814
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L740-L740" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L740-L740" target="_blank">source</a>]
 ---
 ---@field GL_DEPTH_COMPONENT 0x1902
 
 ---Not included, but useful RBO Formats
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L742-L745" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L742-L745" target="_blank">source</a>]
 ---
 ---@section rboformats
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L746-L746" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L746-L746" target="_blank">source</a>]
 ---
 ---@field GL_RGB 0x1907
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L747-L747" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L747-L747" target="_blank">source</a>]
 ---
 ---@field GL_RGBA 0x1908
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L748-L748" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L748-L748" target="_blank">source</a>]
 ---
 ---@field GL_DEPTH_COMPONENT 0x1902
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L749-L749" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L749-L749" target="_blank">source</a>]
 ---
 ---@field GL_STENCIL_INDEX 0x1901
 
 ---Not included, but useful FBO Targets
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L751-L754" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L751-L754" target="_blank">source</a>]
 ---
 ---@section fbotargets
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L755-L755" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L755-L755" target="_blank">source</a>]
 ---
 ---@field GL_FRAMEBUFFER_EXT 0x8D40
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L756-L756" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L756-L756" target="_blank">source</a>]
 ---
 ---@field GL_READ_FRAMEBUFFER_EXT 0x8CA8
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L757-L757" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L757-L757" target="_blank">source</a>]
 ---
 ---@field GL_DRAW_FRAMEBUFFER_EXT 0x8CA9
 
 ---Not included, but useful FBO Status
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L759-L762" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L759-L762" target="_blank">source</a>]
 ---
 ---@section fbostatus
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L763-L763" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L763-L763" target="_blank">source</a>]
 ---
 ---@field GL_FRAMEBUFFER_COMPLETE_EXT 0x8CD5
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L764-L764" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L764-L764" target="_blank">source</a>]
 ---
 ---@field GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_EXT 0x8CD6
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L765-L765" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L765-L765" target="_blank">source</a>]
 ---
 ---@field GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_EXT 0x8CD7
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L766-L766" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L766-L766" target="_blank">source</a>]
 ---
 ---@field GL_FRAMEBUFFER_INCOMPLETE_DUPLICATE_ATTACHMENT_EXT 0x8CD8
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L767-L767" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L767-L767" target="_blank">source</a>]
 ---
 ---@field GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_EXT 0x8CD9
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L768-L768" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L768-L768" target="_blank">source</a>]
 ---
 ---@field GL_FRAMEBUFFER_INCOMPLETE_FORMATS_EXT 0x8CDA
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L769-L769" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L769-L769" target="_blank">source</a>]
 ---
 ---@field GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_EXT 0x8CDB
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L770-L770" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L770-L770" target="_blank">source</a>]
 ---
 ---@field GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_EXT 0x8CDC
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L771-L771" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L771-L771" target="_blank">source</a>]
 ---
 ---@field GL_FRAMEBUFFER_UNSUPPORTED_EXT 0x8CDD
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/121c0c4744b756d495be80601010b38043e1ae89/rts/Lua/LuaConstGL.cpp#L772-L772" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGL.cpp#L772-L772" target="_blank">source</a>]
 ---
 ---@field GL_FRAMEBUFFER_STATUS_ERROR_EXT 0x8CDE
