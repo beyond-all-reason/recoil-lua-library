@@ -8,11 +8,11 @@
 
 ---COB constants
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstCOB.cpp#L12-L15" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaConstCOB.cpp#L12-L15" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaConstCOB.cpp
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstCOB.cpp#L22-L101" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaConstCOB.cpp#L22-L101" target="_blank">source</a>]
 ---
 ---@enum COB
 COB = {
@@ -248,7 +248,7 @@ COB = {
 	GAME_FRAME = nil
 }
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstCOB.cpp#L203-L265" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaConstCOB.cpp#L203-L265" target="_blank">source</a>]
 ---
 ---@enum SFX
 SFX = {

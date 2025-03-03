@@ -6,7 +6,7 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L165-L168" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L165-L168" target="_blank">source</a>]
 ---
 ---@class UnsyncedCallins
 ---Functions called by the Engine (Unsynced).
@@ -14,13 +14,13 @@ local UnsyncedCallins = {}
 
 ---Misc
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L170-L174" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L170-L174" target="_blank">source</a>]
 ---
 ---@section misc
 
 ---Receives data sent via `SendToUnsynced` callout.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L176-L182" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L176-L182" target="_blank">source</a>]
 ---
 ---@param arg1 any
 ---@param arg2 any
@@ -31,13 +31,13 @@ function UnsyncedCallins:RecvFromSynced(arg1, arg2, argn) end
 ---
 ---For the following calls drawMode can be one of the following, notDrawing = 0, normalDraw = 1, shadowDraw = 2, reflectionDraw = 3, refractionDraw = 4, and finally gameDeferredDraw = 5 which was added in 102.0.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L202-L207" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L202-L207" target="_blank">source</a>]
 ---
 ---@section custom_object
 
 ---For custom rendering of units
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L209-L215" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L209-L215" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param drawMode number
@@ -46,7 +46,7 @@ function UnsyncedCallins:DrawUnit(unitID, drawMode) end
 
 ---For custom rendering of features
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L245-L251" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L245-L251" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param drawMode number
@@ -55,7 +55,7 @@ function UnsyncedCallins:DrawFeature(featureID, drawMode) end
 
 ---For custom rendering of shields.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L280-L287" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L280-L287" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param weaponID integer
@@ -65,21 +65,21 @@ function UnsyncedCallins:DrawShield(featureID, weaponID, drawMode) end
 
 ---For custom rendering of weapon (& other) projectiles
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L318-L324" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L318-L324" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@param drawMode number
 ---@return boolean suppressEngineDraw
 function UnsyncedCallins:DrawProjectile(projectileID, drawMode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L355-L361" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L355-L361" target="_blank">source</a>]
 ---
 ---@param uuid number
 ---@param drawMode number
 ---@return boolean suppressEngineDraw
 function UnsyncedCallins:DrawMaterial(uuid, drawMode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L547-L550" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L547-L550" target="_blank">source</a>]
 ---
 ---@class SyncedCallins
 ---Functions called by the Engine (Synced).
@@ -87,7 +87,7 @@ local SyncedCallins = {}
 
 ---Called when the unit reaches an unknown command in its queue (i.e. one not handled by the engine).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L568-L579" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L568-L579" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -103,7 +103,7 @@ function SyncedCallins:CommandFallback(unitID, unitDefID, unitTeam, cmdID, cmdPa
 ---
 ---The queue remains untouched when a command is blocked, whether it would be queued or replace the queue.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L601-L617" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L601-L617" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -119,7 +119,7 @@ function SyncedCallins:AllowCommand(unitID, unitDefID, unitTeam, cmdID, cmdParam
 
 ---Called just before unit is created.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L645-L656" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L645-L656" target="_blank">source</a>]
 ---
 ---@param unitDefID integer
 ---@param builderID integer
@@ -133,7 +133,7 @@ function SyncedCallins:AllowUnitCreation(unitDefID, builderID, builderTeam, x, y
 
 ---Called just before a unit is transferred to a different team.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L692-L701" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L692-L701" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -145,7 +145,7 @@ function SyncedCallins:AllowUnitTransfer(unitID, unitDefID, oldTeam, newTeam, ca
 
 ---Called just before a unit progresses its build percentage.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L729-L738" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L729-L738" target="_blank">source</a>]
 ---
 ---@param builderID integer
 ---@param builderTeam integer
@@ -155,7 +155,7 @@ function SyncedCallins:AllowUnitTransfer(unitID, unitDefID, oldTeam, newTeam, ca
 ---@return boolean whether or not the build makes progress.
 function SyncedCallins:AllowUnitBuildStep(builderID, builderTeam, unitID, unitDefID, part) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L766-L775" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L766-L775" target="_blank">source</a>]
 ---
 ---@param builderID integer
 ---@param builderTeam integer
@@ -165,7 +165,7 @@ function SyncedCallins:AllowUnitBuildStep(builderID, builderTeam, unitID, unitDe
 ---@return boolean whether or not the capture makes progress.
 function SyncedCallins:AllowUnitCaptureStep(builderID, builderTeam, unitID, unitDefID, part) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L803-L813" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L803-L813" target="_blank">source</a>]
 ---
 ---@param transporterID integer
 ---@param transporterUnitDefID integer
@@ -176,7 +176,7 @@ function SyncedCallins:AllowUnitCaptureStep(builderID, builderTeam, unitID, unit
 ---@return boolean whether or not the transport is allowed
 function SyncedCallins:AllowUnitTransport(transporterID, transporterUnitDefID, transporterTeam, transporteeID, transporteeUnitDefID, transporteeTeam) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L841-L854" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L841-L854" target="_blank">source</a>]
 ---
 ---@param transporterID integer
 ---@param transporterUnitDefID integer
@@ -190,7 +190,7 @@ function SyncedCallins:AllowUnitTransport(transporterID, transporterUnitDefID, t
 ---@return boolean whether or not the transport load is allowed
 function SyncedCallins:AllowUnitTransportLoad(transporterID, transporterUnitDefID, transporterTeam, transporteeID, transporteeUnitDefID, transporteeTeam, x, y, z) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L891-L904" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L891-L904" target="_blank">source</a>]
 ---
 ---@param transporterID integer
 ---@param transporterUnitDefID integer
@@ -204,14 +204,14 @@ function SyncedCallins:AllowUnitTransportLoad(transporterID, transporterUnitDefI
 ---@return boolean whether or not the transport unload is allowed
 function SyncedCallins:AllowUnitTransportUnload(transporterID, transporterUnitDefID, transporterTeam, transporteeID, transporteeUnitDefID, transporteeTeam, x, y, z) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L939-L945" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L939-L945" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param enemyID integer?
 ---@return boolean whether unit is allowed to cloak
 function SyncedCallins:AllowUnitCloak(unitID, enemyID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L975-L982" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L975-L982" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param objectID integer?
@@ -219,7 +219,7 @@ function SyncedCallins:AllowUnitCloak(unitID, enemyID) end
 ---@return boolean whether unit is allowed to decloak
 function SyncedCallins:AllowUnitCloak(unitID, objectID, weaponNum) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1019-L1025" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1019-L1025" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param targetID integer
@@ -228,7 +228,7 @@ function SyncedCallins:AllowUnitKamikaze(unitID, targetID) end
 
 ---Called just before feature is created.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1049-L1058" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1049-L1058" target="_blank">source</a>]
 ---
 ---@param featureDefID integer
 ---@param teamID integer
@@ -246,7 +246,7 @@ function SyncedCallins:AllowFeatureCreation(featureDefID, teamID, x, y, z) end
 ---Eg. for a 30 workertime builder, that's a build power of 1 per frame.
 ---For a 50 buildtime feature reclaimed by this builder, part will be 100/-50(/1) = -2%, or -0.02 numerically.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1086-L1103" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1086-L1103" target="_blank">source</a>]
 ---
 ---@param builderID integer
 ---@param builderTeam integer
@@ -259,7 +259,7 @@ function SyncedCallins:AllowFeatureBuildStep(builderID, builderTeam, featureID, 
 
 ---Called when a team sets the sharing level of a resource.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1131-L1138" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1131-L1138" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@param res string
@@ -269,7 +269,7 @@ function SyncedCallins:AllowResourceLevel(teamID, res, level) end
 
 ---Called just before resources are transferred between players.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1164-L1172" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1164-L1172" target="_blank">source</a>]
 ---
 ---@param oldTeamID integer
 ---@param newTeamID integer
@@ -280,7 +280,7 @@ function SyncedCallins:AllowResourceTransfer(oldTeamID, newTeamID, res, amount) 
 
 ---Determines if this unit can be controlled directly in FPS view.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1199-L1207" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1199-L1207" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -291,7 +291,7 @@ function SyncedCallins:AllowDirectUnitControl(unitID, unitDefID, unitTeam, playe
 
 ---Called when a construction unit wants to "use his nano beams".
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1234-L1250" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1234-L1250" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -319,7 +319,7 @@ function SyncedCallins:AllowBuilderHoldFire(unitID, unitDefID, action) end
 ---    3 - the player failed to load.
 ---    The default 'failed to choose' start-position is the north-west point of their startbox, or (0,0,0) if they do not have a startbox.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1276-L1301" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1276-L1301" target="_blank">source</a>]
 ---
 ---@param playerID integer
 ---@param teamID integer
@@ -336,7 +336,7 @@ function SyncedCallins:AllowStartPosition(playerID, teamID, readyState, clampedX
 
 ---Enable both Spring.MoveCtrl.SetCollideStop and Spring.MoveCtrl.SetTrackGround to enable this call-in.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1334-L1344" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1334-L1344" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -348,7 +348,7 @@ function SyncedCallins:MoveCtrlNotify(unitID, unitDefID, unitTeam, data) end
 
 ---Called when pre-building terrain levelling terraforms are completed (c.f. levelGround)
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1372-L1382" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1372-L1382" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -371,7 +371,7 @@ function SyncedCallins:TerraformComplete(unitID, unitDefID, unitTeam, buildUnitI
 ---    -6 - kill damage
 ---    -7 - crush damage
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1416-L1428" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1416-L1428" target="_blank">source</a>]
 
 ---Called before damage is applied to the unit, allows fine control over how much damage and impulse is applied.
 ---
@@ -381,7 +381,7 @@ function SyncedCallins:TerraformComplete(unitID, unitDefID, unitTeam, buildUnitI
 ---1st is stored under *newDamage if newDamage != NULL
 ---2nd is stored under *impulseMult if impulseMult != NULL
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1430-L1452" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1430-L1452" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitDefID integer
@@ -401,7 +401,7 @@ function SyncedCallins:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paral
 ---
 ---Allows fine control over how much damage and impulse is applied.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1526-L1543" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1526-L1543" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param featureDefID integer
@@ -420,7 +420,7 @@ function SyncedCallins:FeaturePreDamaged(featureID, featureDefID, featureTeam, d
 ---
 ---If the weapon is a hitscan type (BeamLaser or LightningCanon) then proID is nil and beamEmitterWeaponNum and beamEmitterUnitID are populated instead.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1609-L1630" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1609-L1630" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@param projectileOwnerID integer
@@ -441,7 +441,7 @@ function SyncedCallins:ShieldPreDamaged(projectileID, projectileOwnerID, shieldW
 
 ---Determines if this weapon can automatically generate targets itself. See also commandFire weaponDef tag.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1691-L1699" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1691-L1699" target="_blank">source</a>]
 ---
 ---@param attackerID integer
 ---@param attackerWeaponNum integer
@@ -452,7 +452,7 @@ function SyncedCallins:AllowWeaponTargetCheck(attackerID, attackerWeaponNum, att
 
 ---Controls blocking of a specific target from being considered during a weapon's periodic auto-targeting sweep.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1731-L1741" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1731-L1741" target="_blank">source</a>]
 ---
 ---@param attackerID integer
 ---@param targetID integer
@@ -467,7 +467,7 @@ function SyncedCallins:AllowWeaponTarget(attackerID, targetID, attackerWeaponNum
 ---
 ---Only called for weaponDefIDs registered via Script.SetWatchWeapon.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaHandleSynced.cpp#L1794-L1805" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaHandleSynced.cpp#L1794-L1805" target="_blank">source</a>]
 ---
 ---@param interceptorUnitID integer
 ---@param interceptorWeaponID integer

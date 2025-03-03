@@ -8,13 +8,13 @@
 
 ---Game constants
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGame.cpp#L26-L29" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaConstGame.cpp#L26-L29" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaConstGame.cpp
 
 ---Game specific information
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c17ba32ca64e58c17f306823fcb9782a01ade9ad/rts/Lua/LuaConstGame.cpp#L31-L115" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaConstGame.cpp#L31-L115" target="_blank">source</a>]
 Game = {
 	---@type number
 	maxUnits = nil,
