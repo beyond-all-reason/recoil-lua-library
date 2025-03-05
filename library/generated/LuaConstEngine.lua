@@ -8,11 +8,11 @@
 
 ---Engine constants
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/b62e98597e83d3cb052b22d3bf73f859b81c9350/rts/Lua/LuaConstEngine.cpp#L9-L12" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/18fe5d6210290a1d9c085f08d997094c79f19a78/rts/Lua/LuaConstEngine.cpp#L9-L12" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaConstEngine.cpp
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/b62e98597e83d3cb052b22d3bf73f859b81c9350/rts/Lua/LuaConstEngine.cpp#L14-L19" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/18fe5d6210290a1d9c085f08d997094c79f19a78/rts/Lua/LuaConstEngine.cpp#L14-L19" target="_blank">source</a>]
 ---
 ---@class FeatureSupport
 ---@field NegativeGetUnitCurrentCommand boolean
@@ -22,7 +22,7 @@ local FeatureSupport = {}
 
 ---Engine specific information.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/b62e98597e83d3cb052b22d3bf73f859b81c9350/rts/Lua/LuaConstEngine.cpp#L21-L34" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/18fe5d6210290a1d9c085f08d997094c79f19a78/rts/Lua/LuaConstEngine.cpp#L21-L34" target="_blank">source</a>]
 Engine = {
 	---@type string "Major.Minor.PatchSet" for releases, "Major.Minor.PatchSet-CommitNum-gHash branch" otherwise
 	version = nil,
