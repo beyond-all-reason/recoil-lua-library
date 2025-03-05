@@ -8,13 +8,13 @@
 
 ---Command type constants
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaConstCMDTYPE.cpp#L12-L15" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/b62e98597e83d3cb052b22d3bf73f859b81c9350/rts/Lua/LuaConstCMDTYPE.cpp#L12-L15" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaConstCMDTYPE.cpp
 
 ---Note, the CMDTYPE[] table is bidirectional. That means: CMDTYPE[CMDTYPE.ICON] := "CMDTYPE_ICON"
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/db28f2229950e590f448a158f817c1871e501a3d/rts/Lua/LuaConstCMDTYPE.cpp#L17-L36" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/b62e98597e83d3cb052b22d3bf73f859b81c9350/rts/Lua/LuaConstCMDTYPE.cpp#L17-L36" target="_blank">source</a>]
 ---
 ---@enum CMDTYPE
 CMDTYPE = {
