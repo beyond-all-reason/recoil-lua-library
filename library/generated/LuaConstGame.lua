@@ -8,13 +8,13 @@
 
 ---Game constants
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/18fe5d6210290a1d9c085f08d997094c79f19a78/rts/Lua/LuaConstGame.cpp#L26-L29" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/4b2a52982cde9399acc10c6c6b6625479779b4e4/rts/Lua/LuaConstGame.cpp#L26-L29" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaConstGame.cpp
 
 ---Game specific information
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/18fe5d6210290a1d9c085f08d997094c79f19a78/rts/Lua/LuaConstGame.cpp#L31-L115" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/4b2a52982cde9399acc10c6c6b6625479779b4e4/rts/Lua/LuaConstGame.cpp#L31-L116" target="_blank">source</a>]
 Game = {
 	---@type number
 	maxUnits = nil,
@@ -31,7 +31,7 @@ Game = {
 	---@type number The resolution of metalmap (for use in API such as Spring.GetMetalAmount etc.)
 	metalMapSquareSize = nil,
 
-	---@type number
+	---@type number Number of simulation gameframes per second
 	gameSpeed = nil,
 
 	---@type number
@@ -201,5 +201,8 @@ Game = {
 	---      ["crawlingbombs"]= 10, ...
 	---    }
 	---```
-	armorTypes = nil
+	armorTypes = nil,
+
+	---@type TextColorCode Table containing keys that represent the color code operations during font rendering
+	textColorCodes = nil
 }
