@@ -8,16 +8,16 @@
 
 ---Lua OpenGL API
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/9d2c24d68180fee2ab50a80a211ee9fcf8ef27b2/rts/Lua/LuaOpenGL.cpp#L84-L87" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fab2b206c49f4d3ad90a753e6be326ec88ae0ba6/rts/Lua/LuaOpenGL.cpp#L86-L89" target="_blank">source</a>]
 gl = {}
 
 ---Text
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/9d2c24d68180fee2ab50a80a211ee9fcf8ef27b2/rts/Lua/LuaOpenGL.cpp#L1270-L1273" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fab2b206c49f4d3ad90a753e6be326ec88ae0ba6/rts/Lua/LuaOpenGL.cpp#L1272-L1275" target="_blank">source</a>]
 ---
 ---@section text
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/9d2c24d68180fee2ab50a80a211ee9fcf8ef27b2/rts/Lua/LuaOpenGL.cpp#L1291-L1316" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fab2b206c49f4d3ad90a753e6be326ec88ae0ba6/rts/Lua/LuaOpenGL.cpp#L1293-L1318" target="_blank">source</a>]
 ---
 ---@param text string
 ---@param x number
@@ -46,11 +46,11 @@ function gl.Text(text, x, y, size, options) end
 
 ---Draw Basics
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/9d2c24d68180fee2ab50a80a211ee9fcf8ef27b2/rts/Lua/LuaOpenGL.cpp#L2522-L2525" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fab2b206c49f4d3ad90a753e6be326ec88ae0ba6/rts/Lua/LuaOpenGL.cpp#L2524-L2527" target="_blank">source</a>]
 ---
 ---@section draw_basics
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/9d2c24d68180fee2ab50a80a211ee9fcf8ef27b2/rts/Lua/LuaOpenGL.cpp#L2527-L2533" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fab2b206c49f4d3ad90a753e6be326ec88ae0ba6/rts/Lua/LuaOpenGL.cpp#L2529-L2535" target="_blank">source</a>]
 ---
 ---@param r number Red
 ---@param g number Green
@@ -58,12 +58,12 @@ function gl.Text(text, x, y, size, options) end
 ---@param a number? Alpha (Default: 1.0f)
 function gl.Color(r, g, b, a) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/9d2c24d68180fee2ab50a80a211ee9fcf8ef27b2/rts/Lua/LuaOpenGL.cpp#L2534-L2537" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fab2b206c49f4d3ad90a753e6be326ec88ae0ba6/rts/Lua/LuaOpenGL.cpp#L2536-L2539" target="_blank">source</a>]
 ---
 ---@param rgbs [number,number,number,number] Red, green, blue, alpha
 function gl.Color(rgbs) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/9d2c24d68180fee2ab50a80a211ee9fcf8ef27b2/rts/Lua/LuaOpenGL.cpp#L2538-L2541" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/fab2b206c49f4d3ad90a753e6be326ec88ae0ba6/rts/Lua/LuaOpenGL.cpp#L2540-L2543" target="_blank">source</a>]
 ---
 ---@param rgb [number,number,number] Red, green, blue
 function gl.Color(rgb) end
