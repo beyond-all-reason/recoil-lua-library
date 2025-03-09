@@ -6,7 +6,7 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/4b2a52982cde9399acc10c6c6b6625479779b4e4/rts/Lua/LuaIntro.cpp#L49-L52" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/511d5cf5ec2b7469e32bb5543a68f3c64dc6c01d/rts/Lua/LuaIntro.cpp#L49-L52" target="_blank">source</a>]
 ---
 ---@class Intro : Callins
 ---@see Callins
@@ -14,10 +14,10 @@ local Intro = {}
 
 ---Draws custom load screens.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/4b2a52982cde9399acc10c6c6b6625479779b4e4/rts/Lua/LuaIntro.cpp#L332-L336" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/511d5cf5ec2b7469e32bb5543a68f3c64dc6c01d/rts/Lua/LuaIntro.cpp#L332-L336" target="_blank">source</a>]
 function Intro:DrawLoadScreen() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/4b2a52982cde9399acc10c6c6b6625479779b4e4/rts/Lua/LuaIntro.cpp#L359-L363" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/511d5cf5ec2b7469e32bb5543a68f3c64dc6c01d/rts/Lua/LuaIntro.cpp#L359-L363" target="_blank">source</a>]
 ---
 ---@param message string
 ---@param replaceLastLine boolean
