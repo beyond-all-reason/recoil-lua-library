@@ -6,11 +6,11 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/e36cb76f2df53b31c339da1ed0634b24d2e95b12/rts/Lua/LuaUI.cpp#L68-L71" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/9d2c24d68180fee2ab50a80a211ee9fcf8ef27b2/rts/Lua/LuaUI.cpp#L68-L71" target="_blank">source</a>]
 ---
 ---@class UI : Callins
 ---@see Callins
 local UI = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/e36cb76f2df53b31c339da1ed0634b24d2e95b12/rts/Lua/LuaUI.cpp#L285-L287" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/9d2c24d68180fee2ab50a80a211ee9fcf8ef27b2/rts/Lua/LuaUI.cpp#L285-L287" target="_blank">source</a>]
 function UI:ConfigureLayout() end
