@@ -8,6 +8,6 @@
 
 ---Virtual File System
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/5c0b372d0570abe59a3e7bad3925340c00f06a1f/rts/Lua/LuaVFS.cpp#L27-L31" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/b00cbdfdcad8b5f6083e53a4ae6f2a8ccf46b133/rts/Lua/LuaVFS.cpp#L27-L31" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaVFS.cpp

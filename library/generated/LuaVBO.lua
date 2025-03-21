@@ -6,11 +6,11 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/5c0b372d0570abe59a3e7bad3925340c00f06a1f/rts/Lua/LuaVBO.cpp#L14-L17" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/b00cbdfdcad8b5f6083e53a4ae6f2a8ccf46b133/rts/Lua/LuaVBO.cpp#L14-L17" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaVBO.cpp
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/5c0b372d0570abe59a3e7bad3925340c00f06a1f/rts/Lua/LuaVBO.cpp#L123-L129" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/b00cbdfdcad8b5f6083e53a4ae6f2a8ccf46b133/rts/Lua/LuaVBO.cpp#L123-L129" target="_blank">source</a>]
 ---
 ---@alias GLBufferType
 ---| GL.ARRAY_BUFFER
@@ -25,7 +25,7 @@
 ---if myVBO == nil then Spring.Echo("Failed to get VBO") end
 ---```
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/5c0b372d0570abe59a3e7bad3925340c00f06a1f/rts/Lua/LuaVBO.cpp#L132-L156" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/b00cbdfdcad8b5f6083e53a4ae6f2a8ccf46b133/rts/Lua/LuaVBO.cpp#L132-L156" target="_blank">source</a>]
 ---
 ---@param bufferType GLBufferType? (Default: GL.ARRAY_BUFFER)
 ---

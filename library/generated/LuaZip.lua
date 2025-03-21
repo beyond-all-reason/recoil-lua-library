@@ -8,6 +8,6 @@
 
 ---LuaZip
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/5c0b372d0570abe59a3e7bad3925340c00f06a1f/rts/Lua/LuaZip.cpp#L4-L8" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/b00cbdfdcad8b5f6083e53a4ae6f2a8ccf46b133/rts/Lua/LuaZip.cpp#L4-L8" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaZip.cpp
