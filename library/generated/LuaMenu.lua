@@ -6,7 +6,7 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/114ea182bbbc45bee84146ceea8ab430fe302ffb/rts/Lua/LuaMenu.cpp#L34-L37" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaMenu.cpp#L34-L37" target="_blank">source</a>]
 ---
 ---@class Menu : Callins
 ---@see Callins
@@ -14,19 +14,19 @@ local Menu = {}
 
 ---Called whenever LuaMenu is on with no game loaded.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/114ea182bbbc45bee84146ceea8ab430fe302ffb/rts/Lua/LuaMenu.cpp#L372-L375" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaMenu.cpp#L372-L375" target="_blank">source</a>]
 function Menu:ActivateMenu() end
 
 ---Called whenever LuaMenu is on with a game loaded.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/114ea182bbbc45bee84146ceea8ab430fe302ffb/rts/Lua/LuaMenu.cpp#L393-L396" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaMenu.cpp#L393-L396" target="_blank">source</a>]
 function Menu:ActivateGame() end
 
 ---Enables Draw{Genesis,Screen,ScreenPost} callins if true is returned,
 ---otherwise they are called once every 30 seconds. Only active when a game
 ---isn't running.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/114ea182bbbc45bee84146ceea8ab430fe302ffb/rts/Lua/LuaMenu.cpp#L413-L420" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaMenu.cpp#L413-L420" target="_blank">source</a>]
 ---
 ---@return boolean allowDraw
 function Menu:AllowDraw() end
