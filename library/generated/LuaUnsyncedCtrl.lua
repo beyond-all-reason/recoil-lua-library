@@ -8,19 +8,19 @@
 
 ---Callouts to set state
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L115-L119" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L115-L119" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaUnsyncedCtrl.cpp
 
 ---Ingame Console
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L447-L450" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L447-L450" target="_blank">source</a>]
 ---
 ---@section console
 
 ---Send a ping request to the server
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L453-L460" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L453-L460" target="_blank">source</a>]
 ---
 ---@param pingTag number
 ---@return nil
@@ -31,14 +31,14 @@ function Spring.Ping(pingTag) end
 ---Prints values in the spring chat console.
 ---Hint: the default print() writes to STDOUT.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L472-L482" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L472-L482" target="_blank">source</a>]
 ---
 ---@param arg any
 ---@param ... any
 ---@return nil
 function Spring.Echo(arg, ...) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L488-L498" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L488-L498" target="_blank">source</a>]
 ---
 ---@alias LogLevel
 ---| integer
@@ -50,19 +50,19 @@ function Spring.Echo(arg, ...) end
 ---| "error"      # LOG.ERROR
 ---| "fatal"      # LOG.FATAL
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L500-L505" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L500-L505" target="_blank">source</a>]
 ---
 ---@param section string
 ---@param logLevel LogLevel? (Default: `"notice"`)
 ---@param ... string messages
 function Spring.Log(section, logLevel, ...) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L512-L515" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L512-L515" target="_blank">source</a>]
 ---
 ---@param commands string[]
 function Spring.SendCommands(commands) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L517-L522" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L517-L522" target="_blank">source</a>]
 ---
 ---@param command string
 ---@param ... string additional commands
@@ -71,17 +71,17 @@ function Spring.SendCommands(command, ...) end
 
 ---Messages
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L597-L600" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L597-L600" target="_blank">source</a>]
 ---
 ---@section messages
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L603-L606" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L603-L606" target="_blank">source</a>]
 ---
 ---@param message string
 ---@return nil
 function Spring.SendMessage(message) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L614-L623" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L614-L623" target="_blank">source</a>]
 ---
 ---@param message string ``"`<PLAYER#>`"`` where `#` is a player ID.
 ---
@@ -92,21 +92,21 @@ function Spring.SendMessage(message) end
 ---@return nil
 function Spring.SendMessageToSpectators(message) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L633-L637" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L633-L637" target="_blank">source</a>]
 ---
 ---@param playerID integer
 ---@param message string
 ---@return nil
 function Spring.SendMessageToPlayer(playerID, message) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L647-L651" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L647-L651" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@param message string
 ---@return nil
 function Spring.SendMessageToTeam(teamID, message) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L661-L665" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L661-L665" target="_blank">source</a>]
 ---
 ---@param allyID integer
 ---@param message string
@@ -115,19 +115,19 @@ function Spring.SendMessageToAllyTeam(allyID, message) end
 
 ---Sounds
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L675-L678" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L675-L678" target="_blank">source</a>]
 ---
 ---@section sounds
 
 ---Loads a SoundDefs file, the format is the same as in `gamedata/sounds.lua`.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L681-L686" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L681-L686" target="_blank">source</a>]
 ---
 ---@param soundfile string
 ---@return boolean success
 function Spring.LoadSoundDef(soundfile) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L698-L711" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L698-L711" target="_blank">source</a>]
 ---
 ---@alias SoundChannel
 ---| "general" # 0
@@ -142,7 +142,7 @@ function Spring.LoadSoundDef(soundfile) end
 ---| 2 # Voice
 ---| 3 # User interface
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L713-L724" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L713-L724" target="_blank">source</a>]
 ---
 ---@param soundfile string
 ---@param volume number? (Default: 1.0)
@@ -158,7 +158,7 @@ function Spring.PlaySoundFile(soundfile, volume, posx, posy, posz, speedx, speed
 
 ---Allows to play an Ogg Vorbis (.OGG) and mp3 compressed sound file.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L804-L815" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L804-L815" target="_blank">source</a>]
 ---
 ---Multiple sound streams may be played at once.
 ---
@@ -170,30 +170,30 @@ function Spring.PlaySoundStream(oggfile, volume, enqueue) end
 
 ---Terminates any SoundStream currently running.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L828-L832" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L828-L832" target="_blank">source</a>]
 ---
 ---@return nil
 function Spring.StopSoundStream() end
 
 ---Pause any SoundStream currently running.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L840-L844" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L840-L844" target="_blank">source</a>]
 ---
 ---@return nil
 function Spring.PauseSoundStream() end
 
 ---Set volume for SoundStream
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L852-L857" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L852-L857" target="_blank">source</a>]
 ---
 ---@param volume number
 ---@return nil
 function Spring.SetSoundStreamVolume(volume) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L865-L866" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L865-L866" target="_blank">source</a>]
 function Spring.SetSoundEffectParams() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L975-L983" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L975-L983" target="_blank">source</a>]
 ---
 ---@param cmdID integer
 ---@param posX number
@@ -202,7 +202,7 @@ function Spring.SetSoundEffectParams() end
 ---@return nil
 function Spring.AddWorldIcon(cmdID, posX, posY, posZ) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L995-L1003" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L995-L1003" target="_blank">source</a>]
 ---
 ---@param text string
 ---@param posX number
@@ -211,7 +211,7 @@ function Spring.AddWorldIcon(cmdID, posX, posY, posZ) end
 ---@return nil
 function Spring.AddWorldText(text, posX, posY, posZ) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1015-L1025" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1015-L1025" target="_blank">source</a>]
 ---
 ---@param unitDefID integer
 ---@param posX number
@@ -222,13 +222,13 @@ function Spring.AddWorldText(text, posX, posY, posZ) end
 ---@return nil
 function Spring.AddWorldUnit(unitDefID, posX, posY, posZ, teamID, facing) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1048-L1053" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1048-L1053" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return nil
 function Spring.DrawUnitCommands(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1055-L1061" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1055-L1061" target="_blank">source</a>]
 ---
 ---@param units table array of unit ids
 ---@param tableOrArray boolean? (Default: false] when true `units` is interpreted as a table in the format `{ [unitID) = arg1, ... }`
@@ -237,13 +237,13 @@ function Spring.DrawUnitCommands(units, tableOrArray) end
 
 ---Camera
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1094-L1097" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1094-L1097" target="_blank">source</a>]
 ---
 ---@section camera
 
 ---For Spring Engine XZ represents horizontal, from north west corner of map and Y vertical, from water level and rising.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1121-L1130" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1121-L1130" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -252,7 +252,7 @@ function Spring.DrawUnitCommands(units, tableOrArray) end
 ---@return nil
 function Spring.SetCameraTarget(x, y, z, transTime) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1159-L1170" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1159-L1170" target="_blank">source</a>]
 ---
 ---@param posX number? (Default: `0`)
 ---@param posY number? (Default: `0`)
@@ -265,7 +265,7 @@ function Spring.SetCameraOffset(posX, posY, posZ, tiltX, tiltY, tiltZ) end
 
 ---Set camera state.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1184-L1205" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1184-L1205" target="_blank">source</a>]
 ---
 ---@param CameraState cameraState The fields must be consistent with the name/mode and current/new camera mode.
 ---@param transitionTime number? (Default: `0`) in nanoseconds
@@ -284,7 +284,7 @@ function Spring.SetCameraState(CameraState, transitionTime, transitionTimeFactor
 
 ---Runs Dolly Camera
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1228-L1233" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1228-L1233" target="_blank">source</a>]
 ---
 ---@param runtime number Runtime in milliseconds.
 ---@return nil
@@ -292,7 +292,7 @@ function Spring.RunDollyCamera(runtime) end
 
 ---Pause Dolly Camera
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1243-L1248" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1243-L1248" target="_blank">source</a>]
 ---
 ---@param fraction number Fraction of the total runtime to pause at, 0 to 1 inclusive. A null value pauses at current percent
 ---@return nil
@@ -300,14 +300,14 @@ function Spring.PauseDollyCamera(fraction) end
 
 ---Resume Dolly Camera
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1258-L1262" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1258-L1262" target="_blank">source</a>]
 ---
 ---@return nil
 function Spring.ResumeDollyCamera() end
 
 ---Sets Dolly Camera Position
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1270-L1277" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1270-L1277" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -315,7 +315,7 @@ function Spring.ResumeDollyCamera() end
 ---@return nil
 function Spring.SetDollyCameraPosition(x, y, z) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1289-L1298" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1289-L1298" target="_blank">source</a>]
 ---
 ---@class ControlPoint
 ---NURBS control point.
@@ -327,7 +327,7 @@ local ControlPoint = {}
 
 ---Sets Dolly Camera movement Curve
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1300-L1307" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1300-L1307" target="_blank">source</a>]
 ---
 ---@param degree number
 ---@param cpoints ControlPoint[] NURBS control point positions.
@@ -337,7 +337,7 @@ function Spring.SetDollyCameraCurve(degree, cpoints, knots) end
 
 ---Sets Dolly Camera movement mode
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1323-L1328" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1323-L1328" target="_blank">source</a>]
 ---
 ---@param mode 1|2 `1` static position, `2` nurbs curve
 ---@return nil
@@ -345,7 +345,7 @@ function Spring.SetDollyCameraMode(mode) end
 
 ---Sets Dolly Camera movement curve to world relative or look target relative
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1338-L1343" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1338-L1343" target="_blank">source</a>]
 ---
 ---@param relativeMode number `1` world, `2` look target
 ---@return nil
@@ -353,7 +353,7 @@ function Spring.SetDollyCameraRelativeMode(relativeMode) end
 
 ---Sets Dolly Camera Look Curve
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1354-L1361" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1354-L1361" target="_blank">source</a>]
 ---
 ---@param degree number
 ---@param cpoints ControlPoint[] NURBS control point positions.
@@ -363,7 +363,7 @@ function Spring.SetDollyCameraLookCurve(degree, cpoints, knots) end
 
 ---Sets Dolly Camera Look Position
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1378-L1385" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1378-L1385" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -373,7 +373,7 @@ function Spring.SetDollyCameraLookPosition(x, y, z) end
 
 ---Sets target unit for Dolly Camera to look towards
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1398-L1403" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1398-L1403" target="_blank">source</a>]
 ---
 ---@param unitID integer The unit to look at.
 ---@return nil
@@ -381,20 +381,20 @@ function Spring.SetDollyCameraLookUnit(unitID) end
 
 ---Unit Selection
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1415-L1418" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1415-L1418" target="_blank">source</a>]
 ---
 ---@section unit_selection
 
 ---Selects a single unit
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1421-L1427" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1421-L1427" target="_blank">source</a>]
 ---
 ---@param unitID integer?
 ---@param append boolean? (Default: `false`) Append to current selection.
 ---@return nil
 function Spring.SelectUnit(unitID, append) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1445-L1450" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1445-L1450" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return nil
@@ -402,7 +402,7 @@ function Spring.DeselectUnit(unitID) end
 
 ---Deselects multiple units.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1487-L1492" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1487-L1492" target="_blank">source</a>]
 ---
 ---@param unitIDs table<any, integer> Table with unit IDs as value.
 ---@return nil
@@ -410,7 +410,7 @@ function Spring.DeselectUnitArray(unitIDs) end
 
 ---Deselects multiple units.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1498-L1503" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1498-L1503" target="_blank">source</a>]
 ---
 ---@param unitMap table<integer, any> Table with unit IDs as keys.
 ---@return nil
@@ -418,7 +418,7 @@ function Spring.DeselectUnitMap(unitMap) end
 
 ---Selects multiple units, or appends to selection. Accepts a table with unitIDs as values
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1509-L1515" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1509-L1515" target="_blank">source</a>]
 ---
 ---@param unitMap table<any, integer> Table with unit IDs as values.
 ---@param append boolean? (Default: `false`) append to current selection
@@ -427,7 +427,7 @@ function Spring.SelectUnitArray(unitMap, append) end
 
 ---Selects multiple units, or appends to selection. Accepts a table with unitIDs as keys
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1521-L1527" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1521-L1527" target="_blank">source</a>]
 ---
 ---@param unitMap table<integer, any> Table with unit IDs as keys.
 ---@param append boolean? (Default: `false`) append to current selection
@@ -436,13 +436,13 @@ function Spring.SelectUnitMap(unitMap, append) end
 
 ---Lighting
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1535-L1538" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1535-L1538" target="_blank">source</a>]
 ---
 ---@section lighting
 
 ---Parameters for lighting
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1540-L1566" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1540-L1566" target="_blank">source</a>]
 ---
 ---@class LightParams
 ---@field position { px: number, py: number, pz: number }
@@ -462,7 +462,7 @@ function Spring.SelectUnitMap(unitMap, append) end
 ---@field ignoreLOS boolean
 local LightParams = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1678-L1685" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1678-L1685" target="_blank">source</a>]
 ---
 ---requires MaxDynamicMapLights > 0
 ---
@@ -470,7 +470,7 @@ local LightParams = {}
 ---@return integer lightHandle
 function Spring.AddMapLight(lightParams) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1704-L1711" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1704-L1711" target="_blank">source</a>]
 ---
 ---requires MaxDynamicMapLights > 0
 ---
@@ -478,26 +478,26 @@ function Spring.AddMapLight(lightParams) end
 ---@return number lightHandle
 function Spring.AddModelLight(lightParams) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1730-L1736" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1730-L1736" target="_blank">source</a>]
 ---
 ---@param lightHandle number
 ---@param lightParams LightParams
 ---@return boolean success
 function Spring.UpdateMapLight(lightHandle, lightParams) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1752-L1758" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1752-L1758" target="_blank">source</a>]
 ---
 ---@param lightHandle number
 ---@param lightParams LightParams
 ---@return boolean success
 function Spring.UpdateModelLight(lightHandle, lightParams) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1774-L1776" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1774-L1776" target="_blank">source</a>]
 function Spring.AddLightTrackingTarget() end
 
 ---Set a map-illuminating light to start/stop tracking the position of a moving object (unit or projectile)
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1831-L1840" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1831-L1840" target="_blank">source</a>]
 ---
 ---@param lightHandle number
 ---@param unitOrProjectileID integer
@@ -508,7 +508,7 @@ function Spring.SetMapLightTrackingState(lightHandle, unitOrProjectileID, enable
 
 ---Set a model-illuminating light to start/stop tracking the position of a moving object (unit or projectile)
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1867-L1876" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1867-L1876" target="_blank">source</a>]
 ---
 ---@param lightHandle number
 ---@param unitOrProjectileID integer
@@ -519,11 +519,11 @@ function Spring.SetModelLightTrackingState(lightHandle, unitOrProjectileID, enab
 
 ---Ingame Console
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1903-L1906" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1903-L1906" target="_blank">source</a>]
 ---
 ---@section console
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1909-L1918" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1909-L1918" target="_blank">source</a>]
 ---
 ---The ID's must refer to valid programs returned by `gl.CreateShader`.
 ---Passing in a value of 0 will cause the respective shader to revert back to its engine default.
@@ -534,7 +534,7 @@ function Spring.SetModelLightTrackingState(lightHandle, unitOrProjectileID, enab
 ---@return nil
 function Spring.SetMapShader(standardShaderID, deferredShaderID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L1938-L1943" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L1938-L1943" target="_blank">source</a>]
 ---
 ---@param texSqrX number
 ---@param texSqrY number
@@ -542,7 +542,7 @@ function Spring.SetMapShader(standardShaderID, deferredShaderID) end
 ---@return boolean success
 function Spring.SetMapSquareTexture(texSqrX, texSqrY, luaTexName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2035-L2040" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2035-L2040" target="_blank">source</a>]
 ---
 ---@param texType string
 ---@param texName string
@@ -550,7 +550,7 @@ function Spring.SetMapSquareTexture(texSqrX, texSqrY, luaTexName) end
 ---@usage Spring.SetMapShadingTexture("$ssmf_specular", "name_of_my_shiny_texture")
 function Spring.SetMapShadingTexture(texType, texName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2056-L2059" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2056-L2059" target="_blank">source</a>]
 ---
 ---@param texName string
 ---@return nil
@@ -558,65 +558,65 @@ function Spring.SetSkyBoxTexture(texName) end
 
 ---Unit custom rendering
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2072-L2075" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2072-L2075" target="_blank">source</a>]
 ---
 ---@section unitcustomrendering
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2078-L2084" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2078-L2084" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param noDraw boolean
 ---@return nil
 function Spring.SetUnitNoDraw(unitID, noDraw) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2097-L2103" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2097-L2103" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param drawMask number
 ---@return nil
 function Spring.SetUnitEngineDrawMask(unitID, drawMask) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2116-L2122" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2116-L2122" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param alwaysUpdateMatrix boolean
 ---@return nil
 function Spring.SetUnitAlwaysUpdateMatrix(unitID, alwaysUpdateMatrix) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2135-L2141" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2135-L2141" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitNoMinimap boolean
 ---@return nil
 function Spring.SetUnitNoMinimap(unitID, unitNoMinimap) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2153-L2157" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2153-L2157" target="_blank">source</a>]
 ---
 ---@param rotation number amount in radians
 ---@return nil
 function Spring.SetMiniMapRotation(rotation) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2183-L2188" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2183-L2188" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitNoGroup boolean Whether unit can be added to selection groups
 function Spring.SetUnitNoGroup(unitID, unitNoGroup) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2205-L2211" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2205-L2211" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitNoSelect boolean whether unit can be selected or not
 ---@return nil
 function Spring.SetUnitNoSelect(unitID, unitNoSelect) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2233-L2239" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2233-L2239" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param unitLeaveTracks boolean whether unit leaves tracks on movement
 ---@return nil
 function Spring.SetUnitLeaveTracks(unitID, unitLeaveTracks) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2252-L2267" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2252-L2267" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param featureID integer
@@ -634,25 +634,25 @@ function Spring.SetUnitSelectionVolumeData(unitID, featureID, scaleX, scaleY, sc
 
 ---Features
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2279-L2282" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2279-L2282" target="_blank">source</a>]
 ---
 ---@section features
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2285-L2293" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2285-L2293" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param noDraw boolean
 ---@return nil
 function Spring.SetFeatureNoDraw(featureID, noDraw) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2306-L2312" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2306-L2312" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param engineDrawMask number
 ---@return nil
 function Spring.SetFeatureEngineDrawMask(featureID, engineDrawMask) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2325-L2331" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2325-L2331" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param alwaysUpdateMat number
@@ -661,14 +661,14 @@ function Spring.SetFeatureAlwaysUpdateMatrix(featureID, alwaysUpdateMat) end
 
 ---Control whether a feature will fade or not when zoomed out.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2344-L2352" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2344-L2352" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param allow boolean
 ---@return nil
 function Spring.SetFeatureFade(featureID, allow) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2365-L2380" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2365-L2380" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param scaleX number
@@ -685,11 +685,11 @@ function Spring.SetFeatureSelectionVolumeData(featureID, scaleX, scaleY, scaleZ,
 
 ---Unit Icons
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2393-L2396" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2393-L2396" target="_blank">source</a>]
 ---
 ---@section unit_icons
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2399-L2410" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2399-L2410" target="_blank">source</a>]
 ---
 ---@param iconName string
 ---@param texFile string
@@ -699,13 +699,13 @@ function Spring.SetFeatureSelectionVolumeData(featureID, scaleX, scaleY, scaleZ,
 ---@return boolean added
 function Spring.AddUnitIcon(iconName, texFile, size, dist, radAdjust) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2429-L2436" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2429-L2436" target="_blank">source</a>]
 ---
 ---@param iconName string
 ---@return boolean? freed
 function Spring.FreeUnitIcon(iconName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2447-L2455" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2447-L2455" target="_blank">source</a>]
 ---
 ---Use Spring.SetUnitIconDraw instead.
 ---
@@ -715,21 +715,21 @@ function Spring.FreeUnitIcon(iconName) end
 ---@return nil
 function Spring.UnitIconSetDraw(unitID, drawIcon) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2467-L2473" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2467-L2473" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param drawIcon boolean
 ---@return nil
 function Spring.SetUnitIconDraw(unitID, drawIcon) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2486-L2494" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2486-L2494" target="_blank">source</a>]
 ---
 ---@param unitDefID integer
 ---@param iconName string
 ---@return nil
 function Spring.SetUnitDefIcon(unitDefID, iconName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2526-L2534" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2526-L2534" target="_blank">source</a>]
 ---
 ---@param unitDefID integer
 ---@param image string luaTexture|texFile
@@ -738,19 +738,19 @@ function Spring.SetUnitDefImage(unitDefID, image) end
 
 ---Virtual File System
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2569-L2574" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2569-L2574" target="_blank">source</a>]
 ---
 ---@section vfs
 ---
 ---Prefer using `VFS` whenever possible
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2578-L2583" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2578-L2583" target="_blank">source</a>]
 ---
 ---@param modfile string
 ---@return boolean extracted
 function Spring.ExtractModArchiveFile(modfile) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2642-L2647" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2642-L2647" target="_blank">source</a>]
 ---
 ---@param path string
 ---@return boolean? dirCreated
@@ -758,18 +758,18 @@ function Spring.CreateDir(path) end
 
 ---GUI
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2669-L2672" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2669-L2672" target="_blank">source</a>]
 ---
 ---@section gui
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2720-L2725" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2720-L2725" target="_blank">source</a>]
 ---
 ---@param action string
 ---@param actionExtra string?
 ---@return boolean? commandSet
 function Spring.SetActiveCommand(action, actionExtra) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2727-L2737" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2727-L2737" target="_blank">source</a>]
 ---
 ---@param cmdIndex number
 ---@param button number? (Default: `1`)
@@ -782,38 +782,38 @@ function Spring.SetActiveCommand(action, actionExtra) end
 ---@return boolean? commandSet
 function Spring.SetActiveCommand(cmdIndex, button, leftClick, rightClick, alt, ctrl, meta, shift) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2759-L2762" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2759-L2762" target="_blank">source</a>]
 ---
 ---@param config string
 ---@return nil
 function Spring.LoadCmdColorsConfig(config) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2770-L2773" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2770-L2773" target="_blank">source</a>]
 ---
 ---@param config string
 ---@return nil
 function Spring.LoadCtrlPanelConfig(config) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2784-L2786" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2784-L2786" target="_blank">source</a>]
 ---
 ---@return nil
 function Spring.ForceLayoutUpdate() end
 
 ---Disables the "Selected Units x" box in the GUI.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2797-L2802" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2797-L2802" target="_blank">source</a>]
 ---
 ---@param enable boolean
 ---@return nil
 function Spring.SetDrawSelectionInfo(enable) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2812-L2817" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2812-L2817" target="_blank">source</a>]
 ---
 ---@param state boolean
 ---@return nil
 function Spring.SetBoxSelectionByEngine(state) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2826-L2834" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2826-L2834" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@param r number
@@ -824,7 +824,7 @@ function Spring.SetTeamColor(teamID, r, g, b) end
 
 ---Changes/creates the cursor of a single CursorCmd.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2853-L2864" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2853-L2864" target="_blank">source</a>]
 ---
 ---@param cmdName string
 ---@param iconFileName string not the full filename, instead it is like this:
@@ -837,7 +837,7 @@ function Spring.AssignMouseCursor(cmdName, iconFileName, overwrite, hotSpotTopLe
 
 ---Mass replace all occurrences of the cursor in all CursorCmds.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2880-L2887" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2880-L2887" target="_blank">source</a>]
 ---
 ---@param oldFileName string
 ---@param newFileName string
@@ -847,7 +847,7 @@ function Spring.ReplaceMouseCursor(oldFileName, newFileName, hotSpotTopLeft) end
 
 ---Register your custom cmd so it gets visible in the unit's cmd queue
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2905-L2913" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2905-L2913" target="_blank">source</a>]
 ---
 ---@param cmdID integer
 ---@param cmdReference string|integer|nil The name or ID of an icon for command. Pass `nil` to clear draw data for command.
@@ -858,18 +858,18 @@ function Spring.SetCustomCommandDrawData(cmdID, cmdReference, color, showArea) e
 
 ---Mouse
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2946-L2949" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2946-L2949" target="_blank">source</a>]
 ---
 ---@section mouse
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2952-L2956" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2952-L2956" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
 ---@return nil
 function Spring.WarpMouse(x, y) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2966-L2970" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2966-L2970" target="_blank">source</a>]
 ---
 ---@param cursorName string
 ---@param cursorScale number? (Default: 1.0)
@@ -878,11 +878,11 @@ function Spring.SetMouseCursor(cursorName, cursorScale) end
 
 ---LOS Colors
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2982-L2985" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2982-L2985" target="_blank">source</a>]
 ---
 ---@section loscolors
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L2987-L2994" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L2987-L2994" target="_blank">source</a>]
 ---
 ---@param always rgb
 ---@param LOS rgb
@@ -892,7 +892,7 @@ function Spring.SetMouseCursor(cursorName, cursorScale) end
 ---@return nil
 function Spring.SetLosViewColors(always, LOS, radar, jam, radar2) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3035-L3045" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3035-L3045" target="_blank">source</a>]
 ---
 ---@param rotVal number? (Default: `0`) in degrees
 ---@param rotVel number? (Default: `0`) in degrees
@@ -905,13 +905,13 @@ function Spring.SetNanoProjectileParams(rotVal, rotVel, rotAcc, rotValRng, rotVe
 
 ---Engine Config
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3060-L3066" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3060-L3066" target="_blank">source</a>]
 ---
 ---@section engineconfig
 ---
 ---The following functions read the engine configs saved in `Springsettings.cfg`, a version-ed instance of these or a custom file supplied on the command line.
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3069-L3076" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3069-L3076" target="_blank">source</a>]
 ---
 ---@param name string
 ---@param value number
@@ -919,7 +919,7 @@ function Spring.SetNanoProjectileParams(rotVal, rotVel, rotAcc, rotValRng, rotVe
 ---@return nil
 function Spring.SetConfigInt(name, value, useOverlay) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3097-L3104" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3097-L3104" target="_blank">source</a>]
 ---
 ---@param name string
 ---@param value number
@@ -927,7 +927,7 @@ function Spring.SetConfigInt(name, value, useOverlay) end
 ---@return nil
 function Spring.SetConfigFloat(name, value, useOverla) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3120-L3127" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3120-L3127" target="_blank">source</a>]
 ---
 ---@param name string
 ---@param value number
@@ -937,18 +937,18 @@ function Spring.SetConfigString(name, value, useOverlay) end
 
 ---Closes the application
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3198-L3202" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3198-L3202" target="_blank">source</a>]
 ---
 ---@return nil
 function Spring.Quit() end
 
 ---Unit Group
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3209-L3212" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3209-L3212" target="_blank">source</a>]
 ---
 ---@section unitgroup
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3214-L3220" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3214-L3220" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param groupID number the group number to be assigned, or -1 for deassignment
@@ -957,13 +957,13 @@ function Spring.SetUnitGroup(unitID, groupID) end
 
 ---Give Order
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3250-L3253" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3250-L3253" target="_blank">source</a>]
 ---
 ---@section giveorder
 
 ---Command Options params
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3309-L3321" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3309-L3321" target="_blank">source</a>]
 ---
 ---@class cmdOpts
 ---Can be specified as a table, or as an array containing any of the keys
@@ -975,7 +975,7 @@ function Spring.SetUnitGroup(unitID, groupID) end
 ---@field meta boolean Meta (windows/mac/mod4) key pressed
 local cmdOpts = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3324-L3331" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3324-L3331" target="_blank">source</a>]
 ---
 ---@param cmdID integer
 ---@param params table
@@ -983,7 +983,7 @@ local cmdOpts = {}
 ---@return nil|true
 function Spring.GiveOrder(cmdID, params, options) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3344-L3352" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3344-L3352" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param cmdID integer
@@ -992,7 +992,7 @@ function Spring.GiveOrder(cmdID, params, options) end
 ---@return nil|true
 function Spring.GiveOrderToUnit(unitID, cmdID, params, options) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3376-L3384" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3376-L3384" target="_blank">source</a>]
 ---
 ---@param unitMap table { [unitID] = arg1, ... }
 ---@param cmdID integer
@@ -1001,7 +1001,7 @@ function Spring.GiveOrderToUnit(unitID, cmdID, params, options) end
 ---@return nil|true
 function Spring.GiveOrderToUnitMap(unitMap, cmdID, params, options) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3408-L3416" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3408-L3416" target="_blank">source</a>]
 ---
 ---@param unitArray number[] array of unit ids
 ---@param cmdID integer
@@ -1010,21 +1010,21 @@ function Spring.GiveOrderToUnitMap(unitMap, cmdID, params, options) end
 ---@return nil|true
 function Spring.GiveOrderToUnitArray(unitArray, cmdID, params, options) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3439-L3445" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3439-L3445" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param cmdArray Command[]
 ---@return boolean ordersGiven
 function Spring.GiveOrderArrayToUnit(unitID, cmdArray) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3473-L3479" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3473-L3479" target="_blank">source</a>]
 ---
 ---@param unitMap table { [unitID] = arg1, ... }
 ---@param cmdArray Command[]
 ---@return boolean ordersGiven
 function Spring.GiveOrderArrayToUnitMap(unitMap, cmdArray) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3507-L3520" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3507-L3520" target="_blank">source</a>]
 ---
 ---@param unitArray number[] array of unit ids
 ---@param cmdArray Command[]
@@ -1037,13 +1037,13 @@ function Spring.GiveOrderArrayToUnitMap(unitMap, cmdArray) end
 ---@return nil|boolean
 function Spring.GiveOrderArrayToUnitArray(unitArray, cmdArray, pairwise) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3550-L3555" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3550-L3555" target="_blank">source</a>]
 ---
 ---@param spacing number
 ---@return nil
 function Spring.SetBuildSpacing(spacing) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3565-L3570" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3565-L3570" target="_blank">source</a>]
 ---
 ---@param facing FacingInteger
 ---@return nil
@@ -1051,56 +1051,56 @@ function Spring.SetBuildFacing(facing) end
 
 ---UI
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3580-L3584" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3580-L3584" target="_blank">source</a>]
 ---
 ---@section ui
 ---Very important! (allows synced inter-lua-environment communications)
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3587-L3591" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3587-L3591" target="_blank">source</a>]
 ---
 ---@param message string
 ---@param mode string "s"/"specs" | "a"/"allies"
 ---@return nil
 function Spring.SendLuaUIMsg(message, mode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3612-L3615" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3612-L3615" target="_blank">source</a>]
 ---
 ---@param message string
 ---@return nil
 function Spring.SendLuaGaiaMsg(message) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3631-L3634" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3631-L3634" target="_blank">source</a>]
 ---
 ---@param message string
 ---@return nil
 function Spring.SendLuaRulesMsg(message) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3649-L3654" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3649-L3654" target="_blank">source</a>]
 ---
 ---@param msg string
 function Spring.SendLuaMenuMsg(msg) end
 
 ---Sharing
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3664-L3667" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3664-L3667" target="_blank">source</a>]
 ---
 ---@section sharing
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3670-L3677" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3670-L3677" target="_blank">source</a>]
 ---
 ---@param resource string metal | energy
 ---@param shareLevel number
 ---@return nil
 function Spring.SetShareLevel(resource, shareLevel) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3701-L3708" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3701-L3708" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@param units string
 ---@return nil
 function Spring.ShareResources(teamID, units) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3710-L3718" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3710-L3718" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@param resource string metal | energy
@@ -1110,11 +1110,11 @@ function Spring.ShareResources(teamID, resource, amount) end
 
 ---UI
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3760-L3763" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3760-L3763" target="_blank">source</a>]
 ---
 ---@section ui
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3766-L3771" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3766-L3771" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -1124,11 +1124,11 @@ function Spring.SetLastMessagePosition(x, y, z) end
 
 ---Markers
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3783-L3786" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3783-L3786" target="_blank">source</a>]
 ---
 ---@section markers
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3789-L3796" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3789-L3796" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -1138,7 +1138,7 @@ function Spring.SetLastMessagePosition(x, y, z) end
 ---@return nil
 function Spring.MarkerAddPoint(x, y, z, text, localOnly) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3818-L3828" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3818-L3828" target="_blank">source</a>]
 ---
 ---@param x1 number
 ---@param y1 number
@@ -1151,7 +1151,7 @@ function Spring.MarkerAddPoint(x, y, z, text, localOnly) end
 ---@return nil
 function Spring.MarkerAddLine(x1, y1, z1, x2, y2, z2, localOnly, playerId) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3852-L3864" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3852-L3864" target="_blank">source</a>]
 ---
 ---Issue an erase command for markers on the map.
 ---
@@ -1167,11 +1167,11 @@ function Spring.MarkerErasePosition(x, y, z, unused, localOnly, playerId, always
 
 ---Sun
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3890-L3893" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3890-L3893" target="_blank">source</a>]
 ---
 ---@section sun
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3895-L3903" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3895-L3903" target="_blank">source</a>]
 ---
 ---@class AtmosphereParams
 ---@field fogStart number
@@ -1189,12 +1189,12 @@ local AtmosphereParams = {}
 ---Spring.SetAtmosphere({ fogStart = 0, fogEnd = 0.5, fogColor = { 0.7, 0.2, 0.2, 1 }})
 ---```
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3904-L3914" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3904-L3914" target="_blank">source</a>]
 ---
 ---@param params AtmosphereParams
 function Spring.SetAtmosphere(params) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3978-L3986" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3978-L3986" target="_blank">source</a>]
 ---
 ---@param dirX number
 ---@param dirY number
@@ -1209,14 +1209,14 @@ function Spring.SetSunDirection(dirX, dirY, dirZ, intensity) end
 ---Spring.SetSunLighting({groundAmbientColor = {1, 0.1, 1}, groundDiffuseColor = {1, 0.1, 1} })
 ---```
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L3996-L4005" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L3996-L4005" target="_blank">source</a>]
 ---
 ---@param params { groundAmbientColor: rgb, groundDiffuseColor: rgb }
 function Spring.SetSunLighting(params) end
 
 ---Map rendering params
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4043-L4051" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4043-L4051" target="_blank">source</a>]
 ---
 ---@class MapRenderingParams
 ---@field splatTexMults rgba
@@ -1228,13 +1228,13 @@ local MapRenderingParams = {}
 
 ---Allows to change map rendering params at runtime.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4054-L4059" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4054-L4059" target="_blank">source</a>]
 ---
 ---@param params MapRenderingParams
 ---@return nil
 function Spring.SetMapRenderingParams(params) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4120-L4126" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4120-L4126" target="_blank">source</a>]
 ---
 ---@param normal boolean? (Default: `true`)
 ---@param shadow boolean? (Default: `false`)
@@ -1243,11 +1243,11 @@ function Spring.ForceTesselationUpdate(normal, shadow) end
 
 ---AI
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4152-L4155" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4152-L4155" target="_blank">source</a>]
 ---
 ---@section ai
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4158-L4162" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4158-L4162" target="_blank">source</a>]
 ---
 ---@param aiTeam number
 ---@param message string
@@ -1256,18 +1256,18 @@ function Spring.SendSkirmishAIMessage(aiTeam, message) end
 
 ---Developers
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4186-L4189" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4186-L4189" target="_blank">source</a>]
 ---
 ---@section developers
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4192-L4196" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4192-L4196" target="_blank">source</a>]
 ---
 ---@param sectionName string
 ---@param logLevel ?string|number
 ---@return nil
 function Spring.SetLogSectionFilterLevel(sectionName, logLevel) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4207-L4218" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4207-L4218" target="_blank">source</a>]
 ---
 ---@param itersPerBatch integer?
 ---@param numStepsPerIter integer?
@@ -1280,38 +1280,38 @@ function Spring.SetLogSectionFilterLevel(sectionName, logLevel) end
 ---@return nil
 function Spring.GarbageCollectCtrl(itersPerBatch, numStepsPerIter, minStepsPerIter, maxStepsPerIter, minLoopRunTime, maxLoopRunTime, baseRunTimeMult, baseMemLoadMult) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4239-L4242" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4239-L4242" target="_blank">source</a>]
 ---
 ---@param autoShow boolean
 ---@return nil
 function Spring.SetAutoShowMetal(autoShow) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4250-L4253" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4250-L4253" target="_blank">source</a>]
 ---
 ---@param drawSky boolean
 ---@return nil
 function Spring.SetDrawSky(drawSky) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4261-L4264" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4261-L4264" target="_blank">source</a>]
 ---
 ---@param drawWater boolean
 ---@return nil
 function Spring.SetDrawWater(drawWater) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4272-L4275" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4272-L4275" target="_blank">source</a>]
 ---
 ---@param drawGround boolean
 ---@return nil
 function Spring.SetDrawGround(drawGround) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4283-L4287" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4283-L4287" target="_blank">source</a>]
 ---
 ---@param drawGroundDeferred boolean
 ---@param drawGroundForward boolean? allows disabling of the forward pass
 ---@return nil
 function Spring.SetDrawGroundDeferred(drawGroundDeferred, drawGroundForward) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4300-L4306" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4300-L4306" target="_blank">source</a>]
 ---
 ---@param drawUnitsDeferred boolean
 ---@param drawFeaturesDeferred boolean
@@ -1322,13 +1322,13 @@ function Spring.SetDrawModelsDeferred(drawUnitsDeferred, drawFeaturesDeferred, d
 
 ---This doesn't actually record the game in any way, it just regulates the framerate and interpolations.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4324-L4329" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4324-L4329" target="_blank">source</a>]
 ---
 ---@param allowCaptureMode boolean
 ---@return nil
 function Spring.SetVideoCapturingMode(allowCaptureMode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4337-L4340" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4337-L4340" target="_blank">source</a>]
 ---
 ---@param timeOffset boolean
 ---@return nil
@@ -1336,7 +1336,7 @@ function Spring.SetVideoCapturingTimeOffset(timeOffset) end
 
 ---Water params
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4348-L4390" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4348-L4390" target="_blank">source</a>]
 ---
 ---@class WaterParams
 ---@field absorb rgb
@@ -1385,7 +1385,7 @@ local WaterParams = {}
 ---want to set `BumpWaterUseUniforms` in your `springrc` to 1, then you don't even
 ---need to restart `BumpWater` via `/water 4`.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4392-L4402" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4392-L4402" target="_blank">source</a>]
 ---
 ---@param waterParams WaterParams
 ---@return nil
@@ -1393,11 +1393,11 @@ function Spring.SetWaterParams(waterParams) end
 
 ---Preload
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4607-L4610" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4607-L4610" target="_blank">source</a>]
 ---
 ---@section preload
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4613-L4620" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4613-L4620" target="_blank">source</a>]
 ---
 ---Allow the engine to load the unit's model (and texture) in a background thread.
 ---Wreckages and buildOptions of a unit are automatically preloaded.
@@ -1406,19 +1406,19 @@ function Spring.SetWaterParams(waterParams) end
 ---@return nil
 function Spring.PreloadUnitDefModel(unitDefID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4632-L4636" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4632-L4636" target="_blank">source</a>]
 ---
 ---@param featureDefID integer
 ---@return nil
 function Spring.PreloadFeatureDefModel(featureDefID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4648-L4652" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4648-L4652" target="_blank">source</a>]
 ---
 ---@param name string
 ---@return nil
 function Spring.PreloadSoundItem(name) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4664-L4668" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4664-L4668" target="_blank">source</a>]
 ---
 ---@param modelName string
 ---@return boolean? success
@@ -1426,22 +1426,22 @@ function Spring.LoadModelTextures(modelName) end
 
 ---Decals
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4694-L4697" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4694-L4697" target="_blank">source</a>]
 ---
 ---@section decals
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4700-L4704" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4700-L4704" target="_blank">source</a>]
 ---
 ---@return nil|number decalID
 function Spring.CreateGroundDecal() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4716-L4721" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4716-L4721" target="_blank">source</a>]
 ---
 ---@param decalID integer
 ---@return boolean delSuccess
 function Spring.DestroyGroundDecal(decalID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4729-L4739" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4729-L4739" target="_blank">source</a>]
 ---
 ---@param decalID integer
 ---@param midPosX number? (Default: currMidPosX)
@@ -1452,14 +1452,14 @@ function Spring.DestroyGroundDecal(decalID) end
 ---@return boolean decalSet
 function Spring.SetGroundDecalPosAndDims(decalID, midPosX, midPosZ, sizeX, sizeZ, projCubeHeight) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4773-L4777" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4773-L4777" target="_blank">source</a>]
 ---
 ---@class xz
 ---@field x number
 ---@field y number
 local xz = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4778-L4791" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4778-L4791" target="_blank">source</a>]
 ---
 ---Use for non-rectangular decals
 ---
@@ -1472,14 +1472,14 @@ local xz = {}
 ---@return boolean decalSet
 function Spring.SetGroundDecalQuadPosAndHeight(decalID, posTL, posTR, posBR, posBL, projCubeHeight) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4814-L4820" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4814-L4820" target="_blank">source</a>]
 ---
 ---@param decalID integer
 ---@param rot number? (Default: random) in radians
 ---@return boolean decalSet
 function Spring.SetGroundDecalRotation(decalID, rot) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4836-L4843" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4836-L4843" target="_blank">source</a>]
 ---
 ---@param decalID integer
 ---@param textureName string The texture has to be on the atlas which seems to mean it's defined as an explosion, unit tracks, or building plate decal on some unit already (no arbitrary textures)
@@ -1487,7 +1487,7 @@ function Spring.SetGroundDecalRotation(decalID, rot) end
 ---@return nil|boolean decalSet
 function Spring.SetGroundDecalTexture(decalID, textureName, isMainTex) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4852-L4859" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4852-L4859" target="_blank">source</a>]
 ---
 ---@param decalID integer
 ---@param texWrapDistance number? (Default: currTexWrapDistance) if non-zero sets the mode to repeat the texture along the left-right direction of the decal every texWrapFactor elmos
@@ -1495,7 +1495,7 @@ function Spring.SetGroundDecalTexture(decalID, textureName, isMainTex) end
 ---@return nil|boolean decalSet
 function Spring.SetGroundDecalTextureParams(decalID, texWrapDistance, texTraveledDistance) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4876-L4883" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4876-L4883" target="_blank">source</a>]
 ---
 ---@param decalID integer
 ---@param alpha number? (Default: currAlpha) Between 0 and 1
@@ -1503,7 +1503,7 @@ function Spring.SetGroundDecalTextureParams(decalID, texWrapDistance, texTravele
 ---@return boolean decalSet
 function Spring.SetGroundDecalAlpha(decalID, alpha, alphaFalloff) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4899-L4909" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4899-L4909" target="_blank">source</a>]
 ---
 ---Sets projection cube normal to orient in 3D space.
 ---In case the normal (0,0,0) then normal is picked from the terrain
@@ -1515,7 +1515,7 @@ function Spring.SetGroundDecalAlpha(decalID, alpha, alphaFalloff) end
 ---@return boolean decalSet
 function Spring.SetGroundDecalNormal(decalID, normalX, normalY, normalZ) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4931-L4942" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4931-L4942" target="_blank">source</a>]
 ---
 ---Sets the tint of the ground decal. Color = 2 * textureColor * tintColor
 ---Respectively a color of (0.5, 0.5, 0.5, 0.5) is effectively no tint
@@ -1528,7 +1528,7 @@ function Spring.SetGroundDecalNormal(decalID, normalX, normalY, normalZ) end
 ---@return boolean decalSet
 function Spring.SetGroundDecalTint(decalID, tintColR, tintColG, tintColB, tintColA) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4963-L4974" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4963-L4974" target="_blank">source</a>]
 ---
 ---Sets varios secondary parameters of a decal
 ---
@@ -1541,7 +1541,7 @@ function Spring.SetGroundDecalTint(decalID, tintColR, tintColG, tintColB, tintCo
 ---@return boolean decalSet
 function Spring.SetGroundDecalMisc(decalID, dotElimExp, refHeight, minHeight, maxHeight, forceHeightMode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L4993-L5003" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L4993-L5003" target="_blank">source</a>]
 ---
 ---Use separate min and max for "gradient" style decals such as tank tracks
 ---
@@ -1553,11 +1553,11 @@ function Spring.SetGroundDecalCreationFrame(decalID, creationFrameMin, creationF
 
 ---SDL Text
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5020-L5023" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5020-L5023" target="_blank">source</a>]
 ---
 ---@section sdltext
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5026-L5034" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5026-L5034" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -1566,23 +1566,23 @@ function Spring.SetGroundDecalCreationFrame(decalID, creationFrameMin, creationF
 ---@return nil
 function Spring.SDLSetTextInputRect(x, y, width, height) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5046-L5050" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5046-L5050" target="_blank">source</a>]
 ---
 ---@return nil
 function Spring.SDLStartTextInput() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5057-L5061" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5057-L5061" target="_blank">source</a>]
 ---
 ---@return nil
 function Spring.SDLStopTextInput() end
 
 ---Window Management
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5069-L5072" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5069-L5072" target="_blank">source</a>]
 ---
 ---@section window
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5074-L5085" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5074-L5085" target="_blank">source</a>]
 ---
 ---@param displayIndex number
 ---@param winRelPosX number
@@ -1594,29 +1594,29 @@ function Spring.SDLStopTextInput() end
 ---@return nil
 function Spring.SetWindowGeometry(displayIndex, winRelPosX, winRelPosY, winSizeX, winSizeY, fullScreen, borderless) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5104-L5108" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5104-L5108" target="_blank">source</a>]
 ---
 ---@return boolean minimized
 function Spring.SetWindowMinimized() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5115-L5119" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5115-L5119" target="_blank">source</a>]
 ---
 ---@return boolean maximized
 function Spring.SetWindowMaximized() end
 
 ---Misc
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5127-L5130" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5127-L5130" target="_blank">source</a>]
 ---
 ---@section misc
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5133-L5136" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5133-L5136" target="_blank">source</a>]
 ---
 ---@param startScript string the CONTENT of the script.txt spring should use to start.
 ---@return nil
 function Spring.Reload(startScript) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5143-L5150" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5143-L5150" target="_blank">source</a>]
 ---
 ---If this call returns, something went wrong
 ---
@@ -1627,7 +1627,7 @@ function Spring.Restart(commandline_args, startScript) end
 
 ---Launches a new Spring instance without terminating the existing one.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5158-L5167" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5158-L5167" target="_blank">source</a>]
 ---
 ---If this call returns, something went wrong
 ---
@@ -1638,7 +1638,7 @@ function Spring.Start(commandline_args, startScript) end
 
 ---Sets the icon for the process which is seen in the OS task-bar and other places (default: spring-logo).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5179-L5190" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5179-L5190" target="_blank">source</a>]
 ---
 ---Note: has to be 24bit or 32bit.
 ---Note: on windows, it has to be 32x32 pixels in size (recommended for cross-platform)
@@ -1651,7 +1651,7 @@ function Spring.SetWMIcon(iconFileName) end
 
 ---Sets the window title for the process (default: "Spring <version>").
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5208-L5219" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5208-L5219" target="_blank">source</a>]
 ---
 ---The shortTitle is displayed in the OS task-bar (default: "Spring <version>").
 ---
@@ -1662,13 +1662,13 @@ function Spring.SetWMIcon(iconFileName) end
 ---@return nil
 function SetWMCaption(title, titleShort) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5227-L5230" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5227-L5230" target="_blank">source</a>]
 ---
 ---@param threadName string? (Default: main)
 ---@return nil
 function Spring.ClearWatchDogTimer(threadName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5248-L5251" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5248-L5251" target="_blank">source</a>]
 ---
 ---@param text string
 ---@return nil
@@ -1676,7 +1676,7 @@ function Spring.SetClipboard(text) end
 
 ---Relinquish control of the game loading thread and OpenGL context back to the UI (LuaIntro).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaUnsyncedCtrl.cpp#L5259-L5273" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUnsyncedCtrl.cpp#L5259-L5273" target="_blank">source</a>]
 ---
 ---Should be called after each widget/unsynced gadget is loaded in widget/gadget handler. Use it to draw screen updates and process windows events.
 ---

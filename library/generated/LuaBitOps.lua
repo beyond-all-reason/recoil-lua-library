@@ -22,13 +22,13 @@
 ---        return math.floor(value/2^shift) % 2^24
 ---    end
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaBitOps.cpp#L17-L35" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaBitOps.cpp#L17-L35" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaBitOps.cpp
 
 ---Returns the bitwise OR of all arguments. Only use up to 24 bit integers.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaBitOps.cpp#L57-L62" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaBitOps.cpp#L57-L62" target="_blank">source</a>]
 ---
 ---@param ... integer
 ---@return integer result
@@ -36,7 +36,7 @@ function math.bit_or(...) end
 
 ---Returns the bitwise AND of all arguments. Only use up to 24 bit integers.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaBitOps.cpp#L74-L79" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaBitOps.cpp#L74-L79" target="_blank">source</a>]
 ---
 ---@param ... integer
 ---@return integer result
@@ -44,7 +44,7 @@ function math.bit_and(...) end
 
 ---Returns the bitwise XOR of all arguments. Only use up to 24 bit integers.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaBitOps.cpp#L91-L96" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaBitOps.cpp#L91-L96" target="_blank">source</a>]
 ---
 ---@param ... integer
 ---@return integer result
@@ -52,7 +52,7 @@ function math.bit_xor(...) end
 
 ---Returns the bitwise NOT of the 24 bit integer argument.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaBitOps.cpp#L108-L113" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaBitOps.cpp#L108-L113" target="_blank">source</a>]
 ---
 ---@param value integer
 ---@return integer result
@@ -60,7 +60,7 @@ function math.bit_inv(value) end
 
 ---Set each of the bits of a 24 bit integer. Returns result = result OR (1 << a1) OR (1 << a2) OR ...;)
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/8089e9354cc98ac9ba86650211f702851fc5fc8a/rts/Lua/LuaBitOps.cpp#L122-L127" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaBitOps.cpp#L122-L127" target="_blank">source</a>]
 ---
 ---@param ... integer
 ---@return integer result
