@@ -6,3 +6,18 @@
 ---
 ---@meta
 
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e59c1a1c8f41725e3da61dd3e6c0a972e95a67ce/rts/Lua/LuaOpenGLUtils.cpp#L134-L148" target="_blank">source</a>]
+---
+---@alias MatrixName
+---| "view"
+---| "projection"
+---| "viewprojection"
+---| "viewinverse"
+---| "projectioninverse"
+---| "viewprojectioninverse"
+---| "billboard"
+---| "shadow"
+---| "camera" # Deprecated
+---| "camprj" # Deprecated
+---| "caminv" # Deprecated
+---| "camprjinv" # Deprecated
