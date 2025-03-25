@@ -8,7 +8,7 @@
 
 ---Facing direction represented by a string or number.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/cc3172342a8bfb879cf4342d7ad0ab478225f83f/rts/Lua/LuaUtils.cpp#L1159-L1177" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaUtils.cpp#L1159-L1177" target="_blank">source</a>]
 ---
 ---@see FacingInteger
 ---@alias Facing
@@ -24,3 +24,56 @@
 ---| "east" # East
 ---| "north" # North
 ---| "west" # West
+
+---Prints values in the spring chat console. Useful for debugging.
+---
+---Hint: the default print() writes to STDOUT.
+---
+---[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaUtils.cpp#L1315-L1325" target="_blank">source</a>]
+---
+---@param arg any
+---@param ... any
+---@return nil
+function Spring.Echo(arg, ...) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaUtils.cpp#L1332-L1342" target="_blank">source</a>]
+---
+---@enum LOG
+---@see Spring.Log
+LOG = {
+	DEBUG = 20,
+
+	INFO = 30,
+
+	---Engine default.
+	NOTICE = 35,
+
+	DEPRECATED = 37,
+
+	WARNING = 40,
+
+	ERROR = 50,
+
+	FATAL = 60
+}
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaUtils.cpp#L1357-L1367" target="_blank">source</a>]
+---
+---@alias LogLevel
+---| integer
+---| "debug"      # LOG.DEBUG
+---| "info"       # LOG.INFO
+---| "notice"     # LOG.NOTICE (engine default)
+---| "warning"    # LOG.WARNING
+---| "deprecated" # LOG.DEPRECATED
+---| "error"      # LOG.ERROR
+---| "fatal"      # LOG.FATAL
+
+---Logs a message to the logfile/console.
+---
+---[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaUtils.cpp#L1395-L1402" target="_blank">source</a>]
+---
+---@param section string
+---@param logLevel (LogLevel|LOG)? (Default: `"notice"`)
+---@param ... string messages
+function Spring.Log(section, logLevel, ...) end
