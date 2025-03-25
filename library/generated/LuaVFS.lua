@@ -111,53 +111,53 @@
 ---  - `modoptions.lua`
 ---  - `validmaps.lua`
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L27-L134" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L27-L134" target="_blank">source</a>]
 VFS = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L139-L139" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L139-L139" target="_blank">source</a>]
 ---Only select uncompressed files.
 VFS.RAW = "r"
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L141-L141" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L141-L141" target="_blank">source</a>]
 VFS.RAW = "M"
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L143-L143" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L143-L143" target="_blank">source</a>]
 VFS.GAME = "M"
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L145-L145" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L145-L145" target="_blank">source</a>]
 VFS.MAP = "m"
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L147-L147" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L147-L147" target="_blank">source</a>]
 VFS.BASE = "b"
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L149-L149" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L149-L149" target="_blank">source</a>]
 VFS.MENU = "e"
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L151-L151" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L151-L151" target="_blank">source</a>]
 ---Only select compressed files (`.sdz`, `.sd7`).
 VFS.ZIP = "Mmeb"
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L153-L153" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L153-L153" target="_blank">source</a>]
 ---Try uncompressed files first, then compressed.
 VFS.RAW_FIRST = "rMmeb"
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L155-L155" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L155-L155" target="_blank">source</a>]
 ---Try compressed files first, then uncompressed.
 VFS.RAW_FIRST = "Mmebr"
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L157-L160" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L157-L160" target="_blank">source</a>]
 ---
 ---@deprecated
 VFS.RAW_ONLY = "r"
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L162-L165" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L162-L165" target="_blank">source</a>]
 ---
 ---@deprecated
 VFS.ZIP_ONLY = "Mmeb"
 
 ---Loads and compiles lua code from a file in the VFS.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L261-L295" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L261-L295" target="_blank">source</a>]
 ---
 ---The path is relative to the main Spring directory, e.g.
 ---
@@ -189,7 +189,7 @@ function VFS.Include(filename, environment, mode) end
 
 ---Load raw text data from the VFS.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L379-L399" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L379-L399" target="_blank">source</a>]
 ---
 ---Returns file contents as a string. Unlike `VFS.Include` the file will not be
 ---executed.
@@ -208,7 +208,7 @@ function VFS.LoadFile(filename, mode) end
 
 ---Check if file exists in VFS.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L430-L455" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L430-L455" target="_blank">source</a>]
 ---
 ---Example usage:
 ---
@@ -232,7 +232,7 @@ function VFS.FileExists(filename, mode) end
 
 ---List files in a directory.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L476-L503" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L476-L503" target="_blank">source</a>]
 ---
 ---Example usage:
 ---
@@ -250,13 +250,13 @@ function VFS.FileExists(filename, mode) end
 ---VFS modes are single char strings and can be concatenated;
 ---doing specifies an order of preference for the mode (i.e. location) from
 ---which to include files.
----@param boolean ? recursive (Default: `false`)
+---@param recursive boolean? (Default: `false`)
 ---@return string[] filenames
-function VFS.DirList(directory, pattern, mode, boolean) end
+function VFS.DirList(directory, pattern, mode, recursive) end
 
 ---List sub-directories in a directory.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L535-L565" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L535-L565" target="_blank">source</a>]
 ---
 ---Example usage:
 ---
@@ -277,11 +277,11 @@ function VFS.DirList(directory, pattern, mode, boolean) end
 ---VFS modes are single char strings and can be concatenated;
 ---doing specifies an order of preference for the mode (i.e. location) from
 ---which to include files.
----@param boolean ? recursive (Default: `false`)
+---@param recursive boolean? (Default: `false`)
 ---@return string[] dirnames
-function VFS.SubDirs(directory, pattern, mode, boolean) end
+function VFS.SubDirs(directory, pattern, mode, recursive) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L593-L608" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L593-L608" target="_blank">source</a>]
 ---
 ---@param filename string
 ---
@@ -295,7 +295,7 @@ function VFS.SubDirs(directory, pattern, mode, boolean) end
 ---@return string? absolutePath
 function VFS.GetFileAbsolutePath(filename, mode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L632-L647" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L632-L647" target="_blank">source</a>]
 ---
 ---@param filename string
 ---
@@ -312,16 +312,16 @@ function VFS.GetArchiveContainingFile(filename, mode) end
 ---Temporarily load an archive from the VFS and run the given function,
 ---which can make usage of the files in the archive.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L672-L680" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L672-L680" target="_blank">source</a>]
 ---
 ---@param archiveName string
----@param fun (...: any) func
+---@param fun (...) func
 ---@return any ... Results of of the given function
 function VFS.UseArchive(archiveName, fun) end
 
 ---Compresses the specified folder.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L800-L810" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L800-L810" target="_blank">source</a>]
 ---
 ---@param folderPath string
 ---@param archiveType string? (Default: `"zip"`)The compression type (can
@@ -332,21 +332,27 @@ function VFS.UseArchive(archiveName, fun) end
 ---@param mode string?
 function VFS.CompressFolder(folderPath, archiveType, compressedFilePath, includeFolder, mode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L846-L850" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L846-L850" target="_blank">source</a>]
 ---
 ---@param uncompressed string Data to compress.
 ---@return string? compressed Compressed data, or `nil` on error.
 function VFS.ZlibCompress(uncompressed) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L866-L870" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L866-L870" target="_blank">source</a>]
 ---
 ---@param compressed string Data to decompress.
 ---@return string? uncompressed Uncompressed data, or `nil` on error.
 function VFS.ZlibDecompress(compressed) end
 
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L887-L891" target="_blank">source</a>]
+---
+---@alias HashType
+---| 0 # MD5
+---| 1 # SHA512
+
 ---Calculates hash (in base64 form) of a given string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L893-L900" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L893-L900" target="_blank">source</a>]
 ---
 ---@param input string
 ---@param hashType HashType Hash type.
@@ -355,7 +361,7 @@ function VFS.CalculateHash(input, hashType) end
 
 ---Convert unsigned 8-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L982-L987" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L982-L987" target="_blank">source</a>]
 ---
 ---@param ... integer Numbers to pack.
 ---@return string
@@ -363,7 +369,7 @@ function VFS.PackU8(...) end
 
 ---Convert unsigned 8-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L988-L993" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L988-L993" target="_blank">source</a>]
 ---
 ---@param numbers integer[] Numbers to pack.
 ---@return string
@@ -371,7 +377,7 @@ function VFS.PackU8(numbers) end
 
 ---Convert unsigned 16-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L996-L1001" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L996-L1001" target="_blank">source</a>]
 ---
 ---@param ... integer Numbers to pack.
 ---@return string
@@ -379,7 +385,7 @@ function VFS.PackU16(...) end
 
 ---Convert unsigned 16-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1002-L1007" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1002-L1007" target="_blank">source</a>]
 ---
 ---@param numbers integer[] Numbers to pack.
 ---@return string
@@ -387,7 +393,7 @@ function VFS.PackU16(numbers) end
 
 ---Convert unsigned 32-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1010-L1015" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1010-L1015" target="_blank">source</a>]
 ---
 ---@param ... integer Numbers to pack.
 ---@return string
@@ -395,7 +401,7 @@ function VFS.PackU32(...) end
 
 ---Convert unsigned 32-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1016-L1021" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1016-L1021" target="_blank">source</a>]
 ---
 ---@param numbers integer[] Numbers to pack.
 ---@return string
@@ -403,7 +409,7 @@ function VFS.PackU32(numbers) end
 
 ---Convert signed 8-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1024-L1029" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1024-L1029" target="_blank">source</a>]
 ---
 ---@param ... integer Numbers to pack.
 ---@return string
@@ -411,7 +417,7 @@ function VFS.PackS8(...) end
 
 ---Convert signed 8-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1030-L1035" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1030-L1035" target="_blank">source</a>]
 ---
 ---@param numbers integer[] Numbers to pack.
 ---@return string
@@ -419,7 +425,7 @@ function VFS.PackS8(numbers) end
 
 ---Convert signed 16-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1038-L1043" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1038-L1043" target="_blank">source</a>]
 ---
 ---@param ... integer Numbers to pack.
 ---@return string
@@ -427,7 +433,7 @@ function VFS.PackS16(...) end
 
 ---Convert signed 16-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1044-L1049" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1044-L1049" target="_blank">source</a>]
 ---
 ---@param numbers integer[] Numbers to pack.
 ---@return string
@@ -435,7 +441,7 @@ function VFS.PackS16(numbers) end
 
 ---Convert signed 32-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1052-L1057" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1052-L1057" target="_blank">source</a>]
 ---
 ---@param ... integer Numbers to pack.
 ---@return string
@@ -443,7 +449,7 @@ function VFS.PackS32(...) end
 
 ---Convert signed 32-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1058-L1063" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1058-L1063" target="_blank">source</a>]
 ---
 ---@param numbers integer[] Numbers to pack.
 ---@return string
@@ -451,7 +457,7 @@ function VFS.PackS32(numbers) end
 
 ---Convert signed 32-bit float(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1066-L1071" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1066-L1071" target="_blank">source</a>]
 ---
 ---@param ... integer Numbers to pack.
 ---@return string
@@ -459,7 +465,7 @@ function VFS.PackS32(...) end
 
 ---Convert signed 32-bit float(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1072-L1077" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1072-L1077" target="_blank">source</a>]
 ---
 ---@param numbers integer[] Numbers to pack.
 ---@return string
@@ -467,7 +473,7 @@ function VFS.PackS32(numbers) end
 
 ---Convert a binary string to an unsigned 8-bit integer.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1125-L1131" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1125-L1131" target="_blank">source</a>]
 ---
 ---@param str string Binary string.
 ---@param pos integer? Byte offset.
@@ -476,7 +482,7 @@ function VFS.UnpackU8(str, pos) end
 
 ---Convert a binary string to an unsigned 16-bit integer.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1134-L1140" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1134-L1140" target="_blank">source</a>]
 ---
 ---@param str string Binary string.
 ---@param pos integer? Byte offset.
@@ -485,7 +491,7 @@ function VFS.UnpackU16(str, pos) end
 
 ---Convert a binary string to an unsigned 32-bit integer.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1143-L1149" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1143-L1149" target="_blank">source</a>]
 ---
 ---@param str string Binary string.
 ---@param pos integer? Byte offset.
@@ -494,7 +500,7 @@ function VFS.UnpackU32(str, pos) end
 
 ---Convert a binary string to a signed 8-bit integer.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1152-L1158" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1152-L1158" target="_blank">source</a>]
 ---
 ---@param str string Binary string.
 ---@param pos integer? Byte offset.
@@ -503,7 +509,7 @@ function VFS.UnpackS8(str, pos) end
 
 ---Convert a binary string to a signed 16-bit integer.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1161-L1167" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1161-L1167" target="_blank">source</a>]
 ---
 ---@param str string Binary string.
 ---@param pos integer? Byte offset.
@@ -512,7 +518,7 @@ function VFS.UnpackS16(str, pos) end
 
 ---Convert a binary string to a signed 32-bit integer.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1170-L1176" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1170-L1176" target="_blank">source</a>]
 ---
 ---@param str string Binary string.
 ---@param pos integer? Byte offset.
@@ -521,7 +527,7 @@ function VFS.UnpackS32(str, pos) end
 
 ---Convert a binary string to a signed 32-bit float.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaVFS.cpp#L1179-L1185" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaVFS.cpp#L1179-L1185" target="_blank">source</a>]
 ---
 ---@param str string Binary string.
 ---@param pos integer? Byte offset.

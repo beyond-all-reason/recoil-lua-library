@@ -8,7 +8,7 @@
 
 ---Facing direction represented by a string or number.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaUtils.cpp#L1159-L1177" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaUtils.cpp#L1159-L1177" target="_blank">source</a>]
 ---
 ---@see FacingInteger
 ---@alias Facing
@@ -29,14 +29,14 @@
 ---
 ---Hint: the default print() writes to STDOUT.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaUtils.cpp#L1315-L1325" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaUtils.cpp#L1315-L1325" target="_blank">source</a>]
 ---
 ---@param arg any
 ---@param ... any
 ---@return nil
 function Spring.Echo(arg, ...) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaUtils.cpp#L1332-L1342" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaUtils.cpp#L1332-L1342" target="_blank">source</a>]
 ---
 ---@enum LOG
 ---@see Spring.Log
@@ -57,7 +57,7 @@ LOG = {
 	FATAL = 60
 }
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaUtils.cpp#L1357-L1367" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaUtils.cpp#L1357-L1367" target="_blank">source</a>]
 ---
 ---@alias LogLevel
 ---| integer
@@ -71,7 +71,7 @@ LOG = {
 
 ---Logs a message to the logfile/console.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/1ec38af1dd67e6f70ec34a7c7e754b122d360b2c/rts/Lua/LuaUtils.cpp#L1395-L1402" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/e6c455fc4af9f0ec17cc28cd62bb51afb68bc661/rts/Lua/LuaUtils.cpp#L1395-L1402" target="_blank">source</a>]
 ---
 ---@param section string
 ---@param logLevel (LogLevel|LOG)? (Default: `"notice"`)
