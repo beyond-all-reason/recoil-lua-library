@@ -8,7 +8,7 @@
 
 ---Facing direction represented by a string or number.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/240e04f696027d8ff7026e88b325426237ff97d8/rts/Lua/LuaUtils.cpp#L1159-L1177" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/cc3172342a8bfb879cf4342d7ad0ab478225f83f/rts/Lua/LuaUtils.cpp#L1159-L1177" target="_blank">source</a>]
 ---
 ---@see FacingInteger
 ---@alias Facing
