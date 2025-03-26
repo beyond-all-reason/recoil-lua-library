@@ -8,22 +8,22 @@
 
 ---FBO
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/00aa01002e8295f5f0dfd85b220eab5befcf9b38/rts/Lua/LuaFBOs.cpp#L25-L28" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaFBOs.cpp#L25-L28" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaFBOs.cpp
 
 ---attachment ::= luaTex or `RBO.rbo` or nil or { luaTex [, num target [, num level ] ] }
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/00aa01002e8295f5f0dfd85b220eab5befcf9b38/rts/Lua/LuaFBOs.cpp#L416-L419" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaFBOs.cpp#L416-L419" target="_blank">source</a>]
 ---
 ---@class attachment
 local attachment = {}
 
 ---User Data FBO
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/00aa01002e8295f5f0dfd85b220eab5befcf9b38/rts/Lua/LuaFBOs.cpp#L421-L433" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaFBOs.cpp#L421-L433" target="_blank">source</a>]
 ---
----@class Fbo
+---@class FBO
 ---@field depth attachment
 ---@field stencil attachment
 ---@field color0 attachment
@@ -33,42 +33,46 @@ local attachment = {}
 ---@field color15 attachment
 ---@field drawbuffers table `{ GL_COLOR_ATTACHMENT0_EXT, GL_COLOR_ATTACHMENT3_EXT, ..}`
 ---@field readbuffer table `GL_COLOR_ATTACHMENT0_EXT`
-local Fbo = {}
+local FBO = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/00aa01002e8295f5f0dfd85b220eab5befcf9b38/rts/Lua/LuaFBOs.cpp#L435-L438" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaFBOs.cpp#L435-L438" target="_blank">source</a>]
 ---
----@param fbo Fbo
+---@param fbo FBO
 function gl.CreateFBO(fbo) end
 
 ---This doesn't delete the attached objects!
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/00aa01002e8295f5f0dfd85b220eab5befcf9b38/rts/Lua/LuaFBOs.cpp#L509-L514" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaFBOs.cpp#L509-L514" target="_blank">source</a>]
 ---
----@param fbo Fbo
+---@param fbo FBO
 function gl.DeleteFBO(fbo) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/00aa01002e8295f5f0dfd85b220eab5befcf9b38/rts/Lua/LuaFBOs.cpp#L527-L533" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaFBOs.cpp#L527-L533" target="_blank">source</a>]
 ---
----@param fbo Fbo
+---@param fbo FBO
 ---@param target GL?
 ---@return boolean valid
 ---@return number? status
 function gl.IsValidFBO(fbo, target) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/00aa01002e8295f5f0dfd85b220eab5befcf9b38/rts/Lua/LuaFBOs.cpp#L569-L578" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaFBOs.cpp#L568-L573" target="_blank">source</a>]
 ---
----@param fbo Fbo
+---@param fbo FBO
+---@param func fun(...)
+---@param ... any args
+function gl.ActiveFBO(fbo, func, ...) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaFBOs.cpp#L574-L580" target="_blank">source</a>]
+---
+---@param fbo FBO
 ---@param target GL?
----@param identities boolean?
----@param lua_function function?
----@param arg1 any?
----@param arg2 any?
----@param argn any?
-function gl.ActiveFBO(fbo, target, identities, lua_function, arg1, arg2, argn) end
+---@param func fun(...)
+---@param ... any args
+function gl.ActiveFBO(fbo, target, func, ...) end
 
 ---Bind default or specified via rawFboId numeric id of FBO
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/00aa01002e8295f5f0dfd85b220eab5befcf9b38/rts/Lua/LuaFBOs.cpp#L642-L650" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaFBOs.cpp#L644-L652" target="_blank">source</a>]
 ---
 ---@param fbo nil
 ---@param target GL? (Default: `GL_FRAMEBUFFER_EXT`)
@@ -76,16 +80,16 @@ function gl.ActiveFBO(fbo, target, identities, lua_function, arg1, arg2, argn) e
 ---@return nil
 function gl.RawBindFBO(fbo, target, rawFboId) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/00aa01002e8295f5f0dfd85b220eab5befcf9b38/rts/Lua/LuaFBOs.cpp#L651-L656" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaFBOs.cpp#L653-L658" target="_blank">source</a>]
 ---
----@param fbo Fbo
+---@param fbo FBO
 ---@param target GL? (Default: `fbo.target`)
 ---@return number previouslyBoundRawFboId
 function gl.RawBindFBO(fbo, target) end
 
 ---needs `GLAD_GL_EXT_framebuffer_blit`
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/00aa01002e8295f5f0dfd85b220eab5befcf9b38/rts/Lua/LuaFBOs.cpp#L684-L697" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaFBOs.cpp#L686-L699" target="_blank">source</a>]
 ---
 ---@param x0Src number
 ---@param y0Src number
@@ -101,14 +105,14 @@ function gl.BlitFBO(x0Src, y0Src, x1Src, y1Src, x0Dst, y0Dst, x1Dst, y1Dst, mask
 
 ---needs `GLAD_GL_EXT_framebuffer_blit`
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/00aa01002e8295f5f0dfd85b220eab5befcf9b38/rts/Lua/LuaFBOs.cpp#L698-L713" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaFBOs.cpp#L700-L715" target="_blank">source</a>]
 ---
----@param fboSrc Fbo
+---@param fboSrc FBO
 ---@param x0Src number
 ---@param y0Src number
 ---@param x1Src number
 ---@param y1Src number
----@param fboDst Fbo
+---@param fboDst FBO
 ---@param x0Dst number
 ---@param y0Dst number
 ---@param x1Dst number
@@ -120,12 +124,12 @@ function gl.BlitFBO(fboSrc, x0Src, y0Src, x1Src, y1Src, fboDst, x0Dst, y0Dst, x1
 ---needs `Platform.glVersionNum >= 30`
 ---Clears the "attachment" of the currently bound FBO type "target" with "clearValues"
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/00aa01002e8295f5f0dfd85b220eab5befcf9b38/rts/Lua/LuaFBOs.cpp#L783-L793" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaFBOs.cpp#L785-L795" target="_blank">source</a>]
 ---
----@param target number? (Default: GL.FRAMEBUFFER)
+---@param target number? (Default: `GL.FRAMEBUFFER`)
 ---@param attachment GL|string (e.g. `"color0"` or `GL.COLOR_ATTACHMENT0`)
----@param clearValue0 number
----@param clearValue1 number
----@param clearValue2 number
----@param clearValue3 number
+---@param clearValue0 number? (Default: `0`)
+---@param clearValue1 number? (Default: `0`)
+---@param clearValue2 number? (Default: `0`)
+---@param clearValue3 number? (Default: `0`)
 function gl.ClearAttachmentFBO(target, attachment, clearValue0, clearValue1, clearValue2, clearValue3) end
