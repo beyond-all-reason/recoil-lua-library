@@ -8,10 +8,10 @@
 
 ---Lua OpenGL API
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L86-L89" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L86-L89" target="_blank">source</a>]
 gl = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1147-L1151" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1147-L1151" target="_blank">source</a>]
 ---
 ---@param ext string
 ---@return boolean
@@ -19,7 +19,7 @@ function gl.HasExtension(ext) end
 
 ---Get the value or values of a selected parameter.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1159-L1166" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1159-L1166" target="_blank">source</a>]
 ---
 ---@param pname GL
 ---@param count integer? (Default: `1`) Number of values to return, in range [1, 64].
@@ -28,25 +28,25 @@ function gl.GetNumber(pname, count) end
 
 ---Get a string describing the current OpenGL connection.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1184-L1188" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1184-L1188" target="_blank">source</a>]
 ---
 ---@param pname GL
 function gl.GetString(pname) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1204-L1209" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1204-L1209" target="_blank">source</a>]
 ---
 ---@return number x
 ---@return number y
 ---@return number z
 function gl.GetScreenViewTrans() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1219-L1223" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1219-L1223" target="_blank">source</a>]
 ---
 ---@return number x
 ---@return number y
 function gl.GetViewSizes() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1232-L1238" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1232-L1238" target="_blank">source</a>]
 ---
 ---@return number nearPlaneDist
 ---@return number farPlaneDist
@@ -54,12 +54,12 @@ function gl.GetViewSizes() end
 ---@return number maxViewRange
 function gl.GetViewRange() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1254-L1257" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1254-L1257" target="_blank">source</a>]
 ---
 ---@param newMode boolean
 function gl.SetSlaveMode(newMode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1269-L1275" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1269-L1275" target="_blank">source</a>]
 ---
 ---@param px integer
 ---@param py integer
@@ -67,24 +67,24 @@ function gl.SetSlaveMode(newMode) end
 ---@param sy integer
 function gl.ConfigMiniMap(px, py, sx, sy) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1291-L1294" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1291-L1294" target="_blank">source</a>]
 ---
 ---@param defaultTransform boolean? (Default: `true`)
 function gl.DrawMiniMap(defaultTransform) end
 
 ---Text
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1325-L1328" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1325-L1328" target="_blank">source</a>]
 ---
 ---@section text
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1331-L1333" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1331-L1333" target="_blank">source</a>]
 function gl.BeginText() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1342-L1344" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1342-L1344" target="_blank">source</a>]
 function gl.EndText() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1352-L1377" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1352-L1377" target="_blank">source</a>]
 ---
 ---@param text string
 ---@param x number
@@ -111,13 +111,13 @@ function gl.EndText() end
 ---@return nil
 function gl.Text(text, x, y, size, options) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1433-L1437" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1433-L1437" target="_blank">source</a>]
 ---
 ---@param text string
 ---@return number width
 function gl.GetTextWidth(text) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1448-L1454" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1448-L1454" target="_blank">source</a>]
 ---
 ---@param text string
 ---@return number height
@@ -127,7 +127,7 @@ function gl.GetTextHeight(text) end
 
 ---Draw the unit, applying transform.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1649-L1658" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1649-L1658" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param doRawDraw boolean? (Default: `false`)
@@ -141,7 +141,7 @@ function gl.Unit(unitID, doRawDraw, useLuaMat, noLuaCall, fullModel) end
 ---Also skips the `DrawUnit` callin by default so any
 ---recursion is blocked.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1661-L1673" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1661-L1673" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param doRawDraw boolean? (Default: `false`)
@@ -150,18 +150,18 @@ function gl.Unit(unitID, doRawDraw, useLuaMat, noLuaCall, fullModel) end
 ---@param fullModel boolean? (Default: `true`)
 function gl.UnitRaw(unitID, doRawDraw, useLuaMat, noLuaCall, fullModel) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1676-L1679" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1676-L1679" target="_blank">source</a>]
 ---
 ---@deprecated
 function gl.UnitGL4() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1685-L1689" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1685-L1689" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param push boolean If `true`, push the render state; if `false`, pop it.
 function gl.UnitTextures(unitID, push) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1697-L1704" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1697-L1704" target="_blank">source</a>]
 ---
 ---@param unitDefID integer
 ---@param teamID integer
@@ -170,35 +170,35 @@ function gl.UnitTextures(unitID, push) end
 ---@param opaque boolean? (Default: `true`) If `true`, draw opaque; if `false`, draw alpha.
 function gl.UnitShape(unitDefID, teamID, rawState, toScreen, opaque) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1712-L1715" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1712-L1715" target="_blank">source</a>]
 ---
 ---@deprecated
 function gl.UnitShapeGL4() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1721-L1725" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1721-L1725" target="_blank">source</a>]
 ---
 ---@param unitDefID integer
 ---@param push boolean If `true`, push the render state; if `false`, pop it.
 function gl.UnitShapeTextures(unitDefID, push) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1734-L1737" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1734-L1737" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function gl.UnitMultMatrix(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1752-L1756" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1752-L1756" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param pieceID integer
 function gl.UnitPiece(unitID, pieceID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1763-L1767" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1763-L1767" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param pieceID integer
 function gl.UnitPieceMatrix(unitID, pieceID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1770-L1774" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1770-L1774" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param pieceID integer
@@ -206,7 +206,7 @@ function gl.UnitPieceMultMatrix(unitID, pieceID) end
 
 ---Draw the feature, applying transform.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1835-L1843" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1835-L1843" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param doRawDraw boolean? (Default: `false`)
@@ -219,7 +219,7 @@ function gl.Feature(featureID, doRawDraw, useLuaMat, noLuaCall) end
 ---Also skips the `DrawFeature` callin by default so any
 ---recursion is blocked.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1846-L1856" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1846-L1856" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param doRawDraw boolean? (Default: `false`)
@@ -227,18 +227,18 @@ function gl.Feature(featureID, doRawDraw, useLuaMat, noLuaCall) end
 ---@param noLuaCall boolean? (Default: `true`) Skip the `DrawFeature` callin.
 function gl.FeatureRaw(featureID, doRawDraw, useLuaMat, noLuaCall) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1859-L1862" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1859-L1862" target="_blank">source</a>]
 ---
 ---@deprecated
 function gl.FeatureGL4() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1868-L1872" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1868-L1872" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param push boolean If `true`, push the render state; if `false`, pop it.
 function gl.FeatureTextures(featureID, push) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1880-L1887" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1880-L1887" target="_blank">source</a>]
 ---
 ---@param featureDefID integer
 ---@param teamID integer
@@ -247,41 +247,41 @@ function gl.FeatureTextures(featureID, push) end
 ---@param opaque boolean? (Default: `true`) If `true`, draw opaque; if `false`, draw alpha.
 function gl.FeatureShape(featureDefID, teamID, rawState, toScreen, opaque) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1895-L1898" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1895-L1898" target="_blank">source</a>]
 ---
 ---@deprecated
 function gl.FeatureShapeGL4() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1904-L1908" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1904-L1908" target="_blank">source</a>]
 ---
 ---@param featureDefID integer
 ---@param push boolean If `true`, push the render state; if `false`, pop it.
 function gl.FeatureShapeTextures(featureDefID, push) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1917-L1920" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1917-L1920" target="_blank">source</a>]
 ---
 ---@param featureID integer
 function gl.FeatureMultMatrix(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1935-L1939" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1935-L1939" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param pieceID integer
 function gl.FeaturePiece(featureID, pieceID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1947-L1951" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1947-L1951" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param pieceID integer
 function gl.FeaturePieceMatrix(featureID, pieceID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1955-L1959" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1955-L1959" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param pieceID integer
 function gl.FeaturePieceMultMatrix(featureID, pieceID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L1972-L1984" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L1972-L1984" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param listIndex integer
@@ -295,7 +295,7 @@ function gl.FeaturePieceMultMatrix(featureID, pieceID) end
 ---@param rotZ number? (Default: `0.0`)
 function gl.DrawListAtUnit(unitID, listIndex, useMidPos, scaleX, scaleY, scaleZ, degrees, rotX, rotY, rotZ) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2029-L2035" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2029-L2035" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param useMidPos boolean? (Default: `true`)
@@ -303,7 +303,7 @@ function gl.DrawListAtUnit(unitID, listIndex, useMidPos, scaleX, scaleY, scaleZ,
 ---@param ... any Arguments passed to function.
 function gl.DrawFuncAtUnit(unitID, useMidPos, fun, ...) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2072-L2079" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2072-L2079" target="_blank">source</a>]
 ---
 ---@param posX number
 ---@param posY number
@@ -312,7 +312,7 @@ function gl.DrawFuncAtUnit(unitID, useMidPos, fun, ...) end
 ---@param resolution integer
 function gl.DrawGroundCircle(posX, posY, posZ, radius, resolution) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2080-L2090" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2080-L2090" target="_blank">source</a>]
 ---
 ---@param posX number
 ---@param posY number
@@ -324,7 +324,7 @@ function gl.DrawGroundCircle(posX, posY, posZ, radius, resolution) end
 ---@param weaponDefID integer
 function gl.DrawGroundCircle(posX, posY, posZ, radius, resolution, slope, gravity, weaponDefID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2131-L2139" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2131-L2139" target="_blank">source</a>]
 ---
 ---@param x0 number
 ---@param z0 number
@@ -334,7 +334,7 @@ function gl.DrawGroundCircle(posX, posY, posZ, radius, resolution, slope, gravit
 ---@param useTxcd boolean? (Default: `false`)
 function gl.DrawGroundCircle(x0, z0, x1, z1, useNorm, useTxcd) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2140-L2151" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2140-L2151" target="_blank">source</a>]
 ---
 ---@param x0 number
 ---@param z0 number
@@ -347,7 +347,7 @@ function gl.DrawGroundCircle(x0, z0, x1, z1, useNorm, useTxcd) end
 ---@param tv1 number
 function gl.DrawGroundCircle(x0, z0, x1, z1, useNorm, tu0, tv0, tu1, tv1) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2255-L2265" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2255-L2265" target="_blank">source</a>]
 ---
 ---@class VertexData
 ---@field vert xyz?
@@ -360,35 +360,35 @@ function gl.DrawGroundCircle(x0, z0, x1, z1, useNorm, tu0, tv0, tu1, tv1) end
 ---@field c float4? Short for `color`.
 local VertexData = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2340-L2344" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2340-L2344" target="_blank">source</a>]
 ---
 ---@param type GL
 ---@param vertices VertexData[]
 function gl.Shape(type, vertices) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2386-L2391" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2386-L2391" target="_blank">source</a>]
 ---
 ---@param primMode GL
 ---@param fun (...) func Function to call.
 ---@param ... any Arguments passed to function.
 function gl.BeginEnd(primMode, fun, ...) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2423-L2426" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2423-L2426" target="_blank">source</a>]
 ---
 ---@param v xy
 function gl.Vertex(v) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2427-L2430" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2427-L2430" target="_blank">source</a>]
 ---
 ---@param v xyz
 function gl.Vertex(v) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2431-L2434" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2431-L2434" target="_blank">source</a>]
 ---
 ---@param v xyzw
 function gl.Vertex(v) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2435-L2441" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2435-L2441" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -396,39 +396,39 @@ function gl.Vertex(v) end
 ---@param w number?
 function gl.Vertex(x, y, z, w) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2505-L2508" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2505-L2508" target="_blank">source</a>]
 ---
 ---@param v xyz
 function gl.Normal(v) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2509-L2514" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2509-L2514" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
 ---@param z number
 function gl.Normal(x, y, z) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2553-L2556" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2553-L2556" target="_blank">source</a>]
 ---
 ---@param coord [number]
 function gl.TexCoord(coord) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2557-L2560" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2557-L2560" target="_blank">source</a>]
 ---
 ---@param coord xy
 function gl.TexCoord(coord) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2561-L2564" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2561-L2564" target="_blank">source</a>]
 ---
 ---@param coord xyz
 function gl.TexCoord(coord) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2565-L2568" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2565-L2568" target="_blank">source</a>]
 ---
 ---@param coord xyzw
 function gl.TexCoord(coord) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2569-L2575" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2569-L2575" target="_blank">source</a>]
 ---
 ---@param s number
 ---@param t number?
@@ -436,31 +436,31 @@ function gl.TexCoord(coord) end
 ---@param q number?
 function gl.TexCoord(s, t, r, q) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2644-L2648" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2644-L2648" target="_blank">source</a>]
 ---
 ---@param texNum integer
 ---@param coord [number]
 function gl.MultiTexCoord(texNum, coord) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2649-L2653" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2649-L2653" target="_blank">source</a>]
 ---
 ---@param texNum integer
 ---@param coord xy
 function gl.MultiTexCoord(texNum, coord) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2654-L2658" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2654-L2658" target="_blank">source</a>]
 ---
 ---@param texNum integer
 ---@param coord xyz
 function gl.MultiTexCoord(texNum, coord) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2659-L2663" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2659-L2663" target="_blank">source</a>]
 ---
 ---@param texNum integer
 ---@param coord xyzw
 function gl.MultiTexCoord(texNum, coord) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2664-L2671" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2664-L2671" target="_blank">source</a>]
 ---
 ---@param texNum integer
 ---@param s number
@@ -469,29 +469,29 @@ function gl.MultiTexCoord(texNum, coord) end
 ---@param q number?
 function gl.MultiTexCoord(texNum, s, t, r, q) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2746-L2749" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2746-L2749" target="_blank">source</a>]
 ---
 ---@param color rgb
 function gl.SecondaryColor(color) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2750-L2755" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2750-L2755" target="_blank">source</a>]
 ---
 ---@param r number
 ---@param g number
 ---@param b number
 function gl.SecondaryColor(r, g, b) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2794-L2797" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2794-L2797" target="_blank">source</a>]
 ---
 ---@param coord number
 function gl.FogCoord(coord) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2809-L2812" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2809-L2812" target="_blank">source</a>]
 ---
 ---@param flag boolean
 function gl.EdgeFlag(flag) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2827-L2833" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2827-L2833" target="_blank">source</a>]
 ---
 ---@param x1 number
 ---@param y1 number
@@ -499,7 +499,7 @@ function gl.EdgeFlag(flag) end
 ---@param y2 number
 function gl.Rect(x1, y1, x2, y2) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2846-L2854" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2846-L2854" target="_blank">source</a>]
 ---
 ---@param x1 number
 ---@param y1 number
@@ -509,7 +509,7 @@ function gl.Rect(x1, y1, x2, y2) end
 ---@param flipTCoords boolean?
 function gl.Rect(x1, y1, x2, y2, flipSCoords, flipTCoords) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2855-L2865" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2855-L2865" target="_blank">source</a>]
 ---
 ---@param x1 number
 ---@param y1 number
@@ -521,7 +521,7 @@ function gl.Rect(x1, y1, x2, y2, flipSCoords, flipTCoords) end
 ---@param t2 number
 function gl.Rect(x1, y1, x2, y2, s1, t1, s2, t2) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2921-L2927" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2921-L2927" target="_blank">source</a>]
 ---
 ---@param numGroupX integer
 ---@param numGroupY integer
@@ -529,18 +529,18 @@ function gl.Rect(x1, y1, x2, y2, s1, t1, s2, t2) end
 ---@param barriers integer? (Default: `4`)
 function gl.DispatchCompute(numGroupX, numGroupY, numGroupZ, barriers) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2960-L2963" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2960-L2963" target="_blank">source</a>]
 ---
 ---@param barriers integer? (Default: `4`)
 function gl.MemoryBarrier(barriers) end
 
 ---Draw Basics
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2976-L2979" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2976-L2979" target="_blank">source</a>]
 ---
 ---@section draw_basics
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2981-L2987" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2981-L2987" target="_blank">source</a>]
 ---
 ---@param r number Red.
 ---@param g number Green.
@@ -548,17 +548,17 @@ function gl.MemoryBarrier(barriers) end
 ---@param a number? (Default: `1.0`) Alpha.
 function gl.Color(r, g, b, a) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2988-L2991" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2988-L2991" target="_blank">source</a>]
 ---
 ---@param color rgba Color with alpha.
 function gl.Color(color) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L2992-L2995" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L2992-L2995" target="_blank">source</a>]
 ---
 ---@param color rgb Color.
 function gl.Color(color) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3033-L3041" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3033-L3041" target="_blank">source</a>]
 ---
 ---@class Material
 ---@field shininess number
@@ -569,33 +569,33 @@ function gl.Color(color) end
 ---@field emission rgb|rgba
 local Material = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3043-L3046" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3043-L3046" target="_blank">source</a>]
 ---
 ---@param material Material
 function gl.Material(material) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3116-L3118" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3116-L3118" target="_blank">source</a>]
 function gl.ResetState() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3127-L3129" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3127-L3129" target="_blank">source</a>]
 function gl.ResetMatrices() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3145-L3148" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3145-L3148" target="_blank">source</a>]
 ---
 ---@param enable boolean
 function gl.Lighting(enable) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3162-L3165" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3162-L3165" target="_blank">source</a>]
 ---
 ---@param model GL
 function gl.ShadeModel(model) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3174-L3177" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3174-L3177" target="_blank">source</a>]
 ---
 ---@param enable boolean
 function gl.Scissor(enable) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3178-L3184" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3178-L3184" target="_blank">source</a>]
 ---
 ---@param x integer
 ---@param y integer
@@ -603,7 +603,7 @@ function gl.Scissor(enable) end
 ---@param h integer
 function gl.Scissor(x, y, w, h) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3215-L3221" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3215-L3221" target="_blank">source</a>]
 ---
 ---@param x integer
 ---@param y integer
@@ -613,14 +613,14 @@ function gl.Viewport(x, y, w, h) end
 
 ---Enable or disable writing of frame buffer color components.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3238-L3242" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3238-L3242" target="_blank">source</a>]
 ---
 ---@param rgba boolean
 function gl.ColorMask(rgba) end
 
 ---Enable or disable writing of frame buffer color components.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3243-L3250" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3243-L3250" target="_blank">source</a>]
 ---
 ---@param red boolean
 ---@param green boolean
@@ -630,21 +630,21 @@ function gl.ColorMask(red, green, blue, alpha) end
 
 ---Enable or disable writing into the depth buffer.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3274-L3278" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3274-L3278" target="_blank">source</a>]
 ---
 ---@param enable boolean
 function gl.DepthMask(enable) end
 
 ---Enable or disable depth test.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3291-L3295" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3291-L3295" target="_blank">source</a>]
 ---
 ---@param enable boolean
 function gl.DepthTest(enable) end
 
 ---Enable depth test and specify the depth comparison function.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3296-L3305" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3296-L3305" target="_blank">source</a>]
 ---
 ---@param depthFunction GL
 ---
@@ -653,19 +653,19 @@ function gl.DepthTest(enable) end
 ---The initial value is `GL.LESS`.
 function gl.DepthTest(depthFunction) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3333-L3336" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3333-L3336" target="_blank">source</a>]
 ---
 ---@param enable boolean
 function gl.DepthClamp(enable) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3350-L3353" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3350-L3353" target="_blank">source</a>]
 ---
 ---@param enable boolean
 function gl.Culling(enable) end
 
 ---Enable culling and set culling mode.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3354-L3362" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3354-L3362" target="_blank">source</a>]
 ---
 ---@param mode GL
 ---
@@ -674,14 +674,14 @@ function gl.Culling(enable) end
 ---initial value is `GL.BACK`.
 function gl.Culling(mode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3391-L3394" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3391-L3394" target="_blank">source</a>]
 ---
 ---@param enable boolean
 function gl.LogicOp(enable) end
 
 ---Specify a logical pixel operation for rendering.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3395-L3407" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3395-L3407" target="_blank">source</a>]
 ---
 ---@param opCode GL
 ---
@@ -692,45 +692,45 @@ function gl.LogicOp(enable) end
 ---`GL.OR_INVERTED`.  The initial value is `GL.COPY`.
 function gl.LogicOp(opCode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3435-L3438" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3435-L3438" target="_blank">source</a>]
 ---
 ---@param enable boolean
 function gl.Fog(enable) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3453-L3456" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3453-L3456" target="_blank">source</a>]
 ---
 ---@param enable boolean
 function gl.Blending(enable) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3457-L3460" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3457-L3460" target="_blank">source</a>]
 ---
 ---@param mode "add"|"alpha_add"|"alpha"|"reset"|"color"|"modulate"|"disable"
 function gl.Blending(mode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3461-L3465" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3461-L3465" target="_blank">source</a>]
 ---
 ---@param src GL
 ---@param dst GL
 function gl.Blending(src, dst) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3528-L3531" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3528-L3531" target="_blank">source</a>]
 ---
 ---@param mode GL
 function gl.BlendEquation(mode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3541-L3545" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3541-L3545" target="_blank">source</a>]
 ---
 ---@param src GL
 ---@param dst GL
 function gl.BlendFunc(src, dst) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3556-L3560" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3556-L3560" target="_blank">source</a>]
 ---
 ---@param modeRGB GL
 ---@param modeAlpha GL
 function gl.BlendEquationSeparate(modeRGB, modeAlpha) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3571-L3577" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3571-L3577" target="_blank">source</a>]
 ---
 ---@param srcRGB GL
 ---@param dstRGB GL
@@ -738,14 +738,14 @@ function gl.BlendEquationSeparate(modeRGB, modeAlpha) end
 ---@param dstAlpha GL
 function gl.BlendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3590-L3593" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3590-L3593" target="_blank">source</a>]
 ---
 ---@param enable boolean
 function gl.AlphaTest(enable) end
 
 ---Specify the alpha test function.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3594-L3607" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3594-L3607" target="_blank">source</a>]
 ---
 ---@param func GL
 ---Specifies the alpha comparison function. Symbolic constants `GL.NEVER`,
@@ -758,14 +758,14 @@ function gl.AlphaTest(enable) end
 ---value is `0`.
 function gl.AlphaTest(func, ref) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3631-L3634" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3631-L3634" target="_blank">source</a>]
 ---
 ---@param enable boolean
 function gl.AlphaToCoverage(enable) end
 
 ---Select polygon rasterization mode.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3652-L3668" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3652-L3668" target="_blank">source</a>]
 ---
 ---@param face GL
 ---
@@ -779,12 +779,12 @@ function gl.AlphaToCoverage(enable) end
 ---back-facing polygons.
 function gl.PolygonMode(face, mode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3679-L3682" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3679-L3682" target="_blank">source</a>]
 ---
 ---@param enable boolean
 function gl.PolygonOffset(enable) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3683-L3694" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3683-L3694" target="_blank">source</a>]
 ---
 ---@param factor number
 ---
@@ -796,21 +796,21 @@ function gl.PolygonOffset(enable) end
 ---offset. The initial value is `0`.
 function gl.PolygonOffset(factor, units) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3726-L3729" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3726-L3729" target="_blank">source</a>]
 ---
 ---@param enable boolean
 function gl.StencilTest(enable) end
 
 ---Control the front and back writing of individual bits in the stencil planes.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3743-L3747" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3743-L3747" target="_blank">source</a>]
 ---
 ---@param mask integer Specifies a bit mask to enable and disable writing of individual bits in the stencil planes. Initially, the mask is all `1`'s.
 function gl.StencilMask(mask) end
 
 ---Set front and back function and reference value for stencil testing.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3757-L3763" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3757-L3763" target="_blank">source</a>]
 ---
 ---@param func GL Specifies the test function. Eight symbolic constants are valid: `GL.NEVER`, `GL.LESS`, `GL.EQUAL`, `GL.LEQUAL`, `GL.GREATER`, `GL.NOTEQUAL`, `GL.GEQUAL`, and `GL.ALWAYS`. The initial value is `GL.ALWAYS`.
 ---@param ref integer Specifies the reference value for the stencil test. `ref` is clamped to the range `[0, 2^n - 1]`, where `n` is the number of bitplanes in the stencil buffer. The initial value is `0`.
@@ -819,7 +819,7 @@ function gl.StencilFunc(func, ref, mask) end
 
 ---Set front and back stencil test actions.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3775-L3781" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3775-L3781" target="_blank">source</a>]
 ---
 ---@param fail GL Specifies the action to take when the stencil test fails. Eight symbolic constants are valid: `GL.KEEP`, `GL.ZERO`, `GL.REPLACE`, `GL.INCR`, `GL.INCR_WRAP`, `GL.DECR`, `GL.DECR_WRAP`, and `GL.INVERT`. The initial value is `GL.KEEP`.
 ---@param zfail GL Specifies the stencil action when the stencil test passes, but the depth test fails. The initial value is `GL.KEEP`.
@@ -828,7 +828,7 @@ function gl.StencilOp(fail, zfail, zpass) end
 
 ---Control the front and back writing of individual bits in the stencil planes.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3793-L3798" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3793-L3798" target="_blank">source</a>]
 ---
 ---@param face GL Specifies whether the front and/or back stencil writemask is updated. Three symbolic constants are accepted: `GL.FRONT`, `GL.BACK`, and `GL.FRONT_AND_BACK`. The initial value is `GL.FRONT_AND_BACK`.
 ---@param mask integer Specifies a bit mask to enable and disable writing of individual bits in the stencil planes. Initially, the mask is all `1`'s.
@@ -836,7 +836,7 @@ function gl.StencilMaskSeparate(face, mask) end
 
 ---Set front and/or back function and reference value for stencil testing.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3809-L3816" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3809-L3816" target="_blank">source</a>]
 ---
 ---@param face GL Specifies whether front and/or back stencil state is updated. Three symbolic constants are accepted: `GL.FRONT`, `GL.BACK`, and `GL.FRONT_AND_BACK`. The initial value is `GL.FRONT_AND_BACK`.
 ---@param func GL Specifies the test function. Eight symbolic constants are valid: `GL.NEVER`, `GL.LESS`, `GL.EQUAL`, `GL.LEQUAL`, `GL.GREATER`, `GL.NOTEQUAL`, `GL.GEQUAL`, and `GL.ALWAYS`. The initial value is `GL.ALWAYS`.
@@ -846,7 +846,7 @@ function gl.StencilFuncSeparate(face, func, ref, mask) end
 
 ---Set front and/or back stencil test actions.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3829-L3836" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3829-L3836" target="_blank">source</a>]
 ---
 ---@param face GL Specifies whether front and/or back stencil state is updated. Three symbolic constants are accepted: `GL.FRONT`, `GL.BACK`, and `GL.FRONT_AND_BACK`. The initial value is `GL.FRONT_AND_BACK`.
 ---@param fail GL Specifies the action to take when the stencil test fails. Eight symbolic constants are valid: `GL.KEEP`, `GL.ZERO`, `GL.REPLACE`, `GL.INCR`, `GL.INCR_WRAP`, `GL.DECR`, `GL.DECR_WRAP`, and `GL.INVERT`. The initial value is `GL.KEEP`.
@@ -854,41 +854,41 @@ function gl.StencilFuncSeparate(face, func, ref, mask) end
 ---@param zpass GL Specifies the stencil action when both the stencil test and the depth test pass, or when the stencil test passes and either there is no depth buffer or depth testing is not enabled. The initial value is `GL.KEEP`.
 function gl.StencilOpSeparate(face, fail, zfail, zpass) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3851-L3854" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3851-L3854" target="_blank">source</a>]
 ---
 ---@param enable boolean
 function gl.LineStipple(enable) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3855-L3858" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3855-L3858" target="_blank">source</a>]
 ---
 ---@param ignoredString string The value of this string is ignored, but it still does something.
 function gl.LineStipple(ignoredString) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3859-L3864" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3859-L3864" target="_blank">source</a>]
 ---
 ---@param factor integer
 ---@param pattern integer
 ---@param shift integer?
 function gl.LineStipple(factor, pattern, shift) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3914-L3917" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3914-L3917" target="_blank">source</a>]
 ---
 ---@param width number
 function gl.LineWidth(width) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3928-L3931" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3928-L3931" target="_blank">source</a>]
 ---
 ---@param size number
 function gl.PointSize(size) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3942-L3947" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3942-L3947" target="_blank">source</a>]
 ---
 ---@param enable boolean
 ---@param enableCoordReplace boolean?
 ---@param coordOrigin boolean? `true` for upper left, `false` for lower left, otherwise no change.
 function gl.PointSprite(enable, enableCoordReplace, coordOrigin) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L3976-L3984" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L3976-L3984" target="_blank">source</a>]
 ---
 ---@param atten0 number
 ---@param atten1 number
@@ -898,33 +898,33 @@ function gl.PointSprite(enable, enableCoordReplace, coordOrigin) end
 ---@param sizeFade number?
 function gl.PointParameter(atten0, atten1, atten2, sizeMin, sizeMax, sizeFade) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4012-L4017" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4012-L4017" target="_blank">source</a>]
 ---
 ---@param texNum integer
 ---@param enable boolean?
 ---@return boolean
 function gl.Texture(texNum, enable) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4018-L4022" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4018-L4022" target="_blank">source</a>]
 ---
 ---@param enable boolean
 ---@return boolean
 function gl.Texture(enable) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4023-L4028" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4023-L4028" target="_blank">source</a>]
 ---
 ---@param texNum integer
 ---@param image string
 ---@return boolean
 function gl.Texture(texNum, image) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4029-L4033" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4029-L4033" target="_blank">source</a>]
 ---
 ---@param image string
 ---@return boolean
 function gl.Texture(image) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4109-L4121" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4109-L4121" target="_blank">source</a>]
 ---
 ---@class Texture
 ---@field target GL?
@@ -939,7 +939,7 @@ function gl.Texture(image) end
 ---@field aniso number?
 local Texture = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4162-L4168" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4162-L4168" target="_blank">source</a>]
 ---
 ---@param xsize integer
 ---@param ysize integer
@@ -947,7 +947,7 @@ local Texture = {}
 ---@return string? texName
 function gl.CreateTexture(xsize, ysize, texture) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4169-L4176" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4169-L4176" target="_blank">source</a>]
 ---
 ---@param xsize integer
 ---@param ysize integer
@@ -956,25 +956,25 @@ function gl.CreateTexture(xsize, ysize, texture) end
 ---@return string? texName
 function gl.CreateTexture(xsize, ysize, zsize, texture) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4244-L4248" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4244-L4248" target="_blank">source</a>]
 ---
 ---@param texName string
 ---@param params Texture
 function gl.ChangeTextureParams(texName, params) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4275-L4279" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4275-L4279" target="_blank">source</a>]
 ---
 ---@param texName string
 ---@return boolean
 function gl.DeleteTexture(texName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4296-L4300" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4296-L4300" target="_blank">source</a>]
 ---
 ---@param texName string
 ---@return boolean
 function gl.DeleteTextureFBO(texName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4312-L4319" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4312-L4319" target="_blank">source</a>]
 ---
 ---@class TextureInfo
 ---@field xsize integer
@@ -984,13 +984,13 @@ function gl.DeleteTextureFBO(texName) end
 ---@field target GL
 local TextureInfo = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4321-L4325" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4321-L4325" target="_blank">source</a>]
 ---
 ---@param texName string
 ---@return TextureInfo textureInfo
 function gl.TextureInfo(texName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4347-L4358" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4347-L4358" target="_blank">source</a>]
 ---
 ---@param texName string
 ---@param xoff integer
@@ -1003,33 +1003,33 @@ function gl.TextureInfo(texName) end
 ---@param level GL?
 function gl.CopyToTexture(texName, xoff, yoff, x, y, w, h, target, level) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4395-L4400" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4395-L4400" target="_blank">source</a>]
 ---
 ---@param texName string
 ---@param fun (...) function
 ---@param ... any Arguments to the function.
 function gl.RenderToTexture(texName, fun, ...) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4449-L4452" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4449-L4452" target="_blank">source</a>]
 ---
 ---@param texName string
 function gl.GenerateMipmap(texName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4474-L4479" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4474-L4479" target="_blank">source</a>]
 ---
 ---@param texNum integer
 ---@param func function
 ---@param ... any Arguments to the function.
 function gl.ActiveTexture(texNum, func, ...) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4508-L4513" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4508-L4513" target="_blank">source</a>]
 ---
 ---@param target GL
 ---@param pname GL
 ---@param value number
 function gl.TextEnv(target, pname, value) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4514-L4522" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4514-L4522" target="_blank">source</a>]
 ---
 ---@param target GL
 ---@param pname GL
@@ -1039,7 +1039,7 @@ function gl.TextEnv(target, pname, value) end
 ---@param a number? (Default: `0.0`)
 function gl.TextEnv(target, pname, r, g, b, a) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4552-L4558" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4552-L4558" target="_blank">source</a>]
 ---
 ---@param texNum integer
 ---@param target GL
@@ -1047,7 +1047,7 @@ function gl.TextEnv(target, pname, r, g, b, a) end
 ---@param value number
 function gl.MultiTexEnv(texNum, target, pname, value) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4559-L4568" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4559-L4568" target="_blank">source</a>]
 ---
 ---@param texNum integer
 ---@param target GL
@@ -1058,20 +1058,20 @@ function gl.MultiTexEnv(texNum, target, pname, value) end
 ---@param a number? (Default: `0.0`)
 function gl.MultiTexEnv(texNum, target, pname, r, g, b, a) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4619-L4623" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4619-L4623" target="_blank">source</a>]
 ---
 ---@param target GL
 ---@param state boolean
 function gl.TexGen(target, state) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4624-L4629" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4624-L4629" target="_blank">source</a>]
 ---
 ---@param target GL
 ---@param pname GL
 ---@param value number
 function gl.TexGen(target, pname, value) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4630-L4638" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4630-L4638" target="_blank">source</a>]
 ---
 ---@param target GL
 ---@param pname GL
@@ -1081,14 +1081,14 @@ function gl.TexGen(target, pname, value) end
 ---@param a number? (Default: `0.0`)
 function gl.TexGen(target, pname, r, g, b, a) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4677-L4682" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4677-L4682" target="_blank">source</a>]
 ---
 ---@param texNum integer
 ---@param target GL
 ---@param state boolean
 function gl.MultiTexGen(texNum, target, state) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4683-L4689" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4683-L4689" target="_blank">source</a>]
 ---
 ---@param texNum integer
 ---@param target GL
@@ -1096,7 +1096,7 @@ function gl.MultiTexGen(texNum, target, state) end
 ---@param value number
 function gl.MultiTexGen(texNum, target, pname, value) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4690-L4699" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4690-L4699" target="_blank">source</a>]
 ---
 ---@param texNum integer
 ---@param target GL
@@ -1107,7 +1107,7 @@ function gl.MultiTexGen(texNum, target, pname, value) end
 ---@param a number? (Default: `0.0`)
 function gl.MultiTexGen(texNum, target, pname, r, g, b, a) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4748-L4756" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4748-L4756" target="_blank">source</a>]
 ---
 ---@param unit integer
 ---@param texID string?
@@ -1117,7 +1117,7 @@ function gl.MultiTexGen(texNum, target, pname, r, g, b, a) end
 ---@param format integer?
 function gl.BindImageTexture(unit, texID, level, layer, access, format) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4868-L4874" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4868-L4874" target="_blank">source</a>]
 ---
 ---@param xsize integer
 ---@param ysize integer
@@ -1125,25 +1125,25 @@ function gl.BindImageTexture(unit, texID, level, layer, access, format) end
 ---@return string texName
 function gl.CreateTextureAtlas(xsize, ysize, allocType) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4899-L4903" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4899-L4903" target="_blank">source</a>]
 ---
 ---@param texName string
 ---@return boolean
 function gl.FinalizeTextureAtlas(texName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4919-L4923" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4919-L4923" target="_blank">source</a>]
 ---
 ---@param texName string
 ---@return boolean
 function gl.DeleteTextureAtlas(texName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4935-L4939" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4935-L4939" target="_blank">source</a>]
 ---
 ---@param texName string
 ---@param subAtlasTexName string
 function gl.AddAtlasTexture(texName, subAtlasTexName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L4986-L4994" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L4986-L4994" target="_blank">source</a>]
 ---
 ---@param texName string
 ---@param subAtlasTexName string
@@ -1153,19 +1153,19 @@ function gl.AddAtlasTexture(texName, subAtlasTexName) end
 ---@return number y2
 function gl.GetAtlasTexture(texName, subAtlasTexName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5019-L5023" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5019-L5023" target="_blank">source</a>]
 ---
 ---@param atlasName "$explosions"|"$groundfx"
 ---@return table<string, float4> atlasTextures Table of x1,x2,y1,y2 coordinates by texture name.
 function gl.GetEngineAtlasTextures(atlasName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5073-L5077" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5073-L5077" target="_blank">source</a>]
 ---
 ---@param bits GL `GL.DEPTH_BUFFER_BIT` or `GL.STENCIL_BUFFER_BIT`.
 ---@param val number
 function gl.Clear(bits, val) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5078-L5085" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5078-L5085" target="_blank">source</a>]
 ---
 ---@param bits GL `GL.COLOR_BUFFER_BIT` or `GL.ACCUM_BUFFER_BIT`.
 ---@param r number
@@ -1174,24 +1174,24 @@ function gl.Clear(bits, val) end
 ---@param a number
 function gl.Clear(bits, r, g, b, a) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5124-L5126" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5124-L5126" target="_blank">source</a>]
 function gl.SwapBuffers() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5141-L5146" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5141-L5146" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
 ---@param z number
 function gl.Translate(x, y, z) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5159-L5164" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5159-L5164" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
 ---@param z number
 function gl.Scale(x, y, z) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5177-L5183" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5177-L5183" target="_blank">source</a>]
 ---
 ---@param r number
 ---@param x number
@@ -1199,7 +1199,7 @@ function gl.Scale(x, y, z) end
 ---@param z number
 function gl.Rotate(r, x, y, z) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5197-L5205" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5197-L5205" target="_blank">source</a>]
 ---
 ---@param left number
 ---@param right number
@@ -1209,7 +1209,7 @@ function gl.Rotate(r, x, y, z) end
 ---@param far number
 function gl.Ortho(left, right, bottom, top, near, far) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5221-L5229" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5221-L5229" target="_blank">source</a>]
 ---
 ---@param left number
 ---@param right number
@@ -1219,23 +1219,23 @@ function gl.Ortho(left, right, bottom, top, near, far) end
 ---@param far number
 function gl.Frustum(left, right, bottom, top, near, far) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5245-L5247" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5245-L5247" target="_blank">source</a>]
 function gl.Billboard() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5259-L5263" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5259-L5263" target="_blank">source</a>]
 ---
 ---@param light integer
 ---@param enable boolean
 function gl.Light(light, enable) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5264-L5269" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5264-L5269" target="_blank">source</a>]
 ---
 ---@param light integer
 ---@param pname GL
 ---@param param GL
 function gl.Light(light, pname, param) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5270-L5278" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5270-L5278" target="_blank">source</a>]
 ---
 ---@param light integer
 ---@param pname GL
@@ -1245,13 +1245,13 @@ function gl.Light(light, pname, param) end
 ---@param a number?
 function gl.Light(light, pname, r, g, b, a) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5329-L5333" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5329-L5333" target="_blank">source</a>]
 ---
 ---@param plane integer
 ---@param enable boolean
 function gl.ClipPlane(plane, enable) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5334-L5341" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5334-L5341" target="_blank">source</a>]
 ---
 ---@param plane integer
 ---@param equation0 number
@@ -1260,21 +1260,21 @@ function gl.ClipPlane(plane, enable) end
 ---@param equation3 number
 function gl.ClipPlane(plane, equation0, equation1, equation2, equation3) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5371-L5375" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5371-L5375" target="_blank">source</a>]
 ---
 ---@param clipId integer
 ---@param enable boolean
 function gl.ClipDistance(clipId, enable) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5404-L5407" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5404-L5407" target="_blank">source</a>]
 ---
 ---@param mode GL
 function gl.MatrixMode(mode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5420-L5422" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5420-L5422" target="_blank">source</a>]
 function gl.LoadIdentity() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5437-L5455" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5437-L5455" target="_blank">source</a>]
 ---
 ---@class Matrix4x4
 ---@field [1] number Element at [1,1]
@@ -1295,17 +1295,17 @@ function gl.LoadIdentity() end
 ---@field [16] number Element at [4,4]
 local Matrix4x4 = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5457-L5460" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5457-L5460" target="_blank">source</a>]
 ---
 ---@param matrix string
 function gl.LoadMatrix(matrix) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5461-L5464" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5461-L5464" target="_blank">source</a>]
 ---
 ---@param matrix Matrix4x4
 function gl.LoadMatrix(matrix) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5465-L5483" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5465-L5483" target="_blank">source</a>]
 ---
 ---@return number m11
 ---@return number m12
@@ -1325,17 +1325,17 @@ function gl.LoadMatrix(matrix) end
 ---@return number m44
 function gl.LoadMatrix() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5516-L5519" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5516-L5519" target="_blank">source</a>]
 ---
 ---@param matrixName string
 function gl.MultMatrix(matrixName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5520-L5523" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5520-L5523" target="_blank">source</a>]
 ---
 ---@param matrix Matrix4x4
 function gl.MultMatrix(matrix) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5524-L5542" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5524-L5542" target="_blank">source</a>]
 ---
 ---@param m11 number
 ---@param m12 number
@@ -1355,20 +1355,20 @@ function gl.MultMatrix(matrix) end
 ---@param m44 number
 function gl.MultMatrix(m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5575-L5577" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5575-L5577" target="_blank">source</a>]
 function gl.PushMatrix() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5596-L5598" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5596-L5598" target="_blank">source</a>]
 function gl.PopMatrix() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5616-L5621" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5616-L5621" target="_blank">source</a>]
 ---
 ---@param matMode1 GL
 ---@param func fun()
 ---@param ... any Arguments to the function.
 function gl.PushPopMatrix(matMode1, func, ...) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5622-L5626" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5622-L5626" target="_blank">source</a>]
 ---
 ---@param func fun()
 ---@param ... any Arguments to the function.
@@ -1376,47 +1376,47 @@ function gl.PushPopMatrix(func, ...) end
 
 ---Get value at index of matrix.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5674-L5681" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5674-L5681" target="_blank">source</a>]
 ---
 ---@param type GL Matrix type (`GL.PROJECTION`, `GL.MODELVIEW`, `GL.TEXTURE`).
 ---@param index integer Matrix index in range `[1, 16]`.
 ---@return number The value.
 function gl.GetMatrixData(type, index) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5682-L5686" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5682-L5686" target="_blank">source</a>]
 ---
 ---@param type GL Matrix type (`GL.PROJECTION`, `GL.MODELVIEW`, `GL.TEXTURE`).
 ---@return Matrix4x4 The matrix.
 function gl.GetMatrixData(type) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5687-L5691" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5687-L5691" target="_blank">source</a>]
 ---
 ---@param index integer Matrix index in range `[1, 16]`.
 ---@return number The value.
 function gl.GetMatrixData(index) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5692-L5696" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5692-L5696" target="_blank">source</a>]
 ---
 ---@param name MatrixName The matrix name.
 ---@return Matrix4x4 The matrix.
 function gl.GetMatrixData(name) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5759-L5762" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5759-L5762" target="_blank">source</a>]
 ---
 ---@param mask GL? (Default: `GL.ALL_ATTRIB_BITS`)
 function gl.PushAttrib(mask) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5776-L5778" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5776-L5778" target="_blank">source</a>]
 function gl.PopAttrib() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5787-L5792" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5787-L5792" target="_blank">source</a>]
 ---
 ---@param state GL
 ---@param func fun()
 ---@param ... any Arguments to the function.
 function gl.UnsafeState(state, func, ...) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5793-L5799" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5793-L5799" target="_blank">source</a>]
 ---
 ---@param state GL
 ---@param reverse boolean
@@ -1424,7 +1424,7 @@ function gl.UnsafeState(state, func, ...) end
 ---@param ... any Arguments to the function.
 function gl.UnsafeState(state, reverse, func, ...) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L5826-L5832" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L5826-L5832" target="_blank">source</a>]
 ---
 ---@param param string
 ---@param toStr boolean? (Default: `false`)
@@ -1432,31 +1432,31 @@ function gl.UnsafeState(state, reverse, func, ...) end
 ---@return any ... values
 function gl.GetFixedState(param, toStr) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6103-L6107" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6103-L6107" target="_blank">source</a>]
 ---
 ---@param func fun()
 ---@param ... any Arguments to the function.
 function gl.CreateList(func, ...) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6155-L6158" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6155-L6158" target="_blank">source</a>]
 ---
 ---@param listIndex integer
 function gl.CallList(listIndex) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6179-L6182" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6179-L6182" target="_blank">source</a>]
 ---
 ---@param listIndex integer
 function gl.DeleteList(listIndex) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6202-L6204" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6202-L6204" target="_blank">source</a>]
 function gl.Flush() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6213-L6215" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6213-L6215" target="_blank">source</a>]
 function gl.Finish() end
 
 ---Get single pixel.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6271-L6280" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6271-L6280" target="_blank">source</a>]
 ---
 ---@param x integer
 ---@param y integer
@@ -1468,7 +1468,7 @@ function gl.ReadPixels(x, y, w, h, format) end
 
 ---Get column of pixels.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6281-L6290" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6281-L6290" target="_blank">source</a>]
 ---
 ---@param x integer
 ---@param y integer
@@ -1480,7 +1480,7 @@ function gl.ReadPixels(x, y, w, h, format) end
 
 ---Get row of pixels.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6291-L6300" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6291-L6300" target="_blank">source</a>]
 ---
 ---@param x integer
 ---@param y integer
@@ -1492,7 +1492,7 @@ function gl.ReadPixels(x, y, w, h, format) end
 
 ---Get row of pixels.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6301-L6310" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6301-L6310" target="_blank">source</a>]
 ---
 ---@param x integer
 ---@param y integer
@@ -1502,7 +1502,7 @@ function gl.ReadPixels(x, y, w, h, format) end
 ---@return number[][][] Array of columns of color values (color size based on format).
 function gl.ReadPixels(x, y, w, h, format) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6382-L6388" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6382-L6388" target="_blank">source</a>]
 ---
 ---@class SaveImageOptions
 ---@field alpha boolean (Default: `false`)
@@ -1511,7 +1511,7 @@ function gl.ReadPixels(x, y, w, h, format) end
 ---@field readbuffer GL (Default: current read buffer)
 local SaveImageOptions = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6390-L6399" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6390-L6399" target="_blank">source</a>]
 ---
 ---@param x integer
 ---@param y integer
@@ -1522,33 +1522,33 @@ local SaveImageOptions = {}
 ---@return boolean? success
 function gl.SaveImage(x, y, width, height, filename, options) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6473-L6476" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6473-L6476" target="_blank">source</a>]
 ---
 ---@return any query
 function gl.CreateQuery() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6497-L6500" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6497-L6500" target="_blank">source</a>]
 ---
 ---@param query any
 function gl.DeleteQuery(query) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6524-L6527" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6524-L6527" target="_blank">source</a>]
 ---
 ---@param query any
 function gl.RunQuery(query) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6564-L6568" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6564-L6568" target="_blank">source</a>]
 ---
 ---@param query any
 ---@return integer count
 function gl.GetQuery(query) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6591-L6594" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6591-L6594" target="_blank">source</a>]
 ---
 ---@return string[] List of texture names.
 function gl.GetGlobalTexNames() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6610-L6616" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6610-L6616" target="_blank">source</a>]
 ---
 ---@return number xstart
 ---@return number ystart
@@ -1556,7 +1556,7 @@ function gl.GetGlobalTexNames() end
 ---@return number yend
 function gl.GetGlobalTexCoords() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6633-L6639" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6633-L6639" target="_blank">source</a>]
 ---
 ---@return number x
 ---@return number y
@@ -1564,27 +1564,27 @@ function gl.GetGlobalTexCoords() end
 ---@return number w
 function gl.GetShadowMapParams() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6649-L6654" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6649-L6654" target="_blank">source</a>]
 ---
 ---@return number lightDirX
 ---@return number lightDirY
 ---@return number lightDirZ
 function gl.GetAtmosphere() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6655-L6659" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6655-L6659" target="_blank">source</a>]
 ---
 ---@param param "fogStart"|"fogEnd"|"pos"|"fogColor"|"skyColor"|"sunColor"|"cloudColor"|"skyAxisAngle"
 ---@return any ...
 function gl.GetAtmosphere(param) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6712-L6717" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6712-L6717" target="_blank">source</a>]
 ---
 ---@return number lightDirX
 ---@return number lightDirY
 ---@return number lightDirZ
 function gl.GetSun() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6718-L6725" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6718-L6725" target="_blank">source</a>]
 ---
 ---@param param "pos"|"dir"|"specularExponent"|"shadowDensity"|"diffuse"|"ambient"|"specular"
 ---@param mode "ground"|"unit" (Default: `"ground"`)
@@ -1593,13 +1593,13 @@ function gl.GetSun() end
 ---@return number? data3
 function gl.GetSun(param, mode) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6791-L6795" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6791-L6795" target="_blank">source</a>]
 ---
 ---@param key string
 ---@return any ... value
 function gl.GetWaterRendering(key) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L6973-L6977" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L6973-L6977" target="_blank">source</a>]
 ---
 ---@param key string
 ---@return any ... value
@@ -1607,7 +1607,7 @@ function gl.GetMapRendering(key) end
 
 ---Labels an object for use with debugging tools.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L7017-L7023" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L7017-L7023" target="_blank">source</a>]
 ---
 ---@param objectTypeIdentifier GL Specifies the type of object being labeled.
 ---@param objectID integer Specifies the name or ID of the object to label.
@@ -1617,7 +1617,7 @@ function gl.ObjectLabel(objectTypeIdentifier, objectID, label) end
 ---Pushes a debug marker for nVidia nSight 2024.04, does not seem to work when
 ---FBO's are raw bound.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L7053-L7062" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L7053-L7062" target="_blank">source</a>]
 ---
 ---@param id integer A numeric identifier for the group.
 ---@param message string A human-readable string describing the debug group.
@@ -1625,7 +1625,7 @@ function gl.ObjectLabel(objectTypeIdentifier, objectID, label) end
 ---@return nil
 function gl.PushDebugGroup(id, message, sourceIsThirdParty) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/efd0d66b2116d12271ab8fb25e09ea11c07488be/rts/Lua/LuaOpenGL.cpp#L7084-L7087" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/0b74f9f72bffb37cde61d76ec31c5381e813e316/rts/Lua/LuaOpenGL.cpp#L7084-L7087" target="_blank">source</a>]
 ---
 ---@return nil
 function gl.PopDebugGroup() end
