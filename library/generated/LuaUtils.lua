@@ -6,7 +6,7 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/e59c1a1c8f41725e3da61dd3e6c0a972e95a67ce/rts/Lua/LuaUtils.cpp#L527-L533" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/87cf867e588130e32d55e72d9d40117397ba3955/rts/Lua/LuaUtils.cpp#L527-L533" target="_blank">source</a>]
 ---
 ---@param minMajorVer integer
 ---@param minMinorVer integer? (Default: `0`)
@@ -16,7 +16,7 @@ function Script.IsEngineMinVersion(minMajorVer, minMinorVer, minCommits) end
 
 ---Facing direction represented by a string or number.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/e59c1a1c8f41725e3da61dd3e6c0a972e95a67ce/rts/Lua/LuaUtils.cpp#L1166-L1184" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/87cf867e588130e32d55e72d9d40117397ba3955/rts/Lua/LuaUtils.cpp#L1166-L1184" target="_blank">source</a>]
 ---
 ---@see FacingInteger
 ---@alias Facing
@@ -37,14 +37,14 @@ function Script.IsEngineMinVersion(minMajorVer, minMinorVer, minCommits) end
 ---
 ---Hint: the default print() writes to STDOUT.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/e59c1a1c8f41725e3da61dd3e6c0a972e95a67ce/rts/Lua/LuaUtils.cpp#L1322-L1332" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/87cf867e588130e32d55e72d9d40117397ba3955/rts/Lua/LuaUtils.cpp#L1322-L1332" target="_blank">source</a>]
 ---
 ---@param arg any
 ---@param ... any
 ---@return nil
 function Spring.Echo(arg, ...) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/e59c1a1c8f41725e3da61dd3e6c0a972e95a67ce/rts/Lua/LuaUtils.cpp#L1339-L1349" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/87cf867e588130e32d55e72d9d40117397ba3955/rts/Lua/LuaUtils.cpp#L1339-L1349" target="_blank">source</a>]
 ---
 ---@enum LOG
 ---@see Spring.Log
@@ -65,7 +65,7 @@ LOG = {
 	FATAL = 60
 }
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/e59c1a1c8f41725e3da61dd3e6c0a972e95a67ce/rts/Lua/LuaUtils.cpp#L1364-L1374" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/87cf867e588130e32d55e72d9d40117397ba3955/rts/Lua/LuaUtils.cpp#L1364-L1374" target="_blank">source</a>]
 ---
 ---@alias LogLevel
 ---| integer
@@ -79,7 +79,7 @@ LOG = {
 
 ---Logs a message to the logfile/console.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/e59c1a1c8f41725e3da61dd3e6c0a972e95a67ce/rts/Lua/LuaUtils.cpp#L1402-L1409" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/87cf867e588130e32d55e72d9d40117397ba3955/rts/Lua/LuaUtils.cpp#L1402-L1409" target="_blank">source</a>]
 ---
 ---@param section string
 ---@param logLevel (LogLevel|LOG)? (Default: `"notice"`)
