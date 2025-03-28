@@ -8,11 +8,11 @@
 
 ---Metal Map Lua API
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c92fd4778b6d04c7e15d114dffa596a593c80aa0/rts/Lua/LuaMetalMap.cpp#L13-L16" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/7956ca9fcba24cb28088d05e5408f5c53951a7a4/rts/Lua/LuaMetalMap.cpp#L13-L16" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaMetalMap.cpp
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/c92fd4778b6d04c7e15d114dffa596a593c80aa0/rts/Lua/LuaMetalMap.cpp#L52-L58" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/7956ca9fcba24cb28088d05e5408f5c53951a7a4/rts/Lua/LuaMetalMap.cpp#L52-L58" target="_blank">source</a>]
 ---
 ---@param x integer in worldspace/16.
 ---@param z integer in worldspace/16.

@@ -8,6 +8,6 @@
 
 ---MoveCtrl
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/c92fd4778b6d04c7e15d114dffa596a593c80aa0/rts/Lua/LuaSyncedMoveCtrl.cpp#L26-L30" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/7956ca9fcba24cb28088d05e5408f5c53951a7a4/rts/Lua/LuaSyncedMoveCtrl.cpp#L26-L30" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaSyncedMoveCtrl.cpp
