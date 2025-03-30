@@ -8,6 +8,419 @@
 
 ---MoveCtrl
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/7956ca9fcba24cb28088d05e5408f5c53951a7a4/rts/Lua/LuaSyncedMoveCtrl.cpp#L26-L30" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L26-L30" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaSyncedMoveCtrl.cpp
+
+---Accessed via `Spring.MoveCtrl`.
+---
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L35-L40" target="_blank">source</a>]
+---
+---@see Spring.MoveCtrl
+---@class MoveCtrl
+local MoveCtrl = {}
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L140-L144" target="_blank">source</a>]
+---
+---@param unitID integer
+---@return boolean? isEnabled
+function MoveCtrl.IsEnabled(unitID) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L157-L160" target="_blank">source</a>]
+---
+---@param unitID integer
+function MoveCtrl.Enable(unitID) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L173-L176" target="_blank">source</a>]
+---
+---@param unitID integer
+function MoveCtrl.Disable(unitID) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L191-L195" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param tag integer
+function MoveCtrl.SetTag(unitID, tag) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L208-L211" target="_blank">source</a>]
+---
+---@param tag integer?
+function MoveCtrl.GetTag(tag) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L228-L238" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param state
+---| 0 # Done
+---| 1 # Active
+---| 2 # Failed
+---| "done"
+---| "active"
+---| "failed"
+function MoveCtrl.SetProgressState(unitID, state) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L278-L282" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param extrapolate boolean
+function MoveCtrl.SetExtrapolate(unitID, extrapolate) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L297-L309" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param posX number Position X component.
+---@param posY number Position Y component.
+---@param posZ number Position Z component.
+---@param velX number Velocity X component.
+---@param velY number Velocity Y component.
+---@param velZ number Velocity Z component.
+---@param rotX number Rotation X component.
+---@param rotY number Rotation Y component.
+---@param rotZ number Rotation Z component.
+function MoveCtrl.SetPhysics(unitID, posX, posY, posZ, velX, velY, velZ, rotX, rotY, rotZ) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L328-L334" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param posX number Position X component.
+---@param posY number Position Y component.
+---@param posZ number Position Z component.
+function MoveCtrl.SetPosition(unitID, posX, posY, posZ) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L351-L357" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param velX number Velocity X component.
+---@param velY number Velocity Y component.
+---@param velZ number Velocity Z component.
+function MoveCtrl.SetVelocity(unitID, velX, velY, velZ) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L374-L380" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param relVelX number Relative velocity X component.
+---@param relVelY number Relative velocity Y component.
+---@param relVelZ number Relative velocity Z component.
+function MoveCtrl.SetRelativeVelocity(unitID, relVelX, relVelY, relVelZ) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L397-L403" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param rotX number Rotation X component.
+---@param rotY number Rotation Y component.
+---@param rotZ number Rotation Z component.
+function MoveCtrl.SetRotation(unitID, rotX, rotY, rotZ) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L420-L423" target="_blank">source</a>]
+---
+---@deprecated
+function MoveCtrl.SetRotationOffset() end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L431-L437" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param rotVelX number Rotation velocity X component.
+---@param rotVelY number Rotation velocity Y component.
+---@param rotVelZ number Rotation velocity Z component.
+function MoveCtrl.SetRotationVelocity(unitID, rotVelX, rotVelY, rotVelZ) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L453-L457" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param heading Heading
+function MoveCtrl.SetHeading(unitID, heading) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L474-L478" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param trackSlope boolean
+function MoveCtrl.SetTrackSlope(unitID, trackSlope) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L491-L495" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param trackGround boolean
+function MoveCtrl.SetTrackGround(unitID, trackGround) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L508-L512" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param trackLimits boolean
+function MoveCtrl.SetTrackLimits(unitID, trackLimits) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L525-L529" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param groundOffset number
+function MoveCtrl.SetGroundOffset(unitID, groundOffset) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L542-L546" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param gravityFactor number
+function MoveCtrl.SetGravity(unitID, gravityFactor) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L559-L563" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param drag number
+function MoveCtrl.SetDrag(unitID, drag) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L576-L580" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param windFactor number
+function MoveCtrl.SetWindFactor(unitID, windFactor) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L593-L602" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param minX number Minimum position X component.
+---@param minY number Minimum position Y component.
+---@param minZ number Minimum position Z component.
+---@param maxX number Maximum position X component.
+---@param maxY number Maximum position Y component.
+---@param maxZ number Maximum position Z component.
+function MoveCtrl.SetLimits(unitID, minX, minY, minZ, maxX, maxY, maxZ) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L618-L622" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param noBlocking boolean
+function MoveCtrl.SetNoBlocking(unitID, noBlocking) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L641-L645" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param collideStop boolean
+function MoveCtrl.SetCollideStop(unitID, collideStop) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L658-L662" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param limitsStop boolean
+function MoveCtrl.SetLimitsStop(unitID, limitsStop) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L697-L703" target="_blank">source</a>]
+---
+---@alias GenericMoveTypeNumberKey
+---| "maxSpeed"
+---| "maxWantedSpeed"
+---| "maneuverLeash"
+---| "waterline"
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L705-L709" target="_blank">source</a>]
+---
+---@alias GenericMoveTypeBooleanKey
+---| "useWantedSpeed[0]" # Use wanted speed for individual orders.
+---| "useWantedSpeed[1]" # Use wanted speed for formation orders.
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L711-L719" target="_blank">source</a>]
+---
+---@class GenericMoveType
+---@field maxSpeed number?
+---@field maxWantedSpeed number?
+---@field maneuverLeash number?
+---@field waterline number?
+---@field ["useWantedSpeed[0]"] boolean? # Use wanted speed for individual orders.
+---@field ["useWantedSpeed[1]"] boolean? # Use wanted speed for formation orders.
+local GenericMoveType = {}
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L778-L793" target="_blank">source</a>]
+---
+---@class HoverAirMoveType : GenericMoveType
+---@field collide boolean?
+---@field dontLand boolean?
+---@field airStrafe boolean?
+---@field useSmoothMesh boolean?
+---@field bankingAllowed boolean?
+---@field wantedHeight number?
+---@field accRate number?
+---@field decRate number?
+---@field turnRate number?
+---@field altitudeRate number?
+---@field currentBank number?
+---@field currentPitch number?
+---@field maxDrift number?
+local HoverAirMoveType = {}
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L795-L800" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param moveType HoverAirMoveType
+---@return number numAssignedValues
+function MoveCtrl.SetGunshipMoveTypeData(unitID, moveType) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L801-L813" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param key
+---| GenericMoveTypeBooleanKey
+---| "collide"
+---| "dontLand"
+---| "airStrafe"
+---| "useSmoothMesh"
+---| "bankingAllowed"
+---@param value boolean
+---@return number numAssignedValues
+function MoveCtrl.SetGunshipMoveTypeData(unitID, key, value) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L814-L829" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param key
+---| GenericMoveTypeNumberKey
+---| "wantedHeight"
+---| "accRate"
+---| "decRate"
+---| "turnRate"
+---| "altitudeRate"
+---| "currentBank"
+---| "currentPitch"
+---| "maxDrift"
+---@param value number
+---@return number numAssignedValues
+function MoveCtrl.SetGunshipMoveTypeData(unitID, key, value) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L835-L854" target="_blank">source</a>]
+---
+---@class StrafeAirMoveType : GenericMoveType
+---@field collide boolean?
+---@field useSmoothMesh boolean?
+---@field loopbackAttack boolean?
+---@field maneuverBlockTime integer?
+---@field wantedHeight number?
+---@field turnRadius number?
+---@field accRate number?
+---@field decRate number?
+---@field maxAcc number? Synonym for `accRate`.
+---@field maxDec number? Synonym for `decRate`.
+---@field maxBank number?
+---@field maxPitch number?
+---@field maxAileron number?
+---@field maxElevator number?
+---@field maxRudder number?
+---@field attackSafetyDistance number?
+---@field myGravity number?
+local StrafeAirMoveType = {}
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L856-L861" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param moveType StrafeAirMoveType
+---@return number numAssignedValues
+function MoveCtrl.SetAirMoveTypeData(unitID, moveType) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L862-L872" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param key
+---| GenericMoveTypeBooleanKey
+---| "collide"
+---| "useSmoothMesh"
+---| "loopbackAttack"
+---@param value boolean
+---@return number numAssignedValues
+function MoveCtrl.SetAirMoveTypeData(unitID, key, value) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L873-L893" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param key
+---| GenericMoveTypeNumberKey
+---| "wantedHeight"
+---| "turnRadius"
+---| "accRate"
+---| "decRate"
+---| "maxAcc" # Synonym for `accRate`.
+---| "maxDec" # Synonym for `decRate`.
+---| "maxBank"
+---| "maxPitch"
+---| "maxAileron"
+---| "maxElevator"
+---| "maxRudder"
+---| "attackSafetyDistance"
+---| "myGravity"
+---@param value number
+---@return number numAssignedValues
+function MoveCtrl.SetAirMoveTypeData(unitID, key, value) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L894-L901" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param key
+---| "maneuverBlockTime"
+---@param value integer
+---@return number numAssignedValues
+function MoveCtrl.SetAirMoveTypeData(unitID, key, value) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L907-L922" target="_blank">source</a>]
+---
+---@class GroundMoveType : GenericMoveType
+---@field atGoal boolean?
+---@field atEndOfPath boolean?
+---@field pushResistant boolean?
+---@field minScriptChangeHeading integer?
+---@field turnRate number?
+---@field turnAccel number?
+---@field accRate number?
+---@field decRate number?
+---@field myGravity number?
+---@field maxReverseDist number?
+---@field minReverseAngle number?
+---@field maxReverseSpeed number?
+---@field sqSkidSpeedMult number?
+local GroundMoveType = {}
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L924-L929" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param moveType GroundMoveType
+---@return number numAssignedValues
+function MoveCtrl.SetGroundMoveTypeData(unitID, moveType) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L930-L940" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param key
+---| GenericMoveTypeBooleanKey
+---| "atGoal"
+---| "atEndOfPath"
+---| "pushResistant"
+---@param value boolean
+---@return number numAssignedValues
+function MoveCtrl.SetGroundMoveTypeData(unitID, key, value) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L941-L957" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param key
+---| GenericMoveTypeNumberKey
+---| "turnRate"
+---| "turnAccel"
+---| "accRate"
+---| "decRate"
+---| "myGravity"
+---| "maxReverseDist"
+---| "minReverseAngle"
+---| "maxReverseSpeed"
+---| "sqSkidSpeedMult"
+---@param value number
+---@return number numAssignedValues
+function MoveCtrl.SetGroundMoveTypeData(unitID, key, value) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L958-L965" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param key
+---| "minScriptChangeHeading"
+---@param value integer
+---@return number numAssignedValues
+function MoveCtrl.SetGroundMoveTypeData(unitID, key, value) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedMoveCtrl.cpp#L976-L981" target="_blank">source</a>]
+---
+---@param unitID integer
+---@param moveDef integer|string Name or path type of the MoveDef.
+---@return boolean success `true` if the `MoveDef` was set, `false` if `unitID` or `moveDef` were invalid, or if the unit does not support a `MoveDef`.
+function MoveCtrl.SetMoveDef(unitID, moveDef) end

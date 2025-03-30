@@ -8,13 +8,13 @@
 
 ---Platform constants
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/7956ca9fcba24cb28088d05e5408f5c53951a7a4/rts/Lua/LuaConstPlatform.cpp#L10-L13" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaConstPlatform.cpp#L10-L13" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaConstPlatform.cpp
 
 ---Platform specific information
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/7956ca9fcba24cb28088d05e5408f5c53951a7a4/rts/Lua/LuaConstPlatform.cpp#L15-L44" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaConstPlatform.cpp#L15-L44" target="_blank">source</a>]
 Platform = {
 	---Full GPU device name
 	---

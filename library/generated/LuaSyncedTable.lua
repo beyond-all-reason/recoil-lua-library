@@ -12,7 +12,7 @@
 ---and build the table in parallel
 ---
 ---Unsynced code can read from the synced global table (`_G`) using the `SYNCED`
----proxy table. e.g. `_G.foo` can be access from unsynced vai `SYNCED.foo`.
+---proxy table. e.g. `_G.foo` can be access from unsynced via `SYNCED.foo`.
 ---
 ---This table makes *a copy* of the object on the other side, and only copies
 ---numbers, strings, bools and tables (recursively but with the type
@@ -21,6 +21,6 @@
 ---Note that this makes a copy on each access, so is very slow and will not
 ---reflect changes. Cache it, but remember to refresh.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/7956ca9fcba24cb28088d05e5408f5c53951a7a4/rts/Lua/LuaSyncedTable.cpp#L73-L91" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaSyncedTable.cpp#L73-L91" target="_blank">source</a>]
 ---@type table<string, any>
 SYNCED = nil

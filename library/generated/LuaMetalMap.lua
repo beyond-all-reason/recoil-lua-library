@@ -8,14 +8,38 @@
 
 ---Metal Map Lua API
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/7956ca9fcba24cb28088d05e5408f5c53951a7a4/rts/Lua/LuaMetalMap.cpp#L13-L16" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaMetalMap.cpp#L13-L16" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaMetalMap.cpp
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/7956ca9fcba24cb28088d05e5408f5c53951a7a4/rts/Lua/LuaMetalMap.cpp#L52-L58" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaMetalMap.cpp#L34-L38" target="_blank">source</a>]
 ---
----@param x integer in worldspace/16.
----@param z integer in worldspace/16.
+---@return integer x X coordinate in worldspace/16.
+---@return integer y Y coordinate in worldspace/16.
+function Spring.GetMetalMapSize() end
+
+---Returns the amount of metal on a single square.
+---
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaMetalMap.cpp#L47-L53" target="_blank">source</a>]
+---
+---@param x integer X coordinate in worldspace/16.
+---@param y integer Y coordinate in worldspace/16.
+---@return number amount
+function Spring.GetMetalAmount(x, y) end
+
+---Sets the amount of metal on a single square.
+---
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaMetalMap.cpp#L64-L71" target="_blank">source</a>]
+---
+---@param x integer X cooridnate in worldspace/16.
+---@param z integer Y coordinate in worldspace/16.
 ---@param metalAmount number must be between 0 and 255*maxMetal (with maxMetal from the .smd or mapinfo.lua).
 ---@return nil
 function Spring.SetMetalAmount(x, z, metalAmount) end
+
+---[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaMetalMap.cpp#L83-L88" target="_blank">source</a>]
+---
+---@param x integer X coordinate in worldspace/16.
+---@param y integer Y coordinate in worldspace/16.
+---@return integer extraction
+function Spring.GetMetalExtraction(x, y) end
