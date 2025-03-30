@@ -19,7 +19,7 @@
 ---Note the callin won't be executed at the time of calling this method,
 ---but later, on the Update cycle (before other Update and Draw callins).
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaFonts.cpp#L210-L226" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaFonts.cpp#L210-L226" target="_blank">source</a>]
 ---
 ---@param filePath string VFS path to the file, for example "fonts/myfont.ttf". Uses VFS.RAW_FIRST access mode.
 ---@return boolean success
@@ -30,7 +30,7 @@ function gl.AddFallbackFont(filePath) end
 ---See the note at 'AddFallbackFont' about the 'FontsChanged' callin,
 ---it also applies when calling this method.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/51b91ad522c720699782a00a4e492db0251a4039/rts/Lua/LuaFonts.cpp#L238-L245" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaFonts.cpp#L238-L245" target="_blank">source</a>]
 ---
 ---@return nil
 function gl.ClearFallbackFonts() end
