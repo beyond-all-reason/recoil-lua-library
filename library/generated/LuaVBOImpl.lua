@@ -8,19 +8,19 @@
 
 ---Vertex Buffer Object
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L35-L41" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L35-L41" target="_blank">source</a>]
 ---
 ---@class VBO
 ---@see LuaVBO.GetVBO
 ---@see rts/Lua/LuaVBOImpl.cpp
 local VBO = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L109-L113" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L109-L113" target="_blank">source</a>]
 ---
 ---@return nil
 function VBO:Delete() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L459-L468" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L459-L468" target="_blank">source</a>]
 ---
 ---@alias VBODataType
 ---| GL.BYTE
@@ -31,7 +31,7 @@ function VBO:Delete() end
 ---| GL.UNSIGNED_INT
 ---| GL.FLOAT
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L470-L497" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L470-L497" target="_blank">source</a>]
 ---
 ---@class VBOAttributeDef
 ---@field id integer The location in the vertex shader layout e.g.: layout (location = 0) in vec2
@@ -79,7 +79,7 @@ local VBOAttributeDef = {}
 ---This is important for when you call `VBO:Upload`, you need to make sure you
 ---enter your data into the Lua array correctly.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L500-L538" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L500-L538" target="_blank">source</a>]
 ---
 ---@param size number The maximum number of elements this VBO can have.
 ---@param attribs number|VBOAttributeDef[]
@@ -92,47 +92,36 @@ local VBOAttributeDef = {}
 ---@see VBO:Upload
 function VBO:Define(size, attribs) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L586-L592" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L586-L592" target="_blank">source</a>]
 ---
 ---@return number elementsCount
 ---@return number bufferSizeInBytes
 ---@return number size
 function VBO:GetBufferSize() end
 
----Uploads the data (array of floats) into the VBO
+---Uploads data into the VBO.
 ---
----```lua
----vbo:Upload(posArray, 0, 1)
------ 0 is offset into vbo (on GPU) in this case no offset
------ 1 is lua index index into the Lua table, in this case it's same as default
------ Upload will upload from luaOffset to end of lua array
----```
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L603-L624" target="_blank">source</a>]
 ---
----```lua
----
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L603-L635" target="_blank">source</a>]
----
----@usage rectInstanceVBO:Upload({1},0)
----```
----@param vboData number[] a lua array of values to upload into the VBO
+---@param vboData number[] Array of values to upload into the VBO.
 ---@param attributeIndex integer? (Default: `-1`)
 ---
----If supplied with non-default value then the data from vboData will only be
+---If supplied with non-default value then the data from `vboData` will only be
 ---used to upload the data to this particular attribute.
 ---
----The whole vboData is expected to contain only attributeIndex data.
+---The whole `vboData` is expected to contain only attributeIndex data.
 ---
 ---Otherwise all attributes get updated sequentially across attributes and elements.
----@param elemOffset integer? (Default: `0`) Which VBO element to start uploading data from Lua array into.
----@param luaStartIndex integer? (Default: `1`) Start uploading from that element in supplied Lua array.
----@param luaFinishIndex integer? Consider this element the last element in Lua array.
+---@param elemOffset integer? (Default: `0`) The index in destination VBO (on GPU) at which storing begins.
+---@param luaStartIndex integer? (Default: `1`) The index of `vboData` at which copying begins.
+---@param luaFinishIndex integer? (Default: `#vboData`) The index of `vboData` at which copying ends.
 ---@return number[] indexData
 ---@return integer elemOffset
 ---@return integer|[integer,integer,integer,integer] attrID
 ---@see VBO:Define
 function VBO:Upload(vboData, attributeIndex, elemOffset, luaStartIndex, luaFinishIndex) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L678-L689" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L667-L678" target="_blank">source</a>]
 ---
 ---@param attributeIndex integer? (Default: `-1`) when supplied with non-default value: only data
 ---from specified attribute will be downloaded - otherwise all attributes are
@@ -146,7 +135,7 @@ function VBO:Download(attributeIndex, elementOffset, elementCount, forceGPURead)
 
 ---Binds engine side vertex or index VBO containing models (units, features) data.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L1187-L1194" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L1176-L1183" target="_blank">source</a>]
 ---
 ---Also fills in VBO definition data as they're set for engine models (no need to do VBO:Define()).
 ---
@@ -155,7 +144,7 @@ function VBO:ModelsVBO() end
 
 ---Fills in attribute data for each specified unitDefID
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L1206-L1231" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L1195-L1220" target="_blank">source</a>]
 ---
 ---The instance data in that attribute will contain the offset to bind position
 ---matrix in global matrices SSBO and offset to uniform buffer structure in
@@ -182,7 +171,7 @@ function VBO:InstanceDataFromUnitDefIDs(unitDefIDs, attrID, teamIdOpt, elementOf
 
 ---Fills in attribute data for each specified featureDefID
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L1245-L1270" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L1234-L1259" target="_blank">source</a>]
 ---
 ---The instance data in that attribute will contain the offset to bind position
 ---matrix in global matrices SSBO and offset to uniform buffer structure in
@@ -209,7 +198,7 @@ function VBO:InstanceDataFromFeatureDefIDs(featureDefIDs, attrID, teamIdOpt, ele
 
 ---Fills in attribute data for each specified unitID
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L1284-L1310" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L1273-L1299" target="_blank">source</a>]
 ---
 ---The instance data in that attribute will contain the offset to bind position
 ---matrix in global matrices SSBO and offset to uniform buffer structure in
@@ -237,7 +226,7 @@ function VBO:InstanceDataFromUnitIDs(unitIDs, attrID, teamIdOpt, elementOffset) 
 
 ---Fills in attribute data for each specified featureID
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L1322-L1338" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L1311-L1327" target="_blank">source</a>]
 ---
 ---The instance data in that attribute will contain the offset to bind position
 ---matrix in global matrices SSBO and offset to uniform buffer structure in
@@ -253,7 +242,7 @@ function VBO:InstanceDataFromUnitIDs(unitIDs, attrID, teamIdOpt, elementOffset) 
 ---@return integer attrID
 function VBO:InstanceDataFromFeatureIDs(featureIDs, attrID, teamIdOpt, elementOffset) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L1350-L1360" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L1339-L1349" target="_blank">source</a>]
 ---
 ---@param projectileIDs integer|integer[]
 ---@param attrID integer
@@ -266,7 +255,7 @@ function VBO:MatrixDataFromProjectileIDs(projectileIDs, attrID, teamIdOpt, eleme
 
 ---Bind a range within a buffer object to an indexed buffer target
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L1432-L1446" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L1421-L1435" target="_blank">source</a>]
 ---
 ---Generally mimics
 ---https://registry.khronos.org/OpenGL-Refpages/gl4/html/glBindBufferRange.xhtml
@@ -280,7 +269,7 @@ function VBO:MatrixDataFromProjectileIDs(projectileIDs, attrID, teamIdOpt, eleme
 ---@return integer bindingIndex when successful, -1 otherwise
 function VBO:BindBufferRange(index, elementOffset, elementCount, target) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L1453-L1461" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L1442-L1450" target="_blank">source</a>]
 ---
 ---@param index integer
 ---@param elementOffset integer?
@@ -291,14 +280,14 @@ function VBO:UnbindBufferRange(index, elementOffset, elementCount, target) end
 
 ---Logs the definition of the VBO to the console
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L1468-L1472" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L1457-L1461" target="_blank">source</a>]
 ---
 ---@return nil
 function VBO:DumpDefinition() end
 
 ---Gets the OpenGL Buffer ID
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/d08404f33ad673a6748999bf505c60164df70cfd/rts/Lua/LuaVBOImpl.cpp#L1489-L1493" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/c3d683dd93c43b6df48a65c2ddbbec8d8e822456/rts/Lua/LuaVBOImpl.cpp#L1478-L1482" target="_blank">source</a>]
 ---
 ---@return number bufferID
 function VBO:GetID() end
