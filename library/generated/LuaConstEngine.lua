@@ -8,11 +8,11 @@
 
 ---Engine constants
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/75b196f6f7038c970812857c3eb7714396114899/rts/Lua/LuaConstEngine.cpp#L10-L13" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/80f785f2980f15f7e1217a671b49d414f5f9498c/rts/Lua/LuaConstEngine.cpp#L10-L13" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaConstEngine.cpp
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/75b196f6f7038c970812857c3eb7714396114899/rts/Lua/LuaConstEngine.cpp#L15-L26" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/80f785f2980f15f7e1217a671b49d414f5f9498c/rts/Lua/LuaConstEngine.cpp#L15-L26" target="_blank">source</a>]
 ---
 ---@class FeatureSupport
 ---@field NegativeGetUnitCurrentCommand boolean Whether Spring.GetUnitCurrentCommand allows negative indices to look from the end
@@ -28,7 +28,7 @@ local FeatureSupport = {}
 
 ---Engine specific information.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/75b196f6f7038c970812857c3eb7714396114899/rts/Lua/LuaConstEngine.cpp#L28-L43" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/80f785f2980f15f7e1217a671b49d414f5f9498c/rts/Lua/LuaConstEngine.cpp#L28-L43" target="_blank">source</a>]
 Engine = {
 	---"Major.Minor.PatchSet" for releases, "Major.Minor.PatchSet-CommitNum-gHash branch" otherwise
 	---

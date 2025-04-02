@@ -8,6 +8,6 @@
 
 ---Lua Rules
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/75b196f6f7038c970812857c3eb7714396114899/rts/Lua/LuaRules.cpp#L79-L83" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/80f785f2980f15f7e1217a671b49d414f5f9498c/rts/Lua/LuaRules.cpp#L79-L83" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaRules.cpp

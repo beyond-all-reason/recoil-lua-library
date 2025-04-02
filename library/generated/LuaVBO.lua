@@ -6,17 +6,9 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/75b196f6f7038c970812857c3eb7714396114899/rts/Lua/LuaVBO.cpp#L14-L17" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/80f785f2980f15f7e1217a671b49d414f5f9498c/rts/Lua/LuaVBO.cpp#L14-L17" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaVBO.cpp
-
----[<a href="https://github.com/beyond-all-reason/spring/blob/75b196f6f7038c970812857c3eb7714396114899/rts/Lua/LuaVBO.cpp#L123-L129" target="_blank">source</a>]
----
----@alias GLBufferType
----| GL.ARRAY_BUFFER
----| GL.ELEMENT_ARRAY_BUFFER
----| GL.UNIFORM_BUFFER
----| GL.SHADER_STORAGE_BUFFER
 
 ---Example:
 ---
@@ -25,12 +17,15 @@
 ---if myVBO == nil then Spring.Echo("Failed to get VBO") end
 ---```
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/75b196f6f7038c970812857c3eb7714396114899/rts/Lua/LuaVBO.cpp#L132-L156" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/80f785f2980f15f7e1217a671b49d414f5f9498c/rts/Lua/LuaVBO.cpp#L124-L151" target="_blank">source</a>]
 ---
----@param bufferType GLBufferType? (Default: GL.ARRAY_BUFFER)
+---@param bufferType GL? (Default: `GL.ARRAY_BUFFER`) The buffer type to use.
 ---
----Use `GL.ARRAY_BUFFER` for vertex data and
----`GL.ELEMENT_ARRAY_BUFFER` for vertex indices.
+---Accepts the following:
+---- `GL.ARRAY_BUFFER` for vertex data.
+---- `GL.ELEMENT_ARRAY_BUFFER` for vertex indices.
+---- `GL.UNIFORM_BUFFER`
+---- `GL.SHADER_STORAGE_BUFFER`
 ---@param freqUpdated boolean? (Default: `true`)
 ---
 ---`true` to updated frequently, `false` to update only once.

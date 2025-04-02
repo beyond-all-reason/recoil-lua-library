@@ -6,7 +6,7 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/75b196f6f7038c970812857c3eb7714396114899/rts/Lua/LuaOpenGLUtils.cpp#L134-L148" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/80f785f2980f15f7e1217a671b49d414f5f9498c/rts/Lua/LuaOpenGLUtils.cpp#L134-L148" target="_blank">source</a>]
 ---
 ---@alias MatrixName
 ---| "view"
