@@ -8,11 +8,11 @@
 
 ---Metal Map Lua API
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/4c7f9283976dfd3bce04e428067b86deeebf5011/rts/Lua/LuaMetalMap.cpp#L13-L16" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/6e89a1b7714b077e5383a107f22d6313bd7d5a45/rts/Lua/LuaMetalMap.cpp#L13-L16" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaMetalMap.cpp
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/4c7f9283976dfd3bce04e428067b86deeebf5011/rts/Lua/LuaMetalMap.cpp#L34-L38" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/6e89a1b7714b077e5383a107f22d6313bd7d5a45/rts/Lua/LuaMetalMap.cpp#L34-L38" target="_blank">source</a>]
 ---
 ---@return integer x X coordinate in worldspace/16.
 ---@return integer y Y coordinate in worldspace/16.
@@ -20,7 +20,7 @@ function Spring.GetMetalMapSize() end
 
 ---Returns the amount of metal on a single square.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/4c7f9283976dfd3bce04e428067b86deeebf5011/rts/Lua/LuaMetalMap.cpp#L47-L53" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/6e89a1b7714b077e5383a107f22d6313bd7d5a45/rts/Lua/LuaMetalMap.cpp#L47-L53" target="_blank">source</a>]
 ---
 ---@param x integer X coordinate in worldspace/16.
 ---@param y integer Y coordinate in worldspace/16.
@@ -29,7 +29,7 @@ function Spring.GetMetalAmount(x, y) end
 
 ---Sets the amount of metal on a single square.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/4c7f9283976dfd3bce04e428067b86deeebf5011/rts/Lua/LuaMetalMap.cpp#L64-L71" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/6e89a1b7714b077e5383a107f22d6313bd7d5a45/rts/Lua/LuaMetalMap.cpp#L64-L71" target="_blank">source</a>]
 ---
 ---@param x integer X cooridnate in worldspace/16.
 ---@param z integer Y coordinate in worldspace/16.
@@ -37,7 +37,7 @@ function Spring.GetMetalAmount(x, y) end
 ---@return nil
 function Spring.SetMetalAmount(x, z, metalAmount) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/4c7f9283976dfd3bce04e428067b86deeebf5011/rts/Lua/LuaMetalMap.cpp#L83-L88" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/6e89a1b7714b077e5383a107f22d6313bd7d5a45/rts/Lua/LuaMetalMap.cpp#L83-L88" target="_blank">source</a>]
 ---
 ---@param x integer X coordinate in worldspace/16.
 ---@param y integer Y coordinate in worldspace/16.
