@@ -8,7 +8,7 @@
 
 ---Configure custom appearance for a Tracy plot for use in debugging or profiling
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/4a9852c6504a2c80930e6c7b4919253fe382af52/rts/Lua/LuaTracyExtra.cpp#L32-L40" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/a84018ffa94c74d1f93b47f5d9a47991a68d3b5b/rts/Lua/LuaTracyExtra.cpp#L32-L40" target="_blank">source</a>]
 ---
 ---@param plotName string name of the plot to customize
 ---@param plotFormatType "Number"|"Percentage"|"Memory"|nil (Default: `"Number"`)
@@ -19,7 +19,7 @@ function tracy.LuaTracyPlotConfig(plotName, plotFormatType, stepwise, fill, colo
 
 ---Update a Tracy plot with a value
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/4a9852c6504a2c80930e6c7b4919253fe382af52/rts/Lua/LuaTracyExtra.cpp#L62-L67" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/a84018ffa94c74d1f93b47f5d9a47991a68d3b5b/rts/Lua/LuaTracyExtra.cpp#L62-L67" target="_blank">source</a>]
 ---
 ---@param plotName string Which LuaPlot should be updated
 ---@param plotValue number the number to show on the Tracy plot
