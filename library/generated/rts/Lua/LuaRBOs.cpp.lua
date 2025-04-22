@@ -8,13 +8,13 @@
 
 ---RBO
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaRBOs.cpp#L14-L17" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/a627def9d972f7fd2bc94007eac4ae55b4174871/rts/Lua/LuaRBOs.cpp#L14-L17" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaRBOs.cpp
 
 ---User Data RBO
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaRBOs.cpp#L139-L148" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/a627def9d972f7fd2bc94007eac4ae55b4174871/rts/Lua/LuaRBOs.cpp#L139-L148" target="_blank">source</a>]
 ---
 ---@class RBO
 ---@field target GL
@@ -25,7 +25,7 @@
 ---@field samples integer will return globalRendering->msaaLevel for multisampled RBO or 0 otherwise
 local RBO = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaRBOs.cpp#L150-L155" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/a627def9d972f7fd2bc94007eac4ae55b4174871/rts/Lua/LuaRBOs.cpp#L150-L155" target="_blank">source</a>]
 ---
 ---@class CreateRBOData
 ---@field target GL
@@ -33,7 +33,7 @@ local RBO = {}
 ---@field samples number? any number here will result in creation of multisampled RBO
 local CreateRBOData = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaRBOs.cpp#L157-L163" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/a627def9d972f7fd2bc94007eac4ae55b4174871/rts/Lua/LuaRBOs.cpp#L157-L163" target="_blank">source</a>]
 ---
 ---@param xsize integer
 ---@param ysize integer
@@ -41,7 +41,7 @@ local CreateRBOData = {}
 ---@return RBO
 function gl.CreateRBO(xsize, ysize, data) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaRBOs.cpp#L233-L236" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/a627def9d972f7fd2bc94007eac4ae55b4174871/rts/Lua/LuaRBOs.cpp#L233-L236" target="_blank">source</a>]
 ---
 ---@param rbo RBO
 function gl.DeleteRBO(rbo) end
