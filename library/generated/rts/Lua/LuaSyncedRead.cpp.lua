@@ -8,166 +8,166 @@
 
 ---Synced Read
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L90-L94" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L90-L94" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaSyncedRead.cpp
 
 ---Game States
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L749-L752" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L749-L752" target="_blank">source</a>]
 ---
 ---@section gamestates
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L755-L760" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L755-L760" target="_blank">source</a>]
 ---
 ---@return boolean enabled
 function Spring.IsCheatingEnabled() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L768-L773" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L768-L773" target="_blank">source</a>]
 ---
 ---@return boolean enabled
 function Spring.IsGodModeEnabled() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L783-L788" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L783-L788" target="_blank">source</a>]
 ---
 ---@return boolean enabled
 function Spring.IsDevLuaEnabled() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L796-L801" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L796-L801" target="_blank">source</a>]
 ---
 ---@return boolean enabled
 function Spring.IsEditDefsEnabled() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L809-L814" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L809-L814" target="_blank">source</a>]
 ---
 ---@return boolean enabled
 function Spring.IsNoCostEnabled() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L822-L829" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L822-L829" target="_blank">source</a>]
 ---
 ---@param teamID integer?
 ---@return boolean enabled
 function Spring.GetGlobalLos(teamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L841-L846" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L841-L846" target="_blank">source</a>]
 ---
 ---@return boolean enabled
 function Spring.AreHelperAIsEnabled() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L854-L859" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L854-L859" target="_blank">source</a>]
 ---
 ---@return boolean|nil enabled
 function Spring.FixedAllies() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L867-L872" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L867-L872" target="_blank">source</a>]
 ---
 ---@return boolean isGameOver
 function Spring.IsGameOver() end
 
 ---Speed/Time
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L883-L886" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L883-L886" target="_blank">source</a>]
 ---
 ---@section speedtime
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L889-L895" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L889-L895" target="_blank">source</a>]
 ---
 ---@return number t1 frameNum % dayFrames
 ---@return number t2 frameNum / dayFrames
 function Spring.GetGameFrame() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L907-L912" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L907-L912" target="_blank">source</a>]
 ---
 ---@return number seconds
 function Spring.GetGameSeconds() end
 
 ---Environment
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L920-L923" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L920-L923" target="_blank">source</a>]
 ---
 ---@section environment
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L926-L931" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L926-L931" target="_blank">source</a>]
 ---
 ---@return number tidalStrength
 function Spring.GetTidal() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L939-L944" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L939-L944" target="_blank">source</a>]
 ---
 ---@return number windStrength
 function Spring.GetWind() end
 
 ---Rules/Params
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L958-L965" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L958-L965" target="_blank">source</a>]
 ---
 ---@section environment
 ---
 ---The following functions allow to save data per game, team and unit.
 ---The advantage of it is that it can be read from anywhere (even from LuaUI and AIs!)
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L967-L969" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L967-L969" target="_blank">source</a>]
 ---
 ---@class RulesParams : table<string, integer>
 local RulesParams = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L971-L976" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L971-L976" target="_blank">source</a>]
 ---
 ---@return RulesParams rulesParams map with rules names as key and values as values
 function Spring.GetGameRulesParams() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L984-L991" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L984-L991" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@return RulesParams rulesParams map with rules names as key and values as values
 function Spring.GetTeamRulesParams(teamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1010-L1017" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1010-L1017" target="_blank">source</a>]
 ---
 ---@param playerID integer
 ---@return RulesParams rulesParams map with rules names as key and values as values
 function Spring.GetPlayerRulesParams(playerID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1079-L1086" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1079-L1086" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return RulesParams rulesParams map with rules names as key and values as values
 function Spring.GetUnitRulesParams(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1097-L1104" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1097-L1104" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return RulesParams rulesParams map with rules names as key and values as values
 function Spring.GetFeatureRulesParams(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1133-L1140" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1133-L1140" target="_blank">source</a>]
 ---
 ---@param ruleRef number|string the rule index or name
 ---@return number?|string value
 function Spring.GetGameRulesParam(ruleRef) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1148-L1156" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1148-L1156" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@param ruleRef number|string the rule index or name
 ---@return nil|number|string value
 function Spring.GetTeamRulesParam(teamID, ruleRef) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1176-L1184" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1176-L1184" target="_blank">source</a>]
 ---
 ---@param playerID integer
 ---@param ruleRef number|string the rule index or name
 ---@return nil|number|string value
 function Spring.GetPlayerRulesParam(playerID, ruleRef) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1207-L1215" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1207-L1215" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param ruleRef number|string the rule index or name
 ---@return nil|number|string value
 function Spring.GetUnitRulesParam(unitID, ruleRef) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1226-L1234" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1226-L1234" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param ruleRef number|string the rule index or name
@@ -176,7 +176,7 @@ function Spring.GetFeatureRulesParam(featureID, ruleRef) end
 
 ---Mod and Map options
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1261-L1275" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1261-L1275" target="_blank">source</a>]
 ---
 ---@section modmapoptions
 ---
@@ -190,55 +190,55 @@ function Spring.GetFeatureRulesParam(featureID, ruleRef) end
 ---
 ---    if (Spring.GetModOptions.exampleOption) then...end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1302-L1309" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1302-L1309" target="_blank">source</a>]
 ---
 ---@param mapOption string
 ---@return string value Value of `modOption`.
 function Spring.GetMapOption(mapOption) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1314-L1319" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1314-L1319" target="_blank">source</a>]
 ---
 ---@return table<string, string> mapOptions Table with options names as keys and values as values.
 function Spring.GetMapOptions() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1326-L1333" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1326-L1333" target="_blank">source</a>]
 ---
 ---@param modOption string
 ---@return string value Value of `modOption`.
 function Spring.GetModOption(modOption) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1340-L1345" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1340-L1345" target="_blank">source</a>]
 ---
 ---@return table<string, string> modOptions Table with options names as keys and values as values.
 function Spring.GetModOptions() end
 
 ---Vectors
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1352-L1356" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1352-L1356" target="_blank">source</a>]
 ---
 ---@section vectors
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1359-L1367" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1359-L1367" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
 ---@return number heading
 function Spring.GetHeadingFromVector(x, z) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1378-L1386" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1378-L1386" target="_blank">source</a>]
 ---
 ---@param heading number
 ---@return number x
 ---@return number z
 function Spring.GetVectorFromHeading(heading) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1396-L1400" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1396-L1400" target="_blank">source</a>]
 ---
 ---@param heading number
 ---@return FacingInteger facing
 function Spring.GetFacingFromHeading(heading) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1407-L1411" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1407-L1411" target="_blank">source</a>]
 ---
 ---@param facing FacingInteger
 ---@return number heading
@@ -246,54 +246,54 @@ function Spring.GetHeadingFromFacing(facing) end
 
 ---Sides and Factions
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1419-L1423" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1419-L1423" target="_blank">source</a>]
 ---
 ---@section sidesfactions
 
 ---Side spec
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1426-L1436" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1426-L1437" target="_blank">source</a>]
 ---
 ---@class SideSpec
----Used when returning arrays of side specifications, is itself an array with
----positional values as below:
----@field sideName string
----@field caseName string
+---Returned when getting arrays of side specifications.
+---@field sideName string Lowercase side name.
+---@field caseName string Original case side name.
 ---@field startUnit string
+---@see Spring.GetSideData
 local SideSpec = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1439-L1447" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1439-L1445" target="_blank">source</a>]
 ---
----@param sideName string
----@return nil|string startUnit
----@return string caseSensitiveSideName
+---@param sideName string Case-insensitive side name.
+---@return string? startUnit
+---@return string? caseName Original case side name.
 function Spring.GetSideData(sideName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1449-L1458" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1447-L1453" target="_blank">source</a>]
 ---
 ---@param sideID integer
----@return nil|string sideName
----@return string startUnit
----@return string caseSensitiveSideName
+---@return string? sideName Lowercase side name.
+---@return string? startUnit
+---@return string? caseName Original case side name.
 function Spring.GetSideData(sideID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1460-L1465" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1455-L1458" target="_blank">source</a>]
 ---
 ---@return SideSpec[] sideArray
 function Spring.GetSideData() end
 
 ---Teams
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1505-L1509" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1498-L1502" target="_blank">source</a>]
 ---
 ---@section Teams
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1512-L1517" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1505-L1510" target="_blank">source</a>]
 ---
 ---@return integer teamID
 function Spring.GetGaiaTeamID() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1528-L1538" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1521-L1531" target="_blank">source</a>]
 ---
 ---@param allyID integer
 ---@return number? xMin
@@ -302,7 +302,7 @@ function Spring.GetGaiaTeamID() end
 ---@return number? zMax
 function Spring.GetAllyTeamStartBox(allyID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1560-L1569" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1553-L1562" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@return number? x
@@ -310,19 +310,19 @@ function Spring.GetAllyTeamStartBox(allyID) end
 ---@return number? x
 function Spring.GetTeamStartPosition(teamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1588-L1592" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1581-L1585" target="_blank">source</a>]
 ---
 ---@return float3[] array of positions indexed by teamID
 function Spring.GetMapStartPositions() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1614-L1618" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1607-L1611" target="_blank">source</a>]
 ---
 ---@return integer[] allyTeamIDs
 function Spring.GetAllyTeamList() end
 
 ---Get all team IDs.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1634-L1640" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1627-L1633" target="_blank">source</a>]
 ---
 ---@param allyTeamID -1|nil (Default: `-1`)
 ---@return number[] teamIDs List of team IDs.
@@ -330,20 +330,20 @@ function Spring.GetTeamList(allyTeamID) end
 
 ---Get team IDs in a specific ally team.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1642-L1648" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1635-L1641" target="_blank">source</a>]
 ---
 ---@param allyTeamID integer The ally team ID to filter teams by. A value less than 0 will return all teams.
 ---@return number[]? teamIDs List of team IDs or `nil` if `allyTeamID` is invalid.
 function Spring.GetTeamList(allyTeamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1684-L1690" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1677-L1683" target="_blank">source</a>]
 ---
 ---@param teamID integer? (Default: `-1`) to filter by when >= 0
 ---@param active boolean? (Default: `false`) whether to filter only active teams
 ---@return number[]? list of playerIDs
 function Spring.GetPlayerList(teamID, active) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1738-L1751" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1731-L1744" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@param getTeamKeys boolean? (Default: `true`) whether to return the customTeamKeys table
@@ -357,13 +357,13 @@ function Spring.GetPlayerList(teamID, active) end
 ---@return table<string,string> customTeamKeys when getTeamKeys is true, otherwise nil
 function Spring.GetTeamInfo(teamID, getTeamKeys) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1789-L1794" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1782-L1787" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@return integer? allyTeamID
 function Spring.GetTeamAllyTeamID(teamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1810-L1824" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1803-L1817" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@param resource ResourceName
@@ -378,7 +378,7 @@ function Spring.GetTeamAllyTeamID(teamID) end
 ---@return number excess
 function Spring.GetTeamResources(teamID, resource) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1869-L1879" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1862-L1872" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@return number? killed
@@ -389,7 +389,7 @@ function Spring.GetTeamResources(teamID, resource) end
 ---@return number sent
 function Spring.GetTeamUnitStats(teamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1904-L1914" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1897-L1907" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@param resource ResourceName
@@ -402,7 +402,7 @@ function Spring.GetTeamResourceStats(teamID, resource) end
 
 ---Gets team damage dealt/received totals
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1953-L1963" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1946-L1956" target="_blank">source</a>]
 ---
 ---Returns a team's damage stats. Note that all damage is counted,
 ---including self-inflicted and unconfirmed out-of-sight.
@@ -412,7 +412,7 @@ function Spring.GetTeamResourceStats(teamID, resource) end
 ---@return number damageReceived
 function Spring.GetTeamDamageStats(teamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L1984-L2006" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L1977-L1999" target="_blank">source</a>]
 ---
 ---@class TeamStats
 ---@field time number
@@ -439,7 +439,7 @@ local TeamStats = {}
 
 ---Get the number of history entries.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2008-L2013" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2001-L2006" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@return integer? historyCount The number of history entries, or `nil` if unable to resolve team.
@@ -447,7 +447,7 @@ function Spring.GetTeamStatsHistory(teamID) end
 
 ---Get team stats history.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2014-L2021" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2007-L2014" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@param startIndex integer
@@ -455,7 +455,7 @@ function Spring.GetTeamStatsHistory(teamID) end
 ---@return TeamStats[] The team stats history, or `nil` if unable to resolve team.
 function Spring.GetTeamStatsHistory(teamID, startIndex, endIndex) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2107-L2112" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2100-L2105" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@return string
@@ -465,14 +465,14 @@ function Spring.GetTeamLuaAI(teamID) end
 ---
 ---Also returns the current unit count for readable teams as the 2nd value.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2140-L2148" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2133-L2141" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@return number maxUnits
 ---@return number? currentUnits
 function Spring.GetTeamMaxUnits(teamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2165-L2182" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2158-L2175" target="_blank">source</a>]
 ---
 ---@param playerID integer
 ---@param getPlayerOpts boolean? (Default: `true`) whether to return custom player options
@@ -492,13 +492,13 @@ function Spring.GetPlayerInfo(playerID, getPlayerOpts) end
 
 ---Returns unit controlled by player on FPS mode
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2230-L2235" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2223-L2228" target="_blank">source</a>]
 ---
 ---@param playerID integer
 ---@return number?
 function Spring.GetPlayerControlledUnit(playerID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2266-L2276" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2259-L2269" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@return integer skirmishAIID
@@ -509,20 +509,20 @@ function Spring.GetPlayerControlledUnit(playerID) end
 ---@return table<string,string> options
 function Spring.GetAIInfo(teamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2325-L2330" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2318-L2323" target="_blank">source</a>]
 ---
 ---@param allyTeamID integer
 ---@return nil|table<string,string>
 function Spring.GetAllyTeamInfo(allyTeamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2351-L2357" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2344-L2350" target="_blank">source</a>]
 ---
 ---@param teamID1 number
 ---@param teamID2 number
 ---@return nil|boolean
 function Spring.AreTeamsAllied(teamID1, teamID2) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2371-L2377" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2364-L2370" target="_blank">source</a>]
 ---
 ---@param playerID1 number
 ---@param playerID2 number
@@ -531,13 +531,13 @@ function Spring.ArePlayersAllied(playerID1, playerID2) end
 
 ---Unit queries
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2400-L2404" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2393-L2397" target="_blank">source</a>]
 ---
 ---@section unit_queries
 
 ---Get a list of all unitIDs
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2407-L2420" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2400-L2413" target="_blank">source</a>]
 ---
 ---Note that when called from a widget, this also returns units that are only
 ---radar blips.
@@ -549,39 +549,39 @@ function Spring.ArePlayersAllied(playerID1, playerID2) end
 ---@return number[] unitIDs
 function Spring.GetAllUnits() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2445-L2450" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2438-L2443" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@return number[]? unitIDs
 function Spring.GetTeamUnits(teamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2545-L2550" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2538-L2543" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@return table<integer,integer> unitsByDef A table where keys are unitDefIDs and values are unitIDs
 function Spring.GetTeamUnitsSorted(teamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2641-L2646" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2634-L2639" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@return table<number,number>? countByUnit A table where keys are unitDefIDs and values are counts.
 function Spring.GetTeamUnitsCounts(teamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2724-L2730" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2717-L2723" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@param unitDefIDs number|number[]
 ---@return number[]? unitIDs
 function Spring.GetTeamUnitsByDefs(teamID, unitDefIDs) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2800-L2806" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2793-L2799" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@param unitDefID integer
 ---@return number? count
 function Spring.GetTeamUnitDefCount(teamID, unitDefID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2861-L2866" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2854-L2859" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@return number? count
@@ -589,13 +589,13 @@ function Spring.GetTeamUnitCount(teamID) end
 
 ---Spatial unit queries
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2896-L2902" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2889-L2895" target="_blank">source</a>]
 ---
 ---@section spatial_unit_queries
 ---
 ---For the allegiance parameters: AllUnits = -1, MyUnits = -2, AllyUnits = -3, EnemyUnits = -4
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L2974-L2983" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L2967-L2976" target="_blank">source</a>]
 ---
 ---@param xmin number
 ---@param zmin number
@@ -605,7 +605,7 @@ function Spring.GetTeamUnitCount(teamID) end
 ---@return number[] unitIDs
 function Spring.GetUnitsInRectangle(xmin, zmin, xmax, zmax, allegiance) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3040-L3051" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3033-L3044" target="_blank">source</a>]
 ---
 ---@param xmin number
 ---@param ymin number
@@ -617,7 +617,7 @@ function Spring.GetUnitsInRectangle(xmin, zmin, xmax, zmax, allegiance) end
 ---@return number[] unitIDs
 function Spring.GetUnitsInBox(xmin, ymin, zmin, xmax, ymax, zmax, allegiance) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3110-L3117" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3103-L3110" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -625,7 +625,7 @@ function Spring.GetUnitsInBox(xmin, ymin, zmin, xmax, ymax, zmax, allegiance) en
 ---@return number[] unitIDs
 function Spring.GetUnitsInCylinder(x, z, radius) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3172-L3180" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3165-L3173" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -634,7 +634,7 @@ function Spring.GetUnitsInCylinder(x, z, radius) end
 ---@return number[] unitIDs
 function Spring.GetUnitsInSphere(x, y, z, radius) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3255-L3261" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3248-L3254" target="_blank">source</a>]
 ---
 ---@class Plane
 ---@field normalVecX number
@@ -643,7 +643,7 @@ function Spring.GetUnitsInSphere(x, y, z, radius) end
 ---@field d number
 local Plane = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3263-L3278" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3256-L3271" target="_blank">source</a>]
 ---
 ---Plane normals point towards accepted space, so the acceptance criteria for each plane is:
 ---
@@ -662,7 +662,7 @@ function Spring.GetUnitsInPlanes(planes, allegiance) end
 ---
 ---Returns nil for an empty array
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3397-L3406" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3390-L3399" target="_blank">source</a>]
 ---
 ---@param units table { unitID, unitID, ... }
 ---@return number centerX
@@ -674,7 +674,7 @@ function Spring.GetUnitArrayCentroid(units) end
 ---
 ---Returns nil for an empty map
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3412-L3421" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3405-L3414" target="_blank">source</a>]
 ---
 ---@param units table { [unitID] = true, [unitID] = true, ... }
 ---@return number centerX
@@ -682,14 +682,14 @@ function Spring.GetUnitArrayCentroid(units) end
 ---@return number centerZ
 function Spring.GetUnitMapCentroid(units) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3428-L3434" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3421-L3427" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param range number? (Default: `1.0e9`)
 ---@return integer? unitID
 function Spring.GetUnitNearestAlly(unitID, range) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3453-L3460" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3446-L3453" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param range number? (Default: `1.0e9`)
@@ -699,11 +699,11 @@ function Spring.GetUnitNearestEnemy(unitID, range, useLOS) end
 
 ---Spatial feature queries
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3487-L3491" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3480-L3484" target="_blank">source</a>]
 ---
 ---@section spatial_feature_queries
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3524-L3532" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3517-L3525" target="_blank">source</a>]
 ---
 ---@param xmin number
 ---@param zmin number
@@ -712,7 +712,7 @@ function Spring.GetUnitNearestEnemy(unitID, range, useLOS) end
 ---@return number[] featureIDs
 function Spring.GetFeaturesInRectangle(xmin, zmin, xmax, zmax) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3550-L3558" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3543-L3551" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -721,7 +721,7 @@ function Spring.GetFeaturesInRectangle(xmin, zmin, xmax, zmax) end
 ---@return number[] featureIDs
 function Spring.GetFeaturesInSphere(x, y, z, radius) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3575-L3583" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3568-L3576" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -730,7 +730,7 @@ function Spring.GetFeaturesInSphere(x, y, z, radius) end
 ---@return number[] featureIDs
 function Spring.GetFeaturesInCylinder(x, z, radius, allegiance) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3643-L3653" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3636-L3646" target="_blank">source</a>]
 ---
 ---@param xmin number
 ---@param zmin number
@@ -741,7 +741,7 @@ function Spring.GetFeaturesInCylinder(x, z, radius, allegiance) end
 ---@return number[] projectileIDs
 function Spring.GetProjectilesInRectangle(xmin, zmin, xmax, zmax, excludeWeaponProjectiles, excludePieceProjectiles) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3673-L3683" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3666-L3676" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -754,17 +754,17 @@ function Spring.GetProjectilesInSphere(x, y, z, radius, excludeWeaponProjectiles
 
 ---Unit state
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3698-L3702" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3691-L3695" target="_blank">source</a>]
 ---
 ---@section unit_state
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3705-L3710" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3698-L3703" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return boolean
 function Spring.ValidUnitID(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3718-L3729" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3711-L3722" target="_blank">source</a>]
 ---
 ---@class UnitState
 ---@field firestate number
@@ -778,44 +778,44 @@ function Spring.ValidUnitID(unitID) end
 ---@field loopbackattack boolean?
 local UnitState = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3732-L3737" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3725-L3730" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return UnitState
 function Spring.GetUnitStates(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3825-L3831" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3818-L3824" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return nil|boolean armored
 ---@return number armorMultiple
 function Spring.GetUnitArmored(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3844-L3849" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3837-L3842" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return boolean? isActive
 function Spring.GetUnitIsActive(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3861-L3866" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3854-L3859" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return boolean? isCloaked
 function Spring.GetUnitIsCloaked(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3878-L3883" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3871-L3876" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number? seismicSignature
 function Spring.GetUnitSeismicSignature(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3894-L3899" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3887-L3892" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return integer? selfDTime
 function Spring.GetUnitSelfDTime(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3911-L3918" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3904-L3911" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return integer? numStockpiled
@@ -823,14 +823,14 @@ function Spring.GetUnitSelfDTime(unitID) end
 ---@return number? buildPercent
 function Spring.GetUnitStockpile(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3935-L3941" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3928-L3934" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param type string one of los, airLos, radar, sonar, seismic, radarJammer, sonarJammer
 ---@return number? radius
 function Spring.GetUnitSensorRadius(unitID, type) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L3978-L3991" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L3971-L3984" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param allyTeamID integer?
@@ -844,25 +844,25 @@ function Spring.GetUnitSensorRadius(unitID, type) end
 ---@return boolean posErrorBit
 function Spring.GetUnitPosErrorParams(unitID, allyTeamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4015-L4020" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4008-L4013" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return nil|string
 function Spring.GetUnitTooltip(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4055-L4060" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4048-L4053" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number?
 function Spring.GetUnitDefID(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4080-L4085" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4073-L4078" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number?
 function Spring.GetUnitTeam(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4097-L4102" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4090-L4095" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number?
@@ -870,7 +870,7 @@ function Spring.GetUnitAllyTeam(unitID) end
 
 ---Checks if a unit is neutral (NOT Gaia!)
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4114-L4123" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4107-L4116" target="_blank">source</a>]
 ---
 ---Note that a "neutral" unit can belong to any ally-team (ally, enemy, Gaia).
 ---To check if a unit is Gaia, check its owner team.
@@ -879,7 +879,7 @@ function Spring.GetUnitAllyTeam(unitID) end
 ---@return nil|boolean
 function Spring.GetUnitNeutral(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4135-L4144" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4128-L4137" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number? health
@@ -889,7 +889,7 @@ function Spring.GetUnitNeutral(unitID) end
 ---@return number buildProgress between 0.0-1.0
 function Spring.GetUnitHealth(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4174-L4179" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4167-L4172" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return nil|boolean
@@ -903,7 +903,7 @@ function Spring.GetUnitIsDead(unitID) end
 ---Note that EMP and being transported are mechanically the same and thus lumped together.
 ---Use other callouts to differentiate them if you need to.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4191-L4204" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4184-L4197" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return nil|boolean stunnedOrBuilt unit is disabled
@@ -911,14 +911,14 @@ function Spring.GetUnitIsDead(unitID) end
 ---@return boolean beingBuilt unit is under construction
 function Spring.GetUnitIsStunned(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4218-L4224" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4211-L4217" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return boolean beingBuilt
 ---@return number buildProgress
 function Spring.GetUnitIsBeingBuilt(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4236-L4244" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4229-L4237" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number? metalMake
@@ -927,14 +927,14 @@ function Spring.GetUnitIsBeingBuilt(unitID) end
 ---@return number energyUse
 function Spring.GetUnitResources(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4258-L4263" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4251-L4256" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number Unit's metal storage
 ---@return number Unit's energy storage
 function Spring.GetUnitStorage(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4276-L4282" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4269-L4275" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number? buildTime
@@ -942,46 +942,46 @@ function Spring.GetUnitStorage(unitID) end
 ---@return number energyCost
 function Spring.GetUnitCosts(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4295-L4299" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4288-L4292" target="_blank">source</a>]
 ---
 ---@class ResourceCost
 ---@field metal number
 ---@field energy number
 local ResourceCost = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4301-L4306" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4294-L4299" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return ResourceCost? cost The cost of the unit, or `nil` if invalid.
 ---@return number? buildTime The build time the unit, or `nil` if invalid.
 function Spring.GetUnitCostTable(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4324-L4329" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4317-L4322" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number? metalExtraction
 function Spring.GetUnitMetalExtraction(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4344-L4350" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4337-L4343" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number xp [0.0; +∞)
 ---@return number limXp [0.0; 1.0) as experience approaches infinity
 function Spring.GetUnitExperience(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4363-L4368" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4356-L4361" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number?
 function Spring.GetUnitHeight(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4380-L4385" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4373-L4378" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number?
 function Spring.GetUnitRadius(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4396-L4402" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4389-L4395" target="_blank">source</a>]
 ---
 ---Gets the unit's radius for when targeted by build, repair, reclaim-type commands.
 ---
@@ -989,13 +989,13 @@ function Spring.GetUnitRadius(unitID) end
 ---@return number?
 function Spring.GetUnitBuildeeRadius(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4413-L4418" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4406-L4411" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number?
 function Spring.GetUnitMass(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4424-L4439" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4417-L4432" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param midPos boolean? (Default: `false`) return midpoint as well
@@ -1011,7 +1011,7 @@ function Spring.GetUnitMass(unitID) end
 ---@return number aimPointZ
 function Spring.GetUnitPosition(unitID, midPos, aimPos) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4445-L4452" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4438-L4445" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number? posX
@@ -1019,7 +1019,7 @@ function Spring.GetUnitPosition(unitID, midPos, aimPos) end
 ---@return number posZ
 function Spring.GetUnitBasePosition(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4459-L4466" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4452-L4459" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return float3? front
@@ -1027,7 +1027,7 @@ function Spring.GetUnitBasePosition(unitID) end
 ---@return float3 right
 function Spring.GetUnitVectors(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4487-L4495" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4480-L4488" target="_blank">source</a>]
 ---
 ---Note: PYR order
 ---
@@ -1037,7 +1037,7 @@ function Spring.GetUnitVectors(unitID) end
 ---@return number roll Rotation in Z axis
 function Spring.GetUnitRotation(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4502-L4515" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4495-L4508" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number frontDirX
@@ -1051,26 +1051,26 @@ function Spring.GetUnitRotation(unitID) end
 ---@return number upDirZ
 function Spring.GetUnitDirection(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4539-L4545" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4532-L4538" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param convertToRadians boolean? (Default: `false`)
 ---@return number heading
 function Spring.GetUnitHeading(unitID, convertToRadians) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4562-L4566" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4555-L4559" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitVelocity(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4573-L4577" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4566-L4570" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitBuildFacing(unitID) end
 
 ---Checks whether a unit is currently building another (NOT for checking if it's a structure)
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4589-L4597" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4582-L4590" target="_blank">source</a>]
 ---
 ---Works for both mobile builders and factories.
 ---
@@ -1080,7 +1080,7 @@ function Spring.GetUnitIsBuilding(unitID) end
 
 ---Checks a builder's current task
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4677-L4695" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4670-L4688" target="_blank">source</a>]
 ---
 ---Checks what a builder is currently doing. This is not the same as `Spring.GetUnitCurrentCommand`,
 ---because you can have a command at the front of the queue and not be doing it (for example because
@@ -1098,7 +1098,7 @@ function Spring.GetUnitIsBuilding(unitID) end
 ---@return integer targetID if applicable (all except RESTORE)
 function Spring.GetUnitWorkerTask(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4711-L4718" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4704-L4711" target="_blank">source</a>]
 ---
 ---Useful for setting move goals manually.
 ---
@@ -1107,14 +1107,14 @@ function Spring.GetUnitWorkerTask(unitID) end
 ---@return number effectiveBuildRange counted to the center of prospective buildee; buildRange if buildee nil
 function Spring.GetUnitEffectiveBuildRange(unitID, buildeeDefID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4767-L4771" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4760-L4764" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitCurrentBuildPower(unitID) end
 
 ---Get a unit's carried resources
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4800-L4811" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4793-L4804" target="_blank">source</a>]
 ---
 ---Checks resources being carried internally by the unit.
 ---
@@ -1125,14 +1125,14 @@ function Spring.GetUnitCurrentBuildPower(unitID) end
 ---@return number maxStoredEnergy
 function Spring.GetUnitHarvestStorage(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4825-L4829" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4818-L4822" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitBuildParams(unitID) end
 
 ---Is builder in build stance
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4858-L4867" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4851-L4860" target="_blank">source</a>]
 ---
 ---Checks if a builder is in build stance, i.e. can create nanoframes.
 ---Returns nil for non-builders.
@@ -1143,7 +1143,7 @@ function Spring.GetUnitInBuildStance(unitID) end
 
 ---Get construction FX attachment points
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4884-L4897" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4877-L4890" target="_blank">source</a>]
 ---
 ---Returns an array of pieces which represent construction
 ---points. Default engine construction FX (nano spray) will
@@ -1158,7 +1158,7 @@ function Spring.GetUnitNanoPieces(unitID) end
 
 ---Get the transport carrying the unit
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4939-L4948" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4932-L4941" target="_blank">source</a>]
 ---
 ---Returns the unit ID of the transport, if any.
 ---Returns nil if the unit is not being transported.
@@ -1169,14 +1169,14 @@ function Spring.GetUnitTransporter(unitID) end
 
 ---Get units being transported
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4963-L4970" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4956-L4963" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return integer[]? transporteeArray
 ---An array of unitIDs being transported by this unit, or `nil` if not a transport.
 function Spring.GetUnitIsTransporting(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L4992-L4999" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L4985-L4992" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param weaponNum number? Optional if the unit has just one shield
@@ -1184,14 +1184,14 @@ function Spring.GetUnitIsTransporting(unitID) end
 ---@return number currentPower
 function Spring.GetUnitShieldState(unitID, weaponNum) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5024-L5028" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5017-L5021" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitFlanking(unitID) end
 
 ---Get a unit's engagement range
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5083-L5093" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5076-L5086" target="_blank">source</a>]
 ---
 ---Returns the range at which a unit will stop to engage.
 ---By default this is the highest among the unit's weapon ranges (hence name),
@@ -1203,13 +1203,13 @@ function Spring.GetUnitMaxRange(unitID) end
 
 ---Unit weapon state
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5105-L5109" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5098-L5102" target="_blank">source</a>]
 ---
 ---@section unit_weapon_state
 
 ---Check the state of a unit's weapon
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5112-L5143" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5105-L5136" target="_blank">source</a>]
 ---
 ---Available states to poll:
 ---  "reloadFrame" (frame on which the weapon will be ready to fire),
@@ -1240,42 +1240,42 @@ function Spring.GetUnitMaxRange(unitID) end
 ---@return number stateValue
 function Spring.GetUnitWeaponState(unitID, weaponNum, stateName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5322-L5326" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5315-L5319" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitWeaponDamages(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5361-L5365" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5354-L5358" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitWeaponVectors(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5401-L5405" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5394-L5398" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitWeaponTryTarget(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5446-L5450" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5439-L5443" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitWeaponTestTarget(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5484-L5488" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5477-L5481" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitWeaponTestRange(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5522-L5526" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5515-L5519" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitWeaponHaveFreeLineOfFire(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5588-L5592" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5581-L5585" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitWeaponCanFire(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5613-L5619" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5606-L5612" target="_blank">source</a>]
 ---
 ---@alias TargetType
 ---| 0 # none
@@ -1288,7 +1288,7 @@ function Spring.GetUnitWeaponCanFire(unitID) end
 ---Note that this doesn't need to reflect the unit's Attack orders or such, and
 ---that weapons can aim individually unless slaved.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5621-L5632" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5614-L5625" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param weaponNum integer
@@ -1301,7 +1301,7 @@ function Spring.GetUnitWeaponTarget(unitID, weaponNum) end
 ---Note that this doesn't need to reflect the unit's Attack orders or such, and
 ---that weapons can aim individually unless slaved.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5633-L5645" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5626-L5638" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param weaponNum integer
@@ -1315,7 +1315,7 @@ function Spring.GetUnitWeaponTarget(unitID, weaponNum) end
 ---Note that this doesn't need to reflect the unit's Attack orders or such, and
 ---that weapons can aim individually unless slaved.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5646-L5658" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5639-L5651" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param weaponNum integer
@@ -1329,7 +1329,7 @@ function Spring.GetUnitWeaponTarget(unitID, weaponNum) end
 ---Note that this doesn't need to reflect the unit's Attack orders or such, and
 ---that weapons can aim individually unless slaved.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5659-L5671" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5652-L5664" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param weaponNum integer
@@ -1340,31 +1340,31 @@ function Spring.GetUnitWeaponTarget(unitID, weaponNum) end
 
 ---Misc
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5717-L5721" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5710-L5714" target="_blank">source</a>]
 ---
 ---@section misc
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5728-L5732" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5721-L5725" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitEstimatedPath(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5748-L5752" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5741-L5745" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitLastAttacker(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5768-L5772" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5761-L5765" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitLastAttackedPiece(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5778-L5782" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5771-L5775" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitCollisionVolumeData(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5799-L5807" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5792-L5800" target="_blank">source</a>]
 ---
 ---@param unitID1 number
 ---@param unitID2 number
@@ -1373,12 +1373,12 @@ function Spring.GetUnitCollisionVolumeData(unitID) end
 ---@return number?
 function Spring.GetUnitSeparation(unitID1, unitID2, direction, subtractRadii) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5841-L5845" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5834-L5838" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitFeatureSeparation(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5875-L5888" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5868-L5881" target="_blank">source</a>]
 ---
 ---@class UnitDefDimensions
 ---@field height number
@@ -1394,16 +1394,16 @@ function Spring.GetUnitFeatureSeparation(unitID) end
 ---@field maxz number
 local UnitDefDimensions = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5890-L5895" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5883-L5888" target="_blank">source</a>]
 ---
 ---@param unitDefID integer
 ---@return UnitDefDimensions? dimensions
 function Spring.GetUnitDefDimensions(unitDefID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5925-L5928" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5918-L5921" target="_blank">source</a>]
 function Spring.GetCEGID() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5936-L5947" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5929-L5940" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return nil|boolean isBlocking
@@ -1415,12 +1415,12 @@ function Spring.GetCEGID() end
 ---@return boolean blockHeightChanges
 function Spring.GetUnitBlocking(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L5954-L5958" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L5947-L5951" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitMoveTypeData(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6143-L6148" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6136-L6141" target="_blank">source</a>]
 ---
 ---@class Command
 ---@field id integer
@@ -1428,7 +1428,7 @@ function Spring.GetUnitMoveTypeData(unitID) end
 ---@field options CommandOptions?
 local Command = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6185-L6196" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6178-L6189" target="_blank">source</a>]
 ---
 ---@param unitID integer Unit id.
 ---@param cmdIndex integer Command index to get. If negative will count from the end of the queue,
@@ -1441,7 +1441,7 @@ function Spring.GetUnitCurrentCommand(unitID, cmdIndex) end
 
 ---Get the commands for a unit.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6231-L6241" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6224-L6234" target="_blank">source</a>]
 ---
 ---Same as `Spring.GetCommandQueue`
 ---
@@ -1452,7 +1452,7 @@ function Spring.GetUnitCommands(unitID, count) end
 
 ---Get the count of commands for a unit.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6242-L6253" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6235-L6246" target="_blank">source</a>]
 ---
 ---Same as `Spring.GetCommandQueue`
 ---
@@ -1463,7 +1463,7 @@ function Spring.GetUnitCommands(unitID, count) end
 
 ---Get the number or list of commands for a factory
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6281-L6288" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6274-L6281" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param count number when 0 returns the number of commands in the units queue, when -1 returns all commands, number of commands to return otherwise
@@ -1472,20 +1472,20 @@ function Spring.GetFactoryCommands(unitID, count) end
 
 ---Get the number of commands in a unit's queue.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6317-L6322" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6310-L6315" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return integer The number of commands in the unit's queue.
 function Spring.GetUnitCommandCount(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6340-L6344" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6333-L6337" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetFactoryBuggerOff(unitID) end
 
 ---Gets the build queue of a factory
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6420-L6428" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6413-L6421" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param count integer? (Default: `-1`) Number of commands to retrieve, `-1` for all.
@@ -1495,7 +1495,7 @@ function Spring.GetFactoryCounts(unitID, count, addCmds) end
 
 ---Get the commands for a unit.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6456-L6466" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6449-L6459" target="_blank">source</a>]
 ---
 ---Same as `Spring.GetUnitCommands`
 ---
@@ -1506,7 +1506,7 @@ function Spring.GetCommandQueue(unitID, count) end
 
 ---Get the count of commands for a unit.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6467-L6478" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6460-L6471" target="_blank">source</a>]
 ---
 ---Same as `Spring.GetUnitCommands`
 ---
@@ -1517,7 +1517,7 @@ function Spring.GetCommandQueue(unitID, count) end
 
 ---Returns the build queue
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6558-L6563" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6551-L6556" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return nil|table<number,number> buildqueue indexed by unitDefID with count values
@@ -1525,52 +1525,52 @@ function Spring.GetFullBuildQueue(unitID) end
 
 ---Returns the build queue cleaned of things the unit can't build itself
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6570-L6575" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6563-L6568" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return nil|table<number,number> buildqueue indexed by unitDefID with count values
 function Spring.GetRealBuildQueue(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6585-L6589" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6578-L6582" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.GetUnitCmdDescs(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6624-L6628" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6617-L6621" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.FindUnitCmdDesc(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6651-L6656" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6644-L6649" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return boolean
 function Spring.ValidFeatureID(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6664-L6667" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6657-L6660" target="_blank">source</a>]
 ---
 ---@return integer[] featureIDs
 function Spring.GetAllFeatures() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6692-L6697" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6685-L6690" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return number?
 function Spring.GetFeatureDefID(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6709-L6714" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6702-L6707" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return number?
 function Spring.GetFeatureTeam(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6730-L6735" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6723-L6728" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return number?
 function Spring.GetFeatureAllyTeam(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6747-L6754" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6740-L6747" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return number? health
@@ -1578,30 +1578,30 @@ function Spring.GetFeatureAllyTeam(featureID) end
 ---@return number resurrectProgress
 function Spring.GetFeatureHealth(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6768-L6773" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6761-L6766" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return number?
 function Spring.GetFeatureHeight(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6785-L6790" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6778-L6783" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return number?
 function Spring.GetFeatureRadius(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6801-L6806" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6794-L6799" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return number?
 function Spring.GetFeatureMass(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6812-L6816" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6805-L6809" target="_blank">source</a>]
 ---
 ---@param featureID integer
 function Spring.GetFeaturePosition(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6823-L6830" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6816-L6823" target="_blank">source</a>]
 ---
 ---@param featureID1 number
 ---@param featureID2 number
@@ -1609,7 +1609,7 @@ function Spring.GetFeaturePosition(featureID) end
 ---@return number?
 function Spring.GetFeatureSeparation(featureID1, featureID2, direction) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6855-L6863" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6848-L6856" target="_blank">source</a>]
 ---
 ---Note: PYR order
 ---
@@ -1619,7 +1619,7 @@ function Spring.GetFeatureSeparation(featureID1, featureID2, direction) end
 ---@return number roll Rotation in Z axis
 function Spring.GetFeatureRotation(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6873-L6886" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6866-L6879" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return number frontDirX
@@ -1633,17 +1633,17 @@ function Spring.GetFeatureRotation(featureID) end
 ---@return number upDirZ
 function Spring.GetFeatureDirection(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6914-L6918" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6907-L6911" target="_blank">source</a>]
 ---
 ---@param featureID integer
 function Spring.GetFeatureVelocity(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6925-L6929" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6918-L6922" target="_blank">source</a>]
 ---
 ---@param featureID integer
 function Spring.GetFeatureHeading(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6941-L6951" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6934-L6944" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return number? metal
@@ -1654,7 +1654,7 @@ function Spring.GetFeatureHeading(featureID) end
 ---@return number reclaimTime
 function Spring.GetFeatureResources(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6968-L6979" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6961-L6972" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return nil|boolean isBlocking
@@ -1666,39 +1666,39 @@ function Spring.GetFeatureResources(featureID) end
 ---@return boolean blockHeightChanges
 function Spring.GetFeatureBlocking(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L6986-L6991" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6979-L6984" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return nil|boolean
 function Spring.GetFeatureNoSelect(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7004-L7008" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L6997-L7001" target="_blank">source</a>]
 ---
 ---@param featureID integer
 function Spring.GetFeatureResurrect(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7027-L7031" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7020-L7024" target="_blank">source</a>]
 ---
 ---@param featureID integer
 function Spring.GetFeatureLastAttackedPiece(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7037-L7041" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7030-L7034" target="_blank">source</a>]
 ---
 ---@param featureID integer
 function Spring.GetFeatureCollisionVolumeData(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7052-L7056" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7045-L7049" target="_blank">source</a>]
 ---
 ---@param featureID integer
 function Spring.GetFeaturePieceCollisionVolumeData(featureID) end
 
 ---Projectile state
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7063-L7067" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7056-L7060" target="_blank">source</a>]
 ---
 ---@section projectile_state
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7070-L7077" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7063-L7070" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@return number? posX
@@ -1706,7 +1706,7 @@ function Spring.GetFeaturePieceCollisionVolumeData(featureID) end
 ---@return number posZ
 function Spring.GetProjectilePosition(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7091-L7098" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7084-L7091" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@return number? dirX
@@ -1714,7 +1714,7 @@ function Spring.GetProjectilePosition(projectileID) end
 ---@return number dirZ
 function Spring.GetProjectileDirection(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7112-L7120" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7105-L7113" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@return number? velX
@@ -1723,13 +1723,13 @@ function Spring.GetProjectileDirection(projectileID) end
 ---@return number velW
 function Spring.GetProjectileVelocity(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7127-L7132" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7120-L7125" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@return number?
 function Spring.GetProjectileGravity(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7146-L7156" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7139-L7149" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@return number? explosionFlags encoded bitwise with SHATTER = 1, EXPLODE = 2, EXPLODE_ON_HIT = 2, FALL = 4, SMOKE = 8, FIRE = 16, NONE = 32, NO_CEG_TRAIL = 64, NO_HEATCLOUD = 128
@@ -1740,7 +1740,7 @@ function Spring.GetProjectileGravity(projectileID) end
 ---@return number spinVectorZ
 function Spring.GetPieceProjectileParams(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7176-L7186" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7169-L7179" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@return number? targetTypeInt where
@@ -1751,44 +1751,44 @@ function Spring.GetPieceProjectileParams(projectileID) end
 ---@return number|float3 target targetID or targetPos when targetTypeInt == string.byte('g')
 function Spring.GetProjectileTarget(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7228-L7233" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7221-L7226" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@return nil|boolean
 function Spring.GetProjectileIsIntercepted(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7248-L7253" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7241-L7246" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@return number?
 function Spring.GetProjectileTimeToLive(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7268-L7273" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7261-L7266" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@return number?
 function Spring.GetProjectileOwnerID(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7290-L7295" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7283-L7288" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@return number?
 function Spring.GetProjectileTeamID(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7311-L7316" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7304-L7309" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@return number?
 function Spring.GetProjectileAllyTeamID(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7332-L7338" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7325-L7331" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@return nil|boolean weapon
 ---@return boolean piece
 function Spring.GetProjectileType(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7352-L7360" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7345-L7353" target="_blank">source</a>]
 ---
 ---Using this to get a weaponDefID is HIGHLY preferred to indexing WeaponDefNames via GetProjectileName
 ---
@@ -1796,7 +1796,7 @@ function Spring.GetProjectileType(projectileID) end
 ---@return number?
 function Spring.GetProjectileDefID(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7381-L7402" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7374-L7395" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@param tag string one of:
@@ -1820,11 +1820,11 @@ function Spring.GetProjectileDamages(projectileID, tag) end
 
 ---Ground
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7422-L7426" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7415-L7419" target="_blank">source</a>]
 ---
 ---@section ground
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7429-L7436" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7422-L7429" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -1836,7 +1836,7 @@ function Spring.IsPosInMap(x, z) end
 ---
 ---On sea, this returns the negative depth of the seafloor
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7470-L7478" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7463-L7471" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -1848,7 +1848,7 @@ function Spring.GetGroundHeight(x, z) end
 ---Water may at some point become shaped (rivers etc) but for now it is always a flat plane.
 ---Use this function instead of GetWaterLevel to denote you are relying on that assumption.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7487-L7495" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7480-L7488" target="_blank">source</a>]
 ---
 ---@see Spring.GetWaterLevel
 ---@return number waterPlaneLevel
@@ -1859,7 +1859,7 @@ function Spring.GetWaterPlaneLevel() end
 ---Water is currently a flat plane, so this returns the same value regardless of XZ.
 ---However water may become more dynamic at some point so by using this you are future-proof.
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7502-L7511" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7495-L7504" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -1870,14 +1870,14 @@ function Spring.GetWaterLevel(x, z) end
 ---
 ---Returns the original height before the ground got deformed
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7521-L7529" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7514-L7522" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
 ---@return number
 function Spring.GetGroundOrigHeight(x, z) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7539-L7549" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7532-L7542" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -1888,7 +1888,7 @@ function Spring.GetGroundOrigHeight(x, z) end
 ---@return number slope
 function Spring.GetGroundNormal(x, z, smoothed) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7569-L7585" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7562-L7578" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -1905,10 +1905,10 @@ function Spring.GetGroundNormal(x, z, smoothed) end
 ---@return boolean receiveTracks
 function Spring.GetGroundInfo(x, z) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7640-L7643" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7633-L7636" target="_blank">source</a>]
 function Spring.GetGroundBlocked() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7685-L7692" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7678-L7685" target="_blank">source</a>]
 ---
 ---@return number initMinHeight
 ---@return number initMaxHeight
@@ -1916,7 +1916,7 @@ function Spring.GetGroundBlocked() end
 ---@return number currMaxHeight
 function Spring.GetGroundExtremes() end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7703-L7715" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7696-L7708" target="_blank">source</a>]
 ---
 ---@param terrainTypeInfo number
 ---@return number index
@@ -1929,14 +1929,14 @@ function Spring.GetGroundExtremes() end
 ---@return boolean receiveTracks
 function Spring.GetTerrainTypeData(terrainTypeInfo) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7727-L7733" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7720-L7726" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
 ---@return number
 function Spring.GetGrass(x, z) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7743-L7749" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7736-L7742" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -1945,11 +1945,11 @@ function Spring.GetSmoothMeshHeight(x, z) end
 
 ---Tests
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7760-L7764" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7753-L7757" target="_blank">source</a>]
 ---
 ---@section tests
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7767-L7781" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7760-L7774" target="_blank">source</a>]
 ---
 ---@param unitDefID integer
 ---@param posX number
@@ -1964,7 +1964,7 @@ function Spring.GetSmoothMeshHeight(x, z) end
 ---@return boolean
 function Spring.TestMoveOrder(unitDefID, posX, posY, posZ, dirX, dirY, dirZ, testTerrain, testObjects, centerOnly) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7824-L7830" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7817-L7823" target="_blank">source</a>]
 ---
 ---@alias BuildOrderBlockedStatus
 ---| 0 # blocked
@@ -1972,7 +1972,7 @@ function Spring.TestMoveOrder(unitDefID, posX, posY, posZ, dirX, dirY, dirZ, tes
 ---| 2 # reclaimable
 ---| 3 # open
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7832-L7841" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7825-L7834" target="_blank">source</a>]
 ---
 ---@param unitDefID integer
 ---@param x number
@@ -1985,7 +1985,7 @@ function Spring.TestBuildOrder(unitDefID, x, y, z, facing) end
 
 ---Snaps a position to the building grid
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7882-L7893" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7875-L7886" target="_blank">source</a>]
 ---
 ---@param unitDefID integer
 ---@param posX number
@@ -1997,7 +1997,7 @@ function Spring.TestBuildOrder(unitDefID, x, y, z, facing) end
 ---@return number buildPosZ
 function Spring.Pos2BuildPos(unitDefID, posX, posY, posZ, buildFacing) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7911-L7925" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7904-L7918" target="_blank">source</a>]
 ---
 ---@param teamID integer
 ---@param unitDefID integer
@@ -2014,11 +2014,11 @@ function Spring.ClosestBuildPos(teamID, unitDefID, posX, posY, posZ, searchRadiu
 
 ---Visibility
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7946-L7950" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7939-L7943" target="_blank">source</a>]
 ---
 ---@section visibility
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L7979-L7990" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L7972-L7983" target="_blank">source</a>]
 ---
 ---@param posX number
 ---@param posY number
@@ -2030,7 +2030,7 @@ function Spring.ClosestBuildPos(teamID, unitDefID, posX, posY, posZ, searchRadiu
 ---@return boolean inJammer
 function Spring.GetPositionLosState(posX, posY, posZ, allyTeamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8019-L8027" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8012-L8020" target="_blank">source</a>]
 ---
 ---@param posX number
 ---@param posY number
@@ -2039,7 +2039,7 @@ function Spring.GetPositionLosState(posX, posY, posZ, allyTeamID) end
 ---@return boolean
 function Spring.IsPosInLos(posX, posY, posZ, allyTeamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8045-L8053" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8038-L8046" target="_blank">source</a>]
 ---
 ---@param posX number
 ---@param posY number
@@ -2048,7 +2048,7 @@ function Spring.IsPosInLos(posX, posY, posZ, allyTeamID) end
 ---@return boolean
 function Spring.IsPosInRadar(posX, posY, posZ, allyTeamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8071-L8079" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8064-L8072" target="_blank">source</a>]
 ---
 ---@param posX number
 ---@param posY number
@@ -2057,7 +2057,7 @@ function Spring.IsPosInRadar(posX, posY, posZ, allyTeamID) end
 ---@return boolean
 function Spring.IsPosInAirLos(posX, posY, posZ, allyTeamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8097-L8110" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8090-L8103" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param allyTeamID integer?
@@ -2072,7 +2072,7 @@ function Spring.IsPosInAirLos(posX, posY, posZ, allyTeamID) end
 ---- `8`: `LOS_CONTRADAR` the unit has continuously been in radar since it was last inlos by the allyteam
 function Spring.GetUnitLosState(unitID, allyTeamID, raw) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8111-L8118" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8104-L8111" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param allyTeamID integer?
@@ -2081,28 +2081,28 @@ function Spring.GetUnitLosState(unitID, allyTeamID, raw) end
 ---A table of LOS state, or `nil` if `unitID` is invalid.
 function Spring.GetUnitLosState(unitID, allyTeamID, raw) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8161-L8167" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8154-L8160" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param allyTeamID integer
 ---@return boolean inLos
 function Spring.IsUnitInLos(unitID, allyTeamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8185-L8191" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8178-L8184" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param allyTeamID integer
 ---@return boolean inAirLos
 function Spring.IsUnitInAirLos(unitID, allyTeamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8209-L8215" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8202-L8208" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param allyTeamID integer
 ---@return boolean inRadar
 function Spring.IsUnitInRadar(unitID, allyTeamID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8233-L8239" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8226-L8232" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param allyTeamID integer
@@ -2111,11 +2111,11 @@ function Spring.IsUnitInJammer(unitID, allyTeamID) end
 
 ---Piece/Script
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8272-L8276" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8265-L8269" target="_blank">source</a>]
 ---
 ---@section piecescript
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8381-L8390" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8374-L8383" target="_blank">source</a>]
 ---
 ---@class PieceInfo
 ---@field name string
@@ -2127,50 +2127,50 @@ function Spring.IsUnitInJammer(unitID, allyTeamID) end
 ---@field offset [number, number, number] (x,y,z)
 local PieceInfo = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8532-L8537" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8525-L8530" target="_blank">source</a>]
 ---
 ---@param modelName string
 ---@return number index of the root piece
 function Spring.GetModelRootPiece(modelName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8542-L8547" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8535-L8540" target="_blank">source</a>]
 ---
 ---@param modelName string
 ---@return nil|table<string,number> pieceInfos where keys are piece names and values are indices
 function Spring.GetModelPieceMap(modelName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8553-L8558" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8546-L8551" target="_blank">source</a>]
 ---
 ---@param modelName string
 ---@return nil|string[] pieceNames
 function Spring.GetModelPieceList(modelName) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8564-L8569" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8557-L8562" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number index of the root piece
 function Spring.GetUnitRootPiece(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8574-L8579" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8567-L8572" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return nil|table<string,number> pieceInfos where keys are piece names and values are indices
 function Spring.GetUnitPieceMap(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8585-L8590" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8578-L8583" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return string[] pieceNames
 function Spring.GetUnitPieceList(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8596-L8602" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8589-L8595" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param pieceIndex integer
 ---@return PieceInfo? pieceInfo
 function Spring.GetUnitPieceInfo(unitID, pieceIndex) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8608-L8619" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8601-L8612" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param pieceIndex integer
@@ -2182,7 +2182,7 @@ function Spring.GetUnitPieceInfo(unitID, pieceIndex) end
 ---@return number     dirZ
 function Spring.GetUnitPiecePosDir(unitID, pieceIndex) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8625-L8633" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8618-L8626" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param pieceIndex integer
@@ -2191,7 +2191,7 @@ function Spring.GetUnitPiecePosDir(unitID, pieceIndex) end
 ---@return number     posZ
 function Spring.GetUnitPiecePosition(unitID, pieceIndex) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8639-L8647" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8632-L8640" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param pieceIndex integer
@@ -2200,7 +2200,7 @@ function Spring.GetUnitPiecePosition(unitID, pieceIndex) end
 ---@return number     dirZ
 function Spring.GetUnitPieceDirection(unitID, pieceIndex) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8653-L8673" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8646-L8666" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number|nil m11
@@ -2221,32 +2221,32 @@ function Spring.GetUnitPieceDirection(unitID, pieceIndex) end
 ---@return number m44
 function Spring.GetUnitPieceMatrix(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8678-L8683" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8671-L8676" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return number index of the root piece
 function Spring.GetFeatureRootPiece(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8688-L8693" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8681-L8686" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return table<string,number> pieceInfos where keys are piece names and values are indices
 function Spring.GetFeaturePieceMap(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8699-L8704" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8692-L8697" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return string[] pieceNames
 function Spring.GetFeaturePieceList(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8710-L8716" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8703-L8709" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param pieceIndex integer
 ---@return PieceInfo? pieceInfo
 function Spring.GetFeaturePieceInfo(featureID, pieceIndex) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8722-L8733" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8715-L8726" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param pieceIndex integer
@@ -2258,7 +2258,7 @@ function Spring.GetFeaturePieceInfo(featureID, pieceIndex) end
 ---@return number     dirZ
 function Spring.GetFeaturePiecePosDir(featureID, pieceIndex) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8739-L8747" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8732-L8740" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param pieceIndex integer
@@ -2267,7 +2267,7 @@ function Spring.GetFeaturePiecePosDir(featureID, pieceIndex) end
 ---@return number     posZ
 function Spring.GetFeaturePiecePosition(featureID, pieceIndex) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8753-L8761" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8746-L8754" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param pieceIndex integer
@@ -2276,7 +2276,7 @@ function Spring.GetFeaturePiecePosition(featureID, pieceIndex) end
 ---@return number     dirZ
 function Spring.GetFeaturePieceDirection(featureID, pieceIndex) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8767-L8787" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8760-L8780" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return number|nil m11
@@ -2297,20 +2297,20 @@ function Spring.GetFeaturePieceDirection(featureID, pieceIndex) end
 ---@return number m44
 function Spring.GetFeaturePieceMatrix(featureID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8792-L8798" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8785-L8791" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return integer[] pieceIndices
 function Spring.GetUnitScriptPiece(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8799-L8806" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8792-L8799" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param scriptPiece integer
 ---@return integer pieceIndex
 function Spring.GetUnitScriptPiece(unitID, scriptPiece) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8838-L8845" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8831-L8838" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return table<string,number> where keys are piece names and values are piece indices
@@ -2318,7 +2318,7 @@ function Spring.GetUnitScriptNames(unitID) end
 
 ---Checks for a ground collision in given direction
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8881-L8899" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8874-L8892" target="_blank">source</a>]
 ---
 ---Checks if there is surface (ground, optionally water) towards a vector
 ---and returns the distance to the closest hit and its position, if any.
@@ -2338,7 +2338,7 @@ function Spring.TraceRayGroundInDirection(posX, posY, posZ, dirX, dirY, dirZ, te
 
 ---Checks for a ground collision between two positions
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8910-L8928" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8903-L8921" target="_blank">source</a>]
 ---
 ---Checks if there is surface (ground, optionally water) between two positions
 ---and returns the distance to the closest hit and its position, if any.
@@ -2358,11 +2358,11 @@ function Spring.TraceRayGroundBetweenPositions(startX, startY, startZ, endX, end
 
 ---Misc
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8941-L8945" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8934-L8938" target="_blank">source</a>]
 ---
 ---@section misc
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/ad0e43b1345adbe1102870267c7a7f8658ab52a6/rts/Lua/LuaSyncedRead.cpp#L8948-L8957" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/spring/blob/f27e4137f3f8c9d679c65a3abfa3fced5b27872c/rts/Lua/LuaSyncedRead.cpp#L8941-L8950" target="_blank">source</a>]
 ---
 ---@param allyTeamID integer
 ---@return number? radarErrorSize actual radar error size (when allyTeamID is allied to current team) or base radar error size
