@@ -8,13 +8,13 @@
 
 ---RBO
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/e02502679d09d2f6505baedaed816b9fc2f50da6/rts/Lua/LuaRBOs.cpp#L14-L17" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/0aa5469497c42b9066a304f13f76ea460aa69b07/rts/Lua/LuaRBOs.cpp#L14-L17" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaRBOs.cpp
 
 ---User Data RBO
 ---
----[<a href="https://github.com/beyond-all-reason/spring/blob/e02502679d09d2f6505baedaed816b9fc2f50da6/rts/Lua/LuaRBOs.cpp#L139-L148" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/0aa5469497c42b9066a304f13f76ea460aa69b07/rts/Lua/LuaRBOs.cpp#L139-L148" target="_blank">source</a>]
 ---
 ---@class RBO
 ---@field target GL
@@ -25,7 +25,7 @@
 ---@field samples integer will return globalRendering->msaaLevel for multisampled RBO or 0 otherwise
 local RBO = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/e02502679d09d2f6505baedaed816b9fc2f50da6/rts/Lua/LuaRBOs.cpp#L150-L155" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/0aa5469497c42b9066a304f13f76ea460aa69b07/rts/Lua/LuaRBOs.cpp#L150-L155" target="_blank">source</a>]
 ---
 ---@class CreateRBOData
 ---@field target GL
@@ -33,7 +33,7 @@ local RBO = {}
 ---@field samples number? any number here will result in creation of multisampled RBO
 local CreateRBOData = {}
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/e02502679d09d2f6505baedaed816b9fc2f50da6/rts/Lua/LuaRBOs.cpp#L157-L163" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/0aa5469497c42b9066a304f13f76ea460aa69b07/rts/Lua/LuaRBOs.cpp#L157-L163" target="_blank">source</a>]
 ---
 ---@param xsize integer
 ---@param ysize integer
@@ -41,7 +41,7 @@ local CreateRBOData = {}
 ---@return RBO
 function gl.CreateRBO(xsize, ysize, data) end
 
----[<a href="https://github.com/beyond-all-reason/spring/blob/e02502679d09d2f6505baedaed816b9fc2f50da6/rts/Lua/LuaRBOs.cpp#L233-L236" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/0aa5469497c42b9066a304f13f76ea460aa69b07/rts/Lua/LuaRBOs.cpp#L233-L236" target="_blank">source</a>]
 ---
 ---@param rbo RBO
 function gl.DeleteRBO(rbo) end
