@@ -24,6 +24,13 @@ function RmlUi.LoadFontFace(path) end
 --- @param tag string
 function RmlUi.RegisterTag(tag) end
 
+--- @class RmlDatamodelHandle<T> : {__GetTable:fun():T}
+--- Handle for your data model. It is a wrapper around the model table, marked as type T. 
+--- You can access fields by using normal indexing, but for the moment, the only keys that work are strings. Any index done this way will automatically trigger a rerender.
+--- If you need to index any tables or subtables by anything not a string, you will need to use the underlying table, gotten with `__GetTable`. This will not trigger a rerender.
+--- To trigger a rerender manually, use `_SetDirty`, passing in the name of the top-level entry in your model table that you edited.
+--- @field __SetDirty fun(self, name: string)
+
 --- @class Colourb
 --- Constructs a colour with four channels, each from 0 to 255.
 --- @field alpha integer
@@ -60,7 +67,7 @@ function RmlUi.RegisterTag(tag) end
 --- @field UnloadAllDocuments fun(self: RmlContext) Closes all documents currently loaded with the context.
 --- @field UnloadDocument fun(self: RmlContext, document: RmlDocument) Unloads a specific document within the context.
 --- @field Update fun(self: RmlContext):boolean Updates the context.
---- @field OpenDataModel fun(self: RmlContext, name: string, model: table): DatamodelHandle Loads a data model. The handle's generic type matches that of `model`, but LuaCATS solver can't do that yet.
+--- @field OpenDataModel fun(self: RmlContext, name: string, model: table): RmlDatamodelHandle Loads a data model. The handle's generic type matches that of `model`, but LuaCATS solver can't do that yet.
 
 --- @alias RmlContextDocumentsProxy { [string | integer]: RmlDocument }
 --- Table of documents with the ability to be iterated over or indexed by an integer or a string.
@@ -181,9 +188,12 @@ RmlDocumentModal = {
 --- @field name string
 --- @field value string
 
+--- @alias RmlSelectOptionsProxy {element: RmlElement, value: string}[]
+--- This one has no documentation.
+
 --- @class RmlElementFormControlSelect:RmlElementFormControl
 --- ElementFormControlSelect derives from ElementFormControl. The control has the following functions and properties:
---- @field options SelectOptionsProxy
+--- @field options RmlSelectOptionsProxy
 --- @field selection integer
 --- @field Add fun(self: RmlElementFormControlSelect, rml: string, value: string, before: integer?):integer Adds a new option to the select box. The new option has the string value of value and is represented by the elements created by the RML string rml. The new option will be inserted by the index specified by before; if this is out of bounds (the default), then the new option will be appended onto the list. The index of the new option will be returned.
 --- @field Remove fun(self: RmlElementFormControlSelect, index: integer) Removes an existing option from the selection box.
