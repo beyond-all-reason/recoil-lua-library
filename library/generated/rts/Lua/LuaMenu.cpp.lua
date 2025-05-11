@@ -6,7 +6,7 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8bacfa481d8b63cf1a62733adc6c934ef4818efa/rts/Lua/LuaMenu.cpp#L34-L37" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/a067faa41ef4b3222bbf33f757c79bb5e01c054a/rts/Lua/LuaMenu.cpp#L34-L37" target="_blank">source</a>]
 ---
 ---@class Menu : Callins
 ---@see Callins
@@ -14,19 +14,19 @@ local Menu = {}
 
 ---Called whenever LuaMenu is on with no game loaded.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8bacfa481d8b63cf1a62733adc6c934ef4818efa/rts/Lua/LuaMenu.cpp#L372-L375" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/a067faa41ef4b3222bbf33f757c79bb5e01c054a/rts/Lua/LuaMenu.cpp#L372-L375" target="_blank">source</a>]
 function Menu:ActivateMenu() end
 
 ---Called whenever LuaMenu is on with a game loaded.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8bacfa481d8b63cf1a62733adc6c934ef4818efa/rts/Lua/LuaMenu.cpp#L393-L396" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/a067faa41ef4b3222bbf33f757c79bb5e01c054a/rts/Lua/LuaMenu.cpp#L393-L396" target="_blank">source</a>]
 function Menu:ActivateGame() end
 
 ---Enables Draw{Genesis,Screen,ScreenPost} callins if true is returned,
 ---otherwise they are called once every 30 seconds. Only active when a game
 ---isn't running.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8bacfa481d8b63cf1a62733adc6c934ef4818efa/rts/Lua/LuaMenu.cpp#L413-L420" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/a067faa41ef4b3222bbf33f757c79bb5e01c054a/rts/Lua/LuaMenu.cpp#L413-L420" target="_blank">source</a>]
 ---
 ---@return boolean allowDraw
 function Menu:AllowDraw() end

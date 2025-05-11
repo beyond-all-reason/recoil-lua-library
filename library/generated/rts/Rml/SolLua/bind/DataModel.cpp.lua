@@ -11,14 +11,14 @@
 ---If you need to index any tables or subtables by anything not a string, you will need to use the underlying table, gotten with `__GetTable`. This will not trigger a rerender.
 ---To trigger a rerender manually, use `_SetDirty`, passing in the name of the top-level entry in your model table that you edited.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8bacfa481d8b63cf1a62733adc6c934ef4818efa/rts/Rml/SolLua/bind/DataModel.cpp#L60-L66" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/a067faa41ef4b3222bbf33f757c79bb5e01c054a/rts/Rml/SolLua/bind/DataModel.cpp#L60-L66" target="_blank">source</a>]
 ---
 ---@class RmlUi.SolLuaDataModel<T>
 RmlUi.SolLuaDataModel = {}
 
 ---Set a table property dirty to trigger a rerender
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8bacfa481d8b63cf1a62733adc6c934ef4818efa/rts/Rml/SolLua/bind/DataModel.cpp#L71-L75" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/a067faa41ef4b3222bbf33f757c79bb5e01c054a/rts/Rml/SolLua/bind/DataModel.cpp#L71-L75" target="_blank">source</a>]
 ---
 ---@param property string
 function RmlUi.SolLuaDataModel:__SetDirty(property) end

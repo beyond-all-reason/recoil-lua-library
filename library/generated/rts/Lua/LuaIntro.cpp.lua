@@ -6,7 +6,7 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8bacfa481d8b63cf1a62733adc6c934ef4818efa/rts/Lua/LuaIntro.cpp#L49-L52" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/a067faa41ef4b3222bbf33f757c79bb5e01c054a/rts/Lua/LuaIntro.cpp#L49-L52" target="_blank">source</a>]
 ---
 ---@class Intro : Callins
 ---@see Callins
@@ -14,10 +14,10 @@ local Intro = {}
 
 ---Draws custom load screens.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8bacfa481d8b63cf1a62733adc6c934ef4818efa/rts/Lua/LuaIntro.cpp#L332-L336" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/a067faa41ef4b3222bbf33f757c79bb5e01c054a/rts/Lua/LuaIntro.cpp#L332-L336" target="_blank">source</a>]
 function Intro:DrawLoadScreen() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8bacfa481d8b63cf1a62733adc6c934ef4818efa/rts/Lua/LuaIntro.cpp#L359-L363" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/a067faa41ef4b3222bbf33f757c79bb5e01c054a/rts/Lua/LuaIntro.cpp#L359-L363" target="_blank">source</a>]
 ---
 ---@param message string
 ---@param replaceLastLine boolean
