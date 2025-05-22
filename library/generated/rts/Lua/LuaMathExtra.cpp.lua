@@ -22,7 +22,7 @@
 ---        return math.floor(value/2^shift) % 2^24
 ---    end
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L13-L31" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L13-L31" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaMathExtra.cpp
 
@@ -30,7 +30,7 @@
 ---equivalent to `sqrt(x*x + y*y)`, but has better numerical stability and
 ---internally handles intermediate overflows/underflows, but is also slower.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L59-L68" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L59-L68" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -41,7 +41,7 @@ function math.hypot(x, y) end
 ---an n-component vector). Rather quick method that does not handle intermediate
 ---overflows/underflows nor is made for numerical stability.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L76-L85" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L76-L85" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param ... number
@@ -50,7 +50,7 @@ function math.diag(x, ...) end
 
 ---Returns x clamped to min and max boundaries.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L99-L106" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L99-L106" target="_blank">source</a>]
 ---
 ---@param value number
 ---@param min number
@@ -60,7 +60,7 @@ function math.clamp(value, min, max) end
 
 ---Returns 0 if x == 0, 1 if x > 0, -1 if x < 0
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L122-L127" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L122-L127" target="_blank">source</a>]
 ---
 ---@param x number
 ---@return number sign
@@ -68,7 +68,7 @@ function math.sgn(x) end
 
 ---Returns linear interpolation between x and y with ratio a (x+(y-x)*a).
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L143-L150" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L143-L150" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -80,7 +80,7 @@ function math.mix(x, y, a) end
 ---integer. Note that Spring's Lua interpreter uses 32-bit floats for all
 ---numbers so max. precision is ~7 decimal digits.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L162-L171" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L162-L171" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param decimals number
@@ -89,7 +89,7 @@ function math.round(x, decimals) end
 
 ---Returns erf(x), the Gauss error function, between -1 and 1.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L195-L200" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L195-L200" target="_blank">source</a>]
 ---
 ---@param x number
 ---@return number erf
@@ -97,7 +97,7 @@ function math.erf(x) end
 
 ---Applies the smoothstep function
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L208-L217" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L208-L217" target="_blank">source</a>]
 ---
 ---Clamps and rescales v to a value between [0; 1] based on the edges and then applies the smoothstep function.
 ---For example math.smoothstep(10, 25, 15) is 0.259, because 15 is 0.333 of the way from 10 to 25, and smoothstep(0.333) is 0.259
@@ -110,7 +110,7 @@ function math.smoothstep(edge0, edge1, v) end
 
 ---Returns the normalize vector of an given vector.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L225-L231" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L225-L231" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param ... number
@@ -119,7 +119,7 @@ function math.normalize(x, ...) end
 
 ---Returns the bitwise OR of all arguments. Only use up to 24 bit integers.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L271-L276" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L271-L276" target="_blank">source</a>]
 ---
 ---@param ... integer
 ---@return integer result
@@ -127,7 +127,7 @@ function math.bit_or(...) end
 
 ---Returns the bitwise AND of all arguments. Only use up to 24 bit integers.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L288-L293" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L288-L293" target="_blank">source</a>]
 ---
 ---@param ... integer
 ---@return integer result
@@ -135,7 +135,7 @@ function math.bit_and(...) end
 
 ---Returns the bitwise XOR of all arguments. Only use up to 24 bit integers.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L305-L310" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L305-L310" target="_blank">source</a>]
 ---
 ---@param ... integer
 ---@return integer result
@@ -143,7 +143,7 @@ function math.bit_xor(...) end
 
 ---Returns the bitwise NOT of the 24 bit integer argument.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L322-L327" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L322-L327" target="_blank">source</a>]
 ---
 ---@param value integer
 ---@return integer result
@@ -151,7 +151,7 @@ function math.bit_inv(value) end
 
 ---Set each of the bits of a 24 bit integer. Returns result = result OR (1 << a1) OR (1 << a2) OR ...;)
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaMathExtra.cpp#L336-L341" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/ecacb8dc1f3c440cf3e919086edbd60051d87337/rts/Lua/LuaMathExtra.cpp#L336-L341" target="_blank">source</a>]
 ---
 ---@param ... integer
 ---@return integer result
