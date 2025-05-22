@@ -19,7 +19,7 @@
 ---Note the callin won't be executed at the time of calling this method,
 ---but later, on the Update cycle (before other Update and Draw callins).
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaFonts.cpp#L210-L226" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaFonts.cpp#L210-L226" target="_blank">source</a>]
 ---
 ---@param filePath string VFS path to the file, for example "fonts/myfont.ttf". Uses VFS.RAW_FIRST access mode.
 ---@return boolean success
@@ -30,7 +30,7 @@ function gl.AddFallbackFont(filePath) end
 ---See the note at 'AddFallbackFont' about the 'FontsChanged' callin,
 ---it also applies when calling this method.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaFonts.cpp#L238-L245" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaFonts.cpp#L238-L245" target="_blank">source</a>]
 ---
 ---@return nil
 function gl.ClearFallbackFonts() end

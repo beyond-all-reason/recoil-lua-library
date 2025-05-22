@@ -122,56 +122,56 @@
 ---  - `modoptions.lua`
 ---  - `validmaps.lua`
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L27-L145" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L27-L145" target="_blank">source</a>]
 VFS = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L150-L150" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L150-L150" target="_blank">source</a>]
 ---Only select uncompressed files.
 VFS.RAW = "r"
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L152-L152" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L152-L152" target="_blank">source</a>]
 VFS.GAME = "M"
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L154-L154" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L154-L154" target="_blank">source</a>]
 VFS.MAP = "m"
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L156-L156" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L156-L156" target="_blank">source</a>]
 VFS.BASE = "b"
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L158-L158" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L158-L158" target="_blank">source</a>]
 VFS.MENU = "e"
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L160-L160" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L160-L160" target="_blank">source</a>]
 ---Only select compressed files (`.sdz`, `.sd7`).
 VFS.ZIP = "Mmeb"
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L162-L162" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L162-L162" target="_blank">source</a>]
 ---Try uncompressed files first, then compressed.
 VFS.RAW_FIRST = "rMmeb"
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L164-L164" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L164-L164" target="_blank">source</a>]
 ---Try compressed files first, then uncompressed.
 VFS.ZIP_FIRST = "Mmebr"
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L167-L170" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L167-L170" target="_blank">source</a>]
 ---
 ---@deprecated
 ---Older spelling for `VFS.GAME`
 VFS.MOD = "M"
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L172-L175" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L172-L175" target="_blank">source</a>]
 ---
 ---@deprecated
 VFS.RAW_ONLY = "r"
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L177-L180" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L177-L180" target="_blank">source</a>]
 ---
 ---@deprecated
 VFS.ZIP_ONLY = "Mmeb"
 
 ---Loads and runs lua code from a file in the VFS.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L276-L310" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L276-L310" target="_blank">source</a>]
 ---
 ---The path is relative to the main Spring directory, e.g.
 ---
@@ -203,7 +203,7 @@ function VFS.Include(filename, environment, mode) end
 
 ---Load raw text data from the VFS.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L394-L414" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L394-L414" target="_blank">source</a>]
 ---
 ---Returns file contents as a string. Unlike `VFS.Include` the file will not be
 ---executed. This lets you pre-process the code. Use `loadstring` afterwards.
@@ -222,7 +222,7 @@ function VFS.LoadFile(filename, mode) end
 
 ---Check if file exists in VFS.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L445-L470" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L445-L470" target="_blank">source</a>]
 ---
 ---Example usage:
 ---
@@ -246,7 +246,7 @@ function VFS.FileExists(filename, mode) end
 
 ---List files in a directory.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L491-L518" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L491-L518" target="_blank">source</a>]
 ---
 ---Example usage:
 ---
@@ -270,7 +270,7 @@ function VFS.DirList(directory, pattern, mode, recursive) end
 
 ---List sub-directories in a directory.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L550-L580" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L550-L580" target="_blank">source</a>]
 ---
 ---Example usage:
 ---
@@ -295,7 +295,7 @@ function VFS.DirList(directory, pattern, mode, recursive) end
 ---@return string[] dirnames
 function VFS.SubDirs(directory, pattern, mode, recursive) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L608-L623" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L608-L623" target="_blank">source</a>]
 ---
 ---@param filename string
 ---
@@ -309,7 +309,7 @@ function VFS.SubDirs(directory, pattern, mode, recursive) end
 ---@return string? absolutePath
 function VFS.GetFileAbsolutePath(filename, mode) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L647-L662" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L647-L662" target="_blank">source</a>]
 ---
 ---@param filename string
 ---
@@ -326,7 +326,7 @@ function VFS.GetArchiveContainingFile(filename, mode) end
 ---Temporarily load an archive from the VFS and run the given function,
 ---which can make usage of the files in the archive.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L687-L695" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L687-L695" target="_blank">source</a>]
 ---
 ---@param archiveName string
 ---@param fun (...) func
@@ -335,7 +335,7 @@ function VFS.UseArchive(archiveName, fun) end
 
 ---Compresses the specified folder.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L815-L825" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L815-L825" target="_blank">source</a>]
 ---
 ---@param folderPath string
 ---@param archiveType string? (Default: `"zip"`)The compression type (can
@@ -346,19 +346,19 @@ function VFS.UseArchive(archiveName, fun) end
 ---@param mode string?
 function VFS.CompressFolder(folderPath, archiveType, compressedFilePath, includeFolder, mode) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L861-L865" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L861-L865" target="_blank">source</a>]
 ---
 ---@param uncompressed string Data to compress.
 ---@return string? compressed Compressed data, or `nil` on error.
 function VFS.ZlibCompress(uncompressed) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L881-L885" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L881-L885" target="_blank">source</a>]
 ---
 ---@param compressed string Data to decompress.
 ---@return string? uncompressed Uncompressed data, or `nil` on error.
 function VFS.ZlibDecompress(compressed) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L902-L906" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L902-L906" target="_blank">source</a>]
 ---
 ---@alias HashType
 ---| 0 # MD5
@@ -366,7 +366,7 @@ function VFS.ZlibDecompress(compressed) end
 
 ---Calculates hash (in base64 form) of a given string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L908-L915" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L908-L915" target="_blank">source</a>]
 ---
 ---@param input string
 ---@param hashType HashType Hash type.
@@ -375,7 +375,7 @@ function VFS.CalculateHash(input, hashType) end
 
 ---Convert unsigned 8-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L997-L1002" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L997-L1002" target="_blank">source</a>]
 ---
 ---@param ... integer Numbers to pack.
 ---@return string
@@ -383,7 +383,7 @@ function VFS.PackU8(...) end
 
 ---Convert unsigned 8-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1003-L1008" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1003-L1008" target="_blank">source</a>]
 ---
 ---@param numbers integer[] Numbers to pack.
 ---@return string
@@ -391,7 +391,7 @@ function VFS.PackU8(numbers) end
 
 ---Convert unsigned 16-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1011-L1016" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1011-L1016" target="_blank">source</a>]
 ---
 ---@param ... integer Numbers to pack.
 ---@return string
@@ -399,7 +399,7 @@ function VFS.PackU16(...) end
 
 ---Convert unsigned 16-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1017-L1022" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1017-L1022" target="_blank">source</a>]
 ---
 ---@param numbers integer[] Numbers to pack.
 ---@return string
@@ -407,7 +407,7 @@ function VFS.PackU16(numbers) end
 
 ---Convert unsigned 32-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1025-L1030" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1025-L1030" target="_blank">source</a>]
 ---
 ---@param ... integer Numbers to pack.
 ---@return string
@@ -415,7 +415,7 @@ function VFS.PackU32(...) end
 
 ---Convert unsigned 32-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1031-L1036" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1031-L1036" target="_blank">source</a>]
 ---
 ---@param numbers integer[] Numbers to pack.
 ---@return string
@@ -423,7 +423,7 @@ function VFS.PackU32(numbers) end
 
 ---Convert signed 8-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1039-L1044" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1039-L1044" target="_blank">source</a>]
 ---
 ---@param ... integer Numbers to pack.
 ---@return string
@@ -431,7 +431,7 @@ function VFS.PackS8(...) end
 
 ---Convert signed 8-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1045-L1050" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1045-L1050" target="_blank">source</a>]
 ---
 ---@param numbers integer[] Numbers to pack.
 ---@return string
@@ -439,7 +439,7 @@ function VFS.PackS8(numbers) end
 
 ---Convert signed 16-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1053-L1058" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1053-L1058" target="_blank">source</a>]
 ---
 ---@param ... integer Numbers to pack.
 ---@return string
@@ -447,7 +447,7 @@ function VFS.PackS16(...) end
 
 ---Convert signed 16-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1059-L1064" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1059-L1064" target="_blank">source</a>]
 ---
 ---@param numbers integer[] Numbers to pack.
 ---@return string
@@ -455,7 +455,7 @@ function VFS.PackS16(numbers) end
 
 ---Convert signed 32-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1067-L1072" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1067-L1072" target="_blank">source</a>]
 ---
 ---@param ... integer Numbers to pack.
 ---@return string
@@ -463,7 +463,7 @@ function VFS.PackS32(...) end
 
 ---Convert signed 32-bit integer(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1073-L1078" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1073-L1078" target="_blank">source</a>]
 ---
 ---@param numbers integer[] Numbers to pack.
 ---@return string
@@ -471,7 +471,7 @@ function VFS.PackS32(numbers) end
 
 ---Convert signed 32-bit float(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1081-L1086" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1081-L1086" target="_blank">source</a>]
 ---
 ---@param ... integer Numbers to pack.
 ---@return string
@@ -479,7 +479,7 @@ function VFS.PackS32(...) end
 
 ---Convert signed 32-bit float(s) to binary string.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1087-L1092" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1087-L1092" target="_blank">source</a>]
 ---
 ---@param numbers integer[] Numbers to pack.
 ---@return string
@@ -487,7 +487,7 @@ function VFS.PackS32(numbers) end
 
 ---Convert a binary string to an unsigned 8-bit integer.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1140-L1146" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1140-L1146" target="_blank">source</a>]
 ---
 ---@param str string Binary string.
 ---@param pos integer? Byte offset.
@@ -496,7 +496,7 @@ function VFS.UnpackU8(str, pos) end
 
 ---Convert a binary string to an unsigned 16-bit integer.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1149-L1155" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1149-L1155" target="_blank">source</a>]
 ---
 ---@param str string Binary string.
 ---@param pos integer? Byte offset.
@@ -505,7 +505,7 @@ function VFS.UnpackU16(str, pos) end
 
 ---Convert a binary string to an unsigned 32-bit integer.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1158-L1164" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1158-L1164" target="_blank">source</a>]
 ---
 ---@param str string Binary string.
 ---@param pos integer? Byte offset.
@@ -514,7 +514,7 @@ function VFS.UnpackU32(str, pos) end
 
 ---Convert a binary string to a signed 8-bit integer.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1167-L1173" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1167-L1173" target="_blank">source</a>]
 ---
 ---@param str string Binary string.
 ---@param pos integer? Byte offset.
@@ -523,7 +523,7 @@ function VFS.UnpackS8(str, pos) end
 
 ---Convert a binary string to a signed 16-bit integer.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1176-L1182" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1176-L1182" target="_blank">source</a>]
 ---
 ---@param str string Binary string.
 ---@param pos integer? Byte offset.
@@ -532,7 +532,7 @@ function VFS.UnpackS16(str, pos) end
 
 ---Convert a binary string to a signed 32-bit integer.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1185-L1191" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1185-L1191" target="_blank">source</a>]
 ---
 ---@param str string Binary string.
 ---@param pos integer? Byte offset.
@@ -541,7 +541,7 @@ function VFS.UnpackS32(str, pos) end
 
 ---Convert a binary string to a signed 32-bit float.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/507f686be61f7783784eb1c079b39e7f1d081b0e/rts/Lua/LuaVFS.cpp#L1194-L1200" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/4d77899df6bd71eddd4f14ea412095253e64ebbb/rts/Lua/LuaVFS.cpp#L1194-L1200" target="_blank">source</a>]
 ---
 ---@param str string Binary string.
 ---@param pos integer? Byte offset.
