@@ -8,7 +8,7 @@
 
 ---Table extensions
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaTableExtra.cpp#L6-L8" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaTableExtra.cpp#L6-L8" target="_blank">source</a>]
 
 ---Returns a table with preallocated memory
 ---
@@ -17,7 +17,7 @@
 ---a lot of elements and you know the number beforehand,
 ---such as one for each UnitDef, by avoiding reallocation.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaTableExtra.cpp#L10-L21" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaTableExtra.cpp#L10-L21" target="_blank">source</a>]
 ---
 ---@param nArray number hint for count of array elements
 ---@param nHashed number hint for count of hashtable elements

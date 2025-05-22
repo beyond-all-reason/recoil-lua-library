@@ -8,11 +8,11 @@
 
 ---Metal Map Lua API
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaMetalMap.cpp#L13-L16" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaMetalMap.cpp#L13-L16" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaMetalMap.cpp
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaMetalMap.cpp#L34-L38" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaMetalMap.cpp#L34-L38" target="_blank">source</a>]
 ---
 ---@return integer x X coordinate in worldspace / `Game.metalMapSquareSize`.
 ---@return integer z Z coordinate in worldspace / `Game.metalMapSquareSize`.
@@ -20,7 +20,7 @@ function Spring.GetMetalMapSize() end
 
 ---Returns the amount of metal on a single square.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaMetalMap.cpp#L47-L53" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaMetalMap.cpp#L47-L53" target="_blank">source</a>]
 ---
 ---@param x integer X coordinate in worldspace / `Game.metalMapSquareSize`.
 ---@param z integer Z coordinate in worldspace / `Game.metalMapSquareSize`.
@@ -29,7 +29,7 @@ function Spring.GetMetalAmount(x, z) end
 
 ---Sets the amount of metal on a single square.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaMetalMap.cpp#L64-L71" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaMetalMap.cpp#L64-L71" target="_blank">source</a>]
 ---
 ---@param x integer X coordinate in worldspace / `Game.metalMapSquareSize`.
 ---@param z integer Z coordinate in worldspace / `Game.metalMapSquareSize`.
@@ -37,7 +37,7 @@ function Spring.GetMetalAmount(x, z) end
 ---@return nil
 function Spring.SetMetalAmount(x, z, metalAmount) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaMetalMap.cpp#L83-L88" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaMetalMap.cpp#L83-L88" target="_blank">source</a>]
 ---
 ---@param x integer X coordinate in worldspace / `Game.metalMapSquareSize`.
 ---@param z integer Z coordinate in worldspace / `Game.metalMapSquareSize`.

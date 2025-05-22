@@ -6,7 +6,7 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaUtils.cpp#L527-L533" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaUtils.cpp#L527-L533" target="_blank">source</a>]
 ---
 ---@param minMajorVer integer
 ---@param minMinorVer integer? (Default: `0`)
@@ -19,7 +19,7 @@ function Script.IsEngineMinVersion(minMajorVer, minMinorVer, minCommits) end
 ---Note that this has extra fields `internal` and `coded` that are not supported
 ---when creating a command from Lua.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaUtils.cpp#L931-L945" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaUtils.cpp#L931-L945" target="_blank">source</a>]
 ---
 ---@class CommandOptions
 ---@field coded CommandOptionBit|integer Bitmask of command options.
@@ -31,7 +31,7 @@ function Script.IsEngineMinVersion(minMajorVer, minMinorVer, minCommits) end
 ---@field internal boolean
 local CommandOptions = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaUtils.cpp#L980-L988" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaUtils.cpp#L980-L988" target="_blank">source</a>]
 ---
 ---@alias CommandOptionBit
 ---| 4 # Meta (windows/mac/mod4) key.
@@ -41,7 +41,7 @@ local CommandOptions = {}
 ---| 64 # Control key.
 ---| 128 # Alt key.
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaUtils.cpp#L990-L997" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaUtils.cpp#L990-L997" target="_blank">source</a>]
 ---
 ---@alias CommandOptionName
 ---| "right" # Right mouse key.
@@ -50,7 +50,7 @@ local CommandOptions = {}
 ---| "shift" # Shift key.
 ---| "meta" # Meta key (space).
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaUtils.cpp#L999-L1005" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaUtils.cpp#L999-L1005" target="_blank">source</a>]
 ---
 ---@alias CreateCommandOptions
 ---| CommandOptionName[] # An array of option names.
@@ -58,7 +58,7 @@ local CommandOptions = {}
 ---| CommandOptionBit # A specific integer value for a command option.
 ---| integer # A bit mask combination of `CommandOptionBit` values. Pass `0` for no options.
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaUtils.cpp#L1098-L1102" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaUtils.cpp#L1098-L1102" target="_blank">source</a>]
 ---
 ---@alias CreateCommandParams
 ---| number[] # An array of parameters.
@@ -66,7 +66,7 @@ local CommandOptions = {}
 
 ---Used when assigning multiple commands at once.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaUtils.cpp#L1151-L1159" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaUtils.cpp#L1151-L1159" target="_blank">source</a>]
 ---
 ---@class CreateCommand
 ---@field [1] CMD|integer Command ID.
@@ -77,7 +77,7 @@ local CreateCommand = {}
 
 ---Facing direction represented by a string or number.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaUtils.cpp#L1232-L1250" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaUtils.cpp#L1232-L1250" target="_blank">source</a>]
 ---
 ---@see FacingInteger
 ---@alias Facing
@@ -98,14 +98,14 @@ local CreateCommand = {}
 ---
 ---Hint: the default print() writes to STDOUT.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaUtils.cpp#L1388-L1398" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaUtils.cpp#L1388-L1398" target="_blank">source</a>]
 ---
 ---@param arg any
 ---@param ... any
 ---@return nil
 function Spring.Echo(arg, ...) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaUtils.cpp#L1405-L1415" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaUtils.cpp#L1405-L1415" target="_blank">source</a>]
 ---
 ---@enum LOG
 ---@see Spring.Log
@@ -126,7 +126,7 @@ LOG = {
 	FATAL = 60
 }
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaUtils.cpp#L1430-L1440" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaUtils.cpp#L1430-L1440" target="_blank">source</a>]
 ---
 ---@alias LogLevel
 ---| integer
@@ -140,7 +140,7 @@ LOG = {
 
 ---Logs a message to the logfile/console.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaUtils.cpp#L1468-L1475" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaUtils.cpp#L1468-L1475" target="_blank">source</a>]
 ---
 ---@param section string Sets an arbitrary section. Level filtering can be applied per-section
 ---@param logLevel (LogLevel|LOG)? (Default: `"notice"`)
@@ -151,7 +151,7 @@ function Spring.Log(section, logLevel, ...) end
 ---
 ---Contains data about a command.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/2528383479a58177da3f3d47c694c74b6e2e0ba1/rts/Lua/LuaUtils.cpp#L1570-L1589" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/3206e7ea9b3a043b736bcda3d581f41737914c65/rts/Lua/LuaUtils.cpp#L1570-L1589" target="_blank">source</a>]
 ---
 ---@class CommandDescription
 ---@field id (CMD|integer)?
