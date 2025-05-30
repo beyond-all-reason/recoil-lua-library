@@ -6,42 +6,42 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/e2133f68156e8e0a42135ddffe2b87e045dd1d98/rts/Rml/SolLua/bind/Colour.cpp#L64-L64" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b276dffed09b3b4c3036a2300d91d66b4a2dd589/rts/Rml/SolLua/bind/Colour.cpp#L64-L64" target="_blank">source</a>]
 ---@type integer
 RmlUi.Colourb.red = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/e2133f68156e8e0a42135ddffe2b87e045dd1d98/rts/Rml/SolLua/bind/Colour.cpp#L66-L66" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b276dffed09b3b4c3036a2300d91d66b4a2dd589/rts/Rml/SolLua/bind/Colour.cpp#L66-L66" target="_blank">source</a>]
 ---@type integer
 RmlUi.Colourb.green = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/e2133f68156e8e0a42135ddffe2b87e045dd1d98/rts/Rml/SolLua/bind/Colour.cpp#L68-L68" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b276dffed09b3b4c3036a2300d91d66b4a2dd589/rts/Rml/SolLua/bind/Colour.cpp#L68-L68" target="_blank">source</a>]
 ---@type integer
 RmlUi.Colourb.blue = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/e2133f68156e8e0a42135ddffe2b87e045dd1d98/rts/Rml/SolLua/bind/Colour.cpp#L70-L70" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b276dffed09b3b4c3036a2300d91d66b4a2dd589/rts/Rml/SolLua/bind/Colour.cpp#L70-L70" target="_blank">source</a>]
 ---@type integer
 RmlUi.Colourb.alpha = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/e2133f68156e8e0a42135ddffe2b87e045dd1d98/rts/Rml/SolLua/bind/Colour.cpp#L72-L72" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b276dffed09b3b4c3036a2300d91d66b4a2dd589/rts/Rml/SolLua/bind/Colour.cpp#L72-L72" target="_blank">source</a>]
 ---@type [integer, integer, integer, integer]
 RmlUi.Colourb.rgba = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/e2133f68156e8e0a42135ddffe2b87e045dd1d98/rts/Rml/SolLua/bind/Colour.cpp#L84-L84" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b276dffed09b3b4c3036a2300d91d66b4a2dd589/rts/Rml/SolLua/bind/Colour.cpp#L84-L84" target="_blank">source</a>]
 ---@type number
 RmlUi.Colourf.red = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/e2133f68156e8e0a42135ddffe2b87e045dd1d98/rts/Rml/SolLua/bind/Colour.cpp#L86-L86" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b276dffed09b3b4c3036a2300d91d66b4a2dd589/rts/Rml/SolLua/bind/Colour.cpp#L86-L86" target="_blank">source</a>]
 ---@type number
 RmlUi.Colourf.green = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/e2133f68156e8e0a42135ddffe2b87e045dd1d98/rts/Rml/SolLua/bind/Colour.cpp#L88-L88" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b276dffed09b3b4c3036a2300d91d66b4a2dd589/rts/Rml/SolLua/bind/Colour.cpp#L88-L88" target="_blank">source</a>]
 ---@type number
 RmlUi.Colourf.blue = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/e2133f68156e8e0a42135ddffe2b87e045dd1d98/rts/Rml/SolLua/bind/Colour.cpp#L90-L90" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b276dffed09b3b4c3036a2300d91d66b4a2dd589/rts/Rml/SolLua/bind/Colour.cpp#L90-L90" target="_blank">source</a>]
 ---@type number
 RmlUi.Colourf.alpha = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/e2133f68156e8e0a42135ddffe2b87e045dd1d98/rts/Rml/SolLua/bind/Colour.cpp#L92-L92" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b276dffed09b3b4c3036a2300d91d66b4a2dd589/rts/Rml/SolLua/bind/Colour.cpp#L92-L92" target="_blank">source</a>]
 ---@type [number, number, number, number]
 RmlUi.Colourf.rgba = nil
