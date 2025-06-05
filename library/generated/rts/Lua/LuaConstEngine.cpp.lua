@@ -8,11 +8,11 @@
 
 ---Engine constants
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/77c61cfc481a9426ed15b9f406c53efd14ff88e2/rts/Lua/LuaConstEngine.cpp#L10-L13" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstEngine.cpp#L10-L13" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaConstEngine.cpp
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/77c61cfc481a9426ed15b9f406c53efd14ff88e2/rts/Lua/LuaConstEngine.cpp#L15-L27" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstEngine.cpp#L15-L28" target="_blank">source</a>]
 ---
 ---@class FeatureSupport
 ---@field NegativeGetUnitCurrentCommand boolean Whether Spring.GetUnitCurrentCommand allows negative indices to look from the end
@@ -25,11 +25,12 @@
 ---@field noRefundForFactoryCancel boolean Whether there is no refund for factory cancel (100% metal back if false)
 ---@field noOffsetForFeatureID boolean Whether featureID from various interfaces (targetID for Reclaim commands, ownerID from SpringGetGroundDecalOwner, etc) needs to be offset by `Game.maxUnits`
 ---@field noHandicapForReclaim boolean Whether handicap is applied to income from reclaim
+---@field groupAddDoesntSelect boolean Whether 'group add' also selects the group (does both if false)
 local FeatureSupport = {}
 
 ---Engine specific information.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/77c61cfc481a9426ed15b9f406c53efd14ff88e2/rts/Lua/LuaConstEngine.cpp#L29-L44" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstEngine.cpp#L30-L45" target="_blank">source</a>]
 Engine = {
 	---"Major.Minor.PatchSet" for releases, "Major.Minor.PatchSet-CommitNum-gHash branch" otherwise
 	---
