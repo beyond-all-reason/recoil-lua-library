@@ -6,23 +6,23 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Rml/SolLua/bind/ElementDerived.cpp#L44-L46" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Rml/SolLua/bind/ElementDerived.cpp#L44-L46" target="_blank">source</a>]
 ---
 ---@class RmlUi.ElementText : RmlUi.Element
 RmlUi.ElementText = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Rml/SolLua/bind/ElementDerived.cpp#L49-L49" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Rml/SolLua/bind/ElementDerived.cpp#L49-L49" target="_blank">source</a>]
 ---@type string
 RmlUi.ElementText.text = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Rml/SolLua/bind/ElementDerived.cpp#L57-L59" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Rml/SolLua/bind/ElementDerived.cpp#L57-L59" target="_blank">source</a>]
 ---
 ---@class RmlUi.ElementTabSet : RmlUi.Element
 RmlUi.ElementTabSet = {}
 
 ---Sets the contents of a panel to the RML content rml. If index is out-of-bounds, a new panel will be added at the end.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Rml/SolLua/bind/ElementDerived.cpp#L63-L68" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Rml/SolLua/bind/ElementDerived.cpp#L63-L68" target="_blank">source</a>]
 ---
 ---@param index integer
 ---@param rml string
@@ -30,34 +30,34 @@ function RmlUi.ElementTabSet:SetPanel(index, rml) end
 
 ---Sets the contents of a tab to the RML content rml. If index is out-of-bounds, a new tab will be added at the end.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Rml/SolLua/bind/ElementDerived.cpp#L70-L75" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Rml/SolLua/bind/ElementDerived.cpp#L70-L75" target="_blank">source</a>]
 ---
 ---@param index integer
 ---@param rml string
 function RmlUi.ElementTabSet:SetTab(index, rml) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Rml/SolLua/bind/ElementDerived.cpp#L78-L81" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Rml/SolLua/bind/ElementDerived.cpp#L78-L81" target="_blank">source</a>]
 ---
 ---@param index integer
 function RmlUi.ElementTabSet:RemoveTab(index) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Rml/SolLua/bind/ElementDerived.cpp#L85-L85" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Rml/SolLua/bind/ElementDerived.cpp#L85-L85" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementTabSet.active_tab = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Rml/SolLua/bind/ElementDerived.cpp#L89-L89" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Rml/SolLua/bind/ElementDerived.cpp#L89-L89" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementTabSet.num_tabs = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Rml/SolLua/bind/ElementDerived.cpp#L99-L101" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Rml/SolLua/bind/ElementDerived.cpp#L99-L101" target="_blank">source</a>]
 ---
 ---@class RmlUi.ElementProgress : RmlUi.Element
 RmlUi.ElementProgress = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Rml/SolLua/bind/ElementDerived.cpp#L105-L105" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Rml/SolLua/bind/ElementDerived.cpp#L105-L105" target="_blank">source</a>]
 ---@type number
 RmlUi.ElementProgress.value = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Rml/SolLua/bind/ElementDerived.cpp#L107-L107" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Rml/SolLua/bind/ElementDerived.cpp#L107-L107" target="_blank">source</a>]
 ---@type number
 RmlUi.ElementProgress.max = nil

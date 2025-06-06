@@ -8,1356 +8,1356 @@
 
 ---OpenGL Constants
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L12-L15" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L12-L15" target="_blank">source</a>]
 ---
 ---@enum GL
 GL = {
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L26-L26" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L26-L26" target="_blank">source</a>]
 	---
 	---@type integer
 	POINTS = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L28-L28" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L28-L28" target="_blank">source</a>]
 	---
 	---@type integer
 	LINES = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L30-L30" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L30-L30" target="_blank">source</a>]
 	---
 	---@type integer
 	LINE_LOOP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L32-L32" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L32-L32" target="_blank">source</a>]
 	---
 	---@type integer
 	LINE_STRIP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L34-L34" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L34-L34" target="_blank">source</a>]
 	---
 	---@type integer
 	TRIANGLES = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L36-L36" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L36-L36" target="_blank">source</a>]
 	---
 	---@type integer
 	TRIANGLE_STRIP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L38-L38" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L38-L38" target="_blank">source</a>]
 	---
 	---@type integer
 	TRIANGLE_FAN = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L40-L40" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L40-L40" target="_blank">source</a>]
 	---
 	---@type integer
 	QUADS = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L42-L42" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L42-L42" target="_blank">source</a>]
 	---
 	---@type integer
 	QUAD_STRIP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L44-L44" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L44-L44" target="_blank">source</a>]
 	---
 	---@type integer
 	POLYGON = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L47-L47" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L47-L47" target="_blank">source</a>]
 	---
 	---@type integer
 	LINE_STRIP_ADJACENCY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L49-L49" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L49-L49" target="_blank">source</a>]
 	---
 	---@type integer
 	LINES_ADJACENCY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L51-L51" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L51-L51" target="_blank">source</a>]
 	---
 	---@type integer
 	TRIANGLE_STRIP_ADJACENCY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L53-L53" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L53-L53" target="_blank">source</a>]
 	---
 	---@type integer
 	TRIANGLES_ADJACENCY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L55-L55" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L55-L55" target="_blank">source</a>]
 	---
 	---@type integer
 	PATCHES = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L63-L63" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L63-L63" target="_blank">source</a>]
 	---
 	---@type integer
 	ZERO = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L65-L65" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L65-L65" target="_blank">source</a>]
 	---
 	---@type integer
 	ONE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L67-L67" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L67-L67" target="_blank">source</a>]
 	---
 	---@type integer
 	SRC_COLOR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L69-L69" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L69-L69" target="_blank">source</a>]
 	---
 	---@type integer
 	ONE_MINUS_SRC_COLOR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L71-L71" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L71-L71" target="_blank">source</a>]
 	---
 	---@type integer
 	SRC_ALPHA = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L73-L73" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L73-L73" target="_blank">source</a>]
 	---
 	---@type integer
 	ONE_MINUS_SRC_ALPHA = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L75-L75" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L75-L75" target="_blank">source</a>]
 	---
 	---@type integer
 	DST_ALPHA = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L77-L77" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L77-L77" target="_blank">source</a>]
 	---
 	---@type integer
 	ONE_MINUS_DST_ALPHA = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L85-L85" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L85-L85" target="_blank">source</a>]
 	---
 	---@type integer
 	DST_COLOR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L87-L87" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L87-L87" target="_blank">source</a>]
 	---
 	---@type integer
 	ONE_MINUS_DST_COLOR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L89-L89" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L89-L89" target="_blank">source</a>]
 	---
 	---@type integer
 	SRC_ALPHA_SATURATE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L92-L92" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L92-L92" target="_blank">source</a>]
 	---
 	---@type integer
 	FUNC_ADD = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L94-L94" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L94-L94" target="_blank">source</a>]
 	---
 	---@type integer
 	FUNC_SUBTRACT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L96-L96" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L96-L96" target="_blank">source</a>]
 	---
 	---@type integer
 	FUNC_REVERSE_SUBTRACT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L98-L98" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L98-L98" target="_blank">source</a>]
 	---
 	---@type integer
 	MIN = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L100-L100" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L100-L100" target="_blank">source</a>]
 	---
 	---@type integer
 	MAX = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L108-L108" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L108-L108" target="_blank">source</a>]
 	---
 	---@type integer
 	NEVER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L110-L110" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L110-L110" target="_blank">source</a>]
 	---
 	---@type integer
 	LESS = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L112-L112" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L112-L112" target="_blank">source</a>]
 	---
 	---@type integer
 	EQUAL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L114-L114" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L114-L114" target="_blank">source</a>]
 	---
 	---@type integer
 	LEQUAL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L116-L116" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L116-L116" target="_blank">source</a>]
 	---
 	---@type integer
 	GREATER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L118-L118" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L118-L118" target="_blank">source</a>]
 	---
 	---@type integer
 	NOTEQUAL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L120-L120" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L120-L120" target="_blank">source</a>]
 	---
 	---@type integer
 	GEQUAL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L122-L122" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L122-L122" target="_blank">source</a>]
 	---
 	---@type integer
 	ALWAYS = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L130-L130" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L130-L130" target="_blank">source</a>]
 	---
 	---@type integer
 	CLEAR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L132-L132" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L132-L132" target="_blank">source</a>]
 	---
 	---@type integer
 	AND = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L134-L134" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L134-L134" target="_blank">source</a>]
 	---
 	---@type integer
 	AND_REVERSE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L136-L136" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L136-L136" target="_blank">source</a>]
 	---
 	---@type integer
 	COPY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L138-L138" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L138-L138" target="_blank">source</a>]
 	---
 	---@type integer
 	AND_INVERTED = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L140-L140" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L140-L140" target="_blank">source</a>]
 	---
 	---@type integer
 	NOOP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L142-L142" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L142-L142" target="_blank">source</a>]
 	---
 	---@type integer
 	XOR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L144-L144" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L144-L144" target="_blank">source</a>]
 	---
 	---@type integer
 	OR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L146-L146" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L146-L146" target="_blank">source</a>]
 	---
 	---@type integer
 	NOR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L148-L148" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L148-L148" target="_blank">source</a>]
 	---
 	---@type integer
 	EQUIV = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L150-L150" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L150-L150" target="_blank">source</a>]
 	---
 	---@type integer
 	INVERT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L152-L152" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L152-L152" target="_blank">source</a>]
 	---
 	---@type integer
 	OR_REVERSE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L154-L154" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L154-L154" target="_blank">source</a>]
 	---
 	---@type integer
 	COPY_INVERTED = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L156-L156" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L156-L156" target="_blank">source</a>]
 	---
 	---@type integer
 	OR_INVERTED = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L158-L158" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L158-L158" target="_blank">source</a>]
 	---
 	---@type integer
 	NAND = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L160-L160" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L160-L160" target="_blank">source</a>]
 	---
 	---@type integer
 	SET = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L168-L168" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L168-L168" target="_blank">source</a>]
 	---
 	---@type integer
 	BACK = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L170-L170" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L170-L170" target="_blank">source</a>]
 	---
 	---@type integer
 	FRONT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L172-L172" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L172-L172" target="_blank">source</a>]
 	---
 	---@type integer
 	FRONT_AND_BACK = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L180-L180" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L180-L180" target="_blank">source</a>]
 	---
 	---@type integer
 	POINT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L182-L182" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L182-L182" target="_blank">source</a>]
 	---
 	---@type integer
 	LINE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L184-L184" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L184-L184" target="_blank">source</a>]
 	---
 	---@type integer
 	FILL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L192-L192" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L192-L192" target="_blank">source</a>]
 	---
 	---@type integer
 	FLAT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L194-L194" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L194-L194" target="_blank">source</a>]
 	---
 	---@type integer
 	SMOOTH = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L202-L202" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L202-L202" target="_blank">source</a>]
 	---
 	---@type integer
 	MODELVIEW = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L204-L204" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L204-L204" target="_blank">source</a>]
 	---
 	---@type integer
 	PROJECTION = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L206-L206" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L206-L206" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L214-L214" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L214-L214" target="_blank">source</a>]
 	---
 	---@type integer
 	NEAREST = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L216-L216" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L216-L216" target="_blank">source</a>]
 	---
 	---@type integer
 	LINEAR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L218-L218" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L218-L218" target="_blank">source</a>]
 	---
 	---@type integer
 	NEAREST_MIPMAP_NEAREST = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L220-L220" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L220-L220" target="_blank">source</a>]
 	---
 	---@type integer
 	LINEAR_MIPMAP_NEAREST = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L222-L222" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L222-L222" target="_blank">source</a>]
 	---
 	---@type integer
 	NEAREST_MIPMAP_LINEAR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L224-L224" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L224-L224" target="_blank">source</a>]
 	---
 	---@type integer
 	LINEAR_MIPMAP_LINEAR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L232-L232" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L232-L232" target="_blank">source</a>]
 	---
 	---@type integer
 	REPEAT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L234-L234" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L234-L234" target="_blank">source</a>]
 	---
 	---@type integer
 	MIRRORED_REPEAT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L236-L236" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L236-L236" target="_blank">source</a>]
 	---
 	---@type integer
 	CLAMP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L238-L238" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L238-L238" target="_blank">source</a>]
 	---
 	---@type integer
 	CLAMP_TO_EDGE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L240-L240" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L240-L240" target="_blank">source</a>]
 	---
 	---@type integer
 	CLAMP_TO_BORDER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L248-L248" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L248-L248" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE_ENV = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L250-L250" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L250-L250" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE_ENV_MODE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L252-L252" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L252-L252" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE_ENV_COLOR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L254-L254" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L254-L254" target="_blank">source</a>]
 	---
 	---@type integer
 	MODULATE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L256-L256" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L256-L256" target="_blank">source</a>]
 	---
 	---@type integer
 	DECAL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L258-L258" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L258-L258" target="_blank">source</a>]
 	---
 	---@type integer
 	BLEND = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L260-L260" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L260-L260" target="_blank">source</a>]
 	---
 	---@type integer
 	REPLACE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L263-L263" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L263-L263" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE_FILTER_CONTROL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L265-L265" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L265-L265" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE_LOD_BIAS = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L273-L273" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L273-L273" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE_GEN_MODE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L275-L275" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L275-L275" target="_blank">source</a>]
 	---
 	---@type integer
 	EYE_PLANE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L277-L277" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L277-L277" target="_blank">source</a>]
 	---
 	---@type integer
 	OBJECT_PLANE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L279-L279" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L279-L279" target="_blank">source</a>]
 	---
 	---@type integer
 	EYE_LINEAR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L281-L281" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L281-L281" target="_blank">source</a>]
 	---
 	---@type integer
 	OBJECT_LINEAR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L283-L283" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L283-L283" target="_blank">source</a>]
 	---
 	---@type integer
 	SPHERE_MAP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L285-L285" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L285-L285" target="_blank">source</a>]
 	---
 	---@type integer
 	NORMAL_MAP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L287-L287" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L287-L287" target="_blank">source</a>]
 	---
 	---@type integer
 	REFLECTION_MAP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L289-L289" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L289-L289" target="_blank">source</a>]
 	---
 	---@type integer
 	S = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L291-L291" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L291-L291" target="_blank">source</a>]
 	---
 	---@type integer
 	T = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L293-L293" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L293-L293" target="_blank">source</a>]
 	---
 	---@type integer
 	R = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L295-L295" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L295-L295" target="_blank">source</a>]
 	---
 	---@type integer
 	Q = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L303-L303" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L303-L303" target="_blank">source</a>]
 	---
 	---@type integer
 	CURRENT_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L305-L305" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L305-L305" target="_blank">source</a>]
 	---
 	---@type integer
 	POINT_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L307-L307" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L307-L307" target="_blank">source</a>]
 	---
 	---@type integer
 	LINE_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L309-L309" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L309-L309" target="_blank">source</a>]
 	---
 	---@type integer
 	POLYGON_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L311-L311" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L311-L311" target="_blank">source</a>]
 	---
 	---@type integer
 	POLYGON_STIPPLE_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L313-L313" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L313-L313" target="_blank">source</a>]
 	---
 	---@type integer
 	PIXEL_MODE_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L315-L315" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L315-L315" target="_blank">source</a>]
 	---
 	---@type integer
 	LIGHTING_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L317-L317" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L317-L317" target="_blank">source</a>]
 	---
 	---@type integer
 	FOG_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L319-L319" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L319-L319" target="_blank">source</a>]
 	---
 	---@type integer
 	DEPTH_BUFFER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L321-L321" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L321-L321" target="_blank">source</a>]
 	---
 	---@type integer
 	ACCUM_BUFFER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L323-L323" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L323-L323" target="_blank">source</a>]
 	---
 	---@type integer
 	STENCIL_BUFFER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L325-L325" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L325-L325" target="_blank">source</a>]
 	---
 	---@type integer
 	VIEWPORT_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L327-L327" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L327-L327" target="_blank">source</a>]
 	---
 	---@type integer
 	TRANSFORM_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L329-L329" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L329-L329" target="_blank">source</a>]
 	---
 	---@type integer
 	ENABLE_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L331-L331" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L331-L331" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_BUFFER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L333-L333" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L333-L333" target="_blank">source</a>]
 	---
 	---@type integer
 	HINT_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L335-L335" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L335-L335" target="_blank">source</a>]
 	---
 	---@type integer
 	EVAL_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L337-L337" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L337-L337" target="_blank">source</a>]
 	---
 	---@type integer
 	LIST_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L339-L339" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L339-L339" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L341-L341" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L341-L341" target="_blank">source</a>]
 	---
 	---@type integer
 	SCISSOR_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L343-L343" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L343-L343" target="_blank">source</a>]
 	---
 	---@type integer
 	ALL_ATTRIB_BITS = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L352-L352" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L352-L352" target="_blank">source</a>]
 	---
 	---@type integer
 	FOG_HINT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L354-L354" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L354-L354" target="_blank">source</a>]
 	---
 	---@type integer
 	PERSPECTIVE_CORRECTION_HINT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L362-L362" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L362-L362" target="_blank">source</a>]
 	---
 	---@type integer
 	DONT_CARE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L364-L364" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L364-L364" target="_blank">source</a>]
 	---
 	---@type integer
 	FASTEST = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L366-L366" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L366-L366" target="_blank">source</a>]
 	---
 	---@type integer
 	NICEST = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L374-L374" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L374-L374" target="_blank">source</a>]
 	---
 	---@type integer
 	AMBIENT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L376-L376" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L376-L376" target="_blank">source</a>]
 	---
 	---@type integer
 	DIFFUSE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L378-L378" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L378-L378" target="_blank">source</a>]
 	---
 	---@type integer
 	SPECULAR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L380-L380" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L380-L380" target="_blank">source</a>]
 	---
 	---@type integer
 	POSITION = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L382-L382" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L382-L382" target="_blank">source</a>]
 	---
 	---@type integer
 	SPOT_DIRECTION = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L384-L384" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L384-L384" target="_blank">source</a>]
 	---
 	---@type integer
 	SPOT_EXPONENT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L386-L386" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L386-L386" target="_blank">source</a>]
 	---
 	---@type integer
 	SPOT_CUTOFF = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L388-L388" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L388-L388" target="_blank">source</a>]
 	---
 	---@type integer
 	CONSTANT_ATTENUATION = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L390-L390" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L390-L390" target="_blank">source</a>]
 	---
 	---@type integer
 	LINEAR_ATTENUATION = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L392-L392" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L392-L392" target="_blank">source</a>]
 	---
 	---@type integer
 	QUADRATIC_ATTENUATION = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L400-L400" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L400-L400" target="_blank">source</a>]
 	---
 	---@type integer
 	VERTEX_SHADER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L402-L402" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L402-L402" target="_blank">source</a>]
 	---
 	---@type integer
 	TESS_CONTROL_SHADER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L404-L404" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L404-L404" target="_blank">source</a>]
 	---
 	---@type integer
 	TESS_EVALUATION_SHADER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L406-L406" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L406-L406" target="_blank">source</a>]
 	---
 	---@type integer
 	GEOMETRY_SHADER_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L408-L408" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L408-L408" target="_blank">source</a>]
 	---
 	---@type integer
 	FRAGMENT_SHADER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L416-L416" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L416-L416" target="_blank">source</a>]
 	---
 	---@type integer
 	GEOMETRY_INPUT_TYPE_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L418-L418" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L418-L418" target="_blank">source</a>]
 	---
 	---@type integer
 	GEOMETRY_OUTPUT_TYPE_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L420-L420" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L420-L420" target="_blank">source</a>]
 	---
 	---@type integer
 	GEOMETRY_VERTICES_OUT_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L428-L428" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L428-L428" target="_blank">source</a>]
 	---
 	---@type integer
 	PATCH_VERTICES = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L430-L430" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L430-L430" target="_blank">source</a>]
 	---
 	---@type integer
 	PATCH_DEFAULT_OUTER_LEVEL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L432-L432" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L432-L432" target="_blank">source</a>]
 	---
 	---@type integer
 	PATCH_DEFAULT_INNER_LEVEL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L440-L440" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L440-L440" target="_blank">source</a>]
 	---
 	---@type integer
 	BYTE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L442-L442" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L442-L442" target="_blank">source</a>]
 	---
 	---@type integer
 	UNSIGNED_BYTE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L444-L444" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L444-L444" target="_blank">source</a>]
 	---
 	---@type integer
 	SHORT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L446-L446" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L446-L446" target="_blank">source</a>]
 	---
 	---@type integer
 	UNSIGNED_SHORT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L448-L448" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L448-L448" target="_blank">source</a>]
 	---
 	---@type integer
 	INT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L450-L450" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L450-L450" target="_blank">source</a>]
 	---
 	---@type integer
 	UNSIGNED_INT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L452-L452" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L452-L452" target="_blank">source</a>]
 	---
 	---@type integer
 	FLOAT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L454-L454" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L454-L454" target="_blank">source</a>]
 	---
 	---@type integer
 	FLOAT_VEC4 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L456-L456" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L456-L456" target="_blank">source</a>]
 	---
 	---@type integer
 	INT_VEC4 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L458-L458" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L458-L458" target="_blank">source</a>]
 	---
 	---@type integer
 	UNSIGNED_INT_VEC4 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L460-L460" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L460-L460" target="_blank">source</a>]
 	---
 	---@type integer
 	FLOAT_MAT4 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L468-L468" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L468-L468" target="_blank">source</a>]
 	---
 	---@type integer
 	ELEMENT_ARRAY_BUFFER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L470-L470" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L470-L470" target="_blank">source</a>]
 	---
 	---@type integer
 	ARRAY_BUFFER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L472-L472" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L472-L472" target="_blank">source</a>]
 	---
 	---@type integer
 	UNIFORM_BUFFER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L474-L474" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L474-L474" target="_blank">source</a>]
 	---
 	---@type integer
 	SHADER_STORAGE_BUFFER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L478-L478" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L478-L478" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE_1D = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L480-L480" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L480-L480" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE_2D = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L482-L482" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L482-L482" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE_3D = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L484-L484" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L484-L484" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE_CUBE_MAP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L486-L486" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L486-L486" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE_2D_MULTISAMPLE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L490-L490" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L490-L490" target="_blank">source</a>]
 	---
 	---@type integer
 	RGBA32F = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L492-L492" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L492-L492" target="_blank">source</a>]
 	---
 	---@type integer
 	RGBA16F = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L494-L494" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L494-L494" target="_blank">source</a>]
 	---
 	---@type integer
 	RG32F = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L496-L496" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L496-L496" target="_blank">source</a>]
 	---
 	---@type integer
 	RG16F = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L498-L498" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L498-L498" target="_blank">source</a>]
 	---
 	---@type integer
 	R11F_G11F_B10F = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L500-L500" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L500-L500" target="_blank">source</a>]
 	---
 	---@type integer
 	R32F = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L502-L502" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L502-L502" target="_blank">source</a>]
 	---
 	---@type integer
 	R16F = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L504-L504" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L504-L504" target="_blank">source</a>]
 	---
 	---@type integer
 	RGBA32UI = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L506-L506" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L506-L506" target="_blank">source</a>]
 	---
 	---@type integer
 	RGBA16UI = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L508-L508" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L508-L508" target="_blank">source</a>]
 	---
 	---@type integer
 	RGB10_A2UI = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L510-L510" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L510-L510" target="_blank">source</a>]
 	---
 	---@type integer
 	RGBA8UI = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L512-L512" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L512-L512" target="_blank">source</a>]
 	---
 	---@type integer
 	RG32UI = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L514-L514" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L514-L514" target="_blank">source</a>]
 	---
 	---@type integer
 	RG16UI = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L516-L516" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L516-L516" target="_blank">source</a>]
 	---
 	---@type integer
 	RG8UI = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L518-L518" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L518-L518" target="_blank">source</a>]
 	---
 	---@type integer
 	R32UI = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L520-L520" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L520-L520" target="_blank">source</a>]
 	---
 	---@type integer
 	R16UI = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L522-L522" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L522-L522" target="_blank">source</a>]
 	---
 	---@type integer
 	R8UI = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L524-L524" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L524-L524" target="_blank">source</a>]
 	---
 	---@type integer
 	RGBA32I = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L526-L526" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L526-L526" target="_blank">source</a>]
 	---
 	---@type integer
 	RGBA16I = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L528-L528" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L528-L528" target="_blank">source</a>]
 	---
 	---@type integer
 	RGBA8I = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L530-L530" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L530-L530" target="_blank">source</a>]
 	---
 	---@type integer
 	RG32I = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L532-L532" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L532-L532" target="_blank">source</a>]
 	---
 	---@type integer
 	RG16I = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L534-L534" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L534-L534" target="_blank">source</a>]
 	---
 	---@type integer
 	RG8I = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L536-L536" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L536-L536" target="_blank">source</a>]
 	---
 	---@type integer
 	R32I = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L538-L538" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L538-L538" target="_blank">source</a>]
 	---
 	---@type integer
 	R16I = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L540-L540" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L540-L540" target="_blank">source</a>]
 	---
 	---@type integer
 	R8I = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L542-L542" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L542-L542" target="_blank">source</a>]
 	---
 	---@type integer
 	RGBA16 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L544-L544" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L544-L544" target="_blank">source</a>]
 	---
 	---@type integer
 	RGB10_A2 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L546-L546" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L546-L546" target="_blank">source</a>]
 	---
 	---@type integer
 	RGBA8 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L548-L548" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L548-L548" target="_blank">source</a>]
 	---
 	---@type integer
 	RG16 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L550-L550" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L550-L550" target="_blank">source</a>]
 	---
 	---@type integer
 	RG8 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L552-L552" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L552-L552" target="_blank">source</a>]
 	---
 	---@type integer
 	R16 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L554-L554" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L554-L554" target="_blank">source</a>]
 	---
 	---@type integer
 	R8 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L556-L556" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L556-L556" target="_blank">source</a>]
 	---
 	---@type integer
 	RGBA16_SNORM = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L558-L558" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L558-L558" target="_blank">source</a>]
 	---
 	---@type integer
 	RGBA8_SNORM = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L560-L560" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L560-L560" target="_blank">source</a>]
 	---
 	---@type integer
 	RG16_SNORM = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L562-L562" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L562-L562" target="_blank">source</a>]
 	---
 	---@type integer
 	RG8_SNORM = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L564-L564" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L564-L564" target="_blank">source</a>]
 	---
 	---@type integer
 	R16_SNORM = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L566-L566" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L566-L566" target="_blank">source</a>]
 	---
 	---@type integer
 	R8_SNORM = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L568-L568" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L568-L568" target="_blank">source</a>]
 	---
 	---@type integer
 	DEPTH_COMPONENT16 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L570-L570" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L570-L570" target="_blank">source</a>]
 	---
 	---@type integer
 	DEPTH_COMPONENT24 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L572-L572" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L572-L572" target="_blank">source</a>]
 	---
 	---@type integer
 	DEPTH_COMPONENT32 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L574-L574" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L574-L574" target="_blank">source</a>]
 	---
 	---@type integer
 	DEPTH_COMPONENT32F = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L579-L579" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L579-L579" target="_blank">source</a>]
 	---
 	---@type integer
 	READ_ONLY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L581-L581" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L581-L581" target="_blank">source</a>]
 	---
 	---@type integer
 	WRITE_ONLY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L583-L583" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L583-L583" target="_blank">source</a>]
 	---
 	---@type integer
 	READ_WRITE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L588-L588" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L588-L588" target="_blank">source</a>]
 	---
 	---@type integer
 	VERTEX_ATTRIB_ARRAY_BARRIER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L590-L590" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L590-L590" target="_blank">source</a>]
 	---
 	---@type integer
 	ELEMENT_ARRAY_BARRIER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L592-L592" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L592-L592" target="_blank">source</a>]
 	---
 	---@type integer
 	UNIFORM_BARRIER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L594-L594" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L594-L594" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE_FETCH_BARRIER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L596-L596" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L596-L596" target="_blank">source</a>]
 	---
 	---@type integer
 	SHADER_IMAGE_ACCESS_BARRIER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L598-L598" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L598-L598" target="_blank">source</a>]
 	---
 	---@type integer
 	COMMAND_BARRIER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L600-L600" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L600-L600" target="_blank">source</a>]
 	---
 	---@type integer
 	PIXEL_BUFFER_BARRIER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L602-L602" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L602-L602" target="_blank">source</a>]
 	---
 	---@type integer
 	TEXTURE_UPDATE_BARRIER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L604-L604" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L604-L604" target="_blank">source</a>]
 	---
 	---@type integer
 	BUFFER_UPDATE_BARRIER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L606-L606" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L606-L606" target="_blank">source</a>]
 	---
 	---@type integer
 	FRAMEBUFFER_BARRIER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L608-L608" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L608-L608" target="_blank">source</a>]
 	---
 	---@type integer
 	TRANSFORM_FEEDBACK_BARRIER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L610-L610" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L610-L610" target="_blank">source</a>]
 	---
 	---@type integer
 	ATOMIC_COUNTER_BARRIER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L612-L612" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L612-L612" target="_blank">source</a>]
 	---
 	---@type integer
 	SHADER_STORAGE_BARRIER_BIT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L614-L614" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L614-L614" target="_blank">source</a>]
 	---
 	---@type integer
 	ALL_BARRIER_BITS = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L617-L617" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L617-L617" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT0 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L619-L619" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L619-L619" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT1 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L621-L621" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L621-L621" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT2 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L623-L623" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L623-L623" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT3 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L625-L625" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L625-L625" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT4 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L627-L627" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L627-L627" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT5 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L629-L629" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L629-L629" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT6 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L631-L631" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L631-L631" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT7 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L633-L633" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L633-L633" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT8 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L635-L635" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L635-L635" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT9 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L637-L637" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L637-L637" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT10 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L639-L639" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L639-L639" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT11 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L641-L641" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L641-L641" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT12 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L643-L643" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L643-L643" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT13 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L645-L645" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L645-L645" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT14 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L647-L647" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L647-L647" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT15 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L649-L649" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L649-L649" target="_blank">source</a>]
 	---
 	---@type integer
 	DEPTH_ATTACHMENT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L651-L651" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L651-L651" target="_blank">source</a>]
 	---
 	---@type integer
 	STENCIL_ATTACHMENT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L661-L661" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L661-L661" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT0_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L663-L663" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L663-L663" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT1_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L665-L665" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L665-L665" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT2_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L667-L667" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L667-L667" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT3_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L669-L669" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L669-L669" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT4_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L671-L671" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L671-L671" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT5_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L673-L673" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L673-L673" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT6_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L675-L675" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L675-L675" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT7_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L677-L677" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L677-L677" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT8_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L679-L679" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L679-L679" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT9_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L681-L681" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L681-L681" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT10_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L683-L683" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L683-L683" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT11_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L685-L685" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L685-L685" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT12_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L687-L687" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L687-L687" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT13_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L689-L689" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L689-L689" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT14_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L691-L691" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L691-L691" target="_blank">source</a>]
 	---
 	---@type integer
 	COLOR_ATTACHMENT15_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L694-L694" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L694-L694" target="_blank">source</a>]
 	---
 	---@type integer
 	DEPTH_ATTACHMENT_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L696-L696" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L696-L696" target="_blank">source</a>]
 	---
 	---@type integer
 	STENCIL_ATTACHMENT_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L706-L706" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L706-L706" target="_blank">source</a>]
 	---
 	---@type integer
 	BUFFER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L708-L708" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L708-L708" target="_blank">source</a>]
 	---
 	---@type integer
 	SHADER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L710-L710" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L710-L710" target="_blank">source</a>]
 	---
 	---@type integer
 	PROGRAM = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L712-L712" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L712-L712" target="_blank">source</a>]
 	---
 	---@type integer
 	VERTEX_ARRAY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L714-L714" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L714-L714" target="_blank">source</a>]
 	---
 	---@type integer
 	QUERY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L716-L716" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L716-L716" target="_blank">source</a>]
 	---
 	---@type integer
 	PROGRAM_PIPELINE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L718-L718" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L718-L718" target="_blank">source</a>]
 	---
 	---@type integer
 	TRANSFORM_FEEDBACK = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L720-L720" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L720-L720" target="_blank">source</a>]
 	---
 	---@type integer
 	RENDERBUFFER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L722-L722" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L722-L722" target="_blank">source</a>]
 	---
 	---@type integer
 	FRAMEBUFFER = nil
@@ -1365,168 +1365,168 @@ GL = {
 
 ---Drawing Primitives
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L21-L24" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L21-L24" target="_blank">source</a>]
 ---
 ---@section primitives
 
 ---BlendingFactorDest
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L58-L61" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L58-L61" target="_blank">source</a>]
 ---
 ---@section blendingfactordest
 
 ---BlendingFactorSrc
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L80-L83" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L80-L83" target="_blank">source</a>]
 ---
 ---@section blendingfactorsrc
 
 ---AlphaFunction and DepthFunction
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L103-L106" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L103-L106" target="_blank">source</a>]
 ---
 ---@section alphadepth
 
 ---LogicOp
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L125-L128" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L125-L128" target="_blank">source</a>]
 ---
 ---@section logicop
 
 ---Culling
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L163-L166" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L163-L166" target="_blank">source</a>]
 ---
 ---@section culling
 
 ---PolygonMode
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L175-L178" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L175-L178" target="_blank">source</a>]
 ---
 ---@section polygonmode
 
 ---ShadeModel
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L187-L190" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L187-L190" target="_blank">source</a>]
 ---
 ---@section shademodel
 
 ---MatrixMode
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L197-L200" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L197-L200" target="_blank">source</a>]
 ---
 ---@section matrixmode
 
 ---Texture Filtering
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L209-L212" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L209-L212" target="_blank">source</a>]
 ---
 ---@section texturefiltering
 
 ---Texture Clamping
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L227-L230" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L227-L230" target="_blank">source</a>]
 ---
 ---@section textureclamping
 
 ---Texture Environment
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L243-L246" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L243-L246" target="_blank">source</a>]
 ---
 ---@section textureenvironment
 
 ---Texture Generation
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L268-L271" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L268-L271" target="_blank">source</a>]
 ---
 ---@section texturegeneration
 
 ---glPushAttrib() bits
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L298-L301" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L298-L301" target="_blank">source</a>]
 ---
 ---@section glpushattribbits
 
 ---glHint() targets
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L347-L350" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L347-L350" target="_blank">source</a>]
 ---
 ---@section glhinttargets
 
 ---glHint() modes
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L357-L360" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L357-L360" target="_blank">source</a>]
 ---
 ---@section glhintmodes
 
 ---Light Specification
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L369-L372" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L369-L372" target="_blank">source</a>]
 ---
 ---@section lightspecification
 
 ---Shader Types
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L395-L398" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L395-L398" target="_blank">source</a>]
 ---
 ---@section shadertypes
 
 ---Geometry Shader Parameters
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L411-L414" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L411-L414" target="_blank">source</a>]
 ---
 ---@section geometryshaderparameters
 
 ---Tesselation control shader parameters
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L423-L426" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L423-L426" target="_blank">source</a>]
 ---
 ---@section tesselationcontrolshaderparameters
 
 ---OpenGL Data Types
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L435-L438" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L435-L438" target="_blank">source</a>]
 ---
 ---@section OpenGL_Data_Types
 
 ---OpenGL Buffer Types
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L463-L466" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L463-L466" target="_blank">source</a>]
 ---
 ---@section OpenGL_Buffer_Types
 
 ---FBO Attachments
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L656-L659" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L656-L659" target="_blank">source</a>]
 ---
 ---@section fboattachments
 
 ---OpenGL Object Types
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L701-L704" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L701-L704" target="_blank">source</a>]
 ---
 ---@section objecttypes
 
 ---Not included, but useful texture Formats
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L731-L734" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L731-L734" target="_blank">source</a>]
 ---
 ---@section textureformats
 
 ---Not included, but useful RBO Formats
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L742-L745" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L742-L745" target="_blank">source</a>]
 ---
 ---@section rboformats
 
 ---Not included, but useful FBO Targets
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L755-L758" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L755-L758" target="_blank">source</a>]
 ---
 ---@section fbotargets
 
 ---Not included, but useful FBO Status
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/8c5d97b409ae3f29507d17f8e30076c4209610a2/rts/Lua/LuaConstGL.cpp#L766-L769" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cdfc9d7b872c3d890fc7c77bcb645a23cd9ec8e5/rts/Lua/LuaConstGL.cpp#L766-L769" target="_blank">source</a>]
 ---
 ---@section fbostatus
