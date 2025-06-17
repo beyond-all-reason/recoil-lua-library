@@ -8,13 +8,13 @@
 
 ---Platform constants
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/87745de4f8df1814624e4fb871d9827e866d5b98/rts/Lua/LuaConstPlatform.cpp#L10-L13" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/1311ea9f0c6cc6dbfbf130bffaf9c1a1cb476829/rts/Lua/LuaConstPlatform.cpp#L10-L13" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaConstPlatform.cpp
 
 ---Platform specific information
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/87745de4f8df1814624e4fb871d9827e866d5b98/rts/Lua/LuaConstPlatform.cpp#L15-L44" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/1311ea9f0c6cc6dbfbf130bffaf9c1a1cb476829/rts/Lua/LuaConstPlatform.cpp#L15-L44" target="_blank">source</a>]
 Platform = {
 	---Full GPU device name
 	---
