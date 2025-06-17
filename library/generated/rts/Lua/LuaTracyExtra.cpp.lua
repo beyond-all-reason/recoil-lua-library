@@ -8,7 +8,7 @@
 
 ---Configure custom appearance for a Tracy plot for use in debugging or profiling
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/1311ea9f0c6cc6dbfbf130bffaf9c1a1cb476829/rts/Lua/LuaTracyExtra.cpp#L32-L40" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/59bc2076754bc7bbf827603f4be80f4196abaf90/rts/Lua/LuaTracyExtra.cpp#L32-L40" target="_blank">source</a>]
 ---
 ---@param plotName string name of the plot to customize
 ---@param plotFormatType "Number"|"Percentage"|"Memory"|nil (Default: `"Number"`)
@@ -19,7 +19,7 @@ function tracy.LuaTracyPlotConfig(plotName, plotFormatType, stepwise, fill, colo
 
 ---Update a Tracy plot with a value
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/1311ea9f0c6cc6dbfbf130bffaf9c1a1cb476829/rts/Lua/LuaTracyExtra.cpp#L62-L67" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/59bc2076754bc7bbf827603f4be80f4196abaf90/rts/Lua/LuaTracyExtra.cpp#L62-L67" target="_blank">source</a>]
 ---
 ---@param plotName string Which LuaPlot should be updated
 ---@param plotValue number the number to show on the Tracy plot
