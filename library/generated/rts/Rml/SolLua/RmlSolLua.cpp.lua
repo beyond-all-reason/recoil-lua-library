@@ -8,5 +8,5 @@
 
 ---Global functions for Recoil's RmlUi implementation.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/64f5e94bb78f766445c35610af117af69ec45e0d/rts/Rml/SolLua/RmlSolLua.cpp#L69-L72" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/dc802c6de8e0e1b43282ea1d13cf84a6fdd5cebd/rts/Rml/SolLua/RmlSolLua.cpp#L69-L72" target="_blank">source</a>]
 RmlUi = {}
