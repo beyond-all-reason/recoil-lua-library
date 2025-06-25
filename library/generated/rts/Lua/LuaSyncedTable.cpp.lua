@@ -21,6 +21,6 @@
 ---Note that this makes a copy on each access, so is very slow and will not
 ---reflect changes. Cache it, but remember to refresh.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/66276f036dd8749c56f245ac22cf7ec13c10e02e/rts/Lua/LuaSyncedTable.cpp#L73-L91" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/13e09e08edc50b5afbda2c218522b71db1d4b3fa/rts/Lua/LuaSyncedTable.cpp#L73-L91" target="_blank">source</a>]
 ---@type table<string, any>
 SYNCED = nil

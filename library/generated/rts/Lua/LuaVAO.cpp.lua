@@ -6,7 +6,7 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/66276f036dd8749c56f245ac22cf7ec13c10e02e/rts/Lua/LuaVAO.cpp#L9-L12" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/13e09e08edc50b5afbda2c218522b71db1d4b3fa/rts/Lua/LuaVAO.cpp#L9-L12" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaVAO.cpp
 
@@ -16,7 +16,7 @@
 ---if myVAO == nil then Spring.Echo("Failed to get VAO") end
 ---```
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/66276f036dd8749c56f245ac22cf7ec13c10e02e/rts/Lua/LuaVAO.cpp#L75-L84" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/13e09e08edc50b5afbda2c218522b71db1d4b3fa/rts/Lua/LuaVAO.cpp#L75-L84" target="_blank">source</a>]
 ---
 ---@return VAO? vao The VAO ref on success, else `nil`
 function gl.GetVAO() end
