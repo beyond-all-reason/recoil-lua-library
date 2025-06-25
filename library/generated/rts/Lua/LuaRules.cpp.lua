@@ -8,6 +8,6 @@
 
 ---Lua Rules
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/70fe169d78098e465b2b89fc9c4f08ca95adefbc/rts/Lua/LuaRules.cpp#L80-L84" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/60545b4cfff228f2909c696186aaf15abb0c6b30/rts/Lua/LuaRules.cpp#L73-L77" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaRules.cpp
