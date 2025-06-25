@@ -6,7 +6,7 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/60545b4cfff228f2909c696186aaf15abb0c6b30/rts/Lua/LuaVBO.cpp#L14-L17" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/53e0c20ddcc485e8245adc324cc6ef968ddca032/rts/Lua/LuaVBO.cpp#L14-L17" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaVBO.cpp
 
@@ -17,7 +17,7 @@
 ---if myVBO == nil then Spring.Echo("Failed to get VBO") end
 ---```
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/60545b4cfff228f2909c696186aaf15abb0c6b30/rts/Lua/LuaVBO.cpp#L125-L152" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/53e0c20ddcc485e8245adc324cc6ef968ddca032/rts/Lua/LuaVBO.cpp#L125-L152" target="_blank">source</a>]
 ---
 ---@param bufferType GL? (Default: `GL.ARRAY_BUFFER`) The buffer type to use.
 ---

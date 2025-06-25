@@ -6,11 +6,11 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/60545b4cfff228f2909c696186aaf15abb0c6b30/rts/Lua/LuaUI.cpp#L69-L72" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/53e0c20ddcc485e8245adc324cc6ef968ddca032/rts/Lua/LuaUI.cpp#L69-L72" target="_blank">source</a>]
 ---
 ---@class UI : Callins
 ---@see Callins
 local UI = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/60545b4cfff228f2909c696186aaf15abb0c6b30/rts/Lua/LuaUI.cpp#L329-L331" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/53e0c20ddcc485e8245adc324cc6ef968ddca032/rts/Lua/LuaUI.cpp#L329-L331" target="_blank">source</a>]
 function UI:ConfigureLayout() end
