@@ -8,13 +8,13 @@
 
 ---Game constants
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/13e09e08edc50b5afbda2c218522b71db1d4b3fa/rts/Lua/LuaConstGame.cpp#L27-L30" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/42a1dcdb4e359cf57039dd4e494b3eba0a3c8783/rts/Lua/LuaConstGame.cpp#L27-L30" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaConstGame.cpp
 
 ---Game specific information
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/13e09e08edc50b5afbda2c218522b71db1d4b3fa/rts/Lua/LuaConstGame.cpp#L32-L117" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/42a1dcdb4e359cf57039dd4e494b3eba0a3c8783/rts/Lua/LuaConstGame.cpp#L32-L117" target="_blank">source</a>]
 Game = {
 	---@type number
 	maxUnits = nil,
