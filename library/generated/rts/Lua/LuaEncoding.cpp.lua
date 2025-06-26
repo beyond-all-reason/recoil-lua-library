@@ -8,12 +8,12 @@
 
 ---Lua Encoding API
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b81da5ba36e4465d9488e5c26cab52c25ec82dc5/rts/Lua/LuaEncoding.cpp#L22-L25" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/7ebbf4889b21d5ef5f486650f9223a143e2f1ec7/rts/Lua/LuaEncoding.cpp#L22-L25" target="_blank">source</a>]
 Encoding = {}
 
 ---Decodes a base64 string
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b81da5ba36e4465d9488e5c26cab52c25ec82dc5/rts/Lua/LuaEncoding.cpp#L41-L50" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/7ebbf4889b21d5ef5f486650f9223a143e2f1ec7/rts/Lua/LuaEncoding.cpp#L41-L50" target="_blank">source</a>]
 ---
 ---Decodes a base64 encoded string. If it encounters
 ---invalid data, it stops and returns whatever it parsed so far.
@@ -24,7 +24,7 @@ function Encoding.DecodeBase64(text) end
 
 ---Encodes a base64 string
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b81da5ba36e4465d9488e5c26cab52c25ec82dc5/rts/Lua/LuaEncoding.cpp#L61-L68" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/7ebbf4889b21d5ef5f486650f9223a143e2f1ec7/rts/Lua/LuaEncoding.cpp#L61-L68" target="_blank">source</a>]
 ---
 ---@param text string Text to encode
 ---@param stripPadding ? boolean Remove padding (`=` characters) at the end when 'true'. Defaults to `true`.
@@ -33,7 +33,7 @@ function Encoding.EncodeBase64(text, stripPadding) end
 
 ---Validates a base64 string
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b81da5ba36e4465d9488e5c26cab52c25ec82dc5/rts/Lua/LuaEncoding.cpp#L85-L91" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/7ebbf4889b21d5ef5f486650f9223a143e2f1ec7/rts/Lua/LuaEncoding.cpp#L85-L91" target="_blank">source</a>]
 ---
 ---@param text string Text to validate
 ---@return boolean valid Whether the text is valid base64
@@ -41,7 +41,7 @@ function Encoding.IsValidBase64(text) end
 
 ---Decodes a base64url string
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b81da5ba36e4465d9488e5c26cab52c25ec82dc5/rts/Lua/LuaEncoding.cpp#L109-L118" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/7ebbf4889b21d5ef5f486650f9223a143e2f1ec7/rts/Lua/LuaEncoding.cpp#L109-L118" target="_blank">source</a>]
 ---
 ---Decodes a base64url encoded string. If it encounters
 ---invalid data, it stops and returns whatever it parsed so far.
@@ -52,7 +52,7 @@ function Encoding.DecodeBase64Url(text) end
 
 ---Encodes a base64url string
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b81da5ba36e4465d9488e5c26cab52c25ec82dc5/rts/Lua/LuaEncoding.cpp#L136-L142" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/7ebbf4889b21d5ef5f486650f9223a143e2f1ec7/rts/Lua/LuaEncoding.cpp#L136-L142" target="_blank">source</a>]
 ---
 ---@param text string Text to encode
 ---@return string encoded Encoded text
@@ -60,7 +60,7 @@ function Encoding.EncodeBase64Url(text) end
 
 ---Validates a base64url string
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b81da5ba36e4465d9488e5c26cab52c25ec82dc5/rts/Lua/LuaEncoding.cpp#L164-L170" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/7ebbf4889b21d5ef5f486650f9223a143e2f1ec7/rts/Lua/LuaEncoding.cpp#L164-L170" target="_blank">source</a>]
 ---
 ---@param text string Text to validate
 ---@return boolean valid Whether the text is valid base64url
