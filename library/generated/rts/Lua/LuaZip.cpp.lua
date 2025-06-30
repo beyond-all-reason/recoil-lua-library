@@ -8,6 +8,6 @@
 
 ---LuaZip
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/7ebbf4889b21d5ef5f486650f9223a143e2f1ec7/rts/Lua/LuaZip.cpp#L4-L8" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Lua/LuaZip.cpp#L4-L8" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaZip.cpp
