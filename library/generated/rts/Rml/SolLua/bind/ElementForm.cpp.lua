@@ -6,119 +6,119 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L139-L141" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L139-L141" target="_blank">source</a>]
 ---
 ---@class RmlUi.ElementForm : RmlUi.Element
 RmlUi.ElementForm = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L144-L148" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L144-L148" target="_blank">source</a>]
 ---
 ---@param name string?
 ---@param value string?
 function RmlUi.ElementForm:Submit(name, value) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L156-L158" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L156-L158" target="_blank">source</a>]
 ---
 ---@class RmlUi.ElementFormControl : RmlUi.Element
 RmlUi.ElementFormControl = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L161-L161" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L161-L161" target="_blank">source</a>]
 ---@type boolean
 RmlUi.ElementFormControl.disabled = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L163-L163" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L163-L163" target="_blank">source</a>]
 ---@type string
 RmlUi.ElementFormControl.name = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L165-L165" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L165-L165" target="_blank">source</a>]
 ---@type string
 RmlUi.ElementFormControl.value = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L170-L170" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L170-L170" target="_blank">source</a>]
 ---@type boolean
 RmlUi.ElementFormControl.submitted = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L178-L180" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L178-L180" target="_blank">source</a>]
 ---
 ---@class RmlUi.ElementFormControlInput : RmlUi.Element, RmlUi.ElementFormControl
 RmlUi.ElementFormControlInput = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L183-L183" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L183-L183" target="_blank">source</a>]
 ---@type boolean
 RmlUi.ElementFormControlInput.checked = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L185-L185" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L185-L185" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlInput.maxlength = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L187-L187" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L187-L187" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlInput.size = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L189-L189" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L189-L189" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlInput.max = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L191-L191" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L191-L191" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlInput.min = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L193-L193" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L193-L193" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlInput.step = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L201-L203" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L201-L203" target="_blank">source</a>]
 ---
 ---@alias RmlUi.SelectOptionsProxy RmlUi.SelectOptionsProxyNode[]
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L209-L211" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L209-L211" target="_blank">source</a>]
 ---
 ---@alias RmlUi.SelectOptionsProxyNode {element: RmlUi.Element, value: string}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L216-L218" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L216-L218" target="_blank">source</a>]
 ---
 ---@class RmlUi.ElementFormControlSelect : RmlUi.Element, RmlUi.ElementFormControl
 RmlUi.ElementFormControlSelect = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L221-L225" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L221-L225" target="_blank">source</a>]
 ---
 ---@param element RmlUi.Element
 ---@param before integer?
 function RmlUi.ElementFormControlSelect:Add(element, before) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L231-L234" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L231-L234" target="_blank">source</a>]
 ---
 ---@param index integer
 function RmlUi.ElementFormControlSelect:Remove(index) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L236-L238" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L236-L238" target="_blank">source</a>]
 function RmlUi.ElementFormControlSelect:RemoveAll() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L242-L242" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L242-L242" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementsFormControlSelect.selection = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L246-L246" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L246-L246" target="_blank">source</a>]
 ---@type RmlUi.SelectOptionsProxy
 RmlUi.ElementsFormControlSelect.options = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L254-L256" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L254-L256" target="_blank">source</a>]
 ---
 ---@class RmlUi.ElementFormControlTextArea : RmlUi.Element, RmlUi.ElementFormControl
 RmlUi.ElementFormControlTextArea = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L259-L259" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L259-L259" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlTextArea.cols = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L261-L261" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L261-L261" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlTextArea.maxlength = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L263-L263" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L263-L263" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlTextArea.rows = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/b4d0041e4c68c34dace9abf492f9193d28ef5d7e/rts/Rml/SolLua/bind/ElementForm.cpp#L265-L265" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/ElementForm.cpp#L265-L265" target="_blank">source</a>]
 ---@type boolean
 RmlUi.ElementFormControlTextArea.wordwrap = nil
