@@ -8,7 +8,7 @@
 
 ---Two-dimensional integral vector.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/Vector.cpp#L40-L48" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/07a7757795ca082a8a16954856b3f89abe6ba0ff/rts/Rml/SolLua/bind/Vector.cpp#L40-L48" target="_blank">source</a>]
 ---
 ---@class RmlUi.Vector2i
 ---@operator add:RmlUi.Vector2i
@@ -18,28 +18,28 @@
 ---@operator unm:RmlUi.Vector2i
 RmlUi.Vector2i = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/Vector.cpp#L52-L57" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/07a7757795ca082a8a16954856b3f89abe6ba0ff/rts/Rml/SolLua/bind/Vector.cpp#L52-L57" target="_blank">source</a>]
 ---
 ---@param x integer
 ---@param y integer
 ---@return RmlUi.Vector2i
 function RmlUi.Vector2i.new(x, y) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/Vector.cpp#L73-L73" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/07a7757795ca082a8a16954856b3f89abe6ba0ff/rts/Rml/SolLua/bind/Vector.cpp#L73-L73" target="_blank">source</a>]
 ---@type integer
 RmlUi.Vector2i.x = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/Vector.cpp#L75-L75" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/07a7757795ca082a8a16954856b3f89abe6ba0ff/rts/Rml/SolLua/bind/Vector.cpp#L75-L75" target="_blank">source</a>]
 ---@type integer
 RmlUi.Vector2i.y = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/Vector.cpp#L79-L79" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/07a7757795ca082a8a16954856b3f89abe6ba0ff/rts/Rml/SolLua/bind/Vector.cpp#L79-L79" target="_blank">source</a>]
 ---@type number
 RmlUi.Vector2i.magnitude = nil
 
 ---Two-dimensional float vector
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/Vector.cpp#L83-L92" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/07a7757795ca082a8a16954856b3f89abe6ba0ff/rts/Rml/SolLua/bind/Vector.cpp#L83-L92" target="_blank">source</a>]
 ---
 ---@see float2
 ---@class RmlUi.Vector2f
@@ -50,21 +50,21 @@ RmlUi.Vector2i.magnitude = nil
 ---@operator unm:RmlUi.Vector2i
 RmlUi.Vector2f = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/Vector.cpp#L95-L100" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/07a7757795ca082a8a16954856b3f89abe6ba0ff/rts/Rml/SolLua/bind/Vector.cpp#L95-L100" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
 ---@return RmlUi.Vector2f
 function RmlUi.Vector2f.new(x, y) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/Vector.cpp#L116-L116" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/07a7757795ca082a8a16954856b3f89abe6ba0ff/rts/Rml/SolLua/bind/Vector.cpp#L116-L116" target="_blank">source</a>]
 ---@type number
 RmlUi.Vector2f.x = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/Vector.cpp#L118-L118" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/07a7757795ca082a8a16954856b3f89abe6ba0ff/rts/Rml/SolLua/bind/Vector.cpp#L118-L118" target="_blank">source</a>]
 ---@type number
 RmlUi.Vector2f.y = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/cb04122654a2dd60d7eafe5290c7ed72729ee15b/rts/Rml/SolLua/bind/Vector.cpp#L122-L122" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/07a7757795ca082a8a16954856b3f89abe6ba0ff/rts/Rml/SolLua/bind/Vector.cpp#L122-L122" target="_blank">source</a>]
 ---@type number
 RmlUi.Vector2f.magnitude = nil
