@@ -609,8 +609,8 @@ function Spring.SetUnitSeismicSignature(unitID, seismicSignature) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2870-L2877" target="_blank">source</a>]
 ---
 ---@number unitID
----@param leavesGhost bool
----@param leaveDeadGhost bool? (Default: `false`) leave a dead ghost behind if disabling and the unit had a live static ghost.
+---@param leavesGhost boolean
+---@param leaveDeadGhost boolean? (Default: `false`) leave a dead ghost behind if disabling and the unit had a live static ghost.
 function Spring.SetUnitLeavesGhost(leavesGhost, leaveDeadGhost) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2892-L2897" target="_blank">source</a>]
