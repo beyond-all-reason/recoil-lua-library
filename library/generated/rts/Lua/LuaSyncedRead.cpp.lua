@@ -815,10 +815,12 @@ function Spring.GetUnitIsCloaked(unitID) end
 ---@return number? seismicSignature
 function Spring.GetUnitSeismicSignature(unitID) end
 
+---Get whether unit leaves static radar ghosts.
+---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L3895-L3900" target="_blank">source</a>]
 ---
 ---@number unitID
----@treturn nil|number
+---@return number?
 function Spring.GetUnitLeavesGhost() end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L3911-L3916" target="_blank">source</a>]
