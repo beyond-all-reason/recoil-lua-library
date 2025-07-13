@@ -41,9 +41,10 @@
 ---@class FBO
 local FBO = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L443-L465" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L443-L466" target="_blank">source</a>]
 ---
 ---@class FBODescription
+---@x_helper
 ---@field depth string?
 ---@field stencil string?
 ---@field color0 string?
@@ -66,7 +67,7 @@ local FBO = {}
 ---@field readbuffer (integer|GL)? e.g. `GL_COLOR_ATTACHMENT0_EXT`
 local FBODescription = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L467-L471" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L468-L472" target="_blank">source</a>]
 ---
 ---@param fboDesc FBODescription
 ---@return FBO fbo
@@ -74,12 +75,12 @@ function gl.CreateFBO(fboDesc) end
 
 ---This doesn't delete the attached objects!
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L542-L547" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L543-L548" target="_blank">source</a>]
 ---
 ---@param fbo FBO
 function gl.DeleteFBO(fbo) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L560-L566" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L561-L567" target="_blank">source</a>]
 ---
 ---@param fbo FBO
 ---@param target GL?
@@ -87,14 +88,14 @@ function gl.DeleteFBO(fbo) end
 ---@return number? status
 function gl.IsValidFBO(fbo, target) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L601-L606" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L602-L607" target="_blank">source</a>]
 ---
 ---@param fbo FBO
 ---@param func fun(...)
 ---@param ... any args
 function gl.ActiveFBO(fbo, func, ...) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L607-L613" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L608-L614" target="_blank">source</a>]
 ---
 ---@param fbo FBO
 ---@param target GL?
@@ -104,7 +105,7 @@ function gl.ActiveFBO(fbo, target, func, ...) end
 
 ---Bind default or specified via rawFboId numeric id of FBO
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L677-L685" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L678-L686" target="_blank">source</a>]
 ---
 ---@param fbo nil
 ---@param target GL? (Default: `GL_FRAMEBUFFER_EXT`)
@@ -112,7 +113,7 @@ function gl.ActiveFBO(fbo, target, func, ...) end
 ---@return nil
 function gl.RawBindFBO(fbo, target, rawFboId) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L686-L691" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L687-L692" target="_blank">source</a>]
 ---
 ---@param fbo FBO
 ---@param target GL? (Default: `fbo.target`)
@@ -121,7 +122,7 @@ function gl.RawBindFBO(fbo, target) end
 
 ---needs `GLAD_GL_EXT_framebuffer_blit`
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L719-L732" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L720-L733" target="_blank">source</a>]
 ---
 ---@param x0Src number
 ---@param y0Src number
@@ -137,7 +138,7 @@ function gl.BlitFBO(x0Src, y0Src, x1Src, y1Src, x0Dst, y0Dst, x1Dst, y1Dst, mask
 
 ---needs `GLAD_GL_EXT_framebuffer_blit`
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L733-L748" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L734-L749" target="_blank">source</a>]
 ---
 ---@param fboSrc FBO
 ---@param x0Src number
@@ -156,7 +157,7 @@ function gl.BlitFBO(fboSrc, x0Src, y0Src, x1Src, y1Src, fboDst, x0Dst, y0Dst, x1
 ---needs `Platform.glVersionNum >= 30`
 ---Clears the "attachment" of the currently bound FBO type "target" with "clearValues"
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L818-L829" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L819-L830" target="_blank">source</a>]
 ---
 ---@param target number? (Default: `GL.FRAMEBUFFER`)
 ---@param attachment GL|Attachment (e.g. `"color0"` or `GL.COLOR_ATTACHMENT0`)

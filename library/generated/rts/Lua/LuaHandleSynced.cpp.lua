@@ -493,7 +493,7 @@ function SyncedCallins:AllowWeaponInterceptTarget(interceptorUnitID, interceptor
 ---
 ---Argument tables will be recursively copied and stripped of unsupported types and metatables.
 ---@see UnsyncedCallins:RecvFromSynced
-function SendToUnsynced(...) end
+function SyncedCallins.SendToUnsynced(...) end
 
 ---Register/deregister callins working per defID.
 ---
@@ -642,9 +642,10 @@ function Script.SetWatchProjectile(weaponDefID, watch) end
 ---@see SyncedCallins:AllowWeaponInterceptTarget
 function Script.SetWatchAllowTarget(weaponDefID, watch) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2519-L2524" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2519-L2525" target="_blank">source</a>]
 ---
 ---@class CallAsTeamOptions
+---@x_helper
 ---@field ctrl integer Ctrl team ID.
 ---@field read integer Read team ID.
 ---@field select integer Select team ID.
@@ -652,18 +653,18 @@ local CallAsTeamOptions = {}
 
 ---Calls a function from given team's PoV. In particular this makes callouts obey that team's visibility rules.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2526-L2533" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2527-L2534" target="_blank">source</a>]
 ---
 ---@param teamID integer Team ID.
 ---@param func fun(...) The function to call.
 ---@param ... any Arguments to pass to the function.
 ---@return any ... The return values of the function.
-function CallAsTeam(teamID, func, ...) end
+function Spring.CallAsTeam(teamID, func, ...) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2534-L2540" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2535-L2541" target="_blank">source</a>]
 ---
 ---@param options CallAsTeamOptions Options.
 ---@param func fun(...) The function to call.
 ---@param ... any Arguments to pass to the function.
 ---@return any ... The return values of the function.
-function CallAsTeam(options, func, ...) end
+function Spring.CallAsTeam(options, func, ...) end

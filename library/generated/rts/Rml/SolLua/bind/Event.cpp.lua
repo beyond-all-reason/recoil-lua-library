@@ -48,9 +48,10 @@ RmlUi.RmlEventPhase = {
 
 ---Keyboard and mouse input data associated with an event.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L94-L106" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L94-L107" target="_blank">source</a>]
 ---
 ---@class RmlUi.EventParametersProxy
+---@x_helper
 ---@field button RmlUi.EventParametersProxy.MouseButton
 ---@field mouse_x integer
 ---@field mouse_y integer
@@ -64,49 +65,49 @@ RmlUi.EventParametersProxy = {}
 
 ---An event that happens to an element.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L108-L111" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L109-L112" target="_blank">source</a>]
 ---
 ---@class RmlUi.Event
 RmlUi.Event = {}
 
 ---function RmlUi.Event:StopPropogation
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L115-L117" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L116-L118" target="_blank">source</a>]
 
 ---function RmlUi.Event:StopImmediatePropogation
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L120-L122" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L121-L123" target="_blank">source</a>]
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L128-L128" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L129-L129" target="_blank">source</a>]
 ---@type RmlUi.Element
 RmlUi.Event.current_element = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L130-L130" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L131-L131" target="_blank">source</a>]
 ---@type string
 RmlUi.Event.type = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L132-L132" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L133-L133" target="_blank">source</a>]
 ---What element it happened to
 ---
 ---@type RmlUi.Element
 RmlUi.Event.target_element = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L134-L134" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L135-L135" target="_blank">source</a>]
 ---@type RmlUi.EventParametersProxy
 RmlUi.Event.parameters = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L137-L137" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L138-L138" target="_blank">source</a>]
 ---@type RmlUi.RmlEventPhase
 RmlUi.Event.event_phase = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L139-L139" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L140-L140" target="_blank">source</a>]
 ---@type boolean
 RmlUi.Event.interruptible = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L141-L141" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L142-L142" target="_blank">source</a>]
 ---@type boolean
 RmlUi.Event.propagating = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L143-L143" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Event.cpp#L144-L144" target="_blank">source</a>]
 ---@type boolean
 RmlUi.Event.immediate_propagating = nil

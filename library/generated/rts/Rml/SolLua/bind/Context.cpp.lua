@@ -7,6 +7,7 @@
 ---@meta
 
 ---Holds documents and a data model.
+---
 ---The Context class has no constructor; it must be instantiated through the CreateContext() function. It has the following functions and properties:
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Context.cpp#L283-L287" target="_blank">source</a>]

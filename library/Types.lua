@@ -7,6 +7,7 @@
 ---Cartesian double (XY)
 ---
 ---@class xy
+---@helper
 ---@field [1] number x
 ---@field [2] number y
 
@@ -15,6 +16,7 @@
 ---Cartesian triple (XYZ)
 ---
 ---@class xyz
+---@helper
 ---@field [1] number x
 ---@field [2] number y
 ---@field [3] number z
@@ -24,6 +26,7 @@
 ---Cartesian quadruple (XYZW)
 ---
 ---@class xyzw
+---@helper
 ---@field [1] number x
 ---@field [2] number y
 ---@field [3] number z
@@ -38,6 +41,7 @@
 ---Color triple (RGB)
 ---
 ---@class rgb
+---@helper
 ---@field [1] number Red value.
 ---@field [2] number Green value.
 ---@field [3] number Blue value.
@@ -45,6 +49,7 @@
 ---Color quadruple (RGBA)
 ---
 ---@class rgba
+---@helper
 ---@field [1] number Red value.
 ---@field [2] number Green value.
 ---@field [3] number Blue value.
@@ -53,6 +58,7 @@
 ---Indicator bytes representing color code operations during font rendering
 ---
 ---@class TextColorCode
+---@helper
 ---@field Color string Indicates that the following bytes contain color code information
 ---@field ColorAndOutline string Indicates that the following bytes contain color code and outline information
 ---@field Reset string Indicates reset of the current color
@@ -81,10 +87,10 @@
 
 ---Parameters for camera state.
 ---
----@class CameraState
----
 ---Highly dependent on the type of the current camera controller.
 ---
+---@class CameraState
+---@helper
 ---@field name CameraName The camera name.
 ---@field mode CameraMode The camera mode.
 ---@field fov number?

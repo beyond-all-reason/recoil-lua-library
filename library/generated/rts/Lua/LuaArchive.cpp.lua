@@ -45,9 +45,10 @@ function VFS.GetArchivePath(archiveName) end
 ---| 3 # Map
 ---| 4 # Base
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L156-L167" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L156-L168" target="_blank">source</a>]
 ---
 ---@class ArchiveInfo
+---@x_helper
 ---@field name string
 ---@field shortname string
 ---@field version string
@@ -59,48 +60,51 @@ function VFS.GetArchivePath(archiveName) end
 ---@field modtype ModType
 local ArchiveInfo = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L169-L173" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L170-L174" target="_blank">source</a>]
 ---
 ---@param archiveName string
 ---@return ArchiveInfo? archiveInfo
 function VFS.GetArchiveInfo(archiveName) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L214-L218" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L215-L219" target="_blank">source</a>]
 ---
 ---@param archiveName string
 ---@return string[] archiveNames
 function VFS.GetArchiveDependencies(archiveName) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L232-L236" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L233-L237" target="_blank">source</a>]
 ---
 ---@param archiveName string
 ---@return string[] archiveNames
 function VFS.GetArchiveReplaces(archiveName) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L254-L259" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L255-L260" target="_blank">source</a>]
 ---
 ---@param archiveName string
 ---@return string singleArchiveChecksum
 ---@return string completeArchiveChecksum
 function VFS.GetArchiveChecksum(archiveName) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L279-L283" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L280-L284" target="_blank">source</a>]
 ---
 ---@param rapidTag string
 ---@return string archiveName
 function VFS.GetNameFromRapidTag(rapidTag) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L299-L303" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L300-L305" target="_blank">source</a>]
 ---
 ---@class AIInfo
+---@x_helper
 ---@field shortName string
 ---@field version string
 local AIInfo = {}
 
----Gets a list of all Spring AIs. The optional gameName and mapName parameters
----can be used to include game/map specific LuaAIs in the list.
+---Get a list of all Spring AIs.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L305-L313" target="_blank">source</a>]
+---The optional gameName and mapName parameters can be used to include game/map
+---specific LuaAIs in the list.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L307-L316" target="_blank">source</a>]
 ---
 ---@param gameArchiveName string?
 ---@param mapArichiveName string?

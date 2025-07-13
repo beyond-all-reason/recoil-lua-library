@@ -51,26 +51,28 @@ RmlUi.RmlFocusFlag = {
 	Auto = nil
 }
 
----Document derives from Element. Document has no constructor; it must be instantiated through a Context object instead, either by loading an external RML file or creating an empty document. It has the following functions and properties:
+---Document derives from Element.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L132-L135" target="_blank">source</a>]
+---Document has no constructor; it must be instantiated through a Context object instead, either by loading an external RML file or creating an empty document. It has the following functions and properties:
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L132-L137" target="_blank">source</a>]
 ---
 ---@class RmlUi.Document : RmlUi.Element
 RmlUi.Document = {}
 
 ---Pulls the document in front of other documents within its context with a similar z-index.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L139-L142" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L141-L144" target="_blank">source</a>]
 function RmlUi.Document:PullToFront() end
 
 ---Pushes the document behind other documents within its context with a similar z-index.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L144-L147" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L146-L149" target="_blank">source</a>]
 function RmlUi.Document:PushToBack() end
 
 ---Shows the document.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L149-L154" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L151-L156" target="_blank">source</a>]
 ---
 ---@param modal RmlUi.RmlModalFlag? Defaults to Focus
 ---@param focus RmlUi.RmlFocusFlag?
@@ -78,17 +80,17 @@ function RmlUi.Document:Show(modal, focus) end
 
 ---Hides the document.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L156-L159" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L158-L161" target="_blank">source</a>]
 function RmlUi.Document:Hide() end
 
 ---Hides and closes the document, destroying its contents.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L161-L164" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L163-L166" target="_blank">source</a>]
 function RmlUi.Document:Close() end
 
 ---Instances an element with a tag of tag_name.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L166-L171" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L168-L173" target="_blank">source</a>]
 ---
 ---@param tag_name string
 ---@return RmlUi.ElementPtr
@@ -96,7 +98,7 @@ function RmlUi.Document:CreateElement(tag_name) end
 
 ---Instances a text element containing the string text.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L173-L178" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L175-L180" target="_blank">source</a>]
 ---
 ---@param text string
 ---@return RmlUi.ElementPtr
@@ -104,14 +106,14 @@ function RmlUi.Document:CreateTextNode(text) end
 
 ---Reload the active style sheet.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L181-L185" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L183-L187" target="_blank">source</a>]
 ---
 ---@param load boolean?
 function RmlUi.Document:ReloadStyleSheet(load) end
 
 ---Load scripts as if it were in the script tag.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L187-L193" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L189-L195" target="_blank">source</a>]
 ---
 ---@param content string
 ---@param source string?
@@ -120,42 +122,42 @@ function RmlUi.Document:LoadInlineScript(content, source, source_line) end
 
 ---Load an external script.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L195-L199" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L197-L201" target="_blank">source</a>]
 ---
 ---@param source_path string
 function RmlUi.Document:LoadExternalScript(source_path) end
 
 ---Update the Document.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L201-L204" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L203-L206" target="_blank">source</a>]
 function RmlUi.Document:UpdateDocument() end
 
 ---Append text to style sheet.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L206-L210" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L208-L212" target="_blank">source</a>]
 ---
 ---@param content string
 function RmlUi.Document:AppendToStyleSheet(content) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L214-L214" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L216-L216" target="_blank">source</a>]
 ---@type string
 RmlUi.Document.title = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L218-L218" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L220-L220" target="_blank">source</a>]
 ---@type RmlUi.Context
 RmlUi.Document.context = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L221-L221" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L223-L223" target="_blank">source</a>]
 ---@type string
 RmlUi.Document.url = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L223-L223" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L225-L225" target="_blank">source</a>]
 ---Is it modal?
 ---
 ---@type boolean
 RmlUi.Document.modal = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L225-L225" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Document.cpp#L227-L227" target="_blank">source</a>]
 ---A table of data that can be accessed in onevent attributes. It doesn't have to be a widget.
 ---
 ---@type table

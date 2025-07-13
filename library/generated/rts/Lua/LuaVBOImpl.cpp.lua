@@ -20,9 +20,10 @@ local VBO = {}
 ---@return nil
 function VBO:Delete() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L459-L494" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L459-L495" target="_blank">source</a>]
 ---
 ---@class VBOAttributeDef
+---@x_helper
 ---@field id integer?
 ---The location in the vertex shader layout e.g.: layout (location = 0) in vec2
 ---aPos. optional attrib, specifies location in the vertex shader. If not
@@ -77,7 +78,7 @@ local VBOAttributeDef = {}
 ---This is important for when you call `VBO:Upload`, you need to make sure you
 ---enter your data into the Lua array correctly.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L496-L534" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L497-L535" target="_blank">source</a>]
 ---
 ---@param size number The maximum number of elements this VBO can have.
 ---@param attribs number|VBOAttributeDef[]
@@ -90,7 +91,7 @@ local VBOAttributeDef = {}
 ---@see VBO:Upload
 function VBO:Define(size, attribs) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L582-L588" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L583-L589" target="_blank">source</a>]
 ---
 ---@return number elementsCount
 ---@return number bufferSizeInBytes
@@ -99,7 +100,7 @@ function VBO:GetBufferSize() end
 
 ---Uploads data into the VBO.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L599-L620" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L600-L621" target="_blank">source</a>]
 ---
 ---@param vboData number[] Array of values to upload into the VBO.
 ---@param attributeIndex integer? (Default: `-1`)
@@ -119,7 +120,7 @@ function VBO:GetBufferSize() end
 ---@see VBO:Define
 function VBO:Upload(vboData, attributeIndex, elemOffset, luaStartIndex, luaFinishIndex) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L663-L674" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L664-L675" target="_blank">source</a>]
 ---
 ---@param attributeIndex integer? (Default: `-1`) when supplied with non-default value: only data
 ---from specified attribute will be downloaded - otherwise all attributes are
@@ -133,7 +134,7 @@ function VBO:Download(attributeIndex, elementOffset, elementCount, forceGPURead)
 
 ---Binds engine side vertex or index VBO containing models (units, features) data.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1172-L1179" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1173-L1180" target="_blank">source</a>]
 ---
 ---Also fills in VBO definition data as they're set for engine models (no need to do VBO:Define()).
 ---
@@ -142,7 +143,7 @@ function VBO:ModelsVBO() end
 
 ---Fills in attribute data for each specified unitDefID
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1191-L1216" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1192-L1217" target="_blank">source</a>]
 ---
 ---The instance data in that attribute will contain the offset to bind position
 ---matrix in global matrices SSBO and offset to uniform buffer structure in
@@ -169,7 +170,7 @@ function VBO:InstanceDataFromUnitDefIDs(unitDefIDs, attrID, teamIdOpt, elementOf
 
 ---Fills in attribute data for each specified featureDefID
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1230-L1255" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1231-L1256" target="_blank">source</a>]
 ---
 ---The instance data in that attribute will contain the offset to bind position
 ---matrix in global matrices SSBO and offset to uniform buffer structure in
@@ -196,7 +197,7 @@ function VBO:InstanceDataFromFeatureDefIDs(featureDefIDs, attrID, teamIdOpt, ele
 
 ---Fills in attribute data for each specified unitID
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1269-L1295" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1270-L1296" target="_blank">source</a>]
 ---
 ---The instance data in that attribute will contain the offset to bind position
 ---matrix in global matrices SSBO and offset to uniform buffer structure in
@@ -224,7 +225,7 @@ function VBO:InstanceDataFromUnitIDs(unitIDs, attrID, teamIdOpt, elementOffset) 
 
 ---Fills in attribute data for each specified featureID
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1307-L1323" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1308-L1324" target="_blank">source</a>]
 ---
 ---The instance data in that attribute will contain the offset to bind position
 ---matrix in global matrices SSBO and offset to uniform buffer structure in
@@ -240,7 +241,7 @@ function VBO:InstanceDataFromUnitIDs(unitIDs, attrID, teamIdOpt, elementOffset) 
 ---@return integer attrID
 function VBO:InstanceDataFromFeatureIDs(featureIDs, attrID, teamIdOpt, elementOffset) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1335-L1345" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1336-L1346" target="_blank">source</a>]
 ---
 ---@param projectileIDs integer|integer[]
 ---@param attrID integer
@@ -253,7 +254,7 @@ function VBO:MatrixDataFromProjectileIDs(projectileIDs, attrID, teamIdOpt, eleme
 
 ---Bind a range within a buffer object to an indexed buffer target
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1417-L1431" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1418-L1432" target="_blank">source</a>]
 ---
 ---Generally mimics
 ---https://registry.khronos.org/OpenGL-Refpages/gl4/html/glBindBufferRange.xhtml
@@ -267,7 +268,7 @@ function VBO:MatrixDataFromProjectileIDs(projectileIDs, attrID, teamIdOpt, eleme
 ---@return integer bindingIndex when successful, -1 otherwise
 function VBO:BindBufferRange(index, elementOffset, elementCount, target) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1438-L1446" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1439-L1447" target="_blank">source</a>]
 ---
 ---@param index integer
 ---@param elementOffset integer?
@@ -278,14 +279,14 @@ function VBO:UnbindBufferRange(index, elementOffset, elementCount, target) end
 
 ---Logs the definition of the VBO to the console
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1453-L1457" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1454-L1458" target="_blank">source</a>]
 ---
 ---@return nil
 function VBO:DumpDefinition() end
 
 ---Copy the contents of the VBO to another VBO.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1474-L1483" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1475-L1484" target="_blank">source</a>]
 ---
 ---Destination VBO is expected to have sufficient allocation size, otherwise the copying will gracefully fail.
 ---
@@ -296,7 +297,7 @@ function VBO:CopyTo(destVBO, copySizeInBytes) end
 
 ---Gets the OpenGL Buffer ID
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1502-L1506" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1503-L1507" target="_blank">source</a>]
 ---
 ---@return integer bufferID
 function VBO:GetID() end

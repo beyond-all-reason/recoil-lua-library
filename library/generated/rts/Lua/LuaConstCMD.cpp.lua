@@ -22,8 +22,6 @@
 ---@see Spring.GetUnitCurrentCommand
 ---@see Callins:AllowCommand
 ---@see Spring.GiveOrderToUnit
----@see Spring.GiveOrderToUnit
----@see Callins:UnitCmdDone
 CMD = {
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L30-L30" target="_blank">source</a>]
 	OPT_ALT = 128,
@@ -280,93 +278,93 @@ CMD = {
 	---Spring.GiveOrderToUnit(unitID, CMD.ATTACK, {1000,100,1000})
 	---```
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L225-L288" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L225-L286" target="_blank">source</a>]
 	ATTACK = 20,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L290-L290" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L291-L291" target="_blank">source</a>]
 	AREA_ATTACK = 21,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L292-L292" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L293-L293" target="_blank">source</a>]
 	GUARD = 25,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L294-L294" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L295-L295" target="_blank">source</a>]
 	GROUPSELECT = 35,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L296-L296" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L297-L297" target="_blank">source</a>]
 	GROUPADD = 36,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L298-L298" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L299-L299" target="_blank">source</a>]
 	GROUPCLEAR = 37,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L300-L300" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L301-L301" target="_blank">source</a>]
 	REPAIR = 40,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L302-L302" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L303-L303" target="_blank">source</a>]
 	FIRE_STATE = 45,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L304-L304" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L305-L305" target="_blank">source</a>]
 	MOVE_STATE = 50,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L306-L306" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L307-L307" target="_blank">source</a>]
 	SETBASE = 55,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L308-L308" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L309-L309" target="_blank">source</a>]
 	INTERNAL = 60,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L310-L310" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L311-L311" target="_blank">source</a>]
 	SELFD = 65,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L312-L312" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L313-L313" target="_blank">source</a>]
 	LOAD_UNITS = 75,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L314-L314" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L315-L315" target="_blank">source</a>]
 	LOAD_ONTO = 76,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L316-L316" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L317-L317" target="_blank">source</a>]
 	UNLOAD_UNITS = 80,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L318-L318" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L319-L319" target="_blank">source</a>]
 	UNLOAD_UNIT = 81,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L320-L320" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L321-L321" target="_blank">source</a>]
 	ONOFF = 85,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L322-L322" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L323-L323" target="_blank">source</a>]
 	RECLAIM = 90,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L324-L324" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L325-L325" target="_blank">source</a>]
 	CLOAK = 95,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L326-L326" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L327-L327" target="_blank">source</a>]
 	STOCKPILE = 100,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L328-L328" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L329-L329" target="_blank">source</a>]
 	MANUALFIRE = 105,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L330-L330" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L331-L331" target="_blank">source</a>]
 	DGUN = 105,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L332-L332" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L333-L333" target="_blank">source</a>]
 	RESTORE = 110,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L334-L334" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L335-L335" target="_blank">source</a>]
 	REPEAT = 115,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L336-L336" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L337-L337" target="_blank">source</a>]
 	TRAJECTORY = 120,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L338-L338" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L339-L339" target="_blank">source</a>]
 	RESURRECT = 125,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L340-L340" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L341-L341" target="_blank">source</a>]
 	CAPTURE = 130,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L342-L342" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L343-L343" target="_blank">source</a>]
 	AUTOREPAIRLEVEL = 135,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L344-L344" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L345-L345" target="_blank">source</a>]
 	LOOPBACKATTACK = 20,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L346-L346" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCMD.cpp#L347-L347" target="_blank">source</a>]
 	IDLEMODE = 145
 }
