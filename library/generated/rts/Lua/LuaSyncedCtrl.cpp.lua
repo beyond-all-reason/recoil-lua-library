@@ -1550,8 +1550,8 @@ function Spring.SetFeaturePieceVisible(featureID, pieceIndex, visible) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5170-L5178" target="_blank">source</a>]
 ---
 ---@param unitID integer
----@param wreckLevel integer (Default: `1`) Wreck index to use.
----@param doSmoke boolean (Default: `true`) Wreck emits smoke when `true`.
+---@param wreckLevel integer? (Default: `1`) Wreck index to use.
+---@param doSmoke boolean? (Default: `true`) Wreck emits smoke when `true`.
 ---@return integer? featureID The wreck featureID, or nil if it couldn't be created or unit doesn't exist.
 function Spring.CreateUnitWreck(unitID, wreckLevel, doSmoke) end
 
@@ -1560,8 +1560,8 @@ function Spring.CreateUnitWreck(unitID, wreckLevel, doSmoke) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5201-L5209" target="_blank">source</a>]
 ---
 ---@param featureID integer
----@param wreckLevel integer (Default: `1`) Wreck index to use.
----@param doSmoke boolean (Default: `false`) Wreck emits smoke when `true`.
+---@param wreckLevel integer? (Default: `1`) Wreck index to use.
+---@param doSmoke boolean? (Default: `false`) Wreck emits smoke when `true`.
 ---@return integer? featureID The wreck featureID, or nil if it couldn't be created or unit doesn't exist.
 function Spring.CreateFeatureWreck(featureID, wreckLevel, doSmoke) end
 
