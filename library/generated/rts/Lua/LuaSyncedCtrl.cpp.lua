@@ -536,39 +536,68 @@ function Spring.SetUnitArmored(unitID, armored, armorMultiple) end
 ---
 ---@section unitlos
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2705-L2728" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2704-L2706" target="_blank">source</a>]
 ---
----The 3rd argument is either the bit-and combination of the following numbers:
+---@alias LosTable table<"los"|"radar"|"prevLos"|"contRadar",boolean>
+
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2708-L2715" target="_blank">source</a>]
 ---
----    LOS_INLOS = 1
----    LOS_INRADAR = 2
----    LOS_PREVLOS = 4
----    LOS_CONTRADAR = 8
+---@enum LosMask
+---@x_helper
+LosMask = {
+	---the unit is currently in the los of the allyteam
+	INLOS = 1,
+
+	---the unit is currently in radar from the allyteam
+	INRADAR = 2,
+
+	---the unit has previously been in los from the allyteam
+	PREVLOS = 4,
+
+	---the unit has continuously been in radar since it was last inlos by the allyteam
+	CONTRADAR = 8
+}
+
+---Set visibility status mask for a unit and team
 ---
----or a table of the following form:
+---Use this to allow or disallow a unit from having its visibility status
+---against a certain team updated by the engine.
 ---
----    losTypes = {
----    [los = boolean,]
----    [radar = boolean,]
----    [prevLos = boolean,]
----    [contRadar = boolean]
----    }
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2717-L2729" target="_blank">source</a>]
 ---
+---@see Spring.SetUnitLosState
 ---@param unitID integer
 ---@param allyTeam number
----@param losTypes number|table
----@return nil
+---@param losTypes LosTable|LosMask|integer A bitmask of `LosMask` bits or a
+---table. True bits disable engine updates to visibility.
 function Spring.SetUnitLosMask(unitID, allyTeam, losTypes) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2753-L2759" target="_blank">source</a>]
+---Set current visibility status for a unit and team
 ---
+---Note this state will not be persisted if the visibility state is not masked.
+---
+---Use it to change visibility state, once you set the unit to not receive
+---engine visibility updates.
+---
+---A few notes on certain bits:
+---
+---- `contradar`: True when the unit entered los at some point, remains set
+---  until radar is lost. Useful for tracking the unit type in radar, if you
+---  lost los you still know what unit type that radar dot refers to.
+---- `prevlos`: True when the unit has entered los at least once, useful for
+---  tracking building locations (controls whether a ghost appears or not in
+---  the location)
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2754-L2776" target="_blank">source</a>]
+---
+---@see Spring.SetUnitLosMask
 ---@param unitID integer
 ---@param allyTeam number
----@param los number|table
----@return nil
-function Spring.SetUnitLosState(unitID, allyTeam, los) end
+---@param losTypes LosTable|LosMask|integer A bitmask of `LosMask` bits or a
+---table
+function Spring.SetUnitLosState(unitID, allyTeam, losTypes) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2781-L2799" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2798-L2816" target="_blank">source</a>]
 ---
 ---If the 2nd argument is a number, the value works like this:
 ---1:=normal cloak
@@ -587,21 +616,21 @@ function Spring.SetUnitLosState(unitID, allyTeam, los) end
 ---@return nil
 function Spring.SetUnitCloak(unitID, cloak, cloakArg) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2830-L2835" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2847-L2852" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param stealth boolean
 ---@return nil
 function Spring.SetUnitStealth(unitID, stealth) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2848-L2853" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2865-L2870" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param sonarStealth boolean
 ---@return nil
 function Spring.SetUnitSonarStealth(unitID, sonarStealth) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2865-L2870" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2882-L2887" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param seismicSignature number
@@ -610,28 +639,28 @@ function Spring.SetUnitSeismicSignature(unitID, seismicSignature) end
 
 ---Set whether unit leaves static radar ghosts.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2881-L2888" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2898-L2905" target="_blank">source</a>]
 ---
 ---@number unitID
 ---@param leavesGhost boolean
 ---@param leaveDeadGhost boolean? (Default: `false`) leave a dead ghost behind if disabling and the unit had a live static ghost.
 function Spring.SetUnitLeavesGhost(leavesGhost, leaveDeadGhost) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2903-L2908" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2920-L2925" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param alwaysVisible boolean
 ---@return nil
 function Spring.SetUnitAlwaysVisible(unitID, alwaysVisible) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2915-L2921" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2932-L2938" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param useAirLos boolean
 ---@return nil
 function Spring.SetUnitUseAirLos(unitID, useAirLos) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2928-L2934" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2945-L2951" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param depth number corresponds to metal extraction rate
@@ -641,14 +670,14 @@ function Spring.SetUnitMetalExtraction(unitID, depth, range) end
 
 ---See also harvestStorage UnitDef tag.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2955-L2961" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2972-L2978" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param metal number
 ---@return nil
 function Spring.SetUnitHarvestStorage(unitID, metal) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2976-L2983" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L2993-L3000" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param paramName string one of `buildRange`|`buildDistance`|`buildRange3D`
@@ -656,7 +685,7 @@ function Spring.SetUnitHarvestStorage(unitID, metal) end
 ---@return nil
 function Spring.SetUnitBuildParams(unitID, paramName, value) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3010-L3019" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3027-L3036" target="_blank">source</a>]
 ---
 ---@param builderID integer
 ---@param buildSpeed number
@@ -667,7 +696,7 @@ function Spring.SetUnitBuildParams(unitID, paramName, value) end
 ---@return nil
 function Spring.SetUnitBuildSpeed(builderID, buildSpeed, repairSpeed, reclaimSpeed, captureSpeed, terraformSpeed) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3061-L3071" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3078-L3088" target="_blank">source</a>]
 ---
 ---This saves a lot of engine calls, by replacing: function script.QueryNanoPiece() return currentpiece end
 ---Use it!
@@ -677,7 +706,7 @@ function Spring.SetUnitBuildSpeed(builderID, buildSpeed, repairSpeed, reclaimSpe
 ---@return nil
 function Spring.SetUnitNanoPieces(builderID, pieces) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3121-L3132" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3138-L3149" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param isBlocking boolean? If `true` add this unit to the `GroundBlockingMap`, but only if it collides with solid objects (or is being set to collide with the `isSolidObjectCollidable` argument). If `false`, remove this unit from the `GroundBlockingMap`. No change if `nil`.
@@ -690,14 +719,14 @@ function Spring.SetUnitNanoPieces(builderID, pieces) end
 ---@return boolean isBlocking
 function Spring.SetUnitBlocking(unitID, isBlocking, isSolidObjectCollidable, isProjectileCollidable, isRaySegmentCollidable, crushable, blockEnemyPushing, blockHeightChanges) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3139-L3144" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3156-L3161" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param crashing boolean
 ---@return boolean success
 function Spring.SetUnitCrashing(unitID, crashing) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3174-L3181" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3191-L3198" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param weaponID integer? (Default: `-1`)
@@ -706,7 +735,7 @@ function Spring.SetUnitCrashing(unitID, crashing) end
 ---@return nil
 function Spring.SetUnitShieldState(unitID, weaponID, enabled, power) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3212-L3218" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3229-L3235" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param weaponID integer? (optional if the unit only has one shield)
@@ -714,7 +743,7 @@ function Spring.SetUnitShieldState(unitID, weaponID, enabled, power) end
 ---@return nil
 function Spring.SetUnitShieldRechargeDelay(unitID, weaponID, rechargeTime) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3249-L3257" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3266-L3274" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param type string "dir"|"minDamage"|"maxDamage"|"moveFactor"|"mode"
@@ -724,20 +753,20 @@ function Spring.SetUnitShieldRechargeDelay(unitID, weaponID, rechargeTime) end
 ---@return nil
 function Spring.SetUnitFlanking(unitID, type, arg1, y, z) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3296-L3301" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3313-L3318" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param Physical number[bit] state bit
 ---@return nil
 function Spring.SetUnitPhysicalStateBit(unitID, Physical) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3315-L3319" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3332-L3336" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return number Unit's PhysicalState bitmask
 function Spring.GetUnitPhysicalState(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3338-L3345" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3355-L3362" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param neutral boolean
@@ -746,7 +775,7 @@ function Spring.SetUnitNeutral(unitID, neutral) end
 
 ---Defines a unit's target.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3358-L3367" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3375-L3384" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param enemyUnitID integer? when nil drops the units current target.
@@ -756,7 +785,7 @@ function Spring.SetUnitNeutral(unitID, neutral) end
 ---@return boolean success
 function Spring.SetUnitTarget(unitID, enemyUnitID, dgun, userTarget, weaponNum) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3369-L3379" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3386-L3396" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param x number? when nil or not passed it will drop target and ignore other parameters
@@ -768,7 +797,7 @@ function Spring.SetUnitTarget(unitID, enemyUnitID, dgun, userTarget, weaponNum) 
 ---@return boolean success
 function Spring.SetUnitTarget(unitID, x, y, z, dgun, userTarget, weaponNum) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3438-L3449" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3455-L3466" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param mpX number new middle positionX of unit
@@ -781,7 +810,7 @@ function Spring.SetUnitTarget(unitID, x, y, z, dgun, userTarget, weaponNum) end
 ---@return boolean success
 function Spring.SetUnitMidAndAimPos(unitID, mpX, mpY, mpZ, apX, apY, apZ, relative) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3486-L3492" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3503-L3509" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param radius number
@@ -789,7 +818,7 @@ function Spring.SetUnitMidAndAimPos(unitID, mpX, mpY, mpZ, apX, apY, apZ, relati
 ---@return boolean success
 function Spring.SetUnitRadiusAndHeight(unitID, radius, height) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3522-L3528" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3539-L3545" target="_blank">source</a>]
 ---
 ---Sets the unit's radius for when targeted by build, repair, reclaim-type commands.
 ---
@@ -800,7 +829,7 @@ function Spring.SetUnitBuildeeRadius(unitID, build) end
 
 ---Changes the pieces hierarchy of a unit by attaching a piece to a new parent.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3542-L3549" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3559-L3566" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param AlteredPiece number
@@ -810,7 +839,7 @@ function Spring.SetUnitPieceParent(unitID, AlteredPiece, ParentPiece) end
 
 ---Sets the local (i.e. parent-relative) matrix of the given piece.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3583-L3593" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3600-L3610" target="_blank">source</a>]
 ---
 ---If any of the first three elements are non-zero, and also blocks all script animations from modifying it until {0, 0, 0} is passed.
 ---
@@ -820,7 +849,7 @@ function Spring.SetUnitPieceParent(unitID, AlteredPiece, ParentPiece) end
 ---@return nil
 function Spring.SetUnitPieceMatrix(unitID, pieceNum, matrix) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3619-L3652" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3636-L3669" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param scaleX number
@@ -855,7 +884,7 @@ function Spring.SetUnitPieceMatrix(unitID, pieceNum, matrix) end
 ---   };
 function Spring.SetUnitCollisionVolumeData(unitID, scaleX, scaleY, scaleZ, offsetX, offsetY, offsetZ, vType, tType, Axis) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3659-L3673" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3676-L3690" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param pieceIndex number
@@ -871,7 +900,7 @@ function Spring.SetUnitCollisionVolumeData(unitID, scaleX, scaleY, scaleZ, offse
 ---@return nil
 function Spring.SetUnitPieceCollisionVolumeData(unitID, pieceIndex, enable, scaleX, scaleY, scaleZ, offsetX, offsetY, offsetZ, volumeType, primaryAxis) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3680-L3687" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3697-L3704" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param pieceIndex number
@@ -879,7 +908,7 @@ function Spring.SetUnitPieceCollisionVolumeData(unitID, pieceIndex, enable, scal
 ---@return nil
 function Spring.SetUnitPieceVisible(unitID, pieceIndex, visible) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3694-L3700" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3711-L3717" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param type "los"|"airLos"|"radar"|"sonar"|"seismic"|"radarJammer"|"sonarJammer"
@@ -894,7 +923,7 @@ function Spring.SetUnitSensorRadius(unitID, type, radius) end
 ---dot positions failing to register in ray traces, i.e. things like
 ---native "is under cursor" checks and some Lua interfaces.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3743-L3760" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3760-L3777" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param posErrorVectorX number
@@ -909,7 +938,7 @@ function Spring.SetUnitPosErrorParams(unitID, posErrorVectorX, posErrorVectorY, 
 
 ---Used by default commands to get in build-, attackrange etc.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3784-L3795" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3801-L3812" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param goalX number
@@ -923,7 +952,7 @@ function Spring.SetUnitMoveGoal(unitID, goalX, goalY, goalZ, goalRadius, moveSpe
 
 ---Used in conjunction with Spring.UnitAttach et al. to re-implement old airbase & fuel system in Lua.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3821-L3830" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3838-L3847" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param goalX number
@@ -933,13 +962,13 @@ function Spring.SetUnitMoveGoal(unitID, goalX, goalY, goalZ, goalRadius, moveSpe
 ---@return nil
 function Spring.SetUnitLandGoal(unitID, goalX, goalY, goalZ, goalRadius) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3851-L3855" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3868-L3872" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return nil
 function Spring.ClearUnitGoal(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3868-L3884" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3885-L3901" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param posX number
@@ -957,7 +986,7 @@ function Spring.ClearUnitGoal(unitID) end
 ---@return nil
 function Spring.SetUnitPhysics(unitID, posX, posY, posZ, velX, velY, velZ, rotX, rotY, rotZ, dragX, dragY, dragZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3890-L3895" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3907-L3912" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param mass number
@@ -966,7 +995,7 @@ function Spring.SetUnitMass(unitID, mass) end
 
 ---Set unit position (2D)
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3902-L3912" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3919-L3929" target="_blank">source</a>]
 ---
 ---Sets a unit's position in 2D, at terrain height.
 ---
@@ -979,7 +1008,7 @@ function Spring.SetUnitPosition(unitID, x, z, floating) end
 
 ---Set unit position (3D)
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3915-L3925" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3932-L3942" target="_blank">source</a>]
 ---
 ---Sets a unit's position in 3D, at an arbitrary height.
 ---
@@ -990,7 +1019,7 @@ function Spring.SetUnitPosition(unitID, x, z, floating) end
 ---@return nil
 function Spring.SetUnitPosition(unitID, x, y, z) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3957-L3965" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3974-L3982" target="_blank">source</a>]
 ---
 ---Note: PYR order
 ---
@@ -1001,7 +1030,7 @@ function Spring.SetUnitPosition(unitID, x, y, z) end
 ---@return nil
 function Spring.SetUnitRotation(unitID, pitch, yaw, roll) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3972-L3985" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3989-L4002" target="_blank">source</a>]
 ---
 ---Set unit front direction vector. The vector is normalized in
 ---the engine.
@@ -1015,7 +1044,7 @@ function Spring.SetUnitRotation(unitID, pitch, yaw, roll) end
 ---@return nil
 function Spring.SetUnitDirection(unitID, frontx, fronty, frontz) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3987-L4001" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4004-L4018" target="_blank">source</a>]
 ---
 ---Set unit front and right direction vectors.
 ---
@@ -1048,11 +1077,11 @@ function Spring.SetUnitDirection(unitID, frontx, fronty, frontz, rightx, righty,
 ---                  F(S=0) = H(0)
 ---```
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4007-L4025" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4024-L4042" target="_blank">source</a>]
 ---
 ---@alias Heading integer
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4027-L4039" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4044-L4056" target="_blank">source</a>]
 ---
 ---Use this call to set up unit direction in a robust way. If unit was
 ---completely upright, new `{upx, upy, upz}` direction will be used as new "up"
@@ -1068,7 +1097,7 @@ function Spring.SetUnitHeadingAndUpDir(unitID, heading, upx, upy, upz) end
 
 ---Set the velocity of a Unit
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4045-L4053" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4062-L4070" target="_blank">source</a>]
 ---
 ---@see Spring.SetUnitMoveCtrl for disabling/enabling this control
 ---@param unitID integer
@@ -1077,7 +1106,7 @@ function Spring.SetUnitHeadingAndUpDir(unitID, heading, upx, upy, upz) end
 ---@param velZ number in elmos/frame
 function Spring.SetUnitVelocity(unitID, velX, velY, velZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4060-L4071" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4077-L4088" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param buggerOff boolean?
@@ -1089,7 +1118,7 @@ function Spring.SetUnitVelocity(unitID, velX, velY, velZ) end
 ---@return nil|number buggerOff
 function Spring.SetFactoryBuggerOff(unitID, buggerOff, offset, radius, relHeading, spherical, forced) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4094-L4107" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4111-L4124" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -1105,7 +1134,7 @@ function Spring.BuggerOff(x, y, z, radius, teamID, spherical, forced, excludeUni
 
 ---Apply damage to feature
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4163-L4185" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4180-L4202" target="_blank">source</a>]
 ---
 ---Will trigger FeaturePreDamaged and FeatureDamaged callins.
 ---
@@ -1126,7 +1155,7 @@ function Spring.BuggerOff(x, y, z, radius, teamID, spherical, forced, excludeUni
 ---@see SyncedCallins:FeatureDamaged
 function Spring.AddFeatureDamage(featureID, damage, paralyze, attackerID, weaponID, impulseX, impulseY, impulseZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4210-L4222" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4227-L4239" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param damage number
@@ -1139,7 +1168,7 @@ function Spring.AddFeatureDamage(featureID, damage, paralyze, attackerID, weapon
 ---@return nil
 function Spring.AddUnitDamage(unitID, damage, paralyze, attackerID, weaponID, impulseX, impulseY, impulseZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4247-L4255" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4264-L4272" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param x number
@@ -1149,14 +1178,14 @@ function Spring.AddUnitDamage(unitID, damage, paralyze, attackerID, weaponID, im
 ---@return nil
 function Spring.AddUnitImpulse(unitID, x, y, z, decayRate) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4272-L4277" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4289-L4294" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param pindSize number
 ---@return nil
 function Spring.AddUnitSeismicPing(unitID, pindSize) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4292-L4298" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4309-L4315" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param resource string "m" | "e"
@@ -1164,7 +1193,7 @@ function Spring.AddUnitSeismicPing(unitID, pindSize) end
 ---@return nil
 function Spring.AddUnitResource(unitID, resource, amount) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4322-L4328" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4339-L4345" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param resource ResourceName
@@ -1172,7 +1201,7 @@ function Spring.AddUnitResource(unitID, resource, amount) end
 ---@return boolean? okay
 function Spring.UseUnitResource(unitID, resource, amount) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4330-L4335" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4347-L4352" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param resources ResourceUsage
@@ -1181,17 +1210,17 @@ function Spring.UseUnitResource(unitID, resources) end
 
 ---Decals
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4394-L4397" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4411-L4414" target="_blank">source</a>]
 ---
 ---@section decals
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4400-L4405" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4417-L4422" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return nil
 function Spring.AddObjectDecal(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4418-L4422" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4435-L4439" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return nil
@@ -1199,18 +1228,18 @@ function Spring.RemoveObjectDecal(unitID) end
 
 ---Grass
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4435-L4438" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4452-L4455" target="_blank">source</a>]
 ---
 ---@section grass
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4441-L4446" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4458-L4463" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
 ---@return nil
 function Spring.AddGrass(x, z) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4456-L4461" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4473-L4478" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -1219,11 +1248,11 @@ function Spring.RemoveGrass(x, z) end
 
 ---Feature Handling
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4471-L4474" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4488-L4491" target="_blank">source</a>]
 ---
 ---@section featurehandling
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4477-L4487" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4494-L4504" target="_blank">source</a>]
 ---
 ---@param featureDef string|integer name or id
 ---@param x number
@@ -1235,7 +1264,7 @@ function Spring.RemoveGrass(x, z) end
 ---@return integer featureID
 function Spring.CreateFeature(featureDef, x, y, z, heading, AllyTeamID, featureID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4577-L4581" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4594-L4598" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@return nil
@@ -1243,28 +1272,28 @@ function Spring.DestroyFeature(featureID) end
 
 ---Feature Control
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4595-L4601" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4612-L4618" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param teamID integer
 ---@return nil
 function Spring.TransferFeature(featureID, teamID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4618-L4623" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4635-L4640" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param enable boolean
 ---@return nil
 function Spring.SetFeatureAlwaysVisible(featureID, enable) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4629-L4635" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4646-L4652" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param useAirLos boolean
 ---@return nil
 function Spring.SetFeatureUseAirLos(featureID, useAirLos) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4642-L4648" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4659-L4665" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param health number
@@ -1272,21 +1301,21 @@ function Spring.SetFeatureUseAirLos(featureID, useAirLos) end
 ---@return nil
 function Spring.SetFeatureHealth(featureID, health, checkDestruction) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4665-L4671" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4682-L4688" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param maxHealth number minimum 0.1
 ---@return nil
 function Spring.SetFeatureMaxHealth(featureID, maxHealth) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4685-L4690" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4702-L4707" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param reclaimLeft number
 ---@return nil
 function Spring.SetFeatureReclaim(featureID, reclaimLeft) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4702-L4712" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4719-L4729" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param metal number
@@ -1298,7 +1327,7 @@ function Spring.SetFeatureReclaim(featureID, reclaimLeft) end
 ---@return nil
 function Spring.SetFeatureResources(featureID, metal, energy, reclaimTime, reclaimLeft, featureDefMetal, featureDefEnergy) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4731-L4739" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4748-L4756" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param unitDef string|integer Can be a number id or a string name, this allows cancelling resurrection by passing `-1`.
@@ -1309,7 +1338,7 @@ function Spring.SetFeatureResurrect(featureID, unitDef, facing, progress) end
 
 ---Enable feature movement control.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4767-L4779" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4784-L4796" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param enabled true Enable feature movement.
@@ -1338,7 +1367,7 @@ function Spring.SetFeatureMoveCtrl(featureID, enabled, initialVelocityX, initial
 ---Spring.SetFeatureVelocity(featureID,10,0,10)
 ---```
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4781-L4811" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4798-L4828" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param enabled false Disable feature movement.
@@ -1353,7 +1382,7 @@ function Spring.SetFeatureMoveCtrl(featureID, enabled, initialVelocityX, initial
 ---@param movementMaskZ number? Lock move in Z dimension when not using `MoveCtrl`. `0` to lock the axis, non-zero to allow, or `nil` for no change.
 function Spring.SetFeatureMoveCtrl(featureID, enabled, velocityMaskX, velocityMaskY, velocityMaskZ, impulseMaskX, impulseMaskY, impulseMaskZ, movementMaskX, movementMaskY, movementMaskZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4842-L4858" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4859-L4875" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param posX number
@@ -1371,14 +1400,14 @@ function Spring.SetFeatureMoveCtrl(featureID, enabled, velocityMaskX, velocityMa
 ---@return nil
 function Spring.SetFeaturePhysics(featureID, posX, posY, posZ, velX, velY, velZ, rotX, rotY, rotZ, dragX, dragY, dragZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4865-L4870" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4882-L4887" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param mass number
 ---@return nil
 function Spring.SetFeatureMass(featureID, mass) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4877-L4885" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4894-L4902" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param x number
@@ -1388,7 +1417,7 @@ function Spring.SetFeatureMass(featureID, mass) end
 ---@return nil
 function Spring.SetFeaturePosition(featureID, x, y, z, snapToGround) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4903-L4911" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4920-L4928" target="_blank">source</a>]
 ---
 ---Note: PYR order
 ---
@@ -1399,7 +1428,7 @@ function Spring.SetFeaturePosition(featureID, x, y, z, snapToGround) end
 ---@return nil
 function Spring.SetFeatureRotation(featureID, pitch, yaw, roll) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4918-L4931" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4935-L4948" target="_blank">source</a>]
 ---
 ---Set feature front direction vector. The vector is normalized in
 ---the engine.
@@ -1413,7 +1442,7 @@ function Spring.SetFeatureRotation(featureID, pitch, yaw, roll) end
 ---@return nil
 function Spring.SetFeatureDirection(featureID, frontx, fronty, frontz) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4933-L4947" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4950-L4964" target="_blank">source</a>]
 ---
 ---Set feature front and right direction vectors.
 ---
@@ -1429,7 +1458,7 @@ function Spring.SetFeatureDirection(featureID, frontx, fronty, frontz) end
 ---@return nil
 function Spring.SetFeatureDirection(featureID, frontx, fronty, frontz, rightx, righty, rightz) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4953-L4965" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4970-L4982" target="_blank">source</a>]
 ---
 ---Use this call to set up feature direction in a robust way. If feature was
 ---completely upright, new `{upx, upy, upz}` direction will be used as new "up"
@@ -1445,7 +1474,7 @@ function Spring.SetFeatureHeadingAndUpDir(featureID, heading, upx, upy, upz) end
 
 ---Set the velocity of a Feature
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4971-L4979" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4988-L4996" target="_blank">source</a>]
 ---
 ---@see Spring.SetFeatureMoveCtrl for disabling/enabling this control
 ---@param featureID integer
@@ -1454,7 +1483,7 @@ function Spring.SetFeatureHeadingAndUpDir(featureID, heading, upx, upy, upz) end
 ---@param velZ number in elmos/frame
 function Spring.SetFeatureVelocity(featureID, velX, velY, velZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4986-L4997" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5003-L5014" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param isBlocking boolean? If `true` add this feature to the `GroundBlockingMap`, but only if it collides with solid objects (or is being set to collide with the `isSolidObjectCollidable` argument). If `false`, remove this feature from the `GroundBlockingMap`. No change if `nil`.
@@ -1467,14 +1496,14 @@ function Spring.SetFeatureVelocity(featureID, velX, velY, velZ) end
 ---@return boolean isBlocking
 function Spring.SetFeatureBlocking(featureID, isBlocking, isSolidObjectCollidable, isProjectileCollidable, isRaySegmentCollidable, crushable, blockEnemyPushing, blockHeightChanges) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5004-L5009" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5021-L5026" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param noSelect boolean
 ---@return nil
 function Spring.SetFeatureNoSelect(featureID, noSelect) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5022-L5036" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5039-L5053" target="_blank">source</a>]
 ---
 ---Check `Spring.SetUnitMidAndAimPos` for further explanation of the arguments.
 ---
@@ -1489,7 +1518,7 @@ function Spring.SetFeatureNoSelect(featureID, noSelect) end
 ---@return boolean success
 function Spring.SetFeatureMidAndAimPos(featureID, mpX, mpY, mpZ, apX, apY, apZ, relative) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5073-L5079" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5090-L5096" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param radius number
@@ -1497,7 +1526,7 @@ function Spring.SetFeatureMidAndAimPos(featureID, mpX, mpY, mpZ, apX, apY, apZ, 
 ---@return boolean success
 function Spring.SetFeatureRadiusAndHeight(featureID, radius, height) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5108-L5124" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5125-L5141" target="_blank">source</a>]
 ---
 ---Check `Spring.SetUnitCollisionVolumeData` for further explanation of the arguments.
 ---
@@ -1514,7 +1543,7 @@ function Spring.SetFeatureRadiusAndHeight(featureID, radius, height) end
 ---@return nil
 function Spring.SetFeatureCollisionVolumeData(featureID, scaleX, scaleY, scaleZ, offsetX, offsetY, offsetZ, vType, tType, Axis) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5131-L5146" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5148-L5163" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param pieceIndex number
@@ -1531,7 +1560,7 @@ function Spring.SetFeatureCollisionVolumeData(featureID, scaleX, scaleY, scaleZ,
 ---@return nil
 function Spring.SetFeaturePieceCollisionVolumeData(featureID, pieceIndex, enable, scaleX, scaleY, scaleZ, offsetX, offsetY, offsetZ, Axis, volumeType, primaryAxis) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5152-L5159" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5169-L5176" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param pieceIndex number
@@ -1541,7 +1570,7 @@ function Spring.SetFeaturePieceVisible(featureID, pieceIndex, visible) end
 
 ---Set the fire timer for a feature.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5166-L5175" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5183-L5192" target="_blank">source</a>]
 ---
 ---Starts or resets an internal feature fire timer, when reaching zero the
 ---feature will be destroyed.
@@ -1552,7 +1581,7 @@ function Spring.SetFeatureFireTime(featureID, fireTime) end
 
 ---Set the smoke timer for a feature.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5198-L5210" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5215-L5227" target="_blank">source</a>]
 ---
 ---If different than zero, starts emitting smoke until the timer counts down to zero.
 ---
@@ -1566,13 +1595,13 @@ function Spring.SetFeatureSmokeTime(featureID, smokeTime) end
 
 ---Wrecks
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5233-L5236" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5250-L5253" target="_blank">source</a>]
 ---
 ---@section wrecks
 
 ---Create a wreck from a unit
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5239-L5247" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5256-L5264" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param wreckLevel integer? (Default: `1`) Wreck index to use.
@@ -1582,7 +1611,7 @@ function Spring.CreateUnitWreck(unitID, wreckLevel, doSmoke) end
 
 ---Create a wreck from a feature
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5270-L5278" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5287-L5295" target="_blank">source</a>]
 ---
 ---@param featureID integer
 ---@param wreckLevel integer? (Default: `1`) Wreck index to use.
@@ -1592,18 +1621,18 @@ function Spring.CreateFeatureWreck(featureID, wreckLevel, doSmoke) end
 
 ---Projectiles
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5301-L5304" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5318-L5321" target="_blank">source</a>]
 ---
 ---@section projectiles
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5306-L5311" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5323-L5328" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@param alwaysVisible boolean
 ---@return nil
 function Spring.SetProjectileAlwaysVisible(projectileID, alwaysVisible) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5318-L5324" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5335-L5341" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@param useAirLos boolean
@@ -1617,7 +1646,7 @@ function Spring.SetProjectileUseAirLos(projectileID, useAirLos) end
 ---
 ---Passing true merely skips engine updating velocity and position.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5331-L5342" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5348-L5359" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@param enable boolean
@@ -1625,7 +1654,7 @@ function Spring.SetProjectileMoveControl(projectileID, enable) end
 
 ---Set the position of a projectile
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5356-L5363" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5373-L5380" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@param posX number? (Default: `0`)
@@ -1640,7 +1669,7 @@ function Spring.SetProjectilePosition(projectileID, posX, posY, posZ) end
 ---> required to have been called to make use of this method, but often used in
 ---> conjunction.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5378-L5391" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5395-L5408" target="_blank">source</a>]
 ---
 ---@see Spring.SetProjectileMoveControl
 ---@param projectileID integer
@@ -1649,12 +1678,12 @@ function Spring.SetProjectilePosition(projectileID, posX, posY, posZ) end
 ---@param velZ number in elmos/frame
 function Spring.SetProjectileVelocity(projectileID, velX, velY, velZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5397-L5400" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5414-L5417" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 function Spring.SetProjectileCollision(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5412-L5418" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5429-L5435" target="_blank">source</a>]
 ---
 ---@enum ProjectileTargetType
 ---@x_helper
@@ -1671,7 +1700,7 @@ ProjectileTargetType = {
 
 ---Set projectile target (object)
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5420-L5427" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5437-L5444" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@param targetID number
@@ -1681,7 +1710,7 @@ function Spring.SetProjectileTarget(projectileID, targetID, targetType) end
 
 ---Set projectile target (position)
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5429-L5438" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5446-L5455" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@param posX number
@@ -1692,18 +1721,18 @@ function Spring.SetProjectileTarget(projectileID, posX, posY, posZ) end
 
 ---Set Time To Live for a projectile
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5509-L5514" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5526-L5531" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@param ttl number Remaining time to live in frames
 function Spring.SetProjectileTimeToLive(projectileID, ttl) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5531-L5534" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5548-L5551" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 function Spring.SetProjectileIsIntercepted(projectileID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5550-L5556" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5567-L5573" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param weaponNum integer
@@ -1711,13 +1740,13 @@ function Spring.SetProjectileIsIntercepted(projectileID) end
 ---@param value number
 function Spring.SetProjectileDamages(unitID, weaponNum, key, value) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5586-L5590" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5603-L5607" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@param ignore boolean
 function Spring.SetProjectileIgnoreTrackingError(projectileID, ignore) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5615-L5620" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5632-L5637" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@param grav number? (Default: `0`)
@@ -1728,7 +1757,7 @@ function Spring.SetProjectileGravity(projectileID, grav) end
 ---
 ---Non passed or nil args don't set params.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5638-L5650" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5655-L5667" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@param explosionFlags number?
@@ -1739,7 +1768,7 @@ function Spring.SetProjectileGravity(projectileID, grav) end
 ---@param spinVectorZ number?
 function Spring.SetPieceProjectileParams(projectileID, explosionFlags, spinAngle, spinSpeed, spinVectorX, spinVectorY, spinVectorZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5672-L5677" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5689-L5694" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@param ceg_name string
@@ -1748,18 +1777,18 @@ function Spring.SetProjectileCEG(projectileID, ceg_name) end
 
 ---Give Order
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5703-L5708" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5720-L5725" target="_blank">source</a>]
 ---
 ---@section giveorder
 ---Options can also be a bitmask; e.g. 0 instead of an empty table (can avoid performance hit on table creation)
 ---See `Constants.CMD` for relevant constants.
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5711-L5714" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5728-L5731" target="_blank">source</a>]
 ---
 ---@param unitID integer
 function Spring.UnitFinishCommand(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5730-L5738" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5747-L5755" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param cmdID CMD|integer The command ID.
@@ -1771,7 +1800,7 @@ function Spring.GiveOrderToUnit(unitID, cmdID, params, options, timeout) end
 
 ---Give order to multiple units, specified by table keys.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5767-L5777" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5784-L5794" target="_blank">source</a>]
 ---
 ---@param unitMap table<integer, any> A table with unit IDs as keys.
 ---@param cmdID CMD|integer The command ID.
@@ -1781,7 +1810,7 @@ function Spring.GiveOrderToUnit(unitID, cmdID, params, options, timeout) end
 ---@return integer unitsOrdered The number of units ordered.
 function Spring.GiveOrderToUnitMap(unitMap, cmdID, params, options, timeout) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5812-L5821" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5829-L5838" target="_blank">source</a>]
 ---
 ---@param unitIDs integer[] An array of unit IDs.
 ---@param cmdID CMD|integer The command ID.
@@ -1791,21 +1820,21 @@ function Spring.GiveOrderToUnitMap(unitMap, cmdID, params, options, timeout) end
 ---@return integer unitsOrdered The number of units ordered.
 function Spring.GiveOrderToUnitArray(unitIDs, cmdID, params, options, timeout) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5858-L5864" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5875-L5881" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param commands CreateCommand[]
 ---@return boolean ordersGiven
 function Spring.GiveOrderArrayToUnit(unitID, commands) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5899-L5904" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5916-L5921" target="_blank">source</a>]
 ---
 ---@param unitMap table<integer, any> A table with unit IDs as keys.
 ---@param commands CreateCommand[]
 ---@return integer unitsOrdered The number of units ordered.
 function Spring.GiveOrderArrayToUnitMap(unitMap, commands) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5941-L5953" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5958-L5970" target="_blank">source</a>]
 ---
 ---@param unitIDs integer[] Array of unit IDs.
 ---@param commands CreateCommand[]
@@ -1820,14 +1849,14 @@ function Spring.GiveOrderArrayToUnitArray(unitIDs, commands, pairwise) end
 
 ---Heightmap
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6064-L6068" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6081-L6085" target="_blank">source</a>]
 ---
 ---@section heightmap
 ---Note that x & z coords are in worldspace (Game.mapSizeX/Z), still the heightmap resolution is Game.squareSize.
 
 ---Set the height of a point in the world.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6071-L6078" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6088-L6095" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -1836,7 +1865,7 @@ function Spring.LevelHeightMap(x, z, height) end
 
 ---Set the height of a rectangle area in the world.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6079-L6089" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6096-L6106" target="_blank">source</a>]
 ---
 ---@param x1 number
 ---@param z1 number
@@ -1848,7 +1877,7 @@ function Spring.LevelHeightMap(x1, z1, x2, z2, height) end
 
 ---Add height to a point in the world.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6110-L6117" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6127-L6134" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -1857,7 +1886,7 @@ function Spring.AdjustHeightMap(x, z, height) end
 
 ---Add height to a rectangle in the world.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6119-L6129" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6136-L6146" target="_blank">source</a>]
 ---
 ---@param x1 number
 ---@param z1 number
@@ -1869,7 +1898,7 @@ function Spring.AdjustHeightMap(x1, z1, x2, z2, height) end
 
 ---Restore map height at a point in the world.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6151-L6158" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6168-L6175" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -1878,7 +1907,7 @@ function Spring.RevertHeightMap(x, z, height) end
 
 ---Restore map height of a rectangle area in the world.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6159-L6169" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6176-L6186" target="_blank">source</a>]
 ---
 ---@param x1 number
 ---@param z1 number
@@ -1890,7 +1919,7 @@ function Spring.RevertHeightMap(x1, z1, x2, z2, height) end
 
 ---Can only be called in `Spring.SetHeightMapFunc`
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6208-L6215" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6225-L6232" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -1898,7 +1927,7 @@ function Spring.RevertHeightMap(x1, z1, x2, z2, height) end
 ---@return integer? newHeight
 function Spring.AddHeightMap(x, z, height) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6253-L6265" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6270-L6282" target="_blank">source</a>]
 ---
 ---Can only be called in `Spring.SetHeightMapFunc`.
 ---
@@ -1909,7 +1938,7 @@ function Spring.AddHeightMap(x, z, height) end
 ---@return integer? absHeightDiff If `0`, nothing will be changed (the terraform starts), if `1` the terraform will be finished.
 function Spring.SetHeightMap(x, z, height, terraform) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6312-L6331" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6329-L6348" target="_blank">source</a>]
 ---
 ---Example code:
 ---
@@ -1931,13 +1960,13 @@ function Spring.SetHeightMapFunc(luaFunction, arg, ...) end
 
 ---Height Map/Smooth Mesh
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6372-L6375" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6389-L6392" target="_blank">source</a>]
 ---
 ---@section heightmap
 
 ---Set the height of a point in the original map height cache.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6377-L6384" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6394-L6401" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -1946,7 +1975,7 @@ function Spring.LevelOriginalHeightMap(x, z, height) end
 
 ---Set the height of a rectangle area in the original map height cache.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6385-L6394" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6402-L6411" target="_blank">source</a>]
 ---
 ---@param x1 number
 ---@param z1 number
@@ -1957,7 +1986,7 @@ function Spring.LevelOriginalHeightMap(x1, z1, x2, z2, height) end
 
 ---Add height to a point in the original map height cache.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6413-L6420" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6430-L6437" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -1966,7 +1995,7 @@ function Spring.AdjustOriginalHeightMap(x, z, height) end
 
 ---Add height to a rectangle area in the original map height cache.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6421-L6430" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6438-L6447" target="_blank">source</a>]
 ---
 ---@param x1 number
 ---@param z1 number
@@ -1977,7 +2006,7 @@ function Spring.AdjustOriginalHeightMap(x1, z1, x2, z2, height) end
 
 ---Restore original map height at a point in the world.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6452-L6459" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6469-L6476" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -1986,7 +2015,7 @@ function Spring.RevertOriginalHeightMap(x, z, height) end
 
 ---Restore original map height over a rectangle in the world.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6460-L6470" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6477-L6487" target="_blank">source</a>]
 ---
 ---@param x1 number
 ---@param z1 number
@@ -1996,7 +2025,7 @@ function Spring.RevertOriginalHeightMap(x, z, height) end
 ---@return nil
 function Spring.RevertOriginalHeightMap(x1, z1, x2, z2, height) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6508-L6518" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6525-L6535" target="_blank">source</a>]
 ---
 ---Can only be called in `Spring.SetOriginalHeightMapFunc`
 ---
@@ -2006,7 +2035,7 @@ function Spring.RevertOriginalHeightMap(x1, z1, x2, z2, height) end
 ---@return nil
 function Spring.AddOriginalHeightMap(x, y, height) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6550-L6561" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6567-L6578" target="_blank">source</a>]
 ---
 ---Can only be called in `Spring.SetOriginalHeightMapFunc`
 ---
@@ -2017,7 +2046,7 @@ function Spring.AddOriginalHeightMap(x, y, height) end
 ---@return nil
 function Spring.SetOriginalHeightMap(x, y, height, factor) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6602-L6610" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6619-L6627" target="_blank">source</a>]
 ---
 ---Cannot recurse on itself
 ---
@@ -2025,7 +2054,7 @@ function Spring.SetOriginalHeightMap(x, y, height, factor) end
 ---@return nil
 function Spring.SetOriginalHeightMapFunc(heightMapFunc) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6654-L6661" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6671-L6678" target="_blank">source</a>]
 ---
 ---Heightmap changes normally take up to 25s to propagate to the smooth mesh.
 ---Use to force a mapwide update immediately.
@@ -2033,14 +2062,14 @@ function Spring.SetOriginalHeightMapFunc(heightMapFunc) end
 ---@return nil
 function Spring.RebuildSmoothMesh() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6669-L6674" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6686-L6691" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
 ---@param height number
 function Spring.LevelSmoothMesh(x, z, height) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6675-L6682" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6692-L6699" target="_blank">source</a>]
 ---
 ---@param x1 number
 ---@param z1 number
@@ -2049,14 +2078,14 @@ function Spring.LevelSmoothMesh(x, z, height) end
 ---@param height number
 function Spring.LevelSmoothMesh(x1, z1, x2, z2, height) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6701-L6706" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6718-L6723" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
 ---@param height number
 function Spring.AdjustSmoothMesh(x, z, height) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6707-L6714" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6724-L6731" target="_blank">source</a>]
 ---
 ---@param x1 number
 ---@param z1 number
@@ -2065,14 +2094,14 @@ function Spring.AdjustSmoothMesh(x, z, height) end
 ---@param height number
 function Spring.AdjustSmoothMesh(x1, z1, x2, z2, height) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6731-L6736" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6748-L6753" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
 ---@param origFactor number
 function Spring.RevertSmoothMesh(x, z, origFactor) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6737-L6744" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6754-L6761" target="_blank">source</a>]
 ---
 ---@param x1 number
 ---@param z1 number
@@ -2083,7 +2112,7 @@ function Spring.RevertSmoothMesh(x1, z1, x2, z2, origFactor) end
 
 ---Can only be called in `Spring.SetSmoothMeshFunc`.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6778-L6785" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6795-L6802" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -2093,7 +2122,7 @@ function Spring.AddSmoothMesh(x, z, height) end
 
 ---Can only be called in `Spring.SetSmoothMeshFunc`.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6816-L6824" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6833-L6841" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -2102,7 +2131,7 @@ function Spring.AddSmoothMesh(x, z, height) end
 ---@return number? The absolute height difference, or `nil` if coordinates are invalid.
 function Spring.SetSmoothMesh(x, z, height, terraform) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6864-L6870" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6881-L6887" target="_blank">source</a>]
 ---
 ---@param luaFunction function
 ---@param arg any?
@@ -2112,11 +2141,11 @@ function Spring.SetSmoothMeshFunc(luaFunction, arg, ...) end
 
 ---TerrainTypes
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6899-L6902" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6916-L6919" target="_blank">source</a>]
 ---
 ---@section terraintypes
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6905-L6911" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6922-L6928" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -2124,7 +2153,7 @@ function Spring.SetSmoothMeshFunc(luaFunction, arg, ...) end
 ---@return integer? oldType
 function Spring.SetMapSquareTerrainType(x, z, newType) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6935-L6943" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6952-L6960" target="_blank">source</a>]
 ---
 ---@param typeIndex number
 ---@param speedTanks number? (Default: nil)
@@ -2134,7 +2163,7 @@ function Spring.SetMapSquareTerrainType(x, z, newType) end
 ---@return boolean? true
 function Spring.SetTerrainTypeData(typeIndex, speedTanks, speedKBOts, speedHovers, speedShips) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6982-L6990" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L6999-L7007" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param z number
@@ -2144,14 +2173,14 @@ function Spring.SetTerrainTypeData(typeIndex, speedTanks, speedKBOts, speedHover
 ---See also buildingMask unitdef tag.
 function Spring.SetSquareBuildingMask(x, z, mask) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7014-L7019" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7031-L7036" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param weaponID integer
 ---@return nil
 function Spring.UnitWeaponFire(unitID, weaponID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7037-L7042" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7054-L7059" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param weaponID integer
@@ -2169,13 +2198,13 @@ function Spring.UnitWeaponHoldFire(unitID, weaponID) end
 ---lets you guarantee success for important weapons regardless of how high
 ---the normal update rate is set.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7058-L7072" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7075-L7089" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@return nil
 function Spring.ForceUnitCollisionUpdate(unitID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7085-L7092" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7102-L7109" target="_blank">source</a>]
 ---
 ---@param transporterID integer
 ---@param passengerID integer
@@ -2183,13 +2212,13 @@ function Spring.ForceUnitCollisionUpdate(unitID) end
 ---@return nil
 function Spring.UnitAttach(transporterID, passengerID, pieceNum) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7124-L7128" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7141-L7145" target="_blank">source</a>]
 ---
 ---@param passengerID integer
 ---@return nil
 function Spring.UnitDetach(passengerID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7146-L7150" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7163-L7167" target="_blank">source</a>]
 ---
 ---@param passengerID integer
 ---@return nil
@@ -2197,14 +2226,14 @@ function Spring.UnitDetachFromAir(passengerID) end
 
 ---Disables collisions between the two units to allow colvol intersection during the approach.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7178-L7184" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7195-L7201" target="_blank">source</a>]
 ---
 ---@param passengerID integer
 ---@param transportID integer
 ---@return nil
 function Spring.SetUnitLoadingTransport(passengerID, transportID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7207-L7225" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7224-L7242" target="_blank">source</a>]
 ---
 ---@class ProjectileParams
 ---@x_helper
@@ -2225,7 +2254,7 @@ function Spring.SetUnitLoadingTransport(passengerID, transportID) end
 ---@field cegTag string
 local ProjectileParams = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7227-L7233" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7244-L7250" target="_blank">source</a>]
 ---
 ---@param weaponDefID integer
 ---@param projectileParams ProjectileParams
@@ -2234,7 +2263,7 @@ function Spring.SpawnProjectile(weaponDefID, projectileParams) end
 
 ---Silently removes projectiles (no explosion).
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7249-L7254" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7266-L7271" target="_blank">source</a>]
 ---
 ---@param projectileID integer
 ---@return nil
@@ -2245,7 +2274,7 @@ function Spring.DeleteProjectile(projectileID) end
 ---Please note the explosion defaults to 1 damage regardless of what it's defined in the weaponDef.
 ---The weapondefID is only used for visuals and for passing into callins like UnitDamaged.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7374-L7394" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7391-L7411" target="_blank">source</a>]
 ---
 ---@class ExplosionParams
 ---@x_helper
@@ -2263,7 +2292,7 @@ function Spring.DeleteProjectile(projectileID) end
 ---@field damageGround boolean
 local ExplosionParams = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7396-L7406" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7413-L7423" target="_blank">source</a>]
 ---
 ---@param posX number? (Default: `0`)
 ---@param posY number? (Default: `0`)
@@ -2275,7 +2304,7 @@ local ExplosionParams = {}
 ---@return nil
 function Spring.SpawnExplosion(posX, posY, posZ, dirX, dirY, dirZ, explosionParams) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7468-L7481" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7485-L7498" target="_blank">source</a>]
 ---
 ---@param cegname string
 ---@param posX number? (Default: `0`)
@@ -2292,7 +2321,7 @@ function Spring.SpawnCEG(cegname, posX, posY, posZ, dirX, dirY, dirZ, radius, da
 
 ---Equal to the UnitScript versions of EmitSFX, but takes position and direction arguments (in either unit- or piece-space) instead of a piece index.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7500-L7515" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7517-L7532" target="_blank">source</a>]
 ---
 ---@param unitID integer? (Default: `0`)
 ---@param sfxID integer? (Default: `0`)
@@ -2310,11 +2339,11 @@ function Spring.SpawnSFX(unitID, sfxID, posX, posY, posZ, dirX, dirY, dirZ, radi
 
 ---Other
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7535-L7538" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7552-L7555" target="_blank">source</a>]
 ---
 ---@section other
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7540-L7544" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7557-L7561" target="_blank">source</a>]
 ---
 ---@param noPause boolean
 ---@return nil
@@ -2322,7 +2351,7 @@ function Spring.SetNoPause(noPause) end
 
 ---Defines how often `Callins.UnitExperience` will be called.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7558-L7566" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7575-L7583" target="_blank">source</a>]
 ---
 ---@param expGrade number
 ---@param ExpPowerScale number?
@@ -2331,7 +2360,7 @@ function Spring.SetNoPause(noPause) end
 ---@return nil
 function Spring.SetExperienceGrade(expGrade, ExpPowerScale, ExpHealthScale, ExpReloadScale) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7589-L7597" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7606-L7614" target="_blank">source</a>]
 ---
 ---@param allyTeamID integer
 ---@param allyteamErrorSize number
@@ -2342,12 +2371,12 @@ function Spring.SetRadarErrorParams(allyTeamID, allyteamErrorSize, baseErrorSize
 
 ---Command Descriptions
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7678-L7682" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7695-L7699" target="_blank">source</a>]
 ---
 ---@section commanddescriptions
 ---Doesn't work in unsynced code!
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7724-L7729" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7741-L7746" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param cmdDescID integer
@@ -2356,7 +2385,7 @@ function Spring.EditUnitCmdDesc(unitID, cmdDescID, cmdArray) end
 
 ---Insert a command description at a specific index.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7756-L7763" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7773-L7780" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param index integer
@@ -2365,13 +2394,13 @@ function Spring.InsertUnitCmdDesc(unitID, index, cmdDesc) end
 
 ---Insert a command description at the last position.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7764-L7770" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7781-L7787" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param cmdDesc CommandDescription
 function Spring.InsertUnitCmdDesc(unitID, cmdDesc) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7805-L7809" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7822-L7826" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param cmdDescID integer?
