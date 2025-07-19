@@ -2274,7 +2274,7 @@ function Spring.DeleteProjectile(projectileID) end
 ---Please note the explosion defaults to 1 damage regardless of what it's defined in the weaponDef.
 ---The weapondefID is only used for visuals and for passing into callins like UnitDamaged.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7391-L7411" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7395-L7415" target="_blank">source</a>]
 ---
 ---@class ExplosionParams
 ---@x_helper
@@ -2292,7 +2292,7 @@ function Spring.DeleteProjectile(projectileID) end
 ---@field damageGround boolean
 local ExplosionParams = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7413-L7423" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7417-L7427" target="_blank">source</a>]
 ---
 ---@param posX number? (Default: `0`)
 ---@param posY number? (Default: `0`)
@@ -2304,7 +2304,7 @@ local ExplosionParams = {}
 ---@return nil
 function Spring.SpawnExplosion(posX, posY, posZ, dirX, dirY, dirZ, explosionParams) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7485-L7498" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7489-L7502" target="_blank">source</a>]
 ---
 ---@param cegname string
 ---@param posX number? (Default: `0`)
@@ -2321,7 +2321,7 @@ function Spring.SpawnCEG(cegname, posX, posY, posZ, dirX, dirY, dirZ, radius, da
 
 ---Equal to the UnitScript versions of EmitSFX, but takes position and direction arguments (in either unit- or piece-space) instead of a piece index.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7517-L7532" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7530-L7545" target="_blank">source</a>]
 ---
 ---@param unitID integer? (Default: `0`)
 ---@param sfxID integer? (Default: `0`)
@@ -2339,11 +2339,11 @@ function Spring.SpawnSFX(unitID, sfxID, posX, posY, posZ, dirX, dirY, dirZ, radi
 
 ---Other
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7552-L7555" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7565-L7568" target="_blank">source</a>]
 ---
 ---@section other
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7557-L7561" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7570-L7574" target="_blank">source</a>]
 ---
 ---@param noPause boolean
 ---@return nil
@@ -2351,7 +2351,7 @@ function Spring.SetNoPause(noPause) end
 
 ---Defines how often `Callins.UnitExperience` will be called.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7575-L7583" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7588-L7596" target="_blank">source</a>]
 ---
 ---@param expGrade number
 ---@param ExpPowerScale number?
@@ -2360,7 +2360,7 @@ function Spring.SetNoPause(noPause) end
 ---@return nil
 function Spring.SetExperienceGrade(expGrade, ExpPowerScale, ExpHealthScale, ExpReloadScale) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7606-L7614" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7619-L7627" target="_blank">source</a>]
 ---
 ---@param allyTeamID integer
 ---@param allyteamErrorSize number
@@ -2371,12 +2371,12 @@ function Spring.SetRadarErrorParams(allyTeamID, allyteamErrorSize, baseErrorSize
 
 ---Command Descriptions
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7695-L7699" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7708-L7712" target="_blank">source</a>]
 ---
 ---@section commanddescriptions
 ---Doesn't work in unsynced code!
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7741-L7746" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7754-L7759" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param cmdDescID integer
@@ -2385,7 +2385,7 @@ function Spring.EditUnitCmdDesc(unitID, cmdDescID, cmdArray) end
 
 ---Insert a command description at a specific index.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7773-L7780" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7786-L7793" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param index integer
@@ -2394,13 +2394,13 @@ function Spring.InsertUnitCmdDesc(unitID, index, cmdDesc) end
 
 ---Insert a command description at the last position.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7781-L7787" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7794-L7800" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param cmdDesc CommandDescription
 function Spring.InsertUnitCmdDesc(unitID, cmdDesc) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7822-L7826" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7835-L7839" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param cmdDescID integer?
