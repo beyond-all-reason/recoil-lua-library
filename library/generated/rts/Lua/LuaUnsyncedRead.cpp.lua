@@ -784,18 +784,18 @@ function Spring.GetNanoProjectileParams() end
 ---@return table<string, integer> indexByName Table where where keys are names and values are indices.
 function Spring.GetCameraNames() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L2726-L2730" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L2726-L2731" target="_blank">source</a>]
 ---
----@param useReturns false
----@return CameraState cameraState
-function Spring.GetCameraState(useReturns) end
-
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L2731-L2736" target="_blank">source</a>]
----
----@param useReturns true? (Default: `true`) Return multiple values instead of a table.
+---@param useTable false
 ---@return CameraName name
----@return any ... depend on current controller mode.
-function Spring.GetCameraState(useReturns) end
+---@return any ... depends on the current controller mode.
+function Spring.GetCameraState(useTable) end
+
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L2732-L2736" target="_blank">source</a>]
+---
+---@param useTable true? (Default: `true`) Return a table instead of multiple values.
+---@return CameraState cameraState
+function Spring.GetCameraState(useTable) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L2802-L2807" target="_blank">source</a>]
 ---
