@@ -1259,10 +1259,10 @@ function Spring.RemoveGrass(x, z) end
 ---@param y number
 ---@param z number
 ---@param heading Heading?
----@param AllyTeamID integer?
+---@param teamID integer?
 ---@param featureID integer?
----@return integer featureID
-function Spring.CreateFeature(featureDef, x, y, z, heading, AllyTeamID, featureID) end
+---@return integer? featureID returns nil if creation was unsuccessful
+function Spring.CreateFeature(featureDef, x, y, z, heading, teamID, featureID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L4594-L4598" target="_blank">source</a>]
 ---
