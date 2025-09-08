@@ -1112,16 +1112,49 @@ function Callins:MapDrawCmd(playerID, type, pos1X, pos1Y, pos1Z, pos2X, pos2Y, p
 ---@param radius number
 function Callins:MapDrawCmd(playerID, type, posX, posY, posZ, radius) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3788-L3796" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3788-L3794" target="_blank">source</a>]
 ---
----@param state string
----@param ready boolean
----@param playerStates table
----@return boolean success
----@return boolean newReady
+---@enum READY_MESSAGE
+READY_MESSAGE = {
+	WAITING = "Waiting for players",
+
+	---when waiting and currently the host, key is the first key bound to the action forcestart
+	HOST_WAITING = "Waiting for players, press key to force start",
+
+	---when current player is not ready and is not a spectator
+	CHOOSE_POS = "Choose start pos",
+
+	---where n is the number of seconds
+	STARTING = "Starting in n"
+}
+
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3796-L3801" target="_blank">source</a>]
+---
+---@enum READY_STATE
+READY_STATE = {
+	---when the player hasn't joined yet (NETMSG_PLAYERNAME wasn't received)
+	MISSING = "missing",
+
+	READY = "ready",
+
+	NOT_READY = "notready"
+}
+
+---Fired when the pregame stage is reached
+---
+---Pregame is the stage where player readiness is managed before a game starts.
+---Game only starts once all players are ready.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3803-L3814" target="_blank">source</a>]
+---
+---@param state READY_MESSAGE the current message the engine would display to the player
+---@param ready boolean whether the player is currently ready or not
+---@param playerStates table<number,READY_STATE> indexed by playerID
+---@return boolean? gameHandled disables the engine ui when true
+---@return boolean? newReady whether the player is ready (ignored unless `gameHandled = true`)
 function Callins:GameSetup(state, ready, playerStates) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3839-L3843" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3857-L3861" target="_blank">source</a>]
 ---
 ---@param aiTeam integer
 ---@param dataStr string
@@ -1129,13 +1162,13 @@ function Callins:RecvSkirmishAIMessage(aiTeam, dataStr) end
 
 ---Downloads
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3880-L3882" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3898-L3900" target="_blank">source</a>]
 ---
 ---@section downloads
 
 ---Called when a Pr-downloader download is queued
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3884-L3890" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3902-L3908" target="_blank">source</a>]
 ---
 ---@param id integer
 ---@param name string
@@ -1144,21 +1177,21 @@ function Callins:DownloadQueued(id, name, type) end
 
 ---Called when a Pr-downloader download is started via VFS.DownloadArchive.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3912-L3916" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3930-L3934" target="_blank">source</a>]
 ---
 ---@param id integer
 function Callins:DownloadStarted(id) end
 
 ---Called when a Pr-downloader download finishes successfully.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3935-L3939" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3953-L3957" target="_blank">source</a>]
 ---
 ---@param id integer
 function Callins:DownloadFinished(id) end
 
 ---Called when a Pr-downloader download fails to complete.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3958-L3963" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3976-L3981" target="_blank">source</a>]
 ---
 ---@param id integer
 ---@param errorID integer
@@ -1166,70 +1199,70 @@ function Callins:DownloadFailed(id, errorID) end
 
 ---Called incrementally during a Pr-downloader download.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L3983-L3989" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4001-L4007" target="_blank">source</a>]
 ---
 ---@param id integer
 ---@param downloaded integer
 ---@param total integer
 function Callins:DownloadProgress(id, downloaded, total) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4107-L4107" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4125-L4125" target="_blank">source</a>]
 Script.NO_ACCESS_TEAM = -1
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4109-L4109" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4127-L4127" target="_blank">source</a>]
 Script.ALL_ACCESS_TEAM = -2
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4130-L4133" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4148-L4151" target="_blank">source</a>]
 ---
 ---@return string name
 function Script.GetName() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4141-L4144" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4159-L4162" target="_blank">source</a>]
 ---
 ---@return boolean synced
 function Script.GetSynced() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4152-L4155" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4170-L4173" target="_blank">source</a>]
 ---
 ---@return boolean fullCtrl
 function Script.GetFullCtrl() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4163-L4166" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4181-L4184" target="_blank">source</a>]
 ---
 ---@return boolean fullRead
 function Script.GetFullRead() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4174-L4177" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4192-L4195" target="_blank">source</a>]
 ---
 ---@return integer teamID
 function Script.GetCtrlTeam() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4185-L4188" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4203-L4206" target="_blank">source</a>]
 ---
 ---@return integer teamID
 function Script.GetReadTeam() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4196-L4199" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4214-L4217" target="_blank">source</a>]
 ---
 ---@return integer allyTeamID
 function Script.GetReadAllyTeam() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4207-L4210" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4225-L4228" target="_blank">source</a>]
 ---
 ---@return integer teamID
 function Script.GetSelectTeam() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4218-L4221" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4236-L4239" target="_blank">source</a>]
 ---
 ---@return integer? global
 function Script.GetGlobal() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4232-L4235" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4250-L4253" target="_blank">source</a>]
 ---
 ---@return integer? registry
 function Script.GetRegistry() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4252-L4256" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4270-L4274" target="_blank">source</a>]
 ---
 ---@param frameDelay integer
 ---@param fun (...) func
