@@ -6,7 +6,7 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L527-L533" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L528-L534" target="_blank">source</a>]
 ---
 ---@param minMajorVer integer
 ---@param minMinorVer integer? (Default: `0`)
@@ -19,7 +19,7 @@ function Script.IsEngineMinVersion(minMajorVer, minMinorVer, minCommits) end
 ---Note that this has extra fields `internal` and `coded` that are not supported
 ---when creating a command from Lua.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L931-L946" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L932-L947" target="_blank">source</a>]
 ---
 ---@class CommandOptions
 ---@x_helper
@@ -32,7 +32,7 @@ function Script.IsEngineMinVersion(minMajorVer, minMinorVer, minCommits) end
 ---@field internal boolean
 local CommandOptions = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L981-L989" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L982-L990" target="_blank">source</a>]
 ---
 ---@alias CommandOptionBit
 ---| 4 # Meta (windows/mac/mod4) key.
@@ -42,7 +42,7 @@ local CommandOptions = {}
 ---| 64 # Control key.
 ---| 128 # Alt key.
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L991-L998" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L992-L999" target="_blank">source</a>]
 ---
 ---@alias CommandOptionName
 ---| "right" # Right mouse key.
@@ -51,7 +51,7 @@ local CommandOptions = {}
 ---| "shift" # Shift key.
 ---| "meta" # Meta key (space).
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1000-L1006" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1001-L1007" target="_blank">source</a>]
 ---
 ---@alias CreateCommandOptions
 ---| CommandOptionName[] # An array of option names.
@@ -59,7 +59,7 @@ local CommandOptions = {}
 ---| CommandOptionBit # A specific integer value for a command option.
 ---| integer # A bit mask combination of `CommandOptionBit` values. Pass `0` for no options.
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1099-L1103" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1100-L1104" target="_blank">source</a>]
 ---
 ---@alias CreateCommandParams
 ---| number[] # An array of parameters.
@@ -67,7 +67,7 @@ local CommandOptions = {}
 
 ---Used when assigning multiple commands at once.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1152-L1161" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1153-L1162" target="_blank">source</a>]
 ---
 ---@class CreateCommand
 ---@x_helper
@@ -79,7 +79,7 @@ local CreateCommand = {}
 
 ---Facing direction represented by a string or number.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1234-L1252" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1235-L1253" target="_blank">source</a>]
 ---
 ---@see FacingInteger
 ---@alias Facing
@@ -100,14 +100,14 @@ local CreateCommand = {}
 ---
 ---Hint: the default print() writes to STDOUT.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1390-L1400" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1391-L1401" target="_blank">source</a>]
 ---
 ---@param arg any
 ---@param ... any
 ---@return nil
 function Spring.Echo(arg, ...) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1407-L1417" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1408-L1418" target="_blank">source</a>]
 ---
 ---@enum LOG
 ---@see Spring.Log
@@ -128,7 +128,7 @@ LOG = {
 	FATAL = 60
 }
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1432-L1442" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1433-L1443" target="_blank">source</a>]
 ---
 ---@alias LogLevel
 ---| integer
@@ -142,7 +142,7 @@ LOG = {
 
 ---Logs a message to the logfile/console.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1470-L1477" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1471-L1478" target="_blank">source</a>]
 ---
 ---@param section string Sets an arbitrary section. Level filtering can be applied per-section
 ---@param logLevel (LogLevel|LOG)? (Default: `"notice"`)
@@ -151,7 +151,7 @@ function Spring.Log(section, logLevel, ...) end
 
 ---Contains data about a command.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1572-L1589" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUtils.cpp#L1573-L1590" target="_blank">source</a>]
 ---
 ---@class CommandDescription
 ---@x_helper
