@@ -14,7 +14,7 @@
 
 ---Game specific information
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGame.cpp#L32-L117" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGame.cpp#L36-L121" target="_blank">source</a>]
 Game = {
 	---@type number
 	maxUnits = nil,
@@ -225,3 +225,9 @@ Game = {
 	---@type TextColorCode
 	textColorCodes = nil
 }
+
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGame.cpp#L223-L223" target="_blank">source</a>]
+---whether the engine handles excess resources overflow
+---
+---@type boolean
+Game.nativeExcessSharing = nil
