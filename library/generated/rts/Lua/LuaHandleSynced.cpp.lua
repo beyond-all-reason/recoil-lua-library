@@ -419,17 +419,15 @@ function SyncedCallins:FeaturePreDamaged(featureID, featureDefID, featureTeam, d
 
 ---Called before any engine shield-vs-projectile logic executes.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1634-L1655" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1634-L1653" target="_blank">source</a>]
 ---
----If the weapon is a hitscan type (BeamLaser or LightningCanon) then proID is nil and beamEmitterWeaponNum and beamEmitterUnitID are populated instead.
----
----@param projectileID integer
----@param projectileOwnerID integer
+---@param projectileID integer `-1` when the weapon type is `BeamLaser` or `LightningCannon`
+---@param projectileOwnerID integer `-1` when the weapon type is `BeamLaser` or `LightningCannon`
 ---@param shieldWeaponNum integer
 ---@param shieldCarrierID integer
 ---@param bounceProjectile boolean
----@param beamEmitterWeaponNum integer
----@param beamEmitterUnitID integer
+---@param beamEmitterWeaponNum integer? present only when the weapon type is `BeamLaser` or `LightningCannon`
+---@param beamEmitterUnitID integer? present only when the weapon type is `BeamLaser` or `LightningCannon`
 ---@param startX number
 ---@param startY number
 ---@param startZ number
@@ -441,7 +439,7 @@ function SyncedCallins:ShieldPreDamaged(projectileID, projectileOwnerID, shieldW
 
 ---Determines if this weapon can automatically generate targets itself. See also commandFire weaponDef tag.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1716-L1731" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1714-L1729" target="_blank">source</a>]
 ---
 ---Only called for weaponDefIDs registered via `Script.SetWatchAllowTarget` or `Script.SetWatchWeapon`.
 ---
@@ -456,7 +454,7 @@ function SyncedCallins:AllowWeaponTargetCheck(attackerID, attackerWeaponNum, att
 
 ---Controls blocking of a specific target from being considered during a weapon's periodic auto-targeting sweep.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1763-L1780" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1761-L1778" target="_blank">source</a>]
 ---
 ---Only called for weaponDefIDs registered via `Script.SetWatchAllowTarget` or `Script.SetWatchWeapon`.
 ---
@@ -473,7 +471,7 @@ function SyncedCallins:AllowWeaponTarget(attackerID, targetID, attackerWeaponNum
 
 ---Controls blocking of a specific intercept target from being considered during an interceptor weapon's periodic auto-targeting sweep.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1833-L1847" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1831-L1845" target="_blank">source</a>]
 ---
 ---Only called for weaponDefIDs registered via `Script.SetWatchAllowTarget` or `Script.SetWatchWeapon`.
 ---
@@ -487,7 +485,7 @@ function SyncedCallins:AllowWeaponInterceptTarget(interceptorUnitID, interceptor
 
 ---Invoke `UnsyncedCallins:RecvFromSynced` callin with the given arguments.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2003-L2013" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2001-L2011" target="_blank">source</a>]
 ---
 ---@param ... nil|boolean|number|string|table Arguments. Typically the first argument is the name of a function to call.
 ---
@@ -502,13 +500,13 @@ function SyncedCallins.SendToUnsynced(...) end
 ---
 ---The GetWatch* methods can be used to query the currently registered defIDs.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2165-L2173" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2163-L2171" target="_blank">source</a>]
 ---
 ---@section watch_methods
 
 ---Query whether any callins are registered for a unitDefID.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2175-L2183" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2173-L2181" target="_blank">source</a>]
 ---
 ---@param unitDefID integer
 ---@return boolean watched Watch status.
@@ -517,7 +515,7 @@ function Script.GetWatchUnit(unitDefID) end
 
 ---Query whether any callins are registered for a featureDefID.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2188-L2196" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2186-L2194" target="_blank">source</a>]
 ---
 ---@param featureDefID integer
 ---@return boolean watched `true` if callins are registered, otherwise `false`.
@@ -526,7 +524,7 @@ function Script.GetWatchFeature(featureDefID) end
 
 ---Query whether any callins are registered for a weaponDefID.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2201-L2214" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2199-L2212" target="_blank">source</a>]
 ---
 ---Same as calling:
 ---```lua
@@ -540,7 +538,7 @@ function Script.GetWatchWeapon(weaponDefID) end
 
 ---Query whether explosion callins are registered for a weaponDefID.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2216-L2224" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2214-L2222" target="_blank">source</a>]
 ---
 ---@param weaponDefID integer
 ---@return boolean watched `true` if callins are registered, otherwise `false`.
@@ -549,7 +547,7 @@ function Script.GetWatchExplosion(weaponDefID) end
 
 ---Query whether projectile callins are registered for a weaponDefID.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2230-L2238" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2228-L2236" target="_blank">source</a>]
 ---
 ---@param weaponDefID integer
 ---@return boolean watched `true` if callins are registered, otherwise `false`.
@@ -558,7 +556,7 @@ function Script.GetWatchProjectile(weaponDefID) end
 
 ---Query whether weapon targeting callins are registered for a weaponDefID.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2243-L2251" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2241-L2249" target="_blank">source</a>]
 ---
 ---@param weaponDefID integer
 ---@return boolean watched `true` if callins are registered, otherwise `false`.
@@ -567,7 +565,7 @@ function Script.GetWatchAllowTarget(weaponDefID) end
 
 ---Register or deregister unitDefID for expensive callins.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2256-L2267" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2254-L2265" target="_blank">source</a>]
 ---
 ---@param unitDefID integer
 ---@param watch boolean Whether to register or deregister.
@@ -579,7 +577,7 @@ function Script.SetWatchUnit(unitDefID, watch) end
 
 ---Register or deregister featureDefID for expensive callins.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2272-L2281" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2270-L2279" target="_blank">source</a>]
 ---
 ---@param featureDefID integer
 ---@param watch boolean Whether to register or deregister.
@@ -589,7 +587,7 @@ function Script.SetWatchFeature(featureDefID, watch) end
 
 ---Register or deregister weaponDefID for all expensive callins.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2286-L2307" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2284-L2305" target="_blank">source</a>]
 ---
 ---Equivalent to calling:
 ---
@@ -611,7 +609,7 @@ function Script.SetWatchWeapon(weaponDefID, watch) end
 
 ---Register or deregister weaponDefID for explosion callins.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2309-L2318" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2307-L2316" target="_blank">source</a>]
 ---
 ---@param weaponDefID integer
 ---@param watch boolean Whether to register or deregister.
@@ -621,7 +619,7 @@ function Script.SetWatchExplosion(weaponDefID, watch) end
 
 ---Register or deregister weaponDefID for expensive projectile callins.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2324-L2334" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2322-L2332" target="_blank">source</a>]
 ---
 ---@param weaponDefID integer weaponDefID for weapons or -1 to watch for debris.
 ---@param watch boolean Whether to register or deregister.
@@ -632,7 +630,7 @@ function Script.SetWatchProjectile(weaponDefID, watch) end
 
 ---Register or deregister weaponDefID for weapon targeting callins.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2339-L2350" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2337-L2348" target="_blank">source</a>]
 ---
 ---@param weaponDefID integer
 ---@param watch boolean Whether to register or deregister.
@@ -642,7 +640,7 @@ function Script.SetWatchProjectile(weaponDefID, watch) end
 ---@see SyncedCallins:AllowWeaponInterceptTarget
 function Script.SetWatchAllowTarget(weaponDefID, watch) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2519-L2525" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2517-L2523" target="_blank">source</a>]
 ---
 ---@class CallAsTeamOptions
 ---@x_helper
@@ -653,7 +651,7 @@ local CallAsTeamOptions = {}
 
 ---Calls a function from given team's PoV. In particular this makes callouts obey that team's visibility rules.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2527-L2534" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2525-L2532" target="_blank">source</a>]
 ---
 ---@param teamID integer Team ID.
 ---@param func fun(...) The function to call.
@@ -661,7 +659,7 @@ local CallAsTeamOptions = {}
 ---@return any ... The return values of the function.
 function Spring.CallAsTeam(teamID, func, ...) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2535-L2541" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2533-L2539" target="_blank">source</a>]
 ---
 ---@param options CallAsTeamOptions Options.
 ---@param func fun(...) The function to call.
