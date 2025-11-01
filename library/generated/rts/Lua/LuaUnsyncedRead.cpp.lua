@@ -1495,21 +1495,21 @@ function Spring.GetGroundDecalTexture(decalID, isMainTex) end
 ---@see Spring.GetGroundDecalTexture
 function Spring.GetGroundDecalTextures(isMainTex, addFilenames) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L4876-L4882" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L4878-L4884" target="_blank">source</a>]
 ---
 ---@param decalID integer
 ---@return number? texWrapDistance If non-zero, sets the mode to repeat the texture along the left-right direction of the decal every texWrapFactor elmos.
 ---@return number texTraveledDistance Shifts the texture repetition defined by texWrapFactor so the texture of a next line in the continuous multiline can start where the previous finished. For that it should collect all elmo lengths of the previously set multiline segments.
 function Spring.SetGroundDecalTextureParams(decalID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L4897-L4903" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L4899-L4905" target="_blank">source</a>]
 ---
 ---@param decalID integer
 ---@return number? alpha Between 0 and 1
 ---@return number alphaFalloff Between 0 and 1, per second
 function Spring.GetGroundDecalAlpha(decalID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L4917-L4927" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L4919-L4929" target="_blank">source</a>]
 ---
 ---If all three equal 0, the decal follows the normals of ground at midpoint
 ---
@@ -1519,7 +1519,7 @@ function Spring.GetGroundDecalAlpha(decalID) end
 ---@return number normal.z
 function Spring.GetGroundDecalNormal(decalID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L4942-L4952" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L4944-L4954" target="_blank">source</a>]
 ---
 ---Gets the tint of the ground decal.
 ---A color of (0.5, 0.5, 0.5, 0.5) is effectively no tint
@@ -1531,7 +1531,7 @@ function Spring.GetGroundDecalNormal(decalID) end
 ---@return number tintA
 function Spring.GetGroundDecalTint(decalID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L4969-L4979" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L4971-L4981" target="_blank">source</a>]
 ---
 ---Returns less important parameters of a ground decal
 ---
@@ -1543,7 +1543,7 @@ function Spring.GetGroundDecalTint(decalID) end
 ---@return number forceHeightMode
 function Spring.GetGroundDecalMisc(decalID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L4995-L5004" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L4997-L5006" target="_blank">source</a>]
 ---
 ---Min can be not equal to max for "gradient" style decals, e.g. unit tracks
 ---
@@ -1552,14 +1552,14 @@ function Spring.GetGroundDecalMisc(decalID) end
 ---@return number creationFrameMax
 function Spring.GetGroundDecalCreationFrame(decalID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L5019-L5024" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L5021-L5026" target="_blank">source</a>]
 ---
 ---@param decalID integer
 ---@return integer? value If owner is a unit, then this is `unitID`, if owner is
 ---a feature it is `featureID + MAX_UNITS`. If there is no owner, then `nil`.
 function Spring.GetGroundDecalOwner(decalID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L5040-L5045" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L5042-L5047" target="_blank">source</a>]
 ---
 ---@param decalID integer
 ---@return "explosion"|"plate"|"lua"|"track"|"unknown"|nil type
@@ -1567,17 +1567,17 @@ function Spring.GetGroundDecalType(decalID) end
 
 ---Misc
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L5076-L5079" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L5078-L5081" target="_blank">source</a>]
 ---
 ---@section misc
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L5082-L5087" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L5084-L5089" target="_blank">source</a>]
 ---
 ---@param collectGC boolean? (Default: `false`) collect before returning metric
 ---@return number? GC values are expressed in Kbytes: #bytes/2^10
 function Spring.GetSyncedGCInfo(collectGC) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L5109-L5114" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L5111-L5116" target="_blank">source</a>]
 ---
 ---@param groupID integer
 ---@return number[]? unitIDs
