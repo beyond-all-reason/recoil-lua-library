@@ -6,7 +6,7 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGLUtils.cpp#L137-L151" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGLUtils.cpp#L140-L154" target="_blank">source</a>]
 ---
 ---@alias MatrixName
 ---| "view"
