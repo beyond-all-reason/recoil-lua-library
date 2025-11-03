@@ -1112,7 +1112,7 @@ function gl.MultiTexGen(texNum, target, pname, r, g, b, a) end
 ---For format parameters refer to
 ---https://registry.khronos.org/OpenGL-Refpages/gl4/html/glBindImageTexture.xhtml
 ---and
----https://recoilengine.org/lua-api/types/GL#rgba32f
+---https://recoilengine.org/docs/lua-api/#GL.RGBA32F and further
 ---
 ---Example uses
 ---local my_texture_id = gl.CreateTexture(...)
