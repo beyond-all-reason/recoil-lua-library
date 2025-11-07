@@ -189,8 +189,12 @@ function Spring.SetTeamResource(teamID, resource, amount) end
 function Spring.SetTeamShareLevel(teamID, type, amount) end
 
 ---Transfers resources between two teams.
+---Transfers directly, without involving AllowResourceTransfer callin.
+---Approximately equivalent to doing Use and Add for the sender and receiver,
+---the difference being that it counts to sent/received stats rather than
+---used/produced in end-game statistics graphs.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L1358-L1366" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L1358-L1370" target="_blank">source</a>]
 ---
 ---@param teamID_src integer
 ---@param teamID_recv integer
