@@ -86,7 +86,7 @@ function RmlUi.Element:Focus() end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L286-L291" target="_blank">source</a>]
 ---
 ---@param name string
----@return any
+---@return string?
 function RmlUi.Element:GetAttribute(name) end
 
 ---Returns the descendant element with an id of id.
@@ -94,7 +94,7 @@ function RmlUi.Element:GetAttribute(name) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L293-L298" target="_blank">source</a>]
 ---
 ---@param id string
----@return RmlUi.Element
+---@return RmlUi.Element?
 function RmlUi.Element:GetElementById(id) end
 
 ---Returns a list of all descendant elements with the tag of tag_name.
@@ -105,24 +105,25 @@ function RmlUi.Element:GetElementById(id) end
 ---@return RmlUi.ElementPtr[]
 function RmlUi.Element:GetElementsByTagName(tag_name) end
 
----Unsure what this does, but seems powerful?
+---JQuery-like element selector
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L307-L312" target="_blank">source</a>]
 ---
 ---@param query string
----@return RmlUi.ElementPtr
+---@return RmlUi.ElementPtr?
 function RmlUi.Element:QuerySelector(query) end
 
----Unsure what this does, but seems powerful?
+---JQuery-like element selector
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L314-L318" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L314-L319" target="_blank">source</a>]
 ---
 ---@param selectors string
+---@return RmlUi.ElementPtr[]
 function RmlUi.Element:QuerySelectorAll(selectors) end
 
 ---Returns True if the element has a value for the attribute named name, False if not.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L320-L325" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L321-L326" target="_blank">source</a>]
 ---
 ---@param name string
 ---@return boolean
@@ -130,14 +131,14 @@ function RmlUi.Element:HasAttribute(name) end
 
 ---Returns True if the element has at least one child node, false if not.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L327-L331" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L328-L332" target="_blank">source</a>]
 ---
 ---@return boolean
 function RmlUi.Element:HasChildNodes() end
 
 ---Inserts the element element as a child of this element, directly before adjacent_element in the list of children.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L333-L339" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L334-L340" target="_blank">source</a>]
 ---
 ---@param element RmlUi.ElementPtr
 ---@param adjacent_element RmlUi.Element
@@ -146,7 +147,7 @@ function RmlUi.Element:InsertBefore(element, adjacent_element) end
 
 ---Returns true if the class name is set on the element, false if not.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L343-L348" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L344-L349" target="_blank">source</a>]
 ---
 ---@param name string
 ---@return boolean
@@ -154,14 +155,14 @@ function RmlUi.Element:IsClassSet(name) end
 
 ---Removes the attribute named name from the element.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L350-L354" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L351-L355" target="_blank">source</a>]
 ---
 ---@param name string
 function RmlUi.Element:RemoveAttribute(name) end
 
 ---Removes the child element element from this element.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L356-L361" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L357-L362" target="_blank">source</a>]
 ---
 ---@param element RmlUi.Element
 ---@return boolean
@@ -169,7 +170,7 @@ function RmlUi.Element:RemoveChild(element) end
 
 ---Replaces the child element replaced_element with inserted_element in this element's list of children. If replaced_element is not a child of this element, inserted_element will be appended onto the list instead.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L363-L369" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L364-L370" target="_blank">source</a>]
 ---
 ---@param inserted_element RmlUi.ElementPtr
 ---@param replaced_element RmlUi.Element
@@ -178,14 +179,14 @@ function RmlUi.Element:ReplaceChild(inserted_element, replaced_element) end
 
 ---Scrolls this element into view if its ancestors have hidden overflow.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L373-L377" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L374-L378" target="_blank">source</a>]
 ---
 ---@param align_with_top boolean
 function RmlUi.Element:ScrollIntoView(align_with_top) end
 
 ---Sets the value of the attribute named name to value.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L384-L389" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L385-L390" target="_blank">source</a>]
 ---
 ---@param name string
 ---@param value string
@@ -193,269 +194,269 @@ function RmlUi.Element:SetAttribute(name, value) end
 
 ---Sets (if value is true) or clears (if value is false) the class name on the element.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L391-L396" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L392-L397" target="_blank">source</a>]
 ---
 ---@param name string
 ---@param value boolean
 function RmlUi.Element:SetClass(name, value) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L399-L403" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L400-L404" target="_blank">source</a>]
 ---
 ---@param class_name string
 ---@return RmlUi.Element[]
 function RmlUi.Element:GetElementsByClassName(class_name) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L405-L408" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L406-L409" target="_blank">source</a>]
 ---
 ---@return RmlUi.ElementPtr
 function RmlUi.Element:Clone() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L410-L413" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L411-L414" target="_blank">source</a>]
 ---
 ---@return RmlUi.Element?
 function RmlUi.Element:Closest() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L415-L418" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L416-L419" target="_blank">source</a>]
 ---
 ---@param class_name string
 function RmlUi.Element:SetPseudoClass(class_name) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L420-L424" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L421-L425" target="_blank">source</a>]
 ---
 ---@param class_name string
 ---@return boolean
 function RmlUi.Element:IsPseudoClassSet(class_name) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L426-L430" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L427-L431" target="_blank">source</a>]
 ---
 ---@param class_names string[]
 ---@return boolean
 function RmlUi.Element:ArePseudoCLassesSet(class_names) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L432-L435" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L433-L436" target="_blank">source</a>]
 ---
 ---@return string[]
 function RmlUi.Element:GetActivePseudoCLasses() end
 
 ---Is a screen-space point within this element?
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L437-L442" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L438-L443" target="_blank">source</a>]
 ---
 ---@param point RmlUi.Vector2i
 ---@return boolean
 function RmlUi.Element:IsPointWithinElement(point) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L444-L447" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L445-L448" target="_blank">source</a>]
 ---
 ---@param event RmlUi.Event
 function RmlUi.Element:ProcessDefaultAction(event) end
 
 ---Get the value of this element.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L449-L453" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L450-L454" target="_blank">source</a>]
 ---
 ---@return number | string | "" value Returns number if it has the tag "input", a string if it has the tag "textarea", else an empty string.
 function RmlUi.Element:GetValue() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L462-L466" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L463-L467" target="_blank">source</a>]
 ---
 ---@param index integer
 ---@return RmlUi.Element?
 function RmlUi.Element:GetChild(index) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L470-L470" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L471-L471" target="_blank">source</a>]
 ---Name of the class.
 ---
 ---@type string
 RmlUi.Element.class_name = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L472-L472" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L473-L473" target="_blank">source</a>]
 ---ID of this element, in the context of `<span id="foo">`.
 ---
 ---@type string
 RmlUi.Element.id = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L474-L474" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L475-L475" target="_blank">source</a>]
 ---Gets or sets the inner RML (markup) content of the element.
 ---
 ---@type string
 RmlUi.Element.inner_rml = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L476-L476" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L477-L477" target="_blank">source</a>]
 ---Gets or sets the number of pixels that the content of the element is scrolled from the left.
 ---
 ---@type integer
 RmlUi.Element.scroll_left = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L478-L478" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L479-L479" target="_blank">source</a>]
 ---Gets or sets the number of pixels that the content of the element is scrolled from the top.
 ---
 ---@type integer
 RmlUi.Element.scroll_top = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L482-L482" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L483-L483" target="_blank">source</a>]
 ---Read-only. Proxy for accessing element attributes.
 ---
 ---@type RmlUi.ElementAttributesProxy
 RmlUi.Element.attributes = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L484-L484" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L485-L485" target="_blank">source</a>]
 ---Read-only. Proxy for accessing child nodes of the element.
 ---
 ---@type RmlUi.ElementChildNodesProxy
 RmlUi.Element.child_nodes = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L486-L486" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L487-L487" target="_blank">source</a>]
 ---Read-only. The width of the left border of the element in pixels.
 ---
 ---@type integer
 RmlUi.Element.client_left = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L488-L488" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L489-L489" target="_blank">source</a>]
 ---Read-only. The inner height of the element in pixels, including padding but not the horizontal scrollbar height, border, or margin.
 ---
 ---@type integer
 RmlUi.Element.client_height = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L490-L490" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L491-L491" target="_blank">source</a>]
 ---Read-only. The width of the top border of the element in pixels.
 ---
 ---@type integer
 RmlUi.Element.client_top = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L492-L492" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L493-L493" target="_blank">source</a>]
 ---Read-only. The inner width of the element in pixels, including padding but not the vertical scrollbar width, border, or margin.
 ---
 ---@type integer
 RmlUi.Element.client_width = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L494-L494" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L495-L495" target="_blank">source</a>]
 ---Read-only. The first child element, or nil if there are no children.
 ---
 ---@type RmlUi.Element?
 RmlUi.Element.first_child = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L496-L496" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L497-L497" target="_blank">source</a>]
 ---Read-only. The last child element, or nil if there are no children.
 ---
 ---@type RmlUi.Element?
 RmlUi.Element.last_child = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L498-L498" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L499-L499" target="_blank">source</a>]
 ---Read-only. The next sibling element, or nil if there is none.
 ---
 ---@type RmlUi.Element?
 RmlUi.Element.next_sibling = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L500-L500" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L501-L501" target="_blank">source</a>]
 ---Read-only. The height of the element including vertical padding and borders, in pixels.
 ---
 ---@type integer
 RmlUi.Element.offset_height = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L502-L502" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L503-L503" target="_blank">source</a>]
 ---Read-only. The distance from the inner left edge of the offset parent, in pixels.
 ---
 ---@type integer
 RmlUi.Element.offset_left = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L504-L504" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L505-L505" target="_blank">source</a>]
 ---Read-only. The closest positioned ancestor element.
 ---
 ---@type RmlUi.Element
 RmlUi.Element.offset_parent = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L506-L506" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L507-L507" target="_blank">source</a>]
 ---Read-only. The distance from the inner top edge of the offset parent, in pixels.
 ---
 ---@type integer
 RmlUi.Element.offset_top = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L508-L508" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L509-L509" target="_blank">source</a>]
 ---Read-only. The width of the element including horizontal padding and borders, in pixels.
 ---
 ---@type integer
 RmlUi.Element.offset_width = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L510-L510" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L511-L511" target="_blank">source</a>]
 ---Read-only. The document that owns this element.
 ---
 ---@type RmlUi.Document
 RmlUi.Element.owner_document = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L512-L512" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L513-L513" target="_blank">source</a>]
 ---Read-only. The parent node of this element, or nil if there is none.
 ---
 ---@type RmlUi.Element?
 RmlUi.Element.parent_node = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L514-L514" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L515-L515" target="_blank">source</a>]
 ---Read-only. The previous sibling element, or nil if there is none.
 ---
 ---@type RmlUi.Element?
 RmlUi.Element.previous_sibling = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L516-L516" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L517-L517" target="_blank">source</a>]
 ---Read-only. The total height of the element's content, including content not visible on the screen due to overflow.
 ---
 ---@type integer
 RmlUi.Element.scroll_height = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L518-L518" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L519-L519" target="_blank">source</a>]
 ---Read-only. The total width of the element's content, including content not visible on the screen due to overflow.
 ---
 ---@type integer
 RmlUi.Element.scroll_width = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L520-L520" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L521-L521" target="_blank">source</a>]
 ---Read-only. Proxy for accessing and modifying the element's style properties.
 ---
 ---@type RmlUi.ElementStyleProxy
 RmlUi.Element.style = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L522-L522" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L523-L523" target="_blank">source</a>]
 ---Read-only. The tag name of the element.
 ---
 ---@type string
 RmlUi.Element.tag_name = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L525-L525" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L526-L526" target="_blank">source</a>]
 ---Read-only. The address of the element in the document tree.
 ---
 ---@type string
 RmlUi.Element.address = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L527-L527" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L528-L528" target="_blank">source</a>]
 ---Read-only. The absolute left position of the element relative to the document.
 ---
 ---@type integer
 RmlUi.Element.absolute_left = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L529-L529" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L530-L530" target="_blank">source</a>]
 ---Read-only. The absolute top position of the element relative to the document.
 ---
 ---@type integer
 RmlUi.Element.absolute_top = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L531-L531" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L532-L532" target="_blank">source</a>]
 ---Read-only. The baseline position of the element.
 ---
 ---@type integer
 RmlUi.Element.baseline = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L533-L533" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L534-L534" target="_blank">source</a>]
 ---Read-only. The computed line height of the element.
 ---
 ---@type integer
 RmlUi.Element.line_height = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L535-L535" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L536-L536" target="_blank">source</a>]
 ---Read-only. True if the element is visible, false otherwise.
 ---
 ---@type boolean
 RmlUi.Element.visible = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L537-L537" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L538-L538" target="_blank">source</a>]
 ---Read-only. The computed z-index of the element.
 ---
 ---@type integer
