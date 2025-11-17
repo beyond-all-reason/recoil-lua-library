@@ -635,737 +635,762 @@ GL = {
 	---@type integer
 	NICEST = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L377-L377" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L376-L376" target="_blank">source</a>]
 	---
 	---@type integer
-	AMBIENT = nil,
+	KEEP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L379-L379" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L378-L378" target="_blank">source</a>]
 	---
 	---@type integer
-	DIFFUSE = nil,
+	INCR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L381-L381" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L380-L380" target="_blank">source</a>]
 	---
 	---@type integer
-	SPECULAR = nil,
+	DECR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L383-L383" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L382-L382" target="_blank">source</a>]
 	---
 	---@type integer
-	POSITION = nil,
+	INCR_WRAP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L385-L385" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L384-L384" target="_blank">source</a>]
 	---
 	---@type integer
-	SPOT_DIRECTION = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L387-L387" target="_blank">source</a>]
-	---
-	---@type integer
-	SPOT_EXPONENT = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L389-L389" target="_blank">source</a>]
-	---
-	---@type integer
-	SPOT_CUTOFF = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L391-L391" target="_blank">source</a>]
-	---
-	---@type integer
-	CONSTANT_ATTENUATION = nil,
+	DECR_WRAP = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L393-L393" target="_blank">source</a>]
 	---
 	---@type integer
-	LINEAR_ATTENUATION = nil,
+	AMBIENT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L395-L395" target="_blank">source</a>]
 	---
 	---@type integer
-	QUADRATIC_ATTENUATION = nil,
+	DIFFUSE = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L397-L397" target="_blank">source</a>]
+	---
+	---@type integer
+	SPECULAR = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L399-L399" target="_blank">source</a>]
+	---
+	---@type integer
+	POSITION = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L401-L401" target="_blank">source</a>]
+	---
+	---@type integer
+	SPOT_DIRECTION = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L403-L403" target="_blank">source</a>]
 	---
 	---@type integer
-	VERTEX_SHADER = nil,
+	SPOT_EXPONENT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L405-L405" target="_blank">source</a>]
 	---
 	---@type integer
-	TESS_CONTROL_SHADER = nil,
+	SPOT_CUTOFF = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L407-L407" target="_blank">source</a>]
 	---
 	---@type integer
-	TESS_EVALUATION_SHADER = nil,
+	CONSTANT_ATTENUATION = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L409-L409" target="_blank">source</a>]
 	---
 	---@type integer
-	GEOMETRY_SHADER_EXT = nil,
+	LINEAR_ATTENUATION = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L411-L411" target="_blank">source</a>]
 	---
 	---@type integer
-	FRAGMENT_SHADER = nil,
+	QUADRATIC_ATTENUATION = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L419-L419" target="_blank">source</a>]
 	---
 	---@type integer
-	GEOMETRY_INPUT_TYPE_EXT = nil,
+	VERTEX_SHADER = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L421-L421" target="_blank">source</a>]
 	---
 	---@type integer
-	GEOMETRY_OUTPUT_TYPE_EXT = nil,
+	TESS_CONTROL_SHADER = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L423-L423" target="_blank">source</a>]
 	---
 	---@type integer
-	GEOMETRY_VERTICES_OUT_EXT = nil,
+	TESS_EVALUATION_SHADER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L431-L431" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L425-L425" target="_blank">source</a>]
 	---
 	---@type integer
-	PATCH_VERTICES = nil,
+	GEOMETRY_SHADER_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L433-L433" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L427-L427" target="_blank">source</a>]
 	---
 	---@type integer
-	PATCH_DEFAULT_OUTER_LEVEL = nil,
+	FRAGMENT_SHADER = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L435-L435" target="_blank">source</a>]
 	---
 	---@type integer
-	PATCH_DEFAULT_INNER_LEVEL = nil,
+	GEOMETRY_INPUT_TYPE_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L443-L443" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L437-L437" target="_blank">source</a>]
 	---
 	---@type integer
-	BYTE = nil,
+	GEOMETRY_OUTPUT_TYPE_EXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L445-L445" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L439-L439" target="_blank">source</a>]
 	---
 	---@type integer
-	UNSIGNED_BYTE = nil,
+	GEOMETRY_VERTICES_OUT_EXT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L447-L447" target="_blank">source</a>]
 	---
 	---@type integer
-	SHORT = nil,
+	PATCH_VERTICES = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L449-L449" target="_blank">source</a>]
 	---
 	---@type integer
-	UNSIGNED_SHORT = nil,
+	PATCH_DEFAULT_OUTER_LEVEL = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L451-L451" target="_blank">source</a>]
 	---
 	---@type integer
-	INT = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L453-L453" target="_blank">source</a>]
-	---
-	---@type integer
-	UNSIGNED_INT = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L455-L455" target="_blank">source</a>]
-	---
-	---@type integer
-	FLOAT = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L457-L457" target="_blank">source</a>]
-	---
-	---@type integer
-	FLOAT_VEC4 = nil,
+	PATCH_DEFAULT_INNER_LEVEL = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L459-L459" target="_blank">source</a>]
 	---
 	---@type integer
-	INT_VEC4 = nil,
+	BYTE = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L461-L461" target="_blank">source</a>]
 	---
 	---@type integer
-	UNSIGNED_INT_VEC4 = nil,
+	UNSIGNED_BYTE = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L463-L463" target="_blank">source</a>]
 	---
 	---@type integer
-	FLOAT_MAT4 = nil,
+	SHORT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L465-L465" target="_blank">source</a>]
+	---
+	---@type integer
+	UNSIGNED_SHORT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L467-L467" target="_blank">source</a>]
+	---
+	---@type integer
+	INT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L469-L469" target="_blank">source</a>]
+	---
+	---@type integer
+	UNSIGNED_INT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L471-L471" target="_blank">source</a>]
 	---
 	---@type integer
-	ELEMENT_ARRAY_BUFFER = nil,
+	FLOAT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L473-L473" target="_blank">source</a>]
 	---
 	---@type integer
-	ARRAY_BUFFER = nil,
+	FLOAT_VEC4 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L475-L475" target="_blank">source</a>]
 	---
 	---@type integer
-	UNIFORM_BUFFER = nil,
+	INT_VEC4 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L477-L477" target="_blank">source</a>]
 	---
 	---@type integer
-	SHADER_STORAGE_BUFFER = nil,
+	UNSIGNED_INT_VEC4 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L481-L481" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L479-L479" target="_blank">source</a>]
 	---
 	---@type integer
-	TEXTURE_1D = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L483-L483" target="_blank">source</a>]
-	---
-	---@type integer
-	TEXTURE_2D = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L485-L485" target="_blank">source</a>]
-	---
-	---@type integer
-	TEXTURE_2D_ARRAY = nil,
+	FLOAT_MAT4 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L487-L487" target="_blank">source</a>]
 	---
 	---@type integer
-	TEXTURE_3D = nil,
+	ELEMENT_ARRAY_BUFFER = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L489-L489" target="_blank">source</a>]
 	---
 	---@type integer
-	TEXTURE_CUBE_MAP = nil,
+	ARRAY_BUFFER = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L491-L491" target="_blank">source</a>]
 	---
 	---@type integer
-	TEXTURE_2D_MULTISAMPLE = nil,
+	UNIFORM_BUFFER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L495-L495" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L493-L493" target="_blank">source</a>]
 	---
 	---@type integer
-	RGBA32F = nil,
+	SHADER_STORAGE_BUFFER = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L497-L497" target="_blank">source</a>]
 	---
 	---@type integer
-	RGBA16F = nil,
+	TEXTURE_1D = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L499-L499" target="_blank">source</a>]
 	---
 	---@type integer
-	RG32F = nil,
+	TEXTURE_2D = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L501-L501" target="_blank">source</a>]
 	---
 	---@type integer
-	RG16F = nil,
+	TEXTURE_2D_ARRAY = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L503-L503" target="_blank">source</a>]
 	---
 	---@type integer
-	R11F_G11F_B10F = nil,
+	TEXTURE_3D = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L505-L505" target="_blank">source</a>]
 	---
 	---@type integer
-	R32F = nil,
+	TEXTURE_CUBE_MAP = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L507-L507" target="_blank">source</a>]
 	---
 	---@type integer
-	R16F = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L509-L509" target="_blank">source</a>]
-	---
-	---@type integer
-	RGBA32UI = nil,
+	TEXTURE_2D_MULTISAMPLE = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L511-L511" target="_blank">source</a>]
 	---
 	---@type integer
-	RGBA16UI = nil,
+	RGBA32F = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L513-L513" target="_blank">source</a>]
 	---
 	---@type integer
-	RGB10_A2UI = nil,
+	RGBA16F = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L515-L515" target="_blank">source</a>]
 	---
 	---@type integer
-	RGBA8UI = nil,
+	RG32F = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L517-L517" target="_blank">source</a>]
 	---
 	---@type integer
-	RG32UI = nil,
+	RG16F = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L519-L519" target="_blank">source</a>]
 	---
 	---@type integer
-	RG16UI = nil,
+	R11F_G11F_B10F = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L521-L521" target="_blank">source</a>]
 	---
 	---@type integer
-	RG8UI = nil,
+	R32F = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L523-L523" target="_blank">source</a>]
 	---
 	---@type integer
-	R32UI = nil,
+	R16F = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L525-L525" target="_blank">source</a>]
 	---
 	---@type integer
-	R16UI = nil,
+	RGBA32UI = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L527-L527" target="_blank">source</a>]
 	---
 	---@type integer
-	R8UI = nil,
+	RGBA16UI = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L529-L529" target="_blank">source</a>]
 	---
 	---@type integer
-	RGBA32I = nil,
+	RGB10_A2UI = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L531-L531" target="_blank">source</a>]
 	---
 	---@type integer
-	RGBA16I = nil,
+	RGBA8UI = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L533-L533" target="_blank">source</a>]
 	---
 	---@type integer
-	RGBA8I = nil,
+	RG32UI = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L535-L535" target="_blank">source</a>]
 	---
 	---@type integer
-	RG32I = nil,
+	RG16UI = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L537-L537" target="_blank">source</a>]
 	---
 	---@type integer
-	RG16I = nil,
+	RG8UI = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L539-L539" target="_blank">source</a>]
 	---
 	---@type integer
-	RG8I = nil,
+	R32UI = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L541-L541" target="_blank">source</a>]
 	---
 	---@type integer
-	R32I = nil,
+	R16UI = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L543-L543" target="_blank">source</a>]
 	---
 	---@type integer
-	R16I = nil,
+	R8UI = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L545-L545" target="_blank">source</a>]
 	---
 	---@type integer
-	R8I = nil,
+	RGBA32I = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L547-L547" target="_blank">source</a>]
 	---
 	---@type integer
-	RGBA16 = nil,
+	RGBA16I = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L549-L549" target="_blank">source</a>]
 	---
 	---@type integer
-	RGB10_A2 = nil,
+	RGBA8I = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L551-L551" target="_blank">source</a>]
 	---
 	---@type integer
-	RGBA8 = nil,
+	RG32I = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L553-L553" target="_blank">source</a>]
 	---
 	---@type integer
-	RG16 = nil,
+	RG16I = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L555-L555" target="_blank">source</a>]
 	---
 	---@type integer
-	RG8 = nil,
+	RG8I = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L557-L557" target="_blank">source</a>]
 	---
 	---@type integer
-	R16 = nil,
+	R32I = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L559-L559" target="_blank">source</a>]
 	---
 	---@type integer
-	R8 = nil,
+	R16I = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L561-L561" target="_blank">source</a>]
 	---
 	---@type integer
-	RGBA16_SNORM = nil,
+	R8I = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L563-L563" target="_blank">source</a>]
 	---
 	---@type integer
-	RGBA8_SNORM = nil,
+	RGBA16 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L565-L565" target="_blank">source</a>]
 	---
 	---@type integer
-	RG16_SNORM = nil,
+	RGB10_A2 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L567-L567" target="_blank">source</a>]
 	---
 	---@type integer
-	RG8_SNORM = nil,
+	RGBA8 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L569-L569" target="_blank">source</a>]
 	---
 	---@type integer
-	R16_SNORM = nil,
+	RG16 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L571-L571" target="_blank">source</a>]
 	---
 	---@type integer
-	R8_SNORM = nil,
+	RG8 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L573-L573" target="_blank">source</a>]
 	---
 	---@type integer
-	DEPTH_COMPONENT16 = nil,
+	R16 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L575-L575" target="_blank">source</a>]
 	---
 	---@type integer
-	DEPTH_COMPONENT24 = nil,
+	R8 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L577-L577" target="_blank">source</a>]
 	---
 	---@type integer
-	DEPTH_COMPONENT32 = nil,
+	RGBA16_SNORM = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L579-L579" target="_blank">source</a>]
 	---
 	---@type integer
-	DEPTH_COMPONENT32F = nil,
+	RGBA8_SNORM = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L584-L584" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L581-L581" target="_blank">source</a>]
 	---
 	---@type integer
-	READ_ONLY = nil,
+	RG16_SNORM = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L586-L586" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L583-L583" target="_blank">source</a>]
 	---
 	---@type integer
-	WRITE_ONLY = nil,
+	RG8_SNORM = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L588-L588" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L585-L585" target="_blank">source</a>]
 	---
 	---@type integer
-	READ_WRITE = nil,
+	R16_SNORM = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L587-L587" target="_blank">source</a>]
+	---
+	---@type integer
+	R8_SNORM = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L589-L589" target="_blank">source</a>]
+	---
+	---@type integer
+	DEPTH_COMPONENT16 = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L591-L591" target="_blank">source</a>]
+	---
+	---@type integer
+	DEPTH_COMPONENT24 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L593-L593" target="_blank">source</a>]
 	---
 	---@type integer
-	VERTEX_ATTRIB_ARRAY_BARRIER_BIT = nil,
+	DEPTH_COMPONENT32 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L595-L595" target="_blank">source</a>]
 	---
 	---@type integer
-	ELEMENT_ARRAY_BARRIER_BIT = nil,
+	DEPTH_COMPONENT32F = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L597-L597" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L600-L600" target="_blank">source</a>]
 	---
 	---@type integer
-	UNIFORM_BARRIER_BIT = nil,
+	READ_ONLY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L599-L599" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L602-L602" target="_blank">source</a>]
 	---
 	---@type integer
-	TEXTURE_FETCH_BARRIER_BIT = nil,
+	WRITE_ONLY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L601-L601" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L604-L604" target="_blank">source</a>]
 	---
 	---@type integer
-	SHADER_IMAGE_ACCESS_BARRIER_BIT = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L603-L603" target="_blank">source</a>]
-	---
-	---@type integer
-	COMMAND_BARRIER_BIT = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L605-L605" target="_blank">source</a>]
-	---
-	---@type integer
-	PIXEL_BUFFER_BARRIER_BIT = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L607-L607" target="_blank">source</a>]
-	---
-	---@type integer
-	TEXTURE_UPDATE_BARRIER_BIT = nil,
+	READ_WRITE = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L609-L609" target="_blank">source</a>]
 	---
 	---@type integer
-	BUFFER_UPDATE_BARRIER_BIT = nil,
+	VERTEX_ATTRIB_ARRAY_BARRIER_BIT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L611-L611" target="_blank">source</a>]
 	---
 	---@type integer
-	FRAMEBUFFER_BARRIER_BIT = nil,
+	ELEMENT_ARRAY_BARRIER_BIT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L613-L613" target="_blank">source</a>]
 	---
 	---@type integer
-	TRANSFORM_FEEDBACK_BARRIER_BIT = nil,
+	UNIFORM_BARRIER_BIT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L615-L615" target="_blank">source</a>]
 	---
 	---@type integer
-	ATOMIC_COUNTER_BARRIER_BIT = nil,
+	TEXTURE_FETCH_BARRIER_BIT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L617-L617" target="_blank">source</a>]
 	---
 	---@type integer
-	SHADER_STORAGE_BARRIER_BIT = nil,
+	SHADER_IMAGE_ACCESS_BARRIER_BIT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L619-L619" target="_blank">source</a>]
 	---
 	---@type integer
+	COMMAND_BARRIER_BIT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L621-L621" target="_blank">source</a>]
+	---
+	---@type integer
+	PIXEL_BUFFER_BARRIER_BIT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L623-L623" target="_blank">source</a>]
+	---
+	---@type integer
+	TEXTURE_UPDATE_BARRIER_BIT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L625-L625" target="_blank">source</a>]
+	---
+	---@type integer
+	BUFFER_UPDATE_BARRIER_BIT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L627-L627" target="_blank">source</a>]
+	---
+	---@type integer
+	FRAMEBUFFER_BARRIER_BIT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L629-L629" target="_blank">source</a>]
+	---
+	---@type integer
+	TRANSFORM_FEEDBACK_BARRIER_BIT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L631-L631" target="_blank">source</a>]
+	---
+	---@type integer
+	ATOMIC_COUNTER_BARRIER_BIT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L633-L633" target="_blank">source</a>]
+	---
+	---@type integer
+	SHADER_STORAGE_BARRIER_BIT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L635-L635" target="_blank">source</a>]
+	---
+	---@type integer
 	ALL_BARRIER_BITS = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L622-L622" target="_blank">source</a>]
-	---
-	---@type integer
-	COLOR_ATTACHMENT0 = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L624-L624" target="_blank">source</a>]
-	---
-	---@type integer
-	COLOR_ATTACHMENT1 = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L626-L626" target="_blank">source</a>]
-	---
-	---@type integer
-	COLOR_ATTACHMENT2 = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L628-L628" target="_blank">source</a>]
-	---
-	---@type integer
-	COLOR_ATTACHMENT3 = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L630-L630" target="_blank">source</a>]
-	---
-	---@type integer
-	COLOR_ATTACHMENT4 = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L632-L632" target="_blank">source</a>]
-	---
-	---@type integer
-	COLOR_ATTACHMENT5 = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L634-L634" target="_blank">source</a>]
-	---
-	---@type integer
-	COLOR_ATTACHMENT6 = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L636-L636" target="_blank">source</a>]
-	---
-	---@type integer
-	COLOR_ATTACHMENT7 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L638-L638" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT8 = nil,
+	COLOR_ATTACHMENT0 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L640-L640" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT9 = nil,
+	COLOR_ATTACHMENT1 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L642-L642" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT10 = nil,
+	COLOR_ATTACHMENT2 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L644-L644" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT11 = nil,
+	COLOR_ATTACHMENT3 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L646-L646" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT12 = nil,
+	COLOR_ATTACHMENT4 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L648-L648" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT13 = nil,
+	COLOR_ATTACHMENT5 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L650-L650" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT14 = nil,
+	COLOR_ATTACHMENT6 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L652-L652" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT15 = nil,
+	COLOR_ATTACHMENT7 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L654-L654" target="_blank">source</a>]
 	---
 	---@type integer
-	DEPTH_ATTACHMENT = nil,
+	COLOR_ATTACHMENT8 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L656-L656" target="_blank">source</a>]
 	---
 	---@type integer
-	STENCIL_ATTACHMENT = nil,
+	COLOR_ATTACHMENT9 = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L658-L658" target="_blank">source</a>]
+	---
+	---@type integer
+	COLOR_ATTACHMENT10 = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L660-L660" target="_blank">source</a>]
+	---
+	---@type integer
+	COLOR_ATTACHMENT11 = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L662-L662" target="_blank">source</a>]
+	---
+	---@type integer
+	COLOR_ATTACHMENT12 = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L664-L664" target="_blank">source</a>]
+	---
+	---@type integer
+	COLOR_ATTACHMENT13 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L666-L666" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT0_EXT = nil,
+	COLOR_ATTACHMENT14 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L668-L668" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT1_EXT = nil,
+	COLOR_ATTACHMENT15 = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L670-L670" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT2_EXT = nil,
+	DEPTH_ATTACHMENT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L672-L672" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT3_EXT = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L674-L674" target="_blank">source</a>]
-	---
-	---@type integer
-	COLOR_ATTACHMENT4_EXT = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L676-L676" target="_blank">source</a>]
-	---
-	---@type integer
-	COLOR_ATTACHMENT5_EXT = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L678-L678" target="_blank">source</a>]
-	---
-	---@type integer
-	COLOR_ATTACHMENT6_EXT = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L680-L680" target="_blank">source</a>]
-	---
-	---@type integer
-	COLOR_ATTACHMENT7_EXT = nil,
+	STENCIL_ATTACHMENT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L682-L682" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT8_EXT = nil,
+	COLOR_ATTACHMENT0_EXT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L684-L684" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT9_EXT = nil,
+	COLOR_ATTACHMENT1_EXT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L686-L686" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT10_EXT = nil,
+	COLOR_ATTACHMENT2_EXT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L688-L688" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT11_EXT = nil,
+	COLOR_ATTACHMENT3_EXT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L690-L690" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT12_EXT = nil,
+	COLOR_ATTACHMENT4_EXT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L692-L692" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT13_EXT = nil,
+	COLOR_ATTACHMENT5_EXT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L694-L694" target="_blank">source</a>]
 	---
 	---@type integer
-	COLOR_ATTACHMENT14_EXT = nil,
+	COLOR_ATTACHMENT6_EXT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L696-L696" target="_blank">source</a>]
 	---
 	---@type integer
+	COLOR_ATTACHMENT7_EXT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L698-L698" target="_blank">source</a>]
+	---
+	---@type integer
+	COLOR_ATTACHMENT8_EXT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L700-L700" target="_blank">source</a>]
+	---
+	---@type integer
+	COLOR_ATTACHMENT9_EXT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L702-L702" target="_blank">source</a>]
+	---
+	---@type integer
+	COLOR_ATTACHMENT10_EXT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L704-L704" target="_blank">source</a>]
+	---
+	---@type integer
+	COLOR_ATTACHMENT11_EXT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L706-L706" target="_blank">source</a>]
+	---
+	---@type integer
+	COLOR_ATTACHMENT12_EXT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L708-L708" target="_blank">source</a>]
+	---
+	---@type integer
+	COLOR_ATTACHMENT13_EXT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L710-L710" target="_blank">source</a>]
+	---
+	---@type integer
+	COLOR_ATTACHMENT14_EXT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L712-L712" target="_blank">source</a>]
+	---
+	---@type integer
 	COLOR_ATTACHMENT15_EXT = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L699-L699" target="_blank">source</a>]
-	---
-	---@type integer
-	DEPTH_ATTACHMENT_EXT = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L701-L701" target="_blank">source</a>]
-	---
-	---@type integer
-	STENCIL_ATTACHMENT_EXT = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L709-L709" target="_blank">source</a>]
-	---
-	---@type integer
-	BUFFER = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L711-L711" target="_blank">source</a>]
-	---
-	---@type integer
-	SHADER = nil,
-
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L713-L713" target="_blank">source</a>]
-	---
-	---@type integer
-	PROGRAM = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L715-L715" target="_blank">source</a>]
 	---
 	---@type integer
-	VERTEX_ARRAY = nil,
+	DEPTH_ATTACHMENT_EXT = nil,
 
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L717-L717" target="_blank">source</a>]
 	---
 	---@type integer
+	STENCIL_ATTACHMENT_EXT = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L725-L725" target="_blank">source</a>]
+	---
+	---@type integer
+	BUFFER = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L727-L727" target="_blank">source</a>]
+	---
+	---@type integer
+	SHADER = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L729-L729" target="_blank">source</a>]
+	---
+	---@type integer
+	PROGRAM = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L731-L731" target="_blank">source</a>]
+	---
+	---@type integer
+	VERTEX_ARRAY = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L733-L733" target="_blank">source</a>]
+	---
+	---@type integer
 	QUERY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L719-L719" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L735-L735" target="_blank">source</a>]
 	---
 	---@type integer
 	PROGRAM_PIPELINE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L721-L721" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L737-L737" target="_blank">source</a>]
 	---
 	---@type integer
 	TRANSFORM_FEEDBACK = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L723-L723" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L739-L739" target="_blank">source</a>]
 	---
 	---@type integer
 	RENDERBUFFER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L725-L725" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L741-L741" target="_blank">source</a>]
 	---
 	---@type integer
 	FRAMEBUFFER = nil
@@ -1467,74 +1492,80 @@ GL = {
 ---
 ---@section glhintmodes
 
----Light Specification
+---Stencil ops
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L372-L375" target="_blank">source</a>]
+---
+---@section stencilops
+
+---Light Specification
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L388-L391" target="_blank">source</a>]
 ---
 ---@section lightspecification
 
 ---Shader Types
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L398-L401" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L414-L417" target="_blank">source</a>]
 ---
 ---@section shadertypes
 
 ---Geometry Shader Parameters
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L414-L417" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L430-L433" target="_blank">source</a>]
 ---
 ---@section geometryshaderparameters
 
 ---Tesselation control shader parameters
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L426-L429" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L442-L445" target="_blank">source</a>]
 ---
 ---@section tesselationcontrolshaderparameters
 
 ---OpenGL Data Types
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L438-L441" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L454-L457" target="_blank">source</a>]
 ---
 ---@section OpenGL_Data_Types
 
 ---OpenGL Buffer Types
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L466-L469" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L482-L485" target="_blank">source</a>]
 ---
 ---@section OpenGL_Buffer_Types
 
 ---FBO Attachments
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L661-L664" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L677-L680" target="_blank">source</a>]
 ---
 ---@section fboattachments
 
 ---OpenGL Object Types
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L704-L707" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L720-L723" target="_blank">source</a>]
 ---
 ---@section objecttypes
 
 ---Not included, but useful texture Formats
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L736-L739" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L752-L755" target="_blank">source</a>]
 ---
 ---@section textureformats
 
 ---Not included, but useful RBO Formats
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L747-L750" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L763-L766" target="_blank">source</a>]
 ---
 ---@section rboformats
 
 ---Not included, but useful FBO Targets
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L760-L763" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L776-L779" target="_blank">source</a>]
 ---
 ---@section fbotargets
 
 ---Not included, but useful FBO Status
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L771-L774" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGL.cpp#L787-L790" target="_blank">source</a>]
 ---
 ---@section fbostatus
