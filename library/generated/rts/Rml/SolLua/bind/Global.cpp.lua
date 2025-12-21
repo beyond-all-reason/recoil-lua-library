@@ -164,7 +164,23 @@ RmlUi.contexts = nil
 ---@type string
 RmlUi.version = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L288-L300" target="_blank">source</a>]
+---Clear the list of paths requested for a document for the purpose of GetDocumentPathRequests.
+---Does not clear anything else related to those requests themselves.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L289-L296" target="_blank">source</a>]
+---
+---@param document_path string path of document
+function RmlUi.ClearDocumentPathRequests(document_path) end
+
+---Retrieve the list of paths requested by the loaded RML document since the most recent RmlUi.ClearDocumentPathRequests call.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L302-L309" target="_blank">source</a>]
+---
+---@param document_path string path of document
+---@return string[] array of paths requested by the document
+function RmlUi.GetDocumentPathRequests(document_path) end
+
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L314-L326" target="_blank">source</a>]
 ---
 ---@enum RmlUi.key_identifier
 RmlUi.key_identifier = {
@@ -198,907 +214,907 @@ RmlUi.key_identifier = {
 	---@type integer
 	["9"] = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L306-L306" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L332-L332" target="_blank">source</a>]
 	---
 	---@type integer
 	UNKNOWN = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L308-L308" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L334-L334" target="_blank">source</a>]
 	---
 	---@type integer
 	SPACE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L320-L320" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L346-L346" target="_blank">source</a>]
 	---
 	---@type integer
 	A = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L322-L322" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L348-L348" target="_blank">source</a>]
 	---
 	---@type integer
 	B = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L324-L324" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L350-L350" target="_blank">source</a>]
 	---
 	---@type integer
 	C = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L326-L326" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L352-L352" target="_blank">source</a>]
 	---
 	---@type integer
 	D = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L328-L328" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L354-L354" target="_blank">source</a>]
 	---
 	---@type integer
 	E = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L330-L330" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L356-L356" target="_blank">source</a>]
 	---
 	---@type integer
 	F = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L332-L332" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L358-L358" target="_blank">source</a>]
 	---
 	---@type integer
 	G = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L334-L334" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L360-L360" target="_blank">source</a>]
 	---
 	---@type integer
 	H = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L336-L336" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L362-L362" target="_blank">source</a>]
 	---
 	---@type integer
 	I = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L338-L338" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L364-L364" target="_blank">source</a>]
 	---
 	---@type integer
 	J = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L340-L340" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L366-L366" target="_blank">source</a>]
 	---
 	---@type integer
 	K = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L342-L342" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L368-L368" target="_blank">source</a>]
 	---
 	---@type integer
 	L = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L344-L344" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L370-L370" target="_blank">source</a>]
 	---
 	---@type integer
 	M = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L346-L346" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L372-L372" target="_blank">source</a>]
 	---
 	---@type integer
 	N = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L348-L348" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L374-L374" target="_blank">source</a>]
 	---
 	---@type integer
 	O = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L350-L350" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L376-L376" target="_blank">source</a>]
 	---
 	---@type integer
 	P = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L352-L352" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L378-L378" target="_blank">source</a>]
 	---
 	---@type integer
 	Q = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L354-L354" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L380-L380" target="_blank">source</a>]
 	---
 	---@type integer
 	R = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L356-L356" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L382-L382" target="_blank">source</a>]
 	---
 	---@type integer
 	S = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L358-L358" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L384-L384" target="_blank">source</a>]
 	---
 	---@type integer
 	T = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L360-L360" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L386-L386" target="_blank">source</a>]
 	---
 	---@type integer
 	U = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L362-L362" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L388-L388" target="_blank">source</a>]
 	---
 	---@type integer
 	V = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L364-L364" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L390-L390" target="_blank">source</a>]
 	---
 	---@type integer
 	W = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L366-L366" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L392-L392" target="_blank">source</a>]
 	---
 	---@type integer
 	X = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L368-L368" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L394-L394" target="_blank">source</a>]
 	---
 	---@type integer
 	Y = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L370-L370" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L396-L396" target="_blank">source</a>]
 	---
 	---@type integer
 	Z = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L372-L372" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L398-L398" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_1 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L374-L374" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L400-L400" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_PLUS = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L376-L376" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L402-L402" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_COMMA = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L378-L378" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L404-L404" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_MINUS = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L380-L380" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L406-L406" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_PERIOD = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L382-L382" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L408-L408" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_2 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L384-L384" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L410-L410" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_3 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L386-L386" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L412-L412" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_4 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L388-L388" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L414-L414" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_5 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L390-L390" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L416-L416" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_6 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L392-L392" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L418-L418" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_7 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L394-L394" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L420-L420" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_8 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L396-L396" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L422-L422" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_102 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L398-L398" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L424-L424" target="_blank">source</a>]
 	---
 	---@type integer
 	NUMPAD0 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L400-L400" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L426-L426" target="_blank">source</a>]
 	---
 	---@type integer
 	NUMPAD1 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L402-L402" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L428-L428" target="_blank">source</a>]
 	---
 	---@type integer
 	NUMPAD2 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L404-L404" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L430-L430" target="_blank">source</a>]
 	---
 	---@type integer
 	NUMPAD3 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L406-L406" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L432-L432" target="_blank">source</a>]
 	---
 	---@type integer
 	NUMPAD4 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L408-L408" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L434-L434" target="_blank">source</a>]
 	---
 	---@type integer
 	NUMPAD5 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L410-L410" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L436-L436" target="_blank">source</a>]
 	---
 	---@type integer
 	NUMPAD6 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L412-L412" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L438-L438" target="_blank">source</a>]
 	---
 	---@type integer
 	NUMPAD7 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L414-L414" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L440-L440" target="_blank">source</a>]
 	---
 	---@type integer
 	NUMPAD8 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L416-L416" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L442-L442" target="_blank">source</a>]
 	---
 	---@type integer
 	NUMPAD9 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L418-L418" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L444-L444" target="_blank">source</a>]
 	---
 	---@type integer
 	NUMPADENTER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L420-L420" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L446-L446" target="_blank">source</a>]
 	---
 	---@type integer
 	MULTIPLY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L422-L422" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L448-L448" target="_blank">source</a>]
 	---
 	---@type integer
 	ADD = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L424-L424" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L450-L450" target="_blank">source</a>]
 	---
 	---@type integer
 	SEPARATOR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L426-L426" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L452-L452" target="_blank">source</a>]
 	---
 	---@type integer
 	SUBTRACT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L428-L428" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L454-L454" target="_blank">source</a>]
 	---
 	---@type integer
 	DECIMAL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L430-L430" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L456-L456" target="_blank">source</a>]
 	---
 	---@type integer
 	DIVIDE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L432-L432" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L458-L458" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_NEC_EQUAL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L434-L434" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L460-L460" target="_blank">source</a>]
 	---
 	---@type integer
 	BACK = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L436-L436" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L462-L462" target="_blank">source</a>]
 	---
 	---@type integer
 	TAB = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L438-L438" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L464-L464" target="_blank">source</a>]
 	---
 	---@type integer
 	CLEAR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L440-L440" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L466-L466" target="_blank">source</a>]
 	---
 	---@type integer
 	RETURN = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L442-L442" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L468-L468" target="_blank">source</a>]
 	---
 	---@type integer
 	PAUSE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L444-L444" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L470-L470" target="_blank">source</a>]
 	---
 	---@type integer
 	CAPITAL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L446-L446" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L472-L472" target="_blank">source</a>]
 	---
 	---@type integer
 	KANA = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L448-L448" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L474-L474" target="_blank">source</a>]
 	---
 	---@type integer
 	HANGUL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L450-L450" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L476-L476" target="_blank">source</a>]
 	---
 	---@type integer
 	JUNJA = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L452-L452" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L478-L478" target="_blank">source</a>]
 	---
 	---@type integer
 	FINAL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L454-L454" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L480-L480" target="_blank">source</a>]
 	---
 	---@type integer
 	HANJA = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L456-L456" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L482-L482" target="_blank">source</a>]
 	---
 	---@type integer
 	KANJI = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L458-L458" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L484-L484" target="_blank">source</a>]
 	---
 	---@type integer
 	ESCAPE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L460-L460" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L486-L486" target="_blank">source</a>]
 	---
 	---@type integer
 	CONVERT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L462-L462" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L488-L488" target="_blank">source</a>]
 	---
 	---@type integer
 	NONCONVERT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L464-L464" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L490-L490" target="_blank">source</a>]
 	---
 	---@type integer
 	ACCEPT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L466-L466" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L492-L492" target="_blank">source</a>]
 	---
 	---@type integer
 	MODECHANGE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L468-L468" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L494-L494" target="_blank">source</a>]
 	---
 	---@type integer
 	PRIOR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L470-L470" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L496-L496" target="_blank">source</a>]
 	---
 	---@type integer
 	NEXT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L472-L472" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L498-L498" target="_blank">source</a>]
 	---
 	---@type integer
 	END = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L474-L474" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L500-L500" target="_blank">source</a>]
 	---
 	---@type integer
 	HOME = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L476-L476" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L502-L502" target="_blank">source</a>]
 	---
 	---@type integer
 	LEFT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L478-L478" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L504-L504" target="_blank">source</a>]
 	---
 	---@type integer
 	UP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L480-L480" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L506-L506" target="_blank">source</a>]
 	---
 	---@type integer
 	RIGHT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L482-L482" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L508-L508" target="_blank">source</a>]
 	---
 	---@type integer
 	DOWN = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L484-L484" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L510-L510" target="_blank">source</a>]
 	---
 	---@type integer
 	SELECT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L486-L486" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L512-L512" target="_blank">source</a>]
 	---
 	---@type integer
 	PRINT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L488-L488" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L514-L514" target="_blank">source</a>]
 	---
 	---@type integer
 	EXECUTE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L490-L490" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L516-L516" target="_blank">source</a>]
 	---
 	---@type integer
 	SNAPSHOT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L492-L492" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L518-L518" target="_blank">source</a>]
 	---
 	---@type integer
 	INSERT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L494-L494" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L520-L520" target="_blank">source</a>]
 	---
 	---@type integer
 	DELETE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L496-L496" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L522-L522" target="_blank">source</a>]
 	---
 	---@type integer
 	HELP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L498-L498" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L524-L524" target="_blank">source</a>]
 	---
 	---@type integer
 	LWIN = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L500-L500" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L526-L526" target="_blank">source</a>]
 	---
 	---@type integer
 	RWIN = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L502-L502" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L528-L528" target="_blank">source</a>]
 	---
 	---@type integer
 	APPS = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L504-L504" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L530-L530" target="_blank">source</a>]
 	---
 	---@type integer
 	POWER = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L506-L506" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L532-L532" target="_blank">source</a>]
 	---
 	---@type integer
 	SLEEP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L508-L508" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L534-L534" target="_blank">source</a>]
 	---
 	---@type integer
 	WAKE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L510-L510" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L536-L536" target="_blank">source</a>]
 	---
 	---@type integer
 	F1 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L512-L512" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L538-L538" target="_blank">source</a>]
 	---
 	---@type integer
 	F2 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L514-L514" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L540-L540" target="_blank">source</a>]
 	---
 	---@type integer
 	F3 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L516-L516" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L542-L542" target="_blank">source</a>]
 	---
 	---@type integer
 	F4 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L518-L518" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L544-L544" target="_blank">source</a>]
 	---
 	---@type integer
 	F5 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L520-L520" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L546-L546" target="_blank">source</a>]
 	---
 	---@type integer
 	F6 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L522-L522" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L548-L548" target="_blank">source</a>]
 	---
 	---@type integer
 	F7 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L524-L524" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L550-L550" target="_blank">source</a>]
 	---
 	---@type integer
 	F8 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L526-L526" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L552-L552" target="_blank">source</a>]
 	---
 	---@type integer
 	F9 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L528-L528" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L554-L554" target="_blank">source</a>]
 	---
 	---@type integer
 	F10 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L530-L530" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L556-L556" target="_blank">source</a>]
 	---
 	---@type integer
 	F11 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L532-L532" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L558-L558" target="_blank">source</a>]
 	---
 	---@type integer
 	F12 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L534-L534" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L560-L560" target="_blank">source</a>]
 	---
 	---@type integer
 	F13 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L536-L536" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L562-L562" target="_blank">source</a>]
 	---
 	---@type integer
 	F14 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L538-L538" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L564-L564" target="_blank">source</a>]
 	---
 	---@type integer
 	F15 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L540-L540" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L566-L566" target="_blank">source</a>]
 	---
 	---@type integer
 	F16 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L542-L542" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L568-L568" target="_blank">source</a>]
 	---
 	---@type integer
 	F17 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L544-L544" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L570-L570" target="_blank">source</a>]
 	---
 	---@type integer
 	F18 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L546-L546" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L572-L572" target="_blank">source</a>]
 	---
 	---@type integer
 	F19 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L548-L548" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L574-L574" target="_blank">source</a>]
 	---
 	---@type integer
 	F20 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L550-L550" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L576-L576" target="_blank">source</a>]
 	---
 	---@type integer
 	F21 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L552-L552" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L578-L578" target="_blank">source</a>]
 	---
 	---@type integer
 	F22 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L554-L554" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L580-L580" target="_blank">source</a>]
 	---
 	---@type integer
 	F23 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L556-L556" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L582-L582" target="_blank">source</a>]
 	---
 	---@type integer
 	F24 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L558-L558" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L584-L584" target="_blank">source</a>]
 	---
 	---@type integer
 	NUMLOCK = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L560-L560" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L586-L586" target="_blank">source</a>]
 	---
 	---@type integer
 	SCROLL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L562-L562" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L588-L588" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_FJ_JISHO = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L564-L564" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L590-L590" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_FJ_MASSHOU = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L566-L566" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L592-L592" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_FJ_TOUROKU = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L568-L568" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L594-L594" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_FJ_LOYA = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L570-L570" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L596-L596" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_FJ_ROYA = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L572-L572" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L598-L598" target="_blank">source</a>]
 	---
 	---@type integer
 	LSHIFT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L574-L574" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L600-L600" target="_blank">source</a>]
 	---
 	---@type integer
 	RSHIFT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L576-L576" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L602-L602" target="_blank">source</a>]
 	---
 	---@type integer
 	LCONTROL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L578-L578" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L604-L604" target="_blank">source</a>]
 	---
 	---@type integer
 	RCONTROL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L580-L580" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L606-L606" target="_blank">source</a>]
 	---
 	---@type integer
 	LMENU = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L582-L582" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L608-L608" target="_blank">source</a>]
 	---
 	---@type integer
 	RMENU = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L584-L584" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L610-L610" target="_blank">source</a>]
 	---
 	---@type integer
 	BROWSER_BACK = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L586-L586" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L612-L612" target="_blank">source</a>]
 	---
 	---@type integer
 	BROWSER_FORWARD = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L588-L588" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L614-L614" target="_blank">source</a>]
 	---
 	---@type integer
 	BROWSER_REFRESH = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L590-L590" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L616-L616" target="_blank">source</a>]
 	---
 	---@type integer
 	BROWSER_STOP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L592-L592" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L618-L618" target="_blank">source</a>]
 	---
 	---@type integer
 	BROWSER_SEARCH = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L594-L594" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L620-L620" target="_blank">source</a>]
 	---
 	---@type integer
 	BROWSER_FAVORITES = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L596-L596" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L622-L622" target="_blank">source</a>]
 	---
 	---@type integer
 	BROWSER_HOME = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L598-L598" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L624-L624" target="_blank">source</a>]
 	---
 	---@type integer
 	VOLUME_MUTE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L600-L600" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L626-L626" target="_blank">source</a>]
 	---
 	---@type integer
 	VOLUME_DOWN = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L602-L602" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L628-L628" target="_blank">source</a>]
 	---
 	---@type integer
 	VOLUME_UP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L604-L604" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L630-L630" target="_blank">source</a>]
 	---
 	---@type integer
 	MEDIA_NEXT_TRACK = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L606-L606" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L632-L632" target="_blank">source</a>]
 	---
 	---@type integer
 	MEDIA_PREV_TRACK = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L608-L608" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L634-L634" target="_blank">source</a>]
 	---
 	---@type integer
 	MEDIA_STOP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L610-L610" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L636-L636" target="_blank">source</a>]
 	---
 	---@type integer
 	MEDIA_PLAY_PAUSE = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L612-L612" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L638-L638" target="_blank">source</a>]
 	---
 	---@type integer
 	LAUNCH_MAIL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L614-L614" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L640-L640" target="_blank">source</a>]
 	---
 	---@type integer
 	LAUNCH_MEDIA_SELECT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L616-L616" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L642-L642" target="_blank">source</a>]
 	---
 	---@type integer
 	LAUNCH_APP1 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L618-L618" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L644-L644" target="_blank">source</a>]
 	---
 	---@type integer
 	LAUNCH_APP2 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L620-L620" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L646-L646" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_AX = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L622-L622" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L648-L648" target="_blank">source</a>]
 	---
 	---@type integer
 	ICO_HELP = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L624-L624" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L650-L650" target="_blank">source</a>]
 	---
 	---@type integer
 	ICO_00 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L626-L626" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L652-L652" target="_blank">source</a>]
 	---
 	---@type integer
 	PROCESSKEY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L628-L628" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L654-L654" target="_blank">source</a>]
 	---
 	---@type integer
 	ICO_CLEAR = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L630-L630" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L656-L656" target="_blank">source</a>]
 	---
 	---@type integer
 	ATTN = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L632-L632" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L658-L658" target="_blank">source</a>]
 	---
 	---@type integer
 	CRSEL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L634-L634" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L660-L660" target="_blank">source</a>]
 	---
 	---@type integer
 	EXSEL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L636-L636" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L662-L662" target="_blank">source</a>]
 	---
 	---@type integer
 	EREOF = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L638-L638" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L664-L664" target="_blank">source</a>]
 	---
 	---@type integer
 	PLAY = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L640-L640" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L666-L666" target="_blank">source</a>]
 	---
 	---@type integer
 	ZOOM = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L642-L642" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L668-L668" target="_blank">source</a>]
 	---
 	---@type integer
 	PA1 = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L644-L644" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L670-L670" target="_blank">source</a>]
 	---
 	---@type integer
 	OEM_CLEAR = nil
 }
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L650-L652" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L676-L678" target="_blank">source</a>]
 ---
 ---@enum RmlUi.key_modifier
 RmlUi.key_modifier = {
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L656-L656" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L682-L682" target="_blank">source</a>]
 	---
 	---@type integer
 	CTRL = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L658-L658" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L684-L684" target="_blank">source</a>]
 	---
 	---@type integer
 	SHIFT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L660-L660" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L686-L686" target="_blank">source</a>]
 	---
 	---@type integer
 	ALT = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L662-L662" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L688-L688" target="_blank">source</a>]
 	---
 	---@type integer
 	META = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L664-L664" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L690-L690" target="_blank">source</a>]
 	---
 	---@type integer
 	CAPSLOCK = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L666-L666" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L692-L692" target="_blank">source</a>]
 	---
 	---@type integer
 	NUMLOCK = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L668-L668" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L694-L694" target="_blank">source</a>]
 	---
 	---@type integer
 	SCROLLLOCK = nil
 }
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L672-L674" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L698-L700" target="_blank">source</a>]
 ---
 ---@enum RmlUi.font_weight
 RmlUi.font_weight = {
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L678-L678" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L704-L704" target="_blank">source</a>]
 	---
 	---@type integer
 	Auto = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L680-L680" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L706-L706" target="_blank">source</a>]
 	---
 	---@type integer
 	Normal = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L682-L682" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L708-L708" target="_blank">source</a>]
 	---
 	---@type integer
 	Bold = nil
 }
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L686-L688" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L712-L714" target="_blank">source</a>]
 ---
 ---@enum RmlUi.default_action_phase
 RmlUi.default_action_phase = {
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L692-L692" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L718-L718" target="_blank">source</a>]
 	---
 	---@type integer
 	Auto = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L694-L694" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L720-L720" target="_blank">source</a>]
 	---
 	---@type integer
 	Target = nil,
 
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L696-L696" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Global.cpp#L722-L722" target="_blank">source</a>]
 	---
 	---@type integer
 	TargetAndBubble = nil
