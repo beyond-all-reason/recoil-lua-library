@@ -390,149 +390,159 @@ COB = {
 	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L181-L181" target="_blank">source</a>]
 	---
 	---@type integer
-	GAME_FRAME = nil
+	GAME_FRAME = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L183-L183" target="_blank">source</a>]
+	---
+	---@type integer
+	PIECE_HEADING = nil,
+
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L185-L185" target="_blank">source</a>]
+	---
+	---@type integer
+	PIECE_PITCH = nil
 }
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L191-L193" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L195-L197" target="_blank">source</a>]
 ---
 ---@enum SFX
 SFX = {
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L195-L208" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L199-L212" target="_blank">source</a>]
 	---
 	---@type integer
 	SHATTER = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L195-L208" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L199-L212" target="_blank">source</a>]
 	---
 	---@type integer
 	EXPLODE = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L195-L208" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L199-L212" target="_blank">source</a>]
 	---
 	---@type integer
 	EXPLODE_ON_HIT = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L195-L208" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L199-L212" target="_blank">source</a>]
 	---
 	---@type integer
 	FALL = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L195-L208" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L199-L212" target="_blank">source</a>]
 	---
 	---@type integer
 	SMOKE = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L195-L208" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L199-L212" target="_blank">source</a>]
 	---
 	---@type integer
 	FIRE = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L195-L208" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L199-L212" target="_blank">source</a>]
 	---
 	---@type integer
 	NONE = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L195-L208" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L199-L212" target="_blank">source</a>]
 	---
 	---@type integer
 	NO_CEG_TRAIL = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L195-L208" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L199-L212" target="_blank">source</a>]
 	---
 	---@type integer
 	NO_HEATCLOUD = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L195-L208" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L199-L212" target="_blank">source</a>]
 	---
 	---@type integer
 	RECURSIVE = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L220-L225" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L224-L229" target="_blank">source</a>]
 	---
 	---@type integer
 	VTOL = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L220-L225" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L224-L229" target="_blank">source</a>]
 	---
 	---@type integer
 	WAKE = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L220-L225" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L224-L229" target="_blank">source</a>]
 	---
 	---@type integer
 	REVERSE_WAKE = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L233-L242" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L237-L246" target="_blank">source</a>]
 	---
 	---@type integer
 	WHITE_SMOKE = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L233-L242" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L237-L246" target="_blank">source</a>]
 	---
 	---@type integer
 	BLACK_SMOKE = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L233-L242" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L237-L246" target="_blank">source</a>]
 	---
 	---@type integer
 	BUBBLE = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L233-L242" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L237-L246" target="_blank">source</a>]
 	---
 	---@type integer
 	CEG = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L233-L242" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L237-L246" target="_blank">source</a>]
 	---
 	---@type integer
 	FIRE_WEAPON = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L233-L242" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L237-L246" target="_blank">source</a>]
 	---
 	---@type integer
 	DETONATE_WEAPON = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
-	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L233-L242" target="_blank">source</a>]
+	---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstCOB.cpp#L237-L246" target="_blank">source</a>]
 	---
 	---@type integer
 	GLOBAL = nil
