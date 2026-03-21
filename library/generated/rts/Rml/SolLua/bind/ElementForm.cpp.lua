@@ -6,119 +6,159 @@
 ---
 ---@meta
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L139-L141" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L161-L163" target="_blank">source</a>]
 ---
 ---@class RmlUi.ElementForm : RmlUi.Element
 RmlUi.ElementForm = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L144-L148" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L166-L170" target="_blank">source</a>]
 ---
 ---@param name string?
 ---@param value string?
 function RmlUi.ElementForm:Submit(name, value) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L156-L158" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L178-L180" target="_blank">source</a>]
 ---
 ---@class RmlUi.ElementFormControl : RmlUi.Element
 RmlUi.ElementFormControl = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L161-L161" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L183-L183" target="_blank">source</a>]
 ---@type boolean
 RmlUi.ElementFormControl.disabled = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L163-L163" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L185-L185" target="_blank">source</a>]
 ---@type string
 RmlUi.ElementFormControl.name = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L165-L165" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L187-L187" target="_blank">source</a>]
 ---@type string
 RmlUi.ElementFormControl.value = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L170-L170" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L192-L192" target="_blank">source</a>]
 ---@type boolean
 RmlUi.ElementFormControl.submitted = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L178-L180" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L200-L202" target="_blank">source</a>]
 ---
 ---@class RmlUi.ElementFormControlInput : RmlUi.Element, RmlUi.ElementFormControl
 RmlUi.ElementFormControlInput = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L183-L183" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L205-L208" target="_blank">source</a>]
+---
+---Selects all text.
+function RmlUi.ElementFormControlInput:Select() end
+
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L210-L215" target="_blank">source</a>]
+---
+---Selects the text in the given character range.
+---
+---@param selection_start integer The first character to be selected.
+---@param selection_end integer The first character *after* the selection.
+function RmlUi.ElementFormControlInput:SetSelection(selection_start, selection_end) end
+
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L217-L221" target="_blank">source</a>]
+---
+---Retrieves the selection range and text.
+---
+---@return any selection_start The first character selected; selection_end The first character *after* the selection; selected_text The selected text.
+function RmlUi.ElementFormControlInput:GetSelection() end
+
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L225-L225" target="_blank">source</a>]
 ---@type boolean
 RmlUi.ElementFormControlInput.checked = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L185-L185" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L227-L227" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlInput.maxlength = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L187-L187" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L229-L229" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlInput.size = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L189-L189" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L231-L231" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlInput.max = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L191-L191" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L233-L233" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlInput.min = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L193-L193" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L235-L235" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlInput.step = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L201-L203" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L243-L245" target="_blank">source</a>]
 ---
 ---@alias RmlUi.SelectOptionsProxy RmlUi.SelectOptionsProxyNode[]
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L209-L211" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L251-L253" target="_blank">source</a>]
 ---
 ---@alias RmlUi.SelectOptionsProxyNode {element: RmlUi.Element, value: string}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L216-L218" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L258-L260" target="_blank">source</a>]
 ---
 ---@class RmlUi.ElementFormControlSelect : RmlUi.Element, RmlUi.ElementFormControl
 RmlUi.ElementFormControlSelect = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L221-L225" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L263-L267" target="_blank">source</a>]
 ---
 ---@param element RmlUi.Element
 ---@param before integer?
 function RmlUi.ElementFormControlSelect:Add(element, before) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L231-L234" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L273-L276" target="_blank">source</a>]
 ---
 ---@param index integer
 function RmlUi.ElementFormControlSelect:Remove(index) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L236-L238" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L278-L280" target="_blank">source</a>]
 function RmlUi.ElementFormControlSelect:RemoveAll() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L242-L242" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L284-L284" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementsFormControlSelect.selection = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L246-L246" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L288-L288" target="_blank">source</a>]
 ---@type RmlUi.SelectOptionsProxy
 RmlUi.ElementsFormControlSelect.options = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L254-L256" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L296-L298" target="_blank">source</a>]
 ---
 ---@class RmlUi.ElementFormControlTextArea : RmlUi.Element, RmlUi.ElementFormControl
 RmlUi.ElementFormControlTextArea = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L259-L259" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L301-L304" target="_blank">source</a>]
+---
+---Selects all text.
+function RmlUi.ElementFormControlTextArea:Select() end
+
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L306-L311" target="_blank">source</a>]
+---
+---Selects the text in the given character range.
+---
+---@param selection_start integer The first character to be selected.
+---@param selection_end integer The first character *after* the selection.
+function RmlUi.ElementFormControlTextArea:SetSelection(selection_start, selection_end) end
+
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L313-L317" target="_blank">source</a>]
+---
+---Retrieves the selection range and text.
+---
+---@return any selection_start The first character selected; selection_end The first character *after* the selection; selected_text The selected text.
+function RmlUi.ElementFormControlTextArea:GetSelection() end
+
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L321-L321" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlTextArea.cols = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L261-L261" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L323-L323" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlTextArea.maxlength = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L263-L263" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L325-L325" target="_blank">source</a>]
 ---@type integer
 RmlUi.ElementFormControlTextArea.rows = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L265-L265" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/ElementForm.cpp#L327-L327" target="_blank">source</a>]
 ---@type boolean
 RmlUi.ElementFormControlTextArea.wordwrap = nil
