@@ -91,12 +91,13 @@ function VFS.GetArchiveChecksum(archiveName) end
 ---@return string archiveName
 function VFS.GetNameFromRapidTag(rapidTag) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L300-L305" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L300-L306" target="_blank">source</a>]
 ---
 ---@class AIInfo
 ---@x_helper
 ---@field shortName string
 ---@field version string
+---@field isLuaAI boolean
 local AIInfo = {}
 
 ---Get a list of all Spring AIs.
@@ -104,7 +105,7 @@ local AIInfo = {}
 ---The optional gameName and mapName parameters can be used to include game/map
 ---specific LuaAIs in the list.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L307-L316" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaArchive.cpp#L308-L317" target="_blank">source</a>]
 ---
 ---@param gameArchiveName string?
 ---@param mapArichiveName string?
