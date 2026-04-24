@@ -523,7 +523,7 @@ function gl.Rect(x1, y1, x2, y2, s1, t1, s2, t2) end
 ---@param numGroupX integer
 ---@param numGroupY integer
 ---@param numGroupZ integer
----@param barriers integer? (Default: `4`)
+---@param barriers integer? (Default: `0`)
 function gl.DispatchCompute(numGroupX, numGroupY, numGroupZ, barriers) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L2940-L2943" target="_blank">source</a>]
