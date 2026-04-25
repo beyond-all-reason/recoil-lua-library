@@ -8,11 +8,11 @@
 
 ---Engine constants
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstEngine.cpp#L12-L15" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstEngine.cpp#L11-L14" target="_blank">source</a>]
 ---
 ---@see rts/Lua/LuaConstEngine.cpp
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstEngine.cpp#L17-L32" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstEngine.cpp#L16-L31" target="_blank">source</a>]
 ---
 ---@class FeatureSupport
 ---@x_helper
@@ -32,7 +32,7 @@ local FeatureSupport = {}
 
 ---Engine specific information.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstEngine.cpp#L34-L50" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstEngine.cpp#L33-L49" target="_blank">source</a>]
 Engine = {
 	---"Major.Minor.PatchSet" for releases, "Major.Minor.PatchSet-CommitNum-gHash branch" otherwise
 	---
