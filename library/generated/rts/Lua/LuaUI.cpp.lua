@@ -12,5 +12,5 @@
 ---@see Callins
 local UI = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUI.cpp#L298-L300" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUI.cpp#L299-L301" target="_blank">source</a>]
 function UI:ConfigureLayout() end
