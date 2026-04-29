@@ -209,31 +209,37 @@ Platform.osVersion = nil
 Platform.osFamily = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L132-L132" target="_blank">source</a>]
+---CPU architecture (e.g., "x86_64", "arm64")
+---
+---@type string
+Platform.architecture = nil
+
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L134-L134" target="_blank">source</a>]
 ---@type string
 Platform.hwConfig = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L134-L134" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L136-L136" target="_blank">source</a>]
 ---@type integer
 Platform.cpuLogicalCores = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L136-L136" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L138-L138" target="_blank">source</a>]
 ---@type integer
 Platform.cpuPhysicalCores = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L138-L138" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L140-L140" target="_blank">source</a>]
 ---@type string
 Platform.cpuBrand = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L140-L140" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L142-L142" target="_blank">source</a>]
 ---Total physical system RAM in MBs.
 ---
 ---@type number
 Platform.totalRAM = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L143-L143" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L145-L145" target="_blank">source</a>]
 ---@type string
 Platform.sysInfoHash = nil
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L145-L145" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L147-L147" target="_blank">source</a>]
 ---@type string
 Platform.macAddrHash = nil
