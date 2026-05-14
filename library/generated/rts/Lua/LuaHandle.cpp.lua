@@ -247,9 +247,9 @@ function Callins:UnitConstructionDecayed(unitID, unitDefID, unitTeam, timeSinceL
 ---@param unitID integer
 ---@param unitDefID integer
 ---@param unitTeam integer
----@param attackerID integer
----@param attackerDefID integer
----@param attackerTeam number
+---@param attackerID integer? Subject to visibility rules
+---@param attackerDefID integer? Subject to visibility rules
+---@param attackerTeam integer? Subject to visibility rules
 ---@param weaponDefID integer
 function Callins:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID, attackerDefID, attackerTeam, weaponDefID) end
 
