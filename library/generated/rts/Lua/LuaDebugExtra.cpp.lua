@@ -28,7 +28,7 @@
 ---state) until released or cleared. The accompanying scancode is derived from
 ---the keycode using the currently active system keyboard layout.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaDebugExtra.cpp#L99-L108" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaDebugExtra.cpp#L100-L109" target="_blank">source</a>]
 ---
 ---@param keycode integer
 ---@return nil
@@ -36,7 +36,7 @@ function debug.emulateKeyPress(keycode) end
 
 ---Emulate a held keyboard key being released.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaDebugExtra.cpp#L112-L117" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaDebugExtra.cpp#L113-L118" target="_blank">source</a>]
 ---
 ---@param keycode integer
 ---@return nil
@@ -44,7 +44,7 @@ function debug.emulateKeyRelease(keycode) end
 
 ---Emulate a mouse button being pressed and held.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaDebugExtra.cpp#L121-L126" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaDebugExtra.cpp#L122-L127" target="_blank">source</a>]
 ---
 ---@param button integer
 ---@return nil
@@ -52,7 +52,7 @@ function debug.emulateMousePress(button) end
 
 ---Emulate a held mouse button being released.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaDebugExtra.cpp#L142-L147" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaDebugExtra.cpp#L153-L158" target="_blank">source</a>]
 ---
 ---@param button integer
 ---@return nil
@@ -63,7 +63,7 @@ function debug.emulateMouseRelease(button) end
 ---Fires a MouseMove through the normal pipeline. Coordinates use the bottom-left
 ---origin like the rest of the Lua screen API. Does not move the OS cursor.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaDebugExtra.cpp#L163-L172" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaDebugExtra.cpp#L174-L183" target="_blank">source</a>]
 ---
 ---@param x integer
 ---@param y integer
@@ -72,7 +72,7 @@ function debug.emulateMouseMove(x, y) end
 
 ---Release everything currently held via emulation.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaDebugExtra.cpp#L189-L193" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaDebugExtra.cpp#L200-L204" target="_blank">source</a>]
 ---
 ---@return nil
 function debug.clearEmulatedInput() end
