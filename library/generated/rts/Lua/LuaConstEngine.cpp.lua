@@ -32,7 +32,7 @@ local FeatureSupport = {}
 
 ---Engine specific information.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstEngine.cpp#L33-L49" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstEngine.cpp#L33-L48" target="_blank">source</a>]
 Engine = {
 	---"Major.Minor.PatchSet" for releases, "Major.Minor.PatchSet-CommitNum-gHash branch" otherwise
 	---
@@ -87,10 +87,5 @@ Engine = {
 	---Table containing keys that represent the color code operations during font rendering
 	---
 	---@type TextColorCode
-	textColorCodes = nil,
-
-	---Whether this is a headless engine build. Not available in synced
-	---
-	---@type boolean?
-	isHeadless = nil
+	textColorCodes = nil
 }

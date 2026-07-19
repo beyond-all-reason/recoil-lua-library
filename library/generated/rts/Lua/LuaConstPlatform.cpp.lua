@@ -249,3 +249,9 @@ Platform.macAddrHash = nil
 ---
 ---@type boolean
 Platform.isHeadless = nil
+
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L154-L154" target="_blank">source</a>]
+---Whether the engine was built with sync-check support (i.e. Spring.GetPrevFrameSyncChecksum() returns a meaningful value).
+---
+---@type boolean
+Platform.hasSyncChecksums = nil
