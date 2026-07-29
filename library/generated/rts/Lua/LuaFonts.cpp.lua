@@ -14,6 +14,24 @@
 ---@see gl.LoadFont
 LuaFont = {}
 
+---Load a font from a file.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L195-L203" target="_blank">source</a>]
+---
+---@param fontFile string
+---@param size integer?
+---@param outlineWidth integer?
+---@param outlineWeight number?
+---@return LuaFont font
+function gl.LoadFont(fontFile, size, outlineWidth, outlineWeight) end
+
+---Delete a font object.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L220-L224" target="_blank">source</a>]
+---
+---@param font LuaFont
+function gl.DeleteFont(font) end
+
 ---Adds a fallback font for the font rendering engine.
 ---
 ---Fonts added first will have higher priority.
@@ -27,7 +45,7 @@ LuaFont = {}
 ---Note the callin won't be executed at the time of calling this method,
 ---but later, on the Update cycle (before other Update and Draw callins).
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L217-L233" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L231-L247" target="_blank">source</a>]
 ---
 ---@param filePath string VFS path to the file, for example "fonts/myfont.ttf". Uses VFS.RAW_FIRST access mode.
 ---@return boolean success
@@ -38,14 +56,37 @@ function gl.AddFallbackFont(filePath) end
 ---See the note at 'AddFallbackFont' about the 'FontsChanged' callin,
 ---it also applies when calling this method.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L245-L252" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L259-L266" target="_blank">source</a>]
 ---
 ---@return nil
 function gl.ClearFallbackFonts() end
 
+---Draws text in screen space at the given position.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L278-L286" target="_blank">source</a>]
+---
+---@param text string
+---@param x number
+---@param y number
+---@param size number? Defaults to the font's point size.
+---@param options string? Flag characters for alignment, outline, shadow, scaling, etc. (e.g. `"co"` for center and outline).
+function LuaFont:Print(text, x, y, size, options) end
+
+---Draws text in world space at the given position.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L335-L344" target="_blank">source</a>]
+---
+---@param text string
+---@param x number
+---@param y number
+---@param z number
+---@param size number? Defaults to the font's point size.
+---@param options string? Flag characters for alignment, outline, shadow, scaling, etc. (e.g. `"co"` for center and outline).
+function LuaFont:PrintWorld(text, x, y, z, size, options) end
+
 ---Begin a block of font commands.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L366-L379" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L399-L412" target="_blank">source</a>]
 ---
 ---Fonts can be printed without using Start/End, but when doing several operations it's more optimal
 ---if done inside a block.
@@ -58,12 +99,68 @@ function gl.ClearFallbackFonts() end
 ---@see gl.BlendFuncSeparate
 function LuaFont:Begin(userDefinedBlending) end
 
+---Ends a font command block started with `LuaFont:Begin`.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L423-L426" target="_blank">source</a>]
+function LuaFont:End() end
+
 ---Draws text printed with the `buffered` option.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L399-L408" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L436-L445" target="_blank">source</a>]
 ---
 ---@param noBillboarding boolean? When `false` sets 3d billboard mode. Defaults to `true`.
 ---@param userDefinedBlending boolean? When `true` doesn't set the gl.BlendFunc automatically. Defaults to `false`.
 ---@see gl.BlendFunc
 ---@see gl.BlendFuncSeparate
 function LuaFont:SubmitBuffered(noBillboarding, userDefinedBlending) end
+
+---Wraps text to fit within a maximum width (and optional max height), in-place.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L465-L474" target="_blank">source</a>]
+---
+---@param text string
+---@param maxWidth number
+---@param maxHeight number? Defaults to an engine-defined maximum height.
+---@param size number? Defaults to the font's point size.
+---@return string wrappedText
+---@return number lineCount
+function LuaFont:WrapText(text, maxWidth, maxHeight, size) end
+
+---Returns the horizontal extent of a string for this font at its current size.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L496-L501" target="_blank">source</a>]
+---
+---@param text string
+---@return number width
+function LuaFont:GetTextWidth(text) end
+
+---Returns layout metrics for a string: total height, descender depth, and line count.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L512-L519" target="_blank">source</a>]
+---
+---@param text string
+---@return number height
+---@return number descender
+---@return number lines
+function LuaFont:GetTextHeight(text) end
+
+---Sets the RGBA color used when drawing text (fill).
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L571-L575" target="_blank">source</a>]
+---
+---@param color table Four-component RGBA array (`{r, g, b, a}`), or pass `r`, `g`, `b`, and optional `a` as separate numbers (requires at least three numeric components after the font).
+function LuaFont:SetTextColor(color) end
+
+---Sets the RGBA color used for text outline when outline rendering is enabled.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L578-L582" target="_blank">source</a>]
+---
+---@param color table Four-component RGBA array (`{r, g, b, a}`), or pass `r`, `g`, `b`, and optional `a` as separate numbers (requires at least three numeric components after the font).
+function LuaFont:SetOutlineColor(color) end
+
+---When enabled, outline color is derived automatically instead of using `SetOutlineColor`.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFonts.cpp#L586-L590" target="_blank">source</a>]
+---
+---@param enabled boolean
+function LuaFont:SetAutoOutlineColor(enabled) end

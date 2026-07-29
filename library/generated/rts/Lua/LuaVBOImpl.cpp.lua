@@ -120,6 +120,18 @@ function VBO:GetBufferSize() end
 ---@see VBO:Define
 function VBO:Upload(vboData, attributeIndex, elemOffset, luaStartIndex, luaFinishIndex) end
 
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L666-L677" target="_blank">source</a>]
+---
+---@param attributeIndex integer? (Default: `-1`) when supplied with non-default value: only data
+---from specified attribute will be downloaded - otherwise all attributes are
+---downloaded
+---@param elementOffset integer? (Default: `0`) download data starting from this element
+---@param elementCount number? number of elements to download
+---@param forceGPURead boolean? (Default: `false`) force downloading the data from GPU buffer as opposed
+---to using shadow RAM buffer
+---@return number[] vboData
+function VBO:Download(attributeIndex, elementOffset, elementCount, forceGPURead) end
+
 ---Binds engine side vertex or index VBO containing models (units, features) data.
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1173-L1180" target="_blank">source</a>]
