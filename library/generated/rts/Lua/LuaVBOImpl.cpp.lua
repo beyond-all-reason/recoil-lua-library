@@ -297,7 +297,7 @@ function VBO:CopyTo(destVBO, copySizeInBytes) end
 
 ---Gets the OpenGL Buffer ID
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1503-L1507" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1514-L1518" target="_blank">source</a>]
 ---
 ---@return integer bufferID
 function VBO:GetID() end
