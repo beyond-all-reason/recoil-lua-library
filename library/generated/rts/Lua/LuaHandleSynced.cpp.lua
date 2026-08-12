@@ -60,12 +60,12 @@ function UnsyncedCallins:DrawFeature(featureID, drawMode) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L281-L289" target="_blank">source</a>]
 ---
----@param featureID integer
+---@param unitID integer
 ---@param weaponID integer
 ---@param drawMode number
 ---@return boolean suppressEngineDraw
 ---@deprecated
-function UnsyncedCallins:DrawShield(featureID, weaponID, drawMode) end
+function UnsyncedCallins:DrawShield(unitID, weaponID, drawMode) end
 
 ---For custom rendering of weapon (& other) projectiles
 ---
@@ -222,7 +222,7 @@ function SyncedCallins:AllowUnitCloak(unitID, enemyID) end
 ---@param objectID integer?
 ---@param weaponNum number?
 ---@return boolean whether unit is allowed to decloak
-function SyncedCallins:AllowUnitCloak(unitID, objectID, weaponNum) end
+function SyncedCallins:AllowUnitDecloak(unitID, objectID, weaponNum) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1023-L1029" target="_blank">source</a>]
 ---

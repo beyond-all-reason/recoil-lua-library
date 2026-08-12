@@ -19,3 +19,8 @@ Spring.UnitRendering = nil
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaRules.cpp#L101-L101" target="_blank">source</a>]
 ---@type ObjectRenderingTable
 Spring.FeatureRendering = nil
+
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaRules.cpp#L120-L124" target="_blank">source</a>]
+---
+---@param permit boolean
+function Script.PermitHelperAIs(permit) end

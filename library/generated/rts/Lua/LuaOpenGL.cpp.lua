@@ -328,7 +328,7 @@ function gl.DrawGroundCircle(posX, posY, posZ, radius, resolution, slope, gravit
 ---@param z1 number
 ---@param useNorm nil No longer used.
 ---@param useTxcd boolean? (Default: `false`)
-function gl.DrawGroundCircle(x0, z0, x1, z1, useNorm, useTxcd) end
+function gl.DrawGroundQuad(x0, z0, x1, z1, useNorm, useTxcd) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L2119-L2130" target="_blank">source</a>]
 ---
@@ -341,7 +341,7 @@ function gl.DrawGroundCircle(x0, z0, x1, z1, useNorm, useTxcd) end
 ---@param tv0 number
 ---@param tu1 number
 ---@param tv1 number
-function gl.DrawGroundCircle(x0, z0, x1, z1, useNorm, tu0, tv0, tu1, tv1) end
+function gl.DrawGroundQuad(x0, z0, x1, z1, useNorm, tu0, tv0, tu1, tv1) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L2234-L2245" target="_blank">source</a>]
 ---
@@ -504,7 +504,7 @@ function gl.Rect(x1, y1, x2, y2) end
 ---@param y2 number
 ---@param flipSCoords boolean?
 ---@param flipTCoords boolean?
-function gl.Rect(x1, y1, x2, y2, flipSCoords, flipTCoords) end
+function gl.TexRect(x1, y1, x2, y2, flipSCoords, flipTCoords) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L2835-L2845" target="_blank">source</a>]
 ---
@@ -516,7 +516,7 @@ function gl.Rect(x1, y1, x2, y2, flipSCoords, flipTCoords) end
 ---@param t1 number
 ---@param s2 number
 ---@param t2 number
-function gl.Rect(x1, y1, x2, y2, s1, t1, s2, t2) end
+function gl.TexRect(x1, y1, x2, y2, s1, t1, s2, t2) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L2901-L2907" target="_blank">source</a>]
 ---
@@ -1027,7 +1027,7 @@ function gl.ActiveTexture(texNum, func, ...) end
 ---@param target GL
 ---@param pname GL
 ---@param value number
-function gl.TextEnv(target, pname, value) end
+function gl.TexEnv(target, pname, value) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L4497-L4505" target="_blank">source</a>]
 ---
@@ -1037,7 +1037,7 @@ function gl.TextEnv(target, pname, value) end
 ---@param g number? (Default: `0.0`)
 ---@param b number? (Default: `0.0`)
 ---@param a number? (Default: `0.0`)
-function gl.TextEnv(target, pname, r, g, b, a) end
+function gl.TexEnv(target, pname, r, g, b, a) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L4535-L4541" target="_blank">source</a>]
 ---

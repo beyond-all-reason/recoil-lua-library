@@ -250,7 +250,7 @@ function RmlUi.Element:GetActivePseudoCLasses() end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Rml/SolLua/bind/Element.cpp#L473-L478" target="_blank">source</a>]
 ---
----@param point RmlUi.Vector2i
+---@param point RmlUi.Vector2f
 ---@return boolean
 function RmlUi.Element:IsPointWithinElement(point) end
 

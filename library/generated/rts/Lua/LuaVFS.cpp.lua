@@ -478,17 +478,17 @@ function VFS.PackS32(numbers) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVFS.cpp#L1085-L1090" target="_blank">source</a>]
 ---
----@param ... integer Numbers to pack.
----@return string
-function VFS.PackS32(...) end
+---@param ... number Numbers to pack.
+---@return string?
+function VFS.PackF32(...) end
 
 ---Convert signed 32-bit float(s) to binary string.
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVFS.cpp#L1091-L1096" target="_blank">source</a>]
 ---
----@param numbers integer[] Numbers to pack.
----@return string
-function VFS.PackS32(numbers) end
+---@param numbers number[] Numbers to pack.
+---@return string?
+function VFS.PackF32(numbers) end
 
 ---Convert a binary string to an unsigned 8-bit integer.
 ---
