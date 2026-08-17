@@ -95,7 +95,7 @@ function VAO:AddFeatureDefsToSubmission(featureDefIDs) end
 ---@return nil
 function VAO:RemoveFromSubmission(index) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVAOImpl.cpp#L530-L534" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVAOImpl.cpp#L532-L536" target="_blank">source</a>]
 ---
 ---@return nil
 function VAO:Submit() end
