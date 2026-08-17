@@ -1660,8 +1660,11 @@ function Spring.GetGroundDecalType(decalID) end
 ---@return number? GC values are expressed in Kbytes: #bytes/2^10
 function Spring.GetSyncedGCInfo(collectGC) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L5334-L5339" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L5334-L5342" target="_blank">source</a>]
 ---
----@param groupID integer
----@return number[]? unitIDs
-function Spring.SolveNURBSCurve(groupID) end
+---@param degree integer Degree of the curve.
+---@param controlPoints number[] Flat array of `x, y, z, weight` quadruples; its length must be a multiple of 4.
+---@param knots number[] Knot vector.
+---@param segments integer Number of segments to evaluate.
+---@return number[] points Flat array of `x, y, z` triples along the curve.
+function Spring.SolveNURBSCurve(degree, controlPoints, knots, segments) end
