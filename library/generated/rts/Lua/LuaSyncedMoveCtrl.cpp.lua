@@ -42,12 +42,13 @@ function MoveCtrl.Disable(unitID) end
 ---@param tag integer
 function MoveCtrl.SetTag(unitID, tag) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L208-L211" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L208-L212" target="_blank">source</a>]
 ---
 ---@param tag integer?
+---@return integer? tag `nil` if the unit is not using a script move type.
 function MoveCtrl.GetTag(tag) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L228-L238" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L229-L239" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param state
@@ -59,13 +60,13 @@ function MoveCtrl.GetTag(tag) end
 ---| "failed"
 function MoveCtrl.SetProgressState(unitID, state) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L278-L282" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L279-L283" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param extrapolate boolean
 function MoveCtrl.SetExtrapolate(unitID, extrapolate) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L297-L309" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L298-L310" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param posX number Position X component.
@@ -79,7 +80,7 @@ function MoveCtrl.SetExtrapolate(unitID, extrapolate) end
 ---@param rotZ number Rotation Z component.
 function MoveCtrl.SetPhysics(unitID, posX, posY, posZ, velX, velY, velZ, rotX, rotY, rotZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L328-L334" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L329-L335" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param posX number Position X component.
@@ -87,7 +88,7 @@ function MoveCtrl.SetPhysics(unitID, posX, posY, posZ, velX, velY, velZ, rotX, r
 ---@param posZ number Position Z component.
 function MoveCtrl.SetPosition(unitID, posX, posY, posZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L351-L357" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L352-L358" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param velX number Velocity X component.
@@ -95,7 +96,7 @@ function MoveCtrl.SetPosition(unitID, posX, posY, posZ) end
 ---@param velZ number Velocity Z component.
 function MoveCtrl.SetVelocity(unitID, velX, velY, velZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L374-L380" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L375-L381" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param relVelX number Relative velocity X component.
@@ -103,7 +104,7 @@ function MoveCtrl.SetVelocity(unitID, velX, velY, velZ) end
 ---@param relVelZ number Relative velocity Z component.
 function MoveCtrl.SetRelativeVelocity(unitID, relVelX, relVelY, relVelZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L397-L403" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L398-L404" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param rotX number Rotation X component.
@@ -111,12 +112,12 @@ function MoveCtrl.SetRelativeVelocity(unitID, relVelX, relVelY, relVelZ) end
 ---@param rotZ number Rotation Z component.
 function MoveCtrl.SetRotation(unitID, rotX, rotY, rotZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L420-L423" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L421-L424" target="_blank">source</a>]
 ---
 ---@deprecated
 function MoveCtrl.SetRotationOffset() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L431-L437" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L432-L438" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param rotVelX number Rotation velocity X component.
@@ -124,55 +125,55 @@ function MoveCtrl.SetRotationOffset() end
 ---@param rotVelZ number Rotation velocity Z component.
 function MoveCtrl.SetRotationVelocity(unitID, rotVelX, rotVelY, rotVelZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L453-L457" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L454-L458" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param heading Heading
 function MoveCtrl.SetHeading(unitID, heading) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L474-L478" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L475-L479" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param trackSlope boolean
 function MoveCtrl.SetTrackSlope(unitID, trackSlope) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L491-L495" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L492-L496" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param trackGround boolean
 function MoveCtrl.SetTrackGround(unitID, trackGround) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L508-L512" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L509-L513" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param trackLimits boolean
 function MoveCtrl.SetTrackLimits(unitID, trackLimits) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L525-L529" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L526-L530" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param groundOffset number
 function MoveCtrl.SetGroundOffset(unitID, groundOffset) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L542-L546" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L543-L547" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param gravityFactor number
 function MoveCtrl.SetGravity(unitID, gravityFactor) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L559-L563" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L560-L564" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param drag number
 function MoveCtrl.SetDrag(unitID, drag) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L576-L580" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L577-L581" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param windFactor number
 function MoveCtrl.SetWindFactor(unitID, windFactor) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L593-L602" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L594-L603" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param minX number Minimum position X component.
@@ -183,25 +184,25 @@ function MoveCtrl.SetWindFactor(unitID, windFactor) end
 ---@param maxZ number Maximum position Z component.
 function MoveCtrl.SetLimits(unitID, minX, minY, minZ, maxX, maxY, maxZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L618-L622" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L619-L623" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param noBlocking boolean
 function MoveCtrl.SetNoBlocking(unitID, noBlocking) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L641-L645" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L642-L646" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param collideStop boolean
 function MoveCtrl.SetCollideStop(unitID, collideStop) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L658-L662" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L659-L663" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param limitsStop boolean
 function MoveCtrl.SetLimitsStop(unitID, limitsStop) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L697-L703" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L698-L704" target="_blank">source</a>]
 ---
 ---@alias GenericMoveTypeNumberKey
 ---| "maxSpeed"
@@ -209,13 +210,13 @@ function MoveCtrl.SetLimitsStop(unitID, limitsStop) end
 ---| "maneuverLeash"
 ---| "waterline"
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L705-L709" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L706-L710" target="_blank">source</a>]
 ---
 ---@alias GenericMoveTypeBooleanKey
 ---| "useWantedSpeed[0]" # Use wanted speed for individual orders.
 ---| "useWantedSpeed[1]" # Use wanted speed for formation orders.
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L711-L720" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L712-L721" target="_blank">source</a>]
 ---
 ---@class GenericMoveType
 ---@x_helper
@@ -227,7 +228,7 @@ function MoveCtrl.SetLimitsStop(unitID, limitsStop) end
 ---@field ["useWantedSpeed[1]"] boolean? # Use wanted speed for formation orders.
 local GenericMoveType = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L779-L795" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L780-L796" target="_blank">source</a>]
 ---
 ---@class HoverAirMoveType : GenericMoveType
 ---@x_helper
@@ -246,14 +247,14 @@ local GenericMoveType = {}
 ---@field maxDrift number?
 local HoverAirMoveType = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L797-L802" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L798-L803" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param moveType HoverAirMoveType
 ---@return number numAssignedValues
 function MoveCtrl.SetGunshipMoveTypeData(unitID, moveType) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L803-L815" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L804-L816" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param key
@@ -267,7 +268,7 @@ function MoveCtrl.SetGunshipMoveTypeData(unitID, moveType) end
 ---@return number numAssignedValues
 function MoveCtrl.SetGunshipMoveTypeData(unitID, key, value) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L816-L831" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L817-L832" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param key
@@ -284,7 +285,7 @@ function MoveCtrl.SetGunshipMoveTypeData(unitID, key, value) end
 ---@return number numAssignedValues
 function MoveCtrl.SetGunshipMoveTypeData(unitID, key, value) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L837-L857" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L838-L858" target="_blank">source</a>]
 ---
 ---@class StrafeAirMoveType : GenericMoveType
 ---@x_helper
@@ -307,14 +308,14 @@ function MoveCtrl.SetGunshipMoveTypeData(unitID, key, value) end
 ---@field myGravity number?
 local StrafeAirMoveType = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L859-L864" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L860-L865" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param moveType StrafeAirMoveType
 ---@return number numAssignedValues
 function MoveCtrl.SetAirMoveTypeData(unitID, moveType) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L865-L875" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L866-L876" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param key
@@ -326,7 +327,7 @@ function MoveCtrl.SetAirMoveTypeData(unitID, moveType) end
 ---@return number numAssignedValues
 function MoveCtrl.SetAirMoveTypeData(unitID, key, value) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L876-L896" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L877-L897" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param key
@@ -348,7 +349,7 @@ function MoveCtrl.SetAirMoveTypeData(unitID, key, value) end
 ---@return number numAssignedValues
 function MoveCtrl.SetAirMoveTypeData(unitID, key, value) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L897-L904" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L898-L905" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param key
@@ -357,7 +358,7 @@ function MoveCtrl.SetAirMoveTypeData(unitID, key, value) end
 ---@return number numAssignedValues
 function MoveCtrl.SetAirMoveTypeData(unitID, key, value) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L910-L926" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L911-L927" target="_blank">source</a>]
 ---
 ---@class GroundMoveType : GenericMoveType
 ---@x_helper
@@ -376,14 +377,14 @@ function MoveCtrl.SetAirMoveTypeData(unitID, key, value) end
 ---@field sqSkidSpeedMult number?
 local GroundMoveType = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L928-L933" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L929-L934" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param moveType GroundMoveType
 ---@return number numAssignedValues
 function MoveCtrl.SetGroundMoveTypeData(unitID, moveType) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L934-L944" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L935-L945" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param key
@@ -395,7 +396,7 @@ function MoveCtrl.SetGroundMoveTypeData(unitID, moveType) end
 ---@return number numAssignedValues
 function MoveCtrl.SetGroundMoveTypeData(unitID, key, value) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L945-L961" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L946-L962" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param key
@@ -413,7 +414,7 @@ function MoveCtrl.SetGroundMoveTypeData(unitID, key, value) end
 ---@return number numAssignedValues
 function MoveCtrl.SetGroundMoveTypeData(unitID, key, value) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L962-L969" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L963-L970" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param key
@@ -422,7 +423,7 @@ function MoveCtrl.SetGroundMoveTypeData(unitID, key, value) end
 ---@return number numAssignedValues
 function MoveCtrl.SetGroundMoveTypeData(unitID, key, value) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L980-L985" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedMoveCtrl.cpp#L981-L986" target="_blank">source</a>]
 ---
 ---@param unitID integer
 ---@param moveDef integer|string Name or path type of the MoveDef.
