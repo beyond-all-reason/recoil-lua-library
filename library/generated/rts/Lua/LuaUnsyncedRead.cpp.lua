@@ -1195,9 +1195,9 @@ function Spring.GetActivePage() end
 ---
 ---@return number x
 ---@return number y
----@return number lmbPressed left mouse button pressed
----@return number mmbPressed middle mouse button pressed
----@return number rmbPressed right mouse button pressed
+---@return boolean lmbPressed left mouse button pressed
+---@return boolean mmbPressed middle mouse button pressed
+---@return boolean rmbPressed right mouse button pressed
 ---@return boolean offscreen
 ---@return boolean mmbScroll
 function Spring.GetMouseState() end
