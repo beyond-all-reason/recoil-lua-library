@@ -441,7 +441,7 @@ IconData.atlasTexCoords = nil
 ---
 ---@param unitID number
 ---@param fullData boolean? (Default: false) Whether additional information about the icon is returned, otherwise only `name` and `atlasTexCoords` are returned
----@return IconData iconData
+---@return IconData? `nil` if unit is not found or unit currentIconIndex is invalid
 ---@see Spring.GetIconData
 function Spring.GetUnitIconData(unitID, fullData) end
 
@@ -459,7 +459,7 @@ function Spring.GetUnitIcon(unitID) end
 ---
 ---@param iconName string
 ---@param fullData boolean? (Default: false) Whether additional information about the icon is returned, otherwise only `name` and `atlasTexCoords` are returned
----@return IconData iconData
+---@return IconData? `nil` if iconName lookup fails
 ---@see Spring.GetUnitIconData
 function Spring.GetIconData(iconName, fullData) end
 
