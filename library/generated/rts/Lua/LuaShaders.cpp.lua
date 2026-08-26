@@ -186,7 +186,7 @@ function gl.SetFeatureBufferUniforms(featureID, values, offset) end
 ---Sets the uniform float value at the locationID for the currently active
 ---shader. Shader must be activated before setting uniforms.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1079-L1089" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1079-L1090" target="_blank">source</a>]
 ---
 ---@param locationID GL|string uniformName
 ---@param f1 number
@@ -195,10 +195,24 @@ function gl.SetFeatureBufferUniforms(featureID, values, offset) end
 ---@param f4 number?
 function gl.Uniform(locationID, f1, f2, f3, f4) end
 
+---Sets the uniform float value at the locationID for the currently active
+---shader. Shader must be activated before setting uniforms.
+---
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1079-L1090" target="_blank">source</a>]
+---
+---Alias of Uniform
+---
+---@param locationID GL|string uniformName
+---@param f1 number
+---@param f2 number?
+---@param f3 number?
+---@param f4 number?
+function gl.UniformFloat(locationID, f1, f2, f3, f4) end
+
 ---Sets the uniform int value at the locationID for the currently active shader.
 ---Shader must be activated before setting uniforms.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1120-L1130" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1121-L1131" target="_blank">source</a>]
 ---
 ---@param locationID integer|string uniformName
 ---@param int1 integer
@@ -207,7 +221,7 @@ function gl.Uniform(locationID, f1, f2, f3, f4) end
 ---@param int4 integer?
 function gl.UniformInt(locationID, int1, int2, int3, int4) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1183-L1188" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1184-L1189" target="_blank">source</a>]
 ---
 ---@alias UniformArrayType
 ---| 1 # int
@@ -219,7 +233,7 @@ function gl.UniformInt(locationID, int1, int2, int3, int4) end
 ---
 ---Shader must be activated before setting uniforms.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1190-L1200" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1191-L1201" target="_blank">source</a>]
 ---
 ---@param locationID integer|string uniformName
 ---@param type UniformArrayType
@@ -233,7 +247,7 @@ function gl.UniformArray(locationID, type, uniforms) end
 ---Can set one one common matrix like shadow, or by passing 16 additional
 ---numbers for the matrix.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1239-L1250" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1240-L1251" target="_blank">source</a>]
 ---
 ---@param locationID integer|string uniformName
 ---@param matrix MatrixName Name of common matrix.
@@ -246,7 +260,7 @@ function gl.UniformMatrix(locationID, matrix) end
 ---Can set one one common matrix like shadow, or by passing 16 additional
 ---numbers for the matrix.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1252-L1263" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1253-L1264" target="_blank">source</a>]
 ---
 ---@param locationID integer|string uniformName
 ---@param matrix number[] A 2x2, 3x3 or 4x4 matrix.
@@ -254,13 +268,13 @@ function gl.UniformMatrix(locationID, matrix) end
 
 ---Selects a subroutine for the active shader program.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1325-L1331" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1326-L1332" target="_blank">source</a>]
 ---
 ---@param shaderType integer
 ---@param index integer
 function gl.UniformSubroutine(shaderType, index) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1347-L1355" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1348-L1356" target="_blank">source</a>]
 ---
 ---Return the GLSL compliant definition of UniformMatricesBuffer(idx=0) or UniformParamsBuffer(idx=1) structure.
 ---
@@ -268,7 +282,7 @@ function gl.UniformSubroutine(shaderType, index) end
 ---@return string glslDefinition
 function gl.GetEngineUniformBufferDef(index) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1369-L1377" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1370-L1378" target="_blank">source</a>]
 ---
 ---Return the GLSL compliant definition of ModelUniformData structure (per Unit/Feature buffer available on GPU)
 ---
@@ -276,7 +290,7 @@ function gl.GetEngineUniformBufferDef(index) end
 ---@return string glslDefinition
 function gl.GetEngineModelUniformDataDef(index) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1387-L1397" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1388-L1398" target="_blank">source</a>]
 ---
 ---Return the current size values of ModelUniformData structure (per Unit/Feature buffer available on GPU)
 ---
@@ -287,7 +301,7 @@ function gl.GetEngineModelUniformDataSize(index) end
 
 ---Sets the Geometry shader parameters for shaderID. Needed by geometry shader programs (check the opengl GL_ARB_geometry_shader4 extension for glProgramParameteri)
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1410-L1417" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1411-L1418" target="_blank">source</a>]
 ---
 ---@param shaderID integer
 ---@param key number
@@ -300,7 +314,7 @@ function gl.SetGeometryShaderParameter(shaderID, key, value) end
 ---Needed by tesselation shader programs. (Check the opengl
 ---`GL_ARB_tessellation_shader` extension for `glProgramParameteri`).
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1438-L1448" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1439-L1449" target="_blank">source</a>]
 ---
 ---@param param integer
 ---@param value integer
