@@ -1828,11 +1828,11 @@ function Spring.SetProjectileIsIntercepted(projectileID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5775-L5781" target="_blank">source</a>]
 ---
----@param unitID integer
+---@param projectileID ProjectileID
 ---@param weaponNum integer
 ---@param key string
 ---@param value number
-function Spring.SetProjectileDamages(unitID, weaponNum, key, value) end
+function Spring.SetProjectileDamages(projectileID, weaponNum, key, value) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L5811-L5815" target="_blank">source</a>]
 ---

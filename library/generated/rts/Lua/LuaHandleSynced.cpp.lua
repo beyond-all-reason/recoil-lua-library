@@ -653,9 +653,9 @@ function Script.SetWatchAllowTarget(weaponDefID, watch) end
 ---
 ---@class CallAsTeamOptions
 ---@x_helper
----@field ctrl integer Ctrl team ID.
----@field read integer Read team ID.
----@field select integer Select team ID.
+---@field ctrl TeamID
+---@field read TeamID
+---@field select TeamID
 local CallAsTeamOptions = {}
 
 ---Calls a function from given team's PoV. In particular this makes callouts obey that team's visibility rules.

@@ -693,7 +693,7 @@ function Spring.GetVisibleProjectiles(allyTeamID, addSyncedProjectiles, addWeapo
 ---
 ---@param drawMask DrawMask (Default: `0`) Filter objects by their draw flags.
 ---@param sendMask true Whether to send objects draw flags as second return
----@return integer[] featureIDs
+---@return UnitID[] unitIDs
 ---@return DrawFlag[] drawFlags
 function Spring.GetRenderUnits(drawMask, sendMask) end
 
@@ -701,7 +701,7 @@ function Spring.GetRenderUnits(drawMask, sendMask) end
 ---
 ---@param drawMask DrawMask (Default: `0`) Filter objects by their draw flags.
 ---@param sendMask false? Whether to send objects draw flags as second return
----@return integer[] featureIDs
+---@return UnitID[] unitIDs
 function Spring.GetRenderUnits(drawMask, sendMask) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedRead.cpp#L2422-L2428" target="_blank">source</a>]

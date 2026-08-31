@@ -723,7 +723,7 @@ function Spring.GetUnitNearestAlly(unitID, range) end
 ---@param useLOS boolean? (Default: `true`) requires LOS/radar visibility of allied team.
 ---@param sphereDistTest boolean? (Default: `false`) determines if using spherical(3D, includes target radius) or cylindrical(2D) search.
 ---@param checkSightDist boolean? (Default: `false`) determine if during filter process, if candidate distance to be within candidate LOS radius.
----@return integer? unitID
+---@return UnitID? unitID
 function Spring.GetUnitNearestEnemy(unitID, range, useLOS, sphereDistTest, checkSightDist) end
 
 ---Returns the enemy unit closest to a position.
@@ -1174,7 +1174,7 @@ function Spring.GetUnitBuildFacing(unitID) end
 ---Works for both mobile builders and factories.
 ---
 ---@param unitID UnitID
----@return integer buildeeUnitID or nil
+---@return UnitID? buildeeUnitID
 function Spring.GetUnitIsBuilding(unitID) end
 
 ---Checks a builder's current task
@@ -1202,7 +1202,7 @@ function Spring.GetUnitWorkerTask(unitID) end
 ---Useful for setting move goals manually.
 ---
 ---@param unitID UnitID
----@param buildeeDefID integer or nil
+---@param buildeeDefID UnitDefID?
 ---@return number effectiveBuildRange counted to the center of prospective buildee; buildRange if buildee nil
 function Spring.GetUnitEffectiveBuildRange(unitID, buildeeDefID) end
 
@@ -1558,7 +1558,7 @@ function Spring.GetUnitEstimatedPath(unitID) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L5881-L5886" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
----@return integer? attackerUnitID `nil` if the unit has no last attacker or the attacker is not visible.
+---@return UnitID? attackerUnitID `nil` if the unit has no last attacker or the attacker is not visible.
 function Spring.GetUnitLastAttacker(unitID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L5902-L5906" target="_blank">source</a>]
@@ -1787,7 +1787,7 @@ function Spring.GetCommandQueue(unitID, count) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L6777-L6782" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
----@return table<number, number>? buildqueue indexed by unitDefID with count values
+---@return table<UnitDefID, integer>? buildqueue indexed by unitDefID with count values
 function Spring.GetFullBuildQueue(unitID) end
 
 ---Returns the build queue cleaned of things the unit can't build itself
@@ -1795,7 +1795,7 @@ function Spring.GetFullBuildQueue(unitID) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L6789-L6794" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
----@return table<number, number>? buildqueue indexed by unitDefID with count values
+---@return table<UnitDefID, integer>? buildqueue indexed by unitDefID with count values
 function Spring.GetRealBuildQueue(unitID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L6804-L6808" target="_blank">source</a>]
