@@ -167,7 +167,7 @@ function gl.GetSubroutineIndex(shaderID, shaderType, name) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1053-L1061" target="_blank">source</a>]
 ---
----@param unitID integer
+---@param unitID UnitID
 ---@param values number[]
 ---@param offset integer?
 ---@return integer count
@@ -177,7 +177,7 @@ function gl.SetUnitBufferUniforms(unitID, values, offset) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1063-L1071" target="_blank">source</a>]
 ---
----@param featureID integer
+---@param featureID FeatureID
 ---@param values number[]
 ---@param offset integer?
 ---@return integer count
@@ -278,7 +278,7 @@ function gl.UniformSubroutine(shaderType, index) end
 ---
 ---Return the GLSL compliant definition of UniformMatricesBuffer(idx=0) or UniformParamsBuffer(idx=1) structure.
 ---
----@param index number
+---@param index integer
 ---@return string glslDefinition
 function gl.GetEngineUniformBufferDef(index) end
 
@@ -286,7 +286,7 @@ function gl.GetEngineUniformBufferDef(index) end
 ---
 ---Return the GLSL compliant definition of ModelUniformData structure (per Unit/Feature buffer available on GPU)
 ---
----@param index number
+---@param index integer
 ---@return string glslDefinition
 function gl.GetEngineModelUniformDataDef(index) end
 
@@ -294,9 +294,9 @@ function gl.GetEngineModelUniformDataDef(index) end
 ---
 ---Return the current size values of ModelUniformData structure (per Unit/Feature buffer available on GPU)
 ---
----@param index number
----@return number sizeInElements
----@return number sizeInBytesOnCPU
+---@param index integer
+---@return integer sizeInElements
+---@return integer sizeInBytesOnCPU
 function gl.GetEngineModelUniformDataSize(index) end
 
 ---Sets the Geometry shader parameters for shaderID. Needed by geometry shader programs (check the opengl GL_ARB_geometry_shader4 extension for glProgramParameteri)
@@ -304,8 +304,8 @@ function gl.GetEngineModelUniformDataSize(index) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaShaders.cpp#L1411-L1418" target="_blank">source</a>]
 ---
 ---@param shaderID integer
----@param key number
----@param value number
+---@param key GL
+---@param value integer
 ---@return nil
 function gl.SetGeometryShaderParameter(shaderID, key, value) end
 

@@ -16,31 +16,31 @@
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstGame.cpp#L36-L121" target="_blank">source</a>]
 Game = {
-	---@type number
+	---@type integer
 	maxUnits = nil,
 
-	---@type number
+	---@type integer
 	maxTeams = nil,
 
-	---@type number
+	---@type integer
 	maxPlayers = nil,
 
 	---Divide Game.mapSizeX or Game.mapSizeZ by this to get engine's "mapDims" coordinates. The resolution of height, yard and type maps.
 	---
-	---@type number
+	---@type integer
 	squareSize = nil,
 
 	---The resolution of metalmap (for use in API such as Spring.GetMetalAmount etc.)
 	---
-	---@type number
+	---@type integer
 	metalMapSquareSize = nil,
 
 	---Number of simulation gameframes per second
 	---
-	---@type number
+	---@type integer
 	gameSpeed = nil,
 
-	---@type number
+	---@type integer
 	startPosType = nil,
 
 	---@type boolean
@@ -66,20 +66,20 @@ Game = {
 	---@type number
 	mapHardness = nil,
 
-	---@type number
+	---@type integer
 	mapX = nil,
 
-	---@type number
+	---@type integer
 	mapY = nil,
 
 	---in worldspace/opengl coords. Divide by Game.squareSize to get engine's "mapDims" coordinates
 	---
-	---@type number
+	---@type integer
 	mapSizeX = nil,
 
 	---in worldspace/opengl coords. Divide by Game.squareSize to get engine's "mapDims" coordinates
 	---
-	---@type number
+	---@type integer
 	mapSizeZ = nil,
 
 	---@type number
@@ -123,22 +123,22 @@ Game = {
 	---@type boolean
 	requireSonarUnderWater = nil,
 
-	---@type number
+	---@type integer
 	transportAir = nil,
 
-	---@type number
+	---@type integer
 	transportShip = nil,
 
-	---@type number
+	---@type integer
 	transportHover = nil,
 
-	---@type number
+	---@type integer
 	transportGround = nil,
 
-	---@type number
+	---@type integer
 	fireAtKilled = nil,
 
-	---@type number
+	---@type integer
 	fireAtCrashing = nil,
 
 	---@type boolean
@@ -150,19 +150,19 @@ Game = {
 	---@type boolean
 	reclaimAllowAllies = nil,
 
-	---@type number
+	---@type integer
 	constructionDecayTime = nil,
 
 	---@type number
 	constructionDecaySpeed = nil,
 
-	---@type number
+	---@type integer
 	multiReclaim = nil,
 
-	---@type number
+	---@type integer
 	reclaimMethod = nil,
 
-	---@type number
+	---@type integer
 	reclaimUnitMethod = nil,
 
 	---@type number

@@ -77,12 +77,12 @@ Engine = {
 
 	---Indicates the build type always 64 these days
 	---
-	---@type number
+	---@type integer
 	wordSize = nil,
 
 	---Number of simulation gameframes per second
 	---
-	---@type number
+	---@type integer
 	gameSpeed = nil,
 
 	---Table containing keys that represent the color code operations during font rendering

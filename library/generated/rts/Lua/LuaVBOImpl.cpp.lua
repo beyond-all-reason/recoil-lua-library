@@ -80,10 +80,10 @@ local VBOAttributeDef = {}
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L499-L537" target="_blank">source</a>]
 ---
----@param size number The maximum number of elements this VBO can have.
----@param attribs number|VBOAttributeDef[]
+---@param size integer The maximum number of elements this VBO can have.
+---@param attribs integer|VBOAttributeDef[]
 ---
----When number, the maximum number of elements this VBO can have.
+---When integer, the maximum number of elements this VBO can have.
 ---
 ---Otherwise, an array of arrays specifying the layout.
 ---@return nil
@@ -93,9 +93,9 @@ function VBO:Define(size, attribs) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L585-L591" target="_blank">source</a>]
 ---
----@return number elementsCount
----@return number bufferSizeInBytes
----@return number size
+---@return integer elementsCount
+---@return integer bufferSizeInBytes
+---@return integer size
 function VBO:GetBufferSize() end
 
 ---Uploads data into the VBO.
@@ -126,7 +126,7 @@ function VBO:Upload(vboData, attributeIndex, elemOffset, luaStartIndex, luaFinis
 ---from specified attribute will be downloaded - otherwise all attributes are
 ---downloaded
 ---@param elementOffset integer? (Default: `0`) download data starting from this element
----@param elementCount number? number of elements to download
+---@param elementCount integer? number of elements to download
 ---@param forceGPURead boolean? (Default: `false`) force downloading the data from GPU buffer as opposed
 ---to using shadow RAM buffer
 ---@return number[] vboData
@@ -138,7 +138,7 @@ function VBO:Download(attributeIndex, elementOffset, elementCount, forceGPURead)
 ---
 ---Also fills in VBO definition data as they're set for engine models (no need to do VBO:Define()).
 ---
----@return nil|number buffer size in bytes
+---@return integer? buffer size in bytes
 function VBO:ModelsVBO() end
 
 ---Fills in attribute data for each specified unitDefID
@@ -159,11 +159,11 @@ function VBO:ModelsVBO() end
 ---   , aux1 { 0u }
 ---```
 ---
----@param unitDefIDs number|number[]
+---@param unitDefIDs UnitDefID|UnitDefID[]
 ---@param attrID integer
 ---@param teamIdOpt integer?
 ---@param elementOffset integer?
----@return [number, number, number, number] instanceData
+---@return [integer, integer, integer, integer] instanceData
 ---@return integer elementOffset
 ---@return integer attrID
 function VBO:InstanceDataFromUnitDefIDs(unitDefIDs, attrID, teamIdOpt, elementOffset) end
@@ -186,11 +186,11 @@ function VBO:InstanceDataFromUnitDefIDs(unitDefIDs, attrID, teamIdOpt, elementOf
 ---   , aux1 { 0u }
 ---```
 ---
----@param featureDefIDs number|number[]
+---@param featureDefIDs FeatureDefID|FeatureDefID[]
 ---@param attrID integer
 ---@param teamIdOpt integer?
 ---@param elementOffset integer?
----@return [number, number, number, number] instanceData
+---@return [integer, integer, integer, integer] instanceData
 ---@return integer elementOffset
 ---@return integer attrID
 function VBO:InstanceDataFromFeatureDefIDs(featureDefIDs, attrID, teamIdOpt, elementOffset) end
@@ -214,11 +214,11 @@ function VBO:InstanceDataFromFeatureDefIDs(featureDefIDs, attrID, teamIdOpt, ele
 ---   , aux1 { 0u }
 ---```
 ---
----@param unitIDs number|number[]
+---@param unitIDs UnitID|UnitID[]
 ---@param attrID integer
 ---@param teamIdOpt integer?
 ---@param elementOffset integer?
----@return [number, number, number, number] instanceData
+---@return [integer, integer, integer, integer] instanceData
 ---@return integer elementOffset
 ---@return integer attrID
 function VBO:InstanceDataFromUnitIDs(unitIDs, attrID, teamIdOpt, elementOffset) end
@@ -232,18 +232,18 @@ function VBO:InstanceDataFromUnitIDs(unitIDs, attrID, teamIdOpt, elementOffset) 
 ---global per unit/feature uniform SSBO (unused for Unit/FeatureDefs), as
 ---well as some auxiliary data such as palette index and number of pieces.
 ---
----@param featureIDs number|number[]
+---@param featureIDs FeatureID|FeatureID[]
 ---@param attrID integer
 ---@param teamIdOpt integer?
 ---@param elementOffset integer?
----@return [number, number, number, number] instanceData
+---@return [integer, integer, integer, integer] instanceData
 ---@return integer elementOffset
 ---@return integer attrID
 function VBO:InstanceDataFromFeatureIDs(featureIDs, attrID, teamIdOpt, elementOffset) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVBOImpl.cpp#L1336-L1346" target="_blank">source</a>]
 ---
----@param projectileIDs integer|integer[]
+---@param projectileIDs ProjectileID|ProjectileID[]
 ---@param attrID integer
 ---@param teamIdOpt integer?
 ---@param elementOffset integer?
@@ -263,8 +263,8 @@ function VBO:MatrixDataFromProjectileIDs(projectileIDs, attrID, teamIdOpt, eleme
 ---@param index integer should be in the range between
 ---`5 < index < GL_MAX_UNIFORM_BUFFER_BINDINGS` value (usually 31)
 ---@param elementOffset integer?
----@param elementCount number?
----@param target number? glEnum
+---@param elementCount integer?
+---@param target GL? glEnum
 ---@return integer bindingIndex when successful, -1 otherwise
 function VBO:BindBufferRange(index, elementOffset, elementCount, target) end
 
@@ -272,9 +272,9 @@ function VBO:BindBufferRange(index, elementOffset, elementCount, target) end
 ---
 ---@param index integer
 ---@param elementOffset integer?
----@param elementCount number?
----@param target number? glEnum
----@return number bindingIndex when successful, -1 otherwise
+---@param elementCount integer?
+---@param target GL? glEnum
+---@return integer bindingIndex when successful, -1 otherwise
 function VBO:UnbindBufferRange(index, elementOffset, elementCount, target) end
 
 ---Logs the definition of the VBO to the console

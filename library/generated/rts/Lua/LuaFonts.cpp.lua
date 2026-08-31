@@ -123,7 +123,7 @@ function LuaFont:SubmitBuffered(noBillboarding, userDefinedBlending) end
 ---@param maxHeight number? Defaults to an engine-defined maximum height.
 ---@param size number? Defaults to the font's point size.
 ---@return string wrappedText
----@return number lineCount
+---@return integer lineCount
 function LuaFont:WrapText(text, maxWidth, maxHeight, size) end
 
 ---Returns the horizontal extent of a string for this font at its current size.
@@ -141,7 +141,7 @@ function LuaFont:GetTextWidth(text) end
 ---@param text string
 ---@return number height
 ---@return number descender
----@return number lines
+---@return integer lines
 function LuaFont:GetTextHeight(text) end
 
 ---Sets the RGBA color used when drawing text (fill).

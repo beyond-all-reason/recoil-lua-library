@@ -8,7 +8,7 @@
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaPathFinder.cpp#L214-L225" target="_blank">source</a>]
 ---
----@param moveID number|string
+---@param moveID integer|string
 ---@param startX number
 ---@param startY number
 ---@param startZ number
@@ -29,19 +29,19 @@ function Spring.InitPathNodeCostsArray(overlayIndex, sizeX, sizeZ) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaPathFinder.cpp#L304-L308" target="_blank">source</a>]
 ---
----@param overlayIndex number
+---@param overlayIndex integer
 ---@return boolean success
 function Spring.FreePathNodeCostsArray(overlayIndex) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaPathFinder.cpp#L342-L346" target="_blank">source</a>]
 ---
----@param overlayIndex number
+---@param overlayIndex integer
 ---@return boolean success
 function Spring.SetPathNodeCosts(overlayIndex) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaPathFinder.cpp#L371-L375" target="_blank">source</a>]
 ---
----@param overlayIndex number
+---@param overlayIndex integer
 ---@return boolean|table costs
 function Spring.GetPathNodeCosts(overlayIndex) end
 

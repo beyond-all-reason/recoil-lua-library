@@ -31,7 +31,7 @@ local RBO = {}
 ---@x_helper
 ---@field target GL
 ---@field format GL
----@field samples number? any number here will result in creation of multisampled RBO
+---@field samples integer? any number here will result in creation of multisampled RBO
 local CreateRBOData = {}
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaRBOs.cpp#L158-L164" target="_blank">source</a>]

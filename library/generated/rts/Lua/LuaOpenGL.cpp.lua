@@ -47,8 +47,8 @@ function gl.GetScreenViewTrans() end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1222-L1226" target="_blank">source</a>]
 ---
----@return number x
----@return number y
+---@return integer x
+---@return integer y
 function gl.GetViewSizes() end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1235-L1241" target="_blank">source</a>]
@@ -146,7 +146,7 @@ function gl.GetTextHeight(text) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1665-L1674" target="_blank">source</a>]
 ---
----@param unitID integer
+---@param unitID UnitID
 ---@param doRawDraw boolean? (Default: `false`)
 ---@param useLuaMat integer?
 ---@param noLuaCall boolean? (Default: `false`) Skip the `DrawUnit` callin.
@@ -160,7 +160,7 @@ function gl.Unit(unitID, doRawDraw, useLuaMat, noLuaCall, fullModel) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1677-L1689" target="_blank">source</a>]
 ---
----@param unitID integer
+---@param unitID UnitID
 ---@param doRawDraw boolean? (Default: `false`)
 ---@param useLuaMat integer?
 ---@param noLuaCall boolean? (Default: `true`) Skip the `DrawUnit` callin.
@@ -169,14 +169,14 @@ function gl.UnitRaw(unitID, doRawDraw, useLuaMat, noLuaCall, fullModel) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1692-L1696" target="_blank">source</a>]
 ---
----@param unitID integer
+---@param unitID UnitID
 ---@param push boolean If `true`, push the render state; if `false`, pop it.
 function gl.UnitTextures(unitID, push) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1704-L1711" target="_blank">source</a>]
 ---
----@param unitDefID integer
----@param teamID integer
+---@param unitDefID UnitDefID
+---@param teamID TeamID
 ---@param rawState boolean? (Default: `true`)
 ---@param toScreen boolean? (Default: `false`)
 ---@param opaque boolean? (Default: `true`) If `true`, draw opaque; if `false`, draw alpha.
@@ -184,30 +184,30 @@ function gl.UnitShape(unitDefID, teamID, rawState, toScreen, opaque) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1719-L1723" target="_blank">source</a>]
 ---
----@param unitDefID integer
+---@param unitDefID UnitDefID
 ---@param push boolean If `true`, push the render state; if `false`, pop it.
 function gl.UnitShapeTextures(unitDefID, push) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1732-L1735" target="_blank">source</a>]
 ---
----@param unitID integer
+---@param unitID UnitID
 function gl.UnitMultMatrix(unitID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1750-L1754" target="_blank">source</a>]
 ---
----@param unitID integer
+---@param unitID UnitID
 ---@param pieceID integer
 function gl.UnitPiece(unitID, pieceID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1761-L1765" target="_blank">source</a>]
 ---
----@param unitID integer
+---@param unitID UnitID
 ---@param pieceID integer
 function gl.UnitPieceMatrix(unitID, pieceID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1768-L1772" target="_blank">source</a>]
 ---
----@param unitID integer
+---@param unitID UnitID
 ---@param pieceID integer
 function gl.UnitPieceMultMatrix(unitID, pieceID) end
 
@@ -215,7 +215,7 @@ function gl.UnitPieceMultMatrix(unitID, pieceID) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1833-L1841" target="_blank">source</a>]
 ---
----@param featureID integer
+---@param featureID FeatureID
 ---@param doRawDraw boolean? (Default: `false`)
 ---@param useLuaMat integer?
 ---@param noLuaCall boolean? (Default: `false`) Skip the `DrawFeature` callin.
@@ -228,7 +228,7 @@ function gl.Feature(featureID, doRawDraw, useLuaMat, noLuaCall) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1844-L1854" target="_blank">source</a>]
 ---
----@param featureID integer
+---@param featureID FeatureID
 ---@param doRawDraw boolean? (Default: `false`)
 ---@param useLuaMat integer?
 ---@param noLuaCall boolean? (Default: `true`) Skip the `DrawFeature` callin.
@@ -236,14 +236,14 @@ function gl.FeatureRaw(featureID, doRawDraw, useLuaMat, noLuaCall) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1857-L1861" target="_blank">source</a>]
 ---
----@param featureID integer
+---@param featureID FeatureID
 ---@param push boolean If `true`, push the render state; if `false`, pop it.
 function gl.FeatureTextures(featureID, push) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1869-L1876" target="_blank">source</a>]
 ---
----@param featureDefID integer
----@param teamID integer
+---@param featureDefID FeatureDefID
+---@param teamID TeamID
 ---@param rawState boolean? (Default: `true`)
 ---@param toScreen boolean? (Default: `false`)
 ---@param opaque boolean? (Default: `true`) If `true`, draw opaque; if `false`, draw alpha.
@@ -251,36 +251,36 @@ function gl.FeatureShape(featureDefID, teamID, rawState, toScreen, opaque) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1884-L1888" target="_blank">source</a>]
 ---
----@param featureDefID integer
+---@param featureDefID FeatureDefID
 ---@param push boolean If `true`, push the render state; if `false`, pop it.
 function gl.FeatureShapeTextures(featureDefID, push) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1897-L1900" target="_blank">source</a>]
 ---
----@param featureID integer
+---@param featureID FeatureID
 function gl.FeatureMultMatrix(featureID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1915-L1919" target="_blank">source</a>]
 ---
----@param featureID integer
+---@param featureID FeatureID
 ---@param pieceID integer
 function gl.FeaturePiece(featureID, pieceID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1927-L1931" target="_blank">source</a>]
 ---
----@param featureID integer
+---@param featureID FeatureID
 ---@param pieceID integer
 function gl.FeaturePieceMatrix(featureID, pieceID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1935-L1939" target="_blank">source</a>]
 ---
----@param featureID integer
+---@param featureID FeatureID
 ---@param pieceID integer
 function gl.FeaturePieceMultMatrix(featureID, pieceID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L1952-L1964" target="_blank">source</a>]
 ---
----@param unitID integer
+---@param unitID UnitID
 ---@param listIndex integer
 ---@param useMidPos boolean? (Default: `true`)
 ---@param scaleX number? (Default: `1.0`)
@@ -294,7 +294,7 @@ function gl.DrawListAtUnit(unitID, listIndex, useMidPos, scaleX, scaleY, scaleZ,
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L2009-L2015" target="_blank">source</a>]
 ---
----@param unitID integer
+---@param unitID UnitID
 ---@param useMidPos boolean? (Default: `true`)
 ---@param fun (...) func Function to call.
 ---@param ... any Arguments passed to function.
@@ -318,7 +318,7 @@ function gl.DrawGroundCircle(posX, posY, posZ, radius, resolution) end
 ---@param resolution integer
 ---@param slope number
 ---@param gravity number?
----@param weaponDefID integer?
+---@param weaponDefID WeaponDefID?
 function gl.DrawGroundCircle(posX, posY, posZ, radius, resolution, slope, gravity, weaponDefID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L2111-L2119" target="_blank">source</a>]

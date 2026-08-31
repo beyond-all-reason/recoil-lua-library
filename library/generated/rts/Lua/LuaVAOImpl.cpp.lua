@@ -46,52 +46,52 @@ function VAO:AttachIndexBuffer(vbo) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVAOImpl.cpp#L368-L377" target="_blank">source</a>]
 ---
----@param glEnum number primitivesMode
----@param vertexCount number?
----@param vertexFirst number?
----@param instanceCount number?
----@param instanceFirst number?
+---@param glEnum GL primitivesMode
+---@param vertexCount integer?
+---@param vertexFirst integer?
+---@param instanceCount integer?
+---@param instanceFirst integer?
 ---@return nil
 function VAO:DrawArrays(glEnum, vertexCount, vertexFirst, instanceCount, instanceFirst) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVAOImpl.cpp#L405-L415" target="_blank">source</a>]
 ---
----@param glEnum number primitivesMode
----@param drawCount number?
----@param baseIndex number?
----@param instanceCount number?
----@param baseVertex number?
----@param baseInstance number?
+---@param glEnum GL primitivesMode
+---@param drawCount integer?
+---@param baseIndex integer?
+---@param instanceCount integer?
+---@param baseVertex integer?
+---@param baseInstance integer?
 ---@return nil
 function VAO:DrawElements(glEnum, drawCount, baseIndex, instanceCount, baseVertex, baseInstance) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVAOImpl.cpp#L467-L472" target="_blank">source</a>]
 ---
----@param unitIDs number|number[]
----@return number submittedCount
+---@param unitIDs UnitID|UnitID[]
+---@return integer submittedCount
 function VAO:AddUnitsToSubmission(unitIDs) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVAOImpl.cpp#L477-L482" target="_blank">source</a>]
 ---
----@param featureIDs number|number[]
----@return number submittedCount
+---@param featureIDs FeatureID|FeatureID[]
+---@return integer submittedCount
 function VAO:AddFeaturesToSubmission(featureIDs) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVAOImpl.cpp#L487-L492" target="_blank">source</a>]
 ---
----@param unitDefIDs number|number[]
----@return number submittedCount
+---@param unitDefIDs UnitDefID|UnitDefID[]
+---@return integer submittedCount
 function VAO:AddUnitDefsToSubmission(unitDefIDs) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVAOImpl.cpp#L497-L502" target="_blank">source</a>]
 ---
----@param featureDefIDs number|number[]
----@return number submittedCount
+---@param featureDefIDs FeatureDefID|FeatureDefID[]
+---@return integer submittedCount
 function VAO:AddFeatureDefsToSubmission(featureDefIDs) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVAOImpl.cpp#L507-L512" target="_blank">source</a>]
 ---
----@param index number
+---@param index integer
 ---@return nil
 function VAO:RemoveFromSubmission(index) end
 

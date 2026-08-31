@@ -22,7 +22,7 @@ local ObjectRenderingTable = {}
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L136-L142" target="_blank">source</a>]
 ---
----@param objectID integer
+---@param objectID ObjectID
 ---@return integer lodCount
 ---@return integer currentLOD
 function ObjectRenderingTable.GetLODCount(objectID) end
@@ -31,7 +31,7 @@ function ObjectRenderingTable.GetLODCount(objectID) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L158-L164" target="_blank">source</a>]
 ---
----@param objectID integer
+---@param objectID ObjectID
 ---@param lodCount integer
 ---@return nil
 function ObjectRenderingTable.SetLODCount(objectID, lodCount) end
@@ -40,7 +40,7 @@ function ObjectRenderingTable.SetLODCount(objectID, lodCount) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L195-L202" target="_blank">source</a>]
 ---
----@param objectID integer
+---@param objectID ObjectID
 ---@param lodLevel integer
 ---@param lodLength number
 ---@return nil
@@ -50,7 +50,7 @@ function ObjectRenderingTable.SetLODLength(objectID, lodLevel, lodLength) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L210-L217" target="_blank">source</a>]
 ---
----@param objectID integer
+---@param objectID ObjectID
 ---@param lodLevel integer
 ---@param lodDistance number
 ---@return nil
@@ -60,7 +60,7 @@ function ObjectRenderingTable.SetLODDistance(objectID, lodLevel, lodDistance) en
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L231-L239" target="_blank">source</a>]
 ---
----@param objectID integer
+---@param objectID ObjectID
 ---@param lodLevel integer
 ---@param piece integer
 ---@param ... any
@@ -71,7 +71,7 @@ function ObjectRenderingTable.SetPieceList(objectID, lodLevel, piece, ...) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L387-L394" target="_blank">source</a>]
 ---
----@param objectID integer
+---@param objectID ObjectID
 ---@param lodLevel integer
 ---@param materialName string
 ---@return userdata matRef
@@ -81,7 +81,7 @@ function ObjectRenderingTable.GetMaterial(objectID, lodLevel, materialName) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L417-L425" target="_blank">source</a>]
 ---
----@param objectID integer
+---@param objectID ObjectID
 ---@param lodLevel integer
 ---@param materialName string
 ---@param materialTable table
@@ -92,7 +92,7 @@ function ObjectRenderingTable.SetMaterial(objectID, lodLevel, materialName, mate
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L462-L469" target="_blank">source</a>]
 ---
----@param objectID integer
+---@param objectID ObjectID
 ---@param materialName string
 ---@param lastLOD integer
 ---@return nil
@@ -102,7 +102,7 @@ function ObjectRenderingTable.SetMaterialLastLOD(objectID, materialName, lastLOD
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L488-L496" target="_blank">source</a>]
 ---
----@param objectID integer
+---@param objectID ObjectID
 ---@param lodLevel integer
 ---@param materialName string
 ---@param displayListTable table
@@ -111,28 +111,28 @@ function ObjectRenderingTable.SetMaterialDisplayLists(objectID, lodLevel, materi
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L585-L589" target="_blank">source</a>]
 ---
----@param objectID integer
+---@param objectID ObjectID
 ---@param ... any uniform values
 ---@return nil
 function ObjectRenderingTable.SetDeferredMaterialUniform(objectID, ...) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L591-L595" target="_blank">source</a>]
 ---
----@param objectID integer
+---@param objectID ObjectID
 ---@param ... any uniform values
 ---@return nil
 function ObjectRenderingTable.SetForwardMaterialUniform(objectID, ...) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L634-L638" target="_blank">source</a>]
 ---
----@param objectID integer
+---@param objectID ObjectID
 ---@param ... any uniform indices
 ---@return nil
 function ObjectRenderingTable.ClearDeferredMaterialUniform(objectID, ...) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L640-L644" target="_blank">source</a>]
 ---
----@param objectID integer
+---@param objectID ObjectID
 ---@param ... any uniform indices
 ---@return nil
 function ObjectRenderingTable.ClearForwardMaterialUniform(objectID, ...) end
@@ -141,7 +141,7 @@ function ObjectRenderingTable.ClearForwardMaterialUniform(objectID, ...) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L666-L672" target="_blank">source</a>]
 ---
----@param unitID integer
+---@param unitID UnitID
 ---@param enable boolean
 ---@return nil
 function ObjectRenderingTable.SetUnitLuaDraw(unitID, enable) end
@@ -150,7 +150,7 @@ function ObjectRenderingTable.SetUnitLuaDraw(unitID, enable) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L679-L685" target="_blank">source</a>]
 ---
----@param featureID integer
+---@param featureID FeatureID
 ---@param enable boolean
 ---@return nil
 function ObjectRenderingTable.SetFeatureLuaDraw(featureID, enable) end
@@ -159,7 +159,7 @@ function ObjectRenderingTable.SetFeatureLuaDraw(featureID, enable) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L692-L698" target="_blank">source</a>]
 ---
----@param projectileID integer
+---@param projectileID ProjectileID
 ---@param enable boolean
 ---@return nil
 function ObjectRenderingTable.SetProjectileLuaDraw(projectileID, enable) end
@@ -168,6 +168,6 @@ function ObjectRenderingTable.SetProjectileLuaDraw(projectileID, enable) end
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaObjectRendering.cpp#L730-L735" target="_blank">source</a>]
 ---
----@param objectID integer
+---@param objectID ObjectID
 ---@return nil
 function ObjectRenderingTable.Debug(objectID) end

@@ -30,7 +30,7 @@ Platform.gpuVendor = nil
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L27-L27" target="_blank">source</a>]
 ---Size of total GPU memory in MBs; only available for "Nvidia", (rest are 0)
 ---
----@type number
+---@type integer
 Platform.gpuMemorySize = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L29-L29" target="_blank">source</a>]
@@ -82,27 +82,27 @@ Platform.gladVersion = nil
 Platform.glewVersion = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L51-L51" target="_blank">source</a>]
----@type number
+---@type integer
 Platform.sdlVersionCompiledMajor = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L53-L53" target="_blank">source</a>]
----@type number
+---@type integer
 Platform.sdlVersionCompiledMinor = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L55-L55" target="_blank">source</a>]
----@type number
+---@type integer
 Platform.sdlVersionCompiledPatch = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L57-L57" target="_blank">source</a>]
----@type number
+---@type integer
 Platform.sdlVersionLinkedMajor = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L59-L59" target="_blank">source</a>]
----@type number
+---@type integer
 Platform.sdlVersionLinkedMinor = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L61-L61" target="_blank">source</a>]
----@type number
+---@type integer
 Platform.sdlVersionLinkedPatch = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L64-L64" target="_blank">source</a>]
@@ -123,11 +123,11 @@ PlatformVideoMode.display = nil
 PlatformVideoMode.displayName = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L80-L80" target="_blank">source</a>]
----@type number
+---@type integer
 PlatformVideoMode.w = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L82-L82" target="_blank">source</a>]
----@type number
+---@type integer
 PlatformVideoMode.h = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L84-L84" target="_blank">source</a>]
@@ -135,7 +135,7 @@ PlatformVideoMode.h = nil
 PlatformVideoMode.bpp = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L86-L86" target="_blank">source</a>]
----@type number
+---@type integer
 PlatformVideoMode.hz = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L93-L93" target="_blank">source</a>]
@@ -175,7 +175,7 @@ Platform.glHaveGLSL = nil
 Platform.glHaveGL4 = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L115-L115" target="_blank">source</a>]
----@type number
+---@type integer
 Platform.glSupportDepthBufferBitDepth = nil
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaConstPlatform.cpp#L118-L118" target="_blank">source</a>]

@@ -85,7 +85,7 @@ function gl.DeleteFBO(fbo) end
 ---@param fbo FBO
 ---@param target GL?
 ---@return boolean valid
----@return number? status
+---@return GL? status
 function gl.IsValidFBO(fbo, target) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L602-L607" target="_blank">source</a>]
@@ -117,23 +117,23 @@ function gl.RawBindFBO(fbo, target, rawFboId) end
 ---
 ---@param fbo FBO
 ---@param target GL? (Default: `fbo.target`)
----@return number previouslyBoundRawFboId
+---@return integer previouslyBoundRawFboId
 function gl.RawBindFBO(fbo, target) end
 
 ---needs `GLAD_GL_EXT_framebuffer_blit`
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L720-L733" target="_blank">source</a>]
 ---
----@param x0Src number
----@param y0Src number
----@param x1Src number
----@param y1Src number
----@param x0Dst number
----@param y0Dst number
----@param x1Dst number
----@param y1Dst number
----@param mask number? (Default: GL_COLOR_BUFFER_BIT)
----@param filter number? (Default: GL_NEAREST)
+---@param x0Src integer
+---@param y0Src integer
+---@param x1Src integer
+---@param y1Src integer
+---@param x0Dst integer
+---@param y0Dst integer
+---@param x1Dst integer
+---@param y1Dst integer
+---@param mask GL? (Default: GL_COLOR_BUFFER_BIT)
+---@param filter GL? (Default: GL_NEAREST)
 function gl.BlitFBO(x0Src, y0Src, x1Src, y1Src, x0Dst, y0Dst, x1Dst, y1Dst, mask, filter) end
 
 ---needs `GLAD_GL_EXT_framebuffer_blit`
@@ -141,17 +141,17 @@ function gl.BlitFBO(x0Src, y0Src, x1Src, y1Src, x0Dst, y0Dst, x1Dst, y1Dst, mask
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L734-L749" target="_blank">source</a>]
 ---
 ---@param fboSrc FBO
----@param x0Src number
----@param y0Src number
----@param x1Src number
----@param y1Src number
+---@param x0Src integer
+---@param y0Src integer
+---@param x1Src integer
+---@param y1Src integer
 ---@param fboDst FBO
----@param x0Dst number
----@param y0Dst number
----@param x1Dst number
----@param y1Dst number
----@param mask number? (Default: GL_COLOR_BUFFER_BIT)
----@param filter number? (Default: GL_NEAREST)
+---@param x0Dst integer
+---@param y0Dst integer
+---@param x1Dst integer
+---@param y1Dst integer
+---@param mask GL? (Default: GL_COLOR_BUFFER_BIT)
+---@param filter GL? (Default: GL_NEAREST)
 function gl.BlitFBO(fboSrc, x0Src, y0Src, x1Src, y1Src, fboDst, x0Dst, y0Dst, x1Dst, y1Dst, mask, filter) end
 
 ---needs `Platform.glVersionNum >= 30`
@@ -159,7 +159,7 @@ function gl.BlitFBO(fboSrc, x0Src, y0Src, x1Src, y1Src, fboDst, x0Dst, y0Dst, x1
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaFBOs.cpp#L819-L830" target="_blank">source</a>]
 ---
----@param target number? (Default: `GL.FRAMEBUFFER`)
+---@param target GL? (Default: `GL.FRAMEBUFFER`)
 ---@param attachment GL|Attachment (e.g. `"color0"` or `GL.COLOR_ATTACHMENT0`)
 ---@param clearValue0 number? (Default: `0`)
 ---@param clearValue1 number? (Default: `0`)
