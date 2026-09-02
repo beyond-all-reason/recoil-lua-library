@@ -34,7 +34,7 @@
 ---
 ---@param x number
 ---@param y number
----@return number `sqrt(x*x+y*y)`
+---@return number hypotenuse `sqrt(x*x+y*y)`
 function math.hypot(x, y) end
 
 ---Returns the length of the diagonal of an n-dimensional box (or the length of
@@ -73,7 +73,7 @@ function math.sgn(x) end
 ---@param x number
 ---@param y number
 ---@param a number
----@return number (x+(y-x)*a)
+---@return number mixed (x+(y-x)*a)
 function math.mix(x, y, a) end
 
 ---Returns x rounded to n decimals, if n is omitted or <=0, rounds to nearest

@@ -1421,25 +1421,25 @@ function gl.PushPopMatrix(func, ...) end
 ---
 ---@param type GL Matrix type (`GL.PROJECTION`, `GL.MODELVIEW`, `GL.TEXTURE`).
 ---@param index integer Matrix index in range `[1, 16]`.
----@return number The value.
+---@return number value The value at the given index.
 function gl.GetMatrixData(type, index) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L5819-L5823" target="_blank">source</a>]
 ---
 ---@param type GL Matrix type (`GL.PROJECTION`, `GL.MODELVIEW`, `GL.TEXTURE`).
----@return Matrix4x4 The matrix.
+---@return Matrix4x4
 function gl.GetMatrixData(type) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L5824-L5828" target="_blank">source</a>]
 ---
 ---@param index integer Matrix index in range `[1, 16]`.
----@return number The value.
+---@return number value The value at the given index.
 function gl.GetMatrixData(index) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L5829-L5833" target="_blank">source</a>]
 ---
----@param name MatrixName The matrix name.
----@return Matrix4x4 The matrix.
+---@param name MatrixName
+---@return Matrix4x4
 function gl.GetMatrixData(name) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L5896-L5899" target="_blank">source</a>]
@@ -1505,7 +1505,7 @@ function gl.Finish() end
 ---@param w 1
 ---@param h 1
 ---@param format GL? (Default: `GL.RGBA`)
----@return number ... Color values (color size based on format).
+---@return number ... Color value (color size based on format).
 function gl.ReadPixels(x, y, w, h, format) end
 
 ---Get column of pixels.
@@ -1517,7 +1517,7 @@ function gl.ReadPixels(x, y, w, h, format) end
 ---@param w 1
 ---@param h integer
 ---@param format GL? (Default: `GL.RGBA`)
----@return number[][] Column of color values (color size based on format).
+---@return number[][] colors Column of color values (color size based on format).
 function gl.ReadPixels(x, y, w, h, format) end
 
 ---Get row of pixels.
@@ -1529,10 +1529,10 @@ function gl.ReadPixels(x, y, w, h, format) end
 ---@param w integer
 ---@param h 1
 ---@param format GL? (Default: `GL.RGBA`)
----@return number[][] Row of color values (color size based on format).
+---@return number[][] colors Row of color values (color size based on format).
 function gl.ReadPixels(x, y, w, h, format) end
 
----Get row of pixels.
+---Get columns of pixels.
 ---
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L6450-L6459" target="_blank">source</a>]
 ---
@@ -1541,7 +1541,7 @@ function gl.ReadPixels(x, y, w, h, format) end
 ---@param w integer
 ---@param h integer
 ---@param format GL? (Default: `GL.RGBA`)
----@return number[][][] Array of columns of color values (color size based on format).
+---@return number[][][] colors Array of columns of color values (color size based on format).
 function gl.ReadPixels(x, y, w, h, format) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L6531-L6538" target="_blank">source</a>]
@@ -1588,7 +1588,7 @@ function gl.GetQuery(query) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L6741-L6744" target="_blank">source</a>]
 ---
----@return string[] List of texture names.
+---@return string[] texNames List of texture names.
 function gl.GetGlobalTexNames() end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L6760-L6766" target="_blank">source</a>]

@@ -336,7 +336,7 @@ function Spring.GetTeamStartPosition(teamID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L1607-L1611" target="_blank">source</a>]
 ---
----@return float3[] array of positions indexed by teamID
+---@return float3[] startPositions array of positions indexed by teamID
 function Spring.GetMapStartPositions() end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L1633-L1637" target="_blank">source</a>]
@@ -364,7 +364,7 @@ function Spring.GetTeamList(allyTeamID) end
 ---
 ---@param teamID TeamID? (Default: `-1`) to filter by when >= 0
 ---@param active boolean? (Default: `false`) whether to filter only active teams
----@return PlayerID[]? list of playerIDs
+---@return PlayerID[]? playerIDs List of playerIDs.
 function Spring.GetPlayerList(teamID, active) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L1754-L1767" target="_blank">source</a>]
@@ -477,7 +477,7 @@ function Spring.GetTeamStatsHistory(teamID) end
 ---@param teamID TeamID
 ---@param startIndex integer
 ---@param endIndex integer? (Default: startIndex)
----@return TeamStats[] The team stats history, or `nil` if unable to resolve team.
+---@return TeamStats[] teamStatsHistory The team stats history, or `nil` if unable to resolve team.
 function Spring.GetTeamStatsHistory(teamID, startIndex, endIndex) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L2124-L2129" target="_blank">source</a>]
@@ -1024,8 +1024,8 @@ function Spring.GetUnitResources(unitID) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L4279-L4284" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
----@return number Unit's metal storage
----@return number Unit's energy storage
+---@return number metalStorage Unit's metal storage
+---@return number energyStorage Unit's energy storage
 function Spring.GetUnitStorage(unitID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L4297-L4303" target="_blank">source</a>]
@@ -1694,7 +1694,7 @@ function Spring.GetUnitCommands(unitID, count) end
 ---@deprecated This overload is deprecated, use `Spring.GetUnitCommandCount(unitId)` instead.
 ---@param unitID UnitID
 ---@param count 0 Returns the number of commands in the units queue.
----@return integer The number of commands in the unit queue.
+---@return integer cmdCount The number of commands in the unit queue.
 function Spring.GetUnitCommands(unitID, count) end
 
 ---Get the number or list of commands for a factory
@@ -1715,7 +1715,7 @@ function Spring.GetFactoryCommands(unitID, count) end
 ---@deprecated This overload is deprecated, use `Spring.GetFactoryCommandCount(unitId)` instead.
 ---@param unitID UnitID
 ---@param count 0 Returns the number of commands in the factory queue.
----@return integer The number of commands in the factory queue.
+---@return integer cmdCount The number of commands in the factory queue.
 ---@see Spring.GetFactoryCommandCount for replacement function.
 function Spring.GetFactoryCommands(unitID, count) end
 
@@ -1724,7 +1724,7 @@ function Spring.GetFactoryCommands(unitID, count) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L6497-L6502" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
----@return integer The number of commands in the unit's queue.
+---@return integer cmdCount The number of commands in the unit's queue.
 function Spring.GetUnitCommandCount(unitID) end
 
 ---Get the number of commands in a factory queue.
@@ -1732,7 +1732,7 @@ function Spring.GetUnitCommandCount(unitID) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L6520-L6528" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
----@return integer The number of commands in the factory queue.
+---@return integer cmdCount The number of commands in the factory queue.
 ---@see Spring.GetFactoryCommands to get the factory commands.
 ---@see Spring.GetFactoryCounts to get command counts grouped by cmdID.
 function Spring.GetFactoryCommandCount(unitID) end
@@ -1963,8 +1963,8 @@ function Spring.GetFeatureResurrect(featureID) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L7260-L7266" target="_blank">source</a>]
 ---
 ---@param featureID FeatureID
----@return string|""|nil Last hit piece name
----@return integer? frame it was last hit on, nil when featureID is not valid
+---@return string|""|nil pieceName Last hit piece name
+---@return integer? frame frame it was last hit on, `nil` when featureID is not valid
 function Spring.GetFeatureLastAttackedPiece(featureID) end
 
 ---Parameters related to a collision volume.
@@ -2647,7 +2647,7 @@ function Spring.GetUnitScriptPiece(unitID, scriptPiece) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedRead.cpp#L9154-L9161" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
----@return table<string, integer> where keys are piece names and values are piece indices
+---@return table<string, integer> pieceInfos where keys are piece names and values are piece indices
 function Spring.GetUnitScriptNames(unitID) end
 
 ---Traces a ray from a position in a direction

@@ -138,7 +138,7 @@ function VBO:Download(attributeIndex, elementOffset, elementCount, forceGPURead)
 ---
 ---Also fills in VBO definition data as they're set for engine models (no need to do VBO:Define()).
 ---
----@return integer? buffer size in bytes
+---@return integer? size buffer size in bytes
 function VBO:ModelsVBO() end
 
 ---Fills in attribute data for each specified unitDefID
@@ -247,7 +247,7 @@ function VBO:InstanceDataFromFeatureIDs(featureIDs, attrID, teamIdOpt, elementOf
 ---@param attrID integer
 ---@param teamIdOpt integer?
 ---@param elementOffset integer?
----@return number[] matDataVec 4x4 matrix
+---@return number[] matDataVec Flattened 4x4 matrix(es)
 ---@return integer elemOffset
 ---@return integer|[integer, integer, integer, integer] attrID
 function VBO:MatrixDataFromProjectileIDs(projectileIDs, attrID, teamIdOpt, elementOffset) end

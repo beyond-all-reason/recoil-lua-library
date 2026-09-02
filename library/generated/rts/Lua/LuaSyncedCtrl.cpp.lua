@@ -67,7 +67,7 @@ function Spring.AssignPlayerToTeam(playerID, teamID) end
 ---@param x number left position (elmos)
 ---@param y number vertical position (elmos)
 ---@param z number top position (elmos)
----@return boolean true if the position was set, false if the teamID is invalid
+---@return boolean success true if the position was set, false if the teamID is invalid
 function Spring.SetTeamStartPosition(teamID, x, y, z) end
 
 ---Set the ready state of a player.
@@ -78,7 +78,7 @@ function Spring.SetTeamStartPosition(teamID, x, y, z) end
 ---
 ---@param playerID PlayerID
 ---@param ready boolean
----@return boolean true if the state was set, false if the playerID was invalid
+---@return boolean success true if the state was set, false if the playerID was invalid
 function Spring.SetPlayerReadyState(playerID, ready) end
 
 ---Changes access to global line of sight for a team and its allies.
@@ -133,7 +133,7 @@ function Spring.KillTeam(teamID) end
 ---
 ---Pass multiple winners to declare a draw.
 ---Pass no arguments if undecided (e.g. when dropped from the host).
----@return integer Number of accepted (valid) ally teams.
+---@return integer teams Number of accepted (valid) ally teams.
 function Spring.GameOver(winningAllyTeamIDs) end
 
 ---Resources
@@ -845,7 +845,7 @@ function Spring.SetUnitPhysicalStateBit(unitID, Physical) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3546-L3550" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
----@return integer Unit's PhysicalState bitmask
+---@return integer physicalState Unit's PhysicalState bitmask
 function Spring.GetUnitPhysicalState(unitID) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3569-L3576" target="_blank">source</a>]
@@ -930,7 +930,7 @@ function Spring.SetUnitPieceParent(unitID, AlteredPiece, ParentPiece) end
 ---@param unitID UnitID
 ---@param pieceNum integer
 ---@param matrix number[] an array of 16 floats
----@return boolean? valid - if the matrix can be used for the purpose of defining the piece spatial transformation. Blocks the piece animation, if true.
+---@return boolean? valid whether the matrix can be used for the purpose of defining the piece spatial transformation. Blocks the piece animation, if true.
 function Spring.SetUnitPieceMatrix(unitID, pieceNum, matrix) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L3834-L3867" target="_blank">source</a>]
@@ -996,7 +996,7 @@ function Spring.SetUnitPieceVisible(unitID, pieceIndex, visible) end
 ---@param unitID UnitID
 ---@param type "los"|"airLos"|"radar"|"sonar"|"seismic"|"radarJammer"|"sonarJammer"
 ---@param radius integer
----@return integer? New radius, or `nil` if unit is invalid.
+---@return integer? newRadius New radius, or `nil` if unit is invalid.
 function Spring.SetUnitSensorRadius(unitID, type, radius) end
 
 ---Sets a unit's radar wobble
@@ -1659,7 +1659,7 @@ function Spring.SetFeaturePieceVisible(featureID, pieceIndex, visible) end
 ---@param featureID FeatureID
 ---@param pieceIndex integer
 ---@param matrix number[] an array of 16 floats
----@return boolean? valid - if the matrix can be used for the purpose of defining the piece spatial transformation
+---@return boolean? valid whether the matrix can be used for the purpose of defining the piece spatial transformation
 function Spring.SetFeaturePieceMatrix(featureID, pieceIndex, matrix) end
 
 ---Set the fire timer for a feature.
@@ -2221,7 +2221,7 @@ function Spring.AddSmoothMesh(x, z, height) end
 ---@param z number
 ---@param height number
 ---@param terraform number? (Default: `1`)
----@return number? The absolute height difference, or `nil` if coordinates are invalid.
+---@return number? heightDifference The absolute height difference, or `nil` if coordinates are invalid.
 function Spring.SetSmoothMesh(x, z, height, terraform) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaSyncedCtrl.cpp#L7074-L7080" target="_blank">source</a>]

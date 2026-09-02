@@ -1802,5 +1802,5 @@ function Spring.SetClipboard(text) end
 ---  loadWupget(wupget)
 ---  wantYield = wantYield and Spring.Yield()
 ---end
----@return boolean when true caller should continue calling `Spring.Yield` during the widgets/gadgets load, when false it shouldn't call it any longer.
+---@return boolean continueYielding when true caller should continue calling `Spring.Yield` during the widgets/gadgets load, when false it shouldn't call it any longer.
 function Spring.Yield() end

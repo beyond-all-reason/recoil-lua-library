@@ -101,7 +101,7 @@ local SyncedCallins = {}
 ---@param cmdParams number[]
 ---@param cmdOptions CommandOptions
 ---@param cmdTag integer
----@return boolean whether to remove the command from the queue
+---@return boolean removeCmd whether to remove the command from the queue
 function SyncedCallins:CommandFallback(unitID, unitDefID, unitTeam, cmdID, cmdParams, cmdOptions, cmdTag) end
 
 ---Called when the command is given, before the unit's queue is altered.
@@ -119,12 +119,12 @@ function SyncedCallins:CommandFallback(unitID, unitDefID, unitTeam, cmdID, cmdPa
 ---@param cmdTag integer
 ---@param synced boolean
 ---@param fromLua boolean
----@return boolean whether it should be let into the queue.
+---@return boolean allowCmd whether it should be let into the queue.
 function SyncedCallins:AllowCommand(unitID, unitDefID, unitTeam, cmdID, cmdParams, cmdOptions, cmdTag, synced, fromLua) end
 
 ---Called just before unit is created.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L650-L661" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L650-L662" target="_blank">source</a>]
 ---
 ---@param unitDefID UnitDefID
 ---@param builderID UnitID
@@ -133,44 +133,45 @@ function SyncedCallins:AllowCommand(unitID, unitDefID, unitTeam, cmdID, cmdParam
 ---@param y number
 ---@param z number
 ---@param facing FacingInteger
----@return boolean allow, boolean dropOrder
+---@return boolean allow
+---@return boolean dropOrder
 function SyncedCallins:AllowUnitCreation(unitDefID, builderID, builderTeam, x, y, z, facing) end
 
 ---Called just before a unit is transferred to a different team.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L697-L706" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L698-L707" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param oldTeam TeamID
 ---@param newTeam TeamID
 ---@param capture boolean
----@return boolean whether or not the transfer is permitted.
+---@return boolean allow whether or not the transfer is permitted.
 function SyncedCallins:AllowUnitTransfer(unitID, unitDefID, oldTeam, newTeam, capture) end
 
 ---Called just before a unit progresses its build percentage.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L734-L743" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L735-L744" target="_blank">source</a>]
 ---
 ---@param builderID UnitID
 ---@param builderTeam TeamID
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param part number
----@return boolean whether or not the build makes progress.
+---@return boolean allow whether or not the build makes progress.
 function SyncedCallins:AllowUnitBuildStep(builderID, builderTeam, unitID, unitDefID, part) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L771-L780" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L772-L781" target="_blank">source</a>]
 ---
 ---@param builderID UnitID
 ---@param builderTeam TeamID
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param part number
----@return boolean whether or not the capture makes progress.
+---@return boolean allow whether or not the capture makes progress.
 function SyncedCallins:AllowUnitCaptureStep(builderID, builderTeam, unitID, unitDefID, part) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L808-L818" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L809-L819" target="_blank">source</a>]
 ---
 ---@param transporterID UnitID
 ---@param transporterUnitDefID UnitDefID
@@ -178,10 +179,10 @@ function SyncedCallins:AllowUnitCaptureStep(builderID, builderTeam, unitID, unit
 ---@param transporteeID UnitID
 ---@param transporteeUnitDefID UnitDefID
 ---@param transporteeTeam TeamID
----@return boolean whether or not the transport is allowed
+---@return boolean allow whether or not the transport is allowed
 function SyncedCallins:AllowUnitTransport(transporterID, transporterUnitDefID, transporterTeam, transporteeID, transporteeUnitDefID, transporteeTeam) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L846-L859" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L847-L860" target="_blank">source</a>]
 ---
 ---@param transporterID UnitID
 ---@param transporterUnitDefID UnitDefID
@@ -192,10 +193,10 @@ function SyncedCallins:AllowUnitTransport(transporterID, transporterUnitDefID, t
 ---@param x number
 ---@param y number
 ---@param z number
----@return boolean whether or not the transport load is allowed
+---@return boolean allow whether or not the transport load is allowed
 function SyncedCallins:AllowUnitTransportLoad(transporterID, transporterUnitDefID, transporterTeam, transporteeID, transporteeUnitDefID, transporteeTeam, x, y, z) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L896-L909" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L897-L910" target="_blank">source</a>]
 ---
 ---@param transporterID UnitID
 ---@param transporterUnitDefID UnitDefID
@@ -206,46 +207,46 @@ function SyncedCallins:AllowUnitTransportLoad(transporterID, transporterUnitDefI
 ---@param x number
 ---@param y number
 ---@param z number
----@return boolean whether or not the transport unload is allowed
+---@return boolean allow whether or not the transport unload is allowed
 function SyncedCallins:AllowUnitTransportUnload(transporterID, transporterUnitDefID, transporterTeam, transporteeID, transporteeUnitDefID, transporteeTeam, x, y, z) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L944-L950" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L945-L951" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param enemyID UnitID?
----@return boolean whether unit is allowed to cloak
+---@return boolean allow whether unit is allowed to cloak
 function SyncedCallins:AllowUnitCloak(unitID, enemyID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L980-L987" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L981-L988" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param objectID ObjectID?
 ---@param weaponNum integer?
----@return boolean whether unit is allowed to decloak
+---@return boolean allow whether unit is allowed to decloak
 function SyncedCallins:AllowUnitDecloak(unitID, objectID, weaponNum) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1024-L1030" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1025-L1031" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param targetID UnitID
----@return boolean whether unit is allowed to selfd
+---@return boolean allow whether unit is allowed to selfd
 function SyncedCallins:AllowUnitKamikaze(unitID, targetID) end
 
 ---Called just before feature is created.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1054-L1063" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1055-L1064" target="_blank">source</a>]
 ---
 ---@param featureDefID FeatureDefID
 ---@param teamID TeamID
 ---@param x number
 ---@param y number
 ---@param z number
----@return boolean whether or not the creation is permitted
+---@return boolean allow whether or not the creation is permitted
 function SyncedCallins:AllowFeatureCreation(featureDefID, teamID, x, y, z) end
 
 ---Called just before a feature changes its build percentage.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1091-L1108" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1092-L1109" target="_blank">source</a>]
 ---
 ---Note that this is also called for resurrecting features, and for refilling features with resources before resurrection.
 ---On reclaim the part values are negative, and on refill and resurrect they are positive.
@@ -258,42 +259,42 @@ function SyncedCallins:AllowFeatureCreation(featureDefID, teamID, x, y, z) end
 ---@param featureID FeatureID
 ---@param featureDefID FeatureDefID
 ---@param part number
----@return boolean whether or not the change is permitted
+---@return boolean allow whether or not the change is permitted
 function SyncedCallins:AllowFeatureBuildStep(builderID, builderTeam, featureID, featureDefID, part) end
 
 ---Called when a team sets the sharing level of a resource.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1136-L1143" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1137-L1144" target="_blank">source</a>]
 ---
 ---@param teamID TeamID
 ---@param res string
 ---@param level number
----@return boolean whether or not the sharing level is permitted
+---@return boolean allow whether or not the sharing level is permitted
 function SyncedCallins:AllowResourceLevel(teamID, res, level) end
 
 ---Called just before resources are transferred between players.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1169-L1177" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1170-L1178" target="_blank">source</a>]
 ---
 ---@param oldTeamID TeamID
 ---@param newTeamID TeamID
 ---@param res string
 ---@param amount number
----@return boolean whether or not the transfer is permitted.
+---@return boolean allow whether or not the transfer is permitted.
 function SyncedCallins:AllowResourceTransfer(oldTeamID, newTeamID, res, amount) end
 
 ---Called when excess resources are added.
 ---Accumulates all excesses within a single gameframe.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1203-L1209" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1204-L1210" target="_blank">source</a>]
 ---
 ---@param excesses table
----@return boolean whether or not Lua handled the event
+---@return boolean handled whether or not Lua handled the event
 function SyncedCallins:ResourceExcess(excesses) end
 
 ---Determines if this unit can be controlled directly in FPS view.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1240-L1248" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1241-L1249" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
@@ -304,7 +305,7 @@ function SyncedCallins:AllowDirectUnitControl(unitID, unitDefID, unitTeam, playe
 
 ---Called when a construction unit wants to "use his nano beams".
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1275-L1292" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1276-L1293" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
@@ -322,7 +323,7 @@ function SyncedCallins:AllowBuilderHoldFire(unitID, unitDefID, action) end
 
 ---Whether a start position should be allowed
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1318-L1343" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1319-L1344" target="_blank">source</a>]
 ---
 ---clamped{X,Y,Z} are the coordinates clamped into start-boxes, raw is where player tried to place their marker.
 ---
@@ -348,18 +349,18 @@ function SyncedCallins:AllowStartPosition(playerID, teamID, readyState, clampedX
 
 ---Enable both Spring.MoveCtrl.SetCollideStop and Spring.MoveCtrl.SetTrackGround to enable this call-in.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1376-L1386" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1377-L1387" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
 ---@param data integer was supposed to indicate the type of notification but currently never has a value other than 1 ("unit hit the ground").
----@return boolean whether or not the unit should remain script-controlled (false) or return to engine controlled movement (true).
+---@return boolean engineControl whether or not the unit should remain script-controlled (false) or return to engine controlled movement (true).
 function SyncedCallins:MoveCtrlNotify(unitID, unitDefID, unitTeam, data) end
 
 ---Called when pre-building terrain levelling terraforms are completed (c.f. levelGround)
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1414-L1424" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1415-L1425" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
@@ -367,7 +368,7 @@ function SyncedCallins:MoveCtrlNotify(unitID, unitDefID, unitTeam, data) end
 ---@param buildUnitID UnitID
 ---@param buildUnitDefID UnitDefID
 ---@param buildUnitTeam TeamID
----@return boolean if true the current build order is terminated
+---@return boolean stop if true the current build order is terminated
 function SyncedCallins:TerraformComplete(unitID, unitDefID, unitTeam, buildUnitID, buildUnitDefID, buildUnitTeam) end
 
 ---Damage Controllers
@@ -382,11 +383,11 @@ function SyncedCallins:TerraformComplete(unitID, unitDefID, unitTeam, buildUnitI
 ---    -6 - kill damage
 ---    -7 - crush damage
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1458-L1470" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1459-L1471" target="_blank">source</a>]
 
 ---Called before damage is applied to the unit, allows fine control over how much damage and impulse is applied.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1472-L1494" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1473-L1496" target="_blank">source</a>]
 ---
 ---Called after every damage modification (even `HitByWeaponId`) but before the damage is applied
 ---
@@ -404,12 +405,13 @@ function SyncedCallins:TerraformComplete(unitID, unitDefID, unitTeam, buildUnitI
 ---@param attackerID UnitID? Synced Only
 ---@param attackerDefID UnitDefID? Synced Only
 ---@param attackerTeam TeamID? Synced Only
----@return number newDamage, number impulseMult
+---@return number newDamage
+---@return number impulseMult
 function SyncedCallins:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, weaponDefID, projectileID, attackerID, attackerDefID, attackerTeam) end
 
 ---Called before damage is applied to the feature.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1568-L1585" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1570-L1587" target="_blank">source</a>]
 ---
 ---Allows fine control over how much damage and impulse is applied.
 ---
@@ -428,7 +430,7 @@ function SyncedCallins:FeaturePreDamaged(featureID, featureDefID, featureTeam, d
 
 ---Called before any engine shield-vs-projectile logic executes.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1651-L1670" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1653-L1672" target="_blank">source</a>]
 ---
 ---@param projectileID ProjectileID `-1` when the weapon type is `BeamLaser` or `LightningCannon`
 ---@param projectileOwnerID UnitID `-1` when the weapon type is `BeamLaser` or `LightningCannon`
@@ -443,12 +445,12 @@ function SyncedCallins:FeaturePreDamaged(featureID, featureDefID, featureTeam, d
 ---@param hitX number
 ---@param hitY number
 ---@param hitZ number
----@return boolean if true the gadget handles the collision event and the engine does not remove the projectile
+---@return boolean handle if true the gadget handles the collision event and the engine does not remove the projectile
 function SyncedCallins:ShieldPreDamaged(projectileID, projectileOwnerID, shieldWeaponNum, shieldCarrierID, bounceProjectile, beamEmitterWeaponNum, beamEmitterUnitID, startX, startY, startZ, hitX, hitY, hitZ) end
 
 ---Determines if this weapon can automatically generate targets itself. See also commandFire weaponDef tag.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1731-L1746" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1733-L1748" target="_blank">source</a>]
 ---
 ---Only called for weaponDefIDs registered via `Script.SetWatchAllowTarget` or `Script.SetWatchWeapon`.
 ---
@@ -463,7 +465,7 @@ function SyncedCallins:AllowWeaponTargetCheck(attackerID, attackerWeaponNum, att
 
 ---Controls blocking of a specific target from being considered during a weapon's periodic auto-targeting sweep.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1778-L1795" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1780-L1797" target="_blank">source</a>]
 ---
 ---Only called for weaponDefIDs registered via `Script.SetWatchAllowTarget` or `Script.SetWatchWeapon`.
 ---
@@ -473,14 +475,14 @@ function SyncedCallins:AllowWeaponTargetCheck(attackerID, attackerWeaponNum, att
 ---@param attackerWeaponDefID WeaponDefID
 ---@param defPriority number
 ---@return boolean allowed
----@return number the new priority for this target (if you don't want to change it, return defPriority). Lower priority targets are targeted first.
+---@return number newPriority The new priority for this target (if you don't want to change it, return defPriority). Lower priority targets are targeted first.
 ---@see Script.SetWatchAllowTarget
 ---@see Script.SetWatchWeapon
 function SyncedCallins:AllowWeaponTarget(attackerID, targetID, attackerWeaponNum, attackerWeaponDefID, defPriority) end
 
 ---Controls blocking of a specific intercept target from being considered during an interceptor weapon's periodic auto-targeting sweep.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1848-L1862" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L1850-L1864" target="_blank">source</a>]
 ---
 ---Only called for weaponDefIDs registered via `Script.SetWatchAllowTarget` or `Script.SetWatchWeapon`.
 ---
@@ -494,7 +496,7 @@ function SyncedCallins:AllowWeaponInterceptTarget(interceptorUnitID, interceptor
 
 ---Invoke `UnsyncedCallins:RecvFromSynced` callin with the given arguments.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2018-L2028" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2020-L2030" target="_blank">source</a>]
 ---
 ---@param ... nil|boolean|number|string|table Arguments. Typically the first argument is the name of a function to call.
 ---
@@ -509,13 +511,13 @@ function SyncedCallins.SendToUnsynced(...) end
 ---
 ---The GetWatch* methods can be used to query the currently registered defIDs.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2180-L2188" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2182-L2190" target="_blank">source</a>]
 ---
 ---@section watch_methods
 
 ---Query whether any callins are registered for a unitDefID.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2190-L2198" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2192-L2200" target="_blank">source</a>]
 ---
 ---@param unitDefID UnitDefID
 ---@return boolean watched Watch status.
@@ -524,7 +526,7 @@ function Script.GetWatchUnit(unitDefID) end
 
 ---Query whether any callins are registered for a featureDefID.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2203-L2211" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2205-L2213" target="_blank">source</a>]
 ---
 ---@param featureDefID FeatureDefID
 ---@return boolean watched `true` if callins are registered, otherwise `false`.
@@ -533,7 +535,7 @@ function Script.GetWatchFeature(featureDefID) end
 
 ---Query whether any callins are registered for a weaponDefID.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2216-L2229" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2218-L2231" target="_blank">source</a>]
 ---
 ---Same as calling:
 ---```lua
@@ -541,13 +543,13 @@ function Script.GetWatchFeature(featureDefID) end
 ---```
 ---
 ---@param weaponDefID WeaponDefID
----@return boolean watched True if watch is enabled for any weaponDefID callins.
+---@return boolean watched `true` if watch is enabled for any weaponDefID callins.
 ---@see Script.SetWatchWeapon
 function Script.GetWatchWeapon(weaponDefID) end
 
 ---Query whether explosion callins are registered for a weaponDefID.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2231-L2239" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2233-L2241" target="_blank">source</a>]
 ---
 ---@param weaponDefID WeaponDefID
 ---@return boolean watched `true` if callins are registered, otherwise `false`.
@@ -556,7 +558,7 @@ function Script.GetWatchExplosion(weaponDefID) end
 
 ---Query whether projectile callins are registered for a weaponDefID.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2245-L2253" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2247-L2255" target="_blank">source</a>]
 ---
 ---@param weaponDefID WeaponDefID
 ---@return boolean watched `true` if callins are registered, otherwise `false`.
@@ -565,7 +567,7 @@ function Script.GetWatchProjectile(weaponDefID) end
 
 ---Query whether weapon targeting callins are registered for a weaponDefID.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2258-L2266" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2260-L2268" target="_blank">source</a>]
 ---
 ---@param weaponDefID WeaponDefID
 ---@return boolean watched `true` if callins are registered, otherwise `false`.
@@ -574,7 +576,7 @@ function Script.GetWatchAllowTarget(weaponDefID) end
 
 ---Register or deregister unitDefID for expensive callins.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2271-L2282" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2273-L2284" target="_blank">source</a>]
 ---
 ---@param unitDefID UnitDefID
 ---@param watch boolean Whether to register or deregister.
@@ -586,7 +588,7 @@ function Script.SetWatchUnit(unitDefID, watch) end
 
 ---Register or deregister featureDefID for expensive callins.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2287-L2296" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2289-L2298" target="_blank">source</a>]
 ---
 ---@param featureDefID FeatureDefID
 ---@param watch boolean Whether to register or deregister.
@@ -596,7 +598,7 @@ function Script.SetWatchFeature(featureDefID, watch) end
 
 ---Register or deregister weaponDefID for all expensive callins.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2301-L2322" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2303-L2324" target="_blank">source</a>]
 ---
 ---Equivalent to calling:
 ---
@@ -618,7 +620,7 @@ function Script.SetWatchWeapon(weaponDefID, watch) end
 
 ---Register or deregister weaponDefID for explosion callins.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2324-L2333" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2326-L2335" target="_blank">source</a>]
 ---
 ---@param weaponDefID WeaponDefID
 ---@param watch boolean Whether to register or deregister.
@@ -628,7 +630,7 @@ function Script.SetWatchExplosion(weaponDefID, watch) end
 
 ---Register or deregister weaponDefID for expensive projectile callins.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2339-L2349" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2341-L2351" target="_blank">source</a>]
 ---
 ---@param weaponDefID WeaponDefID weaponDefID for weapons or -1 to watch for debris.
 ---@param watch boolean Whether to register or deregister.
@@ -639,7 +641,7 @@ function Script.SetWatchProjectile(weaponDefID, watch) end
 
 ---Register or deregister weaponDefID for weapon targeting callins.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2354-L2365" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2356-L2367" target="_blank">source</a>]
 ---
 ---@param weaponDefID WeaponDefID
 ---@param watch boolean Whether to register or deregister.
@@ -649,7 +651,7 @@ function Script.SetWatchProjectile(weaponDefID, watch) end
 ---@see SyncedCallins:AllowWeaponInterceptTarget
 function Script.SetWatchAllowTarget(weaponDefID, watch) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2534-L2540" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2536-L2542" target="_blank">source</a>]
 ---
 ---@class CallAsTeamOptions
 ---@x_helper
@@ -660,7 +662,7 @@ local CallAsTeamOptions = {}
 
 ---Calls a function from given team's PoV. In particular this makes callouts obey that team's visibility rules.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2542-L2549" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2544-L2551" target="_blank">source</a>]
 ---
 ---@param teamID TeamID Team ID.
 ---@param func fun(...) The function to call.
@@ -668,7 +670,7 @@ local CallAsTeamOptions = {}
 ---@return any ... The return values of the function.
 function Spring.CallAsTeam(teamID, func, ...) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2550-L2556" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandleSynced.cpp#L2552-L2558" target="_blank">source</a>]
 ---
 ---@param options CallAsTeamOptions Options.
 ---@param func fun(...) The function to call.
