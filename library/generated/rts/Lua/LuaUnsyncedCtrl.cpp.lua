@@ -552,7 +552,7 @@ function Spring.SetModelLightTrackingState(lightHandle, unitOrProjectileID, enab
 ---
 ---@section console
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2002-L2011" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2002-L2012" target="_blank">source</a>]
 ---
 ---The ID's must refer to valid programs returned by `gl.CreateShader`.
 ---Passing in a value of 0 will cause the respective shader to revert back to its engine default.
@@ -560,10 +560,11 @@ function Spring.SetModelLightTrackingState(lightHandle, unitOrProjectileID, enab
 ---
 ---@param standardShaderID integer
 ---@param deferredShaderID integer
+---@param combinedShader boolean? (Default: `false`) Declares that the deferred program also writes the lit forward color to fragment output 5, with non-zero alpha where ground is opaque (the composite skips zero-alpha pixels). With `AllowCombinedMapRendering` the ground is then rasterized only once (no forward pass, `DrawGroundPreForward` is not called, and on void maps the alpha test reads output 0's alpha); otherwise the flag is ignored and both programs run as before.
 ---@return nil
-function Spring.SetMapShader(standardShaderID, deferredShaderID) end
+function Spring.SetMapShader(standardShaderID, deferredShaderID, combinedShader) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2031-L2036" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2034-L2039" target="_blank">source</a>]
 ---
 ---@param texSqrX integer
 ---@param texSqrY integer
@@ -571,7 +572,7 @@ function Spring.SetMapShader(standardShaderID, deferredShaderID) end
 ---@return boolean success
 function Spring.SetMapSquareTexture(texSqrX, texSqrY, luaTexName) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2128-L2133" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2131-L2136" target="_blank">source</a>]
 ---
 ---@param texType string
 ---@param texName string
@@ -579,7 +580,7 @@ function Spring.SetMapSquareTexture(texSqrX, texSqrY, luaTexName) end
 ---@usage Spring.SetMapShadingTexture("$ssmf_specular", "name_of_my_shiny_texture")
 function Spring.SetMapShadingTexture(texType, texName) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2149-L2152" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2152-L2155" target="_blank">source</a>]
 ---
 ---@param texName string
 ---@return nil
@@ -587,65 +588,65 @@ function Spring.SetSkyBoxTexture(texName) end
 
 ---Unit custom rendering
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2164-L2167" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2167-L2170" target="_blank">source</a>]
 ---
 ---@section unitcustomrendering
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2170-L2176" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2173-L2179" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param noDraw boolean
 ---@return nil
 function Spring.SetUnitNoDraw(unitID, noDraw) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2189-L2195" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2192-L2198" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param drawMask number
 ---@return nil
 function Spring.SetUnitEngineDrawMask(unitID, drawMask) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2208-L2214" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2211-L2217" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param alwaysUpdateMatrix boolean
 ---@return nil
 function Spring.SetUnitAlwaysUpdateMatrix(unitID, alwaysUpdateMatrix) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2227-L2233" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2230-L2236" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param unitNoMinimap boolean
 ---@return nil
 function Spring.SetUnitNoMinimap(unitID, unitNoMinimap) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2245-L2249" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2248-L2252" target="_blank">source</a>]
 ---
 ---@param rotation number amount in radians
 ---@return nil
 function Spring.SetMiniMapRotation(rotation) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2275-L2280" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2278-L2283" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param unitNoGroup boolean Whether unit can be added to selection groups
 function Spring.SetUnitNoGroup(unitID, unitNoGroup) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2297-L2303" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2300-L2306" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param unitNoSelect boolean whether unit can be selected or not
 ---@return nil
 function Spring.SetUnitNoSelect(unitID, unitNoSelect) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2325-L2331" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2328-L2334" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param unitLeaveTracks boolean whether unit leaves tracks on movement
 ---@return nil
 function Spring.SetUnitLeaveTracks(unitID, unitLeaveTracks) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2344-L2358" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2347-L2361" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param scaleX number
@@ -662,25 +663,25 @@ function Spring.SetUnitSelectionVolumeData(unitID, scaleX, scaleY, scaleZ, offse
 
 ---Features
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2370-L2373" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2373-L2376" target="_blank">source</a>]
 ---
 ---@section features
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2376-L2384" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2379-L2387" target="_blank">source</a>]
 ---
 ---@param featureID FeatureID
 ---@param noDraw boolean
 ---@return nil
 function Spring.SetFeatureNoDraw(featureID, noDraw) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2397-L2403" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2400-L2406" target="_blank">source</a>]
 ---
 ---@param featureID FeatureID
 ---@param engineDrawMask number
 ---@return nil
 function Spring.SetFeatureEngineDrawMask(featureID, engineDrawMask) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2416-L2422" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2419-L2425" target="_blank">source</a>]
 ---
 ---@param featureID FeatureID
 ---@param alwaysUpdateMat number
@@ -689,14 +690,14 @@ function Spring.SetFeatureAlwaysUpdateMatrix(featureID, alwaysUpdateMat) end
 
 ---Control whether a feature will fade or not when zoomed out.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2435-L2443" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2438-L2446" target="_blank">source</a>]
 ---
 ---@param featureID FeatureID
 ---@param allow boolean
 ---@return nil
 function Spring.SetFeatureFade(featureID, allow) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2456-L2471" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2459-L2474" target="_blank">source</a>]
 ---
 ---@param featureID FeatureID
 ---@param scaleX number
@@ -713,11 +714,11 @@ function Spring.SetFeatureSelectionVolumeData(featureID, scaleX, scaleY, scaleZ,
 
 ---Unit Icons
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2484-L2487" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2487-L2490" target="_blank">source</a>]
 ---
 ---@section unit_icons
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2490-L2506" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2493-L2509" target="_blank">source</a>]
 ---
 ---@param iconName string
 ---@param texFile string
@@ -732,13 +733,13 @@ function Spring.SetFeatureSelectionVolumeData(featureID, scaleX, scaleY, scaleZ,
 ---@return boolean added
 function Spring.AddUnitIcon(iconName, texFile, size, dist, radAdjust, u0, v0, u1, v1, drawOrder) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2533-L2540" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2536-L2543" target="_blank">source</a>]
 ---
 ---@param iconName string
 ---@return boolean? freed
 function Spring.FreeUnitIcon(iconName) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2551-L2559" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2554-L2562" target="_blank">source</a>]
 ---
 ---Use Spring.SetUnitIconDraw instead.
 ---
@@ -748,28 +749,28 @@ function Spring.FreeUnitIcon(iconName) end
 ---@return nil
 function Spring.UnitIconSetDraw(unitID, drawIcon) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2567-L2573" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2570-L2576" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param drawIcon boolean
 ---@return nil
 function Spring.SetUnitIconDraw(unitID, drawIcon) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2585-L2591" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2588-L2594" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param iconName string? supply nil to reset to the default
 ---@return nil
 function Spring.SetUnitIcon(unitID, iconName) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2620-L2628" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2623-L2631" target="_blank">source</a>]
 ---
 ---@param unitDefID UnitDefID
 ---@param iconName string
 ---@return nil
 function Spring.SetUnitDefIcon(unitDefID, iconName) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2668-L2676" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2671-L2679" target="_blank">source</a>]
 ---
 ---@param unitDefID UnitDefID
 ---@param image string? luaTexture|texFile
@@ -778,19 +779,19 @@ function Spring.SetUnitDefImage(unitDefID, image) end
 
 ---Virtual File System
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2711-L2716" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2714-L2719" target="_blank">source</a>]
 ---
 ---@section vfs
 ---
 ---Prefer using `VFS` whenever possible
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2720-L2725" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2723-L2728" target="_blank">source</a>]
 ---
 ---@param modfile string
 ---@return boolean extracted
 function Spring.ExtractModArchiveFile(modfile) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2784-L2789" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2787-L2792" target="_blank">source</a>]
 ---
 ---@param path string
 ---@return boolean? dirCreated
@@ -798,18 +799,18 @@ function Spring.CreateDir(path) end
 
 ---GUI
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2811-L2814" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2814-L2817" target="_blank">source</a>]
 ---
 ---@section gui
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2862-L2867" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2865-L2870" target="_blank">source</a>]
 ---
 ---@param action string
 ---@param actionExtra string?
 ---@return boolean? commandSet
 function Spring.SetActiveCommand(action, actionExtra) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2869-L2879" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2872-L2882" target="_blank">source</a>]
 ---
 ---@param cmdIndex integer
 ---@param button integer? (Default: `1`)
@@ -822,38 +823,38 @@ function Spring.SetActiveCommand(action, actionExtra) end
 ---@return boolean? commandSet
 function Spring.SetActiveCommand(cmdIndex, button, leftClick, rightClick, alt, ctrl, meta, shift) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2901-L2904" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2904-L2907" target="_blank">source</a>]
 ---
 ---@param config string
 ---@return nil
 function Spring.LoadCmdColorsConfig(config) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2912-L2915" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2915-L2918" target="_blank">source</a>]
 ---
 ---@param config string
 ---@return nil
 function Spring.LoadCtrlPanelConfig(config) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2926-L2928" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2929-L2931" target="_blank">source</a>]
 ---
 ---@return nil
 function Spring.ForceLayoutUpdate() end
 
 ---Disables the "Selected Units x" box in the GUI.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2939-L2944" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2942-L2947" target="_blank">source</a>]
 ---
 ---@param enable boolean
 ---@return nil
 function Spring.SetDrawSelectionInfo(enable) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2954-L2959" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2957-L2962" target="_blank">source</a>]
 ---
 ---@param state boolean
 ---@return nil
 function Spring.SetBoxSelectionByEngine(state) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2968-L2977" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2971-L2980" target="_blank">source</a>]
 ---
 ---@param teamID TeamID
 ---@param r number
@@ -863,7 +864,7 @@ function Spring.SetBoxSelectionByEngine(state) end
 ---@return nil
 function Spring.SetTeamColor(teamID, r, g, b, alpha) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2996-L3004" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L2999-L3007" target="_blank">source</a>]
 ---
 ---@param index integer 0-based index into custom palette (0..1791, maps to palette slots 256..2047)
 ---@param r number
@@ -875,7 +876,7 @@ function Spring.SetCustomPaletteColor(index, r, g, b) end
 ---Sets a custom color for a unit from the palette. Custom assignments are permanent
 ---until explicitly reset by passing nil, and are NOT affected by team changes.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3018-L3025" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3021-L3028" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param customIndex integer? [0..MAX_CUSTOM_COLORS) index into custom palette, or nil to reset to team color
@@ -885,7 +886,7 @@ function Spring.SetUnitPaletteIndex(unitID, customIndex) end
 ---Sets a custom color for a feature from the palette. Custom assignments are permanent
 ---until explicitly reset by passing nil, and are NOT affected by team changes.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3044-L3051" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3047-L3054" target="_blank">source</a>]
 ---
 ---@param featureID FeatureID
 ---@param customIndex integer? [0..MAX_CUSTOM_COLORS) index into custom palette, or nil to reset to team color
@@ -894,7 +895,7 @@ function Spring.SetFeaturePaletteIndex(featureID, customIndex) end
 
 ---Changes/creates the cursor of a single CursorCmd.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3073-L3084" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3076-L3087" target="_blank">source</a>]
 ---
 ---@param cmdName string
 ---@param iconFileName string not the full filename, instead it is like this:
@@ -907,7 +908,7 @@ function Spring.AssignMouseCursor(cmdName, iconFileName, overwrite, hotSpotTopLe
 
 ---Mass replace all occurrences of the cursor in all CursorCmds.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3100-L3107" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3103-L3110" target="_blank">source</a>]
 ---
 ---@param oldFileName string
 ---@param newFileName string
@@ -917,7 +918,7 @@ function Spring.ReplaceMouseCursor(oldFileName, newFileName, hotSpotTopLeft) end
 
 ---Register your custom cmd so it gets visible in the unit's cmd queue
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3125-L3133" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3128-L3136" target="_blank">source</a>]
 ---
 ---@param cmdID integer
 ---@param cmdReference string|integer|nil The name or ID of an icon for command. Pass `nil` to clear draw data for command.
@@ -928,18 +929,18 @@ function Spring.SetCustomCommandDrawData(cmdID, cmdReference, color, showArea) e
 
 ---Mouse
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3166-L3169" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3169-L3172" target="_blank">source</a>]
 ---
 ---@section mouse
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3172-L3176" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3175-L3179" target="_blank">source</a>]
 ---
 ---@param x integer
 ---@param y integer
 ---@return nil
 function Spring.WarpMouse(x, y) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3186-L3190" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3189-L3193" target="_blank">source</a>]
 ---
 ---@param cursorName string
 ---@param cursorScale number? (Default: `1.0`)
@@ -948,11 +949,11 @@ function Spring.SetMouseCursor(cursorName, cursorScale) end
 
 ---LOS Colors
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3202-L3205" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3205-L3208" target="_blank">source</a>]
 ---
 ---@section loscolors
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3207-L3214" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3210-L3217" target="_blank">source</a>]
 ---
 ---@param always rgb
 ---@param LOS rgb
@@ -962,7 +963,7 @@ function Spring.SetMouseCursor(cursorName, cursorScale) end
 ---@return nil
 function Spring.SetLosViewColors(always, LOS, radar, jam, radar2) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3255-L3265" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3258-L3268" target="_blank">source</a>]
 ---
 ---@param rotVal number? (Default: `0`) in degrees
 ---@param rotVel number? (Default: `0`) in degrees
@@ -975,7 +976,7 @@ function Spring.SetNanoProjectileParams(rotVal, rotVel, rotAcc, rotValRng, rotVe
 
 ---Engine Config
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3280-L3286" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3283-L3289" target="_blank">source</a>]
 ---
 ---@section engineconfig
 ---
@@ -983,12 +984,12 @@ function Spring.SetNanoProjectileParams(rotVal, rotVel, rotAcc, rotValRng, rotVe
 
 ---Completely unbinds all key bindings without setting fallback bootstrap keys.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3292-L3297" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3295-L3300" target="_blank">source</a>]
 ---
 ---@return nil
 function Spring.UnbindAll() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3304-L3311" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3307-L3314" target="_blank">source</a>]
 ---
 ---@param name string
 ---@param value integer
@@ -996,7 +997,7 @@ function Spring.UnbindAll() end
 ---@return nil
 function Spring.SetConfigInt(name, value, useOverlay) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3333-L3340" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3336-L3343" target="_blank">source</a>]
 ---
 ---@param name string
 ---@param value number
@@ -1004,7 +1005,7 @@ function Spring.SetConfigInt(name, value, useOverlay) end
 ---@return nil
 function Spring.SetConfigFloat(name, value, useOverlay) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3357-L3364" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3360-L3367" target="_blank">source</a>]
 ---
 ---@param name string
 ---@param value string
@@ -1014,18 +1015,18 @@ function Spring.SetConfigString(name, value, useOverlay) end
 
 ---Closes the application
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3436-L3440" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3439-L3443" target="_blank">source</a>]
 ---
 ---@return nil
 function Spring.Quit() end
 
 ---Unit Group
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3447-L3450" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3450-L3453" target="_blank">source</a>]
 ---
 ---@section unitgroup
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3452-L3458" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3455-L3461" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param groupID GroupID the group number to be assigned, or -1 for deassignment
@@ -1034,13 +1035,13 @@ function Spring.SetUnitGroup(unitID, groupID) end
 
 ---Give Order
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3488-L3491" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3491-L3494" target="_blank">source</a>]
 ---
 ---@section giveorder
 
 ---Give order to selected units.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3548-L3557" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3551-L3560" target="_blank">source</a>]
 ---
 ---@param cmdID CMD|integer The command ID.
 ---@param params CreateCommandParams? Parameters for the given command.
@@ -1051,7 +1052,7 @@ function Spring.GiveOrder(cmdID, params, options, timeout) end
 
 ---Give order to specific unit.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3572-L3582" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3575-L3585" target="_blank">source</a>]
 ---
 ---@param unitID UnitID
 ---@param cmdID CMD|integer The command ID.
@@ -1063,7 +1064,7 @@ function Spring.GiveOrderToUnit(unitID, cmdID, params, options, timeout) end
 
 ---Give order to multiple units, specified by table keys.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3606-L3616" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3609-L3619" target="_blank">source</a>]
 ---
 ---@param unitMap table<UnitID, any> A table with unit IDs as keys.
 ---@param cmdID CMD|integer The command ID.
@@ -1075,7 +1076,7 @@ function Spring.GiveOrderToUnitMap(unitMap, cmdID, params, options, timeout) end
 
 ---Give order to an array of units.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3640-L3650" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3643-L3653" target="_blank">source</a>]
 ---
 ---@param unitIDs UnitID[] Array of unit IDs.
 ---@param cmdID CMD|integer The command ID.
@@ -1085,21 +1086,21 @@ function Spring.GiveOrderToUnitMap(unitMap, cmdID, params, options, timeout) end
 ---@return boolean ordersGiven `true` if any orders were sent, otherwise `false`.
 function Spring.GiveOrderToUnitArray(unitIDs, cmdID, params, options, timeout) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3673-L3679" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3676-L3682" target="_blank">source</a>]
 ---
 ---@param unitID UnitID Unit ID.
 ---@param commands CreateCommand[]
 ---@return boolean ordersGiven `true` if any orders were sent, otherwise `false`.
 function Spring.GiveOrderArrayToUnit(unitID, commands) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3707-L3713" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3710-L3716" target="_blank">source</a>]
 ---
 ---@param unitMap table<UnitID, any> A table with unit IDs as keys.
 ---@param commands CreateCommand[]
 ---@return boolean ordersGiven `true` if any orders were sent, otherwise `false`.
 function Spring.GiveOrderArrayToUnitMap(unitMap, commands) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3741-L3753" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3744-L3756" target="_blank">source</a>]
 ---
 ---@param unitIDs UnitID[] Array of unit IDs.
 ---@param commands CreateCommand[]
@@ -1112,13 +1113,13 @@ function Spring.GiveOrderArrayToUnitMap(unitMap, commands) end
 ---@return boolean ordersGiven `true` if any orders were sent, otherwise `false`.
 function Spring.GiveOrderArrayToUnitArray(unitIDs, commands, pairwise) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3783-L3788" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3786-L3791" target="_blank">source</a>]
 ---
 ---@param spacing integer
 ---@return nil
 function Spring.SetBuildSpacing(spacing) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3798-L3803" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3801-L3806" target="_blank">source</a>]
 ---
 ---@param facing FacingInteger
 ---@return nil
@@ -1126,56 +1127,56 @@ function Spring.SetBuildFacing(facing) end
 
 ---UI
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3813-L3817" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3816-L3820" target="_blank">source</a>]
 ---
 ---@section ui
 ---Very important! (allows synced inter-lua-environment communications)
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3820-L3824" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3823-L3827" target="_blank">source</a>]
 ---
 ---@param message string
 ---@param mode string? "s"/"specs" | "a"/"allies"
 ---@return nil
 function Spring.SendLuaUIMsg(message, mode) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3845-L3848" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3848-L3851" target="_blank">source</a>]
 ---
 ---@param message string
 ---@return nil
 function Spring.SendLuaGaiaMsg(message) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3864-L3867" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3867-L3870" target="_blank">source</a>]
 ---
 ---@param message string
 ---@return nil
 function Spring.SendLuaRulesMsg(message) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3882-L3887" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3885-L3890" target="_blank">source</a>]
 ---
 ---@param msg string
 function Spring.SendLuaMenuMsg(msg) end
 
 ---Sharing
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3897-L3900" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3900-L3903" target="_blank">source</a>]
 ---
 ---@section sharing
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3903-L3910" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3906-L3913" target="_blank">source</a>]
 ---
 ---@param resource string metal | energy
 ---@param shareLevel number
 ---@return nil
 function Spring.SetShareLevel(resource, shareLevel) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3934-L3941" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3937-L3944" target="_blank">source</a>]
 ---
 ---@param teamID TeamID
 ---@param units string
 ---@return nil
 function Spring.ShareResources(teamID, units) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3943-L3951" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3946-L3954" target="_blank">source</a>]
 ---
 ---@param teamID TeamID
 ---@param resource string metal | energy
@@ -1185,11 +1186,11 @@ function Spring.ShareResources(teamID, resource, amount) end
 
 ---UI
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3993-L3996" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3996-L3999" target="_blank">source</a>]
 ---
 ---@section ui
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L3999-L4004" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4002-L4007" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -1199,11 +1200,11 @@ function Spring.SetLastMessagePosition(x, y, z) end
 
 ---Markers
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4016-L4019" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4019-L4022" target="_blank">source</a>]
 ---
 ---@section markers
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4022-L4030" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4025-L4033" target="_blank">source</a>]
 ---
 ---@param x number
 ---@param y number
@@ -1214,7 +1215,7 @@ function Spring.SetLastMessagePosition(x, y, z) end
 ---@return nil
 function Spring.MarkerAddPoint(x, y, z, text, localOnly, playerID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4052-L4062" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4055-L4065" target="_blank">source</a>]
 ---
 ---@param x1 number
 ---@param y1 number
@@ -1227,7 +1228,7 @@ function Spring.MarkerAddPoint(x, y, z, text, localOnly, playerID) end
 ---@return nil
 function Spring.MarkerAddLine(x1, y1, z1, x2, y2, z2, localOnly, playerId) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4086-L4098" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4089-L4101" target="_blank">source</a>]
 ---
 ---Issue an erase command for markers on the map.
 ---
@@ -1243,11 +1244,11 @@ function Spring.MarkerErasePosition(x, y, z, unused, localOnly, playerId, always
 
 ---Sun
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4124-L4127" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4127-L4130" target="_blank">source</a>]
 ---
 ---@section sun
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4129-L4138" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4132-L4141" target="_blank">source</a>]
 ---
 ---@class AtmosphereParams
 ---@x_helper
@@ -1261,12 +1262,12 @@ local AtmosphereParams = {}
 
 ---Set atmosphere parameters
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4140-L4144" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4143-L4147" target="_blank">source</a>]
 ---
 ---@param params AtmosphereParams
 function Spring.SetAtmosphere(params) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4208-L4216" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4211-L4219" target="_blank">source</a>]
 ---
 ---@param dirX number
 ---@param dirY number
@@ -1275,7 +1276,7 @@ function Spring.SetAtmosphere(params) end
 ---@return nil
 function Spring.SetSunDirection(dirX, dirY, dirZ, intensity) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4227-L4245" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4230-L4248" target="_blank">source</a>]
 ---
 ---@class SunLightingParams
 ---The parameter table for sun lighting
@@ -1300,14 +1301,14 @@ local SunLightingParams = {}
 ---Spring.SetSunLighting({groundAmbientColor = {1, 0.1, 1}, groundDiffuseColor = {1, 0.1, 1} })
 ---```
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4247-L4256" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4250-L4259" target="_blank">source</a>]
 ---
 ---@param params SunLightingParams
 function Spring.SetSunLighting(params) end
 
 ---Map rendering params
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4294-L4303" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4297-L4306" target="_blank">source</a>]
 ---
 ---@class MapRenderingParams
 ---@x_helper
@@ -1320,13 +1321,13 @@ local MapRenderingParams = {}
 
 ---Allows to change map rendering params at runtime.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4306-L4311" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4309-L4314" target="_blank">source</a>]
 ---
 ---@param params MapRenderingParams
 ---@return nil
 function Spring.SetMapRenderingParams(params) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4372-L4378" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4375-L4381" target="_blank">source</a>]
 ---
 ---@param normal boolean? (Default: `true`)
 ---@param shadow boolean? (Default: `false`)
@@ -1335,11 +1336,11 @@ function Spring.ForceTesselationUpdate(normal, shadow) end
 
 ---AI
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4404-L4407" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4407-L4410" target="_blank">source</a>]
 ---
 ---@section ai
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4410-L4414" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4413-L4417" target="_blank">source</a>]
 ---
 ---@param aiTeam TeamID
 ---@param message string
@@ -1348,18 +1349,18 @@ function Spring.SendSkirmishAIMessage(aiTeam, message) end
 
 ---Developers
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4438-L4441" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4441-L4444" target="_blank">source</a>]
 ---
 ---@section developers
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4444-L4448" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4447-L4451" target="_blank">source</a>]
 ---
 ---@param sectionName string
 ---@param logLevel ?string|number
 ---@return nil
 function Spring.SetLogSectionFilterLevel(sectionName, logLevel) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4459-L4470" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4462-L4473" target="_blank">source</a>]
 ---
 ---@param itersPerBatch integer?
 ---@param numStepsPerIter integer?
@@ -1372,38 +1373,38 @@ function Spring.SetLogSectionFilterLevel(sectionName, logLevel) end
 ---@return nil
 function Spring.GarbageCollectCtrl(itersPerBatch, numStepsPerIter, minStepsPerIter, maxStepsPerIter, minLoopRunTime, maxLoopRunTime, baseRunTimeMult, baseMemLoadMult) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4491-L4494" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4494-L4497" target="_blank">source</a>]
 ---
 ---@param autoShow boolean
 ---@return nil
 function Spring.SetAutoShowMetal(autoShow) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4502-L4505" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4505-L4508" target="_blank">source</a>]
 ---
 ---@param drawSky boolean
 ---@return nil
 function Spring.SetDrawSky(drawSky) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4513-L4516" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4516-L4519" target="_blank">source</a>]
 ---
 ---@param drawWater boolean
 ---@return nil
 function Spring.SetDrawWater(drawWater) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4524-L4527" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4527-L4530" target="_blank">source</a>]
 ---
 ---@param drawGround boolean
 ---@return nil
 function Spring.SetDrawGround(drawGround) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4535-L4539" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4538-L4542" target="_blank">source</a>]
 ---
 ---@param drawGroundDeferred boolean
 ---@param drawGroundForward boolean? allows disabling of the forward pass
 ---@return nil
 function Spring.SetDrawGroundDeferred(drawGroundDeferred, drawGroundForward) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4552-L4558" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4555-L4561" target="_blank">source</a>]
 ---
 ---@param drawUnitsDeferred boolean
 ---@param drawFeaturesDeferred boolean
@@ -1412,7 +1413,7 @@ function Spring.SetDrawGroundDeferred(drawGroundDeferred, drawGroundForward) end
 ---@return nil
 function Spring.SetDrawModelsDeferred(drawUnitsDeferred, drawFeaturesDeferred, drawUnitsForward, drawFeaturesForward) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4576-L4579" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4579-L4582" target="_blank">source</a>]
 ---
 ---@param enabled boolean
 ---@return nil
@@ -1420,13 +1421,13 @@ function Spring.SetEngineBuildSquareRendering(enabled) end
 
 ---This doesn't actually record the game in any way, it just regulates the framerate and interpolations.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4587-L4592" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4590-L4595" target="_blank">source</a>]
 ---
 ---@param allowCaptureMode boolean
 ---@return nil
 function Spring.SetVideoCapturingMode(allowCaptureMode) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4600-L4603" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4603-L4606" target="_blank">source</a>]
 ---
 ---@param timeOffset boolean
 ---@return nil
@@ -1434,7 +1435,7 @@ function Spring.SetVideoCapturingTimeOffset(timeOffset) end
 
 ---Water params
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4611-L4654" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4614-L4657" target="_blank">source</a>]
 ---
 ---@class WaterParams
 ---@x_helper
@@ -1484,7 +1485,7 @@ local WaterParams = {}
 ---want to set `BumpWaterUseUniforms` in your `springrc` to 1, then you don't even
 ---need to restart `BumpWater` via `/water 4`.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4656-L4666" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4659-L4669" target="_blank">source</a>]
 ---
 ---@param waterParams WaterParams
 ---@return nil
@@ -1492,11 +1493,11 @@ function Spring.SetWaterParams(waterParams) end
 
 ---Preload
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4871-L4874" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4874-L4877" target="_blank">source</a>]
 ---
 ---@section preload
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4877-L4884" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4880-L4887" target="_blank">source</a>]
 ---
 ---Allow the engine to load the unit's model (and texture) in a background thread.
 ---Wreckages and buildOptions of a unit are automatically preloaded.
@@ -1505,19 +1506,19 @@ function Spring.SetWaterParams(waterParams) end
 ---@return nil
 function Spring.PreloadUnitDefModel(unitDefID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4896-L4900" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4899-L4903" target="_blank">source</a>]
 ---
 ---@param featureDefID FeatureDefID
 ---@return nil
 function Spring.PreloadFeatureDefModel(featureDefID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4912-L4916" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4915-L4919" target="_blank">source</a>]
 ---
 ---@param name string
 ---@return nil
 function Spring.PreloadSoundItem(name) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4928-L4932" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4931-L4935" target="_blank">source</a>]
 ---
 ---@param modelName string?
 ---@return boolean? success
@@ -1525,22 +1526,22 @@ function Spring.LoadModelTextures(modelName) end
 
 ---Decals
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4958-L4961" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4961-L4964" target="_blank">source</a>]
 ---
 ---@section decals
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4964-L4968" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4967-L4971" target="_blank">source</a>]
 ---
 ---@return DecalID? decalID
 function Spring.CreateGroundDecal() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4980-L4985" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4983-L4988" target="_blank">source</a>]
 ---
 ---@param decalID DecalID
 ---@return boolean delSuccess
 function Spring.DestroyGroundDecal(decalID) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4993-L5003" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L4996-L5006" target="_blank">source</a>]
 ---
 ---@param decalID DecalID
 ---@param midPosX number? (Default: currMidPosX)
@@ -1551,7 +1552,7 @@ function Spring.DestroyGroundDecal(decalID) end
 ---@return boolean decalSet
 function Spring.SetGroundDecalPosAndDims(decalID, midPosX, midPosZ, sizeX, sizeZ, projCubeHeight) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5037-L5042" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5040-L5045" target="_blank">source</a>]
 ---
 ---@class xz
 ---@x_helper
@@ -1559,7 +1560,7 @@ function Spring.SetGroundDecalPosAndDims(decalID, midPosX, midPosZ, sizeX, sizeZ
 ---@field y number
 local xz = {}
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5043-L5056" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5046-L5059" target="_blank">source</a>]
 ---
 ---Use for non-rectangular decals
 ---
@@ -1572,14 +1573,14 @@ local xz = {}
 ---@return boolean decalSet
 function Spring.SetGroundDecalQuadPosAndHeight(decalID, posTL, posTR, posBR, posBL, projCubeHeight) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5079-L5085" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5082-L5088" target="_blank">source</a>]
 ---
 ---@param decalID DecalID
 ---@param rot number? (Default: random) in radians
 ---@return boolean decalSet
 function Spring.SetGroundDecalRotation(decalID, rot) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5101-L5108" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5104-L5111" target="_blank">source</a>]
 ---
 ---@param decalID DecalID
 ---@param textureName string The texture has to be on the atlas which seems to mean it's defined as an explosion, unit tracks, or building plate decal on some unit already (no arbitrary textures)
@@ -1587,7 +1588,7 @@ function Spring.SetGroundDecalRotation(decalID, rot) end
 ---@return nil|boolean decalSet
 function Spring.SetGroundDecalTexture(decalID, textureName, isMainTex) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5117-L5124" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5120-L5127" target="_blank">source</a>]
 ---
 ---@param decalID DecalID
 ---@param texWrapDistance number? (Default: currTexWrapDistance) if non-zero sets the mode to repeat the texture along the left-right direction of the decal every texWrapFactor elmos
@@ -1595,7 +1596,7 @@ function Spring.SetGroundDecalTexture(decalID, textureName, isMainTex) end
 ---@return nil|boolean decalSet
 function Spring.SetGroundDecalTextureParams(decalID, texWrapDistance, texTraveledDistance) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5141-L5148" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5144-L5151" target="_blank">source</a>]
 ---
 ---@param decalID DecalID
 ---@param alpha number? (Default: currAlpha) Between 0 and 1
@@ -1603,7 +1604,7 @@ function Spring.SetGroundDecalTextureParams(decalID, texWrapDistance, texTravele
 ---@return boolean decalSet
 function Spring.SetGroundDecalAlpha(decalID, alpha, alphaFalloff) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5164-L5174" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5167-L5177" target="_blank">source</a>]
 ---
 ---Sets projection cube normal to orient in 3D space.
 ---In case the normal (0,0,0) then normal is picked from the terrain
@@ -1615,7 +1616,7 @@ function Spring.SetGroundDecalAlpha(decalID, alpha, alphaFalloff) end
 ---@return boolean decalSet
 function Spring.SetGroundDecalNormal(decalID, normalX, normalY, normalZ) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5196-L5207" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5199-L5210" target="_blank">source</a>]
 ---
 ---Sets the tint of the ground decal. Color = 2 * textureColor * tintColor
 ---Respectively a color of (0.5, 0.5, 0.5, 0.5) is effectively no tint
@@ -1628,7 +1629,7 @@ function Spring.SetGroundDecalNormal(decalID, normalX, normalY, normalZ) end
 ---@return boolean decalSet
 function Spring.SetGroundDecalTint(decalID, tintColR, tintColG, tintColB, tintColA) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5228-L5239" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5231-L5242" target="_blank">source</a>]
 ---
 ---Sets varios secondary parameters of a decal
 ---
@@ -1641,7 +1642,7 @@ function Spring.SetGroundDecalTint(decalID, tintColR, tintColG, tintColB, tintCo
 ---@return boolean decalSet
 function Spring.SetGroundDecalMisc(decalID, dotElimExp, refHeight, minHeight, maxHeight, forceHeightMode) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5258-L5268" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5261-L5271" target="_blank">source</a>]
 ---
 ---Use separate min and max for "gradient" style decals such as tank tracks
 ---
@@ -1651,7 +1652,7 @@ function Spring.SetGroundDecalMisc(decalID, dotElimExp, refHeight, minHeight, ma
 ---@return boolean decalSet
 function Spring.SetGroundDecalCreationFrame(decalID, creationFrameMin, creationFrameMax) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5284-L5294" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5287-L5297" target="_blank">source</a>]
 ---
 ---Set decal glow parameters
 ---
@@ -1661,7 +1662,7 @@ function Spring.SetGroundDecalCreationFrame(decalID, creationFrameMin, creationF
 ---@return boolean decalSet
 function Spring.SetGroundDecalGlowParams(decalID, glow, glowFalloff) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5310-L5323" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5313-L5326" target="_blank">source</a>]
 ---
 ---Set decal user data. Useful in conjunction with custom decal shaders
 ---
@@ -1676,11 +1677,11 @@ function Spring.SetGroundDecalUserData(decalID, udQuad, x, y, z, w) end
 
 ---SDL Text
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5346-L5349" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5349-L5352" target="_blank">source</a>]
 ---
 ---@section sdltext
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5352-L5360" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5355-L5363" target="_blank">source</a>]
 ---
 ---@param x integer
 ---@param y integer
@@ -1689,23 +1690,23 @@ function Spring.SetGroundDecalUserData(decalID, udQuad, x, y, z, w) end
 ---@return nil
 function Spring.SDLSetTextInputRect(x, y, width, height) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5372-L5376" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5375-L5379" target="_blank">source</a>]
 ---
 ---@return nil
 function Spring.SDLStartTextInput() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5383-L5387" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5386-L5390" target="_blank">source</a>]
 ---
 ---@return nil
 function Spring.SDLStopTextInput() end
 
 ---Window Management
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5395-L5398" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5398-L5401" target="_blank">source</a>]
 ---
 ---@section window
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5400-L5411" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5403-L5414" target="_blank">source</a>]
 ---
 ---@param displayIndex integer
 ---@param winRelPosX integer
@@ -1717,29 +1718,29 @@ function Spring.SDLStopTextInput() end
 ---@return nil
 function Spring.SetWindowGeometry(displayIndex, winRelPosX, winRelPosY, winSizeX, winSizeY, fullScreen, borderless) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5430-L5434" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5433-L5437" target="_blank">source</a>]
 ---
 ---@return boolean minimized
 function Spring.SetWindowMinimized() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5441-L5445" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5444-L5448" target="_blank">source</a>]
 ---
 ---@return boolean maximized
 function Spring.SetWindowMaximized() end
 
 ---Misc
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5453-L5456" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5456-L5459" target="_blank">source</a>]
 ---
 ---@section misc
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5459-L5462" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5462-L5465" target="_blank">source</a>]
 ---
 ---@param startScript string the CONTENT of the script.txt spring should use to start.
 ---@return nil
 function Spring.Reload(startScript) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5469-L5476" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5472-L5479" target="_blank">source</a>]
 ---
 ---If this call returns, something went wrong
 ---
@@ -1750,7 +1751,7 @@ function Spring.Restart(commandline_args, startScript) end
 
 ---Launches a new Spring instance without terminating the existing one.
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5484-L5493" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5487-L5496" target="_blank">source</a>]
 ---
 ---If this call returns, something went wrong
 ---
@@ -1761,7 +1762,7 @@ function Spring.Start(commandline_args, startScript) end
 
 ---Sets the icon for the process which is seen in the OS task-bar and other places (default: spring-logo).
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5505-L5517" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5508-L5520" target="_blank">source</a>]
 ---
 ---Note: has to be 24bit or 32bit.
 ---Note: on windows, it has to be 32x32 pixels in size (recommended for cross-platform)
@@ -1775,7 +1776,7 @@ function Spring.SetWMIcon(iconFileName, autoFree) end
 
 ---Set the window title for the process
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5535-L5547" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5538-L5550" target="_blank">source</a>]
 ---
 ---@param title string (Default: `"Spring <version>"`)
 ---@param titleShort string? (Default: `"Spring <version>"`) displayed in the OS task-bar .
@@ -1786,13 +1787,13 @@ function Spring.SetWMIcon(iconFileName, autoFree) end
 ---@return nil
 function Spring.SetWMCaption(title, titleShort) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5555-L5558" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5558-L5561" target="_blank">source</a>]
 ---
 ---@param threadName string? (Default: main)
 ---@return nil
 function Spring.ClearWatchDogTimer(threadName) end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5576-L5579" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5579-L5582" target="_blank">source</a>]
 ---
 ---@param text string
 ---@return nil
@@ -1800,7 +1801,7 @@ function Spring.SetClipboard(text) end
 
 ---Relinquish control of the game loading thread and OpenGL context back to the UI (LuaIntro).
 ---
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5587-L5601" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUnsyncedCtrl.cpp#L5590-L5604" target="_blank">source</a>]
 ---
 ---Should be called after each widget/unsynced gadget is loaded in widget/gadget handler. Use it to draw screen updates and process windows events.
 ---
