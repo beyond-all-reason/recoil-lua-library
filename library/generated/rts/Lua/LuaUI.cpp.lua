@@ -15,7 +15,7 @@ local UI = {}
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUI.cpp#L281-L283" target="_blank">source</a>]
 function UI:ConfigureLayout() end
 
----[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUI.cpp#L676-L681" target="_blank">source</a>]
+---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaUI.cpp#L677-L682" target="_blank">source</a>]
 ---
 ---@param minArea number?
 ---@param minPower number?
