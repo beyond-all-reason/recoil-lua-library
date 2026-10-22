@@ -1357,8 +1357,8 @@ function Script.GetRegistry() end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4534-L4538" target="_blank">source</a>]
 ---
 ---@param frameDelay integer
----@param fun (...) func
-function Script.DelayByFrames(frameDelay, fun) end
+---@param func fun(...)
+function Script.DelayByFrames(frameDelay, func) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaHandle.cpp#L4584-L4588" target="_blank">source</a>]
 ---

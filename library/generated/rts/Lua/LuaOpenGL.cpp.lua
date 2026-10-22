@@ -319,9 +319,9 @@ function gl.DrawListAtUnit(unitID, listIndex, useMidPos, scaleX, scaleY, scaleZ,
 ---
 ---@param unitID UnitID
 ---@param useMidPos boolean? (Default: `true`)
----@param fun (...) func Function to call.
+---@param func fun(...) Function to call.
 ---@param ... any Arguments passed to function.
-function gl.DrawFuncAtUnit(unitID, useMidPos, fun, ...) end
+function gl.DrawFuncAtUnit(unitID, useMidPos, func, ...) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L2138-L2145" target="_blank">source</a>]
 ---
@@ -390,9 +390,9 @@ function gl.Shape(type, vertices) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L2453-L2458" target="_blank">source</a>]
 ---
 ---@param primMode GL
----@param fun (...) func Function to call.
+---@param func fun(...) Function to call.
 ---@param ... any Arguments passed to function.
-function gl.BeginEnd(primMode, fun, ...) end
+function gl.BeginEnd(primMode, func, ...) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L2490-L2493" target="_blank">source</a>]
 ---
@@ -1064,9 +1064,9 @@ function gl.CopyImageSubData(srcName, srcLevel, srcX, srcY, srcZ, dstName, dstLe
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L4615-L4620" target="_blank">source</a>]
 ---
 ---@param texName string
----@param fun (...) function
+---@param func fun(...)
 ---@param ... any Arguments to the function.
-function gl.RenderToTexture(texName, fun, ...) end
+function gl.RenderToTexture(texName, func, ...) end
 
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaOpenGL.cpp#L4669-L4672" target="_blank">source</a>]
 ---

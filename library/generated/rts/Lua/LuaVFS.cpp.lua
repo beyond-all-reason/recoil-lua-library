@@ -282,9 +282,9 @@ function VFS.GetArchiveContainingFile(filename, mode) end
 ---[<a href="https://github.com/beyond-all-reason/RecoilEngine/blob/master/rts/Lua/LuaVFS.cpp#L643-L651" target="_blank">source</a>]
 ---
 ---@param archiveName string
----@param fun (...) func
+---@param func fun(...)
 ---@return any ... Results of the given function
-function VFS.UseArchive(archiveName, fun) end
+function VFS.UseArchive(archiveName, func) end
 
 ---Compresses the specified folder.
 ---
