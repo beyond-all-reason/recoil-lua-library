@@ -6,144 +6,144 @@
 -- ------------
 
 ---@class RmlUi.ElementForm : RmlUi.Element
----@see [ElementForm.cpp#L161-L163](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L161-L163)
+---@see [ElementForm.cpp#L161-L163](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L161-L163)
 RmlUi.ElementForm = {}
 
 ---@param name string?
 ---@param value string?
----@see [ElementForm.cpp#L166-L170](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L166-L170)
+---@see [ElementForm.cpp#L166-L170](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L166-L170)
 function RmlUi.ElementForm:Submit(name, value) end
 
 ---@class RmlUi.ElementFormControl : RmlUi.Element
----@see [ElementForm.cpp#L178-L180](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L178-L180)
+---@see [ElementForm.cpp#L178-L180](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L178-L180)
 RmlUi.ElementFormControl = {}
 
 ---@type boolean
----@see [ElementForm.cpp#L183-L183](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L183-L183)
+---@see [ElementForm.cpp#L183-L183](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L183-L183)
 RmlUi.ElementFormControl.disabled = nil
 
 ---@type string
----@see [ElementForm.cpp#L185-L185](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L185-L185)
+---@see [ElementForm.cpp#L185-L185](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L185-L185)
 RmlUi.ElementFormControl.name = nil
 
 ---@type string
----@see [ElementForm.cpp#L187-L187](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L187-L187)
+---@see [ElementForm.cpp#L187-L187](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L187-L187)
 RmlUi.ElementFormControl.value = nil
 
 ---@type boolean
----@see [ElementForm.cpp#L192-L192](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L192-L192)
+---@see [ElementForm.cpp#L192-L192](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L192-L192)
 RmlUi.ElementFormControl.submitted = nil
 
 ---@class RmlUi.ElementFormControlInput : RmlUi.Element, RmlUi.ElementFormControl
----@see [ElementForm.cpp#L200-L202](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L200-L202)
+---@see [ElementForm.cpp#L200-L202](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L200-L202)
 RmlUi.ElementFormControlInput = {}
 
 ---Selects all text.
 ---
----@see [ElementForm.cpp#L205-L208](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L205-L208)
+---@see [ElementForm.cpp#L205-L208](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L205-L208)
 function RmlUi.ElementFormControlInput:Select() end
 
 ---Selects the text in the given character range.
 ---
 ---@param selection_start integer The first character to be selected.
 ---@param selection_end integer The first character *after* the selection.
----@see [ElementForm.cpp#L210-L215](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L210-L215)
+---@see [ElementForm.cpp#L210-L215](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L210-L215)
 function RmlUi.ElementFormControlInput:SetSelection(selection_start, selection_end) end
 
 ---Retrieves the selection range and text.
 ---
 ---@return any selection_start The first character selected; selection_end The first character *after* the selection; selected_text The selected text.
----@see [ElementForm.cpp#L217-L221](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L217-L221)
+---@see [ElementForm.cpp#L217-L221](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L217-L221)
 function RmlUi.ElementFormControlInput:GetSelection() end
 
 ---@type boolean
----@see [ElementForm.cpp#L225-L225](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L225-L225)
+---@see [ElementForm.cpp#L225-L225](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L225-L225)
 RmlUi.ElementFormControlInput.checked = nil
 
 ---@type integer
----@see [ElementForm.cpp#L227-L227](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L227-L227)
+---@see [ElementForm.cpp#L227-L227](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L227-L227)
 RmlUi.ElementFormControlInput.maxlength = nil
 
 ---@type integer
----@see [ElementForm.cpp#L229-L229](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L229-L229)
+---@see [ElementForm.cpp#L229-L229](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L229-L229)
 RmlUi.ElementFormControlInput.size = nil
 
 ---@type integer
----@see [ElementForm.cpp#L231-L231](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L231-L231)
+---@see [ElementForm.cpp#L231-L231](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L231-L231)
 RmlUi.ElementFormControlInput.max = nil
 
 ---@type integer
----@see [ElementForm.cpp#L233-L233](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L233-L233)
+---@see [ElementForm.cpp#L233-L233](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L233-L233)
 RmlUi.ElementFormControlInput.min = nil
 
 ---@type integer
----@see [ElementForm.cpp#L235-L235](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L235-L235)
+---@see [ElementForm.cpp#L235-L235](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L235-L235)
 RmlUi.ElementFormControlInput.step = nil
 
 ---@alias RmlUi.SelectOptionsProxy RmlUi.SelectOptionsProxyNode[]
----@see [ElementForm.cpp#L243-L245](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L243-L245)
+---@see [ElementForm.cpp#L243-L245](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L243-L245)
 
 ---@alias RmlUi.SelectOptionsProxyNode {element: RmlUi.Element, value: string}
----@see [ElementForm.cpp#L251-L253](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L251-L253)
+---@see [ElementForm.cpp#L251-L253](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L251-L253)
 
 ---@class RmlUi.ElementFormControlSelect : RmlUi.Element, RmlUi.ElementFormControl
----@see [ElementForm.cpp#L258-L260](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L258-L260)
+---@see [ElementForm.cpp#L258-L260](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L258-L260)
 RmlUi.ElementFormControlSelect = {}
 
 ---@param element RmlUi.Element
 ---@param before integer?
----@see [ElementForm.cpp#L263-L267](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L263-L267)
+---@see [ElementForm.cpp#L263-L267](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L263-L267)
 function RmlUi.ElementFormControlSelect:Add(element, before) end
 
 ---@param index integer
----@see [ElementForm.cpp#L273-L276](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L273-L276)
+---@see [ElementForm.cpp#L273-L276](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L273-L276)
 function RmlUi.ElementFormControlSelect:Remove(index) end
 
----@see [ElementForm.cpp#L278-L280](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L278-L280)
+---@see [ElementForm.cpp#L278-L280](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L278-L280)
 function RmlUi.ElementFormControlSelect:RemoveAll() end
 
 ---@type integer
----@see [ElementForm.cpp#L284-L284](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L284-L284)
+---@see [ElementForm.cpp#L284-L284](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L284-L284)
 RmlUi.ElementsFormControlSelect.selection = nil
 
 ---@type RmlUi.SelectOptionsProxy
----@see [ElementForm.cpp#L288-L288](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L288-L288)
+---@see [ElementForm.cpp#L288-L288](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L288-L288)
 RmlUi.ElementsFormControlSelect.options = nil
 
 ---@class RmlUi.ElementFormControlTextArea : RmlUi.Element, RmlUi.ElementFormControl
----@see [ElementForm.cpp#L296-L298](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L296-L298)
+---@see [ElementForm.cpp#L296-L298](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L296-L298)
 RmlUi.ElementFormControlTextArea = {}
 
 ---Selects all text.
 ---
----@see [ElementForm.cpp#L301-L304](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L301-L304)
+---@see [ElementForm.cpp#L301-L304](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L301-L304)
 function RmlUi.ElementFormControlTextArea:Select() end
 
 ---Selects the text in the given character range.
 ---
 ---@param selection_start integer The first character to be selected.
 ---@param selection_end integer The first character *after* the selection.
----@see [ElementForm.cpp#L306-L311](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L306-L311)
+---@see [ElementForm.cpp#L306-L311](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L306-L311)
 function RmlUi.ElementFormControlTextArea:SetSelection(selection_start, selection_end) end
 
 ---Retrieves the selection range and text.
 ---
 ---@return any selection_start The first character selected; selection_end The first character *after* the selection; selected_text The selected text.
----@see [ElementForm.cpp#L313-L317](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L313-L317)
+---@see [ElementForm.cpp#L313-L317](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L313-L317)
 function RmlUi.ElementFormControlTextArea:GetSelection() end
 
 ---@type integer
----@see [ElementForm.cpp#L321-L321](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L321-L321)
+---@see [ElementForm.cpp#L321-L321](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L321-L321)
 RmlUi.ElementFormControlTextArea.cols = nil
 
 ---@type integer
----@see [ElementForm.cpp#L323-L323](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L323-L323)
+---@see [ElementForm.cpp#L323-L323](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L323-L323)
 RmlUi.ElementFormControlTextArea.maxlength = nil
 
 ---@type integer
----@see [ElementForm.cpp#L325-L325](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L325-L325)
+---@see [ElementForm.cpp#L325-L325](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L325-L325)
 RmlUi.ElementFormControlTextArea.rows = nil
 
 ---@type boolean
----@see [ElementForm.cpp#L327-L327](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/ElementForm.cpp#L327-L327)
+---@see [ElementForm.cpp#L327-L327](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/ElementForm.cpp#L327-L327)
 RmlUi.ElementFormControlTextArea.wordwrap = nil

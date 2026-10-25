@@ -22,5 +22,5 @@
 ---@param freqUpdated boolean? (Default: `true`) `true` to update frequently, `false` to update only once.
 ---@return VBO? VBO The VBO ref on success, or `nil` if not supported or an error occurred.
 ---@see GL.OpenGL_Buffer_Types
----@see [LuaVBO.cpp#L125-L148](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaVBO.cpp#L125-L148)
+---@see [LuaVBO.cpp#L125-L148](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaVBO.cpp#L125-L148)
 function gl.GetVBO(bufferType, freqUpdated) end

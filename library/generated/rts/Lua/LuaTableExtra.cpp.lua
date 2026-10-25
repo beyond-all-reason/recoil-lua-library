@@ -15,5 +15,5 @@
 ---@param nArray number hint for count of array elements
 ---@param nHashed number hint for count of hashtable elements
 ---@return table
----@see [LuaTableExtra.cpp#L10-L21](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaTableExtra.cpp#L10-L21)
+---@see [LuaTableExtra.cpp#L10-L21](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaTableExtra.cpp#L10-L21)
 function table.new(nArray, nHashed) end

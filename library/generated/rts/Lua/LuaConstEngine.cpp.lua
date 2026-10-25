@@ -24,76 +24,76 @@
 ---@field nanoParticlesGL4 boolean Whether the engine has the standalone shader-based nano particle effect (the `NanoParticles*` springsettings)
 ---@field modelVertexColor boolean Whether glTF `COLOR_0` is loaded into the models VBO (`color`, attribute 15; opaque white when absent)
 ---@field liveConfigChanges integer Version of the set of springsettings that apply without a restart, bumped when more are added (1: those listed in the 2026.09 changelog)
----@see [LuaConstEngine.cpp#L16-L36](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaConstEngine.cpp#L16-L36)
+---@see [LuaConstEngine.cpp#L16-L36](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstEngine.cpp#L16-L36)
 local FeatureSupport = {}
 
 ---Engine specific information.
 ---
----@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaConstEngine.cpp#L38-L53)
+---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstEngine.cpp#L38-L53)
 Engine = {
 	---"Major.Minor.PatchSet" for releases, "Major.Minor.PatchSet-CommitNum-gHash branch" otherwise
 	---
 	---@type string
-	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaConstEngine.cpp#L38-L53)
+	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstEngine.cpp#L38-L53)
 	version = nil,
 
 	---"Major.Minor.PatchSet" for releases, "Major.Minor.PatchSet-CommitNum-gHash branch" otherwise. Will also include (buildFlags), if there're any.
 	---
 	---@type string
-	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaConstEngine.cpp#L38-L53)
+	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstEngine.cpp#L38-L53)
 	versionFull = nil,
 
 	---Major part of the named release version
 	---
 	---@type string
-	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaConstEngine.cpp#L38-L53)
+	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstEngine.cpp#L38-L53)
 	versionMajor = nil,
 
 	---Minor part of the named release version
 	---
 	---@type string
-	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaConstEngine.cpp#L38-L53)
+	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstEngine.cpp#L38-L53)
 	versionMinor = nil,
 
 	---Build number of the named release version
 	---
 	---@type string
-	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaConstEngine.cpp#L38-L53)
+	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstEngine.cpp#L38-L53)
 	versionPatchSet = nil,
 
 	---Number of commits after the latest named release, non-zero indicates a "dev" build
 	---
 	---@type string
-	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaConstEngine.cpp#L38-L53)
+	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstEngine.cpp#L38-L53)
 	commitsNumber = nil,
 
 	---Gets additional engine buildflags, e.g. "Debug" or "Sync-Debug"
 	---
 	---@type string
-	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaConstEngine.cpp#L38-L53)
+	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstEngine.cpp#L38-L53)
 	buildFlags = nil,
 
 	---Table containing various engine features as keys; use for cross-version compat
 	---
 	---@type FeatureSupport
-	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaConstEngine.cpp#L38-L53)
+	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstEngine.cpp#L38-L53)
 	featureSupport = nil,
 
 	---Indicates the build type always 64 these days
 	---
 	---@type integer
-	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaConstEngine.cpp#L38-L53)
+	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstEngine.cpp#L38-L53)
 	wordSize = nil,
 
 	---Number of simulation gameframes per second
 	---
 	---@type integer
-	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaConstEngine.cpp#L38-L53)
+	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstEngine.cpp#L38-L53)
 	gameSpeed = nil,
 
 	---Table containing keys that represent the color code operations during font rendering
 	---
 	---@type TextColorCode
-	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaConstEngine.cpp#L38-L53)
+	---@see [LuaConstEngine.cpp#L38-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstEngine.cpp#L38-L53)
 	textColorCodes = nil
 }

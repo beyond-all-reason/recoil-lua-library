@@ -10,7 +10,7 @@
 ---
 ---@see Spring.UnitScript
 ---@class UnitScriptTable
----@see [LuaUnitScript.cpp#L1026-L1032](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1026-L1032)
+---@see [LuaUnitScript.cpp#L1026-L1032](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1026-L1032)
 local UnitScriptTable = {}
 
 ---Create a Lua unit script for the given unit, replacing any existing script.
@@ -18,7 +18,7 @@ local UnitScriptTable = {}
 ---@param unitID UnitID
 ---@param callIns table<string, function>
 ---@return nil
----@see [LuaUnitScript.cpp#L1154-L1160](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1154-L1160)
+---@see [LuaUnitScript.cpp#L1154-L1160](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1154-L1160)
 function UnitScriptTable.CreateScript(unitID, callIns) end
 
 ---Update or remove a callIn on a unit script.
@@ -27,7 +27,7 @@ function UnitScriptTable.CreateScript(unitID, callIns) end
 ---@param callin string
 ---@param func function?
 ---@return nil
----@see [LuaUnitScript.cpp#L1189-L1196](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1189-L1196)
+---@see [LuaUnitScript.cpp#L1189-L1196](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1189-L1196)
 function UnitScriptTable.UpdateCallIn(unitID, callin, func) end
 
 ---Execute a function in the context of a unit's script environment.
@@ -36,7 +36,7 @@ function UnitScriptTable.UpdateCallIn(unitID, callin, func) end
 ---@param func function
 ---@param ... any arguments passed to func
 ---@return any ... values returned by func
----@see [LuaUnitScript.cpp#L1221-L1228](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1221-L1228)
+---@see [LuaUnitScript.cpp#L1221-L1228](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1221-L1228)
 function UnitScriptTable.CallAsUnit(unitID, func, ...) end
 
 ---Get a COB/script value for a unit (synced gadget API).
@@ -45,14 +45,14 @@ function UnitScriptTable.CallAsUnit(unitID, func, ...) end
 ---@param val integer COB value ID (use COB constants)
 ---@param ... number optional extra args for certain COB values
 ---@return integer value
----@see [LuaUnitScript.cpp#L1297-L1304](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1297-L1304)
+---@see [LuaUnitScript.cpp#L1297-L1304](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1297-L1304)
 function UnitScriptTable.GetUnitCOBValue(unitID, val, ...) end
 
 ---Get a COB/script value. Must be called from within a UnitScript callin.
 ---
 ---@param val integer COB value ID (use COB constants)
 ---@return integer value
----@see [LuaUnitScript.cpp#L1317-L1322](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1317-L1322)
+---@see [LuaUnitScript.cpp#L1317-L1322](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1317-L1322)
 function UnitScriptTable.GetUnitValue(val) end
 
 ---Set a COB/script value for a unit (synced gadget API).
@@ -61,7 +61,7 @@ function UnitScriptTable.GetUnitValue(val) end
 ---@param val integer COB value ID (use COB constants)
 ---@param param integer|boolean value to set
 ---@return nil
----@see [LuaUnitScript.cpp#L1354-L1361](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1354-L1361)
+---@see [LuaUnitScript.cpp#L1354-L1361](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1354-L1361)
 function UnitScriptTable.SetUnitCOBValue(unitID, val, param) end
 
 ---Set a COB/script value. Must be called from within a UnitScript callin.
@@ -69,7 +69,7 @@ function UnitScriptTable.SetUnitCOBValue(unitID, val, param) end
 ---@param val integer COB value ID (use COB constants)
 ---@param param integer|boolean value to set
 ---@return nil
----@see [LuaUnitScript.cpp#L1374-L1380](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1374-L1380)
+---@see [LuaUnitScript.cpp#L1374-L1380](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1374-L1380)
 function UnitScriptTable.SetUnitValue(val, param) end
 
 ---Set visibility of a piece. Must be called from within a UnitScript callin.
@@ -77,7 +77,7 @@ function UnitScriptTable.SetUnitValue(val, param) end
 ---@param piece integer 1-indexed piece number
 ---@param visible boolean
 ---@return nil
----@see [LuaUnitScript.cpp#L1391-L1397](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1391-L1397)
+---@see [LuaUnitScript.cpp#L1391-L1397](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1391-L1397)
 function UnitScriptTable.SetPieceVisibility(piece, visible) end
 
 ---Emit a special effect at a piece. Must be called from within a UnitScript callin.
@@ -85,7 +85,7 @@ function UnitScriptTable.SetPieceVisibility(piece, visible) end
 ---@param piece integer 1-indexed piece number
 ---@param type integer|string SFX type constant or CEG name
 ---@return nil
----@see [LuaUnitScript.cpp#L1415-L1421](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1415-L1421)
+---@see [LuaUnitScript.cpp#L1415-L1421](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1415-L1421)
 function UnitScriptTable.EmitSfx(piece, type) end
 
 ---Attach a unit to a piece of another unit.
@@ -93,14 +93,14 @@ function UnitScriptTable.EmitSfx(piece, type) end
 ---@param piece integer 1-indexed piece number
 ---@param transporteeID UnitID
 ---@return nil
----@see [LuaUnitScript.cpp#L1438-L1444](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1438-L1444)
+---@see [LuaUnitScript.cpp#L1438-L1444](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1438-L1444)
 function UnitScriptTable.AttachUnit(piece, transporteeID) end
 
 ---Drop a transported unit.
 ---
 ---@param transporteeID UnitID
 ---@return nil
----@see [LuaUnitScript.cpp#L1462-L1467](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1462-L1467)
+---@see [LuaUnitScript.cpp#L1462-L1467](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1462-L1467)
 function UnitScriptTable.DropUnit(transporteeID) end
 
 ---Explode a piece with the given flags.
@@ -108,14 +108,14 @@ function UnitScriptTable.DropUnit(transporteeID) end
 ---@param piece integer 1-indexed piece number
 ---@param flags integer SFX explosion flags (bitfield)
 ---@return nil
----@see [LuaUnitScript.cpp#L1485-L1491](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1485-L1491)
+---@see [LuaUnitScript.cpp#L1485-L1491](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1485-L1491)
 function UnitScriptTable.Explode(piece, flags) end
 
 ---Show a flare at a piece.
 ---
 ---@param piece integer 1-indexed piece number
 ---@return nil
----@see [LuaUnitScript.cpp#L1506-L1511](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1506-L1511)
+---@see [LuaUnitScript.cpp#L1506-L1511](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1506-L1511)
 function UnitScriptTable.ShowFlare(piece) end
 
 ---Start spinning a piece around an axis.
@@ -125,7 +125,7 @@ function UnitScriptTable.ShowFlare(piece) end
 ---@param speed number angular speed in radians/frame
 ---@param accel number? angular acceleration (Default: `0`, instant)
 ---@return nil
----@see [LuaUnitScript.cpp#L1525-L1533](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1525-L1533)
+---@see [LuaUnitScript.cpp#L1525-L1533](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1525-L1533)
 function UnitScriptTable.Spin(piece, axis, speed, accel) end
 
 ---Stop spinning a piece.
@@ -134,7 +134,7 @@ function UnitScriptTable.Spin(piece, axis, speed, accel) end
 ---@param axis integer axis (1=x, 2=y, 3=z)
 ---@param decel number? angular deceleration (Default: `0`, instant)
 ---@return nil
----@see [LuaUnitScript.cpp#L1551-L1558](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1551-L1558)
+---@see [LuaUnitScript.cpp#L1551-L1558](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1551-L1558)
 function UnitScriptTable.StopSpin(piece, axis, decel) end
 
 ---Turn a piece to an angle. If speed is 0 or omitted, turns instantly.
@@ -144,7 +144,7 @@ function UnitScriptTable.StopSpin(piece, axis, decel) end
 ---@param destination number target angle in radians
 ---@param speed number? angular speed (Default: `0`, instant)
 ---@return nil
----@see [LuaUnitScript.cpp#L1575-L1583](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1575-L1583)
+---@see [LuaUnitScript.cpp#L1575-L1583](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1575-L1583)
 function UnitScriptTable.Turn(piece, axis, destination, speed) end
 
 ---Move a piece along an axis. If speed is 0 or omitted, moves instantly.
@@ -154,7 +154,7 @@ function UnitScriptTable.Turn(piece, axis, destination, speed) end
 ---@param destination number target position
 ---@param speed number? movement speed (Default: `0`, instant)
 ---@return nil
----@see [LuaUnitScript.cpp#L1607-L1615](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1607-L1615)
+---@see [LuaUnitScript.cpp#L1607-L1615](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1607-L1615)
 function UnitScriptTable.Move(piece, axis, destination, speed) end
 
 ---Scale a piece. If speed is 0 or omitted, scales instantly.
@@ -163,7 +163,7 @@ function UnitScriptTable.Move(piece, axis, destination, speed) end
 ---@param destination number target scale factor
 ---@param speed number? scaling speed (Default: `0`, instant)
 ---@return nil
----@see [LuaUnitScript.cpp#L1638-L1645](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1638-L1645)
+---@see [LuaUnitScript.cpp#L1638-L1645](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1638-L1645)
 function UnitScriptTable.Scale(piece, destination, speed) end
 
 ---Check if a piece is currently turning.
@@ -171,7 +171,7 @@ function UnitScriptTable.Scale(piece, destination, speed) end
 ---@param piece integer 1-indexed piece number
 ---@param axis integer axis (1=x, 2=y, 3=z)
 ---@return boolean
----@see [LuaUnitScript.cpp#L1738-L1744](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1738-L1744)
+---@see [LuaUnitScript.cpp#L1738-L1744](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1738-L1744)
 function UnitScriptTable.IsInTurn(piece, axis) end
 
 ---Check if a piece is currently moving.
@@ -179,7 +179,7 @@ function UnitScriptTable.IsInTurn(piece, axis) end
 ---@param piece integer 1-indexed piece number
 ---@param axis integer axis (1=x, 2=y, 3=z)
 ---@return boolean
----@see [LuaUnitScript.cpp#L1752-L1758](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1752-L1758)
+---@see [LuaUnitScript.cpp#L1752-L1758](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1752-L1758)
 function UnitScriptTable.IsInMove(piece, axis) end
 
 ---Check if a piece is currently spinning.
@@ -187,14 +187,14 @@ function UnitScriptTable.IsInMove(piece, axis) end
 ---@param piece integer 1-indexed piece number
 ---@param axis integer axis (1=x, 2=y, 3=z)
 ---@return boolean
----@see [LuaUnitScript.cpp#L1766-L1772](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1766-L1772)
+---@see [LuaUnitScript.cpp#L1766-L1772](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1766-L1772)
 function UnitScriptTable.IsInSpin(piece, axis) end
 
 ---Check if a piece is currently scaling.
 ---
 ---@param piece integer 1-indexed piece number
 ---@return boolean
----@see [LuaUnitScript.cpp#L1779-L1784](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1779-L1784)
+---@see [LuaUnitScript.cpp#L1779-L1784](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1779-L1784)
 function UnitScriptTable.IsInScale(piece) end
 
 ---Check whether the calling thread needs to wait for a turn to finish.
@@ -202,7 +202,7 @@ function UnitScriptTable.IsInScale(piece) end
 ---@param piece integer 1-indexed piece number
 ---@param axis integer axis (1=x, 2=y, 3=z)
 ---@return boolean needsWait
----@see [LuaUnitScript.cpp#L1817-L1823](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1817-L1823)
+---@see [LuaUnitScript.cpp#L1817-L1823](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1817-L1823)
 function UnitScriptTable.WaitForTurn(piece, axis) end
 
 ---Check whether the calling thread needs to wait for a move to finish.
@@ -210,21 +210,21 @@ function UnitScriptTable.WaitForTurn(piece, axis) end
 ---@param piece integer 1-indexed piece number
 ---@param axis integer axis (1=x, 2=y, 3=z)
 ---@return boolean needsWait
----@see [LuaUnitScript.cpp#L1831-L1837](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1831-L1837)
+---@see [LuaUnitScript.cpp#L1831-L1837](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1831-L1837)
 function UnitScriptTable.WaitForMove(piece, axis) end
 
 ---Check whether the calling thread needs to wait for a scale to finish.
 ---
 ---@param piece integer 1-indexed piece number
 ---@return boolean needsWait
----@see [LuaUnitScript.cpp#L1844-L1849](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1844-L1849)
+---@see [LuaUnitScript.cpp#L1844-L1849](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1844-L1849)
 function UnitScriptTable.WaitForScale(piece) end
 
 ---Signal that the Killed callin has finished. Must be called from Killed.
 ---
 ---@param wreckLevel integer? (Default: `-1`)
 ---@return nil
----@see [LuaUnitScript.cpp#L1869-L1874](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1869-L1874)
+---@see [LuaUnitScript.cpp#L1869-L1874](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1869-L1874)
 function UnitScriptTable.SetDeathScriptFinished(wreckLevel) end
 
 ---Get the local translation of a piece relative to its rest position.
@@ -233,7 +233,7 @@ function UnitScriptTable.SetDeathScriptFinished(wreckLevel) end
 ---@return number x
 ---@return number y
 ---@return number z
----@see [LuaUnitScript.cpp#L1892-L1899](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1892-L1899)
+---@see [LuaUnitScript.cpp#L1892-L1899](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1892-L1899)
 function UnitScriptTable.GetPieceTranslation(piece) end
 
 ---Get the rotation of a piece in radians.
@@ -242,14 +242,14 @@ function UnitScriptTable.GetPieceTranslation(piece) end
 ---@return number rx
 ---@return number ry
 ---@return number rz
----@see [LuaUnitScript.cpp#L1911-L1918](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1911-L1918)
+---@see [LuaUnitScript.cpp#L1911-L1918](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1911-L1918)
 function UnitScriptTable.GetPieceRotation(piece) end
 
 ---Get the scale factor of a piece.
 ---
 ---@param piece integer 1-indexed piece number
 ---@return number scale
----@see [LuaUnitScript.cpp#L1929-L1934](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1929-L1934)
+---@see [LuaUnitScript.cpp#L1929-L1934](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1929-L1934)
 function UnitScriptTable.GetPieceScale(piece) end
 
 ---Get the world-space emit position and direction of a piece.
@@ -261,11 +261,11 @@ function UnitScriptTable.GetPieceScale(piece) end
 ---@return number dirX
 ---@return number dirY
 ---@return number dirZ
----@see [LuaUnitScript.cpp#L1947-L1957](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1947-L1957)
+---@see [LuaUnitScript.cpp#L1947-L1957](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1947-L1957)
 function UnitScriptTable.GetPiecePosDir(piece) end
 
 ---Get the unit ID of the currently executing unit script.
 ---
 ---@return UnitID? unitID
----@see [LuaUnitScript.cpp#L1980-L1984](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1980-L1984)
+---@see [LuaUnitScript.cpp#L1980-L1984](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Sim/Units/Scripts/LuaUnitScript.cpp#L1980-L1984)
 function UnitScriptTable.GetActiveUnitID() end

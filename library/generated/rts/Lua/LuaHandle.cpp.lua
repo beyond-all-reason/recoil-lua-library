@@ -34,130 +34,130 @@
 ---@see Intro
 ---@see SyncedCallins
 ---@see UnsyncedCallins
----@see [LuaHandle.cpp#L87-L118](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L87-L118)
+---@see [LuaHandle.cpp#L87-L118](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L87-L118)
 local Callins = {}
 
 ---@param killMessage string? Kill message.
----@see [LuaHandle.cpp#L232-L235](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L232-L235)
+---@see [LuaHandle.cpp#L232-L235](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L232-L235)
 function Script.Kill(killMessage) end
 
 ---Called when the addon is (re)loaded.
 ---
----@see [LuaHandle.cpp#L526-L529](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L526-L529)
+---@see [LuaHandle.cpp#L526-L529](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L526-L529)
 function Callins:Initialize() end
 
 ---Called when the game is (re)loaded.
 ---
----@see [LuaHandle.cpp#L531-L534](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L531-L534)
+---@see [LuaHandle.cpp#L531-L534](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L531-L534)
 function Callins:LoadCode() end
 
 ---Called when the addon or the game is shutdown.
 ---
 ---@return nil
----@see [LuaHandle.cpp#L608-L612](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L608-L612)
+---@see [LuaHandle.cpp#L608-L612](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L608-L612)
 function Callins:Shutdown() end
 
 ---Called when a player issues a UI command e.g. types /foo or /luarules foo.
 ---
 ---@param msg string
 ---@param playerID PlayerID
----@see [LuaHandle.cpp#L630-L635](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L630-L635)
+---@see [LuaHandle.cpp#L630-L635](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L630-L635)
 function Callins:GotChatMsg(msg, playerID) end
 
 ---Called after `GamePreload` and before `GameStart`. See Lua_SaveLoad.
 ---
 ---@param zipReader table
----@see [LuaHandle.cpp#L662-L666](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L662-L666)
+---@see [LuaHandle.cpp#L662-L666](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L662-L666)
 function Callins:Load(zipReader) end
 
 ---Game
 ---
 ---@section game
----@see [LuaHandle.cpp#L720-L722](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L720-L722)
+---@see [LuaHandle.cpp#L720-L722](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L720-L722)
 
 ---Called before the 0 gameframe.
 ---
 ---Is not called when a saved game is loaded.
 ---
----@see [LuaHandle.cpp#L724-L729](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L724-L729)
+---@see [LuaHandle.cpp#L724-L729](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L724-L729)
 function Callins:GamePreload() end
 
 ---Called upon the start of the game.
 ---
 ---Is not called when a saved game is loaded.
 ---
----@see [LuaHandle.cpp#L747-L752](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L747-L752)
+---@see [LuaHandle.cpp#L747-L752](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L747-L752)
 function Callins:GameStart() end
 
 ---Called when the game ends
 ---
 ---@param winningAllyTeams AllyTeamID[] list of winning allyTeams, if empty the game result was undecided (like when dropping from an host).
----@see [LuaHandle.cpp#L770-L774](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L770-L774)
+---@see [LuaHandle.cpp#L770-L774](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L770-L774)
 function Callins:GameOver(winningAllyTeams) end
 
 ---Called when the game is paused.
 ---
 ---@param playerID PlayerID
 ---@param paused boolean
----@see [LuaHandle.cpp#L797-L802](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L797-L802)
+---@see [LuaHandle.cpp#L797-L802](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L797-L802)
 function Callins:GamePaused(playerID, paused) end
 
 ---Called for every game simulation frame (30 per second).
 ---
 ---@param frame integer Starts at frame 1
----@see [LuaHandle.cpp#L847-L851](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L847-L851)
+---@see [LuaHandle.cpp#L847-L851](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L847-L851)
 function Callins:GameFrame(frame) end
 
 ---Called at the end of every game simulation frame
 ---
 ---@param frame integer Starts at frame 1
----@see [LuaHandle.cpp#L881-L885](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L881-L885)
+---@see [LuaHandle.cpp#L881-L885](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L881-L885)
 function Callins:GameFramePost(frame) end
 
 ---Called once to deliver the gameID
 ---
 ---@param gameID string encoded in hex.
----@see [LuaHandle.cpp#L905-L909](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L905-L909)
+---@see [LuaHandle.cpp#L905-L909](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L905-L909)
 function Callins:GameID(gameID) end
 
 ---Teams
 ---
 ---@section teams
----@see [LuaHandle.cpp#L932-L934](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L932-L934)
+---@see [LuaHandle.cpp#L932-L934](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L932-L934)
 
 ---Called when a team dies (see `Spring.KillTeam`).
 ---
 ---@param teamID TeamID
----@see [LuaHandle.cpp#L936-L940](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L936-L940)
+---@see [LuaHandle.cpp#L936-L940](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L936-L940)
 function Callins:TeamDied(teamID) end
 
 ---@param teamID TeamID
----@see [LuaHandle.cpp#L960-L963](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L960-L963)
+---@see [LuaHandle.cpp#L960-L963](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L960-L963)
 function Callins:TeamChanged(teamID) end
 
 ---Called whenever a player's status changes e.g. becoming a spectator.
 ---
 ---@param playerID PlayerID
----@see [LuaHandle.cpp#L983-L987](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L983-L987)
+---@see [LuaHandle.cpp#L983-L987](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L983-L987)
 function Callins:PlayerChanged(playerID) end
 
 ---Called whenever a new player joins the game.
 ---
 ---@param playerID PlayerID
----@see [LuaHandle.cpp#L1007-L1011](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1007-L1011)
+---@see [LuaHandle.cpp#L1007-L1011](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1007-L1011)
 function Callins:PlayerAdded(playerID) end
 
 ---Called whenever a player is removed from the game.
 ---
 ---@param playerID PlayerID
 ---@param reason integer
----@see [LuaHandle.cpp#L1031-L1036](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1031-L1036)
+---@see [LuaHandle.cpp#L1031-L1036](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1031-L1036)
 function Callins:PlayerRemoved(playerID, reason) end
 
 ---Units
 ---
 ---@section units
----@see [LuaHandle.cpp#L1057-L1060](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1057-L1060)
+---@see [LuaHandle.cpp#L1057-L1060](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1057-L1060)
 
 ---Called at the moment the unit is created.
 ---
@@ -165,7 +165,7 @@ function Callins:PlayerRemoved(playerID, reason) end
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
 ---@param builderID UnitID?
----@see [LuaHandle.cpp#L1081-L1088](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1081-L1088)
+---@see [LuaHandle.cpp#L1081-L1088](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1081-L1088)
 function Callins:UnitCreated(unitID, unitDefID, unitTeam, builderID) end
 
 ---Called at the moment the unit is completed.
@@ -173,7 +173,7 @@ function Callins:UnitCreated(unitID, unitDefID, unitTeam, builderID) end
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1112-L1118](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1112-L1118)
+---@see [LuaHandle.cpp#L1112-L1118](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1112-L1118)
 function Callins:UnitFinished(unitID, unitDefID, unitTeam) end
 
 ---Called when a factory finishes construction of a unit.
@@ -184,7 +184,7 @@ function Callins:UnitFinished(unitID, unitDefID, unitTeam) end
 ---@param factID UnitID
 ---@param factDefID UnitDefID
 ---@param userOrders boolean
----@see [LuaHandle.cpp#L1131-L1140](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1131-L1140)
+---@see [LuaHandle.cpp#L1131-L1140](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1131-L1140)
 function Callins:UnitFromFactory(unitID, unitDefID, unitTeam, factID, factDefID, userOrders) end
 
 ---Called when a living unit becomes a nanoframe again.
@@ -192,7 +192,7 @@ function Callins:UnitFromFactory(unitID, unitDefID, unitTeam, factID, factDefID,
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1165-L1171](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1165-L1171)
+---@see [LuaHandle.cpp#L1165-L1171](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1165-L1171)
 function Callins:UnitReverseBuilt(unitID, unitDefID, unitTeam) end
 
 ---Called when a unit being built starts decaying.
@@ -203,7 +203,7 @@ function Callins:UnitReverseBuilt(unitID, unitDefID, unitTeam) end
 ---@param timeSinceLastBuild number
 ---@param iterationPeriod number
 ---@param part number
----@see [LuaHandle.cpp#L1180-L1189](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1180-L1189)
+---@see [LuaHandle.cpp#L1180-L1189](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1180-L1189)
 function Callins:UnitConstructionDecayed(unitID, unitDefID, unitTeam, timeSinceLastBuild, iterationPeriod, part) end
 
 ---Called when a unit is destroyed.
@@ -215,7 +215,7 @@ function Callins:UnitConstructionDecayed(unitID, unitDefID, unitTeam, timeSinceL
 ---@param attackerDefID UnitDefID? Subject to visibility rules
 ---@param attackerTeam TeamID? Subject to visibility rules
 ---@param weaponDefID WeaponDefID
----@see [LuaHandle.cpp#L1213-L1223](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1213-L1223)
+---@see [LuaHandle.cpp#L1213-L1223](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1213-L1223)
 function Callins:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID, attackerDefID, attackerTeam, weaponDefID) end
 
 ---Called when a unit is transferred between teams. This is called before `UnitGiven` and in that moment unit is still assigned to the oldTeam.
@@ -224,7 +224,7 @@ function Callins:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID, attacker
 ---@param unitDefID UnitDefID
 ---@param oldTeam TeamID
 ---@param newTeam TeamID
----@see [LuaHandle.cpp#L1251-L1258](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1251-L1258)
+---@see [LuaHandle.cpp#L1251-L1258](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1251-L1258)
 function Callins:UnitTaken(unitID, unitDefID, oldTeam, newTeam) end
 
 ---Called when a unit is transferred between teams. This is called after `UnitTaken` and in that moment unit is assigned to the newTeam.
@@ -233,7 +233,7 @@ function Callins:UnitTaken(unitID, unitDefID, oldTeam, newTeam) end
 ---@param unitDefID UnitDefID
 ---@param newTeam TeamID
 ---@param oldTeam TeamID
----@see [LuaHandle.cpp#L1280-L1287](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1280-L1287)
+---@see [LuaHandle.cpp#L1280-L1287](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1280-L1287)
 function Callins:UnitGiven(unitID, unitDefID, newTeam, oldTeam) end
 
 ---Called when a unit is idle (empty command queue).
@@ -241,7 +241,7 @@ function Callins:UnitGiven(unitID, unitDefID, newTeam, oldTeam) end
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1309-L1315](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1309-L1315)
+---@see [LuaHandle.cpp#L1309-L1315](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1309-L1315)
 function Callins:UnitIdle(unitID, unitDefID, unitTeam) end
 
 ---Called after when a unit accepts a command, after `AllowCommand` returns true.
@@ -253,7 +253,7 @@ function Callins:UnitIdle(unitID, unitDefID, unitTeam) end
 ---@param cmdParams table
 ---@param options CommandOptions
 ---@param cmdTag integer
----@see [LuaHandle.cpp#L1323-L1333](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1323-L1333)
+---@see [LuaHandle.cpp#L1323-L1333](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1323-L1333)
 function Callins:UnitCommand(unitID, unitDefID, unitTeam, cmdID, cmdParams, options, cmdTag) end
 
 ---Called when a unit completes a command.
@@ -265,7 +265,7 @@ function Callins:UnitCommand(unitID, unitDefID, unitTeam, cmdID, cmdParams, opti
 ---@param cmdParams table
 ---@param options CommandOptions
 ---@param cmdTag integer
----@see [LuaHandle.cpp#L1357-L1367](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1357-L1367)
+---@see [LuaHandle.cpp#L1357-L1367](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1357-L1367)
 function Callins:UnitCmdDone(unitID, unitDefID, unitTeam, cmdID, cmdParams, options, cmdTag) end
 
 ---Called when a unit is damaged (after UnitPreDamaged).
@@ -280,7 +280,7 @@ function Callins:UnitCmdDone(unitID, unitDefID, unitTeam, cmdID, cmdParams, opti
 ---@param attackerID UnitID
 ---@param attackerDefID UnitDefID
 ---@param attackerTeam TeamID
----@see [LuaHandle.cpp#L1387-L1400](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1387-L1400)
+---@see [LuaHandle.cpp#L1387-L1400](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1387-L1400)
 function Callins:UnitDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, weaponDefID, projectileID, attackerID, attackerDefID, attackerTeam) end
 
 ---Called when a unit changes its stun status.
@@ -289,7 +289,7 @@ function Callins:UnitDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, wea
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
 ---@param stunned boolean
----@see [LuaHandle.cpp#L1435-L1442](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1435-L1442)
+---@see [LuaHandle.cpp#L1435-L1442](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1435-L1442)
 function Callins:UnitStunned(unitID, unitDefID, unitTeam, stunned) end
 
 ---Called when a unit gains experience greater or equal to the minimum limit set by calling `Spring.SetExperienceGrade`.
@@ -301,7 +301,7 @@ function Callins:UnitStunned(unitID, unitDefID, unitTeam, stunned) end
 ---@param unitTeam TeamID
 ---@param experience number
 ---@param oldExperience number
----@see [LuaHandle.cpp#L1466-L1478](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1466-L1478)
+---@see [LuaHandle.cpp#L1466-L1478](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1466-L1478)
 function Callins:UnitExperience(unitID, unitDefID, unitTeam, experience, oldExperience) end
 
 ---Called when a unit's harvestStorage is full (according to its unitDef's entry).
@@ -309,7 +309,7 @@ function Callins:UnitExperience(unitID, unitDefID, unitTeam, experience, oldExpe
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1502-L1508](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1502-L1508)
+---@see [LuaHandle.cpp#L1502-L1508](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1502-L1508)
 function Callins:UnitHarvestStorageFull(unitID, unitDefID, unitTeam) end
 
 ---Called when a unit emits a seismic ping.
@@ -323,7 +323,7 @@ function Callins:UnitHarvestStorageFull(unitID, unitDefID, unitTeam) end
 ---@param allyTeam AllyTeamID
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
----@see [LuaHandle.cpp#L1518-L1531](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1518-L1531)
+---@see [LuaHandle.cpp#L1518-L1531](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1518-L1531)
 function Callins:UnitSeismicPing(x, y, z, strength, allyTeam, unitID, unitDefID) end
 
 ---Called when a unit enters radar of an allyteam.
@@ -334,7 +334,7 @@ function Callins:UnitSeismicPing(x, y, z, strength, allyTeam, unitID, unitDefID)
 ---@param unitTeam TeamID
 ---@param allyTeam AllyTeamID
 ---@param unitDefID UnitDefID
----@see [LuaHandle.cpp#L1585-L1595](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1585-L1595)
+---@see [LuaHandle.cpp#L1585-L1595](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1585-L1595)
 function Callins:UnitEnteredRadar(unitID, unitTeam, allyTeam, unitDefID) end
 
 ---Called when a unit enters LOS of an allyteam.
@@ -345,7 +345,7 @@ function Callins:UnitEnteredRadar(unitID, unitTeam, allyTeam, unitDefID) end
 ---@param unitTeam TeamID
 ---@param allyTeam AllyTeamID who's LOS the unit entered.
 ---@param unitDefID UnitDefID
----@see [LuaHandle.cpp#L1604-L1614](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1604-L1614)
+---@see [LuaHandle.cpp#L1604-L1614](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1604-L1614)
 function Callins:UnitEnteredLos(unitID, unitTeam, allyTeam, unitDefID) end
 
 ---Called when a unit leaves radar of an allyteam.
@@ -358,7 +358,7 @@ function Callins:UnitEnteredLos(unitID, unitTeam, allyTeam, unitDefID) end
 ---@param unitTeam TeamID
 ---@param allyTeam AllyTeamID
 ---@param unitDefID UnitDefID
----@see [LuaHandle.cpp#L1622-L1634](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1622-L1634)
+---@see [LuaHandle.cpp#L1622-L1634](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1622-L1634)
 function Callins:UnitLeftRadar(unitID, unitTeam, allyTeam, unitDefID) end
 
 ---Called when a unit leaves LOS of an allyteam.
@@ -369,7 +369,7 @@ function Callins:UnitLeftRadar(unitID, unitTeam, allyTeam, unitDefID) end
 ---@param unitTeam TeamID
 ---@param allyTeam AllyTeamID
 ---@param unitDefID UnitDefID
----@see [LuaHandle.cpp#L1643-L1653](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1643-L1653)
+---@see [LuaHandle.cpp#L1643-L1653](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1643-L1653)
 function Callins:UnitLeftLos(unitID, unitTeam, allyTeam, unitDefID) end
 
 ---Called when a unit is loaded by a transport.
@@ -379,7 +379,7 @@ function Callins:UnitLeftLos(unitID, unitTeam, allyTeam, unitDefID) end
 ---@param unitTeam TeamID
 ---@param transportID UnitID
 ---@param transportTeam TeamID
----@see [LuaHandle.cpp#L1667-L1675](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1667-L1675)
+---@see [LuaHandle.cpp#L1667-L1675](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1667-L1675)
 function Callins:UnitLoaded(unitID, unitDefID, unitTeam, transportID, transportTeam) end
 
 ---Called when a unit is unloaded by a transport.
@@ -389,43 +389,43 @@ function Callins:UnitLoaded(unitID, unitDefID, unitTeam, transportID, transportT
 ---@param unitTeam TeamID
 ---@param transportID UnitID
 ---@param transportTeam TeamID
----@see [LuaHandle.cpp#L1699-L1707](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1699-L1707)
+---@see [LuaHandle.cpp#L1699-L1707](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1699-L1707)
 function Callins:UnitUnloaded(unitID, unitDefID, unitTeam, transportID, transportTeam) end
 
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1737-L1743](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1737-L1743)
+---@see [LuaHandle.cpp#L1737-L1743](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1737-L1743)
 function Callins:UnitEnteredUnderwater(unitID, unitDefID, unitTeam) end
 
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1751-L1757](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1751-L1757)
+---@see [LuaHandle.cpp#L1751-L1757](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1751-L1757)
 function Callins:UnitEnteredWater(unitID, unitDefID, unitTeam) end
 
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1765-L1772](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1765-L1772)
+---@see [LuaHandle.cpp#L1765-L1772](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1765-L1772)
 function Callins:UnitLeftAir(unitID, unitDefID, unitTeam) end
 
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1780-L1787](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1780-L1787)
+---@see [LuaHandle.cpp#L1780-L1787](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1780-L1787)
 function Callins:UnitLeftUnderwater(unitID, unitDefID, unitTeam) end
 
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1794-L1801](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1794-L1801)
+---@see [LuaHandle.cpp#L1794-L1801](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1794-L1801)
 function Callins:UnitLeftWater(unitID, unitDefID, unitTeam) end
 
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1809-L1816](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1809-L1816)
+---@see [LuaHandle.cpp#L1809-L1816](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1809-L1816)
 function Callins:UnitEnteredAir(unitID, unitDefID, unitTeam) end
 
 ---Called when a unit cloaks.
@@ -433,7 +433,7 @@ function Callins:UnitEnteredAir(unitID, unitDefID, unitTeam) end
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1824-L1831](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1824-L1831)
+---@see [LuaHandle.cpp#L1824-L1831](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1824-L1831)
 function Callins:UnitCloaked(unitID, unitDefID, unitTeam) end
 
 ---Called when a unit decloaks.
@@ -441,7 +441,7 @@ function Callins:UnitCloaked(unitID, unitDefID, unitTeam) end
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1839-L1846](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1839-L1846)
+---@see [LuaHandle.cpp#L1839-L1846](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1839-L1846)
 function Callins:UnitDecloaked(unitID, unitDefID, unitTeam) end
 
 ---Called when two units collide.
@@ -450,7 +450,7 @@ function Callins:UnitDecloaked(unitID, unitDefID, unitTeam) end
 ---
 ---@param colliderID UnitID
 ---@param collideeID UnitID
----@see [LuaHandle.cpp#L1854-L1861](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1854-L1861)
+---@see [LuaHandle.cpp#L1854-L1861](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1854-L1861)
 function Callins:UnitUnitCollision(colliderID, collideeID) end
 
 ---Called when a unit collides with a feature.
@@ -459,19 +459,19 @@ function Callins:UnitUnitCollision(colliderID, collideeID) end
 ---
 ---@param colliderID UnitID
 ---@param collideeID UnitID
----@see [LuaHandle.cpp#L1905-L1913](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1905-L1913)
+---@see [LuaHandle.cpp#L1905-L1913](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1905-L1913)
 function Callins:UnitFeatureCollision(colliderID, collideeID) end
 
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1958-L1965](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1958-L1965)
+---@see [LuaHandle.cpp#L1958-L1965](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1958-L1965)
 function Callins:UnitMoveFailed(unitID, unitDefID, unitTeam) end
 
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1980-L1987](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1980-L1987)
+---@see [LuaHandle.cpp#L1980-L1987](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1980-L1987)
 function Callins:UnitArrivedAtGoal(unitID, unitDefID, unitTeam) end
 
 ---Called just before a unit is invalid, after it finishes its death animation.
@@ -479,21 +479,21 @@ function Callins:UnitArrivedAtGoal(unitID, unitDefID, unitTeam) end
 ---@param unitID UnitID
 ---@param unitDefID UnitDefID
 ---@param unitTeam TeamID
----@see [LuaHandle.cpp#L1997-L2004](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L1997-L2004)
+---@see [LuaHandle.cpp#L1997-L2004](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L1997-L2004)
 function Callins:RenderUnitDestroyed(unitID, unitDefID, unitTeam) end
 
 ---Called when a feature is created.
 ---
 ---@param featureID FeatureID
 ---@param allyTeamID AllyTeamID
----@see [LuaHandle.cpp#L2035-L2041](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2035-L2041)
+---@see [LuaHandle.cpp#L2035-L2041](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2035-L2041)
 function Callins:FeatureCreated(featureID, allyTeamID) end
 
 ---Called when a feature is destroyed.
 ---
 ---@param featureID FeatureID
 ---@param allyTeamID AllyTeamID
----@see [LuaHandle.cpp#L2062-L2068](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2062-L2068)
+---@see [LuaHandle.cpp#L2062-L2068](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2062-L2068)
 function Callins:FeatureDestroyed(featureID, allyTeamID) end
 
 ---Called when a feature is damaged.
@@ -507,7 +507,7 @@ function Callins:FeatureDestroyed(featureID, allyTeamID) end
 ---@param attackerID UnitID
 ---@param attackerDefID UnitDefID
 ---@param attackerTeam TeamID
----@see [LuaHandle.cpp#L2089-L2102](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2089-L2102)
+---@see [LuaHandle.cpp#L2089-L2102](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2089-L2102)
 function Callins:FeatureDamaged(featureID, featureDefID, featureTeam, damage, weaponDefID, projectileID, attackerID, attackerDefID, attackerTeam) end
 
 ---Called when the projectile is created.
@@ -519,7 +519,7 @@ function Callins:FeatureDamaged(featureID, featureDefID, featureTeam, damage, we
 ---@param weaponDefID WeaponDefID
 ---@see Script.SetWatchProjectile
 ---@see Script.SetWatchWeapon
----@see [LuaHandle.cpp#L2144-L2156](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2144-L2156)
+---@see [LuaHandle.cpp#L2144-L2156](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2144-L2156)
 function Callins:ProjectileCreated(proID, proOwnerID, weaponDefID) end
 
 ---Called when the projectile is destroyed.
@@ -529,7 +529,7 @@ function Callins:ProjectileCreated(proID, proOwnerID, weaponDefID) end
 ---@param proWeaponDefID WeaponDefID
 ---@see Script.SetWatchProjectile
 ---@see Script.SetWatchWeapon
----@see [LuaHandle.cpp#L2196-L2205](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2196-L2205)
+---@see [LuaHandle.cpp#L2196-L2205](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2196-L2205)
 function Callins:ProjectileDestroyed(proID, ownerID, proWeaponDefID) end
 
 ---Called when an explosion occurs.
@@ -545,7 +545,7 @@ function Callins:ProjectileDestroyed(proID, ownerID, proWeaponDefID) end
 ---@return boolean noGfx if then no graphical effects are drawn by the engine for this explosion.
 ---@see Script.SetWatchExplosion
 ---@see Script.SetWatchWeapon
----@see [LuaHandle.cpp#L2262-L2279](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2262-L2279)
+---@see [LuaHandle.cpp#L2262-L2279](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2262-L2279)
 function Callins:Explosion(weaponDefID, px, py, pz, attackerID, projectileID) end
 
 ---Called when a units stockpile of weapons increases or decreases.
@@ -556,20 +556,20 @@ function Callins:Explosion(weaponDefID, px, py, pz, attackerID, projectileID) en
 ---@param weaponNum integer
 ---@param oldCount integer
 ---@param newCount integer
----@see [LuaHandle.cpp#L2328-L2338](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2328-L2338)
+---@see [LuaHandle.cpp#L2328-L2338](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2328-L2338)
 function Callins:StockpileChanged(unitID, unitDefID, unitTeam, weaponNum, oldCount, newCount) end
 
 ---Receives messages from unsynced sent via `Spring.SendLuaRulesMsg` or `Spring.SendLuaUIMsg`.
 ---
 ---@param msg string
 ---@param playerID PlayerID
----@see [LuaHandle.cpp#L2363-L2368](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2363-L2368)
+---@see [LuaHandle.cpp#L2363-L2368](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2363-L2368)
 function Callins:RecvLuaMsg(msg, playerID) end
 
 ---Called when a chat command '/save' or '/savegame' is received.
 ---
 ---@param zip table a userdatum representing the savegame zip file. See Lua_SaveLoad.
----@see [LuaHandle.cpp#L2499-L2503](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2499-L2503)
+---@see [LuaHandle.cpp#L2499-L2503](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2499-L2503)
 function Callins:Save(zip) end
 
 ---Called when the unsynced copy of the height-map is altered.
@@ -578,20 +578,20 @@ function Callins:Save(zip) end
 ---@return integer z1
 ---@return integer x2
 ---@return integer z2
----@see [LuaHandle.cpp#L2525-L2532](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2525-L2532)
+---@see [LuaHandle.cpp#L2525-L2532](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2525-L2532)
 function Callins:UnsyncedHeightMapUpdate() end
 
 ---Called for every draw frame (including when the game is paused) and at least once per sim frame except when catching up.
 ---
 ---@param dt number the time since the last update.
----@see [LuaHandle.cpp#L2552-L2556](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2552-L2556)
+---@see [LuaHandle.cpp#L2552-L2556](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2552-L2556)
 function Callins:Update(dt) end
 
 ---Called whenever the window is resized.
 ---
 ---@param viewSizeX integer
 ---@param viewSizeY integer
----@see [LuaHandle.cpp#L2573-L2578](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2573-L2578)
+---@see [LuaHandle.cpp#L2573-L2578](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2573-L2578)
 function Callins:ViewResize(viewSizeX, viewSizeY) end
 
 ---Called whenever fonts are updated. Signals the game display lists
@@ -599,10 +599,10 @@ function Callins:ViewResize(viewSizeX, viewSizeY) end
 ---
 ---Gets called before other Update and Draw callins.
 ---
----@see [LuaHandle.cpp#L2612-L2618](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2612-L2618)
+---@see [LuaHandle.cpp#L2612-L2618](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2612-L2618)
 function Callins:FontsChanged() end
 
----@see [LuaHandle.cpp#L2633-L2635](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2633-L2635)
+---@see [LuaHandle.cpp#L2633-L2635](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2633-L2635)
 function Callins:SunChanged() end
 
 ---Batched nano particle lifecycle changes.
@@ -630,7 +630,7 @@ function Callins:SunChanged() end
 ---@param events number[] Flat event records.
 ---@param eventCount integer Number of records in `events`.
 ---@param gameFrame integer Current simulation frame.
----@see [LuaHandle.cpp#L2649-L2675](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2649-L2675)
+---@see [LuaHandle.cpp#L2649-L2675](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2649-L2675)
 function Callins:NanoParticleUpdate(events, eventCount, gameFrame) end
 
 ---Used to set the default command when a unit is selected.
@@ -639,7 +639,7 @@ function Callins:NanoParticleUpdate(events, eventCount, gameFrame) end
 ---@param id ObjectID The `unitID` or `featureID`.
 ---@param cmd integer The current command ID.
 ---@return integer cmdID The command ID to use as the default, or nil to keep the current ID.
----@see [LuaHandle.cpp#L2712-L2719](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2712-L2719)
+---@see [LuaHandle.cpp#L2712-L2719](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2712-L2719)
 function Callins:DefaultCommand(type, id, cmd) end
 
 ---Draw* Functions
@@ -649,89 +649,89 @@ function Callins:DefaultCommand(type, id, cmd) end
 ---Inside the Draw* functions, you can use the Lua OpenGL Api to draw graphics.
 ---
 ---Avoid doing heavy calculations inside these callins; ideally, do the calculations elsewhere and use Draw callins only for drawing.
----@see [LuaHandle.cpp#L2797-L2804](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2797-L2804)
+---@see [LuaHandle.cpp#L2797-L2804](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2797-L2804)
 
 ---Use this callin to update textures, shaders, etc.
 ---
 ---Doesn't render to screen!
 ---Also available to LuaMenu.
 ---
----@see [LuaHandle.cpp#L2806-L2812](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2806-L2812)
+---@see [LuaHandle.cpp#L2806-L2812](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2806-L2812)
 function Callins:DrawGenesis() end
 
 ---Spring draws command queues, 'map stuff', and map marks.
 ---
----@see [LuaHandle.cpp#L2815-L2818](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2815-L2818)
+---@see [LuaHandle.cpp#L2815-L2818](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2815-L2818)
 function Callins:DrawWorld() end
 
 ---Spring draws units, features, some water types, cloaked units, and the sun.
 ---
----@see [LuaHandle.cpp#L2821-L2824](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2821-L2824)
+---@see [LuaHandle.cpp#L2821-L2824](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2821-L2824)
 function Callins:DrawWorldPreUnit() end
 
 ---Called before decals are drawn
 ---
----@see [LuaHandle.cpp#L2827-L2830](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2827-L2830)
+---@see [LuaHandle.cpp#L2827-L2830](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2827-L2830)
 function Callins:DrawPreDecals() end
 
----@see [LuaHandle.cpp#L2833-L2835](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2833-L2835)
+---@see [LuaHandle.cpp#L2833-L2835](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2833-L2835)
 function Callins:DrawWaterPost() end
 
 ---Invoked after semi-transparent shadows pass is about to conclude
 ---
 ---This callin has depth and color buffer of shadowmap bound via FBO as well as the FFP state to do "semi-transparent" shadows pass (traditionally only used to draw shadows of shadow casting semi-transparent particles). Can be used to draw nice colored shadows.
 ---
----@see [LuaHandle.cpp#L2838-L2842](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2838-L2842)
+---@see [LuaHandle.cpp#L2838-L2842](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2838-L2842)
 function Callins:DrawShadowPassTransparent() end
 
----@see [LuaHandle.cpp#L2845-L2847](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2845-L2847)
+---@see [LuaHandle.cpp#L2845-L2847](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2845-L2847)
 function Callins:DrawWorldShadow() end
 
----@see [LuaHandle.cpp#L2850-L2852](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2850-L2852)
+---@see [LuaHandle.cpp#L2850-L2852](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2850-L2852)
 function Callins:DrawWorldReflection() end
 
----@see [LuaHandle.cpp#L2855-L2857](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2855-L2857)
+---@see [LuaHandle.cpp#L2855-L2857](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2855-L2857)
 function Callins:DrawWorldRefraction() end
 
 ---Runs at the start of the forward pass when a custom map shader has been assigned via `Spring.SetMapShader` (convenient for setting uniforms).
 ---
----@see [LuaHandle.cpp#L2860-L2863](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2860-L2863)
+---@see [LuaHandle.cpp#L2860-L2863](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2860-L2863)
 function Callins:DrawGroundPreForward() end
 
----@see [LuaHandle.cpp#L2866-L2868](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2866-L2868)
+---@see [LuaHandle.cpp#L2866-L2868](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2866-L2868)
 function Callins:DrawGroundPostForward() end
 
 ---Runs at the start of the deferred pass when a custom map shader has been assigned via `Spring.SetMapShader` (convenient for setting uniforms).
 ---
----@see [LuaHandle.cpp#L2871-L2874](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2871-L2874)
+---@see [LuaHandle.cpp#L2871-L2874](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2871-L2874)
 function Callins:DrawGroundPreDeferred() end
 
----@see [LuaHandle.cpp#L2877-L2879](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2877-L2879)
+---@see [LuaHandle.cpp#L2877-L2879](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2877-L2879)
 function Callins:DrawGroundDeferred() end
 
 ---This runs at the end of its respective deferred pass.
 ---
 ---Allows proper frame compositing (with ground flashes/decals/foliage/etc, which are drawn between it and `DrawWorldPreUnit`) via `gl.CopyToTexture`.
 ---
----@see [LuaHandle.cpp#L2882-L2887](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2882-L2887)
+---@see [LuaHandle.cpp#L2882-L2887](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2882-L2887)
 function Callins:DrawGroundPostDeferred() end
 
 ---Runs at the end of the unit deferred pass.
 ---
 ---Informs Lua code it should make use of the $model_gbuffer_* textures before another pass overwrites them (and to allow proper blending with e.g. cloaked objects which are drawn between these events and DrawWorld via gl.CopyToTexture). N.B. The *PostDeferred events are only sent (and only have a real purpose) if forward drawing is disabled.
 ---
----@see [LuaHandle.cpp#L2890-L2895](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2890-L2895)
+---@see [LuaHandle.cpp#L2890-L2895](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2890-L2895)
 function Callins:DrawUnitsPostDeferred() end
 
 ---Runs at the end of the feature deferred pass to inform Lua code it should make use of the $model_gbuffer_* textures before another pass overwrites them (and to allow proper blending with e.g. cloaked objects which are drawn between these events and DrawWorld via gl.CopyToTexture). N.B. The *PostDeferred events are only sent (and only have a real purpose) if forward drawing is disabled.
 ---
----@see [LuaHandle.cpp#L2898-L2901](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2898-L2901)
+---@see [LuaHandle.cpp#L2898-L2901](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2898-L2901)
 function Callins:DrawFeaturesPostDeferred() end
 
----@see [LuaHandle.cpp#L2904-L2906](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2904-L2906)
+---@see [LuaHandle.cpp#L2904-L2906](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2904-L2906)
 function Callins:DrawShadowUnitsLua() end
 
----@see [LuaHandle.cpp#L2909-L2911](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2909-L2911)
+---@see [LuaHandle.cpp#L2909-L2911](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2909-L2911)
 function Callins:DrawShadowFeaturesLua() end
 
 ---Called when build square data is computed, before engine rendering.
@@ -743,7 +743,7 @@ function Callins:DrawShadowFeaturesLua() end
 ---@param z integer build position z
 ---@param facing number build facing
 ---@param statuses table flat 1D row-major array of BuildSquareStatus values: BLOCKED=0, OCCUPIED=1, RECLAIMABLE=2, OPEN=3
----@see [LuaHandle.cpp#L2914-L2923](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2914-L2923)
+---@see [LuaHandle.cpp#L2914-L2923](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2914-L2923)
 function Callins:DrawBuildSquare(unitDefID, x, z, facing, statuses) end
 
 ---DrawWorldPreParticles is called multiples times per draw frame.
@@ -753,19 +753,19 @@ function Callins:DrawBuildSquare(unitDefID, x, z, facing, statuses) end
 ---@param drawBelowWater boolean
 ---@param drawReflection boolean
 ---@param drawRefraction boolean
----@see [LuaHandle.cpp#L2949-L2958](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2949-L2958)
+---@see [LuaHandle.cpp#L2949-L2958](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2949-L2958)
 function Callins:DrawWorldPreParticles(drawAboveWater, drawBelowWater, drawReflection, drawRefraction) end
 
 ---Also available to LuaMenu.
 ---
 ---@param viewSizeX integer
 ---@param viewSizeY integer
----@see [LuaHandle.cpp#L2997-L3002](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L2997-L3002)
+---@see [LuaHandle.cpp#L2997-L3002](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L2997-L3002)
 function Callins:DrawScreen(viewSizeX, viewSizeY) end
 
 ---@param viewSizeX integer
 ---@param viewSizeY integer
----@see [LuaHandle.cpp#L3014-L3018](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3014-L3018)
+---@see [LuaHandle.cpp#L3014-L3018](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3014-L3018)
 function Callins:DrawScreenEffects(viewSizeX, viewSizeY) end
 
 ---Similar to DrawScreenEffects, this can be used to alter the contents of a frame after it has been completely rendered (i.e. World, MiniMap, Menu, UI).
@@ -774,17 +774,17 @@ function Callins:DrawScreenEffects(viewSizeX, viewSizeY) end
 ---
 ---@param viewSizeX integer
 ---@param viewSizeY integer
----@see [LuaHandle.cpp#L3030-L3038](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3030-L3038)
+---@see [LuaHandle.cpp#L3030-L3038](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3030-L3038)
 function Callins:DrawScreenPost(viewSizeX, viewSizeY) end
 
 ---@param sx integer relative to the minimap's position and scale.
 ---@param sy integer relative to the minimap's position and scale.
----@see [LuaHandle.cpp#L3050-L3055](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3050-L3055)
+---@see [LuaHandle.cpp#L3050-L3055](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3050-L3055)
 function Callins:DrawInMiniMap(sx, sy) end
 
 ---@param sx integer relative to the minimap's position and scale.
 ---@param sy integer relative to the minimap's position and scale.
----@see [LuaHandle.cpp#L3078-L3083](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3078-L3083)
+---@see [LuaHandle.cpp#L3078-L3083](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3078-L3083)
 function Callins:DrawInMiniMapBackground(sx, sy) end
 
 ---Called every 60 frames, calculating delta between `GameFrame` and `GameProgress`.
@@ -792,7 +792,7 @@ function Callins:DrawInMiniMapBackground(sx, sy) end
 ---Can give an ETA about catching up with simulation for mid-game join players.
 ---
 ---@param serverFrameNum integer
----@see [LuaHandle.cpp#L3153-L3159](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3153-L3159)
+---@see [LuaHandle.cpp#L3153-L3159](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3153-L3159)
 function Callins:GameProgress(serverFrameNum) end
 
 ---Called after a keybinding command runs.
@@ -804,20 +804,20 @@ function Callins:GameProgress(serverFrameNum) end
 ---
 ---Nothing is passed; call `Spring.GetKeyBindings` to read the current state.
 ---
----@see [LuaHandle.cpp#L3196-L3206](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3196-L3206)
+---@see [LuaHandle.cpp#L3196-L3206](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3196-L3206)
 function Callins:KeyBindingsChanged() end
 
 ---Called when the keymap changes
 ---
 ---Can be caused due to a change in language or keyboard
 ---
----@see [LuaHandle.cpp#L3222-L3227](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3222-L3227)
+---@see [LuaHandle.cpp#L3222-L3227](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3222-L3227)
 function Callins:KeyMapChanged() end
 
 ---Input
 ---
 ---@section input
----@see [LuaHandle.cpp#L3246-L3249](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3246-L3249)
+---@see [LuaHandle.cpp#L3246-L3249](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3246-L3249)
 
 ---Key Modifier Params
 ---
@@ -827,7 +827,7 @@ function Callins:KeyMapChanged() end
 ---@field ctrl boolean Ctrl key pressed
 ---@field meta boolean Meta/GUI key pressed
 ---@field shift boolean Shift key pressed
----@see [LuaHandle.cpp#L3252-L3261](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3252-L3261)
+---@see [LuaHandle.cpp#L3252-L3261](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3252-L3261)
 local KeyModifiers = {}
 
 ---Called repeatedly when a key is pressed down.
@@ -842,7 +842,7 @@ local KeyModifiers = {}
 ---@param scanCode integer
 ---@param actionList table? the list of actions for this keypress, when available
 ---@return boolean halt whether to halt the chain for consumers of the keypress
----@see [LuaHandle.cpp#L3264-L3278](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3264-L3278)
+---@see [LuaHandle.cpp#L3264-L3278](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3264-L3278)
 function Callins:KeyPress(keyCode, mods, isRepeat, label, utf32char, scanCode, actionList) end
 
 ---Called when the key is released.
@@ -854,19 +854,19 @@ function Callins:KeyPress(keyCode, mods, isRepeat, label, utf32char, scanCode, a
 ---@param scanCode integer
 ---@param actionList table? the list of actions for this keyrelease, when available
 ---@return boolean
----@see [LuaHandle.cpp#L3332-L3344](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3332-L3344)
+---@see [LuaHandle.cpp#L3332-L3344](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3332-L3344)
 function Callins:KeyRelease(keyCode, mods, label, utf32char, scanCode, actionList) end
 
 ---Called whenever a key press results in text input.
 ---
 ---@param utf8char string
----@see [LuaHandle.cpp#L3393-L3398](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3393-L3398)
+---@see [LuaHandle.cpp#L3393-L3398](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3393-L3398)
 function Callins:TextInput(utf8char) end
 
 ---@param utf8 string
 ---@param start integer
 ---@param length integer
----@see [LuaHandle.cpp#L3421-L3428](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3421-L3428)
+---@see [LuaHandle.cpp#L3421-L3428](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3421-L3428)
 function Callins:TextEditing(utf8, start, length) end
 
 ---Called when a mouse button is pressed.
@@ -877,7 +877,7 @@ function Callins:TextEditing(utf8, start, length) end
 ---@param y integer
 ---@param button integer
 ---@return boolean becomeMouseOwner
----@see [LuaHandle.cpp#L3451-L3460](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3451-L3460)
+---@see [LuaHandle.cpp#L3451-L3460](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3451-L3460)
 function Callins:MousePress(x, y, button) end
 
 ---Called when a mouse button is released.
@@ -888,7 +888,7 @@ function Callins:MousePress(x, y, button) end
 ---@param y integer
 ---@param button integer
 ---@return boolean becomeMouseOwner
----@see [LuaHandle.cpp#L3484-L3494](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3484-L3494)
+---@see [LuaHandle.cpp#L3484-L3494](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3484-L3494)
 function Callins:MouseRelease(x, y, button) end
 
 ---Called when the mouse is moved.
@@ -898,14 +898,14 @@ function Callins:MouseRelease(x, y, button) end
 ---@param dx integer distance travelled in x
 ---@param dy integer distance travelled in y
 ---@param button integer
----@see [LuaHandle.cpp#L3513-L3522](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3513-L3522)
+---@see [LuaHandle.cpp#L3513-L3522](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3513-L3522)
 function Callins:MouseMove(x, y, dx, dy, button) end
 
 ---Called when the mouse wheel is moved.
 ---
 ---@param up boolean the direction
 ---@param value number the amount travelled
----@see [LuaHandle.cpp#L3548-L3554](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3548-L3554)
+---@see [LuaHandle.cpp#L3548-L3554](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3548-L3554)
 function Callins:MouseWheel(up, value) end
 
 ---Called every `Update`.
@@ -915,7 +915,7 @@ function Callins:MouseWheel(up, value) end
 ---@param x integer
 ---@param y integer
 ---@return boolean isAbove
----@see [LuaHandle.cpp#L3575-L3584](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3575-L3584)
+---@see [LuaHandle.cpp#L3575-L3584](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3575-L3584)
 function Callins:IsAbove(x, y) end
 
 ---Called when `Spring.IsAbove` returns true.
@@ -923,14 +923,14 @@ function Callins:IsAbove(x, y) end
 ---@param x integer
 ---@param y integer
 ---@return string tooltip
----@see [LuaHandle.cpp#L3606-L3612](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3606-L3612)
+---@see [LuaHandle.cpp#L3606-L3612](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3606-L3612)
 function Callins:GetTooltip(x, y) end
 
 ---Called when a command is issued.
 ---
 ---@param cmdId integer?
 ---@param cmdType integer?
----@see [LuaHandle.cpp#L3634-L3639](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3634-L3639)
+---@see [LuaHandle.cpp#L3634-L3639](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3634-L3639)
 function Callins:ActiveCommandChanged(cmdId, cmdType) end
 
 ---Called whenever the camera rotation changes
@@ -938,7 +938,7 @@ function Callins:ActiveCommandChanged(cmdId, cmdType) end
 ---@param rotX number Camera rotation around the x axis in radians.
 ---@param rotY number Camera rotation around the y axis in radians.
 ---@param rotZ number Camera rotation around the z axis in radians.
----@see [LuaHandle.cpp#L3660-L3666](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3660-L3666)
+---@see [LuaHandle.cpp#L3660-L3666](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3660-L3666)
 function Callins:CameraRotationChanged(rotX, rotY, rotZ) end
 
 ---Called whenever the camera position changes
@@ -946,14 +946,14 @@ function Callins:CameraRotationChanged(rotX, rotY, rotZ) end
 ---@param posX number Camera position x in world coordinates
 ---@param posY number Camera position y in world coordinates
 ---@param posZ number Camera position z in world coordinates
----@see [LuaHandle.cpp#L3683-L3689](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3683-L3689)
+---@see [LuaHandle.cpp#L3683-L3689](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3683-L3689)
 function Callins:CameraPositionChanged(posX, posY, posZ) end
 
 ---Called when the MiniMap rotation changes
 ---
 ---@param newRot number MiniMap rotation in radians
 ---@param oldRot number MiniMap old rotation in radians
----@see [LuaHandle.cpp#L3707-L3712](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3707-L3712)
+---@see [LuaHandle.cpp#L3707-L3712](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3707-L3712)
 function Callins:MiniMapRotationChanged(newRot, oldRot) end
 
 ---Called when the MiniMap minimizes or maximizes changes
@@ -961,7 +961,7 @@ function Callins:MiniMapRotationChanged(newRot, oldRot) end
 ---@param isMinimized boolean
 ---@param isMaximized boolean
 ---@param isSlaved boolean
----@see [LuaHandle.cpp#L3729-L3735](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3729-L3735)
+---@see [LuaHandle.cpp#L3729-L3735](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3729-L3735)
 function Callins:MiniMapStateChanged(isMinimized, isMaximized, isSlaved) end
 
 ---Called when the MiniMap Geometry changes
@@ -974,7 +974,7 @@ function Callins:MiniMapStateChanged(isMinimized, isMaximized, isSlaved) end
 ---@param oldPosY integer Old y position in pixels.
 ---@param oldDimX integer Old width in pixels.
 ---@param oldDimY integer Old height in pixels.
----@see [LuaHandle.cpp#L3756-L3767](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3756-L3767)
+---@see [LuaHandle.cpp#L3756-L3767](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3756-L3767)
 function Callins:MiniMapGeometryChanged(newPosX, newPosY, newDimX, newDimY, oldPosX, oldPosY, oldDimX, oldDimY) end
 
 ---Called when a command is issued.
@@ -983,7 +983,7 @@ function Callins:MiniMapGeometryChanged(newPosX, newPosY, newDimX, newDimY, oldP
 ---@param cmdParams table
 ---@param options CommandOptions
 ---@return boolean delete Returning true deletes the command and does not send it through the network.
----@see [LuaHandle.cpp#L3791-L3798](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3791-L3798)
+---@see [LuaHandle.cpp#L3791-L3798](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3791-L3798)
 function Callins:CommandNotify(cmdID, cmdParams, options) end
 
 ---Called when the window is about to be closed (close button, Alt+F4, or a quit request from the OS).
@@ -991,32 +991,32 @@ function Callins:CommandNotify(cmdID, cmdParams, options) end
 ---Every unsynced handle is asked and one `false` is enough to keep the game running. `Spring.Quit` and `/quitforce` do not ask, so a game that vetoed can still quit later and the user can always force an exit. One click can trigger this twice, once per SDL event. Not asked while the game is still loading, so LuaIntro never receives it.
 ---
 ---@return boolean allow false keeps the game running
----@see [LuaHandle.cpp#L3827-L3833](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3827-L3833)
+---@see [LuaHandle.cpp#L3827-L3833](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3827-L3833)
 function Callins:AllowQuit() end
 
 ---Called when text is entered into the console (e.g. `Spring.Echo`).
 ---
 ---@param msg string
 ---@param priority integer
----@see [LuaHandle.cpp#L3853-L3858](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3853-L3858)
+---@see [LuaHandle.cpp#L3853-L3858](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3853-L3858)
 function Callins:AddConsoleLine(msg, priority) end
 
 ---Called when a unit is added to or removed from a control group.
 ---
 ---@param groupID GroupID
----@see [LuaHandle.cpp#L3876-L3880](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3876-L3880)
+---@see [LuaHandle.cpp#L3876-L3880](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3876-L3880)
 function Callins:GroupChanged(groupID) end
 
 ---@param type "unit"
 ---@param unitId UnitID
 ---@return string tooltip
----@see [LuaHandle.cpp#L3896-L3901](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3896-L3901)
+---@see [LuaHandle.cpp#L3896-L3901](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3896-L3901)
 function Callins:WorldTooltip(type, unitId) end
 
 ---@param type "feature"
 ---@param featureId FeatureID
 ---@return string tooltip
----@see [LuaHandle.cpp#L3902-L3907](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3902-L3907)
+---@see [LuaHandle.cpp#L3902-L3907](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3902-L3907)
 function Callins:WorldTooltip(type, featureId) end
 
 ---@param type "ground"
@@ -1024,12 +1024,12 @@ function Callins:WorldTooltip(type, featureId) end
 ---@param posY number
 ---@param posZ number
 ---@return string tooltip
----@see [LuaHandle.cpp#L3908-L3915](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3908-L3915)
+---@see [LuaHandle.cpp#L3908-L3915](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3908-L3915)
 function Callins:WorldTooltip(type, posX, posY, posZ) end
 
 ---@param type "selection"
 ---@return string tooltip
----@see [LuaHandle.cpp#L3916-L3920](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3916-L3920)
+---@see [LuaHandle.cpp#L3916-L3920](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3916-L3920)
 function Callins:WorldTooltip(type) end
 
 ---@param playerID PlayerID
@@ -1038,7 +1038,7 @@ function Callins:WorldTooltip(type) end
 ---@param posY number
 ---@param posZ number
 ---@param label string
----@see [LuaHandle.cpp#L3964-L3972](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3964-L3972)
+---@see [LuaHandle.cpp#L3964-L3972](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3964-L3972)
 function Callins:MapDrawCmd(playerID, type, posX, posY, posZ, label) end
 
 ---@param playerID PlayerID
@@ -1049,7 +1049,7 @@ function Callins:MapDrawCmd(playerID, type, posX, posY, posZ, label) end
 ---@param pos2X number
 ---@param pos2Y number
 ---@param pos2Z number
----@see [LuaHandle.cpp#L3973-L3983](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3973-L3983)
+---@see [LuaHandle.cpp#L3973-L3983](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3973-L3983)
 function Callins:MapDrawCmd(playerID, type, pos1X, pos1Y, pos1Z, pos2X, pos2Y, pos2Z) end
 
 ---@param playerID PlayerID
@@ -1058,39 +1058,39 @@ function Callins:MapDrawCmd(playerID, type, pos1X, pos1Y, pos1Z, pos2X, pos2Y, p
 ---@param posY number
 ---@param posZ number
 ---@param radius number
----@see [LuaHandle.cpp#L3984-L3992](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L3984-L3992)
+---@see [LuaHandle.cpp#L3984-L3992](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L3984-L3992)
 function Callins:MapDrawCmd(playerID, type, posX, posY, posZ, radius) end
 
 ---@enum READY_MESSAGE
----@see [LuaHandle.cpp#L4052-L4058](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4052-L4058)
+---@see [LuaHandle.cpp#L4052-L4058](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4052-L4058)
 READY_MESSAGE = {
-	---@see [LuaHandle.cpp#L4052-L4058](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4052-L4058)
+	---@see [LuaHandle.cpp#L4052-L4058](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4052-L4058)
 	WAITING = "Waiting for players",
 
 	---when waiting and currently the host, key is the first key bound to the action forcestart
-	---@see [LuaHandle.cpp#L4052-L4058](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4052-L4058)
+	---@see [LuaHandle.cpp#L4052-L4058](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4052-L4058)
 	HOST_WAITING = "Waiting for players, press key to force start",
 
 	---when current player is not ready and is not a spectator
-	---@see [LuaHandle.cpp#L4052-L4058](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4052-L4058)
+	---@see [LuaHandle.cpp#L4052-L4058](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4052-L4058)
 	CHOOSE_POS = "Choose start pos",
 
 	---where n is the number of seconds
-	---@see [LuaHandle.cpp#L4052-L4058](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4052-L4058)
+	---@see [LuaHandle.cpp#L4052-L4058](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4052-L4058)
 	STARTING = "Starting in n"
 }
 
 ---@enum READY_STATE
----@see [LuaHandle.cpp#L4060-L4065](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4060-L4065)
+---@see [LuaHandle.cpp#L4060-L4065](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4060-L4065)
 READY_STATE = {
 	---when the player hasn't joined yet (NETMSG_PLAYERNAME wasn't received)
-	---@see [LuaHandle.cpp#L4060-L4065](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4060-L4065)
+	---@see [LuaHandle.cpp#L4060-L4065](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4060-L4065)
 	MISSING = "missing",
 
-	---@see [LuaHandle.cpp#L4060-L4065](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4060-L4065)
+	---@see [LuaHandle.cpp#L4060-L4065](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4060-L4065)
 	READY = "ready",
 
-	---@see [LuaHandle.cpp#L4060-L4065](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4060-L4065)
+	---@see [LuaHandle.cpp#L4060-L4065](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4060-L4065)
 	NOT_READY = "notready"
 }
 
@@ -1104,44 +1104,44 @@ READY_STATE = {
 ---@param playerStates table<PlayerID,READY_STATE> indexed by playerID
 ---@return boolean? gameHandled disables the engine ui when true
 ---@return boolean? newReady whether the player is ready (ignored unless `gameHandled = true`)
----@see [LuaHandle.cpp#L4067-L4078](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4067-L4078)
+---@see [LuaHandle.cpp#L4067-L4078](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4067-L4078)
 function Callins:GameSetup(state, ready, playerStates) end
 
 ---@param aiTeam TeamID
 ---@param dataStr string
----@see [LuaHandle.cpp#L4121-L4125](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4121-L4125)
+---@see [LuaHandle.cpp#L4121-L4125](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4121-L4125)
 function Callins:RecvSkirmishAIMessage(aiTeam, dataStr) end
 
 ---Downloads
 ---
 ---@section downloads
----@see [LuaHandle.cpp#L4162-L4164](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4162-L4164)
+---@see [LuaHandle.cpp#L4162-L4164](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4162-L4164)
 
 ---Called when a Pr-downloader download is queued
 ---
 ---@param id integer
 ---@param name string
 ---@param type string
----@see [LuaHandle.cpp#L4166-L4172](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4166-L4172)
+---@see [LuaHandle.cpp#L4166-L4172](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4166-L4172)
 function Callins:DownloadQueued(id, name, type) end
 
 ---Called when a Pr-downloader download is started via VFS.DownloadArchive.
 ---
 ---@param id integer
----@see [LuaHandle.cpp#L4194-L4198](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4194-L4198)
+---@see [LuaHandle.cpp#L4194-L4198](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4194-L4198)
 function Callins:DownloadStarted(id) end
 
 ---Called when a Pr-downloader download finishes successfully.
 ---
 ---@param id integer
----@see [LuaHandle.cpp#L4217-L4221](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4217-L4221)
+---@see [LuaHandle.cpp#L4217-L4221](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4217-L4221)
 function Callins:DownloadFinished(id) end
 
 ---Called when a Pr-downloader download fails to complete.
 ---
 ---@param id integer
 ---@param errorID integer
----@see [LuaHandle.cpp#L4240-L4245](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4240-L4245)
+---@see [LuaHandle.cpp#L4240-L4245](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4240-L4245)
 function Callins:DownloadFailed(id, errorID) end
 
 ---Called incrementally during a Pr-downloader download.
@@ -1149,61 +1149,61 @@ function Callins:DownloadFailed(id, errorID) end
 ---@param id integer
 ---@param downloaded integer
 ---@param total integer
----@see [LuaHandle.cpp#L4265-L4271](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4265-L4271)
+---@see [LuaHandle.cpp#L4265-L4271](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4265-L4271)
 function Callins:DownloadProgress(id, downloaded, total) end
 
----@see [LuaHandle.cpp#L4389-L4389](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4389-L4389)
+---@see [LuaHandle.cpp#L4389-L4389](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4389-L4389)
 Script.NO_ACCESS_TEAM = -1
 
----@see [LuaHandle.cpp#L4391-L4391](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4391-L4391)
+---@see [LuaHandle.cpp#L4391-L4391](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4391-L4391)
 Script.ALL_ACCESS_TEAM = -2
 
 ---@return string name
----@see [LuaHandle.cpp#L4412-L4415](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4412-L4415)
+---@see [LuaHandle.cpp#L4412-L4415](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4412-L4415)
 function Script.GetName() end
 
 ---@return boolean synced
----@see [LuaHandle.cpp#L4423-L4426](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4423-L4426)
+---@see [LuaHandle.cpp#L4423-L4426](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4423-L4426)
 function Script.GetSynced() end
 
 ---@return boolean fullCtrl
----@see [LuaHandle.cpp#L4434-L4437](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4434-L4437)
+---@see [LuaHandle.cpp#L4434-L4437](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4434-L4437)
 function Script.GetFullCtrl() end
 
 ---@return boolean fullRead
----@see [LuaHandle.cpp#L4445-L4448](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4445-L4448)
+---@see [LuaHandle.cpp#L4445-L4448](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4445-L4448)
 function Script.GetFullRead() end
 
 ---@return TeamID teamID
----@see [LuaHandle.cpp#L4456-L4459](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4456-L4459)
+---@see [LuaHandle.cpp#L4456-L4459](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4456-L4459)
 function Script.GetCtrlTeam() end
 
 ---@return TeamID teamID
----@see [LuaHandle.cpp#L4467-L4470](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4467-L4470)
+---@see [LuaHandle.cpp#L4467-L4470](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4467-L4470)
 function Script.GetReadTeam() end
 
 ---@return AllyTeamID allyTeamID
----@see [LuaHandle.cpp#L4478-L4481](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4478-L4481)
+---@see [LuaHandle.cpp#L4478-L4481](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4478-L4481)
 function Script.GetReadAllyTeam() end
 
 ---@return TeamID teamID
----@see [LuaHandle.cpp#L4489-L4492](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4489-L4492)
+---@see [LuaHandle.cpp#L4489-L4492](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4489-L4492)
 function Script.GetSelectTeam() end
 
 ---@return integer? global
----@see [LuaHandle.cpp#L4500-L4503](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4500-L4503)
+---@see [LuaHandle.cpp#L4500-L4503](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4500-L4503)
 function Script.GetGlobal() end
 
 ---@return integer? registry
----@see [LuaHandle.cpp#L4514-L4517](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4514-L4517)
+---@see [LuaHandle.cpp#L4514-L4517](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4514-L4517)
 function Script.GetRegistry() end
 
 ---@param frameDelay integer
 ---@param func fun(...)
----@see [LuaHandle.cpp#L4534-L4538](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4534-L4538)
+---@see [LuaHandle.cpp#L4534-L4538](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4534-L4538)
 function Script.DelayByFrames(frameDelay, func) end
 
 ---@param name string
 ---@return nil
----@see [LuaHandle.cpp#L4584-L4588](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaHandle.cpp#L4584-L4588)
+---@see [LuaHandle.cpp#L4584-L4588](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaHandle.cpp#L4584-L4588)
 function Script.UpdateCallIn(name) end

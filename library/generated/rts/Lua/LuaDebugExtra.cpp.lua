@@ -13,28 +13,28 @@
 ---
 ---@param keycode integer
 ---@return nil
----@see [LuaDebugExtra.cpp#L100-L109](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaDebugExtra.cpp#L100-L109)
+---@see [LuaDebugExtra.cpp#L100-L109](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaDebugExtra.cpp#L100-L109)
 function debug.emulateKeyPress(keycode) end
 
 ---Emulate a held keyboard key being released.
 ---
 ---@param keycode integer
 ---@return nil
----@see [LuaDebugExtra.cpp#L113-L118](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaDebugExtra.cpp#L113-L118)
+---@see [LuaDebugExtra.cpp#L113-L118](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaDebugExtra.cpp#L113-L118)
 function debug.emulateKeyRelease(keycode) end
 
 ---Emulate a mouse button being pressed and held.
 ---
 ---@param button integer
 ---@return nil
----@see [LuaDebugExtra.cpp#L122-L127](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaDebugExtra.cpp#L122-L127)
+---@see [LuaDebugExtra.cpp#L122-L127](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaDebugExtra.cpp#L122-L127)
 function debug.emulateMousePress(button) end
 
 ---Emulate a held mouse button being released.
 ---
 ---@param button integer
 ---@return nil
----@see [LuaDebugExtra.cpp#L153-L158](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaDebugExtra.cpp#L153-L158)
+---@see [LuaDebugExtra.cpp#L153-L158](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaDebugExtra.cpp#L153-L158)
 function debug.emulateMouseRelease(button) end
 
 ---Emulate the cursor moving to a screen position.
@@ -45,11 +45,11 @@ function debug.emulateMouseRelease(button) end
 ---@param x integer
 ---@param y integer
 ---@return nil
----@see [LuaDebugExtra.cpp#L174-L183](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaDebugExtra.cpp#L174-L183)
+---@see [LuaDebugExtra.cpp#L174-L183](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaDebugExtra.cpp#L174-L183)
 function debug.emulateMouseMove(x, y) end
 
 ---Release everything currently held via emulation.
 ---
 ---@return nil
----@see [LuaDebugExtra.cpp#L200-L204](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaDebugExtra.cpp#L200-L204)
+---@see [LuaDebugExtra.cpp#L200-L204](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaDebugExtra.cpp#L200-L204)
 function debug.clearEmulatedInput() end

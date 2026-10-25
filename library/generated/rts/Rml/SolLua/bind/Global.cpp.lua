@@ -11,41 +11,41 @@
 ---A current limitation in the Lua plugin is that Element member properties and functions cannot be used directly on this type.
 ---
 ---@class RmlUi.ElementPtr
----@see [Global.cpp#L110-L116](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L110-L116)
+---@see [Global.cpp#L110-L116](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L110-L116)
 RmlUi.ElementPtr = {}
 
 ---@alias RmlUi.MouseButton
 ---| 0 # Left button
 ---| 1 # Right button
 ---| 2 # Middle button
----@see [Global.cpp#L118-L123](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L118-L123)
+---@see [Global.cpp#L118-L123](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L118-L123)
 
 ---Contains a list of all child elements.
 ---
 ---@alias RmlUi.ElementChildNodesProxy RmlUi.Element[]
----@see [Global.cpp#L125-L128](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L125-L128)
+---@see [Global.cpp#L125-L128](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L125-L128)
 
 ---Contains all the attributes of an element: The stuff in the opening tag i.e. `<span class="my-class">`
 ---
 ---@alias RmlUi.ElementAttributesProxy {[string]: string|number|boolean}
----@see [Global.cpp#L130-L133](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L130-L133)
+---@see [Global.cpp#L130-L133](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L130-L133)
 
 ---Gets the rcss styles associated with an element. As far as I can tell, the values will always be a string.
 ---
 ---@alias RmlUi.ElementStyleProxy { [string]: string }
----@see [Global.cpp#L135-L138](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L135-L138)
+---@see [Global.cpp#L135-L138](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L135-L138)
 
 ---Create a new context.
 ---
 ---@param name string
 ---@return RmlUi.Context? nil if failed.
----@see [Global.cpp#L142-L149](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L142-L149)
+---@see [Global.cpp#L142-L149](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L142-L149)
 function RmlUi.CreateContext(name) end
 
 ---Remove a context.
 ---
 ---@param context string|RmlUi.Context
----@see [Global.cpp#L159-L165](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L159-L165)
+---@see [Global.cpp#L159-L165](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L159-L165)
 function RmlUi.RemoveContext(context) end
 
 ---Load a font face.
@@ -55,14 +55,14 @@ function RmlUi.RemoveContext(context) end
 ---@param weight RmlUi.font_weight?
 ---@param face_index number? The index of the font face within a font collection.
 ---@return boolean success
----@see [Global.cpp#L170-L180](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L170-L180)
+---@see [Global.cpp#L170-L180](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L170-L180)
 function RmlUi.LoadFontFace(file_path, fallback, weight, face_index) end
 
 ---Get a context by name.
 ---
 ---@param name string
 ---@return RmlUi.Context? nil if failed.
----@see [Global.cpp#L188-L195](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L188-L195)
+---@see [Global.cpp#L188-L195](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L188-L195)
 function RmlUi.GetContext(name) end
 
 ---@alias RmlUi.EventID
@@ -101,7 +101,7 @@ function RmlUi.GetContext(name) end
 ---| 32 # Tabchange
 ---| 33 # NumDefinedIDs
 ---| integer # Custom ID
----@see [Global.cpp#L198-L235](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L198-L235)
+---@see [Global.cpp#L198-L235](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L198-L235)
 
 ---Register a new event type.
 ---
@@ -110,7 +110,7 @@ function RmlUi.GetContext(name) end
 ---@param bubbles boolean?
 ---@param default_phase RmlUi.default_action_phase?
 ---@return RmlUi.EventID
----@see [Global.cpp#L237-L247](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L237-L247)
+---@see [Global.cpp#L237-L247](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L237-L247)
 function RmlUi.RegiserEventType(event_type, interruptible, bubbles, default_phase) end
 
 ---Add a translation string.
@@ -118,12 +118,12 @@ function RmlUi.RegiserEventType(event_type, interruptible, bubbles, default_phas
 ---@param key string
 ---@param translation string
 ---@return boolean success
----@see [Global.cpp#L249-L257](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L249-L257)
+---@see [Global.cpp#L249-L257](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L249-L257)
 function RmlUi.AddTranslationString(key, translation) end
 
 ---Clear registered translations.
 ---
----@see [Global.cpp#L261-L265](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L261-L265)
+---@see [Global.cpp#L261-L265](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L261-L265)
 function RmlUi.ClearTranslations() end
 
 ---Converts the css names for cursors to the Recoil Engine names for cursors like `RmlUi.SetMouseCursorAlias("pointer", 'Move')`.
@@ -131,803 +131,803 @@ function RmlUi.ClearTranslations() end
 ---
 ---@param rml_name string name used in rml script
 ---@param recoil_name string name used in recoil
----@see [Global.cpp#L269-L277](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L269-L277)
+---@see [Global.cpp#L269-L277](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L269-L277)
 function RmlUi.SetMouseCursorAlias(rml_name, recoil_name) end
 
 ---Set which context the debug inspector is meant to inspect.
 ---
 ---@param context string | RmlUi.Context
----@see [Global.cpp#L279-L285](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L279-L285)
+---@see [Global.cpp#L279-L285](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L279-L285)
 function RmlUi.SetDebugContext(context) end
 
 ---@type RmlUi.Context[]
----@see [Global.cpp#L289-L289](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L289-L289)
+---@see [Global.cpp#L289-L289](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L289-L289)
 RmlUi.contexts = nil
 
 ---RmlUi version
 ---
 ---@type string
----@see [Global.cpp#L292-L292](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L292-L292)
+---@see [Global.cpp#L292-L292](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L292-L292)
 RmlUi.version = nil
 
 ---Clear the list of paths requested for a document for the purpose of GetDocumentPathRequests.
 ---Does not clear anything else related to those requests themselves.
 ---
 ---@param document_path string path of document
----@see [Global.cpp#L296-L303](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L296-L303)
+---@see [Global.cpp#L296-L303](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L296-L303)
 function RmlUi.ClearDocumentPathRequests(document_path) end
 
 ---Retrieve the list of paths requested by the loaded RML document since the most recent RmlUi.ClearDocumentPathRequests call.
 ---
 ---@param document_path string path of document
 ---@return string[] array of paths requested by the document
----@see [Global.cpp#L309-L316](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L309-L316)
+---@see [Global.cpp#L309-L316](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L309-L316)
 function RmlUi.GetDocumentPathRequests(document_path) end
 
 ---@enum RmlUi.key_identifier
----@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
+---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
 RmlUi.key_identifier = {
 	---@type integer
-	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
+	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
 	["0"] = nil,
 
 	---@type integer
-	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
+	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
 	["1"] = nil,
 
 	---@type integer
-	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
+	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
 	["2"] = nil,
 
 	---@type integer
-	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
+	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
 	["3"] = nil,
 
 	---@type integer
-	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
+	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
 	["4"] = nil,
 
 	---@type integer
-	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
+	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
 	["5"] = nil,
 
 	---@type integer
-	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
+	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
 	["6"] = nil,
 
 	---@type integer
-	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
+	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
 	["7"] = nil,
 
 	---@type integer
-	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
+	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
 	["8"] = nil,
 
 	---@type integer
-	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
+	---@see [Global.cpp#L321-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L321-L333)
 	["9"] = nil,
 
 	---@type integer
-	---@see [Global.cpp#L339-L339](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L339-L339)
+	---@see [Global.cpp#L339-L339](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L339-L339)
 	UNKNOWN = nil,
 
 	---@type integer
-	---@see [Global.cpp#L341-L341](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L341-L341)
+	---@see [Global.cpp#L341-L341](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L341-L341)
 	SPACE = nil,
 
 	---@type integer
-	---@see [Global.cpp#L353-L353](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L353-L353)
+	---@see [Global.cpp#L353-L353](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L353-L353)
 	A = nil,
 
 	---@type integer
-	---@see [Global.cpp#L355-L355](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L355-L355)
+	---@see [Global.cpp#L355-L355](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L355-L355)
 	B = nil,
 
 	---@type integer
-	---@see [Global.cpp#L357-L357](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L357-L357)
+	---@see [Global.cpp#L357-L357](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L357-L357)
 	C = nil,
 
 	---@type integer
-	---@see [Global.cpp#L359-L359](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L359-L359)
+	---@see [Global.cpp#L359-L359](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L359-L359)
 	D = nil,
 
 	---@type integer
-	---@see [Global.cpp#L361-L361](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L361-L361)
+	---@see [Global.cpp#L361-L361](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L361-L361)
 	E = nil,
 
 	---@type integer
-	---@see [Global.cpp#L363-L363](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L363-L363)
+	---@see [Global.cpp#L363-L363](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L363-L363)
 	F = nil,
 
 	---@type integer
-	---@see [Global.cpp#L365-L365](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L365-L365)
+	---@see [Global.cpp#L365-L365](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L365-L365)
 	G = nil,
 
 	---@type integer
-	---@see [Global.cpp#L367-L367](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L367-L367)
+	---@see [Global.cpp#L367-L367](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L367-L367)
 	H = nil,
 
 	---@type integer
-	---@see [Global.cpp#L369-L369](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L369-L369)
+	---@see [Global.cpp#L369-L369](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L369-L369)
 	I = nil,
 
 	---@type integer
-	---@see [Global.cpp#L371-L371](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L371-L371)
+	---@see [Global.cpp#L371-L371](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L371-L371)
 	J = nil,
 
 	---@type integer
-	---@see [Global.cpp#L373-L373](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L373-L373)
+	---@see [Global.cpp#L373-L373](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L373-L373)
 	K = nil,
 
 	---@type integer
-	---@see [Global.cpp#L375-L375](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L375-L375)
+	---@see [Global.cpp#L375-L375](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L375-L375)
 	L = nil,
 
 	---@type integer
-	---@see [Global.cpp#L377-L377](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L377-L377)
+	---@see [Global.cpp#L377-L377](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L377-L377)
 	M = nil,
 
 	---@type integer
-	---@see [Global.cpp#L379-L379](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L379-L379)
+	---@see [Global.cpp#L379-L379](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L379-L379)
 	N = nil,
 
 	---@type integer
-	---@see [Global.cpp#L381-L381](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L381-L381)
+	---@see [Global.cpp#L381-L381](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L381-L381)
 	O = nil,
 
 	---@type integer
-	---@see [Global.cpp#L383-L383](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L383-L383)
+	---@see [Global.cpp#L383-L383](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L383-L383)
 	P = nil,
 
 	---@type integer
-	---@see [Global.cpp#L385-L385](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L385-L385)
+	---@see [Global.cpp#L385-L385](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L385-L385)
 	Q = nil,
 
 	---@type integer
-	---@see [Global.cpp#L387-L387](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L387-L387)
+	---@see [Global.cpp#L387-L387](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L387-L387)
 	R = nil,
 
 	---@type integer
-	---@see [Global.cpp#L389-L389](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L389-L389)
+	---@see [Global.cpp#L389-L389](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L389-L389)
 	S = nil,
 
 	---@type integer
-	---@see [Global.cpp#L391-L391](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L391-L391)
+	---@see [Global.cpp#L391-L391](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L391-L391)
 	T = nil,
 
 	---@type integer
-	---@see [Global.cpp#L393-L393](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L393-L393)
+	---@see [Global.cpp#L393-L393](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L393-L393)
 	U = nil,
 
 	---@type integer
-	---@see [Global.cpp#L395-L395](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L395-L395)
+	---@see [Global.cpp#L395-L395](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L395-L395)
 	V = nil,
 
 	---@type integer
-	---@see [Global.cpp#L397-L397](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L397-L397)
+	---@see [Global.cpp#L397-L397](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L397-L397)
 	W = nil,
 
 	---@type integer
-	---@see [Global.cpp#L399-L399](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L399-L399)
+	---@see [Global.cpp#L399-L399](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L399-L399)
 	X = nil,
 
 	---@type integer
-	---@see [Global.cpp#L401-L401](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L401-L401)
+	---@see [Global.cpp#L401-L401](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L401-L401)
 	Y = nil,
 
 	---@type integer
-	---@see [Global.cpp#L403-L403](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L403-L403)
+	---@see [Global.cpp#L403-L403](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L403-L403)
 	Z = nil,
 
 	---@type integer
-	---@see [Global.cpp#L405-L405](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L405-L405)
+	---@see [Global.cpp#L405-L405](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L405-L405)
 	OEM_1 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L407-L407](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L407-L407)
+	---@see [Global.cpp#L407-L407](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L407-L407)
 	OEM_PLUS = nil,
 
 	---@type integer
-	---@see [Global.cpp#L409-L409](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L409-L409)
+	---@see [Global.cpp#L409-L409](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L409-L409)
 	OEM_COMMA = nil,
 
 	---@type integer
-	---@see [Global.cpp#L411-L411](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L411-L411)
+	---@see [Global.cpp#L411-L411](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L411-L411)
 	OEM_MINUS = nil,
 
 	---@type integer
-	---@see [Global.cpp#L413-L413](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L413-L413)
+	---@see [Global.cpp#L413-L413](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L413-L413)
 	OEM_PERIOD = nil,
 
 	---@type integer
-	---@see [Global.cpp#L415-L415](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L415-L415)
+	---@see [Global.cpp#L415-L415](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L415-L415)
 	OEM_2 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L417-L417](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L417-L417)
+	---@see [Global.cpp#L417-L417](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L417-L417)
 	OEM_3 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L419-L419](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L419-L419)
+	---@see [Global.cpp#L419-L419](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L419-L419)
 	OEM_4 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L421-L421](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L421-L421)
+	---@see [Global.cpp#L421-L421](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L421-L421)
 	OEM_5 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L423-L423](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L423-L423)
+	---@see [Global.cpp#L423-L423](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L423-L423)
 	OEM_6 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L425-L425](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L425-L425)
+	---@see [Global.cpp#L425-L425](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L425-L425)
 	OEM_7 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L427-L427](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L427-L427)
+	---@see [Global.cpp#L427-L427](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L427-L427)
 	OEM_8 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L429-L429](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L429-L429)
+	---@see [Global.cpp#L429-L429](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L429-L429)
 	OEM_102 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L431-L431](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L431-L431)
+	---@see [Global.cpp#L431-L431](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L431-L431)
 	NUMPAD0 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L433-L433](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L433-L433)
+	---@see [Global.cpp#L433-L433](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L433-L433)
 	NUMPAD1 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L435-L435](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L435-L435)
+	---@see [Global.cpp#L435-L435](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L435-L435)
 	NUMPAD2 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L437-L437](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L437-L437)
+	---@see [Global.cpp#L437-L437](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L437-L437)
 	NUMPAD3 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L439-L439](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L439-L439)
+	---@see [Global.cpp#L439-L439](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L439-L439)
 	NUMPAD4 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L441-L441](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L441-L441)
+	---@see [Global.cpp#L441-L441](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L441-L441)
 	NUMPAD5 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L443-L443](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L443-L443)
+	---@see [Global.cpp#L443-L443](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L443-L443)
 	NUMPAD6 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L445-L445](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L445-L445)
+	---@see [Global.cpp#L445-L445](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L445-L445)
 	NUMPAD7 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L447-L447](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L447-L447)
+	---@see [Global.cpp#L447-L447](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L447-L447)
 	NUMPAD8 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L449-L449](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L449-L449)
+	---@see [Global.cpp#L449-L449](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L449-L449)
 	NUMPAD9 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L451-L451](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L451-L451)
+	---@see [Global.cpp#L451-L451](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L451-L451)
 	NUMPADENTER = nil,
 
 	---@type integer
-	---@see [Global.cpp#L453-L453](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L453-L453)
+	---@see [Global.cpp#L453-L453](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L453-L453)
 	MULTIPLY = nil,
 
 	---@type integer
-	---@see [Global.cpp#L455-L455](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L455-L455)
+	---@see [Global.cpp#L455-L455](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L455-L455)
 	ADD = nil,
 
 	---@type integer
-	---@see [Global.cpp#L457-L457](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L457-L457)
+	---@see [Global.cpp#L457-L457](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L457-L457)
 	SEPARATOR = nil,
 
 	---@type integer
-	---@see [Global.cpp#L459-L459](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L459-L459)
+	---@see [Global.cpp#L459-L459](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L459-L459)
 	SUBTRACT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L461-L461](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L461-L461)
+	---@see [Global.cpp#L461-L461](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L461-L461)
 	DECIMAL = nil,
 
 	---@type integer
-	---@see [Global.cpp#L463-L463](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L463-L463)
+	---@see [Global.cpp#L463-L463](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L463-L463)
 	DIVIDE = nil,
 
 	---@type integer
-	---@see [Global.cpp#L465-L465](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L465-L465)
+	---@see [Global.cpp#L465-L465](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L465-L465)
 	OEM_NEC_EQUAL = nil,
 
 	---@type integer
-	---@see [Global.cpp#L467-L467](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L467-L467)
+	---@see [Global.cpp#L467-L467](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L467-L467)
 	BACK = nil,
 
 	---@type integer
-	---@see [Global.cpp#L469-L469](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L469-L469)
+	---@see [Global.cpp#L469-L469](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L469-L469)
 	TAB = nil,
 
 	---@type integer
-	---@see [Global.cpp#L471-L471](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L471-L471)
+	---@see [Global.cpp#L471-L471](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L471-L471)
 	CLEAR = nil,
 
 	---@type integer
-	---@see [Global.cpp#L473-L473](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L473-L473)
+	---@see [Global.cpp#L473-L473](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L473-L473)
 	RETURN = nil,
 
 	---@type integer
-	---@see [Global.cpp#L475-L475](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L475-L475)
+	---@see [Global.cpp#L475-L475](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L475-L475)
 	PAUSE = nil,
 
 	---@type integer
-	---@see [Global.cpp#L477-L477](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L477-L477)
+	---@see [Global.cpp#L477-L477](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L477-L477)
 	CAPITAL = nil,
 
 	---@type integer
-	---@see [Global.cpp#L479-L479](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L479-L479)
+	---@see [Global.cpp#L479-L479](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L479-L479)
 	KANA = nil,
 
 	---@type integer
-	---@see [Global.cpp#L481-L481](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L481-L481)
+	---@see [Global.cpp#L481-L481](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L481-L481)
 	HANGUL = nil,
 
 	---@type integer
-	---@see [Global.cpp#L483-L483](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L483-L483)
+	---@see [Global.cpp#L483-L483](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L483-L483)
 	JUNJA = nil,
 
 	---@type integer
-	---@see [Global.cpp#L485-L485](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L485-L485)
+	---@see [Global.cpp#L485-L485](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L485-L485)
 	FINAL = nil,
 
 	---@type integer
-	---@see [Global.cpp#L487-L487](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L487-L487)
+	---@see [Global.cpp#L487-L487](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L487-L487)
 	HANJA = nil,
 
 	---@type integer
-	---@see [Global.cpp#L489-L489](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L489-L489)
+	---@see [Global.cpp#L489-L489](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L489-L489)
 	KANJI = nil,
 
 	---@type integer
-	---@see [Global.cpp#L491-L491](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L491-L491)
+	---@see [Global.cpp#L491-L491](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L491-L491)
 	ESCAPE = nil,
 
 	---@type integer
-	---@see [Global.cpp#L493-L493](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L493-L493)
+	---@see [Global.cpp#L493-L493](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L493-L493)
 	CONVERT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L495-L495](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L495-L495)
+	---@see [Global.cpp#L495-L495](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L495-L495)
 	NONCONVERT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L497-L497](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L497-L497)
+	---@see [Global.cpp#L497-L497](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L497-L497)
 	ACCEPT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L499-L499](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L499-L499)
+	---@see [Global.cpp#L499-L499](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L499-L499)
 	MODECHANGE = nil,
 
 	---@type integer
-	---@see [Global.cpp#L501-L501](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L501-L501)
+	---@see [Global.cpp#L501-L501](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L501-L501)
 	PRIOR = nil,
 
 	---@type integer
-	---@see [Global.cpp#L503-L503](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L503-L503)
+	---@see [Global.cpp#L503-L503](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L503-L503)
 	NEXT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L505-L505](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L505-L505)
+	---@see [Global.cpp#L505-L505](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L505-L505)
 	END = nil,
 
 	---@type integer
-	---@see [Global.cpp#L507-L507](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L507-L507)
+	---@see [Global.cpp#L507-L507](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L507-L507)
 	HOME = nil,
 
 	---@type integer
-	---@see [Global.cpp#L509-L509](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L509-L509)
+	---@see [Global.cpp#L509-L509](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L509-L509)
 	LEFT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L511-L511](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L511-L511)
+	---@see [Global.cpp#L511-L511](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L511-L511)
 	UP = nil,
 
 	---@type integer
-	---@see [Global.cpp#L513-L513](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L513-L513)
+	---@see [Global.cpp#L513-L513](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L513-L513)
 	RIGHT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L515-L515](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L515-L515)
+	---@see [Global.cpp#L515-L515](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L515-L515)
 	DOWN = nil,
 
 	---@type integer
-	---@see [Global.cpp#L517-L517](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L517-L517)
+	---@see [Global.cpp#L517-L517](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L517-L517)
 	SELECT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L519-L519](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L519-L519)
+	---@see [Global.cpp#L519-L519](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L519-L519)
 	PRINT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L521-L521](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L521-L521)
+	---@see [Global.cpp#L521-L521](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L521-L521)
 	EXECUTE = nil,
 
 	---@type integer
-	---@see [Global.cpp#L523-L523](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L523-L523)
+	---@see [Global.cpp#L523-L523](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L523-L523)
 	SNAPSHOT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L525-L525](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L525-L525)
+	---@see [Global.cpp#L525-L525](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L525-L525)
 	INSERT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L527-L527](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L527-L527)
+	---@see [Global.cpp#L527-L527](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L527-L527)
 	DELETE = nil,
 
 	---@type integer
-	---@see [Global.cpp#L529-L529](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L529-L529)
+	---@see [Global.cpp#L529-L529](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L529-L529)
 	HELP = nil,
 
 	---@type integer
-	---@see [Global.cpp#L531-L531](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L531-L531)
+	---@see [Global.cpp#L531-L531](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L531-L531)
 	LWIN = nil,
 
 	---@type integer
-	---@see [Global.cpp#L533-L533](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L533-L533)
+	---@see [Global.cpp#L533-L533](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L533-L533)
 	RWIN = nil,
 
 	---@type integer
-	---@see [Global.cpp#L535-L535](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L535-L535)
+	---@see [Global.cpp#L535-L535](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L535-L535)
 	APPS = nil,
 
 	---@type integer
-	---@see [Global.cpp#L537-L537](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L537-L537)
+	---@see [Global.cpp#L537-L537](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L537-L537)
 	POWER = nil,
 
 	---@type integer
-	---@see [Global.cpp#L539-L539](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L539-L539)
+	---@see [Global.cpp#L539-L539](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L539-L539)
 	SLEEP = nil,
 
 	---@type integer
-	---@see [Global.cpp#L541-L541](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L541-L541)
+	---@see [Global.cpp#L541-L541](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L541-L541)
 	WAKE = nil,
 
 	---@type integer
-	---@see [Global.cpp#L543-L543](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L543-L543)
+	---@see [Global.cpp#L543-L543](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L543-L543)
 	F1 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L545-L545](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L545-L545)
+	---@see [Global.cpp#L545-L545](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L545-L545)
 	F2 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L547-L547](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L547-L547)
+	---@see [Global.cpp#L547-L547](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L547-L547)
 	F3 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L549-L549](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L549-L549)
+	---@see [Global.cpp#L549-L549](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L549-L549)
 	F4 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L551-L551](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L551-L551)
+	---@see [Global.cpp#L551-L551](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L551-L551)
 	F5 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L553-L553](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L553-L553)
+	---@see [Global.cpp#L553-L553](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L553-L553)
 	F6 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L555-L555](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L555-L555)
+	---@see [Global.cpp#L555-L555](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L555-L555)
 	F7 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L557-L557](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L557-L557)
+	---@see [Global.cpp#L557-L557](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L557-L557)
 	F8 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L559-L559](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L559-L559)
+	---@see [Global.cpp#L559-L559](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L559-L559)
 	F9 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L561-L561](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L561-L561)
+	---@see [Global.cpp#L561-L561](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L561-L561)
 	F10 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L563-L563](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L563-L563)
+	---@see [Global.cpp#L563-L563](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L563-L563)
 	F11 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L565-L565](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L565-L565)
+	---@see [Global.cpp#L565-L565](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L565-L565)
 	F12 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L567-L567](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L567-L567)
+	---@see [Global.cpp#L567-L567](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L567-L567)
 	F13 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L569-L569](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L569-L569)
+	---@see [Global.cpp#L569-L569](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L569-L569)
 	F14 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L571-L571](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L571-L571)
+	---@see [Global.cpp#L571-L571](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L571-L571)
 	F15 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L573-L573](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L573-L573)
+	---@see [Global.cpp#L573-L573](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L573-L573)
 	F16 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L575-L575](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L575-L575)
+	---@see [Global.cpp#L575-L575](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L575-L575)
 	F17 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L577-L577](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L577-L577)
+	---@see [Global.cpp#L577-L577](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L577-L577)
 	F18 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L579-L579](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L579-L579)
+	---@see [Global.cpp#L579-L579](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L579-L579)
 	F19 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L581-L581](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L581-L581)
+	---@see [Global.cpp#L581-L581](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L581-L581)
 	F20 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L583-L583](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L583-L583)
+	---@see [Global.cpp#L583-L583](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L583-L583)
 	F21 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L585-L585](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L585-L585)
+	---@see [Global.cpp#L585-L585](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L585-L585)
 	F22 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L587-L587](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L587-L587)
+	---@see [Global.cpp#L587-L587](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L587-L587)
 	F23 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L589-L589](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L589-L589)
+	---@see [Global.cpp#L589-L589](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L589-L589)
 	F24 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L591-L591](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L591-L591)
+	---@see [Global.cpp#L591-L591](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L591-L591)
 	NUMLOCK = nil,
 
 	---@type integer
-	---@see [Global.cpp#L593-L593](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L593-L593)
+	---@see [Global.cpp#L593-L593](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L593-L593)
 	SCROLL = nil,
 
 	---@type integer
-	---@see [Global.cpp#L595-L595](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L595-L595)
+	---@see [Global.cpp#L595-L595](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L595-L595)
 	OEM_FJ_JISHO = nil,
 
 	---@type integer
-	---@see [Global.cpp#L597-L597](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L597-L597)
+	---@see [Global.cpp#L597-L597](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L597-L597)
 	OEM_FJ_MASSHOU = nil,
 
 	---@type integer
-	---@see [Global.cpp#L599-L599](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L599-L599)
+	---@see [Global.cpp#L599-L599](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L599-L599)
 	OEM_FJ_TOUROKU = nil,
 
 	---@type integer
-	---@see [Global.cpp#L601-L601](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L601-L601)
+	---@see [Global.cpp#L601-L601](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L601-L601)
 	OEM_FJ_LOYA = nil,
 
 	---@type integer
-	---@see [Global.cpp#L603-L603](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L603-L603)
+	---@see [Global.cpp#L603-L603](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L603-L603)
 	OEM_FJ_ROYA = nil,
 
 	---@type integer
-	---@see [Global.cpp#L605-L605](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L605-L605)
+	---@see [Global.cpp#L605-L605](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L605-L605)
 	LSHIFT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L607-L607](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L607-L607)
+	---@see [Global.cpp#L607-L607](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L607-L607)
 	RSHIFT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L609-L609](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L609-L609)
+	---@see [Global.cpp#L609-L609](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L609-L609)
 	LCONTROL = nil,
 
 	---@type integer
-	---@see [Global.cpp#L611-L611](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L611-L611)
+	---@see [Global.cpp#L611-L611](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L611-L611)
 	RCONTROL = nil,
 
 	---@type integer
-	---@see [Global.cpp#L613-L613](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L613-L613)
+	---@see [Global.cpp#L613-L613](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L613-L613)
 	LMENU = nil,
 
 	---@type integer
-	---@see [Global.cpp#L615-L615](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L615-L615)
+	---@see [Global.cpp#L615-L615](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L615-L615)
 	RMENU = nil,
 
 	---@type integer
-	---@see [Global.cpp#L617-L617](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L617-L617)
+	---@see [Global.cpp#L617-L617](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L617-L617)
 	BROWSER_BACK = nil,
 
 	---@type integer
-	---@see [Global.cpp#L619-L619](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L619-L619)
+	---@see [Global.cpp#L619-L619](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L619-L619)
 	BROWSER_FORWARD = nil,
 
 	---@type integer
-	---@see [Global.cpp#L621-L621](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L621-L621)
+	---@see [Global.cpp#L621-L621](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L621-L621)
 	BROWSER_REFRESH = nil,
 
 	---@type integer
-	---@see [Global.cpp#L623-L623](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L623-L623)
+	---@see [Global.cpp#L623-L623](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L623-L623)
 	BROWSER_STOP = nil,
 
 	---@type integer
-	---@see [Global.cpp#L625-L625](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L625-L625)
+	---@see [Global.cpp#L625-L625](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L625-L625)
 	BROWSER_SEARCH = nil,
 
 	---@type integer
-	---@see [Global.cpp#L627-L627](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L627-L627)
+	---@see [Global.cpp#L627-L627](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L627-L627)
 	BROWSER_FAVORITES = nil,
 
 	---@type integer
-	---@see [Global.cpp#L629-L629](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L629-L629)
+	---@see [Global.cpp#L629-L629](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L629-L629)
 	BROWSER_HOME = nil,
 
 	---@type integer
-	---@see [Global.cpp#L631-L631](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L631-L631)
+	---@see [Global.cpp#L631-L631](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L631-L631)
 	VOLUME_MUTE = nil,
 
 	---@type integer
-	---@see [Global.cpp#L633-L633](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L633-L633)
+	---@see [Global.cpp#L633-L633](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L633-L633)
 	VOLUME_DOWN = nil,
 
 	---@type integer
-	---@see [Global.cpp#L635-L635](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L635-L635)
+	---@see [Global.cpp#L635-L635](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L635-L635)
 	VOLUME_UP = nil,
 
 	---@type integer
-	---@see [Global.cpp#L637-L637](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L637-L637)
+	---@see [Global.cpp#L637-L637](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L637-L637)
 	MEDIA_NEXT_TRACK = nil,
 
 	---@type integer
-	---@see [Global.cpp#L639-L639](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L639-L639)
+	---@see [Global.cpp#L639-L639](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L639-L639)
 	MEDIA_PREV_TRACK = nil,
 
 	---@type integer
-	---@see [Global.cpp#L641-L641](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L641-L641)
+	---@see [Global.cpp#L641-L641](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L641-L641)
 	MEDIA_STOP = nil,
 
 	---@type integer
-	---@see [Global.cpp#L643-L643](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L643-L643)
+	---@see [Global.cpp#L643-L643](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L643-L643)
 	MEDIA_PLAY_PAUSE = nil,
 
 	---@type integer
-	---@see [Global.cpp#L645-L645](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L645-L645)
+	---@see [Global.cpp#L645-L645](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L645-L645)
 	LAUNCH_MAIL = nil,
 
 	---@type integer
-	---@see [Global.cpp#L647-L647](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L647-L647)
+	---@see [Global.cpp#L647-L647](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L647-L647)
 	LAUNCH_MEDIA_SELECT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L649-L649](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L649-L649)
+	---@see [Global.cpp#L649-L649](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L649-L649)
 	LAUNCH_APP1 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L651-L651](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L651-L651)
+	---@see [Global.cpp#L651-L651](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L651-L651)
 	LAUNCH_APP2 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L653-L653](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L653-L653)
+	---@see [Global.cpp#L653-L653](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L653-L653)
 	OEM_AX = nil,
 
 	---@type integer
-	---@see [Global.cpp#L655-L655](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L655-L655)
+	---@see [Global.cpp#L655-L655](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L655-L655)
 	ICO_HELP = nil,
 
 	---@type integer
-	---@see [Global.cpp#L657-L657](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L657-L657)
+	---@see [Global.cpp#L657-L657](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L657-L657)
 	ICO_00 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L659-L659](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L659-L659)
+	---@see [Global.cpp#L659-L659](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L659-L659)
 	PROCESSKEY = nil,
 
 	---@type integer
-	---@see [Global.cpp#L661-L661](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L661-L661)
+	---@see [Global.cpp#L661-L661](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L661-L661)
 	ICO_CLEAR = nil,
 
 	---@type integer
-	---@see [Global.cpp#L663-L663](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L663-L663)
+	---@see [Global.cpp#L663-L663](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L663-L663)
 	ATTN = nil,
 
 	---@type integer
-	---@see [Global.cpp#L665-L665](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L665-L665)
+	---@see [Global.cpp#L665-L665](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L665-L665)
 	CRSEL = nil,
 
 	---@type integer
-	---@see [Global.cpp#L667-L667](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L667-L667)
+	---@see [Global.cpp#L667-L667](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L667-L667)
 	EXSEL = nil,
 
 	---@type integer
-	---@see [Global.cpp#L669-L669](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L669-L669)
+	---@see [Global.cpp#L669-L669](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L669-L669)
 	EREOF = nil,
 
 	---@type integer
-	---@see [Global.cpp#L671-L671](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L671-L671)
+	---@see [Global.cpp#L671-L671](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L671-L671)
 	PLAY = nil,
 
 	---@type integer
-	---@see [Global.cpp#L673-L673](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L673-L673)
+	---@see [Global.cpp#L673-L673](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L673-L673)
 	ZOOM = nil,
 
 	---@type integer
-	---@see [Global.cpp#L675-L675](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L675-L675)
+	---@see [Global.cpp#L675-L675](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L675-L675)
 	PA1 = nil,
 
 	---@type integer
-	---@see [Global.cpp#L677-L677](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L677-L677)
+	---@see [Global.cpp#L677-L677](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L677-L677)
 	OEM_CLEAR = nil
 }
 
 ---@enum RmlUi.key_modifier
----@see [Global.cpp#L683-L685](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L683-L685)
+---@see [Global.cpp#L683-L685](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L683-L685)
 RmlUi.key_modifier = {
 	---@type integer
-	---@see [Global.cpp#L689-L689](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L689-L689)
+	---@see [Global.cpp#L689-L689](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L689-L689)
 	CTRL = nil,
 
 	---@type integer
-	---@see [Global.cpp#L691-L691](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L691-L691)
+	---@see [Global.cpp#L691-L691](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L691-L691)
 	SHIFT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L693-L693](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L693-L693)
+	---@see [Global.cpp#L693-L693](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L693-L693)
 	ALT = nil,
 
 	---@type integer
-	---@see [Global.cpp#L695-L695](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L695-L695)
+	---@see [Global.cpp#L695-L695](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L695-L695)
 	META = nil,
 
 	---@type integer
-	---@see [Global.cpp#L697-L697](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L697-L697)
+	---@see [Global.cpp#L697-L697](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L697-L697)
 	CAPSLOCK = nil,
 
 	---@type integer
-	---@see [Global.cpp#L699-L699](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L699-L699)
+	---@see [Global.cpp#L699-L699](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L699-L699)
 	NUMLOCK = nil,
 
 	---@type integer
-	---@see [Global.cpp#L701-L701](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L701-L701)
+	---@see [Global.cpp#L701-L701](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L701-L701)
 	SCROLLLOCK = nil
 }
 
 ---@enum RmlUi.font_weight
----@see [Global.cpp#L705-L707](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L705-L707)
+---@see [Global.cpp#L705-L707](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L705-L707)
 RmlUi.font_weight = {
 	---@type integer
-	---@see [Global.cpp#L711-L711](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L711-L711)
+	---@see [Global.cpp#L711-L711](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L711-L711)
 	Auto = nil,
 
 	---@type integer
-	---@see [Global.cpp#L713-L713](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L713-L713)
+	---@see [Global.cpp#L713-L713](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L713-L713)
 	Normal = nil,
 
 	---@type integer
-	---@see [Global.cpp#L715-L715](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L715-L715)
+	---@see [Global.cpp#L715-L715](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L715-L715)
 	Bold = nil
 }
 
 ---@enum RmlUi.default_action_phase
----@see [Global.cpp#L719-L721](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L719-L721)
+---@see [Global.cpp#L719-L721](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L719-L721)
 RmlUi.default_action_phase = {
 	---@type integer
-	---@see [Global.cpp#L725-L725](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L725-L725)
+	---@see [Global.cpp#L725-L725](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L725-L725)
 	Auto = nil,
 
 	---@type integer
-	---@see [Global.cpp#L727-L727](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L727-L727)
+	---@see [Global.cpp#L727-L727](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L727-L727)
 	Target = nil,
 
 	---@type integer
-	---@see [Global.cpp#L729-L729](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Rml/SolLua/bind/Global.cpp#L729-L729)
+	---@see [Global.cpp#L729-L729](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Global.cpp#L729-L729)
 	TargetAndBubble = nil
 }

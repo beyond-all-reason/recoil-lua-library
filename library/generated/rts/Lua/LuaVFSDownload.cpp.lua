@@ -9,17 +9,17 @@
 ---
 ---@param filename string Archive or rapid package name.
 ---@param category string One of `map`, `game`, or `engine`.
----@see [LuaVFSDownload.cpp#L315-L320](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaVFSDownload.cpp#L315-L320)
+---@see [LuaVFSDownload.cpp#L315-L320](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaVFSDownload.cpp#L315-L320)
 function VFS.DownloadArchive(filename, category) end
 
 ---Abort a queued or active archive download.
 ---
 ---@param id integer Download queue identifier.
 ---@return boolean removed Whether a matching queued or active download was removed.
----@see [LuaVFSDownload.cpp#L346-L351](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaVFSDownload.cpp#L346-L351)
+---@see [LuaVFSDownload.cpp#L346-L351](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaVFSDownload.cpp#L346-L351)
 function VFS.AbortDownload(id) end
 
 ---Rescan all data directories for newly added archives.
 ---
----@see [LuaVFSDownload.cpp#L358-L361](https://github.com/beyond-all-reason/RecoilEngine/blob/d204b9c095/rts/Lua/LuaVFSDownload.cpp#L358-L361)
+---@see [LuaVFSDownload.cpp#L358-L361](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaVFSDownload.cpp#L358-L361)
 function VFS.ScanAllDirs() end
