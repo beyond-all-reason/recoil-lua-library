@@ -10,95 +10,95 @@
 ---Note, the `CMDTYPE[]` table is bidirectional. That means: `CMDTYPE[CMDTYPE.ICON] := "CMDTYPE_ICON"`
 ---
 ---@enum CMDTYPE
----@see [LuaConstCMDTYPE.cpp#L11-L17](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L11-L17)
+---@see [LuaConstCMDTYPE.cpp#L11-L17](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L11-L17)
 CMDTYPE = {
 	---Expect 0 parameters in return.
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L22-L22](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L22-L22)
+	---@see [LuaConstCMDTYPE.cpp#L22-L22](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L22-L22)
 	ICON = nil,
 
 	---Expect 1 parameter in return (number selected mode).
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L24-L24](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L24-L24)
+	---@see [LuaConstCMDTYPE.cpp#L24-L24](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L24-L24)
 	ICON_MODE = nil,
 
 	---Expect 3 parameters in return (mappos).
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L26-L26](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L26-L26)
+	---@see [LuaConstCMDTYPE.cpp#L26-L26](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L26-L26)
 	ICON_MAP = nil,
 
 	---Expect 4 parameters in return (mappos+radius).
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L28-L28](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L28-L28)
+	---@see [LuaConstCMDTYPE.cpp#L28-L28](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L28-L28)
 	ICON_AREA = nil,
 
 	---Expect 1 parameters in return (unitid).
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L30-L30](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L30-L30)
+	---@see [LuaConstCMDTYPE.cpp#L30-L30](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L30-L30)
 	ICON_UNIT = nil,
 
 	---Expect 1 parameters in return (unitid) or 3 parameters in return (mappos).
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L32-L32](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L32-L32)
+	---@see [LuaConstCMDTYPE.cpp#L32-L32](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L32-L32)
 	ICON_UNIT_OR_MAP = nil,
 
 	---Expect 3 or 6 parameters in return (middle and right side of front if a front was defined).
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L34-L34](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L34-L34)
+	---@see [LuaConstCMDTYPE.cpp#L34-L34](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L34-L34)
 	ICON_FRONT = nil,
 
 	---Expect 1 parameter in return (unitid) or 4 parameters in return (mappos+radius).
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L36-L36](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L36-L36)
+	---@see [LuaConstCMDTYPE.cpp#L36-L36](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L36-L36)
 	ICON_UNIT_OR_AREA = nil,
 
 	---Expect command page used with `CMD_INTERNAL`.
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L38-L38](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L38-L38)
+	---@see [LuaConstCMDTYPE.cpp#L38-L38](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L38-L38)
 	NEXT = nil,
 
 	---Expect command page used with `CMD_INTERNAL`.
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L40-L40](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L40-L40)
+	---@see [LuaConstCMDTYPE.cpp#L40-L40](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L40-L40)
 	PREV = nil,
 
 	---Expect 1 parameter in return (unitid or Game.maxUnits+featureid) or 4 parameters in return (mappos+radius).
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L42-L42](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L42-L42)
+	---@see [LuaConstCMDTYPE.cpp#L42-L42](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L42-L42)
 	ICON_UNIT_FEATURE_OR_AREA = nil,
 
 	---Expect 3 parameters in return (mappos).
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L44-L44](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L44-L44)
+	---@see [LuaConstCMDTYPE.cpp#L44-L44](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L44-L44)
 	ICON_BUILDING = nil,
 
 	---Expect with `CMD_INTERNAL`.
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L46-L46](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L46-L46)
+	---@see [LuaConstCMDTYPE.cpp#L46-L46](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L46-L46)
 	CUSTOM = nil,
 
 	---Expect 1 parameter in return (unitid) or 3 parameters in return (mappos) or 6 parameters in return (startpos+endpos).
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L48-L48](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L48-L48)
+	---@see [LuaConstCMDTYPE.cpp#L48-L48](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L48-L48)
 	ICON_UNIT_OR_RECTANGLE = nil,
 
 	---Expect 1 parameter in return (number).
 	---
 	---@type integer
-	---@see [LuaConstCMDTYPE.cpp#L50-L50](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaConstCMDTYPE.cpp#L50-L50)
+	---@see [LuaConstCMDTYPE.cpp#L50-L50](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaConstCMDTYPE.cpp#L50-L50)
 	NUMBER = nil
 }

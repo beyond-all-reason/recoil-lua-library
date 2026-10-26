@@ -12,7 +12,7 @@
 ---@param x number
 ---@param y number
 ---@return number hypotenuse `sqrt(x*x+y*y)`
----@see [LuaMathExtra.cpp#L59-L68](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMathExtra.cpp#L59-L68)
+---@see [LuaMathExtra.cpp#L59-L68](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMathExtra.cpp#L59-L68)
 function math.hypot(x, y) end
 
 ---Returns the length of the diagonal of an n-dimensional box (or the length of
@@ -22,7 +22,7 @@ function math.hypot(x, y) end
 ---@param x number
 ---@param ... number
 ---@return number diagonal
----@see [LuaMathExtra.cpp#L76-L85](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMathExtra.cpp#L76-L85)
+---@see [LuaMathExtra.cpp#L76-L85](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMathExtra.cpp#L76-L85)
 function math.diag(x, ...) end
 
 ---Returns x clamped to min and max boundaries.
@@ -31,14 +31,14 @@ function math.diag(x, ...) end
 ---@param min number
 ---@param max number
 ---@return number clamped
----@see [LuaMathExtra.cpp#L99-L106](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMathExtra.cpp#L99-L106)
+---@see [LuaMathExtra.cpp#L99-L106](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMathExtra.cpp#L99-L106)
 function math.clamp(value, min, max) end
 
 ---Returns 0 if x == 0, 1 if x > 0, -1 if x < 0
 ---
 ---@param x number
 ---@return number sign
----@see [LuaMathExtra.cpp#L122-L127](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMathExtra.cpp#L122-L127)
+---@see [LuaMathExtra.cpp#L122-L127](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMathExtra.cpp#L122-L127)
 function math.sgn(x) end
 
 ---Returns linear interpolation between x and y with ratio a (x+(y-x)*a).
@@ -47,7 +47,7 @@ function math.sgn(x) end
 ---@param y number
 ---@param a number
 ---@return number mixed (x+(y-x)*a)
----@see [LuaMathExtra.cpp#L143-L150](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMathExtra.cpp#L143-L150)
+---@see [LuaMathExtra.cpp#L143-L150](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMathExtra.cpp#L143-L150)
 function math.mix(x, y, a) end
 
 ---Returns x rounded to n decimals, if n is omitted or <=0, rounds to nearest
@@ -57,14 +57,14 @@ function math.mix(x, y, a) end
 ---@param x number
 ---@param decimals number
 ---@return number rounded
----@see [LuaMathExtra.cpp#L162-L171](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMathExtra.cpp#L162-L171)
+---@see [LuaMathExtra.cpp#L162-L171](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMathExtra.cpp#L162-L171)
 function math.round(x, decimals) end
 
 ---Returns erf(x), the Gauss error function, between -1 and 1.
 ---
 ---@param x number
 ---@return number erf
----@see [LuaMathExtra.cpp#L195-L200](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMathExtra.cpp#L195-L200)
+---@see [LuaMathExtra.cpp#L195-L200](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMathExtra.cpp#L195-L200)
 function math.erf(x) end
 
 ---Applies the smoothstep function
@@ -76,7 +76,7 @@ function math.erf(x) end
 ---@param edge1 number
 ---@param v number
 ---@return number smoothstep
----@see [LuaMathExtra.cpp#L208-L217](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMathExtra.cpp#L208-L217)
+---@see [LuaMathExtra.cpp#L208-L217](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMathExtra.cpp#L208-L217)
 function math.smoothstep(edge0, edge1, v) end
 
 ---Returns the normalize vector of an given vector.
@@ -84,40 +84,40 @@ function math.smoothstep(edge0, edge1, v) end
 ---@param x number
 ---@param ... number
 ---@return number ... normalized
----@see [LuaMathExtra.cpp#L225-L231](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMathExtra.cpp#L225-L231)
+---@see [LuaMathExtra.cpp#L225-L231](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMathExtra.cpp#L225-L231)
 function math.normalize(x, ...) end
 
 ---Returns the bitwise OR of all arguments. Only use up to 24 bit integers.
 ---
 ---@param ... integer
 ---@return integer result
----@see [LuaMathExtra.cpp#L271-L276](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMathExtra.cpp#L271-L276)
+---@see [LuaMathExtra.cpp#L271-L276](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMathExtra.cpp#L271-L276)
 function math.bit_or(...) end
 
 ---Returns the bitwise AND of all arguments. Only use up to 24 bit integers.
 ---
 ---@param ... integer
 ---@return integer result
----@see [LuaMathExtra.cpp#L288-L293](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMathExtra.cpp#L288-L293)
+---@see [LuaMathExtra.cpp#L288-L293](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMathExtra.cpp#L288-L293)
 function math.bit_and(...) end
 
 ---Returns the bitwise XOR of all arguments. Only use up to 24 bit integers.
 ---
 ---@param ... integer
 ---@return integer result
----@see [LuaMathExtra.cpp#L305-L310](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMathExtra.cpp#L305-L310)
+---@see [LuaMathExtra.cpp#L305-L310](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMathExtra.cpp#L305-L310)
 function math.bit_xor(...) end
 
 ---Returns the bitwise NOT of the 24 bit integer argument.
 ---
 ---@param value integer
 ---@return integer result
----@see [LuaMathExtra.cpp#L322-L327](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMathExtra.cpp#L322-L327)
+---@see [LuaMathExtra.cpp#L322-L327](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMathExtra.cpp#L322-L327)
 function math.bit_inv(value) end
 
 ---Set each of the bits of a 24 bit integer. Returns result = result OR (1 << a1) OR (1 << a2) OR ...;)
 ---
 ---@param ... integer
 ---@return integer result
----@see [LuaMathExtra.cpp#L336-L341](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMathExtra.cpp#L336-L341)
+---@see [LuaMathExtra.cpp#L336-L341](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMathExtra.cpp#L336-L341)
 function math.bit_bits(...) end

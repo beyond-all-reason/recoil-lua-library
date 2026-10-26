@@ -6,13 +6,13 @@
 -- ------------
 
 ---@type ObjectRenderingTable
----@see [LuaRules.cpp#L95-L95](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaRules.cpp#L95-L95)
+---@see [LuaRules.cpp#L95-L95](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaRules.cpp#L95-L95)
 Spring.UnitRendering = nil
 
 ---@type ObjectRenderingTable
----@see [LuaRules.cpp#L101-L101](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaRules.cpp#L101-L101)
+---@see [LuaRules.cpp#L101-L101](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaRules.cpp#L101-L101)
 Spring.FeatureRendering = nil
 
 ---@param permit boolean
----@see [LuaRules.cpp#L120-L124](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaRules.cpp#L120-L124)
+---@see [LuaRules.cpp#L120-L124](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaRules.cpp#L120-L124)
 function Script.PermitHelperAIs(permit) end

@@ -6,28 +6,28 @@
 -- ------------
 
 ---@return string[] mapNames
----@see [LuaArchive.cpp#L52-L55](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L52-L55)
+---@see [LuaArchive.cpp#L52-L55](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L52-L55)
 function VFS.GetMaps() end
 
 ---@return string[] gameNames
----@see [LuaArchive.cpp#L63-L66](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L63-L66)
+---@see [LuaArchive.cpp#L63-L66](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L63-L66)
 function VFS.GetGames() end
 
 ---@return string[] archiveNames
----@see [LuaArchive.cpp#L82-L85](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L82-L85)
+---@see [LuaArchive.cpp#L82-L85](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L82-L85)
 function VFS.GetAllArchives() end
 
 ---@return boolean hasArchive
----@see [LuaArchive.cpp#L101-L104](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L101-L104)
+---@see [LuaArchive.cpp#L101-L104](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L101-L104)
 function VFS.HasArchive() end
 
 ---@return string[] archiveNames
----@see [LuaArchive.cpp#L115-L118](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L115-L118)
+---@see [LuaArchive.cpp#L115-L118](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L115-L118)
 function VFS.GetLoadedArchives() end
 
 ---@param archiveName string
 ---@return string? archivePath
----@see [LuaArchive.cpp#L129-L133](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L129-L133)
+---@see [LuaArchive.cpp#L129-L133](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L129-L133)
 function VFS.GetArchivePath(archiveName) end
 
 ---@alias ModType
@@ -35,7 +35,7 @@ function VFS.GetArchivePath(archiveName) end
 ---| 1 # Primary
 ---| 3 # Map
 ---| 4 # Base
----@see [LuaArchive.cpp#L148-L154](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L148-L154)
+---@see [LuaArchive.cpp#L148-L154](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L148-L154)
 
 ---@class ArchiveInfo
 ---@x_helper
@@ -48,33 +48,33 @@ function VFS.GetArchivePath(archiveName) end
 ---@field description string
 ---@field mapfile string
 ---@field modtype ModType
----@see [LuaArchive.cpp#L156-L168](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L156-L168)
+---@see [LuaArchive.cpp#L156-L168](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L156-L168)
 local ArchiveInfo = {}
 
 ---@param archiveName string
 ---@return ArchiveInfo? archiveInfo
----@see [LuaArchive.cpp#L170-L174](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L170-L174)
+---@see [LuaArchive.cpp#L170-L174](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L170-L174)
 function VFS.GetArchiveInfo(archiveName) end
 
 ---@param archiveName string
 ---@return string[] archiveNames
----@see [LuaArchive.cpp#L215-L219](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L215-L219)
+---@see [LuaArchive.cpp#L215-L219](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L215-L219)
 function VFS.GetArchiveDependencies(archiveName) end
 
 ---@param archiveName string
 ---@return string[] archiveNames
----@see [LuaArchive.cpp#L233-L237](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L233-L237)
+---@see [LuaArchive.cpp#L233-L237](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L233-L237)
 function VFS.GetArchiveReplaces(archiveName) end
 
 ---@param archiveName string
 ---@return string singleArchiveChecksum
 ---@return string completeArchiveChecksum
----@see [LuaArchive.cpp#L255-L260](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L255-L260)
+---@see [LuaArchive.cpp#L255-L260](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L255-L260)
 function VFS.GetArchiveChecksum(archiveName) end
 
 ---@param rapidTag string
 ---@return string archiveName
----@see [LuaArchive.cpp#L280-L284](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L280-L284)
+---@see [LuaArchive.cpp#L280-L284](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L280-L284)
 function VFS.GetNameFromRapidTag(rapidTag) end
 
 ---@class AIInfo
@@ -82,7 +82,7 @@ function VFS.GetNameFromRapidTag(rapidTag) end
 ---@field shortName string
 ---@field version string
 ---@field isLuaAI boolean
----@see [LuaArchive.cpp#L300-L306](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L300-L306)
+---@see [LuaArchive.cpp#L300-L306](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L300-L306)
 local AIInfo = {}
 
 ---Get a list of all Spring AIs.
@@ -93,5 +93,5 @@ local AIInfo = {}
 ---@param gameArchiveName string?
 ---@param mapArichiveName string?
 ---@return AIInfo[] ais
----@see [LuaArchive.cpp#L308-L317](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaArchive.cpp#L308-L317)
+---@see [LuaArchive.cpp#L308-L317](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaArchive.cpp#L308-L317)
 function VFS.GetAvailableAIs(gameArchiveName, mapArichiveName) end

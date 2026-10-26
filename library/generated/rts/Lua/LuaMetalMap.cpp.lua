@@ -7,7 +7,7 @@
 
 ---@return integer x X coordinate in worldspace / `Game.metalMapSquareSize`.
 ---@return integer z Z coordinate in worldspace / `Game.metalMapSquareSize`.
----@see [LuaMetalMap.cpp#L34-L38](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMetalMap.cpp#L34-L38)
+---@see [LuaMetalMap.cpp#L34-L38](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMetalMap.cpp#L34-L38)
 function Spring.GetMetalMapSize() end
 
 ---Returns the amount of metal on a single square.
@@ -15,7 +15,7 @@ function Spring.GetMetalMapSize() end
 ---@param x integer X coordinate in worldspace / `Game.metalMapSquareSize`.
 ---@param z integer Z coordinate in worldspace / `Game.metalMapSquareSize`.
 ---@return number amount
----@see [LuaMetalMap.cpp#L47-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMetalMap.cpp#L47-L53)
+---@see [LuaMetalMap.cpp#L47-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMetalMap.cpp#L47-L53)
 function Spring.GetMetalAmount(x, z) end
 
 ---Sets the amount of metal on a single square.
@@ -24,11 +24,11 @@ function Spring.GetMetalAmount(x, z) end
 ---@param z integer Z coordinate in worldspace / `Game.metalMapSquareSize`.
 ---@param metalAmount number must be between 0 and 255*maxMetal (with maxMetal from the .smd or mapinfo.lua).
 ---@return nil
----@see [LuaMetalMap.cpp#L64-L71](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMetalMap.cpp#L64-L71)
+---@see [LuaMetalMap.cpp#L64-L71](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMetalMap.cpp#L64-L71)
 function Spring.SetMetalAmount(x, z, metalAmount) end
 
 ---@param x integer X coordinate in worldspace / `Game.metalMapSquareSize`.
 ---@param z integer Z coordinate in worldspace / `Game.metalMapSquareSize`.
 ---@return number extraction
----@see [LuaMetalMap.cpp#L83-L88](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaMetalMap.cpp#L83-L88)
+---@see [LuaMetalMap.cpp#L83-L88](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaMetalMap.cpp#L83-L88)
 function Spring.GetMetalExtraction(x, z) end

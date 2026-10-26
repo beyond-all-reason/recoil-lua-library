@@ -21,5 +21,5 @@
 ---reflect changes. Cache it, but remember to refresh.
 ---
 ---@type table<string, any>
----@see [LuaSyncedTable.cpp#L73-L91](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Lua/LuaSyncedTable.cpp#L73-L91)
+---@see [LuaSyncedTable.cpp#L73-L91](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaSyncedTable.cpp#L73-L91)
 SYNCED = nil

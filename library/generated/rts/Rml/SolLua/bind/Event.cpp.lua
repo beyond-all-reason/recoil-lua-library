@@ -6,22 +6,22 @@
 -- ------------
 
 ---@enum RmlUi.RmlEventPhase
----@see [Event.cpp#L66-L68](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L66-L68)
+---@see [Event.cpp#L66-L68](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L66-L68)
 RmlUi.RmlEventPhase = {
 	---@type integer
-	---@see [Event.cpp#L70-L70](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L70-L70)
+	---@see [Event.cpp#L70-L70](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L70-L70)
 	None = nil,
 
 	---@type integer
-	---@see [Event.cpp#L72-L72](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L72-L72)
+	---@see [Event.cpp#L72-L72](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L72-L72)
 	Capture = nil,
 
 	---@type integer
-	---@see [Event.cpp#L74-L74](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L74-L74)
+	---@see [Event.cpp#L74-L74](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L74-L74)
 	Target = nil,
 
 	---@type integer
-	---@see [Event.cpp#L76-L76](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L76-L76)
+	---@see [Event.cpp#L76-L76](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L76-L76)
 	Bubble = nil
 }
 
@@ -29,14 +29,14 @@ RmlUi.RmlEventPhase = {
 ---| 0 # Left
 ---| 1 # Right
 ---| 2 # Middle
----@see [Event.cpp#L80-L85](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L80-L85)
+---@see [Event.cpp#L80-L85](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L80-L85)
 
 ---RmlUi uses 0 and 1 to represent boolean values here.
 ---
 ---@alias RmlUi.EventParametersProxy.TrueFalse
 ---| 0 # False
 ---| 1 # True
----@see [Event.cpp#L87-L92](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L87-L92)
+---@see [Event.cpp#L87-L92](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L87-L92)
 
 ---Keyboard and mouse input data associated with an event.
 ---
@@ -51,51 +51,51 @@ RmlUi.RmlEventPhase = {
 ---@field shift_key RmlUi.EventParametersProxy.TrueFalse
 ---@field caps_lock_key RmlUi.EventParametersProxy.TrueFalse
 ---@field alt_key RmlUi.EventParametersProxy.TrueFalse
----@see [Event.cpp#L94-L107](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L94-L107)
+---@see [Event.cpp#L94-L107](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L94-L107)
 RmlUi.EventParametersProxy = {}
 
 ---An event that happens to an element.
 ---
 ---@class RmlUi.Event
----@see [Event.cpp#L109-L112](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L109-L112)
+---@see [Event.cpp#L109-L112](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L109-L112)
 RmlUi.Event = {}
 
----@see [Event.cpp#L116-L118](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L116-L118)
+---@see [Event.cpp#L116-L118](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L116-L118)
 function RmlUi.Event:StopPropagation() end
 
----@see [Event.cpp#L121-L123](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L121-L123)
+---@see [Event.cpp#L121-L123](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L121-L123)
 function RmlUi.Event:StopImmediatePropagation() end
 
 ---@type RmlUi.Element
----@see [Event.cpp#L129-L129](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L129-L129)
+---@see [Event.cpp#L129-L129](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L129-L129)
 RmlUi.Event.current_element = nil
 
 ---@type string
----@see [Event.cpp#L131-L131](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L131-L131)
+---@see [Event.cpp#L131-L131](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L131-L131)
 RmlUi.Event.type = nil
 
 ---What element it happened to
 ---
 ---@type RmlUi.Element
----@see [Event.cpp#L133-L133](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L133-L133)
+---@see [Event.cpp#L133-L133](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L133-L133)
 RmlUi.Event.target_element = nil
 
 ---@type RmlUi.EventParametersProxy
----@see [Event.cpp#L135-L135](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L135-L135)
+---@see [Event.cpp#L135-L135](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L135-L135)
 RmlUi.Event.parameters = nil
 
 ---@type RmlUi.RmlEventPhase
----@see [Event.cpp#L138-L138](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L138-L138)
+---@see [Event.cpp#L138-L138](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L138-L138)
 RmlUi.Event.event_phase = nil
 
 ---@type boolean
----@see [Event.cpp#L140-L140](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L140-L140)
+---@see [Event.cpp#L140-L140](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L140-L140)
 RmlUi.Event.interruptible = nil
 
 ---@type boolean
----@see [Event.cpp#L142-L142](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L142-L142)
+---@see [Event.cpp#L142-L142](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L142-L142)
 RmlUi.Event.propagating = nil
 
 ---@type boolean
----@see [Event.cpp#L144-L144](https://github.com/beyond-all-reason/RecoilEngine/blob/dac5bc5a8e/rts/Rml/SolLua/bind/Event.cpp#L144-L144)
+---@see [Event.cpp#L144-L144](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Event.cpp#L144-L144)
 RmlUi.Event.immediate_propagating = nil
