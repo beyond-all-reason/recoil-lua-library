@@ -7,14 +7,14 @@
 
 ---@class UI : Callins
 ---@see Callins
----@see [LuaUI.cpp#L68-L71](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaUI.cpp#L68-L71)
+---@see [LuaUI.cpp#L68-L71](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaUI.cpp#L68-L71)
 local UI = {}
 
----@see [LuaUI.cpp#L281-L283](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaUI.cpp#L281-L283)
+---@see [LuaUI.cpp#L281-L283](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaUI.cpp#L281-L283)
 function UI:ConfigureLayout() end
 
 ---@param minArea number?
 ---@param minPower number?
 ---@param distAdj number?
----@see [LuaUI.cpp#L677-L682](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaUI.cpp#L677-L682)
+---@see [LuaUI.cpp#L677-L682](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaUI.cpp#L677-L682)
 function Spring.SetShockFrontFactors(minArea, minPower, distAdj) end

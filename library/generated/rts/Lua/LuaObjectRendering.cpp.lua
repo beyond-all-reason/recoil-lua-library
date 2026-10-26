@@ -9,10 +9,10 @@
 ---Registered as `Spring.UnitRendering` and `Spring.FeatureRendering`.
 ---
 ---@see rts/Lua/LuaObjectRendering.cpp
----@see [LuaObjectRendering.cpp#L4-L8](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L4-L8)
+---@see [LuaObjectRendering.cpp#L4-L8](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L4-L8)
 
 ---@class ObjectRenderingTable
----@see [LuaObjectRendering.cpp#L10-L12](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L10-L12)
+---@see [LuaObjectRendering.cpp#L10-L12](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L10-L12)
 local ObjectRenderingTable = {}
 
 ---Get the number of LOD levels and the current LOD.
@@ -20,7 +20,7 @@ local ObjectRenderingTable = {}
 ---@param objectID ObjectID
 ---@return integer lodCount
 ---@return integer currentLOD
----@see [LuaObjectRendering.cpp#L136-L142](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L136-L142)
+---@see [LuaObjectRendering.cpp#L136-L142](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L136-L142)
 function ObjectRenderingTable.GetLODCount(objectID) end
 
 ---Set the number of LOD levels.
@@ -28,7 +28,7 @@ function ObjectRenderingTable.GetLODCount(objectID) end
 ---@param objectID ObjectID
 ---@param lodCount integer
 ---@return nil
----@see [LuaObjectRendering.cpp#L158-L164](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L158-L164)
+---@see [LuaObjectRendering.cpp#L158-L164](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L158-L164)
 function ObjectRenderingTable.SetLODCount(objectID, lodCount) end
 
 ---Set the LOD transition length for a given level.
@@ -37,7 +37,7 @@ function ObjectRenderingTable.SetLODCount(objectID, lodCount) end
 ---@param lodLevel integer
 ---@param lodLength number
 ---@return nil
----@see [LuaObjectRendering.cpp#L195-L202](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L195-L202)
+---@see [LuaObjectRendering.cpp#L195-L202](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L195-L202)
 function ObjectRenderingTable.SetLODLength(objectID, lodLevel, lodLength) end
 
 ---Set the LOD transition distance for a given level (scaled for 45-degree FOV).
@@ -46,7 +46,7 @@ function ObjectRenderingTable.SetLODLength(objectID, lodLevel, lodLength) end
 ---@param lodLevel integer
 ---@param lodDistance number
 ---@return nil
----@see [LuaObjectRendering.cpp#L210-L217](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L210-L217)
+---@see [LuaObjectRendering.cpp#L210-L217](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L210-L217)
 function ObjectRenderingTable.SetLODDistance(objectID, lodLevel, lodDistance) end
 
 ---Set a display list for a piece at a given LOD and material.
@@ -56,7 +56,7 @@ function ObjectRenderingTable.SetLODDistance(objectID, lodLevel, lodDistance) en
 ---@param piece integer
 ---@param ... any
 ---@return nil
----@see [LuaObjectRendering.cpp#L231-L239](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L231-L239)
+---@see [LuaObjectRendering.cpp#L231-L239](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L231-L239)
 function ObjectRenderingTable.SetPieceList(objectID, lodLevel, piece, ...) end
 
 ---Get a material reference for a LOD level.
@@ -65,7 +65,7 @@ function ObjectRenderingTable.SetPieceList(objectID, lodLevel, piece, ...) end
 ---@param lodLevel integer
 ---@param materialName string
 ---@return userdata matRef
----@see [LuaObjectRendering.cpp#L387-L394](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L387-L394)
+---@see [LuaObjectRendering.cpp#L387-L394](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L387-L394)
 function ObjectRenderingTable.GetMaterial(objectID, lodLevel, materialName) end
 
 ---Set a material for a LOD level.
@@ -75,7 +75,7 @@ function ObjectRenderingTable.GetMaterial(objectID, lodLevel, materialName) end
 ---@param materialName string
 ---@param materialTable table
 ---@return nil
----@see [LuaObjectRendering.cpp#L417-L425](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L417-L425)
+---@see [LuaObjectRendering.cpp#L417-L425](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L417-L425)
 function ObjectRenderingTable.SetMaterial(objectID, lodLevel, materialName, materialTable) end
 
 ---Set the last LOD level that uses a given material.
@@ -84,7 +84,7 @@ function ObjectRenderingTable.SetMaterial(objectID, lodLevel, materialName, mate
 ---@param materialName string
 ---@param lastLOD integer
 ---@return nil
----@see [LuaObjectRendering.cpp#L462-L469](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L462-L469)
+---@see [LuaObjectRendering.cpp#L462-L469](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L462-L469)
 function ObjectRenderingTable.SetMaterialLastLOD(objectID, materialName, lastLOD) end
 
 ---Set display lists for a material.
@@ -94,31 +94,31 @@ function ObjectRenderingTable.SetMaterialLastLOD(objectID, materialName, lastLOD
 ---@param materialName string
 ---@param displayListTable table
 ---@return nil
----@see [LuaObjectRendering.cpp#L488-L496](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L488-L496)
+---@see [LuaObjectRendering.cpp#L488-L496](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L488-L496)
 function ObjectRenderingTable.SetMaterialDisplayLists(objectID, lodLevel, materialName, displayListTable) end
 
 ---@param objectID ObjectID
 ---@param ... any uniform values
 ---@return nil
----@see [LuaObjectRendering.cpp#L585-L589](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L585-L589)
+---@see [LuaObjectRendering.cpp#L585-L589](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L585-L589)
 function ObjectRenderingTable.SetDeferredMaterialUniform(objectID, ...) end
 
 ---@param objectID ObjectID
 ---@param ... any uniform values
 ---@return nil
----@see [LuaObjectRendering.cpp#L591-L595](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L591-L595)
+---@see [LuaObjectRendering.cpp#L591-L595](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L591-L595)
 function ObjectRenderingTable.SetForwardMaterialUniform(objectID, ...) end
 
 ---@param objectID ObjectID
 ---@param ... any uniform indices
 ---@return nil
----@see [LuaObjectRendering.cpp#L634-L638](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L634-L638)
+---@see [LuaObjectRendering.cpp#L634-L638](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L634-L638)
 function ObjectRenderingTable.ClearDeferredMaterialUniform(objectID, ...) end
 
 ---@param objectID ObjectID
 ---@param ... any uniform indices
 ---@return nil
----@see [LuaObjectRendering.cpp#L640-L644](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L640-L644)
+---@see [LuaObjectRendering.cpp#L640-L644](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L640-L644)
 function ObjectRenderingTable.ClearForwardMaterialUniform(objectID, ...) end
 
 ---Enable or disable custom Lua drawing for a unit.
@@ -126,7 +126,7 @@ function ObjectRenderingTable.ClearForwardMaterialUniform(objectID, ...) end
 ---@param unitID UnitID
 ---@param enable boolean
 ---@return nil
----@see [LuaObjectRendering.cpp#L666-L672](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L666-L672)
+---@see [LuaObjectRendering.cpp#L666-L672](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L666-L672)
 function ObjectRenderingTable.SetUnitLuaDraw(unitID, enable) end
 
 ---Enable or disable custom Lua drawing for a feature.
@@ -134,7 +134,7 @@ function ObjectRenderingTable.SetUnitLuaDraw(unitID, enable) end
 ---@param featureID FeatureID
 ---@param enable boolean
 ---@return nil
----@see [LuaObjectRendering.cpp#L679-L685](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L679-L685)
+---@see [LuaObjectRendering.cpp#L679-L685](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L679-L685)
 function ObjectRenderingTable.SetFeatureLuaDraw(featureID, enable) end
 
 ---Enable or disable custom Lua drawing for a projectile.
@@ -142,12 +142,12 @@ function ObjectRenderingTable.SetFeatureLuaDraw(featureID, enable) end
 ---@param projectileID ProjectileID
 ---@param enable boolean
 ---@return nil
----@see [LuaObjectRendering.cpp#L692-L698](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L692-L698)
+---@see [LuaObjectRendering.cpp#L692-L698](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L692-L698)
 function ObjectRenderingTable.SetProjectileLuaDraw(projectileID, enable) end
 
 ---Print debug info about the object's material data.
 ---
 ---@param objectID ObjectID
 ---@return nil
----@see [LuaObjectRendering.cpp#L730-L735](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaObjectRendering.cpp#L730-L735)
+---@see [LuaObjectRendering.cpp#L730-L735](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaObjectRendering.cpp#L730-L735)
 function ObjectRenderingTable.Debug(objectID) end

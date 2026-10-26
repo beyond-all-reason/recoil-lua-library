@@ -13,25 +13,25 @@
 ---@operator mul:RmlUi.Vector2i
 ---@operator sub:RmlUi.Vector2i
 ---@operator unm:RmlUi.Vector2i
----@see [Vector.cpp#L40-L48](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Vector.cpp#L40-L48)
+---@see [Vector.cpp#L40-L48](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Vector.cpp#L40-L48)
 RmlUi.Vector2i = {}
 
 ---@param x integer
 ---@param y integer
 ---@return RmlUi.Vector2i
----@see [Vector.cpp#L52-L57](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Vector.cpp#L52-L57)
+---@see [Vector.cpp#L52-L57](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Vector.cpp#L52-L57)
 function RmlUi.Vector2i.new(x, y) end
 
 ---@type integer
----@see [Vector.cpp#L73-L73](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Vector.cpp#L73-L73)
+---@see [Vector.cpp#L73-L73](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Vector.cpp#L73-L73)
 RmlUi.Vector2i.x = nil
 
 ---@type integer
----@see [Vector.cpp#L75-L75](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Vector.cpp#L75-L75)
+---@see [Vector.cpp#L75-L75](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Vector.cpp#L75-L75)
 RmlUi.Vector2i.y = nil
 
 ---@type number
----@see [Vector.cpp#L79-L79](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Vector.cpp#L79-L79)
+---@see [Vector.cpp#L79-L79](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Vector.cpp#L79-L79)
 RmlUi.Vector2i.magnitude = nil
 
 ---Two-dimensional float vector
@@ -43,23 +43,23 @@ RmlUi.Vector2i.magnitude = nil
 ---@operator mul:RmlUi.Vector2f
 ---@operator sub:RmlUi.Vector2f
 ---@operator unm:RmlUi.Vector2i
----@see [Vector.cpp#L83-L92](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Vector.cpp#L83-L92)
+---@see [Vector.cpp#L83-L92](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Vector.cpp#L83-L92)
 RmlUi.Vector2f = {}
 
 ---@param x number
 ---@param y number
 ---@return RmlUi.Vector2f
----@see [Vector.cpp#L95-L100](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Vector.cpp#L95-L100)
+---@see [Vector.cpp#L95-L100](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Vector.cpp#L95-L100)
 function RmlUi.Vector2f.new(x, y) end
 
 ---@type number
----@see [Vector.cpp#L116-L116](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Vector.cpp#L116-L116)
+---@see [Vector.cpp#L116-L116](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Vector.cpp#L116-L116)
 RmlUi.Vector2f.x = nil
 
 ---@type number
----@see [Vector.cpp#L118-L118](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Vector.cpp#L118-L118)
+---@see [Vector.cpp#L118-L118](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Vector.cpp#L118-L118)
 RmlUi.Vector2f.y = nil
 
 ---@type number
----@see [Vector.cpp#L122-L122](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Vector.cpp#L122-L122)
+---@see [Vector.cpp#L122-L122](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Vector.cpp#L122-L122)
 RmlUi.Vector2f.magnitude = nil

@@ -14,40 +14,40 @@
 ---@param endZ number
 ---@param radius number?
 ---@return userdata? path
----@see [LuaPathFinder.cpp#L214-L225](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaPathFinder.cpp#L214-L225)
+---@see [LuaPathFinder.cpp#L214-L225](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaPathFinder.cpp#L214-L225)
 function Spring.RequestPath(moveID, startX, startY, startZ, endX, endY, endZ, radius) end
 
 ---@param overlayIndex integer
 ---@param sizeX integer
 ---@param sizeZ integer
 ---@return boolean success
----@see [LuaPathFinder.cpp#L265-L271](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaPathFinder.cpp#L265-L271)
+---@see [LuaPathFinder.cpp#L265-L271](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaPathFinder.cpp#L265-L271)
 function Spring.InitPathNodeCostsArray(overlayIndex, sizeX, sizeZ) end
 
 ---@param overlayIndex integer
 ---@return boolean success
----@see [LuaPathFinder.cpp#L304-L308](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaPathFinder.cpp#L304-L308)
+---@see [LuaPathFinder.cpp#L304-L308](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaPathFinder.cpp#L304-L308)
 function Spring.FreePathNodeCostsArray(overlayIndex) end
 
 ---@param overlayIndex integer
 ---@return boolean success
----@see [LuaPathFinder.cpp#L342-L346](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaPathFinder.cpp#L342-L346)
+---@see [LuaPathFinder.cpp#L342-L346](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaPathFinder.cpp#L342-L346)
 function Spring.SetPathNodeCosts(overlayIndex) end
 
 ---@param overlayIndex integer
 ---@return boolean|table costs
----@see [LuaPathFinder.cpp#L371-L375](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaPathFinder.cpp#L371-L375)
+---@see [LuaPathFinder.cpp#L371-L375](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaPathFinder.cpp#L371-L375)
 function Spring.GetPathNodeCosts(overlayIndex) end
 
 ---@param overlayIndex integer
 ---@param costIndex integer 0-based index in the overlay
 ---@param cost number
 ---@return boolean success
----@see [LuaPathFinder.cpp#L407-L413](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaPathFinder.cpp#L407-L413)
+---@see [LuaPathFinder.cpp#L407-L413](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaPathFinder.cpp#L407-L413)
 function Spring.SetPathNodeCost(overlayIndex, costIndex, cost) end
 
 ---@param nodeX integer Heightmap node X coordinate
 ---@param nodeZ integer Heightmap node Z coordinate
 ---@return number cost
----@see [LuaPathFinder.cpp#L444-L449](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaPathFinder.cpp#L444-L449)
+---@see [LuaPathFinder.cpp#L444-L449](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaPathFinder.cpp#L444-L449)
 function Spring.GetPathNodeCost(nodeX, nodeZ) end

@@ -12,12 +12,12 @@
 ---@param stepwise boolean? (Default: `true`) stepwise chart
 ---@param fill boolean? (Default: `false`) whether to fill color
 ---@param color integer? (Default: `0xFFFFFF`) uint32 number as BGR color
----@see [LuaTracyExtra.cpp#L32-L40](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaTracyExtra.cpp#L32-L40)
+---@see [LuaTracyExtra.cpp#L32-L40](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaTracyExtra.cpp#L32-L40)
 function tracy.LuaTracyPlotConfig(plotName, plotFormatType, stepwise, fill, color) end
 
 ---Update a Tracy plot with a value
 ---
 ---@param plotName string Which LuaPlot should be updated
 ---@param plotValue number the number to show on the Tracy plot
----@see [LuaTracyExtra.cpp#L62-L67](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Lua/LuaTracyExtra.cpp#L62-L67)
+---@see [LuaTracyExtra.cpp#L62-L67](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaTracyExtra.cpp#L62-L67)
 function tracy.LuaTracyPlot(plotName, plotValue) end

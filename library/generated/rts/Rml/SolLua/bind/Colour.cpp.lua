@@ -6,41 +6,41 @@
 -- ------------
 
 ---@type integer
----@see [Colour.cpp#L64-L64](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Colour.cpp#L64-L64)
+---@see [Colour.cpp#L64-L64](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Colour.cpp#L64-L64)
 RmlUi.Colourb.red = nil
 
 ---@type integer
----@see [Colour.cpp#L66-L66](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Colour.cpp#L66-L66)
+---@see [Colour.cpp#L66-L66](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Colour.cpp#L66-L66)
 RmlUi.Colourb.green = nil
 
 ---@type integer
----@see [Colour.cpp#L68-L68](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Colour.cpp#L68-L68)
+---@see [Colour.cpp#L68-L68](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Colour.cpp#L68-L68)
 RmlUi.Colourb.blue = nil
 
 ---@type integer
----@see [Colour.cpp#L70-L70](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Colour.cpp#L70-L70)
+---@see [Colour.cpp#L70-L70](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Colour.cpp#L70-L70)
 RmlUi.Colourb.alpha = nil
 
 ---@type [integer, integer, integer, integer]
----@see [Colour.cpp#L72-L72](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Colour.cpp#L72-L72)
+---@see [Colour.cpp#L72-L72](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Colour.cpp#L72-L72)
 RmlUi.Colourb.rgba = nil
 
 ---@type number
----@see [Colour.cpp#L84-L84](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Colour.cpp#L84-L84)
+---@see [Colour.cpp#L84-L84](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Colour.cpp#L84-L84)
 RmlUi.Colourf.red = nil
 
 ---@type number
----@see [Colour.cpp#L86-L86](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Colour.cpp#L86-L86)
+---@see [Colour.cpp#L86-L86](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Colour.cpp#L86-L86)
 RmlUi.Colourf.green = nil
 
 ---@type number
----@see [Colour.cpp#L88-L88](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Colour.cpp#L88-L88)
+---@see [Colour.cpp#L88-L88](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Colour.cpp#L88-L88)
 RmlUi.Colourf.blue = nil
 
 ---@type number
----@see [Colour.cpp#L90-L90](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Colour.cpp#L90-L90)
+---@see [Colour.cpp#L90-L90](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Colour.cpp#L90-L90)
 RmlUi.Colourf.alpha = nil
 
 ---@type [number, number, number, number]
----@see [Colour.cpp#L92-L92](https://github.com/beyond-all-reason/RecoilEngine/blob/2a5efc22bb/rts/Rml/SolLua/bind/Colour.cpp#L92-L92)
+---@see [Colour.cpp#L92-L92](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/Colour.cpp#L92-L92)
 RmlUi.Colourf.rgba = nil
