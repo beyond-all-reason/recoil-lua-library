@@ -6,38 +6,38 @@
 -- ------------
 
 ---@enum RmlUi.RmlModalFlag
----@see [Document.cpp#L102-L104](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L102-L104)
+---@see [Document.cpp#L102-L104](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L102-L104)
 RmlUi.RmlModalFlag = {
 	---@type integer
-	---@see [Document.cpp#L107-L107](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L107-L107)
+	---@see [Document.cpp#L107-L107](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L107-L107)
 	None = nil,
 
 	---@type integer
-	---@see [Document.cpp#L109-L109](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L109-L109)
+	---@see [Document.cpp#L109-L109](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L109-L109)
 	Modal = nil,
 
 	---@type integer
-	---@see [Document.cpp#L111-L111](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L111-L111)
+	---@see [Document.cpp#L111-L111](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L111-L111)
 	Keep = nil
 }
 
 ---@enum RmlUi.RmlFocusFlag
----@see [Document.cpp#L116-L118](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L116-L118)
+---@see [Document.cpp#L116-L118](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L116-L118)
 RmlUi.RmlFocusFlag = {
 	---@type integer
-	---@see [Document.cpp#L121-L121](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L121-L121)
+	---@see [Document.cpp#L121-L121](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L121-L121)
 	None = nil,
 
 	---@type integer
-	---@see [Document.cpp#L123-L123](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L123-L123)
+	---@see [Document.cpp#L123-L123](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L123-L123)
 	Document = nil,
 
 	---@type integer
-	---@see [Document.cpp#L125-L125](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L125-L125)
+	---@see [Document.cpp#L125-L125](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L125-L125)
 	Keep = nil,
 
 	---@type integer
-	---@see [Document.cpp#L127-L127](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L127-L127)
+	---@see [Document.cpp#L127-L127](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L127-L127)
 	Auto = nil
 }
 
@@ -46,54 +46,54 @@ RmlUi.RmlFocusFlag = {
 ---Document has no constructor; it must be instantiated through a Context object instead, either by loading an external RML file or creating an empty document. It has the following functions and properties:
 ---
 ---@class RmlUi.Document : RmlUi.Element
----@see [Document.cpp#L132-L137](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L132-L137)
+---@see [Document.cpp#L132-L137](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L132-L137)
 RmlUi.Document = {}
 
 ---Pulls the document in front of other documents within its context with a similar z-index.
 ---
----@see [Document.cpp#L141-L144](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L141-L144)
+---@see [Document.cpp#L141-L144](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L141-L144)
 function RmlUi.Document:PullToFront() end
 
 ---Pushes the document behind other documents within its context with a similar z-index.
 ---
----@see [Document.cpp#L146-L149](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L146-L149)
+---@see [Document.cpp#L146-L149](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L146-L149)
 function RmlUi.Document:PushToBack() end
 
 ---Shows the document.
 ---
 ---@param modal RmlUi.RmlModalFlag? Defaults to Focus
 ---@param focus RmlUi.RmlFocusFlag?
----@see [Document.cpp#L151-L156](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L151-L156)
+---@see [Document.cpp#L151-L156](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L151-L156)
 function RmlUi.Document:Show(modal, focus) end
 
 ---Hides the document.
 ---
----@see [Document.cpp#L158-L161](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L158-L161)
+---@see [Document.cpp#L158-L161](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L158-L161)
 function RmlUi.Document:Hide() end
 
 ---Hides and closes the document, destroying its contents.
 ---
----@see [Document.cpp#L163-L166](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L163-L166)
+---@see [Document.cpp#L163-L166](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L163-L166)
 function RmlUi.Document:Close() end
 
 ---Instances an element with a tag of tag_name.
 ---
 ---@param tag_name string
 ---@return RmlUi.ElementPtr
----@see [Document.cpp#L168-L173](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L168-L173)
+---@see [Document.cpp#L168-L173](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L168-L173)
 function RmlUi.Document:CreateElement(tag_name) end
 
 ---Instances a text element containing the string text.
 ---
 ---@param text string
 ---@return RmlUi.ElementPtr
----@see [Document.cpp#L175-L180](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L175-L180)
+---@see [Document.cpp#L175-L180](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L175-L180)
 function RmlUi.Document:CreateTextNode(text) end
 
 ---Reload the active style sheet.
 ---
 ---@param load boolean?
----@see [Document.cpp#L183-L187](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L183-L187)
+---@see [Document.cpp#L183-L187](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L183-L187)
 function RmlUi.Document:ReloadStyleSheet(load) end
 
 ---Load scripts as if it were in the script tag.
@@ -101,46 +101,46 @@ function RmlUi.Document:ReloadStyleSheet(load) end
 ---@param content string
 ---@param source string?
 ---@param source_line integer?
----@see [Document.cpp#L189-L195](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L189-L195)
+---@see [Document.cpp#L189-L195](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L189-L195)
 function RmlUi.Document:LoadInlineScript(content, source, source_line) end
 
 ---Load an external script.
 ---
 ---@param source_path string
----@see [Document.cpp#L197-L201](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L197-L201)
+---@see [Document.cpp#L197-L201](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L197-L201)
 function RmlUi.Document:LoadExternalScript(source_path) end
 
 ---Update the Document.
 ---
----@see [Document.cpp#L203-L206](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L203-L206)
+---@see [Document.cpp#L203-L206](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L203-L206)
 function RmlUi.Document:UpdateDocument() end
 
 ---Append text to style sheet.
 ---
 ---@param content string
----@see [Document.cpp#L208-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L208-L212)
+---@see [Document.cpp#L208-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L208-L212)
 function RmlUi.Document:AppendToStyleSheet(content) end
 
 ---@type string
----@see [Document.cpp#L216-L216](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L216-L216)
+---@see [Document.cpp#L216-L216](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L216-L216)
 RmlUi.Document.title = nil
 
 ---@type RmlUi.Context
----@see [Document.cpp#L220-L220](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L220-L220)
+---@see [Document.cpp#L220-L220](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L220-L220)
 RmlUi.Document.context = nil
 
 ---@type string
----@see [Document.cpp#L223-L223](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L223-L223)
+---@see [Document.cpp#L223-L223](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L223-L223)
 RmlUi.Document.url = nil
 
 ---Is it modal?
 ---
 ---@type boolean
----@see [Document.cpp#L225-L225](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L225-L225)
+---@see [Document.cpp#L225-L225](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L225-L225)
 RmlUi.Document.modal = nil
 
 ---A table of data that can be accessed in onevent attributes. It doesn't have to be a widget.
 ---
 ---@type table
----@see [Document.cpp#L227-L227](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Document.cpp#L227-L227)
+---@see [Document.cpp#L227-L227](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Document.cpp#L227-L227)
 RmlUi.Document.widget = nil

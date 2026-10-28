@@ -10,7 +10,7 @@
 ---The Context class has no constructor; it must be instantiated through the CreateContext() function. It has the following functions and properties:
 ---
 ---@class RmlUi.Context
----@see [Context.cpp#L376-L380](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L376-L380)
+---@see [Context.cpp#L376-L380](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L376-L380)
 RmlUi.Context = {}
 
 ---Adds the inline Lua script, script, as an event listener to the context. element_context is an optional Element; if it is not None, then the script will be executed as if it was bound to that element.
@@ -19,48 +19,48 @@ RmlUi.Context = {}
 ---@param script RmlUi.Element
 ---@param element_context boolean
 ---@param in_capture_phase boolean
----@see [Context.cpp#L385-L392](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L385-L392)
+---@see [Context.cpp#L385-L392](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L385-L392)
 function RmlUi.Context:AddEventListener(event, script, element_context, in_capture_phase) end
 
 ---Creates a new document with the tag name of tag.
 ---
 ---@param tag string
 ---@return RmlUi.Document
----@see [Context.cpp#L394-L399](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L394-L399)
+---@see [Context.cpp#L394-L399](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L394-L399)
 function RmlUi.Context:CreateDocument(tag) end
 
 ---Attempts to load a document from the RML file found at document_path. If successful, the document will be returned with a reference count of one.
 ---
 ---@param document_path string
 ---@return RmlUi.Document
----@see [Context.cpp#L405-L410](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L405-L410)
+---@see [Context.cpp#L405-L410](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L405-L410)
 function RmlUi.Context:LoadDocument(document_path) end
 
 ---@param name string
----@see [Context.cpp#L421-L424](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L421-L424)
+---@see [Context.cpp#L421-L424](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L421-L424)
 function RmlUi.Context:GetDocument(name) end
 
 ---Renders the context.
 ---
 ---@return boolean
----@see [Context.cpp#L426-L430](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L426-L430)
+---@see [Context.cpp#L426-L430](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L426-L430)
 function RmlUi.Context:Render() end
 
 ---Closes all documents currently loaded with the context.
 ---
----@see [Context.cpp#L437-L440](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L437-L440)
+---@see [Context.cpp#L437-L440](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L437-L440)
 function RmlUi.Context:UnloadAllDocuments() end
 
 ---Unloads a specific document within the context.
 ---
 ---@param document RmlUi.Document
----@see [Context.cpp#L442-L446](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L442-L446)
+---@see [Context.cpp#L442-L446](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L442-L446)
 function RmlUi.Context:UnloadDocument(document) end
 
 ---Updates the context.
 ---
 ---@return boolean
----@see [Context.cpp#L448-L452](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L448-L452)
+---@see [Context.cpp#L448-L452](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L448-L452)
 function RmlUi.Context:Update() end
 
 ---Create a new data model from a base table `model` and register to the context. The model table is copied.
@@ -71,20 +71,20 @@ function RmlUi.Context:Update() end
 ---@param model T
 ---@param widget table
 ---@return RmlUi.SolLuaDataModel<T>
----@see [Context.cpp#L454-L463](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L454-L463)
+---@see [Context.cpp#L454-L463](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L454-L463)
 function RmlUi.Context:OpenDataModel(name, model, widget) end
 
 ---Removes a data model from the context.
 ---
 ---@param name string
----@see [Context.cpp#L465-L469](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L465-L469)
+---@see [Context.cpp#L465-L469](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L465-L469)
 function RmlUi.Context:RemoveDataModel(name) end
 
 ---Processes a mouse move event.
 ---
 ---@param position RmlUi.Vector2f
 ---@return boolean
----@see [Context.cpp#L471-L476](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L471-L476)
+---@see [Context.cpp#L471-L476](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L471-L476)
 function RmlUi.Context:ProcessMouseMove(position) end
 
 ---Processes a mouse button down event.
@@ -92,7 +92,7 @@ function RmlUi.Context:ProcessMouseMove(position) end
 ---@param button RmlUi.MouseButton
 ---@param key_modifier_state integer
 ---@return boolean
----@see [Context.cpp#L478-L484](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L478-L484)
+---@see [Context.cpp#L478-L484](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L478-L484)
 function RmlUi.Context:ProcessMouseButtonDown(button, key_modifier_state) end
 
 ---Processes a mouse button up event.
@@ -100,7 +100,7 @@ function RmlUi.Context:ProcessMouseButtonDown(button, key_modifier_state) end
 ---@param button RmlUi.MouseButton
 ---@param key_modifier_state integer
 ---@return boolean
----@see [Context.cpp#L486-L492](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L486-L492)
+---@see [Context.cpp#L486-L492](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L486-L492)
 function RmlUi.Context:ProcessMouseButtonUp(button, key_modifier_state) end
 
 ---Processes a mouse wheel event.
@@ -108,19 +108,19 @@ function RmlUi.Context:ProcessMouseButtonUp(button, key_modifier_state) end
 ---@param delta RmlUi.Vector2f | number
 ---@param key_modifier_state integer
 ---@return boolean
----@see [Context.cpp#L494-L500](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L494-L500)
+---@see [Context.cpp#L494-L500](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L494-L500)
 function RmlUi.Context:ProcessMouseWheel(delta, key_modifier_state) end
 
 ---Processes a mouse leave event.
 ---
 ---@return boolean
----@see [Context.cpp#L504-L508](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L504-L508)
+---@see [Context.cpp#L504-L508](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L504-L508)
 function RmlUi.Context:ProcessMouseLeave() end
 
 ---Returns true if the mouse is currently interacting with the context, false if not.
 ---
 ---@return boolean
----@see [Context.cpp#L510-L514](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L510-L514)
+---@see [Context.cpp#L510-L514](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L510-L514)
 function RmlUi.Context:IsMouseInteracting() end
 
 ---Processes a key down event.
@@ -128,7 +128,7 @@ function RmlUi.Context:IsMouseInteracting() end
 ---@param key RmlUi.key_identifier
 ---@param key_modifier_state integer
 ---@return boolean
----@see [Context.cpp#L516-L522](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L516-L522)
+---@see [Context.cpp#L516-L522](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L516-L522)
 function RmlUi.Context:ProcessKeyDown(key, key_modifier_state) end
 
 ---Processes a key up event.
@@ -136,34 +136,34 @@ function RmlUi.Context:ProcessKeyDown(key, key_modifier_state) end
 ---@param key RmlUi.key_identifier
 ---@param key_modifier_state integer
 ---@return boolean
----@see [Context.cpp#L524-L530](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L524-L530)
+---@see [Context.cpp#L524-L530](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L524-L530)
 function RmlUi.Context:ProcessKeyUp(key, key_modifier_state) end
 
 ---Processes a text input event.
 ---
 ---@param text string
 ---@return boolean
----@see [Context.cpp#L532-L537](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L532-L537)
+---@see [Context.cpp#L532-L537](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L532-L537)
 function RmlUi.Context:ProcessTextInput(text) end
 
 ---Enables or disables the mouse cursor for the context.
 ---
 ---@param enable boolean
----@see [Context.cpp#L540-L544](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L540-L544)
+---@see [Context.cpp#L540-L544](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L540-L544)
 function RmlUi.Context:EnableMouseCursor(enable) end
 
 ---Activates a theme for the context.
 ---
 ---@param theme_name string
 ---@param activate boolean
----@see [Context.cpp#L546-L551](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L546-L551)
+---@see [Context.cpp#L546-L551](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L546-L551)
 function RmlUi.Context:ActivateTheme(theme_name, activate) end
 
 ---Returns true if the theme is active, false if not.
 ---
 ---@param theme_name string
 ---@return boolean
----@see [Context.cpp#L553-L558](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L553-L558)
+---@see [Context.cpp#L553-L558](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L553-L558)
 function RmlUi.Context:IsThemeActive(theme_name) end
 
 ---Returns the element at the point specified by point.
@@ -171,45 +171,45 @@ function RmlUi.Context:IsThemeActive(theme_name) end
 ---@param point RmlUi.Vector2f
 ---@param ignore RmlUi.Element?
 ---@return RmlUi.Element
----@see [Context.cpp#L560-L566](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L560-L566)
+---@see [Context.cpp#L560-L566](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L560-L566)
 function RmlUi.Context:GetElementAtPoint(point, ignore) end
 
 ---Pulls the document to the front of the context.
 ---
 ---@param document RmlUi.Document
----@see [Context.cpp#L568-L572](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L568-L572)
+---@see [Context.cpp#L568-L572](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L568-L572)
 function RmlUi.Context:PullDocumentToFront(document) end
 
 ---Pushes the document to the back of the context.
 ---
 ---@param document RmlUi.Document
----@see [Context.cpp#L574-L578](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L574-L578)
+---@see [Context.cpp#L574-L578](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L574-L578)
 function RmlUi.Context:PushDocumentToBack(document) end
 
 ---@type RmlUi.Vector2i
----@see [Context.cpp#L582-L582](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L582-L582)
+---@see [Context.cpp#L582-L582](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L582-L582)
 RmlUi.Context.dimensions = nil
 
 ---@type number
----@see [Context.cpp#L584-L584](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L584-L584)
+---@see [Context.cpp#L584-L584](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L584-L584)
 RmlUi.Context.dp_ratio = nil
 
 ---@type RmlUi.Document[]
----@see [Context.cpp#L587-L587](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L587-L587)
+---@see [Context.cpp#L587-L587](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L587-L587)
 RmlUi.Context.documents = nil
 
 ---@type RmlUi.Element
----@see [Context.cpp#L589-L589](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L589-L589)
+---@see [Context.cpp#L589-L589](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L589-L589)
 RmlUi.Context.focus_element = nil
 
 ---@type RmlUi.Element
----@see [Context.cpp#L591-L591](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L591-L591)
+---@see [Context.cpp#L591-L591](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L591-L591)
 RmlUi.Context.hover_element = nil
 
 ---@type string
----@see [Context.cpp#L593-L593](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L593-L593)
+---@see [Context.cpp#L593-L593](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L593-L593)
 RmlUi.Context.name = nil
 
 ---@type RmlUi.Element
----@see [Context.cpp#L595-L595](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/Context.cpp#L595-L595)
+---@see [Context.cpp#L595-L595](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Rml/SolLua/bind/Context.cpp#L595-L595)
 RmlUi.Context.root_element = nil

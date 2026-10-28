@@ -7,17 +7,17 @@
 
 ---@class Menu : Callins
 ---@see Callins
----@see [LuaMenu.cpp#L33-L36](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaMenu.cpp#L33-L36)
+---@see [LuaMenu.cpp#L33-L36](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaMenu.cpp#L33-L36)
 local Menu = {}
 
 ---Called whenever LuaMenu is on with no game loaded.
 ---
----@see [LuaMenu.cpp#L328-L331](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaMenu.cpp#L328-L331)
+---@see [LuaMenu.cpp#L328-L331](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaMenu.cpp#L328-L331)
 function Menu:ActivateMenu() end
 
 ---Called whenever LuaMenu is on with a game loaded.
 ---
----@see [LuaMenu.cpp#L349-L352](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaMenu.cpp#L349-L352)
+---@see [LuaMenu.cpp#L349-L352](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaMenu.cpp#L349-L352)
 function Menu:ActivateGame() end
 
 ---Enables Draw{Genesis,Screen,ScreenPost} callins if true is returned,
@@ -25,5 +25,5 @@ function Menu:ActivateGame() end
 ---isn't running.
 ---
 ---@return boolean allowDraw
----@see [LuaMenu.cpp#L369-L376](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaMenu.cpp#L369-L376)
+---@see [LuaMenu.cpp#L369-L376](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaMenu.cpp#L369-L376)
 function Menu:AllowDraw() end

@@ -7,372 +7,378 @@
 
 ---Game specific information
 ---
----@see [LuaConstGame.cpp#L32-L35](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L32-L35)
+---@see [LuaConstGame.cpp#L32-L35](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L32-L35)
 Game = {
 	---Maximum number of teams, including the Gaia team.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L41-L41](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L41-L41)
+	---@see [LuaConstGame.cpp#L41-L41](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L41-L41)
 	maxTeams = nil,
 
 	---Maximum number of players.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L43-L43](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L43-L43)
+	---@see [LuaConstGame.cpp#L43-L43](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L43-L43)
 	maxPlayers = nil,
 
 	---Number of simulation gameframes per second
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L45-L45](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L45-L45)
+	---@see [LuaConstGame.cpp#L45-L45](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L45-L45)
 	gameSpeed = nil,
 
 	---Divide Game.mapSizeX or Game.mapSizeZ by this to get engine's "mapDims" coordinates. The resolution of height, yard and type maps.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L47-L47](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L47-L47)
+	---@see [LuaConstGame.cpp#L47-L47](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L47-L47)
 	squareSize = nil,
 
 	---The resolution of metalmap (for use in API such as Spring.GetMetalAmount etc.)
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L49-L49](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L49-L49)
+	---@see [LuaConstGame.cpp#L49-L49](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L49-L49)
 	metalMapSquareSize = nil,
 
 	---Size of a build grid square in elmos (`squareSize * buildGridResolution`).
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L51-L51](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L51-L51)
+	---@see [LuaConstGame.cpp#L51-L51](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L51-L51)
 	buildSquareSize = nil,
 
 	---Resolution of the native build placement grid, in heightmap squares.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L53-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L53-L53)
+	---@see [LuaConstGame.cpp#L53-L53](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L53-L53)
 	buildGridResolution = nil,
 
 	---Multiplier for unit, feature and move def footprint sizes, which are expressed in "TA units".
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L55-L55](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L55-L55)
+	---@see [LuaConstGame.cpp#L55-L55](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L55-L55)
 	footprintScale = nil,
 
 	---`0` fixed, `1` random, `2` choose in game, `3` choose before game.
 	---
 	---@type (0|1|2|3)
-	---@see [LuaConstGame.cpp#L61-L61](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L61-L61)
+	---@see [LuaConstGame.cpp#L61-L61](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L61-L61)
 	startPosType = nil,
 
 	---@type boolean
-	---@see [LuaConstGame.cpp#L63-L63](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L63-L63)
+	---@see [LuaConstGame.cpp#L63-L63](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L63-L63)
 	ghostedBuildings = nil,
 
 	---Base name of the demo being played, or `nil` if not playing a demo.
 	---
 	---@type string?
-	---@see [LuaConstGame.cpp#L65-L65](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L65-L65)
+	---@see [LuaConstGame.cpp#L65-L65](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L65-L65)
 	demoPlayName = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L74-L74](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L74-L74)
+	---@see [LuaConstGame.cpp#L74-L74](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L74-L74)
 	maxUnits = nil,
 
 	---@type number
-	---@see [LuaConstGame.cpp#L78-L78](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L78-L78)
+	---@see [LuaConstGame.cpp#L78-L78](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L78-L78)
 	windMin = nil,
 
 	---@type number
-	---@see [LuaConstGame.cpp#L80-L80](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L80-L80)
+	---@see [LuaConstGame.cpp#L80-L80](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L80-L80)
 	windMax = nil,
 
 	---Whether map damage (terrain deformation) is enabled.
 	---
 	---@type boolean
-	---@see [LuaConstGame.cpp#L84-L84](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L84-L84)
+	---@see [LuaConstGame.cpp#L84-L84](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L84-L84)
 	mapDamage = nil,
 
 	---Map size along the x axis, in map units (512 elmos).
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L91-L91](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L91-L91)
+	---@see [LuaConstGame.cpp#L91-L91](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L91-L91)
 	mapX = nil,
 
 	---Map size along the z axis, in map units (512 elmos).
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L93-L93](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L93-L93)
+	---@see [LuaConstGame.cpp#L93-L93](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L93-L93)
 	mapY = nil,
 
 	---Map size along the x axis in worldspace/opengl coords. Divide by Game.squareSize to get engine's "mapDims" coordinates
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L95-L95](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L95-L95)
+	---@see [LuaConstGame.cpp#L95-L95](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L95-L95)
 	mapSizeX = nil,
 
 	---Map size along the z axis in worldspace/opengl coords. Divide by Game.squareSize to get engine's "mapDims" coordinates
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L97-L97](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L97-L97)
+	---@see [LuaConstGame.cpp#L97-L97](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L97-L97)
 	mapSizeZ = nil,
 
 	---The map's human readable name.
 	---
 	---@type string
-	---@see [LuaConstGame.cpp#L103-L103](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L103-L103)
+	---@see [LuaConstGame.cpp#L103-L103](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L103-L103)
 	mapName = nil,
 
 	---The map's description.
 	---
 	---@type string
-	---@see [LuaConstGame.cpp#L105-L105](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L105-L105)
+	---@see [LuaConstGame.cpp#L105-L105](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L105-L105)
 	mapDescription = nil,
 
 	---@type number
-	---@see [LuaConstGame.cpp#L107-L107](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L107-L107)
+	---@see [LuaConstGame.cpp#L107-L107](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L107-L107)
 	mapHardness = nil,
 
 	---Extraction radius for mines.
 	---
 	---@type number
-	---@see [LuaConstGame.cpp#L109-L109](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L109-L109)
+	---@see [LuaConstGame.cpp#L109-L109](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L109-L109)
 	extractorRadius = nil,
 
 	---@type number
-	---@see [LuaConstGame.cpp#L111-L111](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L111-L111)
+	---@see [LuaConstGame.cpp#L111-L111](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L111-L111)
 	tidal = nil,
 
 	---@type number
-	---@see [LuaConstGame.cpp#L113-L113](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L113-L113)
+	---@see [LuaConstGame.cpp#L113-L113](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L113-L113)
 	waterDamage = nil,
 
 	---Gravity in elmos per second squared.
 	---
 	---@type number
-	---@see [LuaConstGame.cpp#L115-L115](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L115-L115)
+	---@see [LuaConstGame.cpp#L115-L115](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L115-L115)
 	gravity = nil,
 
 	---The game's human readable name, without version.
 	---
 	---@type string
-	---@see [LuaConstGame.cpp#L121-L121](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L121-L121)
+	---@see [LuaConstGame.cpp#L121-L121](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L121-L121)
 	gameName = nil,
 
 	---The game's short name, without version.
 	---
 	---@type string
-	---@see [LuaConstGame.cpp#L123-L123](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L123-L123)
+	---@see [LuaConstGame.cpp#L123-L123](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L123-L123)
 	gameShortName = nil,
 
 	---The game's version.
 	---
 	---@type string
-	---@see [LuaConstGame.cpp#L125-L125](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L125-L125)
+	---@see [LuaConstGame.cpp#L125-L125](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L125-L125)
 	gameVersion = nil,
 
 	---@type string
-	---@see [LuaConstGame.cpp#L127-L127](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L127-L127)
+	---@see [LuaConstGame.cpp#L127-L127](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L127-L127)
 	gameMutator = nil,
 
 	---The game's description.
 	---
 	---@type string
-	---@see [LuaConstGame.cpp#L129-L129](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L129-L129)
+	---@see [LuaConstGame.cpp#L129-L129](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L129-L129)
 	gameDesc = nil,
 
 	---The game's human readable name, including version.
 	---
 	---@type string
-	---@see [LuaConstGame.cpp#L132-L132](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L132-L132)
+	---@see [LuaConstGame.cpp#L132-L132](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L132-L132)
 	modName = nil,
 
 	---Same as `Game.gameShortName`.
 	---
 	---@type string
-	---@see [LuaConstGame.cpp#L134-L134](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L134-L134)
+	---@see [LuaConstGame.cpp#L134-L134](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L134-L134)
 	modShortName = nil,
 
 	---Same as `Game.gameVersion`.
 	---
 	---@type string
-	---@see [LuaConstGame.cpp#L136-L136](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L136-L136)
+	---@see [LuaConstGame.cpp#L136-L136](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L136-L136)
 	modVersion = nil,
 
 	---Same as `Game.gameMutator`.
 	---
 	---@type string
-	---@see [LuaConstGame.cpp#L138-L138](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L138-L138)
+	---@see [LuaConstGame.cpp#L138-L138](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L138-L138)
 	modMutator = nil,
 
 	---Same as `Game.gameDesc`.
 	---
 	---@type string
-	---@see [LuaConstGame.cpp#L140-L140](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L140-L140)
+	---@see [LuaConstGame.cpp#L140-L140](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L140-L140)
 	modDesc = nil,
 
 	---Whether constructions without builders decay.
 	---
 	---@type boolean
-	---@see [LuaConstGame.cpp#L143-L143](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L143-L143)
+	---@see [LuaConstGame.cpp#L143-L143](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L143-L143)
 	constructionDecay = nil,
 
 	---How long until constructions without builders start decaying.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L145-L145](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L145-L145)
+	---@see [LuaConstGame.cpp#L145-L145](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L145-L145)
 	constructionDecayTime = nil,
 
 	---How fast constructions without builders decay.
 	---
 	---@type number
-	---@see [LuaConstGame.cpp#L147-L147](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L147-L147)
+	---@see [LuaConstGame.cpp#L147-L147](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L147-L147)
 	constructionDecaySpeed = nil,
+
+	---Whether queued build overlap uses yardmap cells instead of full footprints.
+	---
+	---@type boolean
+	---@see [LuaConstGame.cpp#L149-L149](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L149-L149)
+	useYardmapsForQueuedBuildOverlap = nil,
 
 	---`0` = 1 reclaimer per feature max, otherwise unlimited.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L150-L150](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L150-L150)
+	---@see [LuaConstGame.cpp#L152-L152](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L152-L152)
 	multiReclaim = nil,
 
 	---`0` = gradual reclaim, `1` = all reclaimed at end, otherwise reclaim in `reclaimMethod` chunks.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L152-L152](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L152-L152)
+	---@see [LuaConstGame.cpp#L154-L154](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L154-L154)
 	reclaimMethod = nil,
 
 	---`0` = revert to wireframe and gradual reclaim, `1` = subtract HP and give full metal at end.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L154-L154](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L154-L154)
+	---@see [LuaConstGame.cpp#L156-L156](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L156-L156)
 	reclaimUnitMethod = nil,
 
 	---How much energy reclaiming a unit costs.
 	---
 	---@type number
-	---@see [LuaConstGame.cpp#L156-L156](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L156-L156)
+	---@see [LuaConstGame.cpp#L158-L158](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L158-L158)
 	reclaimUnitEnergyCostFactor = nil,
 
 	---How much metal reclaiming a unit returns.
 	---
 	---@type number
-	---@see [LuaConstGame.cpp#L158-L158](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L158-L158)
+	---@see [LuaConstGame.cpp#L160-L160](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L160-L160)
 	reclaimUnitEfficiency = nil,
 
 	---How much energy reclaiming a feature costs.
 	---
 	---@type number
-	---@see [LuaConstGame.cpp#L160-L160](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L160-L160)
+	---@see [LuaConstGame.cpp#L162-L162](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L162-L162)
 	reclaimFeatureEnergyCostFactor = nil,
 
 	---Whether wireframe reclaim drains health.
 	---
 	---@type boolean
-	---@see [LuaConstGame.cpp#L162-L162](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L162-L162)
+	---@see [LuaConstGame.cpp#L164-L164](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L164-L164)
 	reclaimUnitDrainHealth = nil,
 
 	---Whether enemy units can be reclaimed.
 	---
 	---@type boolean
-	---@see [LuaConstGame.cpp#L164-L164](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L164-L164)
+	---@see [LuaConstGame.cpp#L166-L166](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L166-L166)
 	reclaimAllowEnemies = nil,
 
 	---Whether allied units can be reclaimed.
 	---
 	---@type boolean
-	---@see [LuaConstGame.cpp#L166-L166](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L166-L166)
+	---@see [LuaConstGame.cpp#L168-L168](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L168-L168)
 	reclaimAllowAllies = nil,
 
 	---How much energy repair costs.
 	---
 	---@type number
-	---@see [LuaConstGame.cpp#L168-L168](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L168-L168)
+	---@see [LuaConstGame.cpp#L170-L170](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L170-L170)
 	repairEnergyCostFactor = nil,
 
 	---How much energy resurrection costs.
 	---
 	---@type number
-	---@see [LuaConstGame.cpp#L170-L170](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L170-L170)
+	---@see [LuaConstGame.cpp#L172-L172](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L172-L172)
 	resurrectEnergyCostFactor = nil,
 
 	---How much energy capture costs.
 	---
 	---@type number
-	---@see [LuaConstGame.cpp#L172-L172](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L172-L172)
+	---@see [LuaConstGame.cpp#L174-L174](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L174-L174)
 	captureEnergyCostFactor = nil,
 
 	---If `0`, every aircraft gets `cantBeTransported = true` in its unit def.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L176-L176](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L176-L176)
+	---@see [LuaConstGame.cpp#L178-L178](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L178-L178)
 	transportAir = nil,
 
 	---If `0`, every unit using a ship move def gets `cantBeTransported = true` in its unit def.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L178-L178](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L178-L178)
+	---@see [LuaConstGame.cpp#L180-L180](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L180-L180)
 	transportShip = nil,
 
 	---If `0`, every unit using a hovercraft move def gets `cantBeTransported = true` in its unit def.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L180-L180](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L180-L180)
+	---@see [LuaConstGame.cpp#L182-L182](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L182-L182)
 	transportHover = nil,
 
 	---If `0`, every unit using a tank or kbot move def gets `cantBeTransported = true` in its unit def.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L182-L182](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L182-L182)
+	---@see [LuaConstGame.cpp#L184-L184](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L184-L184)
 	transportGround = nil,
 
 	---`1` if units fire at enemies running their `Killed()` script, otherwise `0`.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L184-L184](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L184-L184)
+	---@see [LuaConstGame.cpp#L186-L186](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L186-L186)
 	fireAtKilled = nil,
 
 	---`1` if units fire at crashing aircraft, otherwise `0`.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L186-L186](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L186-L186)
+	---@see [LuaConstGame.cpp#L188-L188](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L188-L188)
 	fireAtCrashing = nil,
 
 	---`1` if underwater units are not in LOS unless also in sonar, otherwise `0`.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L188-L188](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L188-L188)
+	---@see [LuaConstGame.cpp#L190-L190](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L190-L190)
 	requireSonarUnderWater = nil,
 
 	---Whether paralysis depends on max health rather than current health.
 	---
 	---@type boolean
-	---@see [LuaConstGame.cpp#L191-L191](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L191-L191)
+	---@see [LuaConstGame.cpp#L193-L193](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L193-L193)
 	paralyzeOnMaxHealth = nil,
 
 	---Time it takes for paralysis to decay by 100%, in seconds.
 	---
 	---@type number
-	---@see [LuaConstGame.cpp#L193-L193](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L193-L193)
+	---@see [LuaConstGame.cpp#L195-L195](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L195-L195)
 	paralyzeDeclineRate = nil,
 
 	---@type boolean
-	---@see [LuaConstGame.cpp#L196-L196](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L196-L196)
+	---@see [LuaConstGame.cpp#L198-L198](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L198-L198)
 	allowEnginePlayerlist = nil,
 
 	---whether the engine handles excess resources overflow
 	---
 	---@type boolean
-	---@see [LuaConstGame.cpp#L198-L198](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L198-L198)
+	---@see [LuaConstGame.cpp#L200-L200](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L200-L200)
 	nativeExcessSharing = nil,
 
 	---SHA-512 checksum of the map archive, as hex.
 	---
 	---@type string
-	---@see [LuaConstGame.cpp#L209-L209](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L209-L209)
+	---@see [LuaConstGame.cpp#L211-L211](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L211-L211)
 	mapChecksum = nil,
 
 	---SHA-512 checksum of the game archive, as hex.
 	---
 	---@type string
-	---@see [LuaConstGame.cpp#L211-L211](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L211-L211)
+	---@see [LuaConstGame.cpp#L213-L213](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L213-L213)
 	modChecksum = nil,
 
 	---Example:
@@ -393,7 +399,7 @@ Game = {
 	---```
 	---
 	---@type table<string, integer>
-	---@see [LuaConstGame.cpp#L219-L238](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L219-L238)
+	---@see [LuaConstGame.cpp#L221-L240](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L221-L240)
 	springCategories = nil,
 
 	---(bidirectional)
@@ -414,202 +420,202 @@ Game = {
 	---```
 	---
 	---@type table<string|integer, integer|string>
-	---@see [LuaConstGame.cpp#L253-L270](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L253-L270)
+	---@see [LuaConstGame.cpp#L255-L272](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L255-L272)
 	armorTypes = nil,
 
 	---Table containing keys that represent the color code operations during font rendering.
 	---
 	---@type TextColorCode
-	---@see [LuaConstGame.cpp#L402-L405](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L402-L405)
+	---@see [LuaConstGame.cpp#L404-L407](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L404-L407)
 	textColorCodes = nil
 }
 
 ---Environmental damage types. {def}IDs of environmental-damage sources.
 ---
----@see [LuaConstGame.cpp#L287-L290](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L287-L290)
+---@see [LuaConstGame.cpp#L289-L292](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L289-L292)
 Game.envDamageTypes = {
 	---Piece-projectile explosion.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L293-L293](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L293-L293)
+	---@see [LuaConstGame.cpp#L295-L295](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L295-L295)
 	Debris = nil,
 
 	---Ground collision.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L295-L295](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L295-L295)
+	---@see [LuaConstGame.cpp#L297-L297](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L297-L297)
 	GroundCollision = nil,
 
 	---Object collision.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L297-L297](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L297-L297)
+	---@see [LuaConstGame.cpp#L299-L299](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L299-L299)
 	ObjectCollision = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L299-L299](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L299-L299)
+	---@see [LuaConstGame.cpp#L301-L301](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L301-L301)
 	Fire = nil,
 
 	---Lava, acid, etc.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L301-L301](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L301-L301)
+	---@see [LuaConstGame.cpp#L303-L303](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L303-L303)
 	Water = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L303-L303](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L303-L303)
+	---@see [LuaConstGame.cpp#L305-L305](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L305-L305)
 	Killed = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L305-L305](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L305-L305)
+	---@see [LuaConstGame.cpp#L307-L307](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L307-L307)
 	Crushed = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L307-L307](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L307-L307)
+	---@see [LuaConstGame.cpp#L309-L309](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L309-L309)
 	AircraftCrashed = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L309-L309](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L309-L309)
+	---@see [LuaConstGame.cpp#L311-L311](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L311-L311)
 	Kamikaze = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L311-L311](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L311-L311)
+	---@see [LuaConstGame.cpp#L313-L313](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L313-L313)
 	SelfD = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L313-L313](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L313-L313)
+	---@see [LuaConstGame.cpp#L315-L315](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L315-L315)
 	ConstructionDecay = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L315-L315](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L315-L315)
+	---@see [LuaConstGame.cpp#L317-L317](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L317-L317)
 	Reclaimed = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L317-L317](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L317-L317)
+	---@see [LuaConstGame.cpp#L319-L319](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L319-L319)
 	TurnedIntoFeature = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L319-L319](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L319-L319)
+	---@see [LuaConstGame.cpp#L321-L321](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L321-L321)
 	TransportKilled = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L321-L321](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L321-L321)
+	---@see [LuaConstGame.cpp#L323-L323](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L323-L323)
 	FactoryKilled = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L323-L323](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L323-L323)
+	---@see [LuaConstGame.cpp#L325-L325](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L325-L325)
 	FactoryCancel = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L325-L325](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L325-L325)
+	---@see [LuaConstGame.cpp#L327-L327](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L327-L327)
 	UnitScript = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L327-L327](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L327-L327)
+	---@see [LuaConstGame.cpp#L329-L329](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L329-L329)
 	SetNegativeHealth = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L329-L329](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L329-L329)
+	---@see [LuaConstGame.cpp#L331-L331](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L331-L331)
 	OutOfBounds = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L331-L331](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L331-L331)
+	---@see [LuaConstGame.cpp#L333-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L333-L333)
 	KilledByCheat = nil,
 
 	---The lowest index. Games can add their own types below it, e.g. `KilledByLua - 1`.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L333-L333](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L333-L333)
+	---@see [LuaConstGame.cpp#L335-L335](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L335-L335)
 	KilledByLua = nil
 }
 
 ---Weapon avoidance and projectile collision flags.
 ---
----@see [LuaConstGame.cpp#L338-L341](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L338-L341)
+---@see [LuaConstGame.cpp#L340-L343](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L340-L343)
 Game.collisionFlags = {
 	---@type integer
-	---@see [LuaConstGame.cpp#L344-L344](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L344-L344)
+	---@see [LuaConstGame.cpp#L346-L346](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L346-L346)
 	noEnemies = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L346-L346](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L346-L346)
+	---@see [LuaConstGame.cpp#L348-L348](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L348-L348)
 	noFriendlies = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L348-L348](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L348-L348)
+	---@see [LuaConstGame.cpp#L350-L350](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L350-L350)
 	noFeatures = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L350-L350](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L350-L350)
+	---@see [LuaConstGame.cpp#L352-L352](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L352-L352)
 	noNeutrals = nil,
 
 	---Ignored by raytraces; not added to `avoidFlags`.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L352-L352](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L352-L352)
+	---@see [LuaConstGame.cpp#L354-L354](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L354-L354)
 	noFireBases = nil,
 
 	---Ignored by raytraces; not added to `avoidFlags`.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L354-L354](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L354-L354)
+	---@see [LuaConstGame.cpp#L356-L356](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L356-L356)
 	noNonTargets = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L356-L356](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L356-L356)
+	---@see [LuaConstGame.cpp#L358-L358](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L358-L358)
 	noGround = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L358-L358](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L358-L358)
+	---@see [LuaConstGame.cpp#L360-L360](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L360-L360)
 	noCloaked = nil,
 
 	---`noEnemies`, `noFriendlies` and `noNeutrals` combined.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L360-L360](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L360-L360)
+	---@see [LuaConstGame.cpp#L362-L362](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L362-L362)
 	noUnits = nil
 }
 
 ---Move def speed-modifier types.
 ---
----@see [LuaConstGame.cpp#L365-L368](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L365-L368)
+---@see [LuaConstGame.cpp#L367-L370](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L367-L370)
 Game.speedModClasses = {
 	---@type integer
-	---@see [LuaConstGame.cpp#L371-L371](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L371-L371)
+	---@see [LuaConstGame.cpp#L373-L373](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L373-L373)
 	Tank = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L373-L373](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L373-L373)
+	---@see [LuaConstGame.cpp#L375-L375](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L375-L375)
 	KBot = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L375-L375](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L375-L375)
+	---@see [LuaConstGame.cpp#L377-L377](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L377-L377)
 	Hover = nil,
 
 	---Same as `Ship`.
 	---
 	---@type integer
-	---@see [LuaConstGame.cpp#L377-L377](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L377-L377)
+	---@see [LuaConstGame.cpp#L379-L379](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L379-L379)
 	Boat = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L379-L379](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L379-L379)
+	---@see [LuaConstGame.cpp#L381-L381](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L381-L381)
 	Ship = nil
 }
 
 ---MoveCtrl script-notify types.
 ---
----@see [LuaConstGame.cpp#L384-L387](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L384-L387)
+---@see [LuaConstGame.cpp#L386-L389](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L386-L389)
 Game.scriptNotifyTypes = {
 	---@type integer
-	---@see [LuaConstGame.cpp#L390-L390](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L390-L390)
+	---@see [LuaConstGame.cpp#L392-L392](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L392-L392)
 	HitNothing = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L392-L392](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L392-L392)
+	---@see [LuaConstGame.cpp#L394-L394](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L394-L394)
 	HitGround = nil,
 
 	---@type integer
-	---@see [LuaConstGame.cpp#L394-L394](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGame.cpp#L394-L394)
+	---@see [LuaConstGame.cpp#L396-L396](https://github.com/beyond-all-reason/RecoilEngine/blob/3929fd229d/rts/Lua/LuaConstGame.cpp#L396-L396)
 	HitLimit = nil
 }
