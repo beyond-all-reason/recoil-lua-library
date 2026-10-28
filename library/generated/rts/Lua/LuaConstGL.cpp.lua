@@ -11,1224 +11,1224 @@
 ---
 ---@enum GL
 ---@see gl
----@see [LuaConstGL.cpp#L12-L18](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L12-L18)
+---@see [LuaConstGL.cpp#L12-L18](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L12-L18)
 GL = {
 	---@type integer
-	---@see [LuaConstGL.cpp#L29-L29](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L29-L29)
+	---@see [LuaConstGL.cpp#L29-L29](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L29-L29)
 	POINTS = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L31-L31](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L31-L31)
+	---@see [LuaConstGL.cpp#L31-L31](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L31-L31)
 	LINES = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L33-L33](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L33-L33)
+	---@see [LuaConstGL.cpp#L33-L33](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L33-L33)
 	LINE_LOOP = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L35-L35](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L35-L35)
+	---@see [LuaConstGL.cpp#L35-L35](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L35-L35)
 	LINE_STRIP = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L37-L37](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L37-L37)
+	---@see [LuaConstGL.cpp#L37-L37](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L37-L37)
 	TRIANGLES = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L39-L39](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L39-L39)
+	---@see [LuaConstGL.cpp#L39-L39](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L39-L39)
 	TRIANGLE_STRIP = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L41-L41](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L41-L41)
+	---@see [LuaConstGL.cpp#L41-L41](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L41-L41)
 	TRIANGLE_FAN = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L43-L43](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L43-L43)
+	---@see [LuaConstGL.cpp#L43-L43](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L43-L43)
 	QUADS = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L45-L45](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L45-L45)
+	---@see [LuaConstGL.cpp#L45-L45](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L45-L45)
 	QUAD_STRIP = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L47-L47](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L47-L47)
+	---@see [LuaConstGL.cpp#L47-L47](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L47-L47)
 	POLYGON = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L50-L50](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L50-L50)
+	---@see [LuaConstGL.cpp#L50-L50](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L50-L50)
 	LINE_STRIP_ADJACENCY = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L52-L52](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L52-L52)
+	---@see [LuaConstGL.cpp#L52-L52](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L52-L52)
 	LINES_ADJACENCY = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L54-L54](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L54-L54)
+	---@see [LuaConstGL.cpp#L54-L54](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L54-L54)
 	TRIANGLE_STRIP_ADJACENCY = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L56-L56](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L56-L56)
+	---@see [LuaConstGL.cpp#L56-L56](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L56-L56)
 	TRIANGLES_ADJACENCY = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L58-L58](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L58-L58)
+	---@see [LuaConstGL.cpp#L58-L58](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L58-L58)
 	PATCHES = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L66-L66](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L66-L66)
+	---@see [LuaConstGL.cpp#L66-L66](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L66-L66)
 	ZERO = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L68-L68](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L68-L68)
+	---@see [LuaConstGL.cpp#L68-L68](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L68-L68)
 	ONE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L70-L70](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L70-L70)
+	---@see [LuaConstGL.cpp#L70-L70](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L70-L70)
 	SRC_COLOR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L72-L72](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L72-L72)
+	---@see [LuaConstGL.cpp#L72-L72](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L72-L72)
 	ONE_MINUS_SRC_COLOR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L74-L74](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L74-L74)
+	---@see [LuaConstGL.cpp#L74-L74](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L74-L74)
 	SRC_ALPHA = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L76-L76](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L76-L76)
+	---@see [LuaConstGL.cpp#L76-L76](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L76-L76)
 	ONE_MINUS_SRC_ALPHA = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L78-L78](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L78-L78)
+	---@see [LuaConstGL.cpp#L78-L78](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L78-L78)
 	DST_ALPHA = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L80-L80](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L80-L80)
+	---@see [LuaConstGL.cpp#L80-L80](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L80-L80)
 	ONE_MINUS_DST_ALPHA = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L88-L88](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L88-L88)
+	---@see [LuaConstGL.cpp#L88-L88](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L88-L88)
 	DST_COLOR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L90-L90](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L90-L90)
+	---@see [LuaConstGL.cpp#L90-L90](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L90-L90)
 	ONE_MINUS_DST_COLOR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L92-L92](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L92-L92)
+	---@see [LuaConstGL.cpp#L92-L92](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L92-L92)
 	SRC_ALPHA_SATURATE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L95-L95](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L95-L95)
+	---@see [LuaConstGL.cpp#L95-L95](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L95-L95)
 	FUNC_ADD = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L97-L97](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L97-L97)
+	---@see [LuaConstGL.cpp#L97-L97](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L97-L97)
 	FUNC_SUBTRACT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L99-L99](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L99-L99)
+	---@see [LuaConstGL.cpp#L99-L99](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L99-L99)
 	FUNC_REVERSE_SUBTRACT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L101-L101](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L101-L101)
+	---@see [LuaConstGL.cpp#L101-L101](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L101-L101)
 	MIN = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L103-L103](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L103-L103)
+	---@see [LuaConstGL.cpp#L103-L103](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L103-L103)
 	MAX = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L111-L111](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L111-L111)
+	---@see [LuaConstGL.cpp#L111-L111](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L111-L111)
 	NEVER = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L113-L113](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L113-L113)
+	---@see [LuaConstGL.cpp#L113-L113](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L113-L113)
 	LESS = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L115-L115](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L115-L115)
+	---@see [LuaConstGL.cpp#L115-L115](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L115-L115)
 	EQUAL = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L117-L117](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L117-L117)
+	---@see [LuaConstGL.cpp#L117-L117](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L117-L117)
 	LEQUAL = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L119-L119](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L119-L119)
+	---@see [LuaConstGL.cpp#L119-L119](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L119-L119)
 	GREATER = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L121-L121](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L121-L121)
+	---@see [LuaConstGL.cpp#L121-L121](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L121-L121)
 	NOTEQUAL = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L123-L123](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L123-L123)
+	---@see [LuaConstGL.cpp#L123-L123](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L123-L123)
 	GEQUAL = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L125-L125](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L125-L125)
+	---@see [LuaConstGL.cpp#L125-L125](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L125-L125)
 	ALWAYS = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L133-L133](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L133-L133)
+	---@see [LuaConstGL.cpp#L133-L133](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L133-L133)
 	CLEAR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L135-L135](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L135-L135)
+	---@see [LuaConstGL.cpp#L135-L135](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L135-L135)
 	AND = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L137-L137](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L137-L137)
+	---@see [LuaConstGL.cpp#L137-L137](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L137-L137)
 	AND_REVERSE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L139-L139](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L139-L139)
+	---@see [LuaConstGL.cpp#L139-L139](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L139-L139)
 	COPY = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L141-L141](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L141-L141)
+	---@see [LuaConstGL.cpp#L141-L141](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L141-L141)
 	AND_INVERTED = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L143-L143](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L143-L143)
+	---@see [LuaConstGL.cpp#L143-L143](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L143-L143)
 	NOOP = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L145-L145](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L145-L145)
+	---@see [LuaConstGL.cpp#L145-L145](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L145-L145)
 	XOR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L147-L147](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L147-L147)
+	---@see [LuaConstGL.cpp#L147-L147](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L147-L147)
 	OR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L149-L149](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L149-L149)
+	---@see [LuaConstGL.cpp#L149-L149](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L149-L149)
 	NOR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L151-L151](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L151-L151)
+	---@see [LuaConstGL.cpp#L151-L151](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L151-L151)
 	EQUIV = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L153-L153](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L153-L153)
+	---@see [LuaConstGL.cpp#L153-L153](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L153-L153)
 	INVERT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L155-L155](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L155-L155)
+	---@see [LuaConstGL.cpp#L155-L155](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L155-L155)
 	OR_REVERSE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L157-L157](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L157-L157)
+	---@see [LuaConstGL.cpp#L157-L157](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L157-L157)
 	COPY_INVERTED = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L159-L159](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L159-L159)
+	---@see [LuaConstGL.cpp#L159-L159](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L159-L159)
 	OR_INVERTED = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L161-L161](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L161-L161)
+	---@see [LuaConstGL.cpp#L161-L161](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L161-L161)
 	NAND = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L163-L163](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L163-L163)
+	---@see [LuaConstGL.cpp#L163-L163](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L163-L163)
 	SET = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L171-L171](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L171-L171)
+	---@see [LuaConstGL.cpp#L171-L171](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L171-L171)
 	BACK = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L173-L173](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L173-L173)
+	---@see [LuaConstGL.cpp#L173-L173](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L173-L173)
 	FRONT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L175-L175](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L175-L175)
+	---@see [LuaConstGL.cpp#L175-L175](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L175-L175)
 	FRONT_AND_BACK = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L183-L183](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L183-L183)
+	---@see [LuaConstGL.cpp#L183-L183](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L183-L183)
 	POINT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L185-L185](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L185-L185)
+	---@see [LuaConstGL.cpp#L185-L185](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L185-L185)
 	LINE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L187-L187](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L187-L187)
+	---@see [LuaConstGL.cpp#L187-L187](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L187-L187)
 	FILL = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L195-L195](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L195-L195)
+	---@see [LuaConstGL.cpp#L195-L195](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L195-L195)
 	FLAT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L197-L197](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L197-L197)
+	---@see [LuaConstGL.cpp#L197-L197](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L197-L197)
 	SMOOTH = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L205-L205](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L205-L205)
+	---@see [LuaConstGL.cpp#L205-L205](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L205-L205)
 	MODELVIEW = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L207-L207](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L207-L207)
+	---@see [LuaConstGL.cpp#L207-L207](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L207-L207)
 	PROJECTION = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L209-L209](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L209-L209)
+	---@see [LuaConstGL.cpp#L209-L209](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L209-L209)
 	TEXTURE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L217-L217](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L217-L217)
+	---@see [LuaConstGL.cpp#L217-L217](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L217-L217)
 	NEAREST = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L219-L219](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L219-L219)
+	---@see [LuaConstGL.cpp#L219-L219](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L219-L219)
 	LINEAR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L221-L221](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L221-L221)
+	---@see [LuaConstGL.cpp#L221-L221](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L221-L221)
 	NEAREST_MIPMAP_NEAREST = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L223-L223](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L223-L223)
+	---@see [LuaConstGL.cpp#L223-L223](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L223-L223)
 	LINEAR_MIPMAP_NEAREST = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L225-L225](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L225-L225)
+	---@see [LuaConstGL.cpp#L225-L225](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L225-L225)
 	NEAREST_MIPMAP_LINEAR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L227-L227](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L227-L227)
+	---@see [LuaConstGL.cpp#L227-L227](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L227-L227)
 	LINEAR_MIPMAP_LINEAR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L235-L235](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L235-L235)
+	---@see [LuaConstGL.cpp#L235-L235](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L235-L235)
 	REPEAT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L237-L237](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L237-L237)
+	---@see [LuaConstGL.cpp#L237-L237](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L237-L237)
 	MIRRORED_REPEAT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L239-L239](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L239-L239)
+	---@see [LuaConstGL.cpp#L239-L239](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L239-L239)
 	CLAMP = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L241-L241](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L241-L241)
+	---@see [LuaConstGL.cpp#L241-L241](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L241-L241)
 	CLAMP_TO_EDGE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L243-L243](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L243-L243)
+	---@see [LuaConstGL.cpp#L243-L243](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L243-L243)
 	CLAMP_TO_BORDER = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L251-L251](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L251-L251)
+	---@see [LuaConstGL.cpp#L251-L251](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L251-L251)
 	TEXTURE_ENV = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L253-L253](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L253-L253)
+	---@see [LuaConstGL.cpp#L253-L253](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L253-L253)
 	TEXTURE_ENV_MODE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L255-L255](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L255-L255)
+	---@see [LuaConstGL.cpp#L255-L255](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L255-L255)
 	TEXTURE_ENV_COLOR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L257-L257](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L257-L257)
+	---@see [LuaConstGL.cpp#L257-L257](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L257-L257)
 	MODULATE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L259-L259](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L259-L259)
+	---@see [LuaConstGL.cpp#L259-L259](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L259-L259)
 	DECAL = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L261-L261](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L261-L261)
+	---@see [LuaConstGL.cpp#L261-L261](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L261-L261)
 	BLEND = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L263-L263](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L263-L263)
+	---@see [LuaConstGL.cpp#L263-L263](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L263-L263)
 	REPLACE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L266-L266](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L266-L266)
+	---@see [LuaConstGL.cpp#L266-L266](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L266-L266)
 	TEXTURE_FILTER_CONTROL = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L268-L268](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L268-L268)
+	---@see [LuaConstGL.cpp#L268-L268](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L268-L268)
 	TEXTURE_LOD_BIAS = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L276-L276](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L276-L276)
+	---@see [LuaConstGL.cpp#L276-L276](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L276-L276)
 	TEXTURE_GEN_MODE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L278-L278](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L278-L278)
+	---@see [LuaConstGL.cpp#L278-L278](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L278-L278)
 	EYE_PLANE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L280-L280](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L280-L280)
+	---@see [LuaConstGL.cpp#L280-L280](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L280-L280)
 	OBJECT_PLANE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L282-L282](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L282-L282)
+	---@see [LuaConstGL.cpp#L282-L282](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L282-L282)
 	EYE_LINEAR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L284-L284](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L284-L284)
+	---@see [LuaConstGL.cpp#L284-L284](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L284-L284)
 	OBJECT_LINEAR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L286-L286](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L286-L286)
+	---@see [LuaConstGL.cpp#L286-L286](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L286-L286)
 	SPHERE_MAP = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L288-L288](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L288-L288)
+	---@see [LuaConstGL.cpp#L288-L288](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L288-L288)
 	NORMAL_MAP = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L290-L290](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L290-L290)
+	---@see [LuaConstGL.cpp#L290-L290](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L290-L290)
 	REFLECTION_MAP = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L292-L292](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L292-L292)
+	---@see [LuaConstGL.cpp#L292-L292](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L292-L292)
 	S = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L294-L294](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L294-L294)
+	---@see [LuaConstGL.cpp#L294-L294](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L294-L294)
 	T = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L296-L296](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L296-L296)
+	---@see [LuaConstGL.cpp#L296-L296](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L296-L296)
 	R = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L298-L298](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L298-L298)
+	---@see [LuaConstGL.cpp#L298-L298](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L298-L298)
 	Q = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L306-L306](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L306-L306)
+	---@see [LuaConstGL.cpp#L306-L306](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L306-L306)
 	CURRENT_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L308-L308](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L308-L308)
+	---@see [LuaConstGL.cpp#L308-L308](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L308-L308)
 	POINT_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L310-L310](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L310-L310)
+	---@see [LuaConstGL.cpp#L310-L310](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L310-L310)
 	LINE_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L312-L312](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L312-L312)
+	---@see [LuaConstGL.cpp#L312-L312](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L312-L312)
 	POLYGON_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L314-L314](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L314-L314)
+	---@see [LuaConstGL.cpp#L314-L314](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L314-L314)
 	POLYGON_STIPPLE_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L316-L316](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L316-L316)
+	---@see [LuaConstGL.cpp#L316-L316](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L316-L316)
 	PIXEL_MODE_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L318-L318](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L318-L318)
+	---@see [LuaConstGL.cpp#L318-L318](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L318-L318)
 	LIGHTING_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L320-L320](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L320-L320)
+	---@see [LuaConstGL.cpp#L320-L320](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L320-L320)
 	FOG_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L322-L322](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L322-L322)
+	---@see [LuaConstGL.cpp#L322-L322](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L322-L322)
 	DEPTH_BUFFER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L324-L324](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L324-L324)
+	---@see [LuaConstGL.cpp#L324-L324](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L324-L324)
 	ACCUM_BUFFER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L326-L326](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L326-L326)
+	---@see [LuaConstGL.cpp#L326-L326](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L326-L326)
 	STENCIL_BUFFER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L328-L328](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L328-L328)
+	---@see [LuaConstGL.cpp#L328-L328](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L328-L328)
 	VIEWPORT_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L330-L330](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L330-L330)
+	---@see [LuaConstGL.cpp#L330-L330](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L330-L330)
 	TRANSFORM_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L332-L332](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L332-L332)
+	---@see [LuaConstGL.cpp#L332-L332](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L332-L332)
 	ENABLE_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L334-L334](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L334-L334)
+	---@see [LuaConstGL.cpp#L334-L334](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L334-L334)
 	COLOR_BUFFER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L336-L336](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L336-L336)
+	---@see [LuaConstGL.cpp#L336-L336](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L336-L336)
 	HINT_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L338-L338](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L338-L338)
+	---@see [LuaConstGL.cpp#L338-L338](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L338-L338)
 	EVAL_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L340-L340](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L340-L340)
+	---@see [LuaConstGL.cpp#L340-L340](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L340-L340)
 	LIST_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L342-L342](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L342-L342)
+	---@see [LuaConstGL.cpp#L342-L342](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L342-L342)
 	TEXTURE_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L344-L344](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L344-L344)
+	---@see [LuaConstGL.cpp#L344-L344](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L344-L344)
 	SCISSOR_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L346-L346](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L346-L346)
+	---@see [LuaConstGL.cpp#L346-L346](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L346-L346)
 	ALL_ATTRIB_BITS = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L355-L355](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L355-L355)
+	---@see [LuaConstGL.cpp#L355-L355](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L355-L355)
 	FOG_HINT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L357-L357](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L357-L357)
+	---@see [LuaConstGL.cpp#L357-L357](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L357-L357)
 	PERSPECTIVE_CORRECTION_HINT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L365-L365](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L365-L365)
+	---@see [LuaConstGL.cpp#L365-L365](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L365-L365)
 	DONT_CARE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L367-L367](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L367-L367)
+	---@see [LuaConstGL.cpp#L367-L367](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L367-L367)
 	FASTEST = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L369-L369](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L369-L369)
+	---@see [LuaConstGL.cpp#L369-L369](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L369-L369)
 	NICEST = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L376-L376](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L376-L376)
+	---@see [LuaConstGL.cpp#L376-L376](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L376-L376)
 	KEEP = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L378-L378](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L378-L378)
+	---@see [LuaConstGL.cpp#L378-L378](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L378-L378)
 	INCR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L380-L380](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L380-L380)
+	---@see [LuaConstGL.cpp#L380-L380](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L380-L380)
 	DECR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L382-L382](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L382-L382)
+	---@see [LuaConstGL.cpp#L382-L382](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L382-L382)
 	INCR_WRAP = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L384-L384](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L384-L384)
+	---@see [LuaConstGL.cpp#L384-L384](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L384-L384)
 	DECR_WRAP = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L393-L393](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L393-L393)
+	---@see [LuaConstGL.cpp#L393-L393](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L393-L393)
 	AMBIENT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L395-L395](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L395-L395)
+	---@see [LuaConstGL.cpp#L395-L395](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L395-L395)
 	DIFFUSE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L397-L397](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L397-L397)
+	---@see [LuaConstGL.cpp#L397-L397](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L397-L397)
 	SPECULAR = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L399-L399](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L399-L399)
+	---@see [LuaConstGL.cpp#L399-L399](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L399-L399)
 	POSITION = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L401-L401](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L401-L401)
+	---@see [LuaConstGL.cpp#L401-L401](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L401-L401)
 	SPOT_DIRECTION = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L403-L403](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L403-L403)
+	---@see [LuaConstGL.cpp#L403-L403](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L403-L403)
 	SPOT_EXPONENT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L405-L405](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L405-L405)
+	---@see [LuaConstGL.cpp#L405-L405](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L405-L405)
 	SPOT_CUTOFF = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L407-L407](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L407-L407)
+	---@see [LuaConstGL.cpp#L407-L407](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L407-L407)
 	CONSTANT_ATTENUATION = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L409-L409](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L409-L409)
+	---@see [LuaConstGL.cpp#L409-L409](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L409-L409)
 	LINEAR_ATTENUATION = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L411-L411](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L411-L411)
+	---@see [LuaConstGL.cpp#L411-L411](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L411-L411)
 	QUADRATIC_ATTENUATION = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L419-L419](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L419-L419)
+	---@see [LuaConstGL.cpp#L419-L419](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L419-L419)
 	VERTEX_SHADER = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L421-L421](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L421-L421)
+	---@see [LuaConstGL.cpp#L421-L421](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L421-L421)
 	TESS_CONTROL_SHADER = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L423-L423](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L423-L423)
+	---@see [LuaConstGL.cpp#L423-L423](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L423-L423)
 	TESS_EVALUATION_SHADER = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L425-L425](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L425-L425)
+	---@see [LuaConstGL.cpp#L425-L425](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L425-L425)
 	GEOMETRY_SHADER_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L427-L427](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L427-L427)
+	---@see [LuaConstGL.cpp#L427-L427](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L427-L427)
 	FRAGMENT_SHADER = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L435-L435](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L435-L435)
+	---@see [LuaConstGL.cpp#L435-L435](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L435-L435)
 	GEOMETRY_INPUT_TYPE_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L437-L437](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L437-L437)
+	---@see [LuaConstGL.cpp#L437-L437](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L437-L437)
 	GEOMETRY_OUTPUT_TYPE_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L439-L439](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L439-L439)
+	---@see [LuaConstGL.cpp#L439-L439](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L439-L439)
 	GEOMETRY_VERTICES_OUT_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L447-L447](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L447-L447)
+	---@see [LuaConstGL.cpp#L447-L447](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L447-L447)
 	PATCH_VERTICES = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L449-L449](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L449-L449)
+	---@see [LuaConstGL.cpp#L449-L449](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L449-L449)
 	PATCH_DEFAULT_OUTER_LEVEL = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L451-L451](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L451-L451)
+	---@see [LuaConstGL.cpp#L451-L451](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L451-L451)
 	PATCH_DEFAULT_INNER_LEVEL = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L459-L459](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L459-L459)
+	---@see [LuaConstGL.cpp#L459-L459](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L459-L459)
 	BYTE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L461-L461](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L461-L461)
+	---@see [LuaConstGL.cpp#L461-L461](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L461-L461)
 	UNSIGNED_BYTE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L463-L463](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L463-L463)
+	---@see [LuaConstGL.cpp#L463-L463](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L463-L463)
 	SHORT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L465-L465](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L465-L465)
+	---@see [LuaConstGL.cpp#L465-L465](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L465-L465)
 	UNSIGNED_SHORT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L467-L467](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L467-L467)
+	---@see [LuaConstGL.cpp#L467-L467](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L467-L467)
 	INT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L469-L469](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L469-L469)
+	---@see [LuaConstGL.cpp#L469-L469](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L469-L469)
 	UNSIGNED_INT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L471-L471](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L471-L471)
+	---@see [LuaConstGL.cpp#L471-L471](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L471-L471)
 	FLOAT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L473-L473](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L473-L473)
+	---@see [LuaConstGL.cpp#L473-L473](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L473-L473)
 	FLOAT_VEC4 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L475-L475](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L475-L475)
+	---@see [LuaConstGL.cpp#L475-L475](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L475-L475)
 	INT_VEC4 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L477-L477](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L477-L477)
+	---@see [LuaConstGL.cpp#L477-L477](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L477-L477)
 	UNSIGNED_INT_VEC4 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L479-L479](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L479-L479)
+	---@see [LuaConstGL.cpp#L479-L479](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L479-L479)
 	FLOAT_MAT4 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L487-L487](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L487-L487)
+	---@see [LuaConstGL.cpp#L487-L487](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L487-L487)
 	ELEMENT_ARRAY_BUFFER = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L489-L489](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L489-L489)
+	---@see [LuaConstGL.cpp#L489-L489](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L489-L489)
 	ARRAY_BUFFER = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L491-L491](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L491-L491)
+	---@see [LuaConstGL.cpp#L491-L491](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L491-L491)
 	UNIFORM_BUFFER = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L493-L493](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L493-L493)
+	---@see [LuaConstGL.cpp#L493-L493](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L493-L493)
 	SHADER_STORAGE_BUFFER = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L497-L497](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L497-L497)
+	---@see [LuaConstGL.cpp#L497-L497](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L497-L497)
 	TEXTURE_1D = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L499-L499](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L499-L499)
+	---@see [LuaConstGL.cpp#L499-L499](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L499-L499)
 	TEXTURE_2D = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L501-L501](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L501-L501)
+	---@see [LuaConstGL.cpp#L501-L501](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L501-L501)
 	TEXTURE_2D_ARRAY = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L503-L503](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L503-L503)
+	---@see [LuaConstGL.cpp#L503-L503](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L503-L503)
 	TEXTURE_3D = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L505-L505](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L505-L505)
+	---@see [LuaConstGL.cpp#L505-L505](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L505-L505)
 	TEXTURE_CUBE_MAP = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L507-L507](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L507-L507)
+	---@see [LuaConstGL.cpp#L507-L507](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L507-L507)
 	TEXTURE_2D_MULTISAMPLE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L511-L511](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L511-L511)
+	---@see [LuaConstGL.cpp#L511-L511](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L511-L511)
 	RGBA32F = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L513-L513](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L513-L513)
+	---@see [LuaConstGL.cpp#L513-L513](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L513-L513)
 	RGBA16F = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L515-L515](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L515-L515)
+	---@see [LuaConstGL.cpp#L515-L515](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L515-L515)
 	RG32F = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L517-L517](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L517-L517)
+	---@see [LuaConstGL.cpp#L517-L517](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L517-L517)
 	RG16F = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L519-L519](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L519-L519)
+	---@see [LuaConstGL.cpp#L519-L519](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L519-L519)
 	R11F_G11F_B10F = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L521-L521](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L521-L521)
+	---@see [LuaConstGL.cpp#L521-L521](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L521-L521)
 	R32F = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L523-L523](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L523-L523)
+	---@see [LuaConstGL.cpp#L523-L523](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L523-L523)
 	R16F = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L525-L525](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L525-L525)
+	---@see [LuaConstGL.cpp#L525-L525](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L525-L525)
 	RGBA32UI = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L527-L527](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L527-L527)
+	---@see [LuaConstGL.cpp#L527-L527](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L527-L527)
 	RGBA16UI = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L529-L529](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L529-L529)
+	---@see [LuaConstGL.cpp#L529-L529](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L529-L529)
 	RGB10_A2UI = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L531-L531](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L531-L531)
+	---@see [LuaConstGL.cpp#L531-L531](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L531-L531)
 	RGBA8UI = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L533-L533](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L533-L533)
+	---@see [LuaConstGL.cpp#L533-L533](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L533-L533)
 	RG32UI = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L535-L535](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L535-L535)
+	---@see [LuaConstGL.cpp#L535-L535](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L535-L535)
 	RG16UI = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L537-L537](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L537-L537)
+	---@see [LuaConstGL.cpp#L537-L537](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L537-L537)
 	RG8UI = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L539-L539](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L539-L539)
+	---@see [LuaConstGL.cpp#L539-L539](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L539-L539)
 	R32UI = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L541-L541](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L541-L541)
+	---@see [LuaConstGL.cpp#L541-L541](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L541-L541)
 	R16UI = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L543-L543](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L543-L543)
+	---@see [LuaConstGL.cpp#L543-L543](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L543-L543)
 	R8UI = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L545-L545](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L545-L545)
+	---@see [LuaConstGL.cpp#L545-L545](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L545-L545)
 	RGBA32I = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L547-L547](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L547-L547)
+	---@see [LuaConstGL.cpp#L547-L547](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L547-L547)
 	RGBA16I = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L549-L549](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L549-L549)
+	---@see [LuaConstGL.cpp#L549-L549](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L549-L549)
 	RGBA8I = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L551-L551](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L551-L551)
+	---@see [LuaConstGL.cpp#L551-L551](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L551-L551)
 	RG32I = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L553-L553](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L553-L553)
+	---@see [LuaConstGL.cpp#L553-L553](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L553-L553)
 	RG16I = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L555-L555](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L555-L555)
+	---@see [LuaConstGL.cpp#L555-L555](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L555-L555)
 	RG8I = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L557-L557](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L557-L557)
+	---@see [LuaConstGL.cpp#L557-L557](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L557-L557)
 	R32I = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L559-L559](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L559-L559)
+	---@see [LuaConstGL.cpp#L559-L559](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L559-L559)
 	R16I = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L561-L561](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L561-L561)
+	---@see [LuaConstGL.cpp#L561-L561](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L561-L561)
 	R8I = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L563-L563](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L563-L563)
+	---@see [LuaConstGL.cpp#L563-L563](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L563-L563)
 	RGBA16 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L565-L565](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L565-L565)
+	---@see [LuaConstGL.cpp#L565-L565](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L565-L565)
 	RGB10_A2 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L567-L567](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L567-L567)
+	---@see [LuaConstGL.cpp#L567-L567](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L567-L567)
 	RGBA8 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L569-L569](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L569-L569)
+	---@see [LuaConstGL.cpp#L569-L569](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L569-L569)
 	RG16 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L571-L571](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L571-L571)
+	---@see [LuaConstGL.cpp#L571-L571](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L571-L571)
 	RG8 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L573-L573](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L573-L573)
+	---@see [LuaConstGL.cpp#L573-L573](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L573-L573)
 	R16 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L575-L575](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L575-L575)
+	---@see [LuaConstGL.cpp#L575-L575](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L575-L575)
 	R8 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L577-L577](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L577-L577)
+	---@see [LuaConstGL.cpp#L577-L577](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L577-L577)
 	RGBA16_SNORM = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L579-L579](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L579-L579)
+	---@see [LuaConstGL.cpp#L579-L579](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L579-L579)
 	RGBA8_SNORM = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L581-L581](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L581-L581)
+	---@see [LuaConstGL.cpp#L581-L581](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L581-L581)
 	RG16_SNORM = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L583-L583](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L583-L583)
+	---@see [LuaConstGL.cpp#L583-L583](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L583-L583)
 	RG8_SNORM = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L585-L585](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L585-L585)
+	---@see [LuaConstGL.cpp#L585-L585](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L585-L585)
 	R16_SNORM = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L587-L587](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L587-L587)
+	---@see [LuaConstGL.cpp#L587-L587](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L587-L587)
 	R8_SNORM = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L589-L589](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L589-L589)
+	---@see [LuaConstGL.cpp#L589-L589](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L589-L589)
 	DEPTH_COMPONENT16 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L591-L591](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L591-L591)
+	---@see [LuaConstGL.cpp#L591-L591](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L591-L591)
 	DEPTH_COMPONENT24 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L593-L593](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L593-L593)
+	---@see [LuaConstGL.cpp#L593-L593](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L593-L593)
 	DEPTH_COMPONENT32 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L595-L595](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L595-L595)
+	---@see [LuaConstGL.cpp#L595-L595](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L595-L595)
 	DEPTH_COMPONENT32F = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L600-L600](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L600-L600)
+	---@see [LuaConstGL.cpp#L600-L600](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L600-L600)
 	READ_ONLY = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L602-L602](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L602-L602)
+	---@see [LuaConstGL.cpp#L602-L602](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L602-L602)
 	WRITE_ONLY = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L604-L604](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L604-L604)
+	---@see [LuaConstGL.cpp#L604-L604](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L604-L604)
 	READ_WRITE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L609-L609](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L609-L609)
+	---@see [LuaConstGL.cpp#L609-L609](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L609-L609)
 	VERTEX_ATTRIB_ARRAY_BARRIER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L611-L611](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L611-L611)
+	---@see [LuaConstGL.cpp#L611-L611](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L611-L611)
 	ELEMENT_ARRAY_BARRIER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L613-L613](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L613-L613)
+	---@see [LuaConstGL.cpp#L613-L613](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L613-L613)
 	UNIFORM_BARRIER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L615-L615](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L615-L615)
+	---@see [LuaConstGL.cpp#L615-L615](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L615-L615)
 	TEXTURE_FETCH_BARRIER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L617-L617](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L617-L617)
+	---@see [LuaConstGL.cpp#L617-L617](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L617-L617)
 	SHADER_IMAGE_ACCESS_BARRIER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L619-L619](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L619-L619)
+	---@see [LuaConstGL.cpp#L619-L619](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L619-L619)
 	COMMAND_BARRIER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L621-L621](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L621-L621)
+	---@see [LuaConstGL.cpp#L621-L621](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L621-L621)
 	PIXEL_BUFFER_BARRIER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L623-L623](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L623-L623)
+	---@see [LuaConstGL.cpp#L623-L623](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L623-L623)
 	TEXTURE_UPDATE_BARRIER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L625-L625](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L625-L625)
+	---@see [LuaConstGL.cpp#L625-L625](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L625-L625)
 	BUFFER_UPDATE_BARRIER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L627-L627](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L627-L627)
+	---@see [LuaConstGL.cpp#L627-L627](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L627-L627)
 	FRAMEBUFFER_BARRIER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L629-L629](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L629-L629)
+	---@see [LuaConstGL.cpp#L629-L629](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L629-L629)
 	TRANSFORM_FEEDBACK_BARRIER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L631-L631](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L631-L631)
+	---@see [LuaConstGL.cpp#L631-L631](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L631-L631)
 	ATOMIC_COUNTER_BARRIER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L633-L633](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L633-L633)
+	---@see [LuaConstGL.cpp#L633-L633](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L633-L633)
 	SHADER_STORAGE_BARRIER_BIT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L635-L635](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L635-L635)
+	---@see [LuaConstGL.cpp#L635-L635](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L635-L635)
 	ALL_BARRIER_BITS = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L638-L638](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L638-L638)
+	---@see [LuaConstGL.cpp#L638-L638](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L638-L638)
 	COLOR_ATTACHMENT0 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L640-L640](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L640-L640)
+	---@see [LuaConstGL.cpp#L640-L640](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L640-L640)
 	COLOR_ATTACHMENT1 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L642-L642](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L642-L642)
+	---@see [LuaConstGL.cpp#L642-L642](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L642-L642)
 	COLOR_ATTACHMENT2 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L644-L644](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L644-L644)
+	---@see [LuaConstGL.cpp#L644-L644](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L644-L644)
 	COLOR_ATTACHMENT3 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L646-L646](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L646-L646)
+	---@see [LuaConstGL.cpp#L646-L646](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L646-L646)
 	COLOR_ATTACHMENT4 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L648-L648](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L648-L648)
+	---@see [LuaConstGL.cpp#L648-L648](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L648-L648)
 	COLOR_ATTACHMENT5 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L650-L650](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L650-L650)
+	---@see [LuaConstGL.cpp#L650-L650](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L650-L650)
 	COLOR_ATTACHMENT6 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L652-L652](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L652-L652)
+	---@see [LuaConstGL.cpp#L652-L652](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L652-L652)
 	COLOR_ATTACHMENT7 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L654-L654](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L654-L654)
+	---@see [LuaConstGL.cpp#L654-L654](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L654-L654)
 	COLOR_ATTACHMENT8 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L656-L656](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L656-L656)
+	---@see [LuaConstGL.cpp#L656-L656](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L656-L656)
 	COLOR_ATTACHMENT9 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L658-L658](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L658-L658)
+	---@see [LuaConstGL.cpp#L658-L658](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L658-L658)
 	COLOR_ATTACHMENT10 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L660-L660](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L660-L660)
+	---@see [LuaConstGL.cpp#L660-L660](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L660-L660)
 	COLOR_ATTACHMENT11 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L662-L662](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L662-L662)
+	---@see [LuaConstGL.cpp#L662-L662](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L662-L662)
 	COLOR_ATTACHMENT12 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L664-L664](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L664-L664)
+	---@see [LuaConstGL.cpp#L664-L664](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L664-L664)
 	COLOR_ATTACHMENT13 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L666-L666](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L666-L666)
+	---@see [LuaConstGL.cpp#L666-L666](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L666-L666)
 	COLOR_ATTACHMENT14 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L668-L668](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L668-L668)
+	---@see [LuaConstGL.cpp#L668-L668](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L668-L668)
 	COLOR_ATTACHMENT15 = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L670-L670](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L670-L670)
+	---@see [LuaConstGL.cpp#L670-L670](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L670-L670)
 	DEPTH_ATTACHMENT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L672-L672](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L672-L672)
+	---@see [LuaConstGL.cpp#L672-L672](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L672-L672)
 	STENCIL_ATTACHMENT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L682-L682](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L682-L682)
+	---@see [LuaConstGL.cpp#L682-L682](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L682-L682)
 	COLOR_ATTACHMENT0_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L684-L684](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L684-L684)
+	---@see [LuaConstGL.cpp#L684-L684](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L684-L684)
 	COLOR_ATTACHMENT1_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L686-L686](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L686-L686)
+	---@see [LuaConstGL.cpp#L686-L686](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L686-L686)
 	COLOR_ATTACHMENT2_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L688-L688](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L688-L688)
+	---@see [LuaConstGL.cpp#L688-L688](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L688-L688)
 	COLOR_ATTACHMENT3_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L690-L690](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L690-L690)
+	---@see [LuaConstGL.cpp#L690-L690](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L690-L690)
 	COLOR_ATTACHMENT4_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L692-L692](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L692-L692)
+	---@see [LuaConstGL.cpp#L692-L692](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L692-L692)
 	COLOR_ATTACHMENT5_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L694-L694](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L694-L694)
+	---@see [LuaConstGL.cpp#L694-L694](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L694-L694)
 	COLOR_ATTACHMENT6_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L696-L696](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L696-L696)
+	---@see [LuaConstGL.cpp#L696-L696](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L696-L696)
 	COLOR_ATTACHMENT7_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L698-L698](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L698-L698)
+	---@see [LuaConstGL.cpp#L698-L698](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L698-L698)
 	COLOR_ATTACHMENT8_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L700-L700](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L700-L700)
+	---@see [LuaConstGL.cpp#L700-L700](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L700-L700)
 	COLOR_ATTACHMENT9_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L702-L702](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L702-L702)
+	---@see [LuaConstGL.cpp#L702-L702](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L702-L702)
 	COLOR_ATTACHMENT10_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L704-L704](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L704-L704)
+	---@see [LuaConstGL.cpp#L704-L704](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L704-L704)
 	COLOR_ATTACHMENT11_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L706-L706](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L706-L706)
+	---@see [LuaConstGL.cpp#L706-L706](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L706-L706)
 	COLOR_ATTACHMENT12_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L708-L708](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L708-L708)
+	---@see [LuaConstGL.cpp#L708-L708](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L708-L708)
 	COLOR_ATTACHMENT13_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L710-L710](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L710-L710)
+	---@see [LuaConstGL.cpp#L710-L710](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L710-L710)
 	COLOR_ATTACHMENT14_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L712-L712](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L712-L712)
+	---@see [LuaConstGL.cpp#L712-L712](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L712-L712)
 	COLOR_ATTACHMENT15_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L715-L715](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L715-L715)
+	---@see [LuaConstGL.cpp#L715-L715](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L715-L715)
 	DEPTH_ATTACHMENT_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L717-L717](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L717-L717)
+	---@see [LuaConstGL.cpp#L717-L717](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L717-L717)
 	STENCIL_ATTACHMENT_EXT = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L725-L725](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L725-L725)
+	---@see [LuaConstGL.cpp#L725-L725](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L725-L725)
 	BUFFER = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L727-L727](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L727-L727)
+	---@see [LuaConstGL.cpp#L727-L727](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L727-L727)
 	SHADER = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L729-L729](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L729-L729)
+	---@see [LuaConstGL.cpp#L729-L729](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L729-L729)
 	PROGRAM = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L731-L731](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L731-L731)
+	---@see [LuaConstGL.cpp#L731-L731](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L731-L731)
 	VERTEX_ARRAY = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L733-L733](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L733-L733)
+	---@see [LuaConstGL.cpp#L733-L733](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L733-L733)
 	QUERY = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L735-L735](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L735-L735)
+	---@see [LuaConstGL.cpp#L735-L735](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L735-L735)
 	PROGRAM_PIPELINE = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L737-L737](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L737-L737)
+	---@see [LuaConstGL.cpp#L737-L737](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L737-L737)
 	TRANSFORM_FEEDBACK = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L739-L739](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L739-L739)
+	---@see [LuaConstGL.cpp#L739-L739](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L739-L739)
 	RENDERBUFFER = nil,
 
 	---@type integer
-	---@see [LuaConstGL.cpp#L741-L741](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L741-L741)
+	---@see [LuaConstGL.cpp#L741-L741](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L741-L741)
 	FRAMEBUFFER = nil
 }
 
 ---Drawing Primitives
 ---
 ---@section primitives
----@see [LuaConstGL.cpp#L24-L27](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L24-L27)
+---@see [LuaConstGL.cpp#L24-L27](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L24-L27)
 
 ---BlendingFactorDest
 ---
 ---@section blendingfactordest
----@see [LuaConstGL.cpp#L61-L64](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L61-L64)
+---@see [LuaConstGL.cpp#L61-L64](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L61-L64)
 
 ---BlendingFactorSrc
 ---
 ---@section blendingfactorsrc
----@see [LuaConstGL.cpp#L83-L86](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L83-L86)
+---@see [LuaConstGL.cpp#L83-L86](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L83-L86)
 
 ---AlphaFunction and DepthFunction
 ---
 ---@section alphadepth
----@see [LuaConstGL.cpp#L106-L109](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L106-L109)
+---@see [LuaConstGL.cpp#L106-L109](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L106-L109)
 
 ---LogicOp
 ---
 ---@section logicop
----@see [LuaConstGL.cpp#L128-L131](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L128-L131)
+---@see [LuaConstGL.cpp#L128-L131](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L128-L131)
 
 ---Culling
 ---
 ---@section culling
----@see [LuaConstGL.cpp#L166-L169](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L166-L169)
+---@see [LuaConstGL.cpp#L166-L169](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L166-L169)
 
 ---PolygonMode
 ---
 ---@section polygonmode
----@see [LuaConstGL.cpp#L178-L181](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L178-L181)
+---@see [LuaConstGL.cpp#L178-L181](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L178-L181)
 
 ---ShadeModel
 ---
 ---@section shademodel
----@see [LuaConstGL.cpp#L190-L193](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L190-L193)
+---@see [LuaConstGL.cpp#L190-L193](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L190-L193)
 
 ---MatrixMode
 ---
 ---@section matrixmode
----@see [LuaConstGL.cpp#L200-L203](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L200-L203)
+---@see [LuaConstGL.cpp#L200-L203](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L200-L203)
 
 ---Texture Filtering
 ---
 ---@section texturefiltering
----@see [LuaConstGL.cpp#L212-L215](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L212-L215)
+---@see [LuaConstGL.cpp#L212-L215](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L212-L215)
 
 ---Texture Clamping
 ---
 ---@section textureclamping
----@see [LuaConstGL.cpp#L230-L233](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L230-L233)
+---@see [LuaConstGL.cpp#L230-L233](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L230-L233)
 
 ---Texture Environment
 ---
 ---@section textureenvironment
----@see [LuaConstGL.cpp#L246-L249](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L246-L249)
+---@see [LuaConstGL.cpp#L246-L249](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L246-L249)
 
 ---Texture Generation
 ---
 ---@section texturegeneration
----@see [LuaConstGL.cpp#L271-L274](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L271-L274)
+---@see [LuaConstGL.cpp#L271-L274](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L271-L274)
 
 ---glPushAttrib() bits
 ---
 ---@section glpushattribbits
----@see [LuaConstGL.cpp#L301-L304](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L301-L304)
+---@see [LuaConstGL.cpp#L301-L304](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L301-L304)
 
 ---glHint() targets
 ---
 ---@section glhinttargets
----@see [LuaConstGL.cpp#L350-L353](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L350-L353)
+---@see [LuaConstGL.cpp#L350-L353](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L350-L353)
 
 ---glHint() modes
 ---
 ---@section glhintmodes
----@see [LuaConstGL.cpp#L360-L363](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L360-L363)
+---@see [LuaConstGL.cpp#L360-L363](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L360-L363)
 
 ---Stencil ops
 ---
 ---@section stencilops
----@see [LuaConstGL.cpp#L372-L375](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L372-L375)
+---@see [LuaConstGL.cpp#L372-L375](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L372-L375)
 
 ---Light Specification
 ---
 ---@section lightspecification
----@see [LuaConstGL.cpp#L388-L391](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L388-L391)
+---@see [LuaConstGL.cpp#L388-L391](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L388-L391)
 
 ---Shader Types
 ---
 ---@section shadertypes
----@see [LuaConstGL.cpp#L414-L417](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L414-L417)
+---@see [LuaConstGL.cpp#L414-L417](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L414-L417)
 
 ---Geometry Shader Parameters
 ---
 ---@section geometryshaderparameters
----@see [LuaConstGL.cpp#L430-L433](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L430-L433)
+---@see [LuaConstGL.cpp#L430-L433](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L430-L433)
 
 ---Tesselation control shader parameters
 ---
 ---@section tesselationcontrolshaderparameters
----@see [LuaConstGL.cpp#L442-L445](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L442-L445)
+---@see [LuaConstGL.cpp#L442-L445](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L442-L445)
 
 ---OpenGL Data Types
 ---
 ---@section OpenGL_Data_Types
----@see [LuaConstGL.cpp#L454-L457](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L454-L457)
+---@see [LuaConstGL.cpp#L454-L457](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L454-L457)
 
 ---OpenGL Buffer Types
 ---
 ---@section OpenGL_Buffer_Types
----@see [LuaConstGL.cpp#L482-L485](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstGL.cpp#L482-L485)
+---@see [LuaConstGL.cpp#L482-L485](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstGL.cpp#L482-L485)

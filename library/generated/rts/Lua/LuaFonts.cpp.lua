@@ -9,7 +9,7 @@
 ---
 ---@class LuaFont
 ---@see gl.LoadFont
----@see [LuaFonts.cpp#L21-L27](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L21-L27)
+---@see [LuaFonts.cpp#L21-L27](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L21-L27)
 LuaFont = {}
 
 ---Load a font from a file.
@@ -19,13 +19,13 @@ LuaFont = {}
 ---@param outlineWidth integer?
 ---@param outlineWeight number?
 ---@return LuaFont font
----@see [LuaFonts.cpp#L195-L203](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L195-L203)
+---@see [LuaFonts.cpp#L195-L203](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L195-L203)
 function gl.LoadFont(fontFile, size, outlineWidth, outlineWeight) end
 
 ---Delete a font object.
 ---
 ---@param font LuaFont
----@see [LuaFonts.cpp#L220-L224](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L220-L224)
+---@see [LuaFonts.cpp#L220-L224](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L220-L224)
 function gl.DeleteFont(font) end
 
 ---Adds a fallback font for the font rendering engine.
@@ -43,7 +43,7 @@ function gl.DeleteFont(font) end
 ---
 ---@param filePath string VFS path to the file, for example "fonts/myfont.ttf". Uses VFS.RAW_FIRST access mode.
 ---@return boolean success
----@see [LuaFonts.cpp#L231-L247](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L231-L247)
+---@see [LuaFonts.cpp#L231-L247](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L231-L247)
 function gl.AddFallbackFont(filePath) end
 
 ---Clears all fallback fonts.
@@ -52,7 +52,7 @@ function gl.AddFallbackFont(filePath) end
 ---it also applies when calling this method.
 ---
 ---@return nil
----@see [LuaFonts.cpp#L259-L266](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L259-L266)
+---@see [LuaFonts.cpp#L259-L266](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L259-L266)
 function gl.ClearFallbackFonts() end
 
 ---Draws text in screen space at the given position.
@@ -62,7 +62,7 @@ function gl.ClearFallbackFonts() end
 ---@param y number
 ---@param size number? Defaults to the font's point size.
 ---@param options string? Flag characters for alignment, outline, shadow, scaling, etc. (e.g. `"co"` for center and outline).
----@see [LuaFonts.cpp#L278-L286](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L278-L286)
+---@see [LuaFonts.cpp#L278-L286](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L278-L286)
 function LuaFont:Print(text, x, y, size, options) end
 
 ---Draws text in world space at the given position.
@@ -73,7 +73,7 @@ function LuaFont:Print(text, x, y, size, options) end
 ---@param z number
 ---@param size number? Defaults to the font's point size.
 ---@param options string? Flag characters for alignment, outline, shadow, scaling, etc. (e.g. `"co"` for center and outline).
----@see [LuaFonts.cpp#L335-L344](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L335-L344)
+---@see [LuaFonts.cpp#L335-L344](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L335-L344)
 function LuaFont:PrintWorld(text, x, y, z, size, options) end
 
 ---Begin a block of font commands.
@@ -87,12 +87,12 @@ function LuaFont:PrintWorld(text, x, y, z, size, options) end
 ---@param userDefinedBlending boolean? When `true` doesn't set the gl.BlendFunc automatically. Defaults to `false`.
 ---@see gl.BlendFunc
 ---@see gl.BlendFuncSeparate
----@see [LuaFonts.cpp#L399-L413](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L399-L413)
+---@see [LuaFonts.cpp#L399-L413](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L399-L413)
 function LuaFont:Begin(userDefinedBlending) end
 
 ---Ends a font command block started with `LuaFont:Begin`.
 ---
----@see [LuaFonts.cpp#L424-L427](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L424-L427)
+---@see [LuaFonts.cpp#L424-L427](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L424-L427)
 function LuaFont:End() end
 
 ---Draws text printed with the `buffered` option.
@@ -101,7 +101,7 @@ function LuaFont:End() end
 ---@param userDefinedBlending boolean? When `true` doesn't set the gl.BlendFunc automatically. Defaults to `false`.
 ---@see gl.BlendFunc
 ---@see gl.BlendFuncSeparate
----@see [LuaFonts.cpp#L437-L446](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L437-L446)
+---@see [LuaFonts.cpp#L437-L446](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L437-L446)
 function LuaFont:SubmitBuffered(noBillboarding, userDefinedBlending) end
 
 ---Wraps text to fit within a maximum width (and optional max height), in-place.
@@ -112,14 +112,14 @@ function LuaFont:SubmitBuffered(noBillboarding, userDefinedBlending) end
 ---@param size number? Defaults to the font's point size.
 ---@return string wrappedText
 ---@return integer lineCount
----@see [LuaFonts.cpp#L466-L475](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L466-L475)
+---@see [LuaFonts.cpp#L466-L475](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L466-L475)
 function LuaFont:WrapText(text, maxWidth, maxHeight, size) end
 
 ---Returns the horizontal extent of a string for this font at its current size.
 ---
 ---@param text string
 ---@return number width
----@see [LuaFonts.cpp#L497-L502](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L497-L502)
+---@see [LuaFonts.cpp#L497-L502](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L497-L502)
 function LuaFont:GetTextWidth(text) end
 
 ---Returns layout metrics for a string: total height, descender depth, and line count.
@@ -128,23 +128,23 @@ function LuaFont:GetTextWidth(text) end
 ---@return number height
 ---@return number descender
 ---@return integer lines
----@see [LuaFonts.cpp#L513-L520](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L513-L520)
+---@see [LuaFonts.cpp#L513-L520](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L513-L520)
 function LuaFont:GetTextHeight(text) end
 
 ---Sets the RGBA color used when drawing text (fill).
 ---
 ---@param color table Four-component RGBA array (`{r, g, b, a}`), or pass `r`, `g`, `b`, and optional `a` as separate numbers (requires at least three numeric components after the font).
----@see [LuaFonts.cpp#L572-L576](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L572-L576)
+---@see [LuaFonts.cpp#L572-L576](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L572-L576)
 function LuaFont:SetTextColor(color) end
 
 ---Sets the RGBA color used for text outline when outline rendering is enabled.
 ---
 ---@param color table Four-component RGBA array (`{r, g, b, a}`), or pass `r`, `g`, `b`, and optional `a` as separate numbers (requires at least three numeric components after the font).
----@see [LuaFonts.cpp#L579-L583](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L579-L583)
+---@see [LuaFonts.cpp#L579-L583](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L579-L583)
 function LuaFont:SetOutlineColor(color) end
 
 ---When enabled, outline color is derived automatically instead of using `SetOutlineColor`.
 ---
 ---@param enabled boolean
----@see [LuaFonts.cpp#L587-L591](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaFonts.cpp#L587-L591)
+---@see [LuaFonts.cpp#L587-L591](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaFonts.cpp#L587-L591)
 function LuaFont:SetAutoOutlineColor(enabled) end

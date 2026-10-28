@@ -8,441 +8,441 @@
 ---COB constants
 ---
 ---@enum COB
----@see [LuaConstCOB.cpp#L16-L19](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L16-L19)
+---@see [LuaConstCOB.cpp#L16-L19](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L16-L19)
 COB = {
 	---@type integer
-	---@see [LuaConstCOB.cpp#L20-L20](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L20-L20)
+	---@see [LuaConstCOB.cpp#L20-L20](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L20-L20)
 	ACTIVATION = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L22-L22](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L22-L22)
+	---@see [LuaConstCOB.cpp#L22-L22](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L22-L22)
 	STANDINGMOVEORDERS = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L24-L24](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L24-L24)
+	---@see [LuaConstCOB.cpp#L24-L24](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L24-L24)
 	STANDINGFIREORDERS = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L26-L26](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L26-L26)
+	---@see [LuaConstCOB.cpp#L26-L26](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L26-L26)
 	HEALTH = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L28-L28](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L28-L28)
+	---@see [LuaConstCOB.cpp#L28-L28](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L28-L28)
 	INBUILDSTANCE = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L30-L30](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L30-L30)
+	---@see [LuaConstCOB.cpp#L30-L30](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L30-L30)
 	BUSY = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L32-L32](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L32-L32)
+	---@see [LuaConstCOB.cpp#L32-L32](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L32-L32)
 	PIECE_XZ = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L34-L34](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L34-L34)
+	---@see [LuaConstCOB.cpp#L34-L34](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L34-L34)
 	PIECE_Y = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L36-L36](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L36-L36)
+	---@see [LuaConstCOB.cpp#L36-L36](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L36-L36)
 	UNIT_XZ = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L38-L38](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L38-L38)
+	---@see [LuaConstCOB.cpp#L38-L38](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L38-L38)
 	UNIT_Y = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L40-L40](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L40-L40)
+	---@see [LuaConstCOB.cpp#L40-L40](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L40-L40)
 	UNIT_HEIGHT = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L42-L42](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L42-L42)
+	---@see [LuaConstCOB.cpp#L42-L42](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L42-L42)
 	XZ_ATAN = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L44-L44](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L44-L44)
+	---@see [LuaConstCOB.cpp#L44-L44](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L44-L44)
 	XZ_HYPOT = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L46-L46](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L46-L46)
+	---@see [LuaConstCOB.cpp#L46-L46](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L46-L46)
 	ATAN = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L48-L48](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L48-L48)
+	---@see [LuaConstCOB.cpp#L48-L48](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L48-L48)
 	HYPOT = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L50-L50](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L50-L50)
+	---@see [LuaConstCOB.cpp#L50-L50](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L50-L50)
 	GROUND_HEIGHT = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L52-L52](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L52-L52)
+	---@see [LuaConstCOB.cpp#L52-L52](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L52-L52)
 	BUILD_PERCENT_LEFT = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L54-L54](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L54-L54)
+	---@see [LuaConstCOB.cpp#L54-L54](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L54-L54)
 	YARD_OPEN = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L56-L56](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L56-L56)
+	---@see [LuaConstCOB.cpp#L56-L56](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L56-L56)
 	BUGGER_OFF = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L58-L58](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L58-L58)
+	---@see [LuaConstCOB.cpp#L58-L58](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L58-L58)
 	ARMORED = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L66-L66](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L66-L66)
+	---@see [LuaConstCOB.cpp#L66-L66](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L66-L66)
 	IN_WATER = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L68-L68](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L68-L68)
+	---@see [LuaConstCOB.cpp#L68-L68](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L68-L68)
 	CURRENT_SPEED = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L71-L71](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L71-L71)
+	---@see [LuaConstCOB.cpp#L71-L71](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L71-L71)
 	VETERAN_LEVEL = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L73-L73](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L73-L73)
+	---@see [LuaConstCOB.cpp#L73-L73](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L73-L73)
 	ON_ROAD = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L76-L76](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L76-L76)
+	---@see [LuaConstCOB.cpp#L76-L76](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L76-L76)
 	MAX_ID = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L78-L78](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L78-L78)
+	---@see [LuaConstCOB.cpp#L78-L78](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L78-L78)
 	MY_ID = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L80-L80](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L80-L80)
+	---@see [LuaConstCOB.cpp#L80-L80](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L80-L80)
 	UNIT_TEAM = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L82-L82](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L82-L82)
+	---@see [LuaConstCOB.cpp#L82-L82](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L82-L82)
 	UNIT_BUILD_PERCENT_LEFT = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L84-L84](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L84-L84)
+	---@see [LuaConstCOB.cpp#L84-L84](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L84-L84)
 	UNIT_ALLIED = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L86-L86](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L86-L86)
+	---@see [LuaConstCOB.cpp#L86-L86](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L86-L86)
 	MAX_SPEED = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L88-L88](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L88-L88)
+	---@see [LuaConstCOB.cpp#L88-L88](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L88-L88)
 	CLOAKED = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L90-L90](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L90-L90)
+	---@see [LuaConstCOB.cpp#L90-L90](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L90-L90)
 	WANT_CLOAK = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L92-L92](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L92-L92)
+	---@see [LuaConstCOB.cpp#L92-L92](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L92-L92)
 	GROUND_WATER_HEIGHT = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L94-L94](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L94-L94)
+	---@see [LuaConstCOB.cpp#L94-L94](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L94-L94)
 	UPRIGHT = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L96-L96](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L96-L96)
+	---@see [LuaConstCOB.cpp#L96-L96](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L96-L96)
 	POW = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L98-L98](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L98-L98)
+	---@see [LuaConstCOB.cpp#L98-L98](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L98-L98)
 	PRINT = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L100-L100](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L100-L100)
+	---@see [LuaConstCOB.cpp#L100-L100](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L100-L100)
 	HEADING = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L102-L102](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L102-L102)
+	---@see [LuaConstCOB.cpp#L102-L102](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L102-L102)
 	TARGET_ID = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L104-L104](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L104-L104)
+	---@see [LuaConstCOB.cpp#L104-L104](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L104-L104)
 	LAST_ATTACKER_ID = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L106-L106](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L106-L106)
+	---@see [LuaConstCOB.cpp#L106-L106](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L106-L106)
 	LOS_RADIUS = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L108-L108](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L108-L108)
+	---@see [LuaConstCOB.cpp#L108-L108](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L108-L108)
 	AIR_LOS_RADIUS = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L110-L110](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L110-L110)
+	---@see [LuaConstCOB.cpp#L110-L110](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L110-L110)
 	RADAR_RADIUS = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L112-L112](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L112-L112)
+	---@see [LuaConstCOB.cpp#L112-L112](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L112-L112)
 	JAMMER_RADIUS = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L114-L114](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L114-L114)
+	---@see [LuaConstCOB.cpp#L114-L114](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L114-L114)
 	SONAR_RADIUS = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L116-L116](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L116-L116)
+	---@see [LuaConstCOB.cpp#L116-L116](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L116-L116)
 	SONAR_JAM_RADIUS = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L118-L118](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L118-L118)
+	---@see [LuaConstCOB.cpp#L118-L118](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L118-L118)
 	SEISMIC_RADIUS = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L120-L120](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L120-L120)
+	---@see [LuaConstCOB.cpp#L120-L120](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L120-L120)
 	DO_SEISMIC_PING = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L122-L122](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L122-L122)
+	---@see [LuaConstCOB.cpp#L122-L122](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L122-L122)
 	CURRENT_FUEL = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L124-L124](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L124-L124)
+	---@see [LuaConstCOB.cpp#L124-L124](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L124-L124)
 	TRANSPORT_ID = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L126-L126](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L126-L126)
+	---@see [LuaConstCOB.cpp#L126-L126](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L126-L126)
 	SHIELD_POWER = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L128-L128](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L128-L128)
+	---@see [LuaConstCOB.cpp#L128-L128](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L128-L128)
 	STEALTH = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L130-L130](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L130-L130)
+	---@see [LuaConstCOB.cpp#L130-L130](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L130-L130)
 	CRASHING = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L132-L132](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L132-L132)
+	---@see [LuaConstCOB.cpp#L132-L132](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L132-L132)
 	CHANGE_TARGET = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L134-L134](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L134-L134)
+	---@see [LuaConstCOB.cpp#L134-L134](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L134-L134)
 	CEG_DAMAGE = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L136-L136](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L136-L136)
+	---@see [LuaConstCOB.cpp#L136-L136](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L136-L136)
 	COB_ID = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L138-L138](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L138-L138)
+	---@see [LuaConstCOB.cpp#L138-L138](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L138-L138)
 	PLAY_SOUND = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L140-L140](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L140-L140)
+	---@see [LuaConstCOB.cpp#L140-L140](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L140-L140)
 	KILL_UNIT = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L142-L142](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L142-L142)
+	---@see [LuaConstCOB.cpp#L142-L142](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L142-L142)
 	SET_WEAPON_UNIT_TARGET = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L144-L144](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L144-L144)
+	---@see [LuaConstCOB.cpp#L144-L144](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L144-L144)
 	SET_WEAPON_GROUND_TARGET = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L146-L146](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L146-L146)
+	---@see [LuaConstCOB.cpp#L146-L146](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L146-L146)
 	SONAR_STEALTH = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L148-L148](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L148-L148)
+	---@see [LuaConstCOB.cpp#L148-L148](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L148-L148)
 	REVERSING = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L153-L153](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L153-L153)
+	---@see [LuaConstCOB.cpp#L153-L153](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L153-L153)
 	FLANK_B_MODE = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L155-L155](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L155-L155)
+	---@see [LuaConstCOB.cpp#L155-L155](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L155-L155)
 	FLANK_B_DIR = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L157-L157](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L157-L157)
+	---@see [LuaConstCOB.cpp#L157-L157](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L157-L157)
 	FLANK_B_MOBILITY_ADD = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L159-L159](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L159-L159)
+	---@see [LuaConstCOB.cpp#L159-L159](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L159-L159)
 	FLANK_B_MAX_DAMAGE = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L161-L161](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L161-L161)
+	---@see [LuaConstCOB.cpp#L161-L161](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L161-L161)
 	FLANK_B_MIN_DAMAGE = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L163-L163](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L163-L163)
+	---@see [LuaConstCOB.cpp#L163-L163](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L163-L163)
 	WEAPON_RELOADSTATE = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L165-L165](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L165-L165)
+	---@see [LuaConstCOB.cpp#L165-L165](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L165-L165)
 	WEAPON_RELOADTIME = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L167-L167](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L167-L167)
+	---@see [LuaConstCOB.cpp#L167-L167](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L167-L167)
 	WEAPON_ACCURACY = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L169-L169](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L169-L169)
+	---@see [LuaConstCOB.cpp#L169-L169](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L169-L169)
 	WEAPON_SPRAY = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L171-L171](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L171-L171)
+	---@see [LuaConstCOB.cpp#L171-L171](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L171-L171)
 	WEAPON_RANGE = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L173-L173](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L173-L173)
+	---@see [LuaConstCOB.cpp#L173-L173](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L173-L173)
 	WEAPON_PROJECTILE_SPEED = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L175-L175](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L175-L175)
+	---@see [LuaConstCOB.cpp#L175-L175](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L175-L175)
 	MIN = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L177-L177](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L177-L177)
+	---@see [LuaConstCOB.cpp#L177-L177](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L177-L177)
 	MAX = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L179-L179](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L179-L179)
+	---@see [LuaConstCOB.cpp#L179-L179](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L179-L179)
 	ABS = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L181-L181](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L181-L181)
+	---@see [LuaConstCOB.cpp#L181-L181](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L181-L181)
 	GAME_FRAME = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L183-L183](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L183-L183)
+	---@see [LuaConstCOB.cpp#L183-L183](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L183-L183)
 	PIECE_HEADING = nil,
 
 	---@type integer
-	---@see [LuaConstCOB.cpp#L185-L185](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L185-L185)
+	---@see [LuaConstCOB.cpp#L185-L185](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L185-L185)
 	PIECE_PITCH = nil
 }
 
 ---@enum SFX
----@see [LuaConstCOB.cpp#L195-L197](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L195-L197)
+---@see [LuaConstCOB.cpp#L195-L197](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L195-L197)
 SFX = {
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L199-L212)
+	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L199-L212)
 	SHATTER = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L199-L212)
+	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L199-L212)
 	EXPLODE = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L199-L212)
+	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L199-L212)
 	EXPLODE_ON_HIT = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L199-L212)
+	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L199-L212)
 	FALL = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L199-L212)
+	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L199-L212)
 	SMOKE = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L199-L212)
+	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L199-L212)
 	FIRE = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L199-L212)
+	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L199-L212)
 	NONE = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L199-L212)
+	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L199-L212)
 	NO_CEG_TRAIL = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L199-L212)
+	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L199-L212)
 	NO_HEATCLOUD = nil,
 
 	---Piece flag for `Spring.UnitScript.Explode`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L199-L212)
+	---@see [LuaConstCOB.cpp#L199-L212](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L199-L212)
 	RECURSIVE = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L224-L229](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L224-L229)
+	---@see [LuaConstCOB.cpp#L224-L229](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L224-L229)
 	VTOL = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L224-L229](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L224-L229)
+	---@see [LuaConstCOB.cpp#L224-L229](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L224-L229)
 	WAKE = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L224-L229](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L224-L229)
+	---@see [LuaConstCOB.cpp#L224-L229](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L224-L229)
 	REVERSE_WAKE = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L237-L246](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L237-L246)
+	---@see [LuaConstCOB.cpp#L237-L246](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L237-L246)
 	WHITE_SMOKE = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L237-L246](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L237-L246)
+	---@see [LuaConstCOB.cpp#L237-L246](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L237-L246)
 	BLACK_SMOKE = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L237-L246](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L237-L246)
+	---@see [LuaConstCOB.cpp#L237-L246](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L237-L246)
 	BUBBLE = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L237-L246](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L237-L246)
+	---@see [LuaConstCOB.cpp#L237-L246](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L237-L246)
 	CEG = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L237-L246](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L237-L246)
+	---@see [LuaConstCOB.cpp#L237-L246](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L237-L246)
 	FIRE_WEAPON = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L237-L246](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L237-L246)
+	---@see [LuaConstCOB.cpp#L237-L246](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L237-L246)
 	DETONATE_WEAPON = nil,
 
 	---Piece flag for `Spring.UnitScript.EmitSfx`.
 	---
 	---@type integer
-	---@see [LuaConstCOB.cpp#L237-L246](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCOB.cpp#L237-L246)
+	---@see [LuaConstCOB.cpp#L237-L246](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCOB.cpp#L237-L246)
 	GLOBAL = nil
 }

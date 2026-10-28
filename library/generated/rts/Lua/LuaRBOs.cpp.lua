@@ -14,7 +14,7 @@
 ---@field ysize integer
 ---@field valid boolean
 ---@field samples integer will return globalRendering->msaaLevel for multisampled RBO or 0 otherwise
----@see [LuaRBOs.cpp#L139-L148](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaRBOs.cpp#L139-L148)
+---@see [LuaRBOs.cpp#L139-L148](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaRBOs.cpp#L139-L148)
 local RBO = {}
 
 ---@class CreateRBOData
@@ -22,16 +22,16 @@ local RBO = {}
 ---@field target GL
 ---@field format GL
 ---@field samples integer? any number here will result in creation of multisampled RBO
----@see [LuaRBOs.cpp#L150-L156](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaRBOs.cpp#L150-L156)
+---@see [LuaRBOs.cpp#L150-L156](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaRBOs.cpp#L150-L156)
 local CreateRBOData = {}
 
 ---@param xsize integer
 ---@param ysize integer
 ---@param data CreateRBOData
 ---@return RBO
----@see [LuaRBOs.cpp#L158-L164](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaRBOs.cpp#L158-L164)
+---@see [LuaRBOs.cpp#L158-L164](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaRBOs.cpp#L158-L164)
 function gl.CreateRBO(xsize, ysize, data) end
 
 ---@param rbo RBO
----@see [LuaRBOs.cpp#L234-L237](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaRBOs.cpp#L234-L237)
+---@see [LuaRBOs.cpp#L234-L237](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaRBOs.cpp#L234-L237)
 function gl.DeleteRBO(rbo) end

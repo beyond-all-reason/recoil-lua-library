@@ -10,32 +10,32 @@
 ---@class VAO
 ---@see LuaVAO.GetVAO
 ---@see rts/Lua/LuaVAOImpl.cpp
----@see [LuaVAOImpl.cpp#L19-L26](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaVAOImpl.cpp#L19-L26)
+---@see [LuaVAOImpl.cpp#L19-L26](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaVAOImpl.cpp#L19-L26)
 VAO = {}
 
 ---@return nil
----@see [LuaVAOImpl.cpp#L40-L44](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaVAOImpl.cpp#L40-L44)
+---@see [LuaVAOImpl.cpp#L40-L44](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaVAOImpl.cpp#L40-L44)
 function VAO:Delete() end
 
 ---Attaches a VBO to be used as a vertex buffer
 ---
 ---@param vbo VBO
 ---@return nil
----@see [LuaVAOImpl.cpp#L94-L99](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaVAOImpl.cpp#L94-L99)
+---@see [LuaVAOImpl.cpp#L94-L99](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaVAOImpl.cpp#L94-L99)
 function VAO:AttachVertexBuffer(vbo) end
 
 ---Attaches a VBO to be used as an instance buffer
 ---
 ---@param vbo VBO
 ---@return nil
----@see [LuaVAOImpl.cpp#L106-L111](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaVAOImpl.cpp#L106-L111)
+---@see [LuaVAOImpl.cpp#L106-L111](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaVAOImpl.cpp#L106-L111)
 function VAO:AttachInstanceBuffer(vbo) end
 
 ---Attaches a VBO to be used as an index buffer
 ---
 ---@param vbo VBO
 ---@return nil
----@see [LuaVAOImpl.cpp#L118-L123](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaVAOImpl.cpp#L118-L123)
+---@see [LuaVAOImpl.cpp#L118-L123](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaVAOImpl.cpp#L118-L123)
 function VAO:AttachIndexBuffer(vbo) end
 
 ---@param glEnum GL primitivesMode
@@ -44,7 +44,7 @@ function VAO:AttachIndexBuffer(vbo) end
 ---@param instanceCount integer?
 ---@param instanceFirst integer?
 ---@return nil
----@see [LuaVAOImpl.cpp#L368-L377](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaVAOImpl.cpp#L368-L377)
+---@see [LuaVAOImpl.cpp#L368-L377](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaVAOImpl.cpp#L368-L377)
 function VAO:DrawArrays(glEnum, vertexCount, vertexFirst, instanceCount, instanceFirst) end
 
 ---@param glEnum GL primitivesMode
@@ -54,34 +54,34 @@ function VAO:DrawArrays(glEnum, vertexCount, vertexFirst, instanceCount, instanc
 ---@param baseVertex integer?
 ---@param baseInstance integer?
 ---@return nil
----@see [LuaVAOImpl.cpp#L405-L415](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaVAOImpl.cpp#L405-L415)
+---@see [LuaVAOImpl.cpp#L405-L415](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaVAOImpl.cpp#L405-L415)
 function VAO:DrawElements(glEnum, drawCount, baseIndex, instanceCount, baseVertex, baseInstance) end
 
 ---@param unitIDs UnitID|UnitID[]
 ---@return integer submittedCount
----@see [LuaVAOImpl.cpp#L467-L472](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaVAOImpl.cpp#L467-L472)
+---@see [LuaVAOImpl.cpp#L467-L472](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaVAOImpl.cpp#L467-L472)
 function VAO:AddUnitsToSubmission(unitIDs) end
 
 ---@param featureIDs FeatureID|FeatureID[]
 ---@return integer submittedCount
----@see [LuaVAOImpl.cpp#L477-L482](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaVAOImpl.cpp#L477-L482)
+---@see [LuaVAOImpl.cpp#L477-L482](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaVAOImpl.cpp#L477-L482)
 function VAO:AddFeaturesToSubmission(featureIDs) end
 
 ---@param unitDefIDs UnitDefID|UnitDefID[]
 ---@return integer submittedCount
----@see [LuaVAOImpl.cpp#L487-L492](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaVAOImpl.cpp#L487-L492)
+---@see [LuaVAOImpl.cpp#L487-L492](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaVAOImpl.cpp#L487-L492)
 function VAO:AddUnitDefsToSubmission(unitDefIDs) end
 
 ---@param featureDefIDs FeatureDefID|FeatureDefID[]
 ---@return integer submittedCount
----@see [LuaVAOImpl.cpp#L497-L502](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaVAOImpl.cpp#L497-L502)
+---@see [LuaVAOImpl.cpp#L497-L502](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaVAOImpl.cpp#L497-L502)
 function VAO:AddFeatureDefsToSubmission(featureDefIDs) end
 
 ---@param index integer
 ---@return nil
----@see [LuaVAOImpl.cpp#L507-L512](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaVAOImpl.cpp#L507-L512)
+---@see [LuaVAOImpl.cpp#L507-L512](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaVAOImpl.cpp#L507-L512)
 function VAO:RemoveFromSubmission(index) end
 
 ---@return nil
----@see [LuaVAOImpl.cpp#L532-L536](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaVAOImpl.cpp#L532-L536)
+---@see [LuaVAOImpl.cpp#L532-L536](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaVAOImpl.cpp#L532-L536)
 function VAO:Submit() end

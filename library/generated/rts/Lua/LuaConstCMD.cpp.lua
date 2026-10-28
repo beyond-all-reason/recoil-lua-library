@@ -18,63 +18,63 @@
 ---@see Spring.GiveOrderArrayToUnitArray
 ---@see Spring.GetUnitCurrentCommand
 ---@see Callins:AllowCommand
----@see [LuaConstCMD.cpp#L12-L26](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L12-L26)
+---@see [LuaConstCMD.cpp#L12-L26](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L12-L26)
 CMD = {
-	---@see [LuaConstCMD.cpp#L30-L30](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L30-L30)
+	---@see [LuaConstCMD.cpp#L30-L30](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L30-L30)
 	OPT_ALT = 128,
 
-	---@see [LuaConstCMD.cpp#L32-L32](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L32-L32)
+	---@see [LuaConstCMD.cpp#L32-L32](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L32-L32)
 	OPT_CTRL = 64,
 
-	---@see [LuaConstCMD.cpp#L34-L34](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L34-L34)
+	---@see [LuaConstCMD.cpp#L34-L34](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L34-L34)
 	OPT_SHIFT = 32,
 
-	---@see [LuaConstCMD.cpp#L36-L36](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L36-L36)
+	---@see [LuaConstCMD.cpp#L36-L36](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L36-L36)
 	OPT_RIGHT = 16,
 
-	---@see [LuaConstCMD.cpp#L38-L38](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L38-L38)
+	---@see [LuaConstCMD.cpp#L38-L38](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L38-L38)
 	OPT_INTERNAL = 8,
 
-	---@see [LuaConstCMD.cpp#L40-L40](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L40-L40)
+	---@see [LuaConstCMD.cpp#L40-L40](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L40-L40)
 	OPT_META = 4,
 
-	---@see [LuaConstCMD.cpp#L43-L43](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L43-L43)
+	---@see [LuaConstCMD.cpp#L43-L43](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L43-L43)
 	MOVESTATE_NONE = -1,
 
-	---@see [LuaConstCMD.cpp#L45-L45](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L45-L45)
+	---@see [LuaConstCMD.cpp#L45-L45](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L45-L45)
 	MOVESTATE_HOLDPOS = 0,
 
-	---@see [LuaConstCMD.cpp#L47-L47](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L47-L47)
+	---@see [LuaConstCMD.cpp#L47-L47](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L47-L47)
 	MOVESTATE_MANEUVER = 1,
 
-	---@see [LuaConstCMD.cpp#L49-L49](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L49-L49)
+	---@see [LuaConstCMD.cpp#L49-L49](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L49-L49)
 	MOVESTATE_ROAM = 2,
 
-	---@see [LuaConstCMD.cpp#L52-L52](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L52-L52)
+	---@see [LuaConstCMD.cpp#L52-L52](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L52-L52)
 	FIRESTATE_NONE = -1,
 
-	---@see [LuaConstCMD.cpp#L54-L54](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L54-L54)
+	---@see [LuaConstCMD.cpp#L54-L54](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L54-L54)
 	FIRESTATE_HOLDFIRE = 0,
 
-	---@see [LuaConstCMD.cpp#L56-L56](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L56-L56)
+	---@see [LuaConstCMD.cpp#L56-L56](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L56-L56)
 	FIRESTATE_RETURNFIRE = 1,
 
-	---@see [LuaConstCMD.cpp#L58-L58](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L58-L58)
+	---@see [LuaConstCMD.cpp#L58-L58](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L58-L58)
 	FIRESTATE_FIREATWILL = 2,
 
-	---@see [LuaConstCMD.cpp#L60-L60](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L60-L60)
+	---@see [LuaConstCMD.cpp#L60-L60](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L60-L60)
 	FIRESTATE_FIREATNEUTRAL = 3,
 
-	---@see [LuaConstCMD.cpp#L63-L63](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L63-L63)
+	---@see [LuaConstCMD.cpp#L63-L63](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L63-L63)
 	WAITCODE_TIME = 1,
 
-	---@see [LuaConstCMD.cpp#L65-L65](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L65-L65)
+	---@see [LuaConstCMD.cpp#L65-L65](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L65-L65)
 	WAITCODE_DEATH = 2,
 
-	---@see [LuaConstCMD.cpp#L67-L67](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L67-L67)
+	---@see [LuaConstCMD.cpp#L67-L67](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L67-L67)
 	WAITCODE_SQUAD = 3,
 
-	---@see [LuaConstCMD.cpp#L69-L69](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L69-L69)
+	---@see [LuaConstCMD.cpp#L69-L69](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L69-L69)
 	WAITCODE_GATHER = 4,
 
 	---Stop the current action and clear the unit's command queue.
@@ -85,10 +85,10 @@ CMD = {
 	---Accepts no parameters.
 	---
 	---It won't do anything if used with `CMD.INSERT`, or the `shift` option.
-	---@see [LuaConstCMD.cpp#L74-L85](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L74-L85)
+	---@see [LuaConstCMD.cpp#L74-L85](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L74-L85)
 	STOP = 0,
 
-	---@see [LuaConstCMD.cpp#L87-L87](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L87-L87)
+	---@see [LuaConstCMD.cpp#L87-L87](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L87-L87)
 	INSERT = 1,
 
 	---Remove all commands from a unit's queue matching specific cmdIDs or tags.
@@ -140,19 +140,19 @@ CMD = {
 	---Spring.GiveOrderToUnit(unitID, CMD.REMOVE, {-unitDefId1, -unitDefId2}, CMD.OPT_ALT + CMD.OPT_CTRL)
 	---```
 	---@see Spring.GiveOrderToUnit
-	---@see [LuaConstCMD.cpp#L90-L143](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L90-L143)
+	---@see [LuaConstCMD.cpp#L90-L143](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L90-L143)
 	REMOVE = 2,
 
 	---Makes the unit suspend processing its command queue until wait is removed.
 	---
 	---Accepts no parameters.
-	---@see [LuaConstCMD.cpp#L146-L152](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L146-L152)
+	---@see [LuaConstCMD.cpp#L146-L152](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L146-L152)
 	WAIT = 5,
 
 	---Makes the unit suspend processing its command queue for a given duration.
 	---
 	---- `params` {duration} Time to wait in seconds.
-	---@see [LuaConstCMD.cpp#L155-L161](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L155-L161)
+	---@see [LuaConstCMD.cpp#L155-L161](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L155-L161)
 	TIMEWAIT = 6,
 
 	---Makes the unit suspend processing its commmand queue until the death of a
@@ -167,7 +167,7 @@ CMD = {
 	---### Wait for death of units in an area
 	---
 	---- `params` {x1, y1, z1, x2, y2, z2}: Wait for death of units in square {x1, z1, x2, z2}.
-	---@see [LuaConstCMD.cpp#L164-L179](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L164-L179)
+	---@see [LuaConstCMD.cpp#L164-L179](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L164-L179)
 	DEATHWAIT = 7,
 
 	---Makes selected units, or units coming out of a factory wait until squadSize peers
@@ -188,7 +188,7 @@ CMD = {
 	---will gather together.
 	---
 	---- `params` {squadSize} Squad size.
-	---@see [LuaConstCMD.cpp#L182-L203](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L182-L203)
+	---@see [LuaConstCMD.cpp#L182-L203](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L182-L203)
 	SQUADWAIT = 8,
 
 	---Makes the unit wait for all other selected units to reach the command.
@@ -198,16 +198,16 @@ CMD = {
 	---Will only be given to movable (`unitDef.canMove == true`) non-factory units.
 	---
 	---Accepts no parameters.
-	---@see [LuaConstCMD.cpp#L206-L216](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L206-L216)
+	---@see [LuaConstCMD.cpp#L206-L216](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L206-L216)
 	GATHERWAIT = 9,
 
-	---@see [LuaConstCMD.cpp#L218-L218](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L218-L218)
+	---@see [LuaConstCMD.cpp#L218-L218](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L218-L218)
 	MOVE = 10,
 
-	---@see [LuaConstCMD.cpp#L220-L220](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L220-L220)
+	---@see [LuaConstCMD.cpp#L220-L220](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L220-L220)
 	PATROL = 15,
 
-	---@see [LuaConstCMD.cpp#L222-L222](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L222-L222)
+	---@see [LuaConstCMD.cpp#L222-L222](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L222-L222)
 	FIGHT = 16,
 
 	---Attack command. Gives an order to attack some target(s).
@@ -270,93 +270,93 @@ CMD = {
 	---```
 	---@see Spring.GiveOrderToUnit
 	---@see Callins:UnitCmdDone
-	---@see [LuaConstCMD.cpp#L225-L288](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L225-L288)
+	---@see [LuaConstCMD.cpp#L225-L288](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L225-L288)
 	ATTACK = 20,
 
-	---@see [LuaConstCMD.cpp#L290-L290](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L290-L290)
+	---@see [LuaConstCMD.cpp#L290-L290](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L290-L290)
 	AREA_ATTACK = 21,
 
-	---@see [LuaConstCMD.cpp#L292-L292](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L292-L292)
+	---@see [LuaConstCMD.cpp#L292-L292](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L292-L292)
 	GUARD = 25,
 
-	---@see [LuaConstCMD.cpp#L294-L294](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L294-L294)
+	---@see [LuaConstCMD.cpp#L294-L294](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L294-L294)
 	GROUPSELECT = 35,
 
-	---@see [LuaConstCMD.cpp#L296-L296](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L296-L296)
+	---@see [LuaConstCMD.cpp#L296-L296](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L296-L296)
 	GROUPADD = 36,
 
-	---@see [LuaConstCMD.cpp#L298-L298](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L298-L298)
+	---@see [LuaConstCMD.cpp#L298-L298](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L298-L298)
 	GROUPCLEAR = 37,
 
-	---@see [LuaConstCMD.cpp#L300-L300](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L300-L300)
+	---@see [LuaConstCMD.cpp#L300-L300](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L300-L300)
 	REPAIR = 40,
 
-	---@see [LuaConstCMD.cpp#L302-L302](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L302-L302)
+	---@see [LuaConstCMD.cpp#L302-L302](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L302-L302)
 	FIRE_STATE = 45,
 
-	---@see [LuaConstCMD.cpp#L304-L304](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L304-L304)
+	---@see [LuaConstCMD.cpp#L304-L304](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L304-L304)
 	MOVE_STATE = 50,
 
-	---@see [LuaConstCMD.cpp#L306-L306](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L306-L306)
+	---@see [LuaConstCMD.cpp#L306-L306](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L306-L306)
 	SETBASE = 55,
 
-	---@see [LuaConstCMD.cpp#L308-L308](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L308-L308)
+	---@see [LuaConstCMD.cpp#L308-L308](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L308-L308)
 	INTERNAL = 60,
 
-	---@see [LuaConstCMD.cpp#L310-L310](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L310-L310)
+	---@see [LuaConstCMD.cpp#L310-L310](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L310-L310)
 	SELFD = 65,
 
-	---@see [LuaConstCMD.cpp#L312-L312](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L312-L312)
+	---@see [LuaConstCMD.cpp#L312-L312](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L312-L312)
 	LOAD_UNITS = 75,
 
-	---@see [LuaConstCMD.cpp#L314-L314](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L314-L314)
+	---@see [LuaConstCMD.cpp#L314-L314](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L314-L314)
 	LOAD_ONTO = 76,
 
-	---@see [LuaConstCMD.cpp#L316-L316](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L316-L316)
+	---@see [LuaConstCMD.cpp#L316-L316](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L316-L316)
 	UNLOAD_UNITS = 80,
 
-	---@see [LuaConstCMD.cpp#L318-L318](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L318-L318)
+	---@see [LuaConstCMD.cpp#L318-L318](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L318-L318)
 	UNLOAD_UNIT = 81,
 
-	---@see [LuaConstCMD.cpp#L320-L320](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L320-L320)
+	---@see [LuaConstCMD.cpp#L320-L320](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L320-L320)
 	ONOFF = 85,
 
-	---@see [LuaConstCMD.cpp#L322-L322](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L322-L322)
+	---@see [LuaConstCMD.cpp#L322-L322](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L322-L322)
 	RECLAIM = 90,
 
-	---@see [LuaConstCMD.cpp#L324-L324](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L324-L324)
+	---@see [LuaConstCMD.cpp#L324-L324](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L324-L324)
 	CLOAK = 95,
 
-	---@see [LuaConstCMD.cpp#L326-L326](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L326-L326)
+	---@see [LuaConstCMD.cpp#L326-L326](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L326-L326)
 	STOCKPILE = 100,
 
-	---@see [LuaConstCMD.cpp#L328-L328](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L328-L328)
+	---@see [LuaConstCMD.cpp#L328-L328](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L328-L328)
 	MANUALFIRE = 105,
 
-	---@see [LuaConstCMD.cpp#L330-L330](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L330-L330)
+	---@see [LuaConstCMD.cpp#L330-L330](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L330-L330)
 	DGUN = 105,
 
-	---@see [LuaConstCMD.cpp#L332-L332](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L332-L332)
+	---@see [LuaConstCMD.cpp#L332-L332](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L332-L332)
 	RESTORE = 110,
 
-	---@see [LuaConstCMD.cpp#L334-L334](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L334-L334)
+	---@see [LuaConstCMD.cpp#L334-L334](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L334-L334)
 	REPEAT = 115,
 
-	---@see [LuaConstCMD.cpp#L336-L336](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L336-L336)
+	---@see [LuaConstCMD.cpp#L336-L336](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L336-L336)
 	TRAJECTORY = 120,
 
-	---@see [LuaConstCMD.cpp#L338-L338](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L338-L338)
+	---@see [LuaConstCMD.cpp#L338-L338](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L338-L338)
 	RESURRECT = 125,
 
-	---@see [LuaConstCMD.cpp#L340-L340](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L340-L340)
+	---@see [LuaConstCMD.cpp#L340-L340](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L340-L340)
 	CAPTURE = 130,
 
-	---@see [LuaConstCMD.cpp#L342-L342](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L342-L342)
+	---@see [LuaConstCMD.cpp#L342-L342](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L342-L342)
 	AUTOREPAIRLEVEL = 135,
 
-	---@see [LuaConstCMD.cpp#L344-L344](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L344-L344)
+	---@see [LuaConstCMD.cpp#L344-L344](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L344-L344)
 	LOOPBACKATTACK = 20,
 
-	---@see [LuaConstCMD.cpp#L346-L346](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Lua/LuaConstCMD.cpp#L346-L346)
+	---@see [LuaConstCMD.cpp#L346-L346](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Lua/LuaConstCMD.cpp#L346-L346)
 	IDLEMODE = 145
 }

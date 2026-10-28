@@ -13,11 +13,11 @@
 ---To trigger a rerender manually, use `_SetDirty`, passing in the name of the top-level entry in your model table that you edited.
 ---
 ---@class RmlUi.SolLuaDataModel<T>
----@see [DataModel.cpp#L60-L67](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/DataModel.cpp#L60-L67)
+---@see [DataModel.cpp#L60-L67](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/DataModel.cpp#L60-L67)
 RmlUi.SolLuaDataModel = {}
 
 ---Set a table property dirty to trigger a rerender
 ---
 ---@param property string
----@see [DataModel.cpp#L72-L76](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/DataModel.cpp#L72-L76)
+---@see [DataModel.cpp#L72-L76](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/DataModel.cpp#L72-L76)
 function RmlUi.SolLuaDataModel:__SetDirty(property) end

@@ -6,51 +6,51 @@
 -- ------------
 
 ---@class RmlUi.ElementText : RmlUi.Element
----@see [ElementDerived.cpp#L44-L46](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/ElementDerived.cpp#L44-L46)
+---@see [ElementDerived.cpp#L44-L46](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/ElementDerived.cpp#L44-L46)
 RmlUi.ElementText = {}
 
 ---@type string
----@see [ElementDerived.cpp#L49-L49](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/ElementDerived.cpp#L49-L49)
+---@see [ElementDerived.cpp#L49-L49](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/ElementDerived.cpp#L49-L49)
 RmlUi.ElementText.text = nil
 
 ---@class RmlUi.ElementTabSet : RmlUi.Element
----@see [ElementDerived.cpp#L57-L59](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/ElementDerived.cpp#L57-L59)
+---@see [ElementDerived.cpp#L57-L59](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/ElementDerived.cpp#L57-L59)
 RmlUi.ElementTabSet = {}
 
 ---Sets the contents of a panel to the RML content rml. If index is out-of-bounds, a new panel will be added at the end.
 ---
 ---@param index integer
 ---@param rml string
----@see [ElementDerived.cpp#L63-L68](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/ElementDerived.cpp#L63-L68)
+---@see [ElementDerived.cpp#L63-L68](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/ElementDerived.cpp#L63-L68)
 function RmlUi.ElementTabSet:SetPanel(index, rml) end
 
 ---Sets the contents of a tab to the RML content rml. If index is out-of-bounds, a new tab will be added at the end.
 ---
 ---@param index integer
 ---@param rml string
----@see [ElementDerived.cpp#L70-L75](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/ElementDerived.cpp#L70-L75)
+---@see [ElementDerived.cpp#L70-L75](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/ElementDerived.cpp#L70-L75)
 function RmlUi.ElementTabSet:SetTab(index, rml) end
 
 ---@param index integer
----@see [ElementDerived.cpp#L78-L81](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/ElementDerived.cpp#L78-L81)
+---@see [ElementDerived.cpp#L78-L81](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/ElementDerived.cpp#L78-L81)
 function RmlUi.ElementTabSet:RemoveTab(index) end
 
 ---@type integer
----@see [ElementDerived.cpp#L85-L85](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/ElementDerived.cpp#L85-L85)
+---@see [ElementDerived.cpp#L85-L85](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/ElementDerived.cpp#L85-L85)
 RmlUi.ElementTabSet.active_tab = nil
 
 ---@type integer
----@see [ElementDerived.cpp#L89-L89](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/ElementDerived.cpp#L89-L89)
+---@see [ElementDerived.cpp#L89-L89](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/ElementDerived.cpp#L89-L89)
 RmlUi.ElementTabSet.num_tabs = nil
 
 ---@class RmlUi.ElementProgress : RmlUi.Element
----@see [ElementDerived.cpp#L99-L101](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/ElementDerived.cpp#L99-L101)
+---@see [ElementDerived.cpp#L99-L101](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/ElementDerived.cpp#L99-L101)
 RmlUi.ElementProgress = {}
 
 ---@type number
----@see [ElementDerived.cpp#L105-L105](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/ElementDerived.cpp#L105-L105)
+---@see [ElementDerived.cpp#L105-L105](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/ElementDerived.cpp#L105-L105)
 RmlUi.ElementProgress.value = nil
 
 ---@type number
----@see [ElementDerived.cpp#L107-L107](https://github.com/beyond-all-reason/RecoilEngine/blob/30a80f69e3/rts/Rml/SolLua/bind/ElementDerived.cpp#L107-L107)
+---@see [ElementDerived.cpp#L107-L107](https://github.com/beyond-all-reason/RecoilEngine/blob/dd84b56a44/rts/Rml/SolLua/bind/ElementDerived.cpp#L107-L107)
 RmlUi.ElementProgress.max = nil
