@@ -7,5 +7,5 @@
 
 ---Global functions for Recoil's RmlUi implementation.
 ---
----@see [RmlSolLua.cpp#L56-L59](https://github.com/beyond-all-reason/RecoilEngine/blob/861db9bf09/rts/Rml/SolLua/RmlSolLua.cpp#L56-L59)
+---@see [RmlSolLua.cpp#L56-L59](https://github.com/beyond-all-reason/RecoilEngine/blob/a0240a9b5c/rts/Rml/SolLua/RmlSolLua.cpp#L56-L59)
 RmlUi = {}

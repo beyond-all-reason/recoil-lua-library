@@ -7,15 +7,15 @@
 
 ---@class Intro : Callins
 ---@see Callins
----@see [LuaIntro.cpp#L49-L52](https://github.com/beyond-all-reason/RecoilEngine/blob/861db9bf09/rts/Lua/LuaIntro.cpp#L49-L52)
+---@see [LuaIntro.cpp#L49-L52](https://github.com/beyond-all-reason/RecoilEngine/blob/a0240a9b5c/rts/Lua/LuaIntro.cpp#L49-L52)
 local Intro = {}
 
 ---Draws custom load screens.
 ---
----@see [LuaIntro.cpp#L304-L308](https://github.com/beyond-all-reason/RecoilEngine/blob/861db9bf09/rts/Lua/LuaIntro.cpp#L304-L308)
+---@see [LuaIntro.cpp#L304-L308](https://github.com/beyond-all-reason/RecoilEngine/blob/a0240a9b5c/rts/Lua/LuaIntro.cpp#L304-L308)
 function Intro:DrawLoadScreen() end
 
 ---@param message string
 ---@param replaceLastLine boolean
----@see [LuaIntro.cpp#L331-L335](https://github.com/beyond-all-reason/RecoilEngine/blob/861db9bf09/rts/Lua/LuaIntro.cpp#L331-L335)
+---@see [LuaIntro.cpp#L331-L335](https://github.com/beyond-all-reason/RecoilEngine/blob/a0240a9b5c/rts/Lua/LuaIntro.cpp#L331-L335)
 function Intro:LoadProgress(message, replaceLastLine) end
