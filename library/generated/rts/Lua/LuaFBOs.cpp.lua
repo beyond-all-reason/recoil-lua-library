@@ -24,12 +24,12 @@
 ---| "color13"
 ---| "color14"
 ---| "color15"
----@see [LuaFBOs.cpp#L104-L124](https://github.com/beyond-all-reason/RecoilEngine/blob/d93c4daccd/rts/Lua/LuaFBOs.cpp#L104-L124)
+---@see [LuaFBOs.cpp#L104-L124](https://github.com/beyond-all-reason/RecoilEngine/blob/e3d4339200/rts/Lua/LuaFBOs.cpp#L104-L124)
 
 ---User Data FBO
 ---
 ---@class FBO
----@see [LuaFBOs.cpp#L439-L442](https://github.com/beyond-all-reason/RecoilEngine/blob/d93c4daccd/rts/Lua/LuaFBOs.cpp#L439-L442)
+---@see [LuaFBOs.cpp#L439-L442](https://github.com/beyond-all-reason/RecoilEngine/blob/e3d4339200/rts/Lua/LuaFBOs.cpp#L439-L442)
 local FBO = {}
 
 ---@class FBODescription
@@ -54,38 +54,38 @@ local FBO = {}
 ---@field color15 string?
 ---@field drawbuffers (integer|GL)[]? e.g. `{ GL_COLOR_ATTACHMENT0_EXT, GL_COLOR_ATTACHMENT3_EXT, ..}`
 ---@field readbuffer (integer|GL)? e.g. `GL_COLOR_ATTACHMENT0_EXT`
----@see [LuaFBOs.cpp#L444-L467](https://github.com/beyond-all-reason/RecoilEngine/blob/d93c4daccd/rts/Lua/LuaFBOs.cpp#L444-L467)
+---@see [LuaFBOs.cpp#L444-L467](https://github.com/beyond-all-reason/RecoilEngine/blob/e3d4339200/rts/Lua/LuaFBOs.cpp#L444-L467)
 local FBODescription = {}
 
 ---@param fboDesc FBODescription
 ---@return FBO fbo
----@see [LuaFBOs.cpp#L469-L473](https://github.com/beyond-all-reason/RecoilEngine/blob/d93c4daccd/rts/Lua/LuaFBOs.cpp#L469-L473)
+---@see [LuaFBOs.cpp#L469-L473](https://github.com/beyond-all-reason/RecoilEngine/blob/e3d4339200/rts/Lua/LuaFBOs.cpp#L469-L473)
 function gl.CreateFBO(fboDesc) end
 
 ---This doesn't delete the attached objects!
 ---
 ---@param fbo FBO
----@see [LuaFBOs.cpp#L544-L549](https://github.com/beyond-all-reason/RecoilEngine/blob/d93c4daccd/rts/Lua/LuaFBOs.cpp#L544-L549)
+---@see [LuaFBOs.cpp#L549-L554](https://github.com/beyond-all-reason/RecoilEngine/blob/e3d4339200/rts/Lua/LuaFBOs.cpp#L549-L554)
 function gl.DeleteFBO(fbo) end
 
 ---@param fbo FBO
 ---@param target GL?
 ---@return boolean valid
 ---@return GL? status
----@see [LuaFBOs.cpp#L562-L568](https://github.com/beyond-all-reason/RecoilEngine/blob/d93c4daccd/rts/Lua/LuaFBOs.cpp#L562-L568)
+---@see [LuaFBOs.cpp#L567-L573](https://github.com/beyond-all-reason/RecoilEngine/blob/e3d4339200/rts/Lua/LuaFBOs.cpp#L567-L573)
 function gl.IsValidFBO(fbo, target) end
 
 ---@param fbo FBO
 ---@param func fun(...)
 ---@param ... any args
----@see [LuaFBOs.cpp#L603-L608](https://github.com/beyond-all-reason/RecoilEngine/blob/d93c4daccd/rts/Lua/LuaFBOs.cpp#L603-L608)
+---@see [LuaFBOs.cpp#L608-L613](https://github.com/beyond-all-reason/RecoilEngine/blob/e3d4339200/rts/Lua/LuaFBOs.cpp#L608-L613)
 function gl.ActiveFBO(fbo, func, ...) end
 
 ---@param fbo FBO
 ---@param target GL?
 ---@param func fun(...)
 ---@param ... any args
----@see [LuaFBOs.cpp#L609-L615](https://github.com/beyond-all-reason/RecoilEngine/blob/d93c4daccd/rts/Lua/LuaFBOs.cpp#L609-L615)
+---@see [LuaFBOs.cpp#L614-L620](https://github.com/beyond-all-reason/RecoilEngine/blob/e3d4339200/rts/Lua/LuaFBOs.cpp#L614-L620)
 function gl.ActiveFBO(fbo, target, func, ...) end
 
 ---Bind default or specified via rawFboId numeric id of FBO
@@ -94,13 +94,13 @@ function gl.ActiveFBO(fbo, target, func, ...) end
 ---@param target GL? (Default: `GL_FRAMEBUFFER_EXT`)
 ---@param rawFboId integer? (Default: `0`)
 ---@return nil
----@see [LuaFBOs.cpp#L679-L687](https://github.com/beyond-all-reason/RecoilEngine/blob/d93c4daccd/rts/Lua/LuaFBOs.cpp#L679-L687)
+---@see [LuaFBOs.cpp#L684-L692](https://github.com/beyond-all-reason/RecoilEngine/blob/e3d4339200/rts/Lua/LuaFBOs.cpp#L684-L692)
 function gl.RawBindFBO(fbo, target, rawFboId) end
 
 ---@param fbo FBO
 ---@param target GL? (Default: `fbo.target`)
 ---@return integer previouslyBoundRawFboId
----@see [LuaFBOs.cpp#L688-L693](https://github.com/beyond-all-reason/RecoilEngine/blob/d93c4daccd/rts/Lua/LuaFBOs.cpp#L688-L693)
+---@see [LuaFBOs.cpp#L693-L698](https://github.com/beyond-all-reason/RecoilEngine/blob/e3d4339200/rts/Lua/LuaFBOs.cpp#L693-L698)
 function gl.RawBindFBO(fbo, target) end
 
 ---needs `GLAD_GL_EXT_framebuffer_blit`
@@ -115,7 +115,7 @@ function gl.RawBindFBO(fbo, target) end
 ---@param y1Dst integer
 ---@param mask GL? (Default: GL_COLOR_BUFFER_BIT)
 ---@param filter GL? (Default: GL_NEAREST)
----@see [LuaFBOs.cpp#L721-L734](https://github.com/beyond-all-reason/RecoilEngine/blob/d93c4daccd/rts/Lua/LuaFBOs.cpp#L721-L734)
+---@see [LuaFBOs.cpp#L726-L739](https://github.com/beyond-all-reason/RecoilEngine/blob/e3d4339200/rts/Lua/LuaFBOs.cpp#L726-L739)
 function gl.BlitFBO(x0Src, y0Src, x1Src, y1Src, x0Dst, y0Dst, x1Dst, y1Dst, mask, filter) end
 
 ---needs `GLAD_GL_EXT_framebuffer_blit`
@@ -132,7 +132,7 @@ function gl.BlitFBO(x0Src, y0Src, x1Src, y1Src, x0Dst, y0Dst, x1Dst, y1Dst, mask
 ---@param y1Dst integer
 ---@param mask GL? (Default: GL_COLOR_BUFFER_BIT)
 ---@param filter GL? (Default: GL_NEAREST)
----@see [LuaFBOs.cpp#L735-L750](https://github.com/beyond-all-reason/RecoilEngine/blob/d93c4daccd/rts/Lua/LuaFBOs.cpp#L735-L750)
+---@see [LuaFBOs.cpp#L740-L755](https://github.com/beyond-all-reason/RecoilEngine/blob/e3d4339200/rts/Lua/LuaFBOs.cpp#L740-L755)
 function gl.BlitFBO(fboSrc, x0Src, y0Src, x1Src, y1Src, fboDst, x0Dst, y0Dst, x1Dst, y1Dst, mask, filter) end
 
 ---needs `Platform.glVersionNum >= 30`
@@ -145,5 +145,5 @@ function gl.BlitFBO(fboSrc, x0Src, y0Src, x1Src, y1Src, fboDst, x0Dst, y0Dst, x1
 ---@param clearValue2 number? (Default: `0`)
 ---@param clearValue3 number? (Default: `0`)
 ---@return boolean success
----@see [LuaFBOs.cpp#L820-L831](https://github.com/beyond-all-reason/RecoilEngine/blob/d93c4daccd/rts/Lua/LuaFBOs.cpp#L820-L831)
+---@see [LuaFBOs.cpp#L825-L836](https://github.com/beyond-all-reason/RecoilEngine/blob/e3d4339200/rts/Lua/LuaFBOs.cpp#L825-L836)
 function gl.ClearAttachmentFBO(target, attachment, clearValue0, clearValue1, clearValue2, clearValue3) end
