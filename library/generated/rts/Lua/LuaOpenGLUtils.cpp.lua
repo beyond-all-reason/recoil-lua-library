@@ -18,4 +18,4 @@
 ---| "camprj" # Deprecated
 ---| "caminv" # Deprecated
 ---| "camprjinv" # Deprecated
----@see [LuaOpenGLUtils.cpp#L140-L154](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaOpenGLUtils.cpp#L140-L154)
+---@see [LuaOpenGLUtils.cpp#L140-L154](https://github.com/beyond-all-reason/RecoilEngine/blob/7b22dae522/rts/Lua/LuaOpenGLUtils.cpp#L140-L154)
