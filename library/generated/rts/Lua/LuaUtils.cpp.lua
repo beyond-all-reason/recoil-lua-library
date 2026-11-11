@@ -9,7 +9,7 @@
 ---@param minMinorVer integer? (Default: `0`)
 ---@param minCommits integer? (Default: `0`)
 ---@return boolean satisfiesMin `true` if the engine version is greater or equal to the specified version, otherwise `false`.
----@see [LuaUtils.cpp#L520-L526](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L520-L526)
+---@see [LuaUtils.cpp#L520-L526](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L520-L526)
 function Script.IsEngineMinVersion(minMajorVer, minMinorVer, minCommits) end
 
 ---Full command options object for reading from a `Command`.
@@ -26,7 +26,7 @@ function Script.IsEngineMinVersion(minMajorVer, minMinorVer, minCommits) end
 ---@field right boolean Right mouse key pressed.
 ---@field meta boolean Meta key (space) pressed.
 ---@field internal boolean
----@see [LuaUtils.cpp#L932-L947](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L932-L947)
+---@see [LuaUtils.cpp#L932-L947](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L932-L947)
 local CommandOptions = {}
 
 ---@alias CommandOptionBit
@@ -36,7 +36,7 @@ local CommandOptions = {}
 ---| 32 # Shift key.
 ---| 64 # Control key.
 ---| 128 # Alt key.
----@see [LuaUtils.cpp#L982-L990](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L982-L990)
+---@see [LuaUtils.cpp#L982-L990](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L982-L990)
 
 ---@alias CommandOptionName
 ---| "right" # Right mouse key.
@@ -44,19 +44,19 @@ local CommandOptions = {}
 ---| "ctrl" # Control key.
 ---| "shift" # Shift key.
 ---| "meta" # Meta key (space).
----@see [LuaUtils.cpp#L992-L999](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L992-L999)
+---@see [LuaUtils.cpp#L992-L999](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L992-L999)
 
 ---@alias CreateCommandOptions
 ---| CommandOptionName[] # An array of option names.
 ---| table<CommandOptionName, boolean> # A map of command names to booleans, considered held when `true`.
 ---| CommandOptionBit # A specific integer value for a command option.
 ---| integer # A bit mask combination of `CommandOptionBit` values. Pass `0` for no options.
----@see [LuaUtils.cpp#L1001-L1007](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1001-L1007)
+---@see [LuaUtils.cpp#L1001-L1007](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1001-L1007)
 
 ---@alias CreateCommandParams
 ---| number[] # An array of parameters.
 ---| number # A single parameter.
----@see [LuaUtils.cpp#L1100-L1104](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1100-L1104)
+---@see [LuaUtils.cpp#L1100-L1104](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1100-L1104)
 
 ---Used when assigning multiple commands at once.
 ---
@@ -66,7 +66,7 @@ local CommandOptions = {}
 ---@field [2] CreateCommandParams? Parameters for the given command.
 ---@field [3] CreateCommandOptions? Command options.
 ---@field [4] integer? Timeout.
----@see [LuaUtils.cpp#L1153-L1162](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1153-L1162)
+---@see [LuaUtils.cpp#L1153-L1162](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1153-L1162)
 local CreateCommand = {}
 
 ---Facing direction represented by a string or number.
@@ -85,7 +85,7 @@ local CreateCommand = {}
 ---| "east" # East
 ---| "north" # North
 ---| "west" # West
----@see [LuaUtils.cpp#L1235-L1253](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1235-L1253)
+---@see [LuaUtils.cpp#L1235-L1253](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1235-L1253)
 
 ---Prints values in the spring chat console. Useful for debugging.
 ---
@@ -94,33 +94,33 @@ local CreateCommand = {}
 ---@param arg any
 ---@param ... any
 ---@return nil
----@see [LuaUtils.cpp#L1391-L1401](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1391-L1401)
+---@see [LuaUtils.cpp#L1391-L1401](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1391-L1401)
 function Spring.Echo(arg, ...) end
 
 ---@enum LOG
 ---@see Spring.Log
----@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1408-L1418)
+---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1408-L1418)
 LOG = {
-	---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1408-L1418)
+	---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1408-L1418)
 	DEBUG = 20,
 
-	---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1408-L1418)
+	---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1408-L1418)
 	INFO = 30,
 
 	---Engine default.
-	---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1408-L1418)
+	---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1408-L1418)
 	NOTICE = 35,
 
-	---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1408-L1418)
+	---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1408-L1418)
 	DEPRECATED = 37,
 
-	---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1408-L1418)
+	---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1408-L1418)
 	WARNING = 40,
 
-	---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1408-L1418)
+	---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1408-L1418)
 	ERROR = 50,
 
-	---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1408-L1418)
+	---@see [LuaUtils.cpp#L1408-L1418](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1408-L1418)
 	FATAL = 60
 }
 
@@ -133,14 +133,14 @@ LOG = {
 ---| "deprecated" # LOG.DEPRECATED
 ---| "error"      # LOG.ERROR
 ---| "fatal"      # LOG.FATAL
----@see [LuaUtils.cpp#L1433-L1443](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1433-L1443)
+---@see [LuaUtils.cpp#L1433-L1443](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1433-L1443)
 
 ---Logs a message to the logfile/console.
 ---
 ---@param section string Sets an arbitrary section. Level filtering can be applied per-section
 ---@param logLevel (LogLevel|LOG)? (Default: `"notice"`)
 ---@param ... string messages
----@see [LuaUtils.cpp#L1471-L1478](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1471-L1478)
+---@see [LuaUtils.cpp#L1471-L1478](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1471-L1478)
 function Spring.Log(section, logLevel, ...) end
 
 ---Contains data about a command.
@@ -160,5 +160,5 @@ function Spring.Log(section, logLevel, ...) end
 ---@field showUnique boolean?
 ---@field onlyTexture boolean?
 ---@field params string[]?
----@see [LuaUtils.cpp#L1573-L1590](https://github.com/beyond-all-reason/RecoilEngine/blob/134ef6be46/rts/Lua/LuaUtils.cpp#L1573-L1590)
+---@see [LuaUtils.cpp#L1573-L1590](https://github.com/beyond-all-reason/RecoilEngine/blob/592d678b91/rts/Lua/LuaUtils.cpp#L1573-L1590)
 local CommandDescription = {}
