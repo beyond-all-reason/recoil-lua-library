@@ -10,12 +10,12 @@
 ---Only setters and getters for OpenGL usage in Recoil, see `GL` for constants.
 ---
 ---@see GL
----@see [LuaOpenGL.cpp#L96-L102](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L96-L102)
+---@see [LuaOpenGL.cpp#L96-L102](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L96-L102)
 gl = {}
 
 ---@param ext string
 ---@return boolean
----@see [LuaOpenGL.cpp#L1242-L1246](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1242-L1246)
+---@see [LuaOpenGL.cpp#L1242-L1246](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1242-L1246)
 function gl.HasExtension(ext) end
 
 ---Get the value or values of a selected parameter.
@@ -23,47 +23,47 @@ function gl.HasExtension(ext) end
 ---@param pname GL
 ---@param count integer? (Default: `1`) Number of values to return, in range [1, 64].
 ---@return number ...
----@see [LuaOpenGL.cpp#L1254-L1261](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1254-L1261)
+---@see [LuaOpenGL.cpp#L1254-L1261](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1254-L1261)
 function gl.GetNumber(pname, count) end
 
 ---Get a string describing the current OpenGL connection.
 ---
 ---@param pname GL
 ---@return string value `"[NULL]"` if the driver returns no string for `pname`.
----@see [LuaOpenGL.cpp#L1279-L1284](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1279-L1284)
+---@see [LuaOpenGL.cpp#L1281-L1286](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1281-L1286)
 function gl.GetString(pname) end
 
 ---@return number x
 ---@return number y
 ---@return number z
----@see [LuaOpenGL.cpp#L1300-L1305](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1300-L1305)
+---@see [LuaOpenGL.cpp#L1302-L1307](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1302-L1307)
 function gl.GetScreenViewTrans() end
 
 ---@return integer x
 ---@return integer y
----@see [LuaOpenGL.cpp#L1315-L1319](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1315-L1319)
+---@see [LuaOpenGL.cpp#L1317-L1321](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1317-L1321)
 function gl.GetViewSizes() end
 
 ---@return number nearPlaneDist
 ---@return number farPlaneDist
 ---@return number minViewRange
 ---@return number maxViewRange
----@see [LuaOpenGL.cpp#L1328-L1334](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1328-L1334)
+---@see [LuaOpenGL.cpp#L1330-L1336](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1330-L1336)
 function gl.GetViewRange() end
 
 ---@param newMode boolean
----@see [LuaOpenGL.cpp#L1350-L1353](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1350-L1353)
+---@see [LuaOpenGL.cpp#L1352-L1355](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1352-L1355)
 function gl.SlaveMiniMap(newMode) end
 
 ---@param px integer
 ---@param py integer
 ---@param sx integer
 ---@param sy integer
----@see [LuaOpenGL.cpp#L1365-L1371](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1365-L1371)
+---@see [LuaOpenGL.cpp#L1367-L1373](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1367-L1373)
 function gl.ConfigMiniMap(px, py, sx, sy) end
 
 ---@param defaultTransform boolean? (Default: `true`)
----@see [LuaOpenGL.cpp#L1387-L1390](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1387-L1390)
+---@see [LuaOpenGL.cpp#L1389-L1392](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1389-L1392)
 function gl.DrawMiniMap(defaultTransform) end
 
 ---Draws all unit icons visible to the given perspective (as on the minimap: team
@@ -85,7 +85,7 @@ function gl.DrawMiniMap(defaultTransform) end
 ---@param fullView boolean? (Default: true when spectating in full view with a full-read handle) draw every unit at its true position; true requires a full-read handle, false is always allowed
 ---@param highlightSelected boolean? (Default: true) draw the local player's selected units white. Other players' selections are unknown to the engine — when rendering another perspective, pass false and overlay that viewer's selection yourself
 ---@param rotation number? (Default: 0) counter-clockwise screen rotation in radians that you apply to the result, with the rectangle drawn minimap-style before it ((left,top) at the top-left). Each icon is turned back by it to stay upright and icons stack by the rotated screen vertical; positions are left to your transform. For a minimap replacement pass Spring.GetMiniMapRotation()
----@see [LuaOpenGL.cpp#L1421-L1442](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1421-L1442)
+---@see [LuaOpenGL.cpp#L1423-L1444](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1423-L1444)
 function gl.DrawMiniMapIcons(left, top, right, bottom, iconSize, allyTeam, fullView, highlightSelected, rotation) end
 
 ---Begin a block of text commands.
@@ -99,10 +99,10 @@ function gl.DrawMiniMapIcons(left, top, right, bottom, iconSize, allyTeam, fullV
 ---@param userDefinedBlending boolean? When `true` doesn't set the gl.BlendFunc automatically. Defaults to `false`.
 ---@see gl.BlendFunc
 ---@see gl.BlendFuncSeparate
----@see [LuaOpenGL.cpp#L1509-L1523](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1509-L1523)
+---@see [LuaOpenGL.cpp#L1511-L1525](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1511-L1525)
 function gl.BeginText(userDefinedBlending) end
 
----@see [LuaOpenGL.cpp#L1533-L1535](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1533-L1535)
+---@see [LuaOpenGL.cpp#L1535-L1537](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1535-L1537)
 function gl.EndText() end
 
 ---`options` is a concatenated string of option characters:
@@ -130,19 +130,19 @@ function gl.EndText() end
 ---@param size number?
 ---@param options string? Concatenated string of option characters.
 ---@return nil
----@see [LuaOpenGL.cpp#L1543-L1570](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1543-L1570)
+---@see [LuaOpenGL.cpp#L1545-L1572](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1545-L1572)
 function gl.Text(text, x, y, size, options) end
 
 ---@param text string
 ---@return number width
----@see [LuaOpenGL.cpp#L1626-L1630](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1626-L1630)
+---@see [LuaOpenGL.cpp#L1628-L1632](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1628-L1632)
 function gl.GetTextWidth(text) end
 
 ---@param text string
 ---@return number height
 ---@return number descender
 ---@return integer lines
----@see [LuaOpenGL.cpp#L1641-L1647](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1641-L1647)
+---@see [LuaOpenGL.cpp#L1643-L1649](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1643-L1649)
 function gl.GetTextHeight(text) end
 
 ---Draw the unit, applying transform.
@@ -152,7 +152,7 @@ function gl.GetTextHeight(text) end
 ---@param useLuaMat integer?
 ---@param noLuaCall boolean? (Default: `false`) Skip the `DrawUnit` callin.
 ---@param fullModel boolean? (Default: `true`)
----@see [LuaOpenGL.cpp#L1842-L1851](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1842-L1851)
+---@see [LuaOpenGL.cpp#L1844-L1853](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1844-L1853)
 function gl.Unit(unitID, doRawDraw, useLuaMat, noLuaCall, fullModel) end
 
 ---Draw the unit without applying transform.
@@ -165,12 +165,12 @@ function gl.Unit(unitID, doRawDraw, useLuaMat, noLuaCall, fullModel) end
 ---@param useLuaMat integer?
 ---@param noLuaCall boolean? (Default: `true`) Skip the `DrawUnit` callin.
 ---@param fullModel boolean? (Default: `true`)
----@see [LuaOpenGL.cpp#L1854-L1866](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1854-L1866)
+---@see [LuaOpenGL.cpp#L1856-L1868](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1856-L1868)
 function gl.UnitRaw(unitID, doRawDraw, useLuaMat, noLuaCall, fullModel) end
 
 ---@param unitID UnitID
 ---@param push boolean If `true`, push the render state; if `false`, pop it.
----@see [LuaOpenGL.cpp#L1869-L1873](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1869-L1873)
+---@see [LuaOpenGL.cpp#L1871-L1875](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1871-L1875)
 function gl.UnitTextures(unitID, push) end
 
 ---@param unitDefID UnitDefID
@@ -178,31 +178,31 @@ function gl.UnitTextures(unitID, push) end
 ---@param rawState boolean? (Default: `true`)
 ---@param toScreen boolean? (Default: `false`)
 ---@param opaque boolean? (Default: `true`) If `true`, draw opaque; if `false`, draw alpha.
----@see [LuaOpenGL.cpp#L1881-L1888](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1881-L1888)
+---@see [LuaOpenGL.cpp#L1883-L1890](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1883-L1890)
 function gl.UnitShape(unitDefID, teamID, rawState, toScreen, opaque) end
 
 ---@param unitDefID UnitDefID
 ---@param push boolean If `true`, push the render state; if `false`, pop it.
----@see [LuaOpenGL.cpp#L1896-L1900](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1896-L1900)
+---@see [LuaOpenGL.cpp#L1898-L1902](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1898-L1902)
 function gl.UnitShapeTextures(unitDefID, push) end
 
 ---@param unitID UnitID
----@see [LuaOpenGL.cpp#L1909-L1912](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1909-L1912)
+---@see [LuaOpenGL.cpp#L1911-L1914](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1911-L1914)
 function gl.UnitMultMatrix(unitID) end
 
 ---@param unitID UnitID
 ---@param pieceID integer
----@see [LuaOpenGL.cpp#L1927-L1931](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1927-L1931)
+---@see [LuaOpenGL.cpp#L1929-L1933](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1929-L1933)
 function gl.UnitPiece(unitID, pieceID) end
 
 ---@param unitID UnitID
 ---@param pieceID integer
----@see [LuaOpenGL.cpp#L1938-L1942](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1938-L1942)
+---@see [LuaOpenGL.cpp#L1940-L1944](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1940-L1944)
 function gl.UnitPieceMatrix(unitID, pieceID) end
 
 ---@param unitID UnitID
 ---@param pieceID integer
----@see [LuaOpenGL.cpp#L1945-L1949](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L1945-L1949)
+---@see [LuaOpenGL.cpp#L1947-L1951](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L1947-L1951)
 function gl.UnitPieceMultMatrix(unitID, pieceID) end
 
 ---Draw the feature, applying transform.
@@ -211,7 +211,7 @@ function gl.UnitPieceMultMatrix(unitID, pieceID) end
 ---@param doRawDraw boolean? (Default: `false`)
 ---@param useLuaMat integer?
 ---@param noLuaCall boolean? (Default: `false`) Skip the `DrawFeature` callin.
----@see [LuaOpenGL.cpp#L2010-L2018](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2010-L2018)
+---@see [LuaOpenGL.cpp#L2012-L2020](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2012-L2020)
 function gl.Feature(featureID, doRawDraw, useLuaMat, noLuaCall) end
 
 ---Draw the unit without applying transform.
@@ -223,12 +223,12 @@ function gl.Feature(featureID, doRawDraw, useLuaMat, noLuaCall) end
 ---@param doRawDraw boolean? (Default: `false`)
 ---@param useLuaMat integer?
 ---@param noLuaCall boolean? (Default: `true`) Skip the `DrawFeature` callin.
----@see [LuaOpenGL.cpp#L2021-L2032](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2021-L2032)
+---@see [LuaOpenGL.cpp#L2023-L2034](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2023-L2034)
 function gl.FeatureRaw(featureID, doRawDraw, useLuaMat, noLuaCall) end
 
 ---@param featureID FeatureID
 ---@param push boolean If `true`, push the render state; if `false`, pop it.
----@see [LuaOpenGL.cpp#L2035-L2039](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2035-L2039)
+---@see [LuaOpenGL.cpp#L2037-L2041](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2037-L2041)
 function gl.FeatureTextures(featureID, push) end
 
 ---@param featureDefID FeatureDefID
@@ -236,31 +236,31 @@ function gl.FeatureTextures(featureID, push) end
 ---@param rawState boolean? (Default: `true`)
 ---@param toScreen boolean? (Default: `false`)
 ---@param opaque boolean? (Default: `true`) If `true`, draw opaque; if `false`, draw alpha.
----@see [LuaOpenGL.cpp#L2047-L2054](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2047-L2054)
+---@see [LuaOpenGL.cpp#L2049-L2056](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2049-L2056)
 function gl.FeatureShape(featureDefID, teamID, rawState, toScreen, opaque) end
 
 ---@param featureDefID FeatureDefID
 ---@param push boolean If `true`, push the render state; if `false`, pop it.
----@see [LuaOpenGL.cpp#L2062-L2066](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2062-L2066)
+---@see [LuaOpenGL.cpp#L2064-L2068](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2064-L2068)
 function gl.FeatureShapeTextures(featureDefID, push) end
 
 ---@param featureID FeatureID
----@see [LuaOpenGL.cpp#L2075-L2078](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2075-L2078)
+---@see [LuaOpenGL.cpp#L2077-L2080](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2077-L2080)
 function gl.FeatureMultMatrix(featureID) end
 
 ---@param featureID FeatureID
 ---@param pieceID integer
----@see [LuaOpenGL.cpp#L2093-L2097](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2093-L2097)
+---@see [LuaOpenGL.cpp#L2095-L2099](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2095-L2099)
 function gl.FeaturePiece(featureID, pieceID) end
 
 ---@param featureID FeatureID
 ---@param pieceID integer
----@see [LuaOpenGL.cpp#L2105-L2109](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2105-L2109)
+---@see [LuaOpenGL.cpp#L2107-L2111](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2107-L2111)
 function gl.FeaturePieceMatrix(featureID, pieceID) end
 
 ---@param featureID FeatureID
 ---@param pieceID integer
----@see [LuaOpenGL.cpp#L2113-L2117](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2113-L2117)
+---@see [LuaOpenGL.cpp#L2115-L2119](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2115-L2119)
 function gl.FeaturePieceMultMatrix(featureID, pieceID) end
 
 ---@param unitID UnitID
@@ -273,14 +273,14 @@ function gl.FeaturePieceMultMatrix(featureID, pieceID) end
 ---@param rotX number? (Default: `0.0`)
 ---@param rotY number? (Default: `1.0`)
 ---@param rotZ number? (Default: `0.0`)
----@see [LuaOpenGL.cpp#L2130-L2142](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2130-L2142)
+---@see [LuaOpenGL.cpp#L2132-L2144](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2132-L2144)
 function gl.DrawListAtUnit(unitID, listIndex, useMidPos, scaleX, scaleY, scaleZ, degrees, rotX, rotY, rotZ) end
 
 ---@param unitID UnitID
 ---@param useMidPos boolean? (Default: `true`)
 ---@param func fun(...) Function to call.
 ---@param ... any Arguments passed to function.
----@see [LuaOpenGL.cpp#L2187-L2193](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2187-L2193)
+---@see [LuaOpenGL.cpp#L2189-L2195](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2189-L2195)
 function gl.DrawFuncAtUnit(unitID, useMidPos, func, ...) end
 
 ---@param posX number
@@ -288,7 +288,7 @@ function gl.DrawFuncAtUnit(unitID, useMidPos, func, ...) end
 ---@param posZ number
 ---@param radius number
 ---@param resolution integer
----@see [LuaOpenGL.cpp#L2230-L2237](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2230-L2237)
+---@see [LuaOpenGL.cpp#L2232-L2239](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2232-L2239)
 function gl.DrawGroundCircle(posX, posY, posZ, radius, resolution) end
 
 ---@param posX number
@@ -299,7 +299,7 @@ function gl.DrawGroundCircle(posX, posY, posZ, radius, resolution) end
 ---@param slope number
 ---@param gravity number?
 ---@param weaponDefID WeaponDefID?
----@see [LuaOpenGL.cpp#L2238-L2248](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2238-L2248)
+---@see [LuaOpenGL.cpp#L2240-L2250](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2240-L2250)
 function gl.DrawGroundCircle(posX, posY, posZ, radius, resolution, slope, gravity, weaponDefID) end
 
 ---@param x0 number
@@ -308,7 +308,7 @@ function gl.DrawGroundCircle(posX, posY, posZ, radius, resolution, slope, gravit
 ---@param z1 number
 ---@param useNorm nil No longer used.
 ---@param useTxcd boolean? (Default: `false`)
----@see [LuaOpenGL.cpp#L2289-L2297](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2289-L2297)
+---@see [LuaOpenGL.cpp#L2291-L2299](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2291-L2299)
 function gl.DrawGroundQuad(x0, z0, x1, z1, useNorm, useTxcd) end
 
 ---@param x0 number
@@ -320,7 +320,7 @@ function gl.DrawGroundQuad(x0, z0, x1, z1, useNorm, useTxcd) end
 ---@param tv0 number
 ---@param tu1 number
 ---@param tv1 number
----@see [LuaOpenGL.cpp#L2298-L2309](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2298-L2309)
+---@see [LuaOpenGL.cpp#L2300-L2311](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2300-L2311)
 function gl.DrawGroundQuad(x0, z0, x1, z1, useNorm, tu0, tv0, tu1, tv1) end
 
 ---@class VertexData
@@ -333,90 +333,90 @@ function gl.DrawGroundQuad(x0, z0, x1, z1, useNorm, tu0, tv0, tu1, tv1) end
 ---@field t float2? Short for `texcoord`.
 ---@field color float4?
 ---@field c float4? Short for `color`.
----@see [LuaOpenGL.cpp#L2413-L2424](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2413-L2424)
+---@see [LuaOpenGL.cpp#L2415-L2426](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2415-L2426)
 local VertexData = {}
 
 ---@param type GL
 ---@param vertices VertexData[]
----@see [LuaOpenGL.cpp#L2499-L2503](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2499-L2503)
+---@see [LuaOpenGL.cpp#L2501-L2505](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2501-L2505)
 function gl.Shape(type, vertices) end
 
 ---@param primMode GL
 ---@param func fun(...) Function to call.
 ---@param ... any Arguments passed to function.
----@see [LuaOpenGL.cpp#L2545-L2550](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2545-L2550)
+---@see [LuaOpenGL.cpp#L2547-L2552](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2547-L2552)
 function gl.BeginEnd(primMode, func, ...) end
 
 ---@param v xy
----@see [LuaOpenGL.cpp#L2582-L2585](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2582-L2585)
+---@see [LuaOpenGL.cpp#L2584-L2587](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2584-L2587)
 function gl.Vertex(v) end
 
 ---@param v xyz
----@see [LuaOpenGL.cpp#L2586-L2589](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2586-L2589)
+---@see [LuaOpenGL.cpp#L2588-L2591](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2588-L2591)
 function gl.Vertex(v) end
 
 ---@param v xyzw
----@see [LuaOpenGL.cpp#L2590-L2593](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2590-L2593)
+---@see [LuaOpenGL.cpp#L2592-L2595](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2592-L2595)
 function gl.Vertex(v) end
 
 ---@param x number
 ---@param y number
 ---@param z number?
 ---@param w number?
----@see [LuaOpenGL.cpp#L2594-L2600](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2594-L2600)
+---@see [LuaOpenGL.cpp#L2596-L2602](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2596-L2602)
 function gl.Vertex(x, y, z, w) end
 
 ---@param v xyz
----@see [LuaOpenGL.cpp#L2664-L2667](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2664-L2667)
+---@see [LuaOpenGL.cpp#L2666-L2669](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2666-L2669)
 function gl.Normal(v) end
 
 ---@param x number
 ---@param y number
 ---@param z number
----@see [LuaOpenGL.cpp#L2668-L2673](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2668-L2673)
+---@see [LuaOpenGL.cpp#L2670-L2675](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2670-L2675)
 function gl.Normal(x, y, z) end
 
 ---@param coord [number]
----@see [LuaOpenGL.cpp#L2712-L2715](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2712-L2715)
+---@see [LuaOpenGL.cpp#L2714-L2717](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2714-L2717)
 function gl.TexCoord(coord) end
 
 ---@param coord xy
----@see [LuaOpenGL.cpp#L2716-L2719](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2716-L2719)
+---@see [LuaOpenGL.cpp#L2718-L2721](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2718-L2721)
 function gl.TexCoord(coord) end
 
 ---@param coord xyz
----@see [LuaOpenGL.cpp#L2720-L2723](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2720-L2723)
+---@see [LuaOpenGL.cpp#L2722-L2725](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2722-L2725)
 function gl.TexCoord(coord) end
 
 ---@param coord xyzw
----@see [LuaOpenGL.cpp#L2724-L2727](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2724-L2727)
+---@see [LuaOpenGL.cpp#L2726-L2729](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2726-L2729)
 function gl.TexCoord(coord) end
 
 ---@param s number
 ---@param t number?
 ---@param r number?
 ---@param q number?
----@see [LuaOpenGL.cpp#L2728-L2734](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2728-L2734)
+---@see [LuaOpenGL.cpp#L2730-L2736](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2730-L2736)
 function gl.TexCoord(s, t, r, q) end
 
 ---@param texNum integer
 ---@param coord [number]
----@see [LuaOpenGL.cpp#L2803-L2807](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2803-L2807)
+---@see [LuaOpenGL.cpp#L2805-L2809](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2805-L2809)
 function gl.MultiTexCoord(texNum, coord) end
 
 ---@param texNum integer
 ---@param coord xy
----@see [LuaOpenGL.cpp#L2808-L2812](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2808-L2812)
+---@see [LuaOpenGL.cpp#L2810-L2814](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2810-L2814)
 function gl.MultiTexCoord(texNum, coord) end
 
 ---@param texNum integer
 ---@param coord xyz
----@see [LuaOpenGL.cpp#L2813-L2817](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2813-L2817)
+---@see [LuaOpenGL.cpp#L2815-L2819](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2815-L2819)
 function gl.MultiTexCoord(texNum, coord) end
 
 ---@param texNum integer
 ---@param coord xyzw
----@see [LuaOpenGL.cpp#L2818-L2822](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2818-L2822)
+---@see [LuaOpenGL.cpp#L2820-L2824](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2820-L2824)
 function gl.MultiTexCoord(texNum, coord) end
 
 ---@param texNum integer
@@ -424,32 +424,32 @@ function gl.MultiTexCoord(texNum, coord) end
 ---@param t number?
 ---@param r number?
 ---@param q number?
----@see [LuaOpenGL.cpp#L2823-L2830](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2823-L2830)
+---@see [LuaOpenGL.cpp#L2825-L2832](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2825-L2832)
 function gl.MultiTexCoord(texNum, s, t, r, q) end
 
 ---@param color rgb
----@see [LuaOpenGL.cpp#L2905-L2908](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2905-L2908)
+---@see [LuaOpenGL.cpp#L2907-L2910](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2907-L2910)
 function gl.SecondaryColor(color) end
 
 ---@param r number
 ---@param g number
 ---@param b number
----@see [LuaOpenGL.cpp#L2909-L2914](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2909-L2914)
+---@see [LuaOpenGL.cpp#L2911-L2916](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2911-L2916)
 function gl.SecondaryColor(r, g, b) end
 
 ---@param coord number
----@see [LuaOpenGL.cpp#L2953-L2956](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2953-L2956)
+---@see [LuaOpenGL.cpp#L2955-L2958](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2955-L2958)
 function gl.FogCoord(coord) end
 
 ---@param flag boolean
----@see [LuaOpenGL.cpp#L2968-L2971](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2968-L2971)
+---@see [LuaOpenGL.cpp#L2970-L2973](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2970-L2973)
 function gl.EdgeFlag(flag) end
 
 ---@param x1 number
 ---@param y1 number
 ---@param x2 number
 ---@param y2 number
----@see [LuaOpenGL.cpp#L2986-L2992](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L2986-L2992)
+---@see [LuaOpenGL.cpp#L2988-L2994](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L2988-L2994)
 function gl.Rect(x1, y1, x2, y2) end
 
 ---@param x1 number
@@ -458,7 +458,7 @@ function gl.Rect(x1, y1, x2, y2) end
 ---@param y2 number
 ---@param flipSCoords boolean?
 ---@param flipTCoords boolean?
----@see [LuaOpenGL.cpp#L3005-L3013](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3005-L3013)
+---@see [LuaOpenGL.cpp#L3007-L3015](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3007-L3015)
 function gl.TexRect(x1, y1, x2, y2, flipSCoords, flipTCoords) end
 
 ---@param x1 number
@@ -469,33 +469,33 @@ function gl.TexRect(x1, y1, x2, y2, flipSCoords, flipTCoords) end
 ---@param t1 number
 ---@param s2 number
 ---@param t2 number
----@see [LuaOpenGL.cpp#L3014-L3024](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3014-L3024)
+---@see [LuaOpenGL.cpp#L3016-L3026](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3016-L3026)
 function gl.TexRect(x1, y1, x2, y2, s1, t1, s2, t2) end
 
 ---@param numGroupX integer?
 ---@param numGroupY integer
 ---@param numGroupZ integer
 ---@param barriers integer? (Default: `0`)
----@see [LuaOpenGL.cpp#L3080-L3086](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3080-L3086)
+---@see [LuaOpenGL.cpp#L3082-L3088](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3082-L3088)
 function gl.DispatchCompute(numGroupX, numGroupY, numGroupZ, barriers) end
 
 ---@param barriers integer? (Default: `4`)
----@see [LuaOpenGL.cpp#L3119-L3122](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3119-L3122)
+---@see [LuaOpenGL.cpp#L3121-L3124](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3121-L3124)
 function gl.MemoryBarrier(barriers) end
 
 ---@param r number Red.
 ---@param g number Green.
 ---@param b number Blue.
 ---@param a number? (Default: `1.0`) Alpha.
----@see [LuaOpenGL.cpp#L3140-L3146](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3140-L3146)
+---@see [LuaOpenGL.cpp#L3142-L3148](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3142-L3148)
 function gl.Color(r, g, b, a) end
 
 ---@param color rgba Color with alpha.
----@see [LuaOpenGL.cpp#L3147-L3150](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3147-L3150)
+---@see [LuaOpenGL.cpp#L3149-L3152](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3149-L3152)
 function gl.Color(color) end
 
 ---@param color rgb Color.
----@see [LuaOpenGL.cpp#L3151-L3154](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3151-L3154)
+---@see [LuaOpenGL.cpp#L3153-L3156](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3153-L3156)
 function gl.Color(color) end
 
 ---@class Material
@@ -506,49 +506,49 @@ function gl.Color(color) end
 ---@field diffuse rgb|rgba
 ---@field specular rgb|rgba
 ---@field emission rgb|rgba
----@see [LuaOpenGL.cpp#L3192-L3201](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3192-L3201)
+---@see [LuaOpenGL.cpp#L3194-L3203](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3194-L3203)
 local Material = {}
 
 ---@param material Material
----@see [LuaOpenGL.cpp#L3203-L3206](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3203-L3206)
+---@see [LuaOpenGL.cpp#L3205-L3208](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3205-L3208)
 function gl.Material(material) end
 
----@see [LuaOpenGL.cpp#L3276-L3278](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3276-L3278)
+---@see [LuaOpenGL.cpp#L3278-L3280](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3278-L3280)
 function gl.ResetState() end
 
----@see [LuaOpenGL.cpp#L3287-L3289](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3287-L3289)
+---@see [LuaOpenGL.cpp#L3289-L3291](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3289-L3291)
 function gl.ResetMatrices() end
 
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L3305-L3308](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3305-L3308)
+---@see [LuaOpenGL.cpp#L3307-L3310](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3307-L3310)
 function gl.Lighting(enable) end
 
 ---@param model GL
----@see [LuaOpenGL.cpp#L3322-L3325](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3322-L3325)
+---@see [LuaOpenGL.cpp#L3324-L3327](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3324-L3327)
 function gl.ShadeModel(model) end
 
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L3334-L3337](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3334-L3337)
+---@see [LuaOpenGL.cpp#L3336-L3339](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3336-L3339)
 function gl.Scissor(enable) end
 
 ---@param x integer
 ---@param y integer
 ---@param w integer
 ---@param h integer
----@see [LuaOpenGL.cpp#L3338-L3344](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3338-L3344)
+---@see [LuaOpenGL.cpp#L3340-L3346](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3340-L3346)
 function gl.Scissor(x, y, w, h) end
 
 ---@param x integer
 ---@param y integer
 ---@param w integer
 ---@param h integer
----@see [LuaOpenGL.cpp#L3375-L3381](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3375-L3381)
+---@see [LuaOpenGL.cpp#L3377-L3383](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3377-L3383)
 function gl.Viewport(x, y, w, h) end
 
 ---Enable or disable writing of frame buffer color components.
 ---
 ---@param rgba boolean
----@see [LuaOpenGL.cpp#L3398-L3402](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3398-L3402)
+---@see [LuaOpenGL.cpp#L3400-L3404](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3400-L3404)
 function gl.ColorMask(rgba) end
 
 ---Enable or disable writing of frame buffer color components.
@@ -557,19 +557,19 @@ function gl.ColorMask(rgba) end
 ---@param green boolean
 ---@param blue boolean
 ---@param alpha boolean
----@see [LuaOpenGL.cpp#L3403-L3410](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3403-L3410)
+---@see [LuaOpenGL.cpp#L3405-L3412](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3405-L3412)
 function gl.ColorMask(red, green, blue, alpha) end
 
 ---Enable or disable writing into the depth buffer.
 ---
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L3434-L3438](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3434-L3438)
+---@see [LuaOpenGL.cpp#L3436-L3440](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3436-L3440)
 function gl.DepthMask(enable) end
 
 ---Enable or disable depth test.
 ---
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L3451-L3455](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3451-L3455)
+---@see [LuaOpenGL.cpp#L3453-L3457](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3453-L3457)
 function gl.DepthTest(enable) end
 
 ---Enable depth test and specify the depth comparison function.
@@ -578,15 +578,15 @@ function gl.DepthTest(enable) end
 ---`GL.GREATER`, `GL.NOTEQUAL`, `GL.GEQUAL`, and `GL.ALWAYS`.
 ---
 ---@param depthFunction GL The depth comparison function.
----@see [LuaOpenGL.cpp#L3456-L3465](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3456-L3465)
+---@see [LuaOpenGL.cpp#L3458-L3467](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3458-L3467)
 function gl.DepthTest(depthFunction) end
 
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L3493-L3496](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3493-L3496)
+---@see [LuaOpenGL.cpp#L3495-L3498](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3495-L3498)
 function gl.DepthClamp(enable) end
 
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L3510-L3513](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3510-L3513)
+---@see [LuaOpenGL.cpp#L3512-L3515](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3512-L3515)
 function gl.Culling(enable) end
 
 ---Enable culling and set culling mode.
@@ -594,11 +594,11 @@ function gl.Culling(enable) end
 ---`mode` accepts `GL.FRONT`, `GL.BACK`, and `GL.FRONT_AND_BACK`.
 ---
 ---@param mode GL Whether front- or back-facing facets are candidates for culling.
----@see [LuaOpenGL.cpp#L3514-L3521](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3514-L3521)
+---@see [LuaOpenGL.cpp#L3516-L3523](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3516-L3523)
 function gl.Culling(mode) end
 
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L3550-L3553](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3550-L3553)
+---@see [LuaOpenGL.cpp#L3552-L3555](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3552-L3555)
 function gl.LogicOp(enable) end
 
 ---Specify a logical pixel operation for rendering.
@@ -609,49 +609,49 @@ function gl.LogicOp(enable) end
 ---`GL.OR_INVERTED`.
 ---
 ---@param opCode GL The logical operation.
----@see [LuaOpenGL.cpp#L3554-L3565](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3554-L3565)
+---@see [LuaOpenGL.cpp#L3556-L3567](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3556-L3567)
 function gl.LogicOp(opCode) end
 
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L3593-L3596](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3593-L3596)
+---@see [LuaOpenGL.cpp#L3595-L3598](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3595-L3598)
 function gl.Fog(enable) end
 
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L3611-L3614](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3611-L3614)
+---@see [LuaOpenGL.cpp#L3613-L3616](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3613-L3616)
 function gl.Blending(enable) end
 
 ---@param mode "add"|"alpha_add"|"alpha"|"reset"|"color"|"modulate"|"disable"
----@see [LuaOpenGL.cpp#L3615-L3618](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3615-L3618)
+---@see [LuaOpenGL.cpp#L3617-L3620](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3617-L3620)
 function gl.Blending(mode) end
 
 ---@param src GL
 ---@param dst GL
----@see [LuaOpenGL.cpp#L3619-L3623](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3619-L3623)
+---@see [LuaOpenGL.cpp#L3621-L3625](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3621-L3625)
 function gl.Blending(src, dst) end
 
 ---@param mode GL
----@see [LuaOpenGL.cpp#L3686-L3689](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3686-L3689)
+---@see [LuaOpenGL.cpp#L3688-L3691](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3688-L3691)
 function gl.BlendEquation(mode) end
 
 ---@param src GL
 ---@param dst GL
----@see [LuaOpenGL.cpp#L3699-L3703](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3699-L3703)
+---@see [LuaOpenGL.cpp#L3701-L3705](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3701-L3705)
 function gl.BlendFunc(src, dst) end
 
 ---@param modeRGB GL
 ---@param modeAlpha GL
----@see [LuaOpenGL.cpp#L3714-L3718](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3714-L3718)
+---@see [LuaOpenGL.cpp#L3716-L3720](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3716-L3720)
 function gl.BlendEquationSeparate(modeRGB, modeAlpha) end
 
 ---@param srcRGB GL
 ---@param dstRGB GL
 ---@param srcAlpha GL
 ---@param dstAlpha GL
----@see [LuaOpenGL.cpp#L3729-L3735](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3729-L3735)
+---@see [LuaOpenGL.cpp#L3731-L3737](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3731-L3737)
 function gl.BlendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha) end
 
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L3748-L3751](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3748-L3751)
+---@see [LuaOpenGL.cpp#L3750-L3753](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3750-L3753)
 function gl.AlphaTest(enable) end
 
 ---Specify the alpha test function.
@@ -664,11 +664,11 @@ function gl.AlphaTest(enable) end
 ---
 ---@param func GL The alpha comparison function.
 ---@param ref number The reference value that incoming alpha values are compared to.
----@see [LuaOpenGL.cpp#L3752-L3764](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3752-L3764)
+---@see [LuaOpenGL.cpp#L3754-L3766](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3754-L3766)
 function gl.AlphaTest(func, ref) end
 
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L3788-L3791](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3788-L3791)
+---@see [LuaOpenGL.cpp#L3790-L3793](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3790-L3793)
 function gl.AlphaToCoverage(enable) end
 
 ---Select polygon rasterization mode.
@@ -681,26 +681,26 @@ function gl.AlphaToCoverage(enable) end
 ---
 ---@param face GL The polygons that mode applies to.
 ---@param mode GL How the polygons will be rasterized.
----@see [LuaOpenGL.cpp#L3809-L3823](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3809-L3823)
+---@see [LuaOpenGL.cpp#L3811-L3825](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3811-L3825)
 function gl.PolygonMode(face, mode) end
 
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L3834-L3837](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3834-L3837)
+---@see [LuaOpenGL.cpp#L3836-L3839](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3836-L3839)
 function gl.PolygonOffset(enable) end
 
 ---@param factor number Scale factor for a variable depth offset for each polygon.
 ---@param units number Multiplied by an implementation-specific value to create a constant depth offset.
----@see [LuaOpenGL.cpp#L3838-L3843](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3838-L3843)
+---@see [LuaOpenGL.cpp#L3840-L3845](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3840-L3845)
 function gl.PolygonOffset(factor, units) end
 
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L3875-L3878](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3875-L3878)
+---@see [LuaOpenGL.cpp#L3877-L3880](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3877-L3880)
 function gl.StencilTest(enable) end
 
 ---Control the front and back writing of individual bits in the stencil planes.
 ---
 ---@param mask integer Bit mask to enable and disable writing of individual bits in the stencil planes.
----@see [LuaOpenGL.cpp#L3892-L3897](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3892-L3897)
+---@see [LuaOpenGL.cpp#L3894-L3899](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3894-L3899)
 function gl.StencilMask(mask) end
 
 ---Set front and back function and reference value for stencil testing.
@@ -714,7 +714,7 @@ function gl.StencilMask(mask) end
 ---@param func GL The test function.
 ---@param ref integer The reference value for the stencil test.
 ---@param mask integer ANDed with both the reference value and the stored stencil value when the test is done.
----@see [LuaOpenGL.cpp#L3907-L3920](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3907-L3920)
+---@see [LuaOpenGL.cpp#L3909-L3922](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3909-L3922)
 function gl.StencilFunc(func, ref, mask) end
 
 ---Set front and back stencil test actions.
@@ -728,7 +728,7 @@ function gl.StencilFunc(func, ref, mask) end
 ---@param fail GL The action to take when the stencil test fails.
 ---@param zfail GL The action when the stencil test passes, but the depth test fails.
 ---@param zpass GL The action when both the stencil test and the depth test pass.
----@see [LuaOpenGL.cpp#L3932-L3945](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3932-L3945)
+---@see [LuaOpenGL.cpp#L3934-L3947](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3934-L3947)
 function gl.StencilOp(fail, zfail, zpass) end
 
 ---Control the front and back writing of individual bits in the stencil planes.
@@ -737,7 +737,7 @@ function gl.StencilOp(fail, zfail, zpass) end
 ---
 ---@param face GL Whether the front and/or back stencil writemask is updated.
 ---@param mask integer Bit mask to enable and disable writing of individual bits in the stencil planes.
----@see [LuaOpenGL.cpp#L3957-L3965](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3957-L3965)
+---@see [LuaOpenGL.cpp#L3959-L3967](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3959-L3967)
 function gl.StencilMaskSeparate(face, mask) end
 
 ---Set front and/or back function and reference value for stencil testing.
@@ -754,7 +754,7 @@ function gl.StencilMaskSeparate(face, mask) end
 ---@param func GL The test function.
 ---@param ref integer The reference value for the stencil test.
 ---@param mask integer ANDed with both the reference value and the stored stencil value when the test is done.
----@see [LuaOpenGL.cpp#L3976-L3992](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L3976-L3992)
+---@see [LuaOpenGL.cpp#L3978-L3994](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L3978-L3994)
 function gl.StencilFuncSeparate(face, func, ref, mask) end
 
 ---Set front and/or back stencil test actions.
@@ -771,35 +771,35 @@ function gl.StencilFuncSeparate(face, func, ref, mask) end
 ---@param fail GL The action to take when the stencil test fails.
 ---@param zfail GL The action when the stencil test passes, but the depth test fails.
 ---@param zpass GL The action when both the stencil test and the depth test pass.
----@see [LuaOpenGL.cpp#L4005-L4021](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4005-L4021)
+---@see [LuaOpenGL.cpp#L4007-L4023](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4007-L4023)
 function gl.StencilOpSeparate(face, fail, zfail, zpass) end
 
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L4036-L4039](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4036-L4039)
+---@see [LuaOpenGL.cpp#L4038-L4041](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4038-L4041)
 function gl.LineStipple(enable) end
 
 ---@param ignoredString string The value of this string is ignored, but it still does something.
----@see [LuaOpenGL.cpp#L4040-L4043](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4040-L4043)
+---@see [LuaOpenGL.cpp#L4042-L4045](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4042-L4045)
 function gl.LineStipple(ignoredString) end
 
 ---@param factor integer
 ---@param pattern integer
 ---@param shift integer?
----@see [LuaOpenGL.cpp#L4044-L4049](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4044-L4049)
+---@see [LuaOpenGL.cpp#L4046-L4051](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4046-L4051)
 function gl.LineStipple(factor, pattern, shift) end
 
 ---@param width number
----@see [LuaOpenGL.cpp#L4099-L4102](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4099-L4102)
+---@see [LuaOpenGL.cpp#L4101-L4104](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4101-L4104)
 function gl.LineWidth(width) end
 
 ---@param size number
----@see [LuaOpenGL.cpp#L4113-L4116](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4113-L4116)
+---@see [LuaOpenGL.cpp#L4115-L4118](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4115-L4118)
 function gl.PointSize(size) end
 
 ---@param enable boolean
 ---@param enableCoordReplace boolean?
 ---@param coordOrigin boolean? `true` for upper left, `false` for lower left, otherwise no change.
----@see [LuaOpenGL.cpp#L4127-L4132](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4127-L4132)
+---@see [LuaOpenGL.cpp#L4129-L4134](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4129-L4134)
 function gl.PointSprite(enable, enableCoordReplace, coordOrigin) end
 
 ---@param atten0 number
@@ -808,29 +808,29 @@ function gl.PointSprite(enable, enableCoordReplace, coordOrigin) end
 ---@param sizeMin number?
 ---@param sizeMax number?
 ---@param sizeFade number?
----@see [LuaOpenGL.cpp#L4161-L4169](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4161-L4169)
+---@see [LuaOpenGL.cpp#L4163-L4171](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4163-L4171)
 function gl.PointParameter(atten0, atten1, atten2, sizeMin, sizeMax, sizeFade) end
 
 ---@param texNum integer
 ---@param enable boolean?
 ---@return boolean
----@see [LuaOpenGL.cpp#L4197-L4202](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4197-L4202)
+---@see [LuaOpenGL.cpp#L4199-L4204](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4199-L4204)
 function gl.Texture(texNum, enable) end
 
 ---@param enable boolean
 ---@return boolean
----@see [LuaOpenGL.cpp#L4203-L4207](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4203-L4207)
+---@see [LuaOpenGL.cpp#L4205-L4209](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4205-L4209)
 function gl.Texture(enable) end
 
 ---@param texNum integer
 ---@param image string
 ---@return boolean
----@see [LuaOpenGL.cpp#L4208-L4213](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4208-L4213)
+---@see [LuaOpenGL.cpp#L4210-L4215](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4210-L4215)
 function gl.Texture(texNum, image) end
 
 ---@param image string
 ---@return boolean
----@see [LuaOpenGL.cpp#L4214-L4218](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4214-L4218)
+---@see [LuaOpenGL.cpp#L4216-L4220](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4216-L4220)
 function gl.Texture(image) end
 
 ---@class Texture
@@ -845,14 +845,14 @@ function gl.Texture(image) end
 ---@field compareFunc number?
 ---@field lodBias number?
 ---@field aniso number?
----@see [LuaOpenGL.cpp#L4295-L4308](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4295-L4308)
+---@see [LuaOpenGL.cpp#L4297-L4310](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4297-L4310)
 local Texture = {}
 
 ---@param xsize integer
 ---@param ysize integer
 ---@param texture Texture
 ---@return string? texName
----@see [LuaOpenGL.cpp#L4349-L4355](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4349-L4355)
+---@see [LuaOpenGL.cpp#L4351-L4357](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4351-L4357)
 function gl.CreateTexture(xsize, ysize, texture) end
 
 ---@param xsize integer
@@ -860,22 +860,22 @@ function gl.CreateTexture(xsize, ysize, texture) end
 ---@param zsize integer
 ---@param texture Texture
 ---@return string? texName
----@see [LuaOpenGL.cpp#L4356-L4363](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4356-L4363)
+---@see [LuaOpenGL.cpp#L4358-L4365](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4358-L4365)
 function gl.CreateTexture(xsize, ysize, zsize, texture) end
 
 ---@param texName string
 ---@param params Texture
----@see [LuaOpenGL.cpp#L4433-L4437](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4433-L4437)
+---@see [LuaOpenGL.cpp#L4435-L4439](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4435-L4439)
 function gl.ChangeTextureParams(texName, params) end
 
 ---@param texName string
 ---@return boolean
----@see [LuaOpenGL.cpp#L4464-L4468](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4464-L4468)
+---@see [LuaOpenGL.cpp#L4466-L4470](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4466-L4470)
 function gl.DeleteTexture(texName) end
 
 ---@param texName string
 ---@return boolean
----@see [LuaOpenGL.cpp#L4485-L4489](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4485-L4489)
+---@see [LuaOpenGL.cpp#L4487-L4491](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4487-L4491)
 function gl.DeleteTextureFBO(texName) end
 
 ---@class TextureInfo
@@ -885,12 +885,12 @@ function gl.DeleteTextureFBO(texName) end
 ---@field zsize integer
 ---@field id integer
 ---@field target GL
----@see [LuaOpenGL.cpp#L4501-L4509](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4501-L4509)
+---@see [LuaOpenGL.cpp#L4503-L4511](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4503-L4511)
 local TextureInfo = {}
 
 ---@param texName string
 ---@return TextureInfo textureInfo
----@see [LuaOpenGL.cpp#L4511-L4515](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4511-L4515)
+---@see [LuaOpenGL.cpp#L4513-L4517](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4513-L4517)
 function gl.TextureInfo(texName) end
 
 ---@param texName string
@@ -902,7 +902,7 @@ function gl.TextureInfo(texName) end
 ---@param h integer
 ---@param target GL?
 ---@param level GL?
----@see [LuaOpenGL.cpp#L4537-L4548](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4537-L4548)
+---@see [LuaOpenGL.cpp#L4539-L4550](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4539-L4550)
 function gl.CopyToTexture(texName, xoff, yoff, x, y, w, h, target, level) end
 
 ---@param srcName string
@@ -918,17 +918,17 @@ function gl.CopyToTexture(texName, xoff, yoff, x, y, w, h, target, level) end
 ---@param width integer
 ---@param height integer
 ---@param depth integer
----@see [LuaOpenGL.cpp#L4585-L4600](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4585-L4600)
+---@see [LuaOpenGL.cpp#L4587-L4602](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4587-L4602)
 function gl.CopyImageSubData(srcName, srcLevel, srcX, srcY, srcZ, dstName, dstLevel, dstX, dstY, dstZ, width, height, depth) end
 
 ---@param texName string
 ---@param func fun(...)
 ---@param ... any Arguments to the function.
----@see [LuaOpenGL.cpp#L4711-L4716](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4711-L4716)
+---@see [LuaOpenGL.cpp#L4713-L4718](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4713-L4718)
 function gl.RenderToTexture(texName, func, ...) end
 
 ---@param texName string
----@see [LuaOpenGL.cpp#L4765-L4768](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4765-L4768)
+---@see [LuaOpenGL.cpp#L4767-L4770](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4767-L4770)
 function gl.GenerateMipmap(texName) end
 
 ---Draws the engine sky, and optionally the terrain reflection pass, seen from a
@@ -952,7 +952,7 @@ function gl.GenerateMipmap(texName) end
 ---@return boolean success
 ---@return string? error
 ---@return boolean? sunRemoved with sunFree: whether the sun was left out
----@see [LuaOpenGL.cpp#L4791-L4814](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4791-L4814)
+---@see [LuaOpenGL.cpp#L4793-L4816](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4793-L4816)
 function gl.RenderEnvironmentFace(texName, face, x, y, z, skyOnly, sunFree) end
 
 ---Publishes a Lua texture of this handle as `"$pub:<name>"`, so other Lua
@@ -975,7 +975,7 @@ function gl.RenderEnvironmentFace(texName, face, x, y, z, skyOnly, sunFree) end
 ---@param texName string? Lua texture name of this handle, nil to unpublish
 ---@return boolean success
 ---@return string? error when another handle owns the name, or texName is not a texture of this handle
----@see [LuaOpenGL.cpp#L4936-L4958](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4936-L4958)
+---@see [LuaOpenGL.cpp#L4938-L4960](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4938-L4960)
 function gl.PublishTexture(name, texName) end
 
 ---With `SceneTarget=hdr` the display pass only tone maps pixels marked in the mask.
@@ -985,19 +985,19 @@ function gl.PublishTexture(name, texName) end
 ---
 ---@param enable boolean
 ---@return boolean writing true when the mask is written from now on
----@see [LuaOpenGL.cpp#L4974-L4983](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4974-L4983)
+---@see [LuaOpenGL.cpp#L4976-L4985](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4976-L4985)
 function gl.SceneTargetToneMapMask(enable) end
 
 ---@param texNum integer
 ---@param func function
 ---@param ... any Arguments to the function.
----@see [LuaOpenGL.cpp#L4992-L4997](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L4992-L4997)
+---@see [LuaOpenGL.cpp#L4994-L4999](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L4994-L4999)
 function gl.ActiveTexture(texNum, func, ...) end
 
 ---@param target GL
 ---@param pname GL
 ---@param value number
----@see [LuaOpenGL.cpp#L5026-L5031](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5026-L5031)
+---@see [LuaOpenGL.cpp#L5028-L5033](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5028-L5033)
 function gl.TexEnv(target, pname, value) end
 
 ---@param target GL
@@ -1006,14 +1006,14 @@ function gl.TexEnv(target, pname, value) end
 ---@param g number? (Default: `0.0`)
 ---@param b number? (Default: `0.0`)
 ---@param a number? (Default: `0.0`)
----@see [LuaOpenGL.cpp#L5032-L5040](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5032-L5040)
+---@see [LuaOpenGL.cpp#L5034-L5042](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5034-L5042)
 function gl.TexEnv(target, pname, r, g, b, a) end
 
 ---@param texNum integer
 ---@param target GL
 ---@param pname GL
 ---@param value number?
----@see [LuaOpenGL.cpp#L5070-L5076](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5070-L5076)
+---@see [LuaOpenGL.cpp#L5072-L5078](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5072-L5078)
 function gl.MultiTexEnv(texNum, target, pname, value) end
 
 ---@param texNum integer
@@ -1023,18 +1023,18 @@ function gl.MultiTexEnv(texNum, target, pname, value) end
 ---@param g number? (Default: `0.0`)
 ---@param b number? (Default: `0.0`)
 ---@param a number? (Default: `0.0`)
----@see [LuaOpenGL.cpp#L5077-L5086](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5077-L5086)
+---@see [LuaOpenGL.cpp#L5079-L5088](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5079-L5088)
 function gl.MultiTexEnv(texNum, target, pname, r, g, b, a) end
 
 ---@param target GL
 ---@param state boolean
----@see [LuaOpenGL.cpp#L5137-L5141](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5137-L5141)
+---@see [LuaOpenGL.cpp#L5139-L5143](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5139-L5143)
 function gl.TexGen(target, state) end
 
 ---@param target GL
 ---@param pname GL
 ---@param value number?
----@see [LuaOpenGL.cpp#L5142-L5147](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5142-L5147)
+---@see [LuaOpenGL.cpp#L5144-L5149](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5144-L5149)
 function gl.TexGen(target, pname, value) end
 
 ---@param target GL
@@ -1043,20 +1043,20 @@ function gl.TexGen(target, pname, value) end
 ---@param g number? (Default: `0.0`)
 ---@param b number? (Default: `0.0`)
 ---@param a number? (Default: `0.0`)
----@see [LuaOpenGL.cpp#L5148-L5156](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5148-L5156)
+---@see [LuaOpenGL.cpp#L5150-L5158](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5150-L5158)
 function gl.TexGen(target, pname, r, g, b, a) end
 
 ---@param texNum integer
 ---@param target GL
 ---@param state boolean
----@see [LuaOpenGL.cpp#L5195-L5200](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5195-L5200)
+---@see [LuaOpenGL.cpp#L5197-L5202](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5197-L5202)
 function gl.MultiTexGen(texNum, target, state) end
 
 ---@param texNum integer
 ---@param target GL
 ---@param pname GL
 ---@param value number?
----@see [LuaOpenGL.cpp#L5201-L5207](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5201-L5207)
+---@see [LuaOpenGL.cpp#L5203-L5209](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5203-L5209)
 function gl.MultiTexGen(texNum, target, pname, value) end
 
 ---@param texNum integer
@@ -1066,7 +1066,7 @@ function gl.MultiTexGen(texNum, target, pname, value) end
 ---@param g number? (Default: `0.0`)
 ---@param b number? (Default: `0.0`)
 ---@param a number? (Default: `0.0`)
----@see [LuaOpenGL.cpp#L5208-L5217](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5208-L5217)
+---@see [LuaOpenGL.cpp#L5210-L5219](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5210-L5219)
 function gl.MultiTexGen(texNum, target, pname, r, g, b, a) end
 
 ---For format parameters refer to
@@ -1092,29 +1092,29 @@ function gl.MultiTexGen(texNum, target, pname, r, g, b, a) end
 ---@param layer nil | integer (nil binds the entire texture(array/cube), an integer binds a specific layer, ignored by gl if the texture does not support layered bindings)
 ---@param access GL? (Default: GL.READ_WRITE) Accepts `GL.READ_ONLY`, `GL.WRITE_ONLY` or `GL.READ_WRITE`.
 ---@param format integer (Example: GL.RGBA16F)
----@see [LuaOpenGL.cpp#L5266-L5292](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5266-L5292)
+---@see [LuaOpenGL.cpp#L5268-L5294](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5268-L5294)
 function gl.BindImageTexture(unit, texID, level, layer, access, format) end
 
 ---@param xsize integer
 ---@param ysize integer
 ---@param allocType integer?
 ---@return string texName
----@see [LuaOpenGL.cpp#L5404-L5410](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5404-L5410)
+---@see [LuaOpenGL.cpp#L5406-L5412](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5406-L5412)
 function gl.CreateTextureAtlas(xsize, ysize, allocType) end
 
 ---@param texName string
 ---@return boolean
----@see [LuaOpenGL.cpp#L5435-L5439](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5435-L5439)
+---@see [LuaOpenGL.cpp#L5437-L5441](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5437-L5441)
 function gl.FinalizeTextureAtlas(texName) end
 
 ---@param texName string
 ---@return boolean
----@see [LuaOpenGL.cpp#L5455-L5459](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5455-L5459)
+---@see [LuaOpenGL.cpp#L5457-L5461](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5457-L5461)
 function gl.DeleteTextureAtlas(texName) end
 
 ---@param texName string
 ---@param subAtlasTexName string
----@see [LuaOpenGL.cpp#L5471-L5475](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5471-L5475)
+---@see [LuaOpenGL.cpp#L5473-L5477](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5473-L5477)
 function gl.AddAtlasTexture(texName, subAtlasTexName) end
 
 ---@param texName string
@@ -1123,21 +1123,21 @@ function gl.AddAtlasTexture(texName, subAtlasTexName) end
 ---@return number x2
 ---@return number y1
 ---@return number y2
----@see [LuaOpenGL.cpp#L5522-L5530](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5522-L5530)
+---@see [LuaOpenGL.cpp#L5524-L5532](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5524-L5532)
 function gl.GetAtlasTexture(texName, subAtlasTexName) end
 
 ---@param atlasName "$explosions"|"$groundfx"
 ---@return table<string, float4> atlasTextures Table of x1,x2,y1,y2 coordinates by texture name.
----@see [LuaOpenGL.cpp#L5556-L5560](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5556-L5560)
+---@see [LuaOpenGL.cpp#L5558-L5562](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5558-L5562)
 function gl.GetEngineAtlasTextures(atlasName) end
 
 ---@param bits GL any buffer bit mask (e.g. `GL.STENCIL_BUFFER_BIT`). Clears with current/default values.
----@see [LuaOpenGL.cpp#L5610-L5613](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5610-L5613)
+---@see [LuaOpenGL.cpp#L5612-L5615](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5612-L5615)
 function gl.Clear(bits) end
 
 ---@param bits GL `GL.DEPTH_BUFFER_BIT` or `GL.STENCIL_BUFFER_BIT`.
 ---@param val number
----@see [LuaOpenGL.cpp#L5614-L5618](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5614-L5618)
+---@see [LuaOpenGL.cpp#L5616-L5620](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5616-L5620)
 function gl.Clear(bits, val) end
 
 ---@param bits GL `GL.COLOR_BUFFER_BIT` or `GL.ACCUM_BUFFER_BIT`.
@@ -1145,29 +1145,29 @@ function gl.Clear(bits, val) end
 ---@param g number
 ---@param b number
 ---@param a number
----@see [LuaOpenGL.cpp#L5619-L5626](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5619-L5626)
+---@see [LuaOpenGL.cpp#L5621-L5628](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5621-L5628)
 function gl.Clear(bits, r, g, b, a) end
 
----@see [LuaOpenGL.cpp#L5665-L5667](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5665-L5667)
+---@see [LuaOpenGL.cpp#L5667-L5669](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5667-L5669)
 function gl.SwapBuffers() end
 
 ---@param x number
 ---@param y number
 ---@param z number
----@see [LuaOpenGL.cpp#L5682-L5687](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5682-L5687)
+---@see [LuaOpenGL.cpp#L5684-L5689](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5684-L5689)
 function gl.Translate(x, y, z) end
 
 ---@param x number
 ---@param y number
 ---@param z number
----@see [LuaOpenGL.cpp#L5700-L5705](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5700-L5705)
+---@see [LuaOpenGL.cpp#L5702-L5707](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5702-L5707)
 function gl.Scale(x, y, z) end
 
 ---@param r number
 ---@param x number
 ---@param y number
 ---@param z number
----@see [LuaOpenGL.cpp#L5718-L5724](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5718-L5724)
+---@see [LuaOpenGL.cpp#L5720-L5726](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5720-L5726)
 function gl.Rotate(r, x, y, z) end
 
 ---@param left number
@@ -1176,7 +1176,7 @@ function gl.Rotate(r, x, y, z) end
 ---@param top number
 ---@param near number
 ---@param far number
----@see [LuaOpenGL.cpp#L5738-L5746](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5738-L5746)
+---@see [LuaOpenGL.cpp#L5740-L5748](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5740-L5748)
 function gl.Ortho(left, right, bottom, top, near, far) end
 
 ---@param left number
@@ -1185,21 +1185,21 @@ function gl.Ortho(left, right, bottom, top, near, far) end
 ---@param top number
 ---@param near number
 ---@param far number
----@see [LuaOpenGL.cpp#L5762-L5770](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5762-L5770)
+---@see [LuaOpenGL.cpp#L5764-L5772](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5764-L5772)
 function gl.Frustum(left, right, bottom, top, near, far) end
 
----@see [LuaOpenGL.cpp#L5786-L5788](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5786-L5788)
+---@see [LuaOpenGL.cpp#L5788-L5790](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5788-L5790)
 function gl.Billboard() end
 
 ---@param light integer
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L5800-L5804](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5800-L5804)
+---@see [LuaOpenGL.cpp#L5802-L5806](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5802-L5806)
 function gl.Light(light, enable) end
 
 ---@param light integer
 ---@param pname GL
 ---@param param GL
----@see [LuaOpenGL.cpp#L5805-L5810](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5805-L5810)
+---@see [LuaOpenGL.cpp#L5807-L5812](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5807-L5812)
 function gl.Light(light, pname, param) end
 
 ---@param light integer
@@ -1208,12 +1208,12 @@ function gl.Light(light, pname, param) end
 ---@param g number
 ---@param b number
 ---@param a number?
----@see [LuaOpenGL.cpp#L5811-L5819](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5811-L5819)
+---@see [LuaOpenGL.cpp#L5813-L5821](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5813-L5821)
 function gl.Light(light, pname, r, g, b, a) end
 
 ---@param plane integer
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L5870-L5874](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5870-L5874)
+---@see [LuaOpenGL.cpp#L5872-L5876](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5872-L5876)
 function gl.ClipPlane(plane, enable) end
 
 ---@param plane integer
@@ -1221,19 +1221,19 @@ function gl.ClipPlane(plane, enable) end
 ---@param equation1 number
 ---@param equation2 number
 ---@param equation3 number
----@see [LuaOpenGL.cpp#L5875-L5882](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5875-L5882)
+---@see [LuaOpenGL.cpp#L5877-L5884](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5877-L5884)
 function gl.ClipPlane(plane, equation0, equation1, equation2, equation3) end
 
 ---@param clipId integer
 ---@param enable boolean
----@see [LuaOpenGL.cpp#L5912-L5916](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5912-L5916)
+---@see [LuaOpenGL.cpp#L5914-L5918](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5914-L5918)
 function gl.ClipDistance(clipId, enable) end
 
 ---@param mode GL
----@see [LuaOpenGL.cpp#L5945-L5948](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5945-L5948)
+---@see [LuaOpenGL.cpp#L5947-L5950](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5947-L5950)
 function gl.MatrixMode(mode) end
 
----@see [LuaOpenGL.cpp#L5961-L5963](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5961-L5963)
+---@see [LuaOpenGL.cpp#L5963-L5965](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5963-L5965)
 function gl.LoadIdentity() end
 
 ---@class Matrix4x4
@@ -1254,15 +1254,15 @@ function gl.LoadIdentity() end
 ---@field [14] number Element at [4,2]
 ---@field [15] number Element at [4,3]
 ---@field [16] number Element at [4,4]
----@see [LuaOpenGL.cpp#L5978-L5997](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5978-L5997)
+---@see [LuaOpenGL.cpp#L5980-L5999](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L5980-L5999)
 local Matrix4x4 = {}
 
 ---@param matrix string
----@see [LuaOpenGL.cpp#L5999-L6002](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L5999-L6002)
+---@see [LuaOpenGL.cpp#L6001-L6004](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6001-L6004)
 function gl.LoadMatrix(matrix) end
 
 ---@param matrix Matrix4x4
----@see [LuaOpenGL.cpp#L6003-L6006](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6003-L6006)
+---@see [LuaOpenGL.cpp#L6005-L6008](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6005-L6008)
 function gl.LoadMatrix(matrix) end
 
 ---@return number m11
@@ -1281,15 +1281,15 @@ function gl.LoadMatrix(matrix) end
 ---@return number m42
 ---@return number m43
 ---@return number m44
----@see [LuaOpenGL.cpp#L6007-L6025](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6007-L6025)
+---@see [LuaOpenGL.cpp#L6009-L6027](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6009-L6027)
 function gl.LoadMatrix() end
 
 ---@param matrixName string
----@see [LuaOpenGL.cpp#L6058-L6061](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6058-L6061)
+---@see [LuaOpenGL.cpp#L6060-L6063](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6060-L6063)
 function gl.MultMatrix(matrixName) end
 
 ---@param matrix Matrix4x4
----@see [LuaOpenGL.cpp#L6062-L6065](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6062-L6065)
+---@see [LuaOpenGL.cpp#L6064-L6067](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6064-L6067)
 function gl.MultMatrix(matrix) end
 
 ---@param m11 number
@@ -1308,24 +1308,24 @@ function gl.MultMatrix(matrix) end
 ---@param m42 number
 ---@param m43 number
 ---@param m44 number
----@see [LuaOpenGL.cpp#L6066-L6084](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6066-L6084)
+---@see [LuaOpenGL.cpp#L6068-L6086](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6068-L6086)
 function gl.MultMatrix(m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44) end
 
----@see [LuaOpenGL.cpp#L6117-L6119](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6117-L6119)
+---@see [LuaOpenGL.cpp#L6119-L6121](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6119-L6121)
 function gl.PushMatrix() end
 
----@see [LuaOpenGL.cpp#L6138-L6140](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6138-L6140)
+---@see [LuaOpenGL.cpp#L6140-L6142](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6140-L6142)
 function gl.PopMatrix() end
 
 ---@param matMode1 GL
 ---@param func fun()
 ---@param ... any Arguments to the function.
----@see [LuaOpenGL.cpp#L6158-L6163](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6158-L6163)
+---@see [LuaOpenGL.cpp#L6160-L6165](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6160-L6165)
 function gl.PushPopMatrix(matMode1, func, ...) end
 
 ---@param func fun()
 ---@param ... any Arguments to the function.
----@see [LuaOpenGL.cpp#L6164-L6168](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6164-L6168)
+---@see [LuaOpenGL.cpp#L6166-L6170](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6166-L6170)
 function gl.PushPopMatrix(func, ...) end
 
 ---Get value at index of matrix.
@@ -1333,69 +1333,69 @@ function gl.PushPopMatrix(func, ...) end
 ---@param type GL Matrix type (`GL.PROJECTION`, `GL.MODELVIEW`, `GL.TEXTURE`).
 ---@param index integer Matrix index in range `[1, 16]`.
 ---@return number value The value at the given index.
----@see [LuaOpenGL.cpp#L6216-L6223](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6216-L6223)
+---@see [LuaOpenGL.cpp#L6218-L6225](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6218-L6225)
 function gl.GetMatrixData(type, index) end
 
 ---@param type GL Matrix type (`GL.PROJECTION`, `GL.MODELVIEW`, `GL.TEXTURE`).
 ---@return Matrix4x4
----@see [LuaOpenGL.cpp#L6224-L6228](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6224-L6228)
+---@see [LuaOpenGL.cpp#L6226-L6230](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6226-L6230)
 function gl.GetMatrixData(type) end
 
 ---@param index integer Matrix index in range `[1, 16]`.
 ---@return number value The value at the given index.
----@see [LuaOpenGL.cpp#L6229-L6233](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6229-L6233)
+---@see [LuaOpenGL.cpp#L6231-L6235](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6231-L6235)
 function gl.GetMatrixData(index) end
 
 ---@param name MatrixName
 ---@return Matrix4x4
----@see [LuaOpenGL.cpp#L6234-L6238](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6234-L6238)
+---@see [LuaOpenGL.cpp#L6236-L6240](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6236-L6240)
 function gl.GetMatrixData(name) end
 
 ---@param mask GL? (Default: `GL.ALL_ATTRIB_BITS`)
----@see [LuaOpenGL.cpp#L6301-L6304](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6301-L6304)
+---@see [LuaOpenGL.cpp#L6303-L6306](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6303-L6306)
 function gl.PushAttrib(mask) end
 
----@see [LuaOpenGL.cpp#L6318-L6320](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6318-L6320)
+---@see [LuaOpenGL.cpp#L6320-L6322](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6320-L6322)
 function gl.PopAttrib() end
 
 ---@param state GL
 ---@param func fun()
 ---@param ... any Arguments to the function.
----@see [LuaOpenGL.cpp#L6329-L6334](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6329-L6334)
+---@see [LuaOpenGL.cpp#L6331-L6336](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6331-L6336)
 function gl.UnsafeState(state, func, ...) end
 
 ---@param state GL
 ---@param reverse boolean
 ---@param func fun()
 ---@param ... any Arguments to the function.
----@see [LuaOpenGL.cpp#L6335-L6341](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6335-L6341)
+---@see [LuaOpenGL.cpp#L6337-L6343](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6337-L6343)
 function gl.UnsafeState(state, reverse, func, ...) end
 
 ---@param param string
 ---@param toStr boolean? (Default: `false`)
 ---@return boolean enabled
 ---@return any ... values
----@see [LuaOpenGL.cpp#L6368-L6374](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6368-L6374)
+---@see [LuaOpenGL.cpp#L6370-L6376](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6370-L6376)
 function gl.GetFixedState(param, toStr) end
 
 ---@param func fun()
 ---@param ... any Arguments to the function.
 ---@return integer listID `0` if the list could not be generated or `func` errored.
----@see [LuaOpenGL.cpp#L6656-L6661](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6656-L6661)
+---@see [LuaOpenGL.cpp#L6658-L6663](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6658-L6663)
 function gl.CreateList(func, ...) end
 
 ---@param listIndex integer
----@see [LuaOpenGL.cpp#L6709-L6712](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6709-L6712)
+---@see [LuaOpenGL.cpp#L6711-L6714](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6711-L6714)
 function gl.CallList(listIndex) end
 
 ---@param listIndex integer
----@see [LuaOpenGL.cpp#L6733-L6736](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6733-L6736)
+---@see [LuaOpenGL.cpp#L6735-L6738](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6735-L6738)
 function gl.DeleteList(listIndex) end
 
----@see [LuaOpenGL.cpp#L6756-L6758](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6756-L6758)
+---@see [LuaOpenGL.cpp#L6758-L6760](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6758-L6760)
 function gl.Flush() end
 
----@see [LuaOpenGL.cpp#L6767-L6769](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6767-L6769)
+---@see [LuaOpenGL.cpp#L6769-L6771](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6769-L6771)
 function gl.Finish() end
 
 ---Get single pixel.
@@ -1423,7 +1423,7 @@ function gl.Finish() end
 ---@param h 1
 ---@param format GL? (Default: `GL.RGBA`)
 ---@return number ... Color value (color size based on format).
----@see [LuaOpenGL.cpp#L6829-L6856](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6829-L6856)
+---@see [LuaOpenGL.cpp#L6831-L6858](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6831-L6858)
 function gl.ReadPixels(x, y, w, h, format) end
 
 ---Get column of pixels.
@@ -1434,7 +1434,7 @@ function gl.ReadPixels(x, y, w, h, format) end
 ---@param h integer
 ---@param format GL? (Default: `GL.RGBA`)
 ---@return (number|number[])[] colors Column of color values (color size based on format), indexed by row.
----@see [LuaOpenGL.cpp#L6857-L6866](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6857-L6866)
+---@see [LuaOpenGL.cpp#L6859-L6868](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6859-L6868)
 function gl.ReadPixels(x, y, w, h, format) end
 
 ---Get row of pixels.
@@ -1445,7 +1445,7 @@ function gl.ReadPixels(x, y, w, h, format) end
 ---@param h 1
 ---@param format GL? (Default: `GL.RGBA`)
 ---@return (number|number[])[] colors Row of color values (color size based on format), indexed by column.
----@see [LuaOpenGL.cpp#L6867-L6876](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6867-L6876)
+---@see [LuaOpenGL.cpp#L6869-L6878](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6869-L6878)
 function gl.ReadPixels(x, y, w, h, format) end
 
 ---Get rows of pixels.
@@ -1456,7 +1456,7 @@ function gl.ReadPixels(x, y, w, h, format) end
 ---@param h integer
 ---@param format GL? (Default: `GL.RGBA`)
 ---@return (number|number[])[][] colors Array of rows of color values (color size based on format), bottom row first: `colors[y][x]`.
----@see [LuaOpenGL.cpp#L6877-L6886](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6877-L6886)
+---@see [LuaOpenGL.cpp#L6879-L6888](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6879-L6888)
 function gl.ReadPixels(x, y, w, h, format) end
 
 ---@class SaveImageOptions
@@ -1465,7 +1465,7 @@ function gl.ReadPixels(x, y, w, h, format) end
 ---@field yflip boolean? (Default: `true`)
 ---@field grayscale16bit boolean? (Default: `false`)
 ---@field readbuffer GL? (Default: current read buffer)
----@see [LuaOpenGL.cpp#L6960-L6967](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6960-L6967)
+---@see [LuaOpenGL.cpp#L6962-L6969](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6962-L6969)
 local SaveImageOptions = {}
 
 ---@param x integer
@@ -1475,7 +1475,7 @@ local SaveImageOptions = {}
 ---@param filename string
 ---@param options SaveImageOptions?
 ---@return boolean? success
----@see [LuaOpenGL.cpp#L6969-L6978](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L6969-L6978)
+---@see [LuaOpenGL.cpp#L6971-L6980](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L6971-L6980)
 function gl.SaveImage(x, y, width, height, filename, options) end
 
 ---Creates a GL query object.
@@ -1486,11 +1486,11 @@ function gl.SaveImage(x, y, width, height, filename, options) end
 ---
 ---@param target integer? (Default: `GL.SAMPLES_PASSED`) One of `GL.SAMPLES_PASSED`, `GL.ANY_SAMPLES_PASSED`, `GL.ANY_SAMPLES_PASSED_CONSERVATIVE`, `GL.PRIMITIVES_GENERATED`, `GL.TIME_ELAPSED`, `GL.TIMESTAMP`.
 ---@return any? query
----@see [LuaOpenGL.cpp#L7089-L7099](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7089-L7099)
+---@see [LuaOpenGL.cpp#L7091-L7101](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7091-L7101)
 function gl.CreateQuery(target) end
 
 ---@param query any
----@see [LuaOpenGL.cpp#L7136-L7139](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7136-L7139)
+---@see [LuaOpenGL.cpp#L7138-L7141](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7138-L7141)
 function gl.DeleteQuery(query) end
 
 ---Runs the query over the GL calls made by `func`.
@@ -1504,7 +1504,7 @@ function gl.DeleteQuery(query) end
 ---@param query any
 ---@param func fun(...)
 ---@param ... any Arguments passed to `func`.
----@see [LuaOpenGL.cpp#L7151-L7164](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7151-L7164)
+---@see [LuaOpenGL.cpp#L7153-L7166](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7153-L7166)
 function gl.RunQuery(query, func, ...) end
 
 ---Records the GPU timestamp (nanoseconds) into a `GL.TIMESTAMP` query once the GPU
@@ -1514,7 +1514,7 @@ function gl.RunQuery(query, func, ...) end
 ---May be unavailable and `nil` if the platform supports neither OpenGL 3.3 nor `ARB_timer_query`.
 ---
 ---@param query any A query created with `gl.CreateQuery(GL.TIMESTAMP)`.
----@see [LuaOpenGL.cpp#L7205-L7214](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7205-L7214)
+---@see [LuaOpenGL.cpp#L7207-L7216](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7207-L7216)
 function gl.QueryCounter(query) end
 
 ---Reads the result of a query.
@@ -1530,7 +1530,7 @@ function gl.QueryCounter(query) end
 ---@param query any
 ---@param blocking boolean? (Default: `true`) Wait for the result.
 ---@return number? result Sample count, primitive count, or nanoseconds for timer queries; `nil` if not yet available and `blocking` is false.
----@see [LuaOpenGL.cpp#L7229-L7245](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7229-L7245)
+---@see [LuaOpenGL.cpp#L7231-L7247](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7231-L7247)
 function gl.GetQuery(query, blocking) end
 
 ---Returns the GPU nanoseconds between two `GL.TIMESTAMP` queries recorded with `gl.QueryCounter`.
@@ -1544,42 +1544,42 @@ function gl.GetQuery(query, blocking) end
 ---@param endQuery any
 ---@param blocking boolean? (Default: `true`) Wait for both results.
 ---@return number? nanoseconds `nil` if a result is not yet available and `blocking` is false.
----@see [LuaOpenGL.cpp#L7281-L7294](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7281-L7294)
+---@see [LuaOpenGL.cpp#L7283-L7296](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7283-L7296)
 function gl.GetQueryDelta(startQuery, endQuery, blocking) end
 
 ---@return string[] texNames List of texture names.
----@see [LuaOpenGL.cpp#L7329-L7332](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7329-L7332)
+---@see [LuaOpenGL.cpp#L7331-L7334](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7331-L7334)
 function gl.GetGlobalTexNames() end
 
 ---@return number xstart
 ---@return number ystart
 ---@return number xend
 ---@return number yend
----@see [LuaOpenGL.cpp#L7348-L7354](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7348-L7354)
+---@see [LuaOpenGL.cpp#L7350-L7356](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7350-L7356)
 function gl.GetGlobalTexCoords() end
 
 ---@return number x
 ---@return number y
 ---@return number z
 ---@return number w
----@see [LuaOpenGL.cpp#L7371-L7377](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7371-L7377)
+---@see [LuaOpenGL.cpp#L7373-L7379](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7373-L7379)
 function gl.GetShadowMapParams() end
 
 ---@return number lightDirX
 ---@return number lightDirY
 ---@return number lightDirZ
----@see [LuaOpenGL.cpp#L7387-L7392](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7387-L7392)
+---@see [LuaOpenGL.cpp#L7389-L7394](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7389-L7394)
 function gl.GetAtmosphere() end
 
 ---@param param "fogStart"|"fogEnd"|"pos"|"fogColor"|"skyColor"|"sunColor"|"cloudColor"|"skyAxisAngle"
 ---@return any ...
----@see [LuaOpenGL.cpp#L7393-L7397](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7393-L7397)
+---@see [LuaOpenGL.cpp#L7395-L7399](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7395-L7399)
 function gl.GetAtmosphere(param) end
 
 ---@return number lightDirX
 ---@return number lightDirY
 ---@return number lightDirZ
----@see [LuaOpenGL.cpp#L7450-L7455](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7450-L7455)
+---@see [LuaOpenGL.cpp#L7452-L7457](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7452-L7457)
 function gl.GetSun() end
 
 ---@param param "pos"|"dir"|"specularExponent"|"shadowDensity"|"diffuse"|"ambient"|"specular"
@@ -1587,17 +1587,17 @@ function gl.GetSun() end
 ---@return number? data1
 ---@return number? data2
 ---@return number? data3
----@see [LuaOpenGL.cpp#L7456-L7463](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7456-L7463)
+---@see [LuaOpenGL.cpp#L7458-L7465](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7458-L7465)
 function gl.GetSun(param, mode) end
 
 ---@param key string
 ---@return any ... value
----@see [LuaOpenGL.cpp#L7529-L7533](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7529-L7533)
+---@see [LuaOpenGL.cpp#L7531-L7535](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7531-L7535)
 function gl.GetWaterRendering(key) end
 
 ---@param key string
 ---@return any ... value
----@see [LuaOpenGL.cpp#L7711-L7715](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7711-L7715)
+---@see [LuaOpenGL.cpp#L7713-L7717](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7713-L7717)
 function gl.GetMapRendering(key) end
 
 ---Labels an object for use with debugging tools.
@@ -1606,7 +1606,7 @@ function gl.GetMapRendering(key) end
 ---@param objectTypeIdentifier GL Specifies the type of object being labeled.
 ---@param objectID integer Specifies the name or ID of the object to label.
 ---@param label string A string containing the label to be assigned to the object.
----@see [LuaOpenGL.cpp#L7755-L7763](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7755-L7763)
+---@see [LuaOpenGL.cpp#L7757-L7765](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7757-L7765)
 function gl.ObjectLabel(objectTypeIdentifier, objectID, label) end
 
 ---Pushes a debug marker for debugging tools such as `nVidia nSight 2024.04`,
@@ -1623,12 +1623,12 @@ function gl.ObjectLabel(objectTypeIdentifier, objectID, label) end
 ---@param message string A human-readable string describing the debug group. Will be truncated if longer than driver-specific limit
 ---@param sourceIsThirdParty boolean? Set the source tag, true for GL_DEBUG_SOURCE_THIRD_PARTY, false for GL_DEBUG_SOURCE_APPLICATION. default false
 ---@return nil
----@see [LuaOpenGL.cpp#L7792-L7808](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7792-L7808)
+---@see [LuaOpenGL.cpp#L7794-L7810](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7794-L7810)
 function gl.PushDebugGroup(id, message, sourceIsThirdParty) end
 
 ---Pops the most recent GL debug group from the stack (does NOT take the numerical ID from push).
 ---May be unavailable and `nil` if the platform doesn't support the feature.
 ---
 ---@return nil
----@see [LuaOpenGL.cpp#L7831-L7838](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaOpenGL.cpp#L7831-L7838)
+---@see [LuaOpenGL.cpp#L7833-L7840](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaOpenGL.cpp#L7833-L7840)
 function gl.PopDebugGroup() end

@@ -12,5 +12,5 @@
 ---```
 ---
 ---@return VAO? vao The VAO ref on success, else `nil`
----@see [LuaVAO.cpp#L75-L84](https://github.com/beyond-all-reason/RecoilEngine/blob/bd9b5bfa29/rts/Lua/LuaVAO.cpp#L75-L84)
+---@see [LuaVAO.cpp#L75-L84](https://github.com/beyond-all-reason/RecoilEngine/blob/cbd72b7ca3/rts/Lua/LuaVAO.cpp#L75-L84)
 function gl.GetVAO() end
